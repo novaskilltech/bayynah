@@ -1,0 +1,77 @@
+{
+  "id": "inquiry-01",
+  "slug": "ablutions-viande-chameau",
+  "domain": "FIQH",
+  "title": {
+    "fr": "La consommation de viande de chameau rompt-elle les ablutions ?",
+    "ar": "هل أكل لحم الإبل ينقض الوضوء؟"
+  },
+  "initialClaim": {
+    "fr": "On m'a dit : 'Manger du chameau n'a jamais rompu les ablutions, c'est une invention récente.'",
+    "ar": "قيل لي: أكل لحم الإبل لا ينقض الوضوء أبداً، وهذا رأي مخترع."
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "titleFr": "Identifier la nature de l'affirmation",
+      "titleAr": "تحديد طبيعة الدعوى",
+      "instructionFr": "Avant d'accepter ou de réfuter cette affirmation, quelle est la première étape méthodologique ?",
+      "instructionAr": "قبل قبول الدعوى أو ردها، ما هي الخطوة المنهجية الأولى؟",
+      "options": [
+        {
+          "textFr": "Regarder la pratique majoritaire de ma famille ou de mon entourage",
+          "textAr": "النظر في العادة الغالبة للأهل والبيئة المحيطة",
+          "isCorrect": false,
+          "feedbackFr": "La pratique habituelle d'un groupe n'est pas une preuve d'absence de divergence ou de texte.",
+          "feedbackAr": "العادة المجردة ليست دليلاً شرعياً على نفي وجود النص أو الخلاف."
+        },
+        {
+          "textFr": "Rechercher s'il existe des textes scripturaires (hadiths) explicites sur la question",
+          "textAr": "البحث هل وردت نصوص صريحة (أحاديث) في المسألة",
+          "isCorrect": true,
+          "feedbackFr": "Exact ! Avant de juger, il faut vérifier l'existence de sources primaires.",
+          "feedbackAr": "أحسنت! قبل الحكم لا بد من التثبت من وجود النصوص الأصلية."
+        },
+        {
+          "textFr": "Déclarer immédiatement que l'interlocuteur est un ignorant",
+          "textAr": "اتهام القائل بالجهل مباشرة",
+          "isCorrect": false,
+          "feedbackFr": "Le jugement de valeur personnel n'a aucune place dans la démarche d'enquête.",
+          "feedbackAr": "إطلاق الأحكام الشخصية ينافي منهج التثبت والعدل."
+        }
+      ],
+      "revealedEvidenceIds": ["hadith-muslim-360"]
+    }
+  ],
+  "conclusionSheet": {
+    "established": {
+      "fr": "Il existe des hadiths authentiques explicites ordonnant de refaire les ablutions après avoir mangé de la viande de chameau (notamment dans Sahih Muslim). L'avis n'est donc en aucun cas une invention.",
+      "ar": "ثبتت أحاديث صحيحة صريحة بالأمر بالوضوء من لحوم الإبل (كما في صحيح مسلم)، فالدعوى بأنه رأي مخترع باطلة قطعاً."
+    },
+    "discussed": {
+      "fr": "La divergence porte sur la portée de l'ordre : obligation formelle d'annuler les ablutions (Ahmad, Ishâq, An-Nawawî) ou abrogation par d'autres textes généraux (Abû Hanîfa, Mâlik, Ash-Shâfi'î).",
+      "ar": "وقع الخلاف في دلالة الأمر: هل هو للوجوب الناقض (أحمد، إسحاق، والنووي) أم منسوخ بآخر الأمرين بترك الوضوء مما مست النار (الجمهور)."
+    },
+    "notEstablished": {
+      "fr": "L'affirmation selon laquelle il s'agirait d'une invention sans fondement.",
+      "ar": "الدعوى بأنه لا أصل لهذا القول في السنة أو كلام السلف."
+    },
+    "primaryEvidences": ["Sahih Muslim n°360 (Hadith de Jâbir ibn Samura)"],
+    "salafUnderstanding": {
+      "fr": "Divergence déjà constatée parmi les Compagnons et les premières générations.",
+      "ar": "خلاف منقول عن الصحابة والتابعين."
+    },
+    "scholarlyPositions": {
+      "fr": "Position 1 (Hanbali, Shâfi'ites partisans du hadith) : Annulation des ablutions. Position 2 (Jumhûr - Hanafites, Mâlikites, Shâfi'ites) : Pas d'annulation.",
+      "ar": "القول الأول (الحنابلة وبعض الشافعية): ينقض. القول الثاني (جمهور العلماء): لا ينقض."
+    },
+    "methodologicalPitfall": {
+      "fr": "Confondre sa propre méconnaissance d'un avis avec la non-existence de cet avis.",
+      "ar": "الخلط بين عدم العلم بالشيء والعلم بعدمه."
+    },
+    "originalSources": ["Sahih Muslim", "Al-Majmû' d'an-Nawawî", "Al-Mughnî d'Ibn Qudâma"],
+    "certaintyLevel": "KHILAF_RECONNU"
+  },
+  "evidenceReferences": [],
+  "lastVerifiedAt": "2026-09-20"
+}

@@ -1,0 +1,134 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  USER
+  STUDENT
+  AUTHOR
+  REVIEWER
+  ADMIN
+}
+
+enum SchoolType {
+  HADITH
+  FIQH
+  AQIDA
+  CRITIQUE
+}
+
+enum CertaintyLevel {
+  ETABLI
+  FORTEMENT_ETABLI
+  KHILAF_RECONNU
+  EXPERTISE_REQUISE
+  INSUFFISANT
+}
+
+model User {
+  id           String         @id @default(cuid())
+  email        String         @unique
+  passwordHash String
+  name         String?
+  role         Role           @default(USER)
+  progress     UserProgress[]
+  revisions    Revision[]
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+}
+
+model Lesson {
+  id              String       @id
+  slug            String       @unique
+  school          SchoolType
+  level           Int          @default(1)
+  order           Int
+  titleFr         String
+  titleAr         String
+  summaryFr       String
+  summaryAr       String
+  contentFr       String       @db.Text
+  contentAr       String?      @db.Text
+  methodologyFr   String
+  methodologyAr   String
+  quizzes         Quiz[]
+  
+  authorId        String
+  reviewerId      String?
+  lastVerifiedAt  DateTime     @default(now())
+  
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+}
+
+model Quiz {
+  id           String      @id @default(cuid())
+  lessonId     String
+  lesson       Lesson      @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  questionFr   String
+  questionAr   String
+  options      Json        // Tableau d'options bilingues [{ textFr, textAr, isCorrect, feedbackFr, feedbackAr }]
+  order        Int         @default(1)
+}
+
+model Inquiry {
+  id                 String          @id
+  slug               String          @unique
+  domain             SchoolType
+  titleFr            String
+  titleAr            String
+  claimFr            String
+  claimAr            String
+  steps              Json            // Étapes ordonnées avec options et feedbacks
+  conclusionSheet    Json            // Fiche standardisée
+  certaintyLevel     CertaintyLevel
+  evidences          Evidence[]
+  lastVerifiedAt     DateTime        @default(now())
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
+}
+
+model Evidence {
+  id                 String       @id
+  type               String       // QURAN | HADITH | ATHAR | BOOK | SCHOLAR | CONTEMPORARY
+  referenceCode      String       // Ex: "Sahih Muslim 360", "Al-Majmu' 2/45"
+  textAr             String       @db.Text
+  translationFr      String       @db.Text
+  sourceWork         String
+  author             String
+  editionVolumePage  String?
+  authenticityGrade  String?
+  gradeSource        String?
+  verifiedUrl        String?
+  inquiries          Inquiry[]
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
+}
+
+model Revision {
+  id              String      @id @default(cuid())
+  entityType      String      // LESSON | INQUIRY | EVIDENCE
+  entityId        String
+  changeSummaryFr String
+  changedByUserId String
+  changedBy       User        @relation(fields: [changedByUserId], references: [id])
+  createdAt       DateTime    @default(now())
+}
+
+model UserProgress {
+  id          String      @id @default(cuid())
+  userId      String
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lessonId    String?
+  inquiryId   String?
+  score       Int?
+  completedAt DateTime    @default(now())
+
+  @@unique([userId, lessonId])
+  @@unique([userId, inquiryId])
+}

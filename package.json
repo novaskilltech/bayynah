@@ -1,0 +1,33 @@
+{
+  "name": "bayynah",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plateforme pédagogique d'esprit critique dans l'étude religieuse selon la méthodologie d'Ahl as-Sunnah wa-l-Jamâʿa",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.441.0",
+    "next": "14.2.10",
+    "next-auth": "^5.0.0-beta.20",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.5",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "postcss": "^8.4.45",
+    "prisma": "^5.19.0",
+    "tailwindcss": "^3.4.11",
+    "typescript": "^5.6.2"
+  }
+}
