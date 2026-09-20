@@ -5,16 +5,13 @@ export type EvidenceType =
   | "HADITH"
   | "ATHAR"
   | "BOOK"
-  | "SCHOLAR"
   | "CONTEMPORARY";
 
-export interface EvidenceItem {
+export interface BaseEvidenceItem {
   id: string;
   type: EvidenceType;
-  referenceCode: string; // Ex: "Ṣaḥîḥ Muslim 360"
+  referenceCode: string;
   primarySource: boolean;
-  
-  // Rigueur philologique
   quoteArOriginal: string;
   quoteArVocalized?: string;
   quoteArNormalized?: string;
@@ -22,11 +19,57 @@ export interface EvidenceItem {
   translator?: string;
   translationStatus: TranslationStatus;
   citationStatus: CitationStatus;
-  
+  consultationUrl?: string;
+  lastVerifiedAt?: string;
+}
+
+export interface QuranEvidenceItem extends BaseEvidenceItem {
+  type: "QURAN";
+  surahNumber: number;
+  ayahNumber: number;
+  surahNameAr: string;
+  surahNameFr: string;
+}
+
+export interface HadithEvidenceItem extends BaseEvidenceItem {
+  type: "HADITH";
+  collection: string;
+  author: string;
+  hadithNumber: string;
+  chapterAr?: string;
+  chapterFr?: string;
+  editionVolumePage: string;
+  authenticityGrade: string;
+  gradeScholar: string;
+}
+
+export interface AtharEvidenceItem extends BaseEvidenceItem {
+  type: "ATHAR";
+  narrator: string;
   sourceWork: string;
   author: string;
   editionVolumePage: string;
   authenticityGrade?: string;
   gradeScholar?: string;
-  consultationUrl?: string;
 }
+
+export interface BookEvidenceItem extends BaseEvidenceItem {
+  type: "BOOK";
+  sourceWork: string;
+  author: string;
+  editionVolumePage: string;
+}
+
+export interface ContemporaryEvidenceItem extends BaseEvidenceItem {
+  type: "CONTEMPORARY";
+  sourceWork: string;
+  author: string;
+  consultationDate: string;
+}
+
+export type EvidenceItem =
+  | QuranEvidenceItem
+  | HadithEvidenceItem
+  | AtharEvidenceItem
+  | BookEvidenceItem
+  | ContemporaryEvidenceItem;

@@ -60,24 +60,24 @@ enum EvidenceRole {
 }
 
 model User {
-  id               String            @id @default(cuid())
-  email            String            @unique
-  passwordHash     String
-  name             String?
-  role             Role              @default(USER)
+  id                String            @id @default(cuid())
+  email             String            @unique
+  passwordHash      String
+  name              String?
+  role              Role              @default(USER)
   
   // Relations d'attribution scientifique et de révision
-  authoredLessons  Lesson[]          @relation("AuthoredLessons")
-  reviewedLessons  Lesson[]          @relation("ReviewedLessons")
-  authoredInquiries Inquiry[]        @relation("AuthoredInquiries")
-  reviewedInquiries Inquiry[]        @relation("ReviewedInquiries")
+  authoredLessons   Lesson[]          @relation("AuthoredLessons")
+  reviewedLessons   Lesson[]          @relation("ReviewedLessons")
+  authoredInquiries Inquiry[]         @relation("AuthoredInquiries")
+  reviewedInquiries Inquiry[]         @relation("ReviewedInquiries")
   
-  lessonProgress   LessonProgress[]
-  inquiryProgress  InquiryProgress[]
-  revisions        Revision[]
+  lessonProgress    LessonProgress[]
+  inquiryProgress   InquiryProgress[]
+  revisions         Revision[]
   
-  createdAt        DateTime          @default(now())
-  updatedAt        DateTime          @updatedAt
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
 }
 
 model Lesson {
@@ -102,7 +102,8 @@ model Lesson {
   reviewerId      String?
   reviewer        User?             @relation("ReviewedLessons", fields: [reviewerId], references: [id])
   
-  lastVerifiedAt  DateTime          @default(now())
+  // Aucun contenu n'est vérifié par défaut
+  lastVerifiedAt  DateTime?
   
   createdAt       DateTime          @default(now())
   updatedAt       DateTime          @updatedAt
@@ -127,7 +128,7 @@ model Inquiry {
   claimFr            String
   claimAr            String
   steps              Json               // Étapes ordonnées avec options et feedbacks
-  conclusionSheet    Json               // Fiche standardisée
+  conclusionSheet    Json               // Fiche standardisée avec evidenceIds traçables
   certaintyLevel     CertaintyLevel
   
   // Relation structurée via InquiryEvidence
@@ -139,7 +140,7 @@ model Inquiry {
   reviewerId         String?
   reviewer           User?              @relation("ReviewedInquiries", fields: [reviewerId], references: [id])
   
-  lastVerifiedAt     DateTime           @default(now())
+  lastVerifiedAt     DateTime?
   createdAt          DateTime           @default(now())
   updatedAt          DateTime           @updatedAt
 }
@@ -147,24 +148,40 @@ model Inquiry {
 model Evidence {
   id                 String             @id
   type               EvidenceType
-  referenceCode      String             // Ex: "Sahih Muslim 360", "Al-Majmu' 2/45"
-  primarySource      Boolean            @default(true)
+  referenceCode      String             // Ex: "Coran 2:256", "Sahih Muslim 360", "Al-Majmu' 2/45"
+  primarySource      Boolean            @default(false) // Non primaire par défaut
   
   // Rigueur philologique
-  quoteArOriginal    String             @db.Text // Citation brute telle que dans l'édition (sans voyelles ajoutées artificiellement)
-  quoteArVocalized   String?            @db.Text // Version vocalisée distincte si nécessaire
-  quoteArNormalized  String?            @db.Text // Version sans diacritiques pour la recherche
-  translationFr      String             @db.Text // Traduction
-  translator         String?            // Nom du traducteur si connu
+  quoteArOriginal    String             @db.Text
+  quoteArVocalized   String?            @db.Text
+  quoteArNormalized  String?            @db.Text
+  translationFr      String             @db.Text
+  translator         String?
   translationStatus  TranslationStatus  @default(TRANSLATION_PROPOSED)
-  citationStatus     CitationStatus     @default(VERIFIED_VERBATIM)
+  citationStatus     CitationStatus     @default(TO_BE_CHECKED) // Non vérifié par défaut
   
-  sourceWork         String             // Nom de l'ouvrage original
-  author             String             // Auteur
-  editionVolumePage  String             // Ex: "Éd. Dârussalâm, T.2, p.140, hadith n°360"
+  // Champs spécifiques aux types de sources (nullable car discriminés)
+  // Coran
+  surahNumber        Int?
+  ayahNumber         Int?
+  surahNameAr        String?
+  surahNameFr        String?
+  
+  // Hadith / Athar / Livre
+  collection         String?            // Ex: "Sahih Muslim"
+  hadithNumber       String?            // Ex: "360"
+  chapterAr          String?
+  chapterFr          String?
+  narrator           String?            // Pour Athar (Compagnon ou Tâbi'î)
+  sourceWork         String?            // Ouvrage pour Livre/Athar
+  author             String?            // Auteur humain
+  editionVolumePage  String?            // Localisation physique (tome, page)
   authenticityGrade  String?            // Sahih, Hasan, Da'if, Mawdu', etc.
-  gradeScholar       String?            // Qui a jugé ? (Ex: "An-Nawawî", "Al-Albânî")
-  consultationUrl    String?            // URL d'accès légal pour consultation
+  gradeScholar       String?            // Qui a jugé ?
+  
+  // Consultation
+  consultationUrl    String?
+  lastVerifiedAt     DateTime?          // Non vérifié par défaut
   
   inquiryEvidences   InquiryEvidence[]
   createdAt          DateTime           @default(now())

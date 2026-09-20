@@ -29,14 +29,21 @@ export interface InquiryEvidenceItem {
   evidence?: EvidenceItem;
 }
 
+// Affirmation scientifique traçable pointant vers des preuves
+export interface TraceableClaim {
+  fr: string;
+  ar: string;
+  evidenceIds: string[];
+}
+
 export interface StandardConclusionSheet {
-  established: BilingualText;
-  discussed: BilingualText;
-  notEstablished: BilingualText;
+  established: TraceableClaim;
+  discussed: TraceableClaim;
+  notEstablished: TraceableClaim;
   primaryEvidences: string[];
-  salafUnderstanding: BilingualText;
-  scholarlyPositions: BilingualText;
-  methodologicalPitfall: BilingualText;
+  salafUnderstanding: TraceableClaim;
+  scholarlyPositions: TraceableClaim;
+  methodologicalPitfall: TraceableClaim;
   originalSources: string[];
   certaintyLevel: CertaintyLevel;
 }
@@ -52,5 +59,5 @@ export interface InquiryItem {
   inquiryEvidences: InquiryEvidenceItem[];
   authorId: string;
   reviewerId?: string;
-  lastVerifiedAt: string;
+  lastVerifiedAt?: string;
 }

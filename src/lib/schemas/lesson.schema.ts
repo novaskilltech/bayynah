@@ -17,7 +17,7 @@ export const HistoricReferenceSchema = z.object({
   quoteArNormalized: z.string().optional(),
   translationFr: z.string().min(1, "La traduction française est requise"),
   translator: z.string().optional(),
-  citationStatus: CitationStatusEnum.default("VERIFIED_VERBATIM"),
+  citationStatus: CitationStatusEnum.default("TO_BE_CHECKED"), // Non vérifié par défaut
 });
 
 export const QuizOptionSchema = z.object({
@@ -51,7 +51,7 @@ export const LessonFrontmatterSchema = z.object({
   historicReference: HistoricReferenceSchema.optional(),
   authorId: z.string().min(1, "L'identifiant de l'auteur est obligatoire"),
   reviewerId: z.string().optional(),
-  lastVerifiedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Format de date requis: YYYY-MM-DD"),
+  lastVerifiedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Format de date requis: YYYY-MM-DD").optional(), // Non vérifié par défaut
   quizzes: z.array(QuizItemSchema).optional().default([]),
 });
 

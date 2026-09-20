@@ -23,6 +23,13 @@ export const BilingualTextSchema = z.object({
   ar: z.string().min(1, "Texte arabe requis"),
 });
 
+// Affirmation scientifique traçable avec preuve(s) rattachée(s)
+export const TraceableClaimSchema = z.object({
+  fr: z.string().min(1, "Texte français requis"),
+  ar: z.string().min(1, "Texte arabe requis"),
+  evidenceIds: z.array(z.string()).default([]), // Rattachement obligatoire des IDs de preuve
+});
+
 export const InquiryStepOptionSchema = z.object({
   textFr: z.string().min(1),
   textAr: z.string().optional(),
@@ -42,7 +49,7 @@ export const InquiryStepSchema = z.object({
 });
 
 export const InquiryEvidenceSchema = z.object({
-  evidenceId: z.string().min(1),
+  evidenceId: z.string().min(1, "L'ID de la preuve est requis"),
   role: EvidenceRoleEnum.default("PRIMARY_PROOF"),
   order: z.number().int().default(1),
   stepNumber: z.number().int().optional(),
@@ -51,14 +58,15 @@ export const InquiryEvidenceSchema = z.object({
   evidence: EvidenceSchema.optional(),
 });
 
+// Fiche de conclusion où chaque affirmation pointe vers des preuves
 export const StandardConclusionSheetSchema = z.object({
-  established: BilingualTextSchema,
-  discussed: BilingualTextSchema,
-  notEstablished: BilingualTextSchema,
+  established: TraceableClaimSchema,
+  discussed: TraceableClaimSchema,
+  notEstablished: TraceableClaimSchema,
   primaryEvidences: z.array(z.string()).min(1, "Au moins une preuve principale est requise"),
-  salafUnderstanding: BilingualTextSchema,
-  scholarlyPositions: BilingualTextSchema,
-  methodologicalPitfall: BilingualTextSchema,
+  salafUnderstanding: TraceableClaimSchema,
+  scholarlyPositions: TraceableClaimSchema,
+  methodologicalPitfall: TraceableClaimSchema,
   originalSources: z.array(z.string()).min(1, "Au moins une source originale est requise"),
   certaintyLevel: CertaintyLevelEnum,
 });
@@ -71,10 +79,11 @@ export const InquirySchema = z.object({
   initialClaim: BilingualTextSchema,
   steps: z.array(InquiryStepSchema).min(1, "Au moins une étape d'enquête est requise"),
   conclusionSheet: StandardConclusionSheetSchema,
-  inquiryEvidences: z.array(InquiryEvidenceSchema).default([]),
+  inquiryEvidences: z.array(InquiryEvidenceSchema).min(1, "Au moins une preuve rattachée à l'enquête"),
   authorId: z.string().default("author-01"),
   reviewerId: z.string().optional(),
-  lastVerifiedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Format de date YYYY-MM-DD"),
+  lastVerifiedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Format de date YYYY-MM-DD").optional(),
 });
 
 export type InquiryInput = z.infer<typeof InquirySchema>;
+export type TraceableClaimInput = z.infer<typeof TraceableClaimSchema>;

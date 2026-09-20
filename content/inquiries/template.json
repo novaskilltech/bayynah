@@ -49,59 +49,90 @@
       "role": "PRIMARY_PROOF",
       "order": 1,
       "stepNumber": 1,
-      "commentFr": "Preuve scripturaire explicite ordonnant le lavage/les ablutions après la viande de chameau.",
+      "commentFr": "Preuve scripturaire explicite ordonnant les ablutions après la viande de chameau dans Sahih Muslim.",
       "commentAr": "نص صريح في الأمر بالوضوء من لحوم الإبل في صحيح مسلم.",
       "evidence": {
         "id": "hadith-muslim-360",
         "type": "HADITH",
         "referenceCode": "Ṣaḥîḥ Muslim 360",
         "primarySource": true,
+        "collection": "Ṣaḥîḥ Muslim",
+        "author": "Muslim ibn al-Ḥajjâj",
+        "hadithNumber": "360",
+        "chapterAr": "باب الوضوء من لحوم الإبل",
+        "chapterFr": "Chapitre sur les ablutions après la consommation de viande de chameau",
+        "editionVolumePage": "Kitāb al-Ḥayḍ, hadith n°360 (Éd. Dârussalâm)",
+        "authenticityGrade": "Ṣaḥîḥ",
+        "gradeScholar": "Muslim ibn al-Ḥajjâj",
         "quoteArOriginal": "أَنَّ رَجُلاً سَأَلَ رَسُولَ اللَّهِ صلى الله عليه وسلم: أَأَتَوَضَّأُ مِنْ لُحُومِ الْغَنَمِ؟ قَالَ: «إِنْ شِئْتَ فَتَوَضَّأْ، وَإِنْ شِئْتَ فَلاَ تَوَضَّأْ». قَالَ: أَأَتَوَضَّأُ مِنْ لُحُومِ الإِبِلِ؟ قَالَ: «نَعَمْ، فَتَوَضَّأْ مِنْ لُحُومِ الإِبِلِ».",
         "quoteArVocalized": "أَنَّ رَجُلًا سَأَلَ رَسُولَ اللهِ ﷺ: أَأَتَوَضَّأُ مِنْ لُحُومِ الْغَنَمِ؟ قَالَ: «إِنْ شِئْتَ فَتَوَضَّأْ، وَإِنْ شِئْتَ فَلَا تَوَضَّأْ». قَالَ: أَأَتَوَضَّأُ مِنْ لُحُومِ الإِبِلِ؟ قَالَ: «نَعَمْ، فَتَوَضَّأْ مِنْ لُحُومِ الإِبِلِ».",
         "quoteArNormalized": "ان رجلا سال رسول الله صلى الله عليه وسلم ااتوضا من لحوم الغنم قال ان شئت فتوضا وان شئت فلا توضا قال ااتوضا من لحوم الابل قال نعم فتوضا من لحوم الابل",
         "translationFr": "Un homme demanda au Messager d'Allah ﷺ : « Dois-je faire mes ablutions après avoir mangé de la viande de mouton ? » Il répondit : « Si tu veux, fais tes ablutions, et si tu veux, ne les fais pas. » L'homme demanda : « Dois-je faire mes ablutions après avoir mangé de la viande de chameau ? » Il répondit : « Oui, fais tes ablutions après avoir mangé de la viande de chameau. »",
         "translationStatus": "TRANSLATION_PROPOSED",
         "citationStatus": "VERIFIED_VERBATIM",
-        "sourceWork": "Ṣaḥîḥ Muslim",
-        "author": "Al-Imâm Muslim ibn al-Ḥajjâj",
-        "editionVolumePage": "Kitāb al-Ḥayḍ, Bāb al-wuḍū' min luḥūm al-ibil, hadith n°360 (Éd. Dârussalâm)",
-        "authenticityGrade": "Ṣaḥîḥ",
-        "gradeScholar": "Muslim ibn al-Ḥajjâj",
-        "consultationUrl": "https://sunnah.com/muslim:360a"
+        "consultationUrl": "https://sunnah.com/muslim:360a",
+        "lastVerifiedAt": "2026-09-20"
+      }
+    },
+    {
+      "evidenceId": "book-nawawi-sharh-4-48",
+      "role": "SCHOLARLY_EXPLANATION",
+      "order": 2,
+      "commentFr": "An-Nawawî documente la position du jumhûr et souligne la force probante de la position contraire.",
+      "commentAr": "بيان الإمام النووي لمذهب الجمهور مع بيانه لقوة دليل القائلين بالنقض.",
+      "evidence": {
+        "id": "book-nawawi-sharh-4-48",
+        "type": "BOOK",
+        "referenceCode": "Sharḥ Ṣaḥîḥ Muslim 4/48",
+        "primarySource": false,
+        "sourceWork": "Sharḥ Ṣaḥîḥ Muslim",
+        "author": "Abû Zakariyyâ Yaḥyâ an-Nawawî",
+        "editionVolumePage": "Tome 4, page 48 (Éd. Al-Maṭbaʿa al-Miṣriyya)",
+        "quoteArOriginal": "ذهب جمهور العلماء إلى أن أكل لحم الإبل لا ينقض الوضوء... وممن ذهب إلى النقض أحمد بن حنبل وإسحاق بن راهويه... وهو أقوى دليلا وإن كان الجمهور على خلافه",
+        "quoteArVocalized": "ذَهَبَ جُمْهُورُ الْعُلَمَاءِ إِلَى أَنَّ أَكْلَ لَحْمِ الإِبِلِ لَا يَنْقُضُ الْوُضُوءَ... وَمِمَّنْ ذَهَبَ إِلَى النَّقْضِ أَحْمَدُ بْنُ حَنْبَلٍ وَإِسْحَاقُ بْنُ رَاهَوَيْهِ... وَهُوَ أَقْوَى دَلِيلًا وَإِنْ كَانَ الْجُمْهُورُ عَلَى خِلَافِهِ",
+        "quoteArNormalized": "ذهب جمهور العلماء الى ان اكل لحم الابل لا ينقض الوضوء وممن ذهب الى النقض احمد بن حنبل واسحاق بن راهويه وهو اقوى دليلا وان كان الجمهور على خلافه",
+        "translationFr": "La majorité des savants est d'avis que la consommation de viande de chameau ne rompt pas les ablutions... Parmi ceux qui ont soutenu qu'elle les rompt figurent Ahmad ibn Hanbal et Ishaq ibn Rahawayh... et cet avis est plus fort quant à sa preuve, bien que la majorité adopte l'avis contraire.",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "lastVerifiedAt": "2026-09-20"
       }
     }
   ],
   "conclusionSheet": {
     "established": {
       "fr": "Il existe des hadiths authentiques explicites ordonnant de refaire les ablutions après avoir mangé de la viande de chameau (notamment dans Sahih Muslim, hadith de Jâbir ibn Samura n°360). L'avis n'est donc en aucun cas une invention.",
-      "ar": "ثبتت أحاديث صحيحة صريحة بالأمر بالوضوء من لحوم الإبل (كما في صحيح مسلم عن جابر بن سمرة رقم 360)، فالدعوى بأنه رأي مخترع باطلة قطعاً."
+      "ar": "ثبتت أحاديث صحيحة صريحة بالأمر بالوضوء من لحوم الإبل (كما في صحيح مسلم عن جابر بن سمرة رقم 360)، فالدعوى بأنه رأي مخترع باطلة قطعاً.",
+      "evidenceIds": ["hadith-muslim-360"]
     },
     "discussed": {
       "fr": "La divergence porte sur la portée de l'ordre : obligation formelle d'annuler les ablutions (position de l'imam Ahmad, Ishâq ibn Râhawayh, et d'autres) ou non-annulation selon le jumhûr (Abû Hanîfa, Mâlik, Ash-Shâfi'î). L'imam an-Nawawî rapporte que le jumhûr considère que cela n'annule pas les ablutions, tout en jugeant personnellement la position contraire plus forte quant à sa preuve scripturaire (Sharḥ Ṣaḥîḥ Muslim, T.4, p.48).",
-      "ar": "وقع الخلاف في دلالة الأمر: هل هو للوجوب الناقض (أحمد وإسحاق وغيرهما) أم لا ينقض عند جمهور الفقهاء (أبو حنيفة ومالك والشافعي). وقد نقل الإمام النووي مذهب الجمهور بعدم النقض، مع ترجيحه الشخصي بأن مذهب النقض أقوى دليلاً (شرح صحيح مسلم، ج4، ص48)."
+      "ar": "وقع الخلاف في دلالة الأمر: هل هو للوجوب الناقض (أحمد وإسحاق وغيرهما) أم لا ينقض عند جمهور الفقهاء (أبو حنيفة ومالك والشافعي). وقد نقل الإمام النووي مذهب الجمهور بعدم النقض، مع ترجيحه الشخصي بأن مذهب النقض أقوى دليلاً (شرح صحيح مسلم، ج4، ص48).",
+      "evidenceIds": ["book-nawawi-sharh-4-48"]
     },
     "notEstablished": {
       "fr": "L'affirmation selon laquelle cet avis serait une invention récente sans fondement.",
-      "ar": "الدعوى بأنه لا أصل لهذا القول في السنة أو كلام أئمة السلف."
+      "ar": "الدعوى بأنه لا أصل لهذا القول في السنة أو كلام أئمة السلف.",
+      "evidenceIds": []
     },
-    "primaryEvidences": ["Ṣaḥîḥ Muslim, n°360 (Hadith de Jâbir ibn Samura)"],
+    "primaryEvidences": ["Ṣaḥîḥ Muslim, hadith n°360 (Jâbir ibn Samura)"],
     "salafUnderstanding": {
       "fr": "Divergence déjà documentée parmi les Compagnons et les premières générations.",
-      "ar": "خلاف منقول ومشهور عن الصحابة والتابعين."
+      "ar": "خلاف منقول ومشهور عن الصحابة والتابعين.",
+      "evidenceIds": ["book-nawawi-sharh-4-48"]
     },
     "scholarlyPositions": {
       "fr": "Position 1 (Hanbalites, traditionnistes) : La consommation annule les ablutions. Position 2 (Jumhûr - Hanafites, Mâlikites, Shâfi'ites) : Elle n'annule pas les ablutions.",
-      "ar": "القول الأول (الحنابلة وأهل الحديث): ينقض الوضوء. القول الثاني (جمهور العلماء من الحنفية والمالكية والشافعية): لا ينقض."
+      "ar": "القول الأول (الحنابلة وأهل الحديث): ينقض الوضوء. القول الثاني (جمهور العلماء من الحنفية والمالكية والشافعية): لا ينقض.",
+      "evidenceIds": ["book-nawawi-sharh-4-48"]
     },
     "methodologicalPitfall": {
       "fr": "Confondre sa propre méconnaissance d'un avis juridique avec l'inexistence de cet avis, ou présenter une divergence reconnue comme un consensus inexistant.",
-      "ar": "الخلط بين عدم العلم بالشيء والعلم بعدمه، أو ادعاء إجماع موهوم في مسألة فيها خلاف سائغ معتبر."
+      "ar": "الخلط بين عدم العلم بالشيء والعلم بعدمه، أو ادعاء إجماع موهوم في مسألة فيها خلاف سائغ معتبر.",
+      "evidenceIds": []
     },
     "originalSources": [
       "Ṣaḥîḥ Muslim, Bāb al-wuḍū' min luḥūm al-ibil",
-      "Sharḥ Ṣaḥîḥ Muslim de l'imam an-Nawawî (T.4, p.48)",
-      "Al-Majmū' Sharḥ al-Muhadhdhab (T.2, p.57)",
-      "Al-Mughnī d'Ibn Qudāma (T.1, p.245)"
+      "Sharḥ Ṣaḥîḥ Muslim de l'imam an-Nawawî (T.4, p.48)"
     ],
     "certaintyLevel": "KHILAF_RECONNU"
   },
