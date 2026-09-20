@@ -16,7 +16,7 @@ export const TranslationStatusEnum = z.enum([
 const BaseEvidenceSchema = z.object({
   id: z.string().min(1, "L'identifiant de preuve est requis"),
   referenceCode: z.string().min(1, "Le code de référence est requis"),
-  primarySource: z.boolean({ required_error: "primarySource est obligatoire (true/false)" }), // Obligatoire sans défaut silencieux
+  primarySource: z.boolean({ message: "primarySource est obligatoire (true/false)" }), // Obligatoire sans défaut silencieux
   quoteArOriginal: z.string().min(1, "La citation arabe originale (telle qu'éditée) est obligatoire"),
   quoteArVocalized: z.string().optional(),
   quoteArNormalized: z.string().optional(),

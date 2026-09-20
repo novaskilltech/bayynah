@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getDictionary } from "@/lib/dictionary";
 import { getAllInquiries } from "@/lib/inquiry-service";
-import { ArrowRight, ArrowLeft, BookOpen, Layers, Target } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 
 interface PageProps {
   params: Promise<{

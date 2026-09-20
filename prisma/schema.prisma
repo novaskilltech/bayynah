@@ -55,7 +55,6 @@ enum EvidenceType {
   HADITH
   ATHAR
   BOOK
-  SCHOLAR
   CONTEMPORARY
 }
 

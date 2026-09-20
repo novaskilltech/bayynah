@@ -48,7 +48,7 @@ export function getAllInquiries(): InquirySummary[] {
           editorialStatus: inq.editorialStatus,
           title: inq.title,
           initialClaim: inq.initialClaim,
-          certaintyLevel: inq.certaintyLevel,
+          certaintyLevel: inq.conclusionSheet.certaintyLevel,
           stepsCount: inq.steps.length,
           evidencesCount: inq.inquiryEvidences.length,
         });

@@ -62,7 +62,7 @@ export const InquiryEvidenceSchema = z.object({
   stepNumber: z.number().int().optional(),
   commentFr: z.string().optional(),
   commentAr: z.string().optional(),
-  evidence: EvidenceSchema.optional(),
+  evidence: EvidenceSchema,
 });
 
 export const StandardConclusionSheetSchema = z.object({

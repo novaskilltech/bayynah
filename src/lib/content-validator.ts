@@ -48,8 +48,9 @@ export function validateAllContent(): { valid: boolean; errors: string[] } {
               JSON.stringify(result.error.format(), null, 2)
           );
         }
-      } catch (err: any) {
-        errors.push(`[Leçon ${file}] Erreur de parsing YAML (gray-matter) : ${err.message}`);
+      } catch (err: unknown) {
+        const errorMsg = err instanceof Error ? err.message : String(err);
+        errors.push(`[Leçon ${file}] Erreur de parsing YAML (gray-matter) : ${errorMsg}`);
       }
     }
   }
@@ -132,8 +133,9 @@ export function validateAllContent(): { valid: boolean; errors: string[] } {
             }
           }
         }
-      } catch (err: any) {
-        errors.push(`[Enquête ${file}] Erreur JSON : ${err.message}`);
+      } catch (err: unknown) {
+        const errorMsg = err instanceof Error ? err.message : String(err);
+        errors.push(`[Enquête ${file}] Erreur JSON : ${errorMsg}`);
       }
     }
   }

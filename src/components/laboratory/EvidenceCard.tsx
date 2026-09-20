@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { EvidenceItem } from "@/types/evidence";
-import { CheckCircle2, AlertCircle, ExternalLink, BookOpen, Quote } from "lucide-react";
+import { CheckCircle2, AlertCircle, ExternalLink, Quote } from "lucide-react";
 
 interface EvidenceCardProps {
   evidence: EvidenceItem;
