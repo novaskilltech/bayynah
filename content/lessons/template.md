@@ -4,6 +4,7 @@ slug: "hadith-01-matn-isnad"
 school: "HADITH"
 level: 1
 order: 1
+editorialStatus: "DRAFT"
 titleFr: "Qu'est-ce qu'un hadith ? Matn et Isnâd"
 titleAr: "ما هو الحديث؟ المتن والإسناد"
 summaryFr: "Comprendre la distinction fondamentale entre le texte attribué et la chaîne de transmission."
@@ -19,6 +20,8 @@ historicReference:
   quoteArNormalized: "الاسناد من الدين ولولا الاسناد لقال من شاء ما شاء"
   translationFr: "L'isnâd fait partie de la religion ; s'il n'y avait pas l'isnâd, n'importe qui dirait ce qu'il veut."
   citationStatus: "VERIFIED_VERBATIM"
+  verifiedAt: "2026-09-20"
+  verifiedBy: "reviewer-01"
 authorId: "author-01"
 reviewerId: "reviewer-01"
 lastVerifiedAt: "2026-09-20"

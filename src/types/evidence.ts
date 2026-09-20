@@ -11,7 +11,7 @@ export interface BaseEvidenceItem {
   id: string;
   type: EvidenceType;
   referenceCode: string;
-  primarySource: boolean;
+  primarySource: boolean; // Obligatoire
   quoteArOriginal: string;
   quoteArVocalized?: string;
   quoteArNormalized?: string;
@@ -19,6 +19,8 @@ export interface BaseEvidenceItem {
   translator?: string;
   translationStatus: TranslationStatus;
   citationStatus: CitationStatus;
+  verifiedAt?: string;
+  verifiedBy?: string;
   consultationUrl?: string;
   lastVerifiedAt?: string;
 }
@@ -36,6 +38,7 @@ export interface HadithEvidenceItem extends BaseEvidenceItem {
   collection: string;
   author: string;
   hadithNumber: string;
+  numberingSystem: string; // Système de numérotation obligatoire
   chapterAr?: string;
   chapterFr?: string;
   editionVolumePage: string;

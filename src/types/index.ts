@@ -11,6 +11,13 @@ export type CertaintyLevel =
   | "EXPERTISE_REQUISE"
   | "INSUFFISANT";
 
+export type EditorialStatus =
+  | "DRAFT"
+  | "IN_REVIEW"
+  | "APPROVED"
+  | "PUBLISHED"
+  | "ARCHIVED";
+
 export type CitationStatus =
   | "VERIFIED_VERBATIM"
   | "VERIFIED_PARAPHRASE"
@@ -43,4 +50,6 @@ export interface HistoricReference {
   translationFr: string;
   translator?: string;
   citationStatus: CitationStatus;
+  verifiedAt?: string;
+  verifiedBy?: string;
 }

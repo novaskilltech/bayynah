@@ -1,4 +1,4 @@
-import { HistoricReference, SchoolType } from "./index";
+import { EditorialStatus, HistoricReference, SchoolType } from "./index";
 
 export interface QuizOption {
   textFr: string;
@@ -22,6 +22,7 @@ export interface LessonMeta {
   school: SchoolType;
   level: 1 | 2 | 3 | 4;
   order: number;
+  editorialStatus: EditorialStatus;
   titleFr: string;
   titleAr: string;
   summaryFr: string;
@@ -31,7 +32,8 @@ export interface LessonMeta {
   historicReference?: HistoricReference;
   authorId: string;
   reviewerId?: string;
-  lastVerifiedAt: string;
+  reviewedAt?: string;
+  lastVerifiedAt?: string;
   quizzes?: QuizItem[];
 }
 

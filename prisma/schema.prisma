@@ -30,6 +30,14 @@ enum CertaintyLevel {
   INSUFFISANT
 }
 
+enum EditorialStatus {
+  DRAFT
+  IN_REVIEW
+  APPROVED
+  PUBLISHED
+  ARCHIVED
+}
+
 enum CitationStatus {
   VERIFIED_VERBATIM
   VERIFIED_PARAPHRASE
@@ -97,12 +105,15 @@ model Lesson {
   quizzes         Quiz[]
   progress        LessonProgress[]
   
+  // Statut éditorial
+  editorialStatus EditorialStatus   @default(DRAFT)
+  
   authorId        String
   author          User              @relation("AuthoredLessons", fields: [authorId], references: [id])
   reviewerId      String?
   reviewer        User?             @relation("ReviewedLessons", fields: [reviewerId], references: [id])
   
-  // Aucun contenu n'est vérifié par défaut
+  reviewedAt      DateTime?
   lastVerifiedAt  DateTime?
   
   createdAt       DateTime          @default(now())
@@ -131,6 +142,9 @@ model Inquiry {
   conclusionSheet    Json               // Fiche standardisée avec evidenceIds traçables
   certaintyLevel     CertaintyLevel
   
+  // Statut éditorial
+  editorialStatus    EditorialStatus    @default(DRAFT)
+  
   // Relation structurée via InquiryEvidence
   inquiryEvidences   InquiryEvidence[]
   progress           InquiryProgress[]
@@ -140,6 +154,7 @@ model Inquiry {
   reviewerId         String?
   reviewer           User?              @relation("ReviewedInquiries", fields: [reviewerId], references: [id])
   
+  reviewedAt         DateTime?
   lastVerifiedAt     DateTime?
   createdAt          DateTime           @default(now())
   updatedAt          DateTime           @updatedAt
@@ -149,7 +164,7 @@ model Evidence {
   id                 String             @id
   type               EvidenceType
   referenceCode      String             // Ex: "Coran 2:256", "Sahih Muslim 360", "Al-Majmu' 2/45"
-  primarySource      Boolean            @default(false) // Non primaire par défaut
+  primarySource      Boolean            // Pas de valeur par défaut silencieuse
   
   // Rigueur philologique
   quoteArOriginal    String             @db.Text
@@ -160,16 +175,15 @@ model Evidence {
   translationStatus  TranslationStatus  @default(TRANSLATION_PROPOSED)
   citationStatus     CitationStatus     @default(TO_BE_CHECKED) // Non vérifié par défaut
   
-  // Champs spécifiques aux types de sources (nullable car discriminés)
-  // Coran
+  // Champs spécifiques aux types de sources
   surahNumber        Int?
   ayahNumber         Int?
   surahNameAr        String?
   surahNameFr        String?
   
-  // Hadith / Athar / Livre
   collection         String?            // Ex: "Sahih Muslim"
   hadithNumber       String?            // Ex: "360"
+  numberingSystem    String?            // Ex: "Fuad Abdul Baqi"
   chapterAr          String?
   chapterFr          String?
   narrator           String?            // Pour Athar (Compagnon ou Tâbi'î)
@@ -179,9 +193,11 @@ model Evidence {
   authenticityGrade  String?            // Sahih, Hasan, Da'if, Mawdu', etc.
   gradeScholar       String?            // Qui a jugé ?
   
-  // Consultation
+  // Traçabilité de la vérification
+  verifiedAt         DateTime?
+  verifiedBy         String?
   consultationUrl    String?
-  lastVerifiedAt     DateTime?          // Non vérifié par défaut
+  lastVerifiedAt     DateTime?
   
   inquiryEvidences   InquiryEvidence[]
   createdAt          DateTime           @default(now())

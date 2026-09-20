@@ -2,6 +2,7 @@
   "id": "inquiry-01",
   "slug": "ablutions-viande-chameau",
   "domain": "FIQH",
+  "editorialStatus": "DRAFT",
   "title": {
     "fr": "La consommation de viande de chameau rompt-elle les ablutions ?",
     "ar": "هل أكل لحم الإبل ينقض الوضوء؟"
@@ -59,6 +60,7 @@
         "collection": "Ṣaḥîḥ Muslim",
         "author": "Muslim ibn al-Ḥajjâj",
         "hadithNumber": "360",
+        "numberingSystem": "Fuad Abdul Baqi",
         "chapterAr": "باب الوضوء من لحوم الإبل",
         "chapterFr": "Chapitre sur les ablutions après la consommation de viande de chameau",
         "editionVolumePage": "Kitāb al-Ḥayḍ, hadith n°360 (Éd. Dârussalâm)",
@@ -70,6 +72,8 @@
         "translationFr": "Un homme demanda au Messager d'Allah ﷺ : « Dois-je faire mes ablutions après avoir mangé de la viande de mouton ? » Il répondit : « Si tu veux, fais tes ablutions, et si tu veux, ne les fais pas. » L'homme demanda : « Dois-je faire mes ablutions après avoir mangé de la viande de chameau ? » Il répondit : « Oui, fais tes ablutions après avoir mangé de la viande de chameau. »",
         "translationStatus": "TRANSLATION_PROPOSED",
         "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-20",
+        "verifiedBy": "reviewer-01",
         "consultationUrl": "https://sunnah.com/muslim:360a",
         "lastVerifiedAt": "2026-09-20"
       }
@@ -94,6 +98,8 @@
         "translationFr": "La majorité des savants est d'avis que la consommation de viande de chameau ne rompt pas les ablutions... Parmi ceux qui ont soutenu qu'elle les rompt figurent Ahmad ibn Hanbal et Ishaq ibn Rahawayh... et cet avis est plus fort quant à sa preuve, bien que la majorité adopte l'avis contraire.",
         "translationStatus": "TRANSLATION_PROPOSED",
         "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-20",
+        "verifiedBy": "reviewer-01",
         "lastVerifiedAt": "2026-09-20"
       }
     }
@@ -112,7 +118,7 @@
     "notEstablished": {
       "fr": "L'affirmation selon laquelle cet avis serait une invention récente sans fondement.",
       "ar": "الدعوى بأنه لا أصل لهذا القول في السنة أو كلام أئمة السلف.",
-      "evidenceIds": []
+      "evidenceIds": ["hadith-muslim-360", "book-nawawi-sharh-4-48"]
     },
     "primaryEvidences": ["Ṣaḥîḥ Muslim, hadith n°360 (Jâbir ibn Samura)"],
     "salafUnderstanding": {

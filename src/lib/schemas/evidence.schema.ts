@@ -16,7 +16,7 @@ export const TranslationStatusEnum = z.enum([
 const BaseEvidenceSchema = z.object({
   id: z.string().min(1, "L'identifiant de preuve est requis"),
   referenceCode: z.string().min(1, "Le code de référence est requis"),
-  primarySource: z.boolean().default(false), // Non primaire par défaut
+  primarySource: z.boolean({ required_error: "primarySource est obligatoire (true/false)" }), // Obligatoire sans défaut silencieux
   quoteArOriginal: z.string().min(1, "La citation arabe originale (telle qu'éditée) est obligatoire"),
   quoteArVocalized: z.string().optional(),
   quoteArNormalized: z.string().optional(),
@@ -24,6 +24,8 @@ const BaseEvidenceSchema = z.object({
   translator: z.string().optional(),
   translationStatus: TranslationStatusEnum.default("TRANSLATION_PROPOSED"),
   citationStatus: CitationStatusEnum.default("TO_BE_CHECKED"), // Non vérifié par défaut
+  verifiedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Format de date YYYY-MM-DD requis pour verifiedAt").optional(),
+  verifiedBy: z.string().optional(),
   consultationUrl: z.string().url("L'URL de consultation doit être valide").optional().or(z.literal("")),
   lastVerifiedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Format de date YYYY-MM-DD").optional(),
 });
@@ -43,6 +45,7 @@ export const HadithEvidenceSchema = BaseEvidenceSchema.extend({
   collection: z.string().min(1, "Le recueil de hadith est obligatoire (ex: Ṣaḥîḥ Muslim)"),
   author: z.string().min(1, "L'auteur/compilateur du recueil est obligatoire"),
   hadithNumber: z.string().min(1, "Le numéro de hadith est obligatoire"),
+  numberingSystem: z.string().min(1, "Le système de numérotation est obligatoire (ex: Fuad Abdul Baqi)"),
   chapterAr: z.string().optional(),
   chapterFr: z.string().optional(),
   editionVolumePage: z.string().min(1, "La localisation précise (tome, page ou édition) est obligatoire"),
@@ -77,18 +80,26 @@ export const ContemporaryEvidenceSchema = BaseEvidenceSchema.extend({
   consultationDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Format de date YYYY-MM-DD requis"),
 });
 
-// Union discriminée stricte
-export const EvidenceSchema = z.discriminatedUnion("type", [
-  QuranEvidenceSchema,
-  HadithEvidenceSchema,
-  AtharEvidenceSchema,
-  BookEvidenceSchema,
-  ContemporaryEvidenceSchema,
-]);
+// Union discriminée avec règle stricte : VERIFIED_VERBATIM exige verifiedAt et verifiedBy
+export const EvidenceSchema = z
+  .discriminatedUnion("type", [
+    QuranEvidenceSchema,
+    HadithEvidenceSchema,
+    AtharEvidenceSchema,
+    BookEvidenceSchema,
+    ContemporaryEvidenceSchema,
+  ])
+  .refine(
+    (ev) => {
+      if (ev.citationStatus === "VERIFIED_VERBATIM") {
+        return !!ev.verifiedAt && !!ev.verifiedBy;
+      }
+      return true;
+    },
+    {
+      message: "Une preuve ayant le statut VERIFIED_VERBATIM exige obligatoirement verifiedAt et verifiedBy.",
+      path: ["citationStatus"],
+    }
+  );
 
 export type EvidenceInput = z.infer<typeof EvidenceSchema>;
-export type QuranEvidenceInput = z.infer<typeof QuranEvidenceSchema>;
-export type HadithEvidenceInput = z.infer<typeof HadithEvidenceSchema>;
-export type AtharEvidenceInput = z.infer<typeof AtharEvidenceSchema>;
-export type BookEvidenceInput = z.infer<typeof BookEvidenceSchema>;
-export type ContemporaryEvidenceInput = z.infer<typeof ContemporaryEvidenceSchema>;
