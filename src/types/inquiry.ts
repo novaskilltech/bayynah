@@ -1,4 +1,4 @@
-import { BilingualText, CertaintyLevel, SchoolType } from "./index";
+import { BilingualText, CertaintyLevel, EvidenceRole, SchoolType } from "./index";
 import { EvidenceItem } from "./evidence";
 
 export interface InquiryStepOption {
@@ -19,11 +19,21 @@ export interface InquiryStep {
   revealedEvidenceIds: string[];
 }
 
+export interface InquiryEvidenceItem {
+  evidenceId: string;
+  role: EvidenceRole;
+  order: number;
+  stepNumber?: number;
+  commentFr?: string;
+  commentAr?: string;
+  evidence?: EvidenceItem;
+}
+
 export interface StandardConclusionSheet {
   established: BilingualText;
   discussed: BilingualText;
   notEstablished: BilingualText;
-  primaryEvidences: string[]; // Références vers EvidenceItem
+  primaryEvidences: string[];
   salafUnderstanding: BilingualText;
   scholarlyPositions: BilingualText;
   methodologicalPitfall: BilingualText;
@@ -39,6 +49,8 @@ export interface InquiryItem {
   initialClaim: BilingualText;
   steps: InquiryStep[];
   conclusionSheet: StandardConclusionSheet;
-  evidenceReferences: EvidenceItem[];
+  inquiryEvidences: InquiryEvidenceItem[];
+  authorId: string;
+  reviewerId?: string;
   lastVerifiedAt: string;
 }

@@ -30,40 +30,82 @@ enum CertaintyLevel {
   INSUFFISANT
 }
 
+enum CitationStatus {
+  VERIFIED_VERBATIM
+  VERIFIED_PARAPHRASE
+  TO_BE_CHECKED
+}
+
+enum TranslationStatus {
+  TRANSLATION_OFFICIAL
+  TRANSLATION_PROPOSED
+  TRANSLATION_REVISED
+}
+
+enum EvidenceType {
+  QURAN
+  HADITH
+  ATHAR
+  BOOK
+  SCHOLAR
+  CONTEMPORARY
+}
+
+enum EvidenceRole {
+  PRIMARY_PROOF
+  COUNTER_ARGUMENT
+  EXPLANATORY_ATHAR
+  REVEALED_STEP
+  SCHOLARLY_EXPLANATION
+}
+
 model User {
-  id           String         @id @default(cuid())
-  email        String         @unique
-  passwordHash String
-  name         String?
-  role         Role           @default(USER)
-  progress     UserProgress[]
-  revisions    Revision[]
-  createdAt    DateTime       @default(now())
-  updatedAt    DateTime       @updatedAt
+  id               String            @id @default(cuid())
+  email            String            @unique
+  passwordHash     String
+  name             String?
+  role             Role              @default(USER)
+  
+  // Relations d'attribution scientifique et de révision
+  authoredLessons  Lesson[]          @relation("AuthoredLessons")
+  reviewedLessons  Lesson[]          @relation("ReviewedLessons")
+  authoredInquiries Inquiry[]        @relation("AuthoredInquiries")
+  reviewedInquiries Inquiry[]        @relation("ReviewedInquiries")
+  
+  lessonProgress   LessonProgress[]
+  inquiryProgress  InquiryProgress[]
+  revisions        Revision[]
+  
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
 }
 
 model Lesson {
-  id              String       @id
-  slug            String       @unique
+  id              String            @id
+  slug            String            @unique
   school          SchoolType
-  level           Int          @default(1)
+  level           Int               @default(1)
   order           Int
   titleFr         String
   titleAr         String
   summaryFr       String
   summaryAr       String
-  contentFr       String       @db.Text
-  contentAr       String?      @db.Text
+  contentFr       String            @db.Text
+  contentAr       String?           @db.Text
   methodologyFr   String
   methodologyAr   String
   quizzes         Quiz[]
+  progress        LessonProgress[]
   
   authorId        String
+  author          User              @relation("AuthoredLessons", fields: [authorId], references: [id])
   reviewerId      String?
-  lastVerifiedAt  DateTime     @default(now())
+  reviewer        User?             @relation("ReviewedLessons", fields: [reviewerId], references: [id])
   
-  createdAt       DateTime     @default(now())
-  updatedAt       DateTime     @updatedAt
+  lastVerifiedAt  DateTime          @default(now())
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
 }
 
 model Quiz {
@@ -72,42 +114,78 @@ model Quiz {
   lesson       Lesson      @relation(fields: [lessonId], references: [id], onDelete: Cascade)
   questionFr   String
   questionAr   String
-  options      Json        // Tableau d'options bilingues [{ textFr, textAr, isCorrect, feedbackFr, feedbackAr }]
+  options      Json        // [{ textFr, textAr, isCorrect, feedbackFr, feedbackAr }]
   order        Int         @default(1)
 }
 
 model Inquiry {
-  id                 String          @id
-  slug               String          @unique
+  id                 String             @id
+  slug               String             @unique
   domain             SchoolType
   titleFr            String
   titleAr            String
   claimFr            String
   claimAr            String
-  steps              Json            // Étapes ordonnées avec options et feedbacks
-  conclusionSheet    Json            // Fiche standardisée
+  steps              Json               // Étapes ordonnées avec options et feedbacks
+  conclusionSheet    Json               // Fiche standardisée
   certaintyLevel     CertaintyLevel
-  evidences          Evidence[]
-  lastVerifiedAt     DateTime        @default(now())
-  createdAt          DateTime        @default(now())
-  updatedAt          DateTime        @updatedAt
+  
+  // Relation structurée via InquiryEvidence
+  inquiryEvidences   InquiryEvidence[]
+  progress           InquiryProgress[]
+  
+  authorId           String
+  author             User               @relation("AuthoredInquiries", fields: [authorId], references: [id])
+  reviewerId         String?
+  reviewer           User?              @relation("ReviewedInquiries", fields: [reviewerId], references: [id])
+  
+  lastVerifiedAt     DateTime           @default(now())
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
 }
 
 model Evidence {
-  id                 String       @id
-  type               String       // QURAN | HADITH | ATHAR | BOOK | SCHOLAR | CONTEMPORARY
-  referenceCode      String       // Ex: "Sahih Muslim 360", "Al-Majmu' 2/45"
-  textAr             String       @db.Text
-  translationFr      String       @db.Text
-  sourceWork         String
-  author             String
-  editionVolumePage  String?
-  authenticityGrade  String?
-  gradeSource        String?
-  verifiedUrl        String?
-  inquiries          Inquiry[]
-  createdAt          DateTime     @default(now())
-  updatedAt          DateTime     @updatedAt
+  id                 String             @id
+  type               EvidenceType
+  referenceCode      String             // Ex: "Sahih Muslim 360", "Al-Majmu' 2/45"
+  primarySource      Boolean            @default(true)
+  
+  // Rigueur philologique
+  quoteArOriginal    String             @db.Text // Citation brute telle que dans l'édition (sans voyelles ajoutées artificiellement)
+  quoteArVocalized   String?            @db.Text // Version vocalisée distincte si nécessaire
+  quoteArNormalized  String?            @db.Text // Version sans diacritiques pour la recherche
+  translationFr      String             @db.Text // Traduction
+  translator         String?            // Nom du traducteur si connu
+  translationStatus  TranslationStatus  @default(TRANSLATION_PROPOSED)
+  citationStatus     CitationStatus     @default(VERIFIED_VERBATIM)
+  
+  sourceWork         String             // Nom de l'ouvrage original
+  author             String             // Auteur
+  editionVolumePage  String             // Ex: "Éd. Dârussalâm, T.2, p.140, hadith n°360"
+  authenticityGrade  String?            // Sahih, Hasan, Da'if, Mawdu', etc.
+  gradeScholar       String?            // Qui a jugé ? (Ex: "An-Nawawî", "Al-Albânî")
+  consultationUrl    String?            // URL d'accès légal pour consultation
+  
+  inquiryEvidences   InquiryEvidence[]
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+}
+
+// Modèle intermédiaire d'attribution et de rôle des preuves par enquête
+model InquiryEvidence {
+  id          String       @id @default(cuid())
+  inquiryId   String
+  inquiry     Inquiry      @relation(fields: [inquiryId], references: [id], onDelete: Cascade)
+  evidenceId  String
+  evidence    Evidence     @relation(fields: [evidenceId], references: [id], onDelete: Cascade)
+  
+  role        EvidenceRole @default(PRIMARY_PROOF)
+  order       Int          @default(1)
+  stepNumber  Int?         // Numéro de l'étape du Laboratoire qui révèle cette preuve
+  commentFr   String?      @db.Text
+  commentAr   String?      @db.Text
+
+  @@unique([inquiryId, evidenceId, role])
 }
 
 model Revision {
@@ -120,15 +198,32 @@ model Revision {
   createdAt       DateTime    @default(now())
 }
 
-model UserProgress {
+// Suivi de progression distinct pour les leçons
+model LessonProgress {
   id          String      @id @default(cuid())
   userId      String
   user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  lessonId    String?
-  inquiryId   String?
-  score       Int?
-  completedAt DateTime    @default(now())
+  lessonId    String
+  lesson      Lesson      @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  quizScore   Int?
+  completed   Boolean     @default(false)
+  completedAt DateTime?
+  createdAt   DateTime    @default(now())
 
   @@unique([userId, lessonId])
+}
+
+// Suivi de progression distinct pour les enquêtes
+model InquiryProgress {
+  id             String      @id @default(cuid())
+  userId         String
+  user           User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  inquiryId      String
+  inquiry        Inquiry     @relation(fields: [inquiryId], references: [id], onDelete: Cascade)
+  stepsCompleted Int         @default(0)
+  completed      Boolean     @default(false)
+  completedAt    DateTime?
+  createdAt      DateTime    @default(now())
+
   @@unique([userId, inquiryId])
 }

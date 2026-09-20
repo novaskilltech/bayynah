@@ -1,13 +1,14 @@
 {
-  "name": "bayynah",
+  "name": "tabayyun",
   "version": "0.1.0",
   "private": true,
-  "description": "Plateforme pédagogique d'esprit critique dans l'étude religieuse selon la méthodologie d'Ahl as-Sunnah wa-l-Jamâʿa",
+  "description": "تَبَيُّن (Tabayyun) — Plateforme pédagogique d'esprit critique dans l'étude de la religion selon la méthodologie d'Ahl as-Sunnah wa-l-Jamâʿa",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "validate-content": "ts-node src/lib/content-validator.ts",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev"
   },
@@ -15,19 +16,21 @@
     "@prisma/client": "^5.19.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.441.0",
-    "next": "14.2.10",
+    "next": "^16.3.5",
     "next-auth": "^5.0.0-beta.20",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tailwind-merge": "^2.5.2"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.5.2",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@types/node": "^20.16.5",
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "postcss": "^8.4.45",
     "prisma": "^5.19.0",
     "tailwindcss": "^3.4.11",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   }
 }

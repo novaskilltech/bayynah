@@ -1,22 +1,27 @@
 ---
 id: "hadith-01"
-school: "hadith" # hadith | fiqh | aqida | critique
-level: 1 # 1: mutathabbit | 2: bahith | 3: naqid | 4: talib_ilm
+slug: "hadith-01-matn-isnad"
+school: "HADITH"
+level: 1
 order: 1
-title_fr: "Qu'est-ce qu'un hadith ? Matn et Isnâd"
-title_ar: "ما هو الحديث؟ المتن والإسناد"
-summary_fr: "Comprendre la distinction fondamentale entre le texte attribué et la chaîne de transmission."
-summary_ar: "فهم الفرق الجوهري بين نص الحديث وسلسلة رواته."
-methodological_principle_fr: "On ne juge pas un texte sans examiner la voie par laquelle il est parvenu."
-methodological_principle_ar: "لا يُحكم على متنٍ حتى يُنظر في الطريق الذي وصل به إلينا."
-historic_reference:
-  author: "Ibn aṣ-Ṣalâḥ"
-  work: "Al-Muqaddima fî ʿUlûm al-Ḥadîth"
-  quote_ar: "أهل الحديث يكتبون الحديث بإسناده، ولا يقتصرون على متنه..."
-  quote_fr: "Les gens du hadith consignent le hadith avec sa chaîne et ne se limitent pas à son énoncé brut..."
-author_id: "author-01"
-reviewer_id: "reviewer-01"
-last_verified_at: "2026-09-20"
+titleFr: "Qu'est-ce qu'un hadith ? Matn et Isnâd"
+titleAr: "ما هو الحديث؟ المتن والإسناد"
+summaryFr: "Comprendre la distinction fondamentale entre le texte attribué et la chaîne de transmission."
+summaryAr: "فهم الفرق الجوهري بين نص الحديث وسلسلة رواته."
+methodologyPrincipleFr: "On ne juge pas un texte sans examiner la voie par laquelle il est parvenu."
+methodologyPrincipleAr: "لا يُحكم على متنٍ حتى يُنظر في الطريق الذي وصل به إلينا."
+historicReference:
+  author: "‘Abd Allâh Ibn al-Mubârak"
+  work: "Muqaddimat Ṣaḥîḥ Muslim"
+  editionVolumePage: "Bāb bayān anna al-isnād min ad-dīn, T.1, p.15 (Éd. Dârussalâm)"
+  quoteArOriginal: "الإسناد من الدين، ولولا الإسناد لقال من شاء ما شاء"
+  quoteArVocalized: "الإِسْنَادُ مِنَ الدِّينِ، وَلَوْلَا الإِسْنَادُ لَقَالَ مَنْ شَاءَ مَا شَاءَ"
+  quoteArNormalized: "الاسناد من الدين ولولا الاسناد لقال من شاء ما شاء"
+  translationFr: "L'isnâd fait partie de la religion ; s'il n'y avait pas l'isnâd, n'importe qui dirait ce qu'il veut."
+  citationStatus: "VERIFIED_VERBATIM"
+authorId: "author-01"
+reviewerId: "reviewer-01"
+lastVerifiedAt: "2026-09-20"
 ---
 
 # 1. Mise en situation (Problématique)
@@ -36,7 +41,7 @@ Dans la tradition des savants de l'Islam, un hadith est constitué de deux pilie
 2. **Le Matn (المتن)** : Le texte et l'énoncé même du propos rapporté.
 
 > « L'isnâd fait partie de la religion ; s'il n'y avait pas l'isnâd, n'importe qui dirait ce qu'il veut. »  
-> — *‘Abd Allâh Ibn al-Mubârak*
+> — *‘Abd Allâh Ibn al-Mubârak (Muqaddimat Ṣaḥîḥ Muslim, T.1, p.15)*
 
 ---
 
@@ -46,7 +51,7 @@ Dans la tradition des savants de l'Islam, un hadith est constitué de deux pilie
 Croire que la beauté morale d'un texte ou son apparente sagesse suffit à en prouver l'authenticité.
 
 ### ✅ La règle de vérification
-La validité du sens (*ṣiḥḥat al-maʿnâ*) n'implique jamais l'authenticité de l'attribution (*ṣiḥḥat an-naql*). Des dizaines de récits apocryphes comportent de bons conseils mais demeurent forgés (*mawḍûʿ*).
+La validité du sens (*ṣiḥḥat al-maʿnâ*) n'implique jamais l'authenticité de l'attribution (*ṣiḥḥat an-naql*). Des récits apocryphes peuvent comporter de bons conseils tout en demeurant inventés (*mawḍûʿ*).
 
 ---
 

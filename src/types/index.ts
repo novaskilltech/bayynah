@@ -11,6 +11,23 @@ export type CertaintyLevel =
   | "EXPERTISE_REQUISE"
   | "INSUFFISANT";
 
+export type CitationStatus =
+  | "VERIFIED_VERBATIM"
+  | "VERIFIED_PARAPHRASE"
+  | "TO_BE_CHECKED";
+
+export type TranslationStatus =
+  | "TRANSLATION_OFFICIAL"
+  | "TRANSLATION_PROPOSED"
+  | "TRANSLATION_REVISED";
+
+export type EvidenceRole =
+  | "PRIMARY_PROOF"
+  | "COUNTER_ARGUMENT"
+  | "EXPLANATORY_ATHAR"
+  | "REVEALED_STEP"
+  | "SCHOLARLY_EXPLANATION";
+
 export interface BilingualText {
   fr: string;
   ar: string;
@@ -19,6 +36,11 @@ export interface BilingualText {
 export interface HistoricReference {
   author: string;
   work: string;
-  quoteAr?: string;
-  quoteFr?: string;
+  editionVolumePage: string;
+  quoteArOriginal: string;
+  quoteArVocalized?: string;
+  quoteArNormalized?: string;
+  translationFr: string;
+  translator?: string;
+  citationStatus: CitationStatus;
 }

@@ -19,10 +19,10 @@
       "instructionAr": "قبل قبول الدعوى أو ردها، ما هي الخطوة المنهجية الأولى؟",
       "options": [
         {
-          "textFr": "Regarder la pratique majoritaire de ma famille ou de mon entourage",
-          "textAr": "النظر في العادة الغالبة للأهل والبيئة المحيطة",
+          "textFr": "Regarder la pratique habituelle de mon entourage",
+          "textAr": "النظر في العادة الغالبة للمحيطين بي",
           "isCorrect": false,
-          "feedbackFr": "La pratique habituelle d'un groupe n'est pas une preuve d'absence de divergence ou de texte.",
+          "feedbackFr": "La pratique habituelle d'un groupe n'est pas une preuve d'absence de texte ou de divergence.",
           "feedbackAr": "العادة المجردة ليست دليلاً شرعياً على نفي وجود النص أو الخلاف."
         },
         {
@@ -43,35 +43,69 @@
       "revealedEvidenceIds": ["hadith-muslim-360"]
     }
   ],
+  "inquiryEvidences": [
+    {
+      "evidenceId": "hadith-muslim-360",
+      "role": "PRIMARY_PROOF",
+      "order": 1,
+      "stepNumber": 1,
+      "commentFr": "Preuve scripturaire explicite ordonnant le lavage/les ablutions après la viande de chameau.",
+      "commentAr": "نص صريح في الأمر بالوضوء من لحوم الإبل في صحيح مسلم.",
+      "evidence": {
+        "id": "hadith-muslim-360",
+        "type": "HADITH",
+        "referenceCode": "Ṣaḥîḥ Muslim 360",
+        "primarySource": true,
+        "quoteArOriginal": "أَنَّ رَجُلاً سَأَلَ رَسُولَ اللَّهِ صلى الله عليه وسلم: أَأَتَوَضَّأُ مِنْ لُحُومِ الْغَنَمِ؟ قَالَ: «إِنْ شِئْتَ فَتَوَضَّأْ، وَإِنْ شِئْتَ فَلاَ تَوَضَّأْ». قَالَ: أَأَتَوَضَّأُ مِنْ لُحُومِ الإِبِلِ؟ قَالَ: «نَعَمْ، فَتَوَضَّأْ مِنْ لُحُومِ الإِبِلِ».",
+        "quoteArVocalized": "أَنَّ رَجُلًا سَأَلَ رَسُولَ اللهِ ﷺ: أَأَتَوَضَّأُ مِنْ لُحُومِ الْغَنَمِ؟ قَالَ: «إِنْ شِئْتَ فَتَوَضَّأْ، وَإِنْ شِئْتَ فَلَا تَوَضَّأْ». قَالَ: أَأَتَوَضَّأُ مِنْ لُحُومِ الإِبِلِ؟ قَالَ: «نَعَمْ، فَتَوَضَّأْ مِنْ لُحُومِ الإِبِلِ».",
+        "quoteArNormalized": "ان رجلا سال رسول الله صلى الله عليه وسلم ااتوضا من لحوم الغنم قال ان شئت فتوضا وان شئت فلا توضا قال ااتوضا من لحوم الابل قال نعم فتوضا من لحوم الابل",
+        "translationFr": "Un homme demanda au Messager d'Allah ﷺ : « Dois-je faire mes ablutions après avoir mangé de la viande de mouton ? » Il répondit : « Si tu veux, fais tes ablutions, et si tu veux, ne les fais pas. » L'homme demanda : « Dois-je faire mes ablutions après avoir mangé de la viande de chameau ? » Il répondit : « Oui, fais tes ablutions après avoir mangé de la viande de chameau. »",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "sourceWork": "Ṣaḥîḥ Muslim",
+        "author": "Al-Imâm Muslim ibn al-Ḥajjâj",
+        "editionVolumePage": "Kitāb al-Ḥayḍ, Bāb al-wuḍū' min luḥūm al-ibil, hadith n°360 (Éd. Dârussalâm)",
+        "authenticityGrade": "Ṣaḥîḥ",
+        "gradeScholar": "Muslim ibn al-Ḥajjâj",
+        "consultationUrl": "https://sunnah.com/muslim:360a"
+      }
+    }
+  ],
   "conclusionSheet": {
     "established": {
-      "fr": "Il existe des hadiths authentiques explicites ordonnant de refaire les ablutions après avoir mangé de la viande de chameau (notamment dans Sahih Muslim). L'avis n'est donc en aucun cas une invention.",
-      "ar": "ثبتت أحاديث صحيحة صريحة بالأمر بالوضوء من لحوم الإبل (كما في صحيح مسلم)، فالدعوى بأنه رأي مخترع باطلة قطعاً."
+      "fr": "Il existe des hadiths authentiques explicites ordonnant de refaire les ablutions après avoir mangé de la viande de chameau (notamment dans Sahih Muslim, hadith de Jâbir ibn Samura n°360). L'avis n'est donc en aucun cas une invention.",
+      "ar": "ثبتت أحاديث صحيحة صريحة بالأمر بالوضوء من لحوم الإبل (كما في صحيح مسلم عن جابر بن سمرة رقم 360)، فالدعوى بأنه رأي مخترع باطلة قطعاً."
     },
     "discussed": {
-      "fr": "La divergence porte sur la portée de l'ordre : obligation formelle d'annuler les ablutions (Ahmad, Ishâq, An-Nawawî) ou abrogation par d'autres textes généraux (Abû Hanîfa, Mâlik, Ash-Shâfi'î).",
-      "ar": "وقع الخلاف في دلالة الأمر: هل هو للوجوب الناقض (أحمد، إسحاق، والنووي) أم منسوخ بآخر الأمرين بترك الوضوء مما مست النار (الجمهور)."
+      "fr": "La divergence porte sur la portée de l'ordre : obligation formelle d'annuler les ablutions (position de l'imam Ahmad, Ishâq ibn Râhawayh, et d'autres) ou non-annulation selon le jumhûr (Abû Hanîfa, Mâlik, Ash-Shâfi'î). L'imam an-Nawawî rapporte que le jumhûr considère que cela n'annule pas les ablutions, tout en jugeant personnellement la position contraire plus forte quant à sa preuve scripturaire (Sharḥ Ṣaḥîḥ Muslim, T.4, p.48).",
+      "ar": "وقع الخلاف في دلالة الأمر: هل هو للوجوب الناقض (أحمد وإسحاق وغيرهما) أم لا ينقض عند جمهور الفقهاء (أبو حنيفة ومالك والشافعي). وقد نقل الإمام النووي مذهب الجمهور بعدم النقض، مع ترجيحه الشخصي بأن مذهب النقض أقوى دليلاً (شرح صحيح مسلم، ج4، ص48)."
     },
     "notEstablished": {
-      "fr": "L'affirmation selon laquelle il s'agirait d'une invention sans fondement.",
-      "ar": "الدعوى بأنه لا أصل لهذا القول في السنة أو كلام السلف."
+      "fr": "L'affirmation selon laquelle cet avis serait une invention récente sans fondement.",
+      "ar": "الدعوى بأنه لا أصل لهذا القول في السنة أو كلام أئمة السلف."
     },
-    "primaryEvidences": ["Sahih Muslim n°360 (Hadith de Jâbir ibn Samura)"],
+    "primaryEvidences": ["Ṣaḥîḥ Muslim, n°360 (Hadith de Jâbir ibn Samura)"],
     "salafUnderstanding": {
-      "fr": "Divergence déjà constatée parmi les Compagnons et les premières générations.",
-      "ar": "خلاف منقول عن الصحابة والتابعين."
+      "fr": "Divergence déjà documentée parmi les Compagnons et les premières générations.",
+      "ar": "خلاف منقول ومشهور عن الصحابة والتابعين."
     },
     "scholarlyPositions": {
-      "fr": "Position 1 (Hanbali, Shâfi'ites partisans du hadith) : Annulation des ablutions. Position 2 (Jumhûr - Hanafites, Mâlikites, Shâfi'ites) : Pas d'annulation.",
-      "ar": "القول الأول (الحنابلة وبعض الشافعية): ينقض. القول الثاني (جمهور العلماء): لا ينقض."
+      "fr": "Position 1 (Hanbalites, traditionnistes) : La consommation annule les ablutions. Position 2 (Jumhûr - Hanafites, Mâlikites, Shâfi'ites) : Elle n'annule pas les ablutions.",
+      "ar": "القول الأول (الحنابلة وأهل الحديث): ينقض الوضوء. القول الثاني (جمهور العلماء من الحنفية والمالكية والشافعية): لا ينقض."
     },
     "methodologicalPitfall": {
-      "fr": "Confondre sa propre méconnaissance d'un avis avec la non-existence de cet avis.",
-      "ar": "الخلط بين عدم العلم بالشيء والعلم بعدمه."
+      "fr": "Confondre sa propre méconnaissance d'un avis juridique avec l'inexistence de cet avis, ou présenter une divergence reconnue comme un consensus inexistant.",
+      "ar": "الخلط بين عدم العلم بالشيء والعلم بعدمه، أو ادعاء إجماع موهوم في مسألة فيها خلاف سائغ معتبر."
     },
-    "originalSources": ["Sahih Muslim", "Al-Majmû' d'an-Nawawî", "Al-Mughnî d'Ibn Qudâma"],
+    "originalSources": [
+      "Ṣaḥîḥ Muslim, Bāb al-wuḍū' min luḥūm al-ibil",
+      "Sharḥ Ṣaḥîḥ Muslim de l'imam an-Nawawî (T.4, p.48)",
+      "Al-Majmū' Sharḥ al-Muhadhdhab (T.2, p.57)",
+      "Al-Mughnī d'Ibn Qudāma (T.1, p.245)"
+    ],
     "certaintyLevel": "KHILAF_RECONNU"
   },
-  "evidenceReferences": [],
+  "authorId": "author-01",
+  "reviewerId": "reviewer-01",
   "lastVerifiedAt": "2026-09-20"
 }

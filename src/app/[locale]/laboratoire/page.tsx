@@ -1,22 +1,23 @@
+import { getDictionary } from "@/lib/dictionary";
+
 interface PageProps {
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }
 
-export default function LaboratoirePage({ params }: PageProps) {
-  const isArabic = params.locale === "ar";
+export default async function LaboratoirePage({ params }: PageProps) {
+  const { locale } = await params;
+  const dict = getDictionary(locale);
 
   return (
     <div className="max-w-4xl mx-auto py-8 space-y-8">
       <div className="border-b border-sable-200 pb-4">
         <h1 className="text-3xl font-bold text-bleuNuit-900">
-          {isArabic ? "المختبر — معمل التحقيق في الدعاوى" : "Le Laboratoire — Enquête pas-à-pas"}
+          {dict.laboratory.title}
         </h1>
         <p className="text-sable-500 mt-2">
-          {isArabic
-            ? "تدرب على تفكيك الدعاوى الدينية وكشف أدلتها خطوة بخطوة."
-            : "Entraîne-toi à décortiquer une affirmation religieuse et examiner ses preuves étape par étape."}
+          {dict.laboratory.subtitle}
         </p>
       </div>
 
@@ -25,12 +26,10 @@ export default function LaboratoirePage({ params }: PageProps) {
           المختبر
         </div>
         <h2 className="text-xl font-semibold text-bleuNuit-900">
-          {isArabic ? "10 تحقيقات تفاعلية قيد الإعداد" : "10 Enquêtes interactives en cours d'intégration"}
+          {dict.laboratory.status}
         </h2>
         <p className="text-sm text-sable-500 max-w-md mx-auto">
-          {isArabic
-            ? "النموذج الهيكلي جاهز لاستقبال ملفات التحقيق المعتمدة."
-            : "L'échafaudage est prêt à accueillir les fichiers de cas méthodologiques rédigés."}
+          {dict.laboratory.statusDesc}
         </p>
       </div>
     </div>

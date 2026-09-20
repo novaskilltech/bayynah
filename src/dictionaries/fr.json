@@ -1,0 +1,79 @@
+{
+  "common": {
+    "siteName": "تَبَيُّن",
+    "siteSubtitle": "Tabayyun — Apprendre à vérifier avant d'affirmer",
+    "nav": {
+      "method": "La Méthode",
+      "schools": "Les Écoles",
+      "laboratory": "Le Laboratoire",
+      "library": "Bibliothèque"
+    },
+    "footer": "تَبَيُّن — Apprendre à vérifier avant d'affirmer • Ahl as-Sunnah wa-l-Jamâʿa",
+    "switchLanguage": "العربية"
+  },
+  "home": {
+    "title": "Ce qu’on t’a dit est-il réellement établi ?",
+    "subtitle": "Apprends à vérifier une affirmation religieuse avant de l’accepter, la transmettre ou la réfuter.",
+    "fundamentalChain": "La preuve → l’authenticité de la transmission → la compréhension correcte → la validité du raisonnement → la conclusion.",
+    "ctaMethod": "Apprendre la méthode",
+    "ctaLab": "Enquêter sur une affirmation",
+    "ctaTest": "Tester mon esprit critique"
+  },
+  "method": {
+    "title": "La Méthode — Les 10 questions avant de croire une affirmation",
+    "subtitle": "Les étapes de vérification méthodique selon la tradition d'Ahl as-Sunnah wa-l-Jamâʿa.",
+    "steps": [
+      { "num": 1, "question": "Quelle est exactement l'affirmation ?", "ar": "ما الدعوى؟" },
+      { "num": 2, "question": "De quel domaine relève-t-elle ?", "ar": "ما نوع المسألة؟" },
+      { "num": 3, "question": "Quelle est la source originale ?", "ar": "ما المصدر؟" },
+      { "num": 4, "question": "L'attribution est-elle authentique ?", "ar": "هل ثبت النقل؟" },
+      { "num": 5, "question": "Que signifie réellement le texte ?", "ar": "ماذا يعني النص؟" },
+      { "num": 6, "question": "Existe-t-il d'autres preuves sur le sujet ?", "ar": "هل توجد نصوص أخرى؟" },
+      { "num": 7, "question": "Comment les premières générations l'ont-elles compris ?", "ar": "كيف فهمه السلف؟" },
+      { "num": 8, "question": "Existe-t-il un consensus ou une divergence ?", "ar": "هل هناك إجماع أو خلاف؟" },
+      { "num": 9, "question": "Comment la preuve conduit-elle au jugement ?", "ar": "ما وجه الاستدلال؟" },
+      { "num": 10, "question": "Quel est réellement notre degré de certitude ?", "ar": "ما درجة اليقين؟" }
+    ]
+  },
+  "schools": {
+    "title": "Les 4 Écoles d'apprentissage",
+    "subtitle": "Cursus spécialisés pour forger le réflexe méthodologique.",
+    "items": [
+      {
+        "id": "hadith",
+        "title": "École du Hadith",
+        "titleAr": "مدرسة الحديث",
+        "description": "Authentification, isnâd, matn, fiabilité des transmetteurs, jarḥ wa taʿdîl."
+      },
+      {
+        "id": "fiqh",
+        "title": "École du Fiqh",
+        "titleAr": "مدرسة الفقه",
+        "description": "Uṣûl al-fiqh, divergence légitime, règles d'inférence, consensus et divergence."
+      },
+      {
+        "id": "aqida",
+        "title": "École de la ʿAqîda",
+        "titleAr": "مدرسة العقيدة",
+        "description": "Coran, Sunnah, compréhension des Salaf, réunion des textes du chapitre."
+      },
+      {
+        "id": "critique",
+        "title": "École de l'Esprit Critique",
+        "titleAr": "مدرسة التفكير النقدي",
+        "description": "Détection des biais cognitifs, faux dilemmes, arguments d'autorité et citations tronquées."
+      }
+    ]
+  },
+  "laboratory": {
+    "title": "Le Laboratoire — Enquête pas-à-pas",
+    "subtitle": "Entraîne-toi à décortiquer une affirmation religieuse et examiner ses preuves étape par étape.",
+    "status": "10 Enquêtes interactives en cours d'intégration",
+    "statusDesc": "L'échafaudage est prêt à accueillir les fichiers de cas méthodologiques rédigés."
+  },
+  "library": {
+    "title": "La Bibliothèque de Référence",
+    "subtitle": "Index des sources et références patrimoniales classées par domaine et niveau.",
+    "description": "La bibliothèque rassemblera les ouvrages fondamentaux (Tafsîr, Hadith, Uṣûl, 'Aqida) avec liens d'accès légaux."
+  }
+}

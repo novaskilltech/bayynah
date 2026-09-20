@@ -1,17 +1,17 @@
-import { BilingualText, HistoricReference, SchoolType } from "./index";
+import { HistoricReference, SchoolType } from "./index";
 
 export interface QuizOption {
   textFr: string;
-  textAr: string;
+  textAr?: string;
   isCorrect: boolean;
   feedbackFr: string;
-  feedbackAr: string;
+  feedbackAr?: string;
 }
 
 export interface QuizItem {
   id: string;
   questionFr: string;
-  questionAr: string;
+  questionAr?: string;
   options: QuizOption[];
   order: number;
 }
@@ -22,17 +22,20 @@ export interface LessonMeta {
   school: SchoolType;
   level: 1 | 2 | 3 | 4;
   order: number;
-  title: BilingualText;
-  summary: BilingualText;
-  methodologyPrinciple: BilingualText;
+  titleFr: string;
+  titleAr: string;
+  summaryFr: string;
+  summaryAr: string;
+  methodologyPrincipleFr: string;
+  methodologyPrincipleAr: string;
   historicReference?: HistoricReference;
   authorId: string;
   reviewerId?: string;
   lastVerifiedAt: string;
+  quizzes?: QuizItem[];
 }
 
 export interface LessonContent extends LessonMeta {
   contentFr: string;
   contentAr?: string;
-  quizzes: QuizItem[];
 }
