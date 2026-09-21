@@ -48,12 +48,17 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Identifiants incorrects." }, { status: 401 });
     }
 
+    // Hash scrypt factice pré-calculé (N=131072, r=8, p=1) pour neutraliser les attaques par analyse temporelle
+    const DUMMY_SCRYPT_HASH =
+      "scrypt$N=131072,r=8,p=1$0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef$0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef";
+
     const user = await prisma.user.findUnique({
       where: { email: normalizedEmail },
     });
 
-    // Message d'erreur générique : anti-énumération de comptes
+    // Message d'erreur générique et neutralisation du canal auxiliaire temporel (timing attack)
     if (!user) {
+      await verifyPassword(password, DUMMY_SCRYPT_HASH);
       return NextResponse.json({ error: "Identifiants incorrects." }, { status: 401 });
     }
 

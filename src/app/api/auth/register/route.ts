@@ -62,9 +62,10 @@ export async function POST(req: NextRequest) {
     });
 
     if (existingUser) {
+      // Anti-énumération de comptes : message neutre ne révélant pas l'existence de l'adresse email
       return NextResponse.json(
-        { error: "Un compte existe déjà avec cette adresse email." },
-        { status: 409 }
+        { error: "Impossible de créer le compte avec ces informations. Veuillez vous connecter ou réinitialiser votre mot de passe." },
+        { status: 400 }
       );
     }
 

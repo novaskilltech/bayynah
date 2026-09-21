@@ -35,8 +35,13 @@ function loadAttestationKeyring(): AttestationKeyring {
 
   // 3. Fallback sur ATTESTATION_SIGNING_SECRET pour la version v1
   if (!keys.v1) {
-    keys.v1 =
-      process.env.ATTESTATION_SIGNING_SECRET || "tabayyun-attestation-secret-v1-signing-key";
+    const envSecret = process.env.ATTESTATION_SIGNING_SECRET;
+    if (!envSecret && process.env.NODE_ENV === "production") {
+      throw new Error(
+        "Variable d'environnement critique manquante : ATTESTATION_SIGNING_SECRET ou ATTESTATION_KEY_V1 doit être définie en production."
+      );
+    }
+    keys.v1 = envSecret || "dev-only-attestation-secret-key-not-for-production";
   }
 
   const activeVersion = process.env.ATTESTATION_ACTIVE_KEY_VERSION || "v1";

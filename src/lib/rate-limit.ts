@@ -138,8 +138,17 @@ export class UpstashRedisRateLimitStore implements RateLimitStore {
         resetTime,
       };
     } catch (err) {
-      console.error("Erreur Upstash Redis Rate Limiting, fallback local:", err);
-      // Fail-open contrôlé en cas d'incident réseau Redis
+      console.error("Erreur Upstash Redis Rate Limiting:", err);
+      // En production sur routes sensibles, comportement fail-closed sécurisé
+      if (process.env.NODE_ENV === "production") {
+        return {
+          allowed: false,
+          remaining: 0,
+          resetTime: Date.now() + 60 * 1000,
+          retryAfterSeconds: 60,
+        };
+      }
+      // En dev local, tolérance contrôlée
       return {
         allowed: true,
         remaining: 1,
@@ -167,6 +176,12 @@ export function getRateLimitStore(): RateLimitStore {
 
   const upstashUrl = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
   const upstashToken = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+
+  if (process.env.NODE_ENV === "production" && (!upstashUrl || !upstashToken)) {
+    throw new Error(
+      "Configuration critique manquante en production : UPSTASH_REDIS_REST_URL et UPSTASH_REDIS_REST_TOKEN (ou Vercel KV) doivent être configurés pour le Rate Limiting distribué."
+    );
+  }
 
   if (upstashUrl && upstashToken) {
     activeStore = new UpstashRedisRateLimitStore(upstashUrl, upstashToken);

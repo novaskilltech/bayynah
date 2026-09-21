@@ -48,7 +48,21 @@ if (process.platform === "win32") {
   }
 }
 
-const isLocalFat32Dev = process.platform === "win32" && process.env.NODE_ENV !== "production";
+const isWindows = process.platform === "win32";
+const isProd = process.env.NODE_ENV === "production";
+
+// CSP durcie : 'unsafe-eval' et 'unsafe-inline' strictement exclus en production
+const cspHeader = [
+  "default-src 'self'",
+  isProd ? "script-src 'self'" : "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "font-src 'self' https://fonts.gstatic.com data:",
+  "img-src 'self' data: blob:",
+  "connect-src 'self'",
+  "frame-ancestors 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+].join("; ");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -80,30 +94,24 @@ const nextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value: [
-              "default-src 'self'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-              "font-src 'self' https://fonts.gstatic.com data:",
-              "img-src 'self' data: blob:",
-              "connect-src 'self'",
-              "frame-ancestors 'none'",
-              "base-uri 'self'",
-              "form-action 'self'",
-            ].join("; "),
+            value: cspHeader,
           },
         ],
       },
     ];
   },
-  webpack: (config) => {
-    // Conditionner le contournement FAT32 uniquement au développement local Windows
-    if (isLocalFat32Dev) {
-      config.resolve.symlinks = false;
-      config.cache = false;
-    }
-    return config;
-  },
+  // Conditionnement strict : la clé webpack est totalement omise en Linux/CI pour permettre à Turbopack de s'exécuter
+  ...(isWindows
+    ? {
+        webpack: (config) => {
+          config.resolve.symlinks = false;
+          config.cache = false;
+          return config;
+        },
+      }
+    : {
+        turbopack: {},
+      }),
 };
 
 export default nextConfig;

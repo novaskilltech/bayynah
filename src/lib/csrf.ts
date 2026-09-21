@@ -6,7 +6,19 @@ export const CSRF_COOKIE_NAME =
 
 export const CSRF_HEADER_NAME = "x-csrf-token";
 
-const CSRF_SECRET = process.env.CSRF_SECRET || "tabayyun_default_csrf_preauth_secret_key_32bytes";
+/**
+ * Récupère le secret CSRF pour tokens pré-authentifiés
+ * En production, l'absence de secret lève immédiatement une exception fatale (fail-fast)
+ */
+export function getCsrfSecret(): string {
+  const secret = process.env.CSRF_SECRET;
+  if (!secret && process.env.NODE_ENV === "production") {
+    throw new Error(
+      "Variable d'environnement critique manquante : CSRF_SECRET doit être définie en production."
+    );
+  }
+  return secret || "dev-only-csrf-secret-key-32bytes-min!";
+}
 
 /**
  * Génère un jeton CSRF cryptographiquement aléatoire (32 octets hex)
@@ -63,10 +75,11 @@ export function verifySessionCsrfToken(
  * Génère un jeton CSRF pré-authentifié signé HMAC (pour formulaires de login/register avant session)
  */
 export function generatePreAuthCsrfToken(): string {
+  const secret = getCsrfSecret();
   const timestamp = Date.now().toString();
   const nonce = crypto.randomBytes(16).toString("hex");
   const data = `${timestamp}:${nonce}`;
-  const hmac = crypto.createHmac("sha256", CSRF_SECRET).update(data).digest("hex");
+  const hmac = crypto.createHmac("sha256", secret).update(data).digest("hex");
   return `${data}:${hmac}`;
 }
 
@@ -89,8 +102,9 @@ export function verifyPreAuthCsrfToken(token: string | null | undefined): boolea
     return false;
   }
 
+  const secret = getCsrfSecret();
   const data = `${timestampStr}:${nonce}`;
-  const actualHmac = crypto.createHmac("sha256", CSRF_SECRET).update(data).digest("hex");
+  const actualHmac = crypto.createHmac("sha256", secret).update(data).digest("hex");
   const bufA = Buffer.from(actualHmac, "hex");
   const bufB = Buffer.from(expectedHmac, "hex");
 
@@ -190,10 +204,10 @@ export function validateMutationRequest(
     return { valid: true };
   }
 
-  // 4. Token pré-auth pour formulaires login/register
+  // 4. Token pré-auth pour formulaires login/register (Rejet obligatoire si manquant ou invalide)
   if (options?.isPreAuth) {
-    if (csrfHeader && !verifyPreAuthCsrfToken(csrfHeader)) {
-      return { valid: false, error: "Jeton CSRF pré-authentifié expiré ou invalide." };
+    if (!csrfHeader || !verifyPreAuthCsrfToken(csrfHeader)) {
+      return { valid: false, error: "Jeton CSRF pré-authentifié manquant ou invalide." };
     }
     return { valid: true };
   }
