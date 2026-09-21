@@ -14,7 +14,9 @@ import {
   SCIENTIFIC_REVIEW_CHECKLIST,
   computeScientificDiff,
   applyEvidenceInvalidation,
+  applyInquiryEvidenceInvalidation,
   EvidenceRecord,
+  InquiryEvidenceItem,
   EditorialStatus,
 } from "@/lib/scientific-governance";
 
@@ -22,6 +24,7 @@ interface ReviewEditorProps {
   type: "lesson" | "inquiry";
   slug: string;
   initialContent: Record<string, unknown>;
+  baseCommitSha: string;
   locale: string;
   csrfToken: string;
   userRole: string;
@@ -31,6 +34,7 @@ export default function ReviewEditor({
   type,
   slug,
   initialContent,
+  baseCommitSha,
   locale,
   csrfToken,
   userRole: _userRole,
@@ -49,6 +53,7 @@ export default function ReviewEditor({
 
   const [reviewerNotes, setReviewerNotes] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isStaleConflict, setIsStaleConflict] = useState(false);
   const [submissionResult, setSubmissionResult] = useState<{
     success: boolean;
     branchName?: string;
@@ -65,18 +70,16 @@ export default function ReviewEditor({
   const invalidationAlerts = useMemo(() => {
     const alerts: string[] = [];
     if (type === "inquiry") {
-      const origEvidences = ((initialContent.conclusionSheet as { evidences?: EvidenceRecord[] })?.evidences || []) as EvidenceRecord[];
-      const propEvidences = ((proposedContent.conclusionSheet as { evidences?: EvidenceRecord[] })?.evidences || []) as EvidenceRecord[];
-
-      const origMap = new Map(origEvidences.map((e) => [e.id, e]));
-      for (const prop of propEvidences) {
-        const orig = origMap.get(prop.id);
-        if (orig) {
-          const inv = applyEvidenceInvalidation(orig, prop);
-          if (inv.hasCriticalChange && inv.invalidationReason) {
-            alerts.push(`[${prop.referenceCode || prop.id}] : ${inv.invalidationReason}`);
-          }
-        }
+      const origEvidences = ((initialContent.inquiryEvidences as InquiryEvidenceItem[]) || []);
+      const propEvidences = ((proposedContent.inquiryEvidences as InquiryEvidenceItem[]) || []);
+      const invResult = applyInquiryEvidenceInvalidation(origEvidences, propEvidences);
+      alerts.push(...invResult.invalidations);
+    } else if (type === "lesson" && proposedContent.historicReference && initialContent.historicReference) {
+      const origRef = initialContent.historicReference as EvidenceRecord;
+      const propRef = proposedContent.historicReference as EvidenceRecord;
+      const inv = applyEvidenceInvalidation(origRef, propRef);
+      if (inv.hasCriticalChange && inv.invalidationReason) {
+        alerts.push(inv.invalidationReason);
       }
     }
     return alerts;
@@ -98,11 +101,11 @@ export default function ReviewEditor({
   const handleEvidenceFieldChange = (evidenceId: string, field: string, value: unknown) => {
     setProposedContent((prev) => {
       const clone = JSON.parse(JSON.stringify(prev));
-      const evidences = clone.conclusionSheet?.evidences as EvidenceRecord[] | undefined;
-      if (evidences) {
-        const target = evidences.find((e) => e.id === evidenceId);
-        if (target) {
-          target[field] = value;
+      const inquiryEvidences = clone.inquiryEvidences as InquiryEvidenceItem[] | undefined;
+      if (inquiryEvidences) {
+        const target = inquiryEvidences.find((e) => e.evidenceId === evidenceId || e.evidence?.id === evidenceId);
+        if (target && target.evidence) {
+          target.evidence[field] = value;
         }
       }
       return clone;
@@ -122,6 +125,7 @@ export default function ReviewEditor({
 
     setIsSubmitting(true);
     setSubmissionResult(null);
+    setIsStaleConflict(false);
 
     try {
       const res = await fetch("/api/admin/proposals", {
@@ -133,14 +137,19 @@ export default function ReviewEditor({
         body: JSON.stringify({
           type,
           slug,
-          originalContent: initialContent,
           proposedContent,
           checklistAnswers,
           reviewerNotes,
+          baseCommitSha,
         }),
       });
 
       const data = await res.json();
+      if (res.status === 409) {
+        setIsStaleConflict(true);
+        throw new Error(data.error || "Conflit d'édition (Stale Edit) : le fichier a été modifié sur le serveur. Veuillez recharger la page.");
+      }
+
       if (!res.ok) {
         throw new Error(data.error || "Erreur lors de la création de la proposition.");
       }
@@ -161,11 +170,11 @@ export default function ReviewEditor({
     }
   };
 
-  const evidences = (
+  const inquiryEvidences = (
     type === "inquiry"
-      ? (proposedContent.conclusionSheet as { evidences?: EvidenceRecord[] })?.evidences || []
+      ? (proposedContent.inquiryEvidences as InquiryEvidenceItem[]) || []
       : []
-  ) as EvidenceRecord[];
+  );
 
   return (
     <div className="space-y-8" dir={isArabic ? "rtl" : "ltr"}>
@@ -276,7 +285,7 @@ export default function ReviewEditor({
           </div>
 
           {/* Édition des Preuves (pour les enquêtes) */}
-          {type === "inquiry" && evidences.length > 0 && (
+          {type === "inquiry" && inquiryEvidences.length > 0 && (
             <div className="space-y-4 pt-4 border-t border-sable-200">
               <h3 className="text-xs font-bold text-bleuNuit-900 uppercase tracking-wider flex items-center gap-2">
                 <BookOpen className="w-4 h-4 text-vertProfond-700" />
@@ -284,56 +293,77 @@ export default function ReviewEditor({
               </h3>
 
               <div className="space-y-3">
-                {evidences.map((ev) => (
-                  <div key={ev.id} className="p-3.5 rounded-xl border border-sable-200 bg-sable-50 space-y-3">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="font-bold text-bleuNuit-900">{ev.referenceCode}</span>
-                      <span
-                        className={`px-2 py-0.5 rounded text-[10px] font-bold ${
-                          ev.citationStatus === "VERIFIED_VERBATIM"
-                            ? "bg-green-100 text-green-800"
-                            : "bg-amber-100 text-amber-800"
-                        }`}
-                      >
-                        {ev.citationStatus}
-                      </span>
-                    </div>
+                {inquiryEvidences.map((item) => {
+                  const ev = item.evidence;
+                  const evId = item.evidenceId || ev?.id;
+                  if (!ev) return null;
 
-                    <div>
-                      <label className="block text-[11px] font-semibold text-sable-600 mb-1">
-                        {isArabic ? "المتن الأصلي (عربي)" : "Verbatim Arabe Original"}
-                      </label>
-                      <textarea
-                        dir="rtl"
-                        rows={3}
-                        value={ev.quoteArOriginal || ""}
-                        onChange={(e) => handleEvidenceFieldChange(ev.id, "quoteArOriginal", e.target.value)}
-                        className="w-full text-xs p-2 rounded-lg border border-sable-300 font-arabic focus:outline-hidden focus:ring-2 focus:ring-vertProfond-600 bg-white"
-                      />
-                    </div>
+                  return (
+                    <div key={evId} className="p-3.5 rounded-xl border border-sable-200 bg-sable-50 space-y-3">
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="font-bold text-bleuNuit-900">{ev.referenceCode || evId}</span>
+                        <span
+                          className={`px-2 py-0.5 rounded text-[10px] font-bold ${
+                            ev.citationStatus === "VERIFIED_VERBATIM"
+                              ? "bg-green-100 text-green-800"
+                              : "bg-amber-100 text-amber-800"
+                          }`}
+                        >
+                          {ev.citationStatus}
+                        </span>
+                      </div>
 
-                    <div className="grid grid-cols-2 gap-2">
                       <div>
-                        <label className="block text-[10px] font-semibold text-sable-600">Ouvrage / Source</label>
-                        <input
-                          type="text"
-                          value={ev.work || ""}
-                          onChange={(e) => handleEvidenceFieldChange(ev.id, "work", e.target.value)}
-                          className="w-full text-xs p-1.5 rounded border border-sable-300 bg-white"
+                        <label className="block text-[11px] font-semibold text-sable-600 mb-1">
+                          {isArabic ? "المتن الأصلي (عربي)" : "Verbatim Arabe Original"}
+                        </label>
+                        <textarea
+                          dir="rtl"
+                          rows={3}
+                          value={ev.quoteArOriginal || ""}
+                          onChange={(e) => handleEvidenceFieldChange(evId, "quoteArOriginal", e.target.value)}
+                          className="w-full text-xs p-2 rounded-lg border border-sable-300 font-arabic focus:outline-hidden focus:ring-2 focus:ring-vertProfond-600 bg-white"
                         />
                       </div>
+
                       <div>
-                        <label className="block text-[10px] font-semibold text-sable-600">Auteur / Savant</label>
-                        <input
-                          type="text"
-                          value={ev.author || ""}
-                          onChange={(e) => handleEvidenceFieldChange(ev.id, "author", e.target.value)}
-                          className="w-full text-xs p-1.5 rounded border border-sable-300 bg-white"
+                        <label className="block text-[11px] font-semibold text-sable-600 mb-1">
+                          {isArabic ? "الترجمة الفرنسية" : "Traduction Française"}
+                        </label>
+                        <textarea
+                          rows={2}
+                          value={ev.translationFr || ""}
+                          onChange={(e) => handleEvidenceFieldChange(evId, "translationFr", e.target.value)}
+                          className="w-full text-xs p-2 rounded-lg border border-sable-300 focus:outline-hidden focus:ring-2 focus:ring-vertProfond-600 bg-white"
                         />
                       </div>
+
+                      <div className="grid grid-cols-2 gap-2">
+                        <div>
+                          <label className="block text-[10px] font-semibold text-sable-600">Ouvrage / Source</label>
+                          <input
+                            type="text"
+                            value={(ev.sourceWork || ev.collection || ev.work || "") as string}
+                            onChange={(e) => {
+                              handleEvidenceFieldChange(evId, "sourceWork", e.target.value);
+                              handleEvidenceFieldChange(evId, "collection", e.target.value);
+                            }}
+                            className="w-full text-xs p-1.5 rounded border border-sable-300 bg-white"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-[10px] font-semibold text-sable-600">Auteur / Savant</label>
+                          <input
+                            type="text"
+                            value={(ev.author || "") as string}
+                            onChange={(e) => handleEvidenceFieldChange(evId, "author", e.target.value)}
+                            className="w-full text-xs p-1.5 rounded border border-sable-300 bg-white"
+                          />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}
@@ -516,6 +546,17 @@ export default function ReviewEditor({
                     <span>{isArabic ? "تعذر تقديم المقترح" : "Échec de la Création de la Proposition"}</span>
                   </div>
                   <p>{submissionResult.error}</p>
+                  {isStaleConflict && (
+                    <div className="pt-2">
+                      <button
+                        type="button"
+                        onClick={() => window.location.reload()}
+                        className="px-3 py-1.5 rounded-lg bg-red-800 text-white font-bold text-xs hover:bg-red-900 transition"
+                      >
+                        {isArabic ? "إعادة تحميل الصفحة لمزامنة المحتوى" : "Recharger la page pour synchroniser"}
+                      </button>
+                    </div>
+                  )}
                 </>
               )}
             </div>

@@ -285,15 +285,14 @@ async function testZodPreValidationGate() {
   const invalidLesson = {
     id: "invalid-lesson",
     // slug manquant, titleFr manquant
-    editorialStatus: "DRAFT",
+    editorialStatus: "IN_REVIEW",
   };
 
   await assert.rejects(
     async () => {
       await createScientificProposalPR({
         type: "lesson",
-        slug: "invalid-lesson",
-        originalContent: { editorialStatus: "DRAFT" },
+        slug: "critique-01-affirmation-vs-preuve",
         proposedContent: invalidLesson,
         checklistAnswers: completeChecklist,
         userId: "reviewer-123",

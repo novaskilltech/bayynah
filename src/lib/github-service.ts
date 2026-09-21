@@ -7,6 +7,8 @@
  * Toute proposition de modification passe obligatoirement par une branche dédiée et une Pull Request.
  */
 
+import crypto from "crypto";
+import matter from "gray-matter";
 import { LessonFrontmatterSchema } from "./schemas/lesson.schema";
 import { InquirySchema } from "./schemas/inquiry.schema";
 import {
@@ -14,21 +16,25 @@ import {
   validateChecklistAnswers,
   validateEditorialTransition,
   applyEvidenceInvalidation,
+  applyInquiryEvidenceInvalidation,
   EditorialStatus,
   EvidenceRecord,
+  InquiryEvidenceItem,
   DiffEntry,
 } from "./scientific-governance";
+import { getCanonicalScientificContent } from "./canonical-content";
 import { recordAuditEvent } from "./audit-logger";
 
 export interface ProposalRequest {
   type: "lesson" | "inquiry";
   slug: string;
-  originalContent: Record<string, unknown>;
+  originalContent?: Record<string, unknown>; // Ignoré par le serveur (chargement canonique strict)
   proposedContent: Record<string, unknown>;
   checklistAnswers: Record<string, boolean>;
   reviewerNotes?: string;
   userId: string;
   userEmail: string;
+  baseCommitSha?: string;
 }
 
 export interface ProposalResult {
@@ -42,9 +48,77 @@ export interface ProposalResult {
   error?: string;
 }
 
+export interface PullRequestChecksResult {
+  prNumber: number;
+  state: "open" | "closed";
+  merged: boolean;
+  headSha: string;
+  checkStatus: "PENDING" | "RUNNING" | "SUCCESS" | "FAILED";
+  checks: Array<{
+    name: string;
+    status: string;
+    conclusion: string | null;
+  }>;
+}
+
+/**
+ * Obtient le header d'authentification pour l'API GitHub.
+ * Supporte une GitHub App (RS256 JWT) ou un GITHUB_TOKEN standard.
+ */
+async function getGitHubAuthHeader(): Promise<string> {
+  const appId = process.env.GITHUB_APP_ID;
+  const privateKey = process.env.GITHUB_APP_PRIVATE_KEY;
+  const installationId = process.env.GITHUB_APP_INSTALLATION_ID;
+
+  if (appId && privateKey && installationId) {
+    const now = Math.floor(Date.now() / 1000);
+    const payload = {
+      iat: now - 60,
+      exp: now + 600,
+      iss: appId,
+    };
+
+    const formattedKey = privateKey.replace(/\\n/g, "\n");
+    const header = { alg: "RS256", typ: "JWT" };
+    const b64Header = Buffer.from(JSON.stringify(header)).toString("base64url");
+    const b64Payload = Buffer.from(JSON.stringify(payload)).toString("base64url");
+    const signInput = `${b64Header}.${b64Payload}`;
+
+    const signer = crypto.createSign("RSA-SHA256");
+    signer.update(signInput);
+    const signature = signer.sign(formattedKey, "base64url");
+    const jwt = `${signInput}.${signature}`;
+
+    const tokenRes = await fetch(
+      `https://api.github.com/app/installations/${installationId}/access_tokens`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${jwt}`,
+          Accept: "application/vnd.github.v3+json",
+        },
+      }
+    );
+
+    if (!tokenRes.ok) {
+      throw new Error(`Échec génération token GitHub App : ${tokenRes.status} ${tokenRes.statusText}`);
+    }
+
+    const tokenData = await tokenRes.json();
+    return `Bearer ${tokenData.token}`;
+  }
+
+  const token = process.env.GITHUB_TOKEN;
+  if (token) {
+    return `Bearer ${token}`;
+  }
+
+  return "";
+}
+
 /**
  * Valide une proposition de modification, applique les règles d'invalidation,
- * et crée une Pull Request sur GitHub via branche dédiée.
+ * effectue un commit réel sur une branche dédiée, et crée une Pull Request sur GitHub.
  */
 export async function createScientificProposalPR(
   params: ProposalRequest
@@ -52,12 +126,12 @@ export async function createScientificProposalPR(
   const {
     type,
     slug,
-    originalContent,
     proposedContent,
     checklistAnswers,
     reviewerNotes,
     userId,
     userEmail,
+    baseCommitSha,
   } = params;
 
   // 1. Validation de la checklist scientifique en 11 points
@@ -70,41 +144,69 @@ export async function createScientificProposalPR(
     );
   }
 
-  // 2. Traitement de l'invalidation automatique des preuves modifiées
+  // 2. Chargement canonique serveur (Sanctuaire Git & Frontière de confiance)
+  const canonical = getCanonicalScientificContent(type, slug);
+  const originalContent = canonical.content;
+
+  // Détection des modifications concurrentes (Stale Edit / 409)
+  if (baseCommitSha && baseCommitSha !== canonical.contentHash) {
+    const err = new Error(
+      "Conflit de concurrence (Stale Edit) : le contenu a été modifié sur le serveur depuis l'ouverture de votre session. Veuillez recharger la page."
+    );
+    (err as unknown as { code: string }).code = "STALE_EDIT_CONFLICT";
+    throw err;
+  }
+
+  // 3. Traitement de l'invalidation automatique des preuves modifiées
   const invalidations: string[] = [];
-  const processedProposed = { ...proposedContent };
+  let processedProposed = { ...proposedContent };
 
-  if (type === "inquiry") {
-    const origEvidences = ((originalContent.conclusionSheet as { evidences?: EvidenceRecord[] })?.evidences || []) as EvidenceRecord[];
-    const propEvidences = ((processedProposed.conclusionSheet as { evidences?: EvidenceRecord[] })?.evidences || []) as EvidenceRecord[];
+  if (type === "inquiry" && Array.isArray(processedProposed.inquiryEvidences)) {
+    const origInquiryEvs = (originalContent.inquiryEvidences as InquiryEvidenceItem[]) || [];
+    const propInquiryEvs = (processedProposed.inquiryEvidences as InquiryEvidenceItem[]) || [];
 
-    const origMap = new Map(origEvidences.map((e) => [e.id, e]));
-    const updatedEvidences = propEvidences.map((prop) => {
-      const orig = origMap.get(prop.id);
-      if (orig) {
-        const inv = applyEvidenceInvalidation(orig, prop);
-        if (inv.hasCriticalChange) {
-          if (inv.invalidationReason) invalidations.push(inv.invalidationReason);
-          return inv.invalidatedEvidence;
-        }
-      }
-      return prop;
-    });
-
-    if (processedProposed.conclusionSheet && typeof processedProposed.conclusionSheet === "object") {
-      (processedProposed.conclusionSheet as { evidences: EvidenceRecord[] }).evidences = updatedEvidences;
+    const invResult = applyInquiryEvidenceInvalidation(origInquiryEvs, propInquiryEvs);
+    if (invResult.hasInvalidations) {
+      invalidations.push(...invResult.invalidations);
+      processedProposed = {
+        ...processedProposed,
+        inquiryEvidences: invResult.processedInquiryEvidences,
+      };
+    }
+  } else if (type === "lesson" && processedProposed.historicReference && originalContent.historicReference) {
+    const origRef = originalContent.historicReference as EvidenceRecord;
+    const propRef = processedProposed.historicReference as EvidenceRecord;
+    const inv = applyEvidenceInvalidation(origRef, propRef);
+    if (inv.hasCriticalChange) {
+      if (inv.invalidationReason) invalidations.push(inv.invalidationReason);
+      processedProposed = {
+        ...processedProposed,
+        historicReference: inv.invalidatedEvidence,
+      };
     }
   }
 
-  // 3. Validation de la transition éditoriale
+  // 4. Validation de la transition éditoriale
   const currentStatus = (originalContent.editorialStatus || "DRAFT") as EditorialStatus;
   const targetStatus = (processedProposed.editorialStatus || currentStatus) as EditorialStatus;
 
-  const currentEvidences = (
-    type === "inquiry"
-      ? (processedProposed.conclusionSheet as { evidences?: EvidenceRecord[] })?.evidences || []
-      : []
-  ) as Array<{ id: string; citationStatus: "VERIFIED_VERBATIM" | "VERIFIED_PARAPHRASE" | "TO_BE_CHECKED" }>;
+  const currentEvidences: Array<{ id: string; citationStatus: "VERIFIED_VERBATIM" | "VERIFIED_PARAPHRASE" | "TO_BE_CHECKED" }> = [];
+  if (type === "inquiry" && Array.isArray(processedProposed.inquiryEvidences)) {
+    for (const ie of processedProposed.inquiryEvidences as InquiryEvidenceItem[]) {
+      if (ie.evidence) {
+        currentEvidences.push({
+          id: ie.evidenceId || ie.evidence.id,
+          citationStatus: ie.evidence.citationStatus,
+        });
+      }
+    }
+  } else if (type === "lesson" && processedProposed.historicReference) {
+    const ref = processedProposed.historicReference as EvidenceRecord;
+    currentEvidences.push({
+      id: "historicReference",
+      citationStatus: ref.citationStatus,
+    });
+  }
 
   const transitionCheck = validateEditorialTransition(currentStatus, targetStatus, {
     reviewerId: userId,
@@ -116,7 +218,7 @@ export async function createScientificProposalPR(
     throw new Error(transitionCheck.error);
   }
 
-  // 4. Pré-Validation Zod stricte du contenu proposé
+  // 5. Pré-Validation Zod stricte du contenu proposé
   if (type === "lesson") {
     const zodResult = LessonFrontmatterSchema.safeParse(processedProposed);
     if (!zodResult.success) {
@@ -133,14 +235,34 @@ export async function createScientificProposalPR(
     }
   }
 
-  // 5. Calcul du Diff Scientifique
+  // 6. Calcul du Diff Scientifique
   const diffs = computeScientificDiff(originalContent, processedProposed);
 
-  // 6. Génération du nom de branche (jamais d'écriture directe sur main)
+  // Rejet strict de toute Pull Request vide
+  if (diffs.length === 0) {
+    throw new Error("Aucune modification détectée par rapport à la version canonique : impossible d'ouvrir une Pull Request vide.");
+  }
+
+  // 7. Sérialisation du contenu à commiter
+  let newRawContent: string;
+  let repoFilePath: string;
+
+  if (type === "lesson") {
+    const { contentFr, ...frontmatterData } = processedProposed;
+    newRawContent = matter.stringify((contentFr as string) || "", frontmatterData);
+    repoFilePath = `content/lessons/${slug}.md`;
+  } else {
+    newRawContent = JSON.stringify(processedProposed, null, 2) + "\n";
+    repoFilePath = `content/inquiries/${slug}.json`;
+  }
+
+  if (canonical.rawContent.trim() === newRawContent.trim()) {
+    throw new Error("Le contenu sérialisé est identique au fichier original : impossible d'ouvrir une Pull Request vide.");
+  }
+
+  // 8. Préparation des métadonnées de la branche et de la PR
   const timestamp = Date.now();
   const branchName = `review/${type}-${slug}-${timestamp}`;
-
-  // 7. Formatage de la description de la Pull Request
   const prTitle = `review(${type}): proposition de révision scientifique sur ${slug}`;
   const prBody = [
     `## 🔬 Proposition de Révision Scientifique TABAYYUN`,
@@ -173,8 +295,8 @@ export async function createScientificProposalPR(
     `*Généré automatiquement par le Moteur de Gouvernance TABAYYUN. La CI GitHub Actions doit être au vert avant toute revue humaine et merge.*`,
   ].join("\n");
 
-  // 8. Intégration GitHub (API REST via Token ou simulation locale sécurisée)
-  const githubToken = process.env.GITHUB_TOKEN;
+  // 9. Intégration GitHub (App / Token ou simulation locale sécurisée)
+  const authHeader = await getGitHubAuthHeader();
   const repoOwner = process.env.GITHUB_REPOSITORY_OWNER || "novaskilltech";
   const repoName = process.env.GITHUB_REPOSITORY_NAME || "bayynah";
 
@@ -182,20 +304,19 @@ export async function createScientificProposalPR(
   let pullRequestNumber: number;
   let isSimulated = false;
 
-  if (githubToken && process.env.NODE_ENV === "production") {
+  if (authHeader) {
     try {
-      // Appel API GitHub REST officiel
       // a. Récupérer le SHA de main
       const refRes = await fetch(
         `https://api.github.com/repos/${repoOwner}/${repoName}/git/ref/heads/main`,
         {
           headers: {
-            Authorization: `Bearer ${githubToken}`,
+            Authorization: authHeader,
             Accept: "application/vnd.github.v3+json",
           },
         }
       );
-      if (!refRes.ok) throw new Error(`Impossible de lire la branche main : ${refRes.statusText}`);
+      if (!refRes.ok) throw new Error(`Impossible de lire la branche main : ${refRes.status} ${refRes.statusText}`);
       const refData = await refRes.json();
       const mainSha = refData.object.sha;
 
@@ -205,7 +326,7 @@ export async function createScientificProposalPR(
         {
           method: "POST",
           headers: {
-            Authorization: `Bearer ${githubToken}`,
+            Authorization: authHeader,
             Accept: "application/vnd.github.v3+json",
             "Content-Type": "application/json",
           },
@@ -215,15 +336,53 @@ export async function createScientificProposalPR(
           }),
         }
       );
-      if (!createBranchRes.ok) throw new Error(`Échec création branche : ${createBranchRes.statusText}`);
+      if (!createBranchRes.ok) throw new Error(`Échec création branche ${branchName} : ${createBranchRes.status} ${createBranchRes.statusText}`);
 
-      // c. Créer la Pull Request
+      // c. Récupérer le blob SHA du fichier existant sur la nouvelle branche
+      const fileRes = await fetch(
+        `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${repoFilePath}?ref=${branchName}`,
+        {
+          headers: {
+            Authorization: authHeader,
+            Accept: "application/vnd.github.v3+json",
+          },
+        }
+      );
+      let fileSha: string | undefined;
+      if (fileRes.ok) {
+        const fileData = await fileRes.json();
+        fileSha = fileData.sha;
+      }
+
+      // d. Créer le commit réel sur la branche avec le fichier modifié
+      const commitRes = await fetch(
+        `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${repoFilePath}`,
+        {
+          method: "PUT",
+          headers: {
+            Authorization: authHeader,
+            Accept: "application/vnd.github.v3+json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            message: `review(${type}): révision scientifique de ${slug}`,
+            content: Buffer.from(newRawContent, "utf-8").toString("base64"),
+            branch: branchName,
+            ...(fileSha ? { sha: fileSha } : {}),
+          }),
+        }
+      );
+      if (!commitRes.ok) {
+        throw new Error(`Échec du commit sur la branche ${branchName} : ${commitRes.status} ${commitRes.statusText}`);
+      }
+
+      // e. Créer la Pull Request
       const createPrRes = await fetch(
         `https://api.github.com/repos/${repoOwner}/${repoName}/pulls`,
         {
           method: "POST",
           headers: {
-            Authorization: `Bearer ${githubToken}`,
+            Authorization: authHeader,
             Accept: "application/vnd.github.v3+json",
             "Content-Type": "application/json",
           },
@@ -235,25 +394,38 @@ export async function createScientificProposalPR(
           }),
         }
       );
-      if (!createPrRes.ok) throw new Error(`Échec création PR : ${createPrRes.statusText}`);
+      if (!createPrRes.ok) throw new Error(`Échec création PR : ${createPrRes.status} ${createPrRes.statusText}`);
       const prData = await createPrRes.json();
       pullRequestUrl = prData.html_url;
       pullRequestNumber = prData.number;
     } catch (err: unknown) {
       console.error("Erreur interaction GitHub API:", err);
-      // En cas d'erreur de token externe, bascule contrôlée
+      // En production, échec fatal obligatoire (fail-closed, pas de fallback simulé)
+      if (process.env.NODE_ENV === "production") {
+        await recordAuditEvent("PROPOSAL_FAILED", userId, {
+          type,
+          slug,
+          branchName,
+          error: err instanceof Error ? err.message : String(err),
+        });
+        throw new Error(`Échec critique de l'intégration GitHub en production : ${err instanceof Error ? err.message : String(err)}`);
+      }
+      // Mode développement / test uniquement : simulation déterministe
       pullRequestUrl = `https://github.com/${repoOwner}/${repoName}/pull/simulated-${timestamp}`;
       pullRequestNumber = 900 + Math.floor(Math.random() * 100);
       isSimulated = true;
     }
   } else {
-    // Mode développement local / test : simulation déterministe sécurisée
+    // Absence de configuration GitHub
+    if (process.env.NODE_ENV === "production") {
+      throw new Error("Configuration GitHub manquante en production : GITHUB_APP_* ou GITHUB_TOKEN obligatoire.");
+    }
     pullRequestUrl = `https://github.com/${repoOwner}/${repoName}/pull/simulated-${timestamp}`;
     pullRequestNumber = 100 + Math.floor(Math.random() * 100);
     isSimulated = true;
   }
 
-  // 9. Enregistrement de l'événement dans les logs d'audit
+  // 10. Enregistrement de l'événement dans les logs d'audit
   await recordAuditEvent("PROPOSAL_CREATED", userId, {
     type,
     slug,
@@ -273,5 +445,84 @@ export async function createScientificProposalPR(
     diffs,
     invalidations,
     isSimulated,
+  };
+}
+
+/**
+ * Récupère l'état et les vérifications CI d'une Pull Request sur GitHub
+ */
+export async function getPullRequestChecks(
+  pullRequestNumber: number
+): Promise<PullRequestChecksResult> {
+  const authHeader = await getGitHubAuthHeader();
+  const repoOwner = process.env.GITHUB_REPOSITORY_OWNER || "novaskilltech";
+  const repoName = process.env.GITHUB_REPOSITORY_NAME || "bayynah";
+
+  if (!authHeader) {
+    // Mode dev/test : renvoyer un statut simulé
+    return {
+      prNumber: pullRequestNumber,
+      state: "open",
+      merged: false,
+      headSha: "mock-head-sha",
+      checkStatus: "SUCCESS",
+      checks: [
+        { name: "Scientific & Technical Integrity Check", status: "completed", conclusion: "success" },
+      ],
+    };
+  }
+
+  // 1. Récupérer les détails de la PR
+  const prRes = await fetch(
+    `https://api.github.com/repos/${repoOwner}/${repoName}/pulls/${pullRequestNumber}`,
+    {
+      headers: {
+        Authorization: authHeader,
+        Accept: "application/vnd.github.v3+json",
+      },
+    }
+  );
+  if (!prRes.ok) {
+    throw new Error(`Impossible de récupérer la PR #${pullRequestNumber} : ${prRes.statusText}`);
+  }
+  const prData = await prRes.json();
+  const headSha = prData.head?.sha || "unknown";
+
+  // 2. Récupérer les check runs pour headSha
+  const checksRes = await fetch(
+    `https://api.github.com/repos/${repoOwner}/${repoName}/commits/${headSha}/check-runs`,
+    {
+      headers: {
+        Authorization: authHeader,
+        Accept: "application/vnd.github.v3+json",
+      },
+    }
+  );
+  if (!checksRes.ok) {
+    throw new Error(`Impossible de récupérer les check runs pour ${headSha} : ${checksRes.statusText}`);
+  }
+  const checksData = await checksRes.json();
+  const checkRuns = checksData.check_runs || [];
+
+  let checkStatus: "PENDING" | "RUNNING" | "SUCCESS" | "FAILED" = "SUCCESS";
+  if (checkRuns.length === 0) {
+    checkStatus = "PENDING";
+  } else if (checkRuns.some((c: { conclusion: string }) => c.conclusion === "failure" || c.conclusion === "timed_out")) {
+    checkStatus = "FAILED";
+  } else if (checkRuns.some((c: { status: string }) => c.status !== "completed")) {
+    checkStatus = "RUNNING";
+  }
+
+  return {
+    prNumber: pullRequestNumber,
+    state: prData.state,
+    merged: prData.merged || false,
+    headSha,
+    checkStatus,
+    checks: checkRuns.map((c: { name: string; status: string; conclusion: string | null }) => ({
+      name: c.name,
+      status: c.status,
+      conclusion: c.conclusion,
+    })),
   };
 }

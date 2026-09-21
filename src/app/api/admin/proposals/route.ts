@@ -41,15 +41,15 @@ export async function POST(req: NextRequest) {
     const {
       type,
       slug,
-      originalContent,
       proposedContent,
       checklistAnswers,
       reviewerNotes,
+      baseCommitSha,
     } = body;
 
-    if (!type || !slug || !originalContent || !proposedContent || !checklistAnswers) {
+    if (!type || !slug || !proposedContent || !checklistAnswers) {
       return NextResponse.json(
-        { error: "Champs obligatoires manquants (type, slug, originalContent, proposedContent, checklistAnswers)." },
+        { error: "Champs obligatoires manquants (type, slug, proposedContent, checklistAnswers)." },
         { status: 400 }
       );
     }
@@ -61,16 +61,16 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // 5. Exécution du moteur de gouvernance et création de la PR
+    // 5. Exécution du moteur de gouvernance et création de la PR (chargement canonique serveur)
     const proposalParams: ProposalRequest = {
       type,
       slug,
-      originalContent,
       proposedContent,
       checklistAnswers,
       reviewerNotes,
       userId: user.id,
       userEmail: user.email,
+      baseCommitSha,
     };
 
     const result = await createScientificProposalPR(proposalParams);
@@ -81,7 +81,24 @@ export async function POST(req: NextRequest) {
     });
   } catch (err: unknown) {
     const errorMsg = err instanceof Error ? err.message : String(err);
+    const errorCode = (err as { code?: string })?.code;
+
     console.error("Erreur création proposition scientifique:", err);
+
+    if (errorCode === "STALE_EDIT_CONFLICT") {
+      return NextResponse.json(
+        { error: errorMsg, code: "STALE_EDIT_CONFLICT" },
+        { status: 409 }
+      );
+    }
+
+    if (errorMsg.includes("Échec critique de l'intégration GitHub")) {
+      return NextResponse.json(
+        { error: errorMsg },
+        { status: 502 }
+      );
+    }
+
     return NextResponse.json(
       { error: errorMsg || "Une erreur est survenue lors de la création de la proposition." },
       { status: 400 }

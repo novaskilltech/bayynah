@@ -1,10 +1,8 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import { cookies } from "next/headers";
 import { getCurrentUser } from "@/lib/auth";
 import { CSRF_COOKIE_NAME, generateCsrfToken } from "@/lib/csrf";
+import { getCanonicalScientificContent } from "@/lib/canonical-content";
 import ReviewEditor from "./ReviewEditor";
 import { ArrowLeft, Lock } from "lucide-react";
 import Link from "next/link";
@@ -50,31 +48,21 @@ export default async function AdminReviewPage({ params }: PageProps) {
     );
   }
 
-  // 2. Chargement du contenu scientifique original
-  let originalContent: Record<string, unknown> | null = null;
-
-  if (type === "lesson") {
-    const filePath = path.join(process.cwd(), "content", "lessons", `${slug}.md`);
-    if (!fs.existsSync(filePath)) {
-      notFound();
-    }
-    const raw = fs.readFileSync(filePath, "utf-8");
-    const parsed = matter(raw);
-    originalContent = { ...parsed.data, contentFr: parsed.content };
-  } else if (type === "inquiry") {
-    const filePath = path.join(process.cwd(), "content", "inquiries", `${slug}.json`);
-    if (!fs.existsSync(filePath)) {
-      notFound();
-    }
-    const raw = fs.readFileSync(filePath, "utf-8");
-    originalContent = JSON.parse(raw);
-  } else {
+  // 2. Chargement du contenu scientifique canonique
+  if (type !== "lesson" && type !== "inquiry") {
     notFound();
   }
 
-  if (!originalContent) {
+  let canonical;
+  try {
+    canonical = getCanonicalScientificContent(type, slug);
+  } catch (err: unknown) {
+    console.error("Erreur chargement contenu canonique:", err);
     notFound();
   }
+
+  const originalContent = canonical.content;
+  const baseCommitSha = canonical.contentHash;
 
   // 3. Récupération ou génération du token CSRF
   const cookieStore = await cookies();
@@ -119,6 +107,7 @@ export default async function AdminReviewPage({ params }: PageProps) {
         type={type as "lesson" | "inquiry"}
         slug={slug}
         initialContent={originalContent}
+        baseCommitSha={baseCommitSha}
         locale={locale}
         csrfToken={csrfToken}
         userRole={user.role}
