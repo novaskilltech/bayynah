@@ -1,0 +1,586 @@
+{
+  "id": "inquiry-01",
+  "slug": "ablutions-viande-chameau",
+  "domain": "FIQH",
+  "editorialStatus": "PUBLISHED",
+  "title": {
+    "fr": "La consommation de viande de chameau rompt-elle les ablutions ?",
+    "ar": "هل أكل لحم الإبل ينقض الوضوء؟"
+  },
+  "initialClaim": {
+    "fr": "On m'a dit : 'Manger du chameau n'a jamais rompu les ablutions, c'est une invention récente.'",
+    "ar": "قيل لي: أكل لحم الإبل لا ينقض الوضوء أبداً، وهذا رأي مخترع."
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "titleFr": "Décomposer l'affirmation",
+      "titleAr": "تفكيك الدعوى وفصل أجزائها",
+      "instructionFr": "Face à l'affirmation : « Manger du chameau n'a jamais rompu les ablutions, c'est une invention récente », quelle est la première démarche méthodologique ?",
+      "instructionAr": "أمام دعوى: «أكل لحم الإبل لا ينقض الوضوء أبداً، وهذا رأي مخترع»، ما هو المسلك المنهجي الأول؟",
+      "options": [
+        {
+          "textFr": "Identifier qu'il y a deux allégations distinctes : la négation absolue de toute divergence historique ('n'a jamais rompu') et l'accusation d'innovation moderne ('invention récente').",
+          "textAr": "تمييز دعويين مستقلتين: نفي وقوع الخلاف تاريخياً بالكلية، وتهمة الابتداع المعاصر.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Excellente analyse ! Décomposer une affirmation complexe en propositions élémentaires permet d'éviter l'amalgame et de définir précisément ce qui doit être vérifié.",
+          "feedbackAr": "تحليل سديد ومحرر! تجزئة الدعوى المركبة إلى قضايا مفردة يمنع الخلط ويحدد مسار التثبت بدقة."
+        },
+        {
+          "textFr": "Chercher directement si un contemporain a écrit un livre sur le sujet sans analyser les termes de la phrase.",
+          "textAr": "البحث مباشرة عن كتاب معاصر في المسألة دون تحليل ألفاظ الدعوى.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "La recherche est utile, mais sans décomposition préalable des prétentions, on risque de passer à côté de l'examen de l'historicité.",
+          "feedbackAr": "البحث مطلوب، لكن دون تفكيك الدعاوى قد يغفل الباحث عن تحقيق الجانب التاريخي للمسألة."
+        },
+        {
+          "textFr": "Conclure immédiatement que l'affirmation est fausse parce qu'on a déjà entendu dire le contraire.",
+          "textAr": "الجزم ببطلان القول لمجرد سماع خلافه سابقاً.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Jugement prématuré : la mémoire d'un bruit entendu ne remplace pas une vérification philologique et juridique.",
+          "feedbackAr": "حكم متسرع: مجرد تذكر سماع رأي مخالف لا يغني عن التثبت العلمي والتوثيق."
+        },
+        {
+          "textFr": "Accepter l'affirmation d'emblée car personne dans son entourage ne refait ses ablutions après ce repas.",
+          "textAr": "تسليم صحة الدعوى لكون المحيطين لا يتوضؤون من أكلها.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Piège méthodologique : confondre la coutume d'un milieu ou d'une région avec la vérité scripturaire et doctrinale.",
+          "feedbackAr": "مغالطة منهجية: الخلط بين العادة المحلية الشائعة وبين التحقيق الفقهي والنص الشرعي."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "ON_STEP_ENTER"
+    },
+    {
+      "stepNumber": 2,
+      "titleFr": "Identifier ce qu'il faudrait vérifier",
+      "titleAr": "تحديد محاور التثبت",
+      "instructionFr": "Pour tester la validité des deux allégations décomposées, quels sont les axes précis de recherche à établir ?",
+      "instructionAr": "لاختبار صحة الدعويين، ما هي المحاور الدقيقة الواجب فحصها؟",
+      "options": [
+        {
+          "textFr": "Vérifier s'il existe des textes prophétiques directs sur le sujet, analyser leur authenticité, puis examiner si les premiers juristes (salaf et imams) ont divergé à ce propos.",
+          "textAr": "فحص وجود نصوص نبوية صريحة، والتحقق من ثبوتها، ثم مراجعة مذاهب الفقهاء المتقدمين من السلف والأئمة فيها.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Parfait ! Cet ordre de contrôle (Textes sources → Authenticité → Compréhension historique) est le socle de la méthode d'investigation rigoureuse.",
+          "feedbackAr": "أحسنت! هذا الترتيب (النصوص الأصلية ← الثبوت ← الفهم التاريخي والمذاهب) هو قوام منهج التثبت."
+        },
+        {
+          "textFr": "Consulter des personnes instruites ou des imams locaux sans leur demander de sources textuelles.",
+          "textAr": "سؤال عدد من الأئمة المعاصرين دون مطالبتهم بأدلة نصوصهم.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Consulter des personnes instruites est utile, mais s'en tenir à des avis sans traçabilité des preuves ne permet pas de vérifier l'affirmation.",
+          "feedbackAr": "سؤال أهل العلم حسن، لكن الاكتفاء بالفتوى المجردة دون معرفة الدليل لا يحقق التثبت المنهجي المطلوب."
+        },
+        {
+          "textFr": "Déclarer que les données sont encore insuffisantes pour savoir ce qu'il faudrait chercher.",
+          "textAr": "القول بأن المعطيات غير كافية لمعرفة ما يجب البحث عنه.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Ici, nous savons précisément ce que l'affirmation prétend : la méthode commande d'enquêter sur les sources et non de s'abstenir de poser les questions de contrôle.",
+          "feedbackAr": "الدعوى واضحة ومحددة، والمنهج يقتضي رسم خطة التثبت لا التوقف قبل البدء."
+        },
+        {
+          "textFr": "Chercher uniquement quel est l'avis le plus facile à appliquer au quotidien pour clore le débat.",
+          "textAr": "البحث عن أسهل الأقوال تطبيقاً لحسم المسألة.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "La facilité pratique ne dispense aucunement de l'examen de vérité méthodologique.",
+          "feedbackAr": "الترخص المجرد دون نظر في الأدلة ينافي أمانة البحث العلمي."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 3,
+      "titleFr": "Chercher la source primaire",
+      "titleAr": "تطلب المصدر الأصلي الأولي",
+      "instructionFr": "Dans quelle source primaire canonique trouve-t-on un texte explicite sur la viande de chameau et les ablutions ?",
+      "instructionAr": "في أي المصادر الأصلية المسندة نجد نصاً صريحاً في الوضوء من لحوم الإبل؟",
+      "options": [
+        {
+          "textFr": "Dans Ṣaḥîḥ Muslim (hadith n°360), d'après Jâbir ibn Samura, où un homme demande explicitement s'il doit faire ses ablutions après la viande de mouton puis de chameau.",
+          "textAr": "في صحيح مسلم (حديث رقم 360) عن جابر بن سمرة، حيث سأل رجل النبي ﷺ عن الوضوء من لحوم الغنم ثم لحوم الإبل.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Document trouvé ! Il s'agit d'une source primaire majeure, avec chaîne continue et contexte précis.",
+          "feedbackAr": "أصبت المرجع الأصلي! هذا إسناد صحيح مخرج في أصح كتب الحديث بعد صحيح البخاري."
+        },
+        {
+          "textFr": "Dans un livre de droit contemporain qui cite le hadith sans chaîne de transmission ni nom de compilateur.",
+          "textAr": "في كتاب فقهي معاصر يورد النص بلا إسناد ولا عزو للمصنف.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "La citation secondaire est un point de départ, mais la rigueur exige de remonter au recueil de référence.",
+          "feedbackAr": "الكتب المعاصرة وسيلة استدلال أولي، لكن التثبت يوجب الرجوع للأصول المسندة."
+        },
+        {
+          "textFr": "Considérer que les données sont encore insuffisantes pour affirmer qu'un hadith existe.",
+          "textAr": "القول بأن المعطيات غير كافية لتقرير وجود الحديث.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Le texte est déjà répertorié dans les index canoniques : il suffit de consulter la référence pour le constater.",
+          "feedbackAr": "النصوص مفهرسة ومتاحة في دواوين السنة، فلا مسوغ للتردد في وجودها."
+        },
+        {
+          "textFr": "Déclarer qu'aucun hadith n'existe sur le sujet sans avoir consulté les recueils canoniques.",
+          "textAr": "الجزم بعدم ورود أي حديث قبل مراجعة الأصول المعتمدة.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Confondre sa propre non-connaissance avec l'inexistence du texte est un biais cognitif majeur.",
+          "feedbackAr": "توهم العدم لعدم العلم خطأ منهجي فادح."
+        }
+      ],
+      "revealedEvidenceIds": ["ev-hadith-jabir"],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 4,
+      "titleFr": "Vérifier la transmission",
+      "titleAr": "تحقيق ثبوت الإسناد",
+      "instructionFr": "À présent que le texte de Jâbir ibn Samura dans Ṣaḥîḥ Muslim est localisé, quel est le statut philologique et critique de sa transmission ?",
+      "instructionAr": "بعد الوقوف على حديث جابر بن سمرة في صحيح مسلم، ما هو الحكم العلمي على ثبوت إسناده؟",
+      "options": [
+        {
+          "textFr": "C'est un hadith authentique (Ṣaḥîḥ), transmis par une chaîne continue de narrateurs dignes de confiance ('adl ḍâbiṭ), sans rupture ni défaut caché, intégré par l'imam Muslim dans son recueil canonique.",
+          "textAr": "حديث صحيح متصل الإسناد برواة عدول ضابطين، مخرج في صحيح مسلم وتلقته الأمة بالقبول.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Exactitude scientifique ! L'authenticité du texte est fermement établie selon les critères stricts de la science du hadith.",
+          "feedbackAr": "تحقيق علمي محكم! ثبوت الحديث قطعي الإسناد وفق موازين الصنعة الحديثية."
+        },
+        {
+          "textFr": "Considérer le hadith comme recevable a priori sans chercher qui en a évalué la chaîne.",
+          "textAr": "قبول الحديث حكماً دون معرفة من صححه من النقاد.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "La conclusion est juste, mais la démarche manque de rigueur : la qualification d'un hadith repose sur l'examen critique de ses transmetteurs.",
+          "feedbackAr": "المآل صحيح، لكن الاستدلال يفتقر لإدراك معايير تصحيح الأئمة ونقدهم."
+        },
+        {
+          "textFr": "Les données sont encore insuffisantes pour statuer sur le degré d'authenticité.",
+          "textAr": "المعطيات غير كافية للحكم على درجة الحديث.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "La présence dans Ṣaḥîḥ Muslim avec validation unanime des maîtres du hadith fournit une donnée critique amplement suffisante.",
+          "feedbackAr": "تخريج الإمام مسلم له في صحيحه كافٍ في إثبات صحته واستقرار حكم النقاد عليه."
+        },
+        {
+          "textFr": "C'est un récit faible (ḍa'îf) car il n'est pas rapporté dans Ṣaḥîḥ al-Bukhârî.",
+          "textAr": "حديث ضعيف لكونه لم يخرجه البخاري في صحيحه.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Grave erreur méthodologique : al-Bukhârî n'a jamais prétendu rassembler tous les hadiths authentiques dans son Sahih.",
+          "feedbackAr": "خطأ منهجي كبير: البخاري لم يستوعب الصحيح كله، ورواية مسلم في صحيحه حجة معتبرة."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 5,
+      "titleFr": "Lire précisément le texte",
+      "titleAr": "القراءة الدقيقة للمتن",
+      "instructionFr": "Examinons attentivement le matn du hadith Muslim 360. Quelle particularité structurelle de la formulation prophétique saute aux yeux ?",
+      "instructionAr": "لنتأمل متن حديث مسلم رقم 360، ما هي الخاصية البنيوية البارزة في الصياغة النبوية؟",
+      "options": [
+        {
+          "textFr": "Le parallélisme contrasté : pour le mouton, la réponse est au choix (« Si tu veux, fais-les, et si tu veux, ne les fais pas ») ; pour le chameau, la réponse est affirmative et impérative (« Oui, fais tes ablutions après en avoir mangé »).",
+          "textAr": "المقابلة الدقيقة: جعل الوضوء من الغنم على التخيير («إن شئت فتوضأ، وإن شئت فلا توضأ»)، وجعله من الإبل جازماً بالأمر («نعم، فتوضأ من لحوم الإبل»).",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Remarquable acuité de lecture ! C'est ce contraste structurel direct dans la même question qui fonde la force probante de l'argument.",
+          "feedbackAr": "دقة فائقة في قراءة النص! هذا التقابل بين التخيير والأمر في سياق واحد هو عمدة المستدلين."
+        },
+        {
+          "textFr": "Le texte parle seulement de la viande sans autre précision de contexte.",
+          "textAr": "النص يذكر اللحم مجملاً دون قرائن أخرى.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "C'est exact, mais cela omet l'élément essentiel : la différence de traitement entre mouton et chameau.",
+          "feedbackAr": "صحيح لكنه يغفل جوهر الدلالة وهو التفريق بين حالتي الغنم والإبل."
+        },
+        {
+          "textFr": "Les données textuelles sont encore insuffisantes pour savoir si le chameau a été distingué du mouton.",
+          "textAr": "المعطيات النصية غير كافية لتبين التفريق بين الغنم والإبل.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "La lecture littérale du matn montre explicitement et sans équivoque la distinction.",
+          "feedbackAr": "صريح اللفظ في الحديث بينٌ في التمييز بينهما ولا يحتمل الشك."
+        },
+        {
+          "textFr": "Affirmer que le mot 'chameau' est une métaphore qui désigne autre chose qu'un animal.",
+          "textAr": "الادعاء بأن لفظ الإبل مجاز لا يراد به الحيوان المعروف.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Interprétation arbitraire rejetée par la langue et par le contexte concret du dialogue.",
+          "feedbackAr": "تأويل متعسف باطل يخالف الحقيقة اللغوية والسياق الظاهر."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 6,
+      "titleFr": "Séparer texte et istidlâl",
+      "titleAr": "الفصل بين النص ودلالة الاستدلال",
+      "instructionFr": "La lettre du hadith donne un ordre (« fais tes ablutions »). Comment la méthodologie juridique (uṣûl al-fiqh) distingue-t-elle le texte lui-même de l'istidlâl (la déduction du statut) ?",
+      "instructionAr": "صيغة الحديث أمر («فتوضأ»). كيف يفرق علم أصول الفقه بين منطوق النص وبين استنباط الحكم التكليفي؟",
+      "options": [
+        {
+          "textFr": "Le texte fournit le dalîl brut ; l'istidlâl consiste à déterminer si l'impératif vaut ici obligation juridique annulant la pureté (wujûb ناقض), ou s'il s'agit d'un simple nettoyage linguistique et d'hygiène recommandé (nadb).",
+          "textAr": "النص يمثل أصل الدليل، والاستدلال يبحث هل صيغة «افعل» هنا تفيد الوجوب الناقض للطهارة، أم مجرد النظافة اللغوية المستحبة.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Précision d'orfèvre ! C'est exactement sur cette distinction que repose la pluralité des compréhensions jurisprudentielles.",
+          "feedbackAr": "تحرير أصولي بالغ الدقة! هذا التمييز بين أصل الأمر ومقتضاه هو مناط الخلاف الفقهي."
+        },
+        {
+          "textFr": "Reconnaître qu'il y a une étape de déduction entre la phrase entendue et le statut de validité de la prière.",
+          "textAr": "إدراك وجود مرحلة استنباط بين سماع اللفظ وبين إصدار الحكم على صحة الصلاة.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Bonne intuition méthodologique, bien que l'analyse uṣûlî puisse être encore plus explicitement qualifiée.",
+          "feedbackAr": "إدراك منهجي طيب، وإن كان يحتاج لمزيد من التأصيل الأصولي."
+        },
+        {
+          "textFr": "Tout ordre dans un hadith implique automatiquement et sans exception l'annulation de la prière et des ablutions sans autre interprétation possible.",
+          "textAr": "كل أمر في الحديث يقتضي بطلان الوضوء حتماً دون أي احتمال آخر.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Trop catégorique : les uṣûliyyûn savent que l'impératif peut être modulé par des indices (qarâ'in) textuels ou contextuels.",
+          "feedbackAr": "إطلاق غير منضبط: صيغة الأمر قد تصرفها القرائن من الوجوب إلى الندب، أو من المعنى الشرعي إلى اللغوي."
+        },
+        {
+          "textFr": "Déclarer que le texte n'a aucune valeur tant qu'un savant contemporain ne l'a pas confirmé.",
+          "textAr": "إسقاط حجية النص حتى يثبته فقيه معاصر.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Inversion des sources : c'est la parole des savants qui est pesée à la lumière du dalîl, et non l'inverse.",
+          "feedbackAr": "قلب للأصول: كلام العلماء يُستدل له بالنص ولا يُستدل به عليه."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 7,
+      "titleFr": "Réunir les autres éléments du dossier",
+      "titleAr": "جمع مفردات الباب ومقارنة الروايات",
+      "instructionFr": "Pour consolider notre dossier critique, suffit-il du hadith de Jâbir ibn Samura, ou existe-t-il d'autres textes scripturaires convergents ?",
+      "instructionAr": "لبناء ملف علمي متكامل، هل نكتفي بحديث جابر بن سمرة أم توجد نصوص مسندة أخرى تعضده؟",
+      "options": [
+        {
+          "textFr": "Il faut réunir l'ensemble du dossier : le hadith d'al-Barâ' ibn 'Âzib (rapporté par Abû Dâwûd n°184 et at-Tirmidhî n°81) confirme mot pour mot l'ordre d'accomplir les ablutions après le chameau et l'interdiction de les faire par obligation pour le mouton.",
+          "textAr": "يجب جمع طرق الباب: حديث البراء بن عازب (عند أبي داود 184 والترمذي 81) يطابق في الأمر بالوضوء من لحوم الإبل والنهي عنه من الغنم.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Preuve supplémentaire versée au dossier ! Deux Compagnons distincts (Jâbir et al-Barâ') rapportent le même enseignement avec des chaînes authentiques.",
+          "feedbackAr": "وثيقة ثانية تعضد الملف! رواية صحابيين مستقلين (جابر والبراء) تؤكد استقرار الحكم وثبوته."
+        },
+        {
+          "textFr": "Prendre note qu'un autre hadith existe chez d'autres compilateurs sans examiner son contenu.",
+          "textAr": "تقييد وجود حديث آخر عند غير مسلم دون تفحص لفظه.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Utile, mais la force de la corroboration réside dans la concordance textuelle précise entre les deux récits.",
+          "feedbackAr": "مفيد، ولكن تمام الحجة إنما يظهر بمطابقة المعنى اللفظي بين الروايتين."
+        },
+        {
+          "textFr": "Déclarer que les données sont encore insuffisantes pour savoir si d'autres récits existent.",
+          "textAr": "القول بأن المعطيات غير كافية لتبين وجود روايات أخرى.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Les Sunan d'Abû Dâwûd et d'at-Tirmidhî sont des sources primaires accessibles et vérifiées.",
+          "feedbackAr": "سنن أبي داود وجامع الترمذي أصول مطبوعة متداولة محققة، والبحث فيها ميسور."
+        },
+        {
+          "textFr": "Un seul hadith suffit toujours dans toutes les situations, chercher d'autres textes est une perte de temps.",
+          "textAr": "حديث واحد كافٍ في كل حال، وتطلب غيره مضيعة للوقت.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Erreur critique : le croisement des narrations permet d'écarter l'isolement (shudhûdh) et de vérifier la cohérence du corpus.",
+          "feedbackAr": "مسلك قاصر: جمع الأحاديث في الباب الواحد هو الذي يكشف الشذوذ والعلل ويؤكد صحة المتن."
+        }
+      ],
+      "revealedEvidenceIds": ["ev-hadith-baraa"],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 8,
+      "titleFr": "Identifier la nature réelle du désaccord",
+      "titleAr": "تحرير محل النزاع وطبيعة الخلاف",
+      "instructionFr": "Face à ces preuves scripturaires explicites, comment les grands imams et juristes classiques ont-ils abordé la question ?",
+      "instructionAr": "في ضوء هذه النصوص الصريحة، كيف تعامل أئمة الفقه المعتبرون مع المسألة؟",
+      "options": [
+        {
+          "textFr": "C'est une divergence juridique ancienne et reconnue (khilâf sa'igh) : l'imam Ahmad, Ishâq ibn Râhawayh et d'autres ont conclu à l'annulation des ablutions sur la base de ces hadiths clairs, tandis que le jumhûr (Abû Hanîfa, Mâlik, ash-Shâfi'î) a maintenu la non-annulation en interprétant l'ordre ou en l'estimant abrogé.",
+          "textAr": "خلاف فقهي قديم معتبر وسائغ: أوجب الوضوء أحمد بن حنبل وإسحاق بن راهويه وغيرهما لقوة ظاهر الحديثين، بينما رأى جمهور العلماء (أبو حنيفة ومالك والشافعي) عدم النقض تأويلاً أو نسخاً.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Réfutation définitive de l'affirmation initiale ! L'avis de l'annulation n'est en aucun cas une 'invention récente', mais une doctrine solidement ancrée chez des imams majeurs depuis le 2e/3e siècle de l'Hégire.",
+          "feedbackAr": "إبطال قاطع للدعوى الأولى! القول بالنقض مذهب لأكابر أئمة السلف منذ القرون الأولى، وليس قولاً مخترعاً قط."
+        },
+        {
+          "textFr": "L'imam an-Nawawî documente la position du jumhûr mais reconnaît honnêtement que l'avis d'Ahmad et Ishâq est 'plus fort quant à la preuve' (aqwâ dalîlan).",
+          "textAr": "نقل الإمام النووي لمذهب الجمهور مع اعترافه المنصف بأن قول أحمد وإسحاق «أقوى دليلاً».",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Excellente précision documentaire ! An-Nawawî (shâfi'ite) témoigne avec impartialité de la force de la preuve de ses contradicteurs (Sharḥ Ṣaḥîḥ Muslim 4/48).",
+          "feedbackAr": "توثيق علمي نفيس! شهادة الإمام النووي الشافعي بأرجحية دليل مخالفيه تنم عن قمة الإنصاف العلمي."
+        },
+        {
+          "textFr": "Considérer que les avis divergents sont tous des égarements condamnables.",
+          "textAr": "اعتبار كل رأي مخالف بدعة وضلالة تستحق الإنكار.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Confondre une divergence jurisprudentielle légitime (fondée sur l'examen des textes) avec une déviation doctrinale est une faute grave.",
+          "feedbackAr": "مسلك جائر: الخلاف في الفروع المبني على استنباط الأدلة خلاف سائغ لا يُبدّع فيه المخالف."
+        },
+        {
+          "textFr": "Tous les imams sans exception étaient d'accord sur le même avis, et ceux qui prétendent le contraire mentent.",
+          "textAr": "كل الأئمة متفقون على قول واحد، ومن ادعى الخلاف فهو مفترٍ.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Négation grossière de la réalité historique et de la littérature juridique comparative.",
+          "feedbackAr": "إنكار فاضح للواقع التاريخي الموثق في كتب الخلاف والفقه المقارن."
+        }
+      ],
+      "revealedEvidenceIds": ["ev-athar-nawawi"],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 9,
+      "titleFr": "Formuler une conclusion provisoire proportionnée",
+      "titleAr": "صياغة خلاصة حكمية متوازنة",
+      "instructionFr": "Au terme de cet examen méthodique, comment formuler une conclusion rigoureuse sans excéder ce que prouvent les données réunies ?",
+      "instructionAr": "في نهاية هذا التحقيق، كيف نصوغ خلاصة منضبطة لا تتجاوز حدود ما دلت عليه المعطيات؟",
+      "options": [
+        {
+          "textFr": "« L'affirmation selon laquelle cet avis serait une invention récente est formellement réfutée par les hadiths de Muslim et d'Abû Dâwûd et par la position d'Ahmad. En revanche, les données réunies établissent une divergence juridique ancienne entre le jumhûr et les hanbalites, ce qui appelle au respect mutuel sans prétendre à un consensus inexistant. »",
+          "textAr": "«الدعوى بأن القول بالنقض رأي مخترع باطلة قطعاً لصحة حديثي مسلم وأبي داود وثبوته عن أحمد وإسحاق، مع تقرير أن المسألة محل خلاف فقهي قديم بين الجمهور والحنابلة يسع فيه الاجتهاد ولا إجماع فيها».",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Formulation modèle ! La réponse démonte l'erreur avec exactitude tout en préservant la nuance et l'éthique de la divergence.",
+          "feedbackAr": "صياغة نموذجية في الإنصاف والتحرير! إبطال للدعوى الباطلة بالدليل مع حفظ مقام الخلاف المعتبر."
+        },
+        {
+          "textFr": "Conclure que l'affirmation est fausse sans expliquer les motifs de la divergence du jumhûr.",
+          "textAr": "الحكم ببطلان الدعوى دون بيان وجهة نظر مذهب الجمهور.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Le résultat est correct, mais la conclusion reste incomplète sur le plan pédagogique.",
+          "feedbackAr": "الحكم صائب لكنه ناقص لعدم بسط أدلة وموقف القول المقابل."
+        },
+        {
+          "textFr": "Les données sont encore insuffisantes pour savoir si l'affirmation était vraie ou fausse.",
+          "textAr": "المعطيات غير كافية لتبين صدق الدعوى من كذبها.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Fausse prudence : nous disposons de textes scripturaires authentiques et de citations historiques formelles qui permettent de trancher sans équivoque sur la fausseté de l'affirmation de départ.",
+          "feedbackAr": "تردد في غير محله: الأدلة المسندة القاطعة كافية تماماً لإبطال دعوى 'الابتداع المعاصر'."
+        },
+        {
+          "textFr": "Déclarer que tout le monde doit obligatoirement suivre notre avis sous peine de voir toutes ses prières annulées.",
+          "textAr": "إلزام جميع المسلمين برأي واحد والحكم ببطلان صلوات من خالفه.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Excès d'autorité et dogmatisme : dans une question de khilâf sa'igh où les plus grands imams ont divergé, nul ne peut imposer une fatwa d'autorité.",
+          "feedbackAr": "تحكم باطل وإلزام بما لم يلزم به الشرع في مسائل الاجتهاد السائغ."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 10,
+      "titleFr": "Audit méthodologique final",
+      "titleAr": "المراجعة النقدية الختامية للمسار",
+      "instructionFr": "Quel enseignement épistémologique fondamental retenons-nous de cette enquête pour nos futures recherches religieuses ?",
+      "instructionAr": "ما هو الدرس المنهجي الكلي المستفاد من هذا التحقيق في تعاملنا مع الدعاوى الشرعية؟",
+      "options": [
+        {
+          "textFr": "Ne jamais confondre son ignorance personnelle ou l'habitude d'un milieu avec l'inexistence d'un texte ou d'une divergence ; toujours remonter aux sources primaires, vérifier l'isnad, et distinguer le dalîl de la construction doctrinale des écoles.",
+          "textAr": "عدم الخلط بين الجهل بالشيء والعلم بعدمه، والحذر من تحكيم العوائد في النصوص، ولزوم الرجوع للأصول المسندة والتمييز بين النص وفهمه.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Conclusion maîtresse ! C'est le cœur même de la méthodologie TABAYYUN (تبيّن) : prudence, vérification aux sources, probité intellectuelle et charité herméneutique.",
+          "feedbackAr": "قاعدة منهجية جامعة! هذا هو جوهر التبيّن: التثبت بالأدلة، والإنصاف مع المخالف، ومحاربة الجهل المركب."
+        },
+        {
+          "textFr": "Qu'une enquête méthodologique permet de transformer un conflit passionnel en une étude sereine, documentée et respectueuse.",
+          "textAr": "أن التحقيق المنهجي يحيل الخصومات الانفعالية إلى دراسة علمية مؤصلة وهادئة.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Très juste observation sur la dimension éthique et pacificatrice de la démarche critique.",
+          "feedbackAr": "ملحظ تربوي سديد يبرز أثر المنهج العلمي في تهذيب النقاش وتسكين النزاع."
+        },
+        {
+          "textFr": "Considérer que l'enquête était inutile car chacun finit toujours par faire ce qu'il veut.",
+          "textAr": "اعتبار البحث عديم الفائدة لأن الناس يتبعون أهواءهم في النهاية.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Le but de l'enquête n'est pas de contrôler les comportements d'autrui, mais de libérer son propre esprit des affirmations gratuites et d'adorer Dieu avec clairvoyance (baṣîra).",
+          "feedbackAr": "غاية التثبت ليست إلزام الخلق، بل عبادة الله على بصيرة وتحرير العقل من التبعية للظنون."
+        },
+        {
+          "textFr": "Qu'il vaut mieux ne jamais poser de questions pour éviter de découvrir des divergences qui dérangent nos habitudes.",
+          "textAr": "أنه يُفضل تجنب السؤال للسلامة من الخلافات المربكة للعادة.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "La fuite devant le savoir favorise la propagation des légendes et affaiblit la transmission de la religion.",
+          "feedbackAr": "الهروب من التعلم يكرس الجهل ويوهن بصيرة المسلم في دينه."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    }
+  ],
+  "inquiryEvidences": [
+    {
+      "evidenceId": "ev-hadith-jabir",
+      "role": "PRIMARY_PROOF",
+      "order": 1,
+      "stepNumber": 3,
+      "commentFr": "Preuve scripturaire explicite ordonnant les ablutions après la viande de chameau dans Sahih Muslim.",
+      "commentAr": "نص صريح في الأمر بالوضوء من لحوم الإبل في صحيح مسلم.",
+      "evidence": {
+        "id": "ev-hadith-jabir",
+        "type": "HADITH",
+        "referenceCode": "Ṣaḥîḥ Muslim 360",
+        "primarySource": true,
+        "collection": "Ṣaḥîḥ Muslim",
+        "author": "Muslim ibn al-Ḥajjâj",
+        "hadithNumber": "360",
+        "numberingSystem": "Fuad Abdul Baqi",
+        "chapterAr": "باب الوضوء من لحوم الإبل",
+        "chapterFr": "Chapitre sur les ablutions après la consommation de viande de chameau",
+        "editionVolumePage": "Kitāb al-Ḥayḍ, hadith n°360 (Éd. Dârussalâm)",
+        "authenticityGrade": "Ṣaḥîḥ",
+        "gradeScholar": "Muslim ibn al-Ḥajjâj",
+        "quoteArOriginal": "أَنَّ رَجُلاً سَأَلَ رَسُولَ اللَّهِ صلى الله عليه وسلم: أَأَتَوَضَّأُ مِنْ لُحُومِ الْغَنَمِ؟ قَالَ: «إِنْ شِئْتَ فَتَوَضَّأْ، وَإِنْ شِئْتَ فَلاَ تَوَضَّأْ». قَالَ: أَأَتَوَضَّأُ مِنْ لُحُومِ الإِبِلِ؟ قَالَ: «نَعَمْ، فَتَوَضَّأْ مِنْ لُحُومِ الإِبِلِ».",
+        "quoteArVocalized": "أَنَّ رَجُلًا سَأَلَ رَسُولَ اللهِ ﷺ: أَأَتَوَضَّأُ مِنْ لُحُومِ الْغَنَمِ؟ قَالَ: «إِنْ شِئْتَ فَتَوَضَّأْ، وَإِنْ شِئْتَ فَلَا تَوَضَّأْ». قَالَ: أَأَتَوَضَّأُ مِنْ لُحُومِ الإِبِلِ؟ قَالَ: «نَعَمْ، فَتَوَضَّأْ مِنْ لُحُومِ الإِبِلِ».",
+        "quoteArNormalized": "ان رجلا سال رسول الله صلى الله عليه وسلم ااتوضا من لحوم الغنم قال ان شئت فتوضا وان شئت فلا توضا قال ااتوضا من لحوم الابل قال نعم فتوضا من لحوم الابل",
+        "translationFr": "Un homme demanda au Messager d'Allah ﷺ : « Dois-je faire mes ablutions après avoir mangé de la viande de mouton ? » Il répondit : « Si tu veux, fais tes ablutions, et si tu veux, ne les fais pas. » L'homme demanda : « Dois-je faire mes ablutions après avoir mangé de la viande de chameau ? » Il répondit : « Oui, fais tes ablutions après avoir mangé de la viande de chameau. »",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-20",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://sunnah.com/muslim:360a",
+        "lastVerifiedAt": "2026-09-20"
+      }
+    },
+    {
+      "evidenceId": "ev-hadith-baraa",
+      "role": "PRIMARY_PROOF",
+      "order": 2,
+      "stepNumber": 7,
+      "commentFr": "Hadith corrobant d'al-Barâ' ibn 'Âzib dans les Sunan confirmant l'ordre pour le chameau et la dispense pour le mouton.",
+      "commentAr": "حديث البراء بن عازب في السنن مؤكداً للأمر في الإبل ونفيه في الغنم.",
+      "evidence": {
+        "id": "ev-hadith-baraa",
+        "type": "HADITH",
+        "referenceCode": "Sunan Abî Dâwûd 184",
+        "primarySource": true,
+        "collection": "Sunan Abî Dâwûd",
+        "author": "Abû Dâwûd as-Sijistânî",
+        "hadithNumber": "184",
+        "numberingSystem": "Muḥammad Muḥyî ad-Dîn ʿAbd al-Ḥamîd",
+        "chapterAr": "باب الوضوء من لحوم الإبل",
+        "chapterFr": "Chapitre sur les ablutions après la viande de chameau",
+        "editionVolumePage": "Kitāb aṭ-Ṭahāra, n°184 (Éd. al-Maktaba al-'Aṣriyya)",
+        "authenticityGrade": "Ṣaḥîḥ",
+        "gradeScholar": "Abû Dâwûd / at-Tirmidhî / al-Albânî",
+        "quoteArOriginal": "سُئِلَ رَسُولُ اللَّهِ صلى الله عليه وسلم عَنِ الْوُضُوءِ مِنْ لُحُومِ الإِبِلِ فَقَالَ: «تَوَضَّئُوا مِنْهَا»، وَسُئِلَ عَنْ لُحُومِ الْغَنَمِ فَقَالَ: «لاَ تَتَوَضَّئُوا مِنْهَا».",
+        "quoteArVocalized": "سُئِلَ رَسُولُ اللهِ ﷺ عَنِ الْوُضُوءِ مِنْ لُحُومِ الإِبِلِ فَقَالَ: «تَوَضَّئُوا مِنْهَا»، وَسُئِلَ عَنْ لُحُومِ الْغَنَمِ فَقَالَ: «لَا تَتَوَضَّئُوا مِنْهَا».",
+        "quoteArNormalized": "سئل رسول الله صلى الله عليه وسلم عن الوضوء من لحوم الابل فقال توضؤوا منها وسئل عن لحوم الغنم فقال لا تتوضؤوا منها",
+        "translationFr": "On interrogea le Messager d'Allah ﷺ sur les ablutions après avoir mangé de la viande de chameau, il dit : « Faites vos ablutions après en avoir mangé ». Et on l'interrogea sur la viande de mouton, il dit : « Ne faites pas vos ablutions après en avoir mangé ».",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-20",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://sunnah.com/abudawud:184",
+        "lastVerifiedAt": "2026-09-20"
+      }
+    },
+    {
+      "evidenceId": "ev-athar-nawawi",
+      "role": "SCHOLARLY_EXPLANATION",
+      "order": 3,
+      "stepNumber": 8,
+      "commentFr": "An-Nawawî documente la position du jumhûr et souligne la force probante de la position contraire.",
+      "commentAr": "بيان الإمام النووي لمذهب الجمهور مع بيانه لقوة دليل القائلين بالنقض.",
+      "evidence": {
+        "id": "ev-athar-nawawi",
+        "type": "BOOK",
+        "referenceCode": "Sharḥ Ṣaḥîḥ Muslim 4/48",
+        "primarySource": false,
+        "sourceWork": "Sharḥ Ṣaḥîḥ Muslim",
+        "author": "Abû Zakariyyâ Yaḥyâ an-Nawawî",
+        "editionVolumePage": "Tome 4, page 48 (Éd. Al-Maṭbaʿa al-Miṣriyya)",
+        "quoteArOriginal": "ذهب جمهور العلماء إلى أن أكل لحم الإبل لا ينقض الوضوء... وممن ذهب إلى النقض أحمد بن حنبل وإسحاق بن راهويه... وهو أقوى دليلا وإن كان الجمهور على خلافه",
+        "quoteArVocalized": "ذَهَبَ جُمْهُورُ الْعُلَمَاءِ إِلَى أَنَّ أَكْلَ لَحْمِ الإِبِلِ لَا يَنْقُضُ الْوُضُوءَ... وَمِمَّنْ ذَهَبَ إِلَى النَّقْضِ أَحْمَدُ بْنُ حَنْبَلٍ وَإِسْحَاقُ بْنُ رَاهَوَيْهِ... وَهُوَ أَقْوَى دَلِيلًا وَإِنْ كَانَ الْجُمْهُورُ عَلَى خِلَافِهِ",
+        "quoteArNormalized": "ذهب جمهور العلماء الى ان اكل لحم الابل لا ينقض الوضوء وممن ذهب الى النقض احمد بن حنبل واسحاق بن راهويه وهو اقوى دليلا وان كان الجمهور على خلافه",
+        "translationFr": "La majorité des savants est d'avis que la consommation de viande de chameau ne rompt pas les ablutions... Parmi ceux qui ont soutenu qu'elle les rompt figurent Ahmad ibn Hanbal et Ishaq ibn Rahawayh... et cet avis est plus fort quant à sa preuve, bien que la majorité adopte l'avis contraire.",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-20",
+        "verifiedBy": "reviewer-01",
+        "lastVerifiedAt": "2026-09-20"
+      }
+    }
+  ],
+  "conclusionSheet": {
+    "established": {
+      "fr": "Il existe des hadiths prophétiques authentiques explicites ordonnant d'accomplir les ablutions après avoir mangé de la viande de chameau (notamment Ṣaḥîḥ Muslim n°360 et Sunan Abî Dâwûd n°184). L'affirmation selon laquelle cet avis serait une 'invention récente' est donc formellement et scientifiquement fausse.",
+      "ar": "ثبتت أحاديث صحيحة صريحة بالأمر بالوضوء من لحوم الإبل (في صحيح مسلم برقم 360 وسنن أبي داود برقم 184)، فالدعوى بأنه 'رأي مخترع' باطلة ومردودة علمياً وتاريخياً.",
+      "evidenceIds": ["ev-hadith-jabir", "ev-hadith-baraa"]
+    },
+    "discussed": {
+      "fr": "La portée juridique de l'ordre prophétique : constitue-t-il une obligation stricte annulant l'état de pureté rituelle (position de l'imam Ahmad, Ishâq ibn Râhawayh et des traditionnistes), ou s'agit-il d'une recommandation / nettoyage linguistique selon la majorité des juristes (Abû Hanîfa, Mâlik, ash-Shâfi'î) ?",
+      "ar": "مقتضى دلالة الأمر في الحديث: هل هو للوجوب الناقض للطهارة (مذهب أحمد بن حنبل وإسحاق بن راهويه وفقهاء الحديث)، أم هو للاستحباب والنظافة اللغوية عند جمهور العلماء (أبو حنيفة ومالك والشافعي)؟",
+      "evidenceIds": ["ev-athar-nawawi"]
+    },
+    "notEstablished": {
+      "fr": "L'affirmation selon laquelle la consommation de viande de chameau n'aurait jamais rompu les ablutions dans l'histoire islamique, ou que cet avis serait une invention contemporaine sans fondement scripturaire.",
+      "ar": "الدعوى بأن أكل لحم الإبل لم ينقض الوضوء قط، أو أن هذا القول مبتدع معاصر لا سلف له ولا أصل في السنة.",
+      "evidenceIds": ["ev-hadith-jabir", "ev-hadith-baraa", "ev-athar-nawawi"]
+    },
+    "primaryEvidences": [
+      "Ṣaḥîḥ Muslim, hadith n°360 (Jâbir ibn Samura)",
+      "Sunan Abî Dâwûd, hadith n°184 (al-Barâ' ibn 'Âzib)"
+    ],
+    "salafUnderstanding": {
+      "fr": "Les données actuellement réunies établissent une divergence juridique ancienne, mais ne suffisent pas à attribuer une position uniforme à l'ensemble des premières générations.",
+      "ar": "المعطيات المجموعة حالياً تثبت وجود خلاف فقهي قديم، لكنها لا تكفي لجزم نسبة قول موحد إلى مجموع الصدر الأول.",
+      "evidenceIds": ["ev-athar-nawawi"]
+    },
+    "scholarlyPositions": {
+      "fr": "Position 1 (Ahmad ibn Hanbal, Ishâq ibn Râhawayh, Ibn Hazm) : La consommation annule les ablutions en vertu de l'ordre explicite. Position 2 (Jumhûr : Hanafites, Mâlikites, Shâfi'ites) : Elle n'annule pas les ablutions, l'ordre étant compris comme une recommandation ou considéré comme abrogé.",
+      "ar": "القول الأول (أحمد بن حنبل، وإسحاق بن راهويه، وابن حزم): ينقض الوضوء لظاهر الأمر الصريح. القول الثاني (جمهور العلماء: الحنفية والمالكية والشافعية): لا ينقض الوضوء، وحملوا الأمر على الاستحباب أو النسخ.",
+      "evidenceIds": ["ev-athar-nawawi"]
+    },
+    "methodologicalPitfall": {
+      "fr": "Confondre sa propre méconnaissance d'un avis juridique avec l'inexistence de cet avis, ou présenter une divergence reconnue comme un consensus inexistant.",
+      "ar": "الخلط بين عدم العلم بالشيء والعلم بعدمه، أو ادعاء إجماع موهوم في مسألة فيها خلاف سائغ معتبر.",
+      "evidenceIds": []
+    },
+    "originalSources": [
+      "Ṣaḥîḥ Muslim, Kitāb al-Ḥayḍ, Bāb al-wuḍū' min luḥūm al-ibil",
+      "Sunan Abî Dâwûd, Kitāb aṭ-Ṭahāra, Bāb al-wuḍū' min luḥūm al-ibil",
+      "Sharḥ Ṣaḥîḥ Muslim de l'imam an-Nawawî (T.4, p.48)"
+    ],
+    "certaintyLevel": "KHILAF_RECONNU"
+  },
+  "authorId": "author-01",
+  "reviewerId": "reviewer-01",
+  "reviewedAt": "2026-09-20",
+  "lastVerifiedAt": "2026-09-20"
+}

@@ -85,7 +85,7 @@ export default function ConclusionSheetView({
       },
       EXPERTISE_REQUISE: {
         labelFr: "Question nécessitant une expertise",
-        labelAr: "مسألة تفتقر إلى نظر مجتهد",
+        labelAr: "مسألة تحتاج إلى نظر أهل الاختصاص",
         colorClass: "bg-orange-50 text-orange-800 border-orange-200",
         iconColor: "text-orange-600",
       },
@@ -154,7 +154,7 @@ export default function ConclusionSheetView({
         <div className="p-4 rounded-xl border border-rose-200 bg-rose-50/40 space-y-1">
           <div className="flex items-center gap-2 font-bold text-rose-900 text-sm">
             <XCircle className="w-4 h-4 text-rose-700" />
-            <span>{isArabic ? "❌ ما لم يثبت ولا أصل له" : "❌ Ce qui n'est pas établi"}</span>
+            <span>{isArabic ? "❌ ما لم يثبت" : "❌ Ce qui n'est pas établi"}</span>
           </div>
           <p className="text-sm text-bleuNuit-900 leading-relaxed ps-6">
             {isArabic ? conclusion.notEstablished.ar : conclusion.notEstablished.fr}

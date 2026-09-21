@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { InquirySchema, InquiryInput } from "./schemas/inquiry.schema";
+import { EditorialStatus } from "./schemas/lesson.schema";
 
 export interface InquirySummary {
   id: string;
@@ -23,15 +24,32 @@ export interface InquirySummary {
 const inquiriesDir = path.join(process.cwd(), "content", "inquiries");
 
 /**
- * Récupère la liste de toutes les enquêtes disponibles (résumés)
+ * Règle éditoriale d'exposition :
+ * - En développement : APPROVED et PUBLISHED
+ * - En production : uniquement PUBLISHED
+ * - Jamais DRAFT, IN_REVIEW ou ARCHIVED en production
  */
-export function getAllInquiries(): InquirySummary[] {
+function isExposedStatus(status: EditorialStatus | string): boolean {
+  const isProd = process.env.NODE_ENV === "production";
+  if (isProd) {
+    return status === "PUBLISHED";
+  }
+  return status === "APPROVED" || status === "PUBLISHED";
+}
+
+/**
+ * Charge de manière sécurisée toutes les enquêtes exposées
+ */
+function loadAllInquiryFiles(): InquiryInput[] {
   if (!fs.existsSync(inquiriesDir)) {
     return [];
   }
 
-  const files = fs.readdirSync(inquiriesDir).filter((f) => f.endsWith(".json"));
-  const summaries: InquirySummary[] = [];
+  const files = fs
+    .readdirSync(inquiriesDir)
+    .filter((f) => f.endsWith(".json") && !f.startsWith("template"));
+
+  const results: InquiryInput[] = [];
 
   for (const file of files) {
     try {
@@ -41,53 +59,44 @@ export function getAllInquiries(): InquirySummary[] {
 
       if (parsed.success) {
         const inq = parsed.data;
-        summaries.push({
-          id: inq.id,
-          slug: inq.slug,
-          domain: inq.domain,
-          editorialStatus: inq.editorialStatus,
-          title: inq.title,
-          initialClaim: inq.initialClaim,
-          certaintyLevel: inq.conclusionSheet.certaintyLevel,
-          stepsCount: inq.steps.length,
-          evidencesCount: inq.inquiryEvidences.length,
-        });
+        if (isExposedStatus(inq.editorialStatus)) {
+          results.push(inq);
+        }
+      } else {
+        console.error(`[inquiry-service] Erreur de validation Zod pour ${file}:`, parsed.error.format());
       }
     } catch (err) {
-      console.error(`Erreur lors du chargement de l'enquête ${file}:`, err);
+      console.error(`[inquiry-service] Erreur lors du chargement de l'enquête ${file}:`, err);
     }
   }
 
-  return summaries;
+  return results;
 }
 
 /**
- * Récupère une enquête complète par son slug
+ * Récupère la liste de toutes les enquêtes disponibles (résumés)
+ */
+export function getAllInquiries(): InquirySummary[] {
+  const inquiries = loadAllInquiryFiles();
+  return inquiries.map((inq) => ({
+    id: inq.id,
+    slug: inq.slug,
+    domain: inq.domain,
+    editorialStatus: inq.editorialStatus,
+    title: inq.title,
+    initialClaim: inq.initialClaim,
+    certaintyLevel: inq.conclusionSheet.certaintyLevel,
+    stepsCount: inq.steps.length,
+    evidencesCount: inq.inquiryEvidences.length,
+  }));
+}
+
+/**
+ * Récupère une enquête complète par son slug.
+ * Whitelist-based : charge la liste des enquêtes autorisées et recherche le slug correspondant.
  */
 export function getInquiryBySlug(slug: string): InquiryInput | null {
-  if (!fs.existsSync(inquiriesDir)) {
-    return null;
-  }
-
-  const files = fs.readdirSync(inquiriesDir).filter((f) => f.endsWith(".json"));
-
-  for (const file of files) {
-    try {
-      const filePath = path.join(inquiriesDir, file);
-      const content = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-
-      if (content.slug === slug) {
-        const parsed = InquirySchema.safeParse(content);
-        if (parsed.success) {
-          return parsed.data;
-        } else {
-          console.error(`Erreur de validation Zod pour ${slug}:`, parsed.error.format());
-        }
-      }
-    } catch (err) {
-      console.error(`Erreur lors de la lecture de l'enquête ${slug}:`, err);
-    }
-  }
-
-  return null;
+  const inquiries = loadAllInquiryFiles();
+  const found = inquiries.find((inq) => inq.slug === slug);
+  return found || null;
 }

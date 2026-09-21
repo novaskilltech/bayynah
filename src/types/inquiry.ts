@@ -1,10 +1,15 @@
 import { BilingualText, CertaintyLevel, EditorialStatus, EvidenceRole, SchoolType } from "./index";
 import { EvidenceItem } from "./evidence";
 
+export type StepOptionQuality = "INCORRECT" | "PREMATURE" | "ACCEPTABLE" | "BEST";
+export type MethodologicalScore = 0 | 1 | 2 | 3;
+export type RevealPolicy = "ON_STEP_ENTER" | "AFTER_ANSWER" | "AFTER_BEST_ANSWER" | "NEXT_STEP";
+
 export interface InquiryStepOption {
   textFr: string;
   textAr?: string;
-  isCorrect: boolean;
+  quality: StepOptionQuality;
+  methodologicalScore: MethodologicalScore;
   feedbackFr: string;
   feedbackAr?: string;
 }
@@ -17,6 +22,7 @@ export interface InquiryStep {
   instructionAr?: string;
   options: InquiryStepOption[];
   revealedEvidenceIds: string[];
+  revealPolicy?: RevealPolicy;
 }
 
 export interface InquiryEvidenceItem {

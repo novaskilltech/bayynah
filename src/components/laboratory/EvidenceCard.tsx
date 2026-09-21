@@ -165,10 +165,10 @@ export default function EvidenceCard({ evidence, locale, roleLabel, comment }: E
           </>
         )}
 
-        {/* Traçabilité nominative */}
-        {evidence.verifiedBy && evidence.verifiedAt && (
+        {/* Traçabilité institutionnelle */}
+        {evidence.verifiedAt && (
           <div className="col-span-full pt-1 text-[11px] text-sable-400">
-            {isArabic ? "تم التحقيق بواسطة" : "Vérifié par"} {evidence.verifiedBy} le{" "}
+            {isArabic ? "مراجعة تحريرية مسجلة بتاريخ " : "Vérification éditoriale enregistrée le "}
             {evidence.verifiedAt}
           </div>
         )}

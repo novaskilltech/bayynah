@@ -37,10 +37,25 @@ export const PedagogicalObservationSchema = z.object({
   evidenceIds: z.array(z.string()).default([]),
 });
 
+export const StepOptionQualityEnum = z.enum([
+  "INCORRECT",
+  "PREMATURE",
+  "ACCEPTABLE",
+  "BEST",
+]);
+
+export const RevealPolicyEnum = z.enum([
+  "ON_STEP_ENTER",
+  "AFTER_ANSWER",
+  "AFTER_BEST_ANSWER",
+  "NEXT_STEP",
+]);
+
 export const InquiryStepOptionSchema = z.object({
   textFr: z.string().min(1),
   textAr: z.string().optional(),
-  isCorrect: z.boolean(),
+  quality: StepOptionQualityEnum,
+  methodologicalScore: z.union([z.literal(0), z.literal(1), z.literal(2), z.literal(3)]),
   feedbackFr: z.string().min(1),
   feedbackAr: z.string().optional(),
 });
@@ -53,6 +68,7 @@ export const InquiryStepSchema = z.object({
   instructionAr: z.string().optional(),
   options: z.array(InquiryStepOptionSchema).min(2, "Au moins 2 options par étape"),
   revealedEvidenceIds: z.array(z.string()).default([]),
+  revealPolicy: RevealPolicyEnum.default("AFTER_ANSWER"),
 });
 
 export const InquiryEvidenceSchema = z.object({
