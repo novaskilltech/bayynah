@@ -21,6 +21,15 @@ export const SESSION_CONFIG = {
 };
 
 /**
+ * Hash scrypt factice authentique (N=131072, r=8, p=1) généré via hashPassword()
+ * Utilisé pour exécuter le KDF complet lors de tentatives de connexion avec utilisateur inexistant,
+ * neutralisant rigoureusement les attaques par canal auxiliaire temporel (timing attacks).
+ */
+export const DUMMY_SCRYPT_HASH =
+  "scrypt$N=131072,r=8,p=1$b4ca95db1cc00708fb5a2efb250b372d7abbff3c541931bd834898485e7f1f24$f7fcccc38044b3b4ecb02ade04e5c1e7a40dfd8227f7d3676724f05e26a225c1ba20f2c5357dc64859f821df25d329c2135be31060a8cf976085e9440680cc3a";
+
+
+/**
  * Hache un mot de passe avec scrypt selon les recommandations strictes OWASP (N=2^17, r=8, p=1)
  */
 export async function hashPassword(password: string): Promise<string> {

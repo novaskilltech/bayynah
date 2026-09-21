@@ -5,6 +5,7 @@ import {
   rotateServerSession,
   SESSION_CONFIG,
   SCRYPT_CONFIG,
+  DUMMY_SCRYPT_HASH,
 } from "@/lib/auth";
 import { checkRateLimit } from "@/lib/rate-limit";
 import {
@@ -47,10 +48,6 @@ export async function POST(req: NextRequest) {
     if (typeof password !== "string" || password.length > SCRYPT_CONFIG.maxPasswordLength) {
       return NextResponse.json({ error: "Identifiants incorrects." }, { status: 401 });
     }
-
-    // Hash scrypt factice pré-calculé (N=131072, r=8, p=1) pour neutraliser les attaques par analyse temporelle
-    const DUMMY_SCRYPT_HASH =
-      "scrypt$N=131072,r=8,p=1$0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef$0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef";
 
     const user = await prisma.user.findUnique({
       where: { email: normalizedEmail },

@@ -6,6 +6,7 @@ import {
   verifyPassword,
   SCRYPT_CONFIG,
   hashSessionToken,
+  DUMMY_SCRYPT_HASH,
 } from "../src/lib/auth";
 import {
   generateCsrfToken,
@@ -64,16 +65,19 @@ async function testScryptAndTimingMitigation() {
     "Un mot de passe > 128 caractères doit être rejeté immédiatement avant KDF"
   );
 
-  // Test de mitigation timing attack avec DUMMY_SCRYPT_HASH
-  const DUMMY_SCRYPT_HASH =
-    "scrypt$N=131072,r=8,p=1$0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef$0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef";
+  // Test de mitigation timing attack avec DUMMY_SCRYPT_HASH authentique
+  assert.strictEqual(
+    DUMMY_SCRYPT_HASH.split("$").length,
+    4,
+    "DUMMY_SCRYPT_HASH doit respecter strictement la structure à 4 segments (scrypt$params$salt$derivedKey)"
+  );
 
   const t0 = Date.now();
   const dummyResult = await verifyPassword("RandomProbePassword123!", DUMMY_SCRYPT_HASH);
   const elapsed = Date.now() - t0;
 
   assert.strictEqual(dummyResult, false, "Le hash factice ne doit jamais valider un mot de passe");
-  assert.ok(elapsed >= 15, "Le calcul du hash factice doit exécuter le coût scrypt complet pour masquer l'inexistence du compte");
+  assert.ok(elapsed >= 15, `Le calcul du hash factice doit exécuter le coût scrypt complet (${elapsed}ms mesurés) pour masquer l'inexistence du compte`);
 
   console.log("    ✅ Paramètres scrypt OWASP et mitigation timing attack validés.");
 }

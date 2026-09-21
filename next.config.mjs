@@ -51,10 +51,10 @@ if (process.platform === "win32") {
 const isWindows = process.platform === "win32";
 const isProd = process.env.NODE_ENV === "production";
 
-// CSP durcie : 'unsafe-eval' et 'unsafe-inline' strictement exclus en production
+// CSP durcie : 'unsafe-eval' strictement exclu en production ; 'unsafe-inline' maintenu pour préserver le runtime Next.js et les pages SSG sans casser l'hydratation
 const cspHeader = [
   "default-src 'self'",
-  isProd ? "script-src 'self'" : "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+  isProd ? "script-src 'self' 'unsafe-inline'" : "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com data:",
   "img-src 'self' data: blob:",
@@ -66,7 +66,6 @@ const cspHeader = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  serverExternalPackages: ["@prisma/client"],
   async headers() {
     return [
       {
@@ -100,7 +99,9 @@ const nextConfig = {
       },
     ];
   },
-  // Conditionnement strict : la clé webpack est totalement omise en Linux/CI pour permettre à Turbopack de s'exécuter
+  // Configuration Turbopack & Webpack :
+  // Sous Windows (volumes FAT32 sans support des points de jonction NTFS), webpack est activé pour les builds --webpack.
+  // Sous Linux/CI (GitHub Actions / Vercel), turbopack: {} est utilisé sans clé webpack pour que Turbopack s'exécute nativement.
   ...(isWindows
     ? {
         webpack: (config) => {

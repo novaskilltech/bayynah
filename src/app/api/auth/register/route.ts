@@ -62,7 +62,14 @@ export async function POST(req: NextRequest) {
     });
 
     if (existingUser) {
-      // Anti-énumération de comptes : message neutre ne révélant pas l'existence de l'adresse email
+      // Mitigation timing attack : exécution du KDF scrypt pour égaliser rigoureusement
+      // le temps de réponse avec le cas de création réussie (qui appelle hashPassword)
+      await hashPassword(password);
+
+      // Anti-énumération de comptes : message neutre ne révélant pas l'existence de l'adresse email.
+      // Arbitrage UX assumé : statut 400 maintenu pour permettre une connexion fluide et directe
+      // de l'apprenant sans aller-retour d'email à ce stade, sécurisé par un rate limiting strict
+      // (3 inscriptions/heure/IP) et le jeton CSRF pré-authentification obligatoire.
       return NextResponse.json(
         { error: "Impossible de créer le compte avec ces informations. Veuillez vous connecter ou réinitialiser votre mot de passe." },
         { status: 400 }

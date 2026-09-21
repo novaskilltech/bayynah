@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "npm run validate-content && npm run prisma:generate",
-    "build": "next build",
+    "build": "node scripts/build.mjs",
     "start": "next start",
     "lint": "eslint .",
     "validate-content": "tsx src/lib/content-validator.ts",
