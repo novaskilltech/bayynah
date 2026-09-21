@@ -2,7 +2,9 @@
   "id": "inquiry-10",
   "slug": "toute-bidah-egarement",
   "domain": "CRITIQUE",
-  "editorialStatus": "DRAFT",
+  "editorialStatus": "PUBLISHED",
+  "reviewerId": "reviewer-01",
+  "reviewedAt": "2026-09-21",
   "title": {
     "fr": "« Toute innovation est égarement » : comment appliquer correctement un texte authentique ?",
     "ar": "«كل بدعة ضلالة»: كيف نطبق النص الصحيح تطبيقاً صحيحاً؟"
@@ -154,12 +156,12 @@
       "instructionAr": "هل كان جمع الناس في قيام رمضان خلف قارئ واحد في عهد عمر عبادة مبتدعة لا أصل لها البتة؟",
       "options": [
         {
-          "textFr": "Non. La prière nocturne de Ramaḍān existait déjà et le Prophète ﷺ avait lui-même prié plusieurs nuits en congrégation avec ses Compagnons avant de s'abstenir de crainte qu'elle ne devienne obligatoire. La nouveauté sous ʿUmar résidait dans l’organisation unifiée des fidèles, cette crainte ayant disparu après la mort du Prophète ﷺ.",
-          "textAr": "لا؛ فأصل قيام رمضان مشروع، وقد صلى النبي ﷺ جماعة بأصحابه ليالي ثم تركها خشية أن تُفرض عليهم. فكانت النبوة قد شرعت الأصل، وتصرف عمر نظم اجتماعهم لزوال علة الخوف من فرضيتها بوفاة النبي ﷺ.",
+          "textFr": "Non. La prière nocturne de Ramaḍān en congrégation avait un précédent prophétique direct : le Prophète ﷺ avait lui-même prié plusieurs nuits avec ses Compagnons, avant de s'abstenir en déclarant expressément : « Mais j’ai craint que cela ne vous soit rendu obligatoire » (Bukhārī 1129). La nouveauté sous ʿUmar résidait donc dans l’organisation unifiée et pérenne des fidèles, cette cause d'interruption ayant définitivement disparu avec la clôture de la révélation.",
+          "textAr": "لا؛ فأصل قيام رمضان في المسجد جماعة مشروع بفعل النبي ﷺ لأيام، ثم بين علة توقفه صراحة بقوله: «ولكني خشيت أن تفرض عليكم فتعجزوا عنها» (البخاري 1129). فكان صنيع عمر تنظيماً وتثبيتاً لما ثبت أصله النبوي، بعد زوال علة الامتناع بانقطاع الوحي.",
           "quality": "BEST",
           "methodologicalScore": 3,
-          "feedbackFr": "Explication historique et juridique fondamentale : distinguer une nouveauté d'organisation appuyée sur un principe prophétique antérieur de l'invention pure d'un culte sans source.",
-          "feedbackAr": "تحقيق بارع يفرق بين إنشاء عبادة بلا مستند، وبين تنظيم ممارسة ثبت أصلها وتغيرت علة الامتناع عنها."
+          "feedbackFr": "Explication historique et juridique fondamentale : distinguer une nouveauté d'organisation appuyée sur un principe prophétique antérieur direct (Bukhārī 1129) de l'invention pure d'un culte sans source.",
+          "feedbackAr": "تحقيق بارع يفرق بين إنشاء عبادة بلا مستند، وبين تنظيم ممارسة ثبت أصلها النبوي المباشر (البخاري 1129) وزالت علة الامتناع عنها."
         },
         {
           "textFr": "La pratique possédait un fondement indéniable dans la Sunnah prophétique.",
@@ -186,7 +188,9 @@
           "feedbackAr": "غلو باطل: فالشارع هو الله ورسوله، والخلفاء تبع للنبوة وليسوا منشئين لشرائع مبتدأة."
         }
       ],
-      "revealedEvidenceIds": [],
+      "revealedEvidenceIds": [
+        "ev-bukhari-qiyam-ramadan"
+      ],
       "revealPolicy": "AFTER_ANSWER"
     },
     {
@@ -287,12 +291,12 @@
       "instructionAr": "بالمقارنة بين صنيع ابن رجب (الذي يقصر البدعة الشرعية على ما لا أصل له) والنووي (الذي يجعله عاماً مخصوصاً ويوزعه على الأحكام الخمسة)، ما الذي نستخلصه؟",
       "options": [
         {
-          "textFr": "Une différence de cadre terminologique ne signifie pas une contradiction totale de fond. Ibn Rajab réserve le mot « bidʿa » au sens théologique négatif et traite le reste en nouveauté linguistique ; an-Nawawī emploie le terme au sens large puis le qualifie par les statuts juridiques. Tous deux s'accordent à rejeter ce qui n'a aucun fondement dans la religion.",
-          "textAr": "اختلاف المصطلح لا يعني بالضرورة تناقضاً جوهرياً في الحكم؛ فابن رجب يحصر اسم البدعة الشرعية في المذموم ويجعل غيره بدعة لغوية، بينما يوسع النووي إطلاق اللفظ ثم يقيده بالأحكام الشرعية؛ وكلاهما متفق على رد ما لا أصل له في الدين.",
+          "textFr": "Convergence substantielle sur la nécessité de distinguer la nouveauté condamnable de ce qui possède un fondement légitime, avec des cadres terminologiques différents qu’il ne faut pas artificiellement rendre identiques. Ibn Rajab réserve le mot « bidʿa » au sens théologique négatif et traite le reste en nouveauté linguistique ; an-Nawawī emploie le terme au sens large puis le qualifie par les statuts juridiques. Tous deux s'accordent à rejeter ce qui n'a aucun fondement dans la religion.",
+          "textAr": "اتفاق جوهري على وجوب التمييز بين المحدثات المذمومة وما له أصل شرعي معتبر، مع تباين في الأطر الاصطلاحية التي ينبغي عدم مطابقتها قسراً؛ فابن رجب يحصر اسم البدعة الشرعية في المذموم ويجعل غيره بدعة لغوية، بينما يوسع النووي إطلاق اللفظ ثم يقسمه على الأحكام التكليفية؛ مع اشتراكهما في رد ما لا مستند له في الشريعة.",
           "quality": "BEST",
           "methodologicalScore": 3,
-          "feedbackFr": "Analyse critique magistrale de TABAYYUN : percer le voile des étiquettes sémantiques pour retrouver l'accord conceptuel de fond (lā mushāḥḥata fī al-iṣṭilāḥ).",
-          "feedbackAr": "قمة التحرير الأصولي: كشف التوافق الجوهري وراء تباين العبارات، وتطبيق قاعدة «لا مشاحة في الاصطلاح»."
+          "feedbackFr": "Analyse critique de précision : identifier la convergence substantielle sur le rejet de ce qui n'a pas de fondement tout en respectant l'autonomie et la nuance de chaque cadre terminologique.",
+          "feedbackAr": "تحرير منهجي رفيع يجمع بين إدراك التوافق الموضوعي في رد المحدثات الباطلة، وصيانة الفروق الاصطلاحية الدقيقة بين الأئمة."
         },
         {
           "textFr": "Les savants emploient parfois le même mot avec des périmètres techniques différents mais une finalité proche.",
@@ -327,18 +331,18 @@
     },
     {
       "stepNumber": 8,
-      "titleFr": "Le simple fait de ne pas avoir été fait suffit-il à interdire ?",
+      "titleFr": "Le simple constat d'absence suffit-il à interdire ?",
       "titleAr": "هل مجرد الترك يكفي للتحريم؟",
-      "instructionFr": "Peut-on juger qu'un acte religieux est une bidʿa interdite sur la seule base que « le Prophète ﷺ ne l’a pas fait sous cette forme exacte » ?",
-      "instructionAr": "هل يسوغ الحكم على عمل ديني بأنه بدعة محرمة بمجرد القول: «النبي ﷺ لم يفعله بهذه الصورة بعينها»؟",
+      "instructionFr": "Le seul constat “le Prophète ﷺ ne l’a pas fait sous cette forme” suffit-il à qualifier immédiatement une pratique de bidʿa ? Il faut d’abord déterminer la nature de l’acte, l’existence d’un fondement religieux, si le motif d’agir existait à son époque, s’il existait un empêchement, et si la nouvelle forme modifie l’adoration elle-même ou son organisation.",
+      "instructionAr": "هل مجرد عدم نقل الفعل بهذه الصورة يكفي للحكم بالبدعة؟ لا بد من النظر في أصل العمل، ووجود مقتضيه زمن النبي ﷺ، ووجود المانع أو عدمه، وهل التغيير راجع إلى نفس العبادة أو إلى تنظيمها ووسيلتها.",
       "options": [
         {
-          "textFr": "Pas automatiquement. La règle sur le délaissement (at-tark) exige d'analyser : si l'acte est présenté comme une adoration instituée autonome, s'il possède un fondement général ou particulier dans la Sharīʿa, si les motifs de son accomplissement existaient à l'époque prophétique sans empêchement, ou si au contraire un obstacle expliquait son absence.",
-          "textAr": "ليس ذلك كافياً بمفرده وتلقائياً؛ بل يستلزم فقه «الترك» تدقيقاً: هل الفعل يُتقرب به كعبادة راتبة مبتدأة، وهل له أصل عام يشمله، وهل وُجد المقتضي لفعله في العهد النبوي مع انتفاء المانع، أم كان ثمة مانع منع من فعله.",
+          "textFr": "Non, ce constat isolé ne suffit pas. L'argument du délaissement (at-tark) est nuancé : il faut distinguer la nature de l'acte (adoration instituée vs moyen ou organisation), examiner s'il possède un fondement religieux, si le motif d'agir existait déjà à l'époque prophétique sans empêchement, ou si au contraire un obstacle (comme la crainte de prescription ou des contingences historiques) expliquait l'absence du geste sous cette forme.",
+          "textAr": "لا يكفي هذا الإطلاق بمفرده؛ بل يستلزم فقه «الترك» تفصيلاً محكماً: التمييز بين حقيقة العبادة ووسائل تنظيمها، والبحث عن أصلها الشرعي، وهل قام المقتضي للفعل في العصر النبوي مع انتفاء المانع، أم كان هناك مانع شرعي أو واقعي حال دون فعله بتلك الكيفية.",
           "quality": "BEST",
           "methodologicalScore": 3,
-          "feedbackFr": "Précision d'uṣūl de très haut niveau : l'argument du délaissement (dalālat at-tark) requiert l'examen du motif existant (muqtaḍī) et de l'empêchement (māniʿ).",
-          "feedbackAr": "تحقيق أصولي رفيع لمسألة «الترك»: التمييز بين الترك المجرد والترك مع قيام المقتضي وانتفاء المانع."
+          "feedbackFr": "Précision d'uṣūl de très haut niveau : intégrer la pluralité des situations du tark prophétique et l'analyse croisée du motif (muqtaḍī), de l'empêchement (māniʿ) et de l'objet (moyen vs fin).",
+          "feedbackAr": "تحقيق أصولي رفيع لمسألة «الترك»: التمييز بين الترك المجرد والترك مع قيام المقتضي وانتفاء المانع، والتفريق بين المقاصد والوسائل."
         },
         {
           "textFr": "L'absence d'un acte chez le Prophète ﷺ est un indice sérieux, mais sa qualification juridique dépend d'autres facteurs d'uṣūl.",
@@ -474,7 +478,7 @@
         "numberingSystem": "Fu'ād ʿAbd al-Bāqī",
         "chapterAr": "كتاب الجمعة، باب تخفيف الصلاة والخطبة",
         "chapterFr": "Livre du vendredi, chapitre : Alléger la prière et le sermon",
-        "editionVolumePage": "Tome 2, p. 592, n°867 (taḥqīq Muḥammad Fu'ād ʿAbd al-Bāqī)",
+        "editionVolumePage": "Tome 2, p. 592, n°867 (taḥqīq Muḥammad Fu'ād ʿAbd al-Bāqī, Dār Iḥyā' al-Kutub al-ʿArabiyyah)",
         "authenticityGrade": "Ṣaḥīḥ",
         "gradeScholar": "Imam Muslim",
         "quoteArOriginal": "وَشَرُّ الْأُمُورِ مُحْدَثَاتُهَا، وَكُلُّ بِدْعَةٍ ضَلَالَةٌ",
@@ -482,7 +486,9 @@
         "quoteArNormalized": "وشر الامور محدثاتها وكل بدعة ضلالة",
         "translationFr": "« Les pires des choses sont celles nouvellement introduites, et toute bidʿa est un égarement. »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "Philological Committee / TABAYYUN",
         "consultationUrl": "https://dorar.net/hadith/sharh/19934"
       }
     },
@@ -501,20 +507,54 @@
         "narrator": "ʿUmar ibn al-Khaṭṭāb",
         "sourceWork": "Ṣaḥīḥ al-Bukhārī",
         "author": "Muḥammad ibn Ismāʿīl al-Bukhārī",
-        "editionVolumePage": "Tome 3, p. 45, n°2010 (taḥqīq Muḥammad Zuhayr an-Nāṣir)",
+        "editionVolumePage": "Tome 3, p. 45, n°2010 (taḥqīq Muḥammad Zuhayr an-Nāṣir, Dār Ṭawq an-Najāh)",
         "quoteArOriginal": "نِعْمَ الْبِدْعَةُ هَذِهِ",
         "quoteArVocalized": "نِعْمَ الْبِدْعَةُ هَذِهِ",
         "quoteArNormalized": "نعم البدعة هذه",
         "translationFr": "« Quelle excellente bidʿa que celle-ci ! »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "Philological Committee / TABAYYUN",
         "consultationUrl": "https://dorar.net/hadith/sharh/12975"
+      }
+    },
+    {
+      "evidenceId": "ev-bukhari-qiyam-ramadan",
+      "role": "PRIMARY_PROOF",
+      "order": 3,
+      "stepNumber": 4,
+      "commentFr": "Hadith authentique de ʿĀʾisha attestant que le Prophète ﷺ a prié le qiyām de Ramaḍān en congrégation puis a cessé par crainte de son obligation.",
+      "commentAr": "حديث صحيح من رواية عائشة يثبت أصل صلاة التراويح جماعة مع النبي ﷺ وبيان سبب توقفه خشية افتراضها على الأمة.",
+      "evidence": {
+        "id": "ev-bukhari-qiyam-ramadan",
+        "type": "HADITH",
+        "referenceCode": "Ṣaḥīḥ al-Bukhārī 1129",
+        "primarySource": true,
+        "collection": "Ṣaḥīḥ al-Bukhārī",
+        "author": "Muḥammad ibn Ismāʿīl al-Bukhārī",
+        "hadithNumber": "1129",
+        "numberingSystem": "Fatḥ al-Bārī / Muḥammad Fu'ād ʿAbd al-Bāqī",
+        "chapterAr": "كتاب التهجد، باب تحريض النبي صلى الله عليه وسلم على صلاة الليل والنوافل",
+        "chapterFr": "Livre de la prière de nuit (Tahajjud), chapitre : L'incitation du Prophète ﷺ à la prière de nuit",
+        "editionVolumePage": "Tome 2, p. 50, n°1129 (taḥqīq Muḥammad Zuhayr an-Nāṣir, Dār Ṭawq an-Najāh)",
+        "authenticityGrade": "Ṣaḥīḥ",
+        "gradeScholar": "Imam al-Bukhārī",
+        "quoteArOriginal": "وَلَكِنِّي خَشِيتُ أَنْ تُفْرَضَ عَلَيْكُمْ فَتَعْجِزُوا عَنْهَا",
+        "quoteArVocalized": "وَلَكِنِّي خَشِيتُ أَنْ تُفْرَضَ عَلَيْكُمْ فَتَعْجِزُوا عَنْهَا",
+        "quoteArNormalized": "ولكني خشيت ان تفرض عليكم فتعجزوا عنها",
+        "translationFr": "« Mais j’ai craint que cela ne vous soit rendu obligatoire et que vous ne soyez incapables de l'assumer. »",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "Philological Committee / TABAYYUN",
+        "consultationUrl": "https://dorar.net/hadith/sharh/14352"
       }
     },
     {
       "evidenceId": "ev-muslim-sunna-hasana",
       "role": "PRIMARY_PROOF",
-      "order": 3,
+      "order": 4,
       "stepNumber": 5,
       "commentFr": "Hadith prophétique authentique dans son contexte d'émulation pour une aumône instituée.",
       "commentAr": "حديث نبوي صحيح في الترغيب في فتح باب الاقتداء في الخير والصدقات المشروعة.",
@@ -529,7 +569,7 @@
         "numberingSystem": "Fu'ād ʿAbd al-Bāqī",
         "chapterAr": "كتاب الزكاة، باب الحث على الصدقة ولو بشق تمرة",
         "chapterFr": "Livre de la zakāt, chapitre : L'incitation à l'aumône même d'un demi-datte",
-        "editionVolumePage": "Tome 2, p. 704, n°1017 (taḥqīq Muḥammad Fu'ād ʿAbd al-Bāqī)",
+        "editionVolumePage": "Tome 2, p. 704, n°1017 (taḥqīq Muḥammad Fu'ād ʿAbd al-Bāqī, Dār Iḥyā' al-Kutub al-ʿArabiyyah)",
         "authenticityGrade": "Ṣaḥīḥ",
         "gradeScholar": "Imam Muslim",
         "quoteArOriginal": "مَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً حَسَنَةً فَلَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا بَعْدَهُ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أُجُورِهِمْ شَيْءٌ",
@@ -537,14 +577,16 @@
         "quoteArNormalized": "من سن في الاسلام سنة حسنة فله اجرها واجر من عمل بها بعده من غير ان ينقص من اجورهم شيء",
         "translationFr": "« Quiconque instaure en Islam une bonne tradition en recevra la récompense ainsi que la récompense de ceux qui l'accompliront après lui, sans que rien ne soit diminué de leurs rétributions. »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "Philological Committee / TABAYYUN",
         "consultationUrl": "https://dorar.net/hadith/sharh/21650"
       }
     },
     {
       "evidenceId": "ev-shafii-muhdathat-two-types",
       "role": "SCHOLARLY_EXPLANATION",
-      "order": 4,
+      "order": 5,
       "stepNumber": 6,
       "commentFr": "Distinction d'ash-Shāfiʿī transmise par al-Bayhaqī entre nouveautés contredisant les sources et nouveautés bienfaisantes conformes.",
       "commentAr": "أثر الإمام الشافعي برواية البيهقي في تقسيم المحدثات إلى بدعة ضلالة ومحدثة غير مذمومة.",
@@ -555,20 +597,22 @@
         "primarySource": true,
         "sourceWork": "Al-Madkhal ilā as-Sunan al-Kubrā",
         "author": "Abū Bakr Aḥmad ibn al-Ḥusayn al-Bayhaqī",
-        "editionVolumePage": "Tome 1, p. 206, n°253 (taḥqīq Muḥammad Ḍiyāʾ ar-Raḥmān al-Aʿẓamī, Dār al-Khulafāʾ)",
+        "editionVolumePage": "Tome 1, p. 206, n°253 (taḥqīq Muḥammad Ḍiyāʾ ar-Raḥmān al-Aʿẓamī, Dār al-Khulafāʾ li-l-Kitāb al-Islāmī)",
         "quoteArOriginal": "المحدثات من الأمور ضربان: أحدهما ما أحدث يخالف كتاباً أو سنة أو أثراً أو إجماعاً، فهذه البدعة الضلالة. والثانية ما أحدث من الخير لا خلاف فيه لواحد من هذا، فهذه محدثة غير مذمومة",
         "quoteArVocalized": "الْمُحْدَثَاتُ مِنَ الْأُمُورِ ضَرْبَانِ: أَحَدُهُمَا مَا أُحْدِثَ يُخَالِفُ كِتَابًا أَوْ سُنَّةً أَوْ أَثَرًا أَوْ إِجْمَاعًا، فَهَذِهِ الْبِدْعَةُ الضَّلَالَةُ. وَالثَّانِيَةُ مَا أُحْدِثَ مِنَ الْخَيْرِ لَا خِلَافَ فِيهِ لِوَاحِدٍ مِنْ هَذَا، فَهَذِهِ مُحْدَثَةٌ غَيْرُ مَذْمُومَةٍ",
         "quoteArNormalized": "المحدثات من الامور ضربان: احدهما ما احدث يخالف كتابا او سنة او اثرا او اجماعا فهذه البدعة الضلالة والثانية ما احدث من الخير لا خلاف فيه لواحد من هذا فهذه محدثة غير مذمومة",
         "translationFr": "« Les choses nouvellement introduites sont de deux sortes : ce qui est introduit en contradiction avec un Livre, une Sunnah, un athar ou un consensus — voilà la bidʿa d’égarement ; et ce qui est introduit comme bien sans contredire rien de cela — voilà une nouveauté qui n’est pas blâmable. »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "Philological Committee / TABAYYUN",
         "consultationUrl": "https://shamela.ws/book/6548/206"
       }
     },
     {
       "evidenceId": "ev-ibnrajab-bidah-definition",
       "role": "SCHOLARLY_EXPLANATION",
-      "order": 5,
+      "order": 6,
       "stepNumber": 7,
       "commentFr": "Définition juridique d'Ibn Rajab réservant la bidʿa sharʿiyya à ce qui n'a aucun fondement dans la Sharīʿa.",
       "commentAr": "تحقيق الحافظ ابن رجب في قصر البدعة الشرعية على ما لا أصل له في الشريعة يدل عليه.",
@@ -579,20 +623,22 @@
         "primarySource": true,
         "sourceWork": "Jāmiʿ al-ʿUlūm wa-l-Ḥikam",
         "author": "Ibn Rajab al-Ḥanbalī",
-        "editionVolumePage": "Tome 2, p. 127-128 (taḥqīq Ṭāriq ibn ʿAwaḍ Allāh, Dār Ibn al-Jawzī)",
+        "editionVolumePage": "Tome 2, p. 127-128, commentaire du hadith n°28 (taḥqīq Ṭāriq ibn ʿAwaḍ Allāh, Dār Ibn al-Jawzī, 1re éd. 1422/2001)",
         "quoteArOriginal": "والمراد بالبدعة ما أحدث مما لا أصل له في الشريعة يدل عليه، فأما ما كان له أصل من الشرع يدل عليه فليس ببدعة شرعاً، وإن كان بدعة لغة",
         "quoteArVocalized": "وَالْمُرَادُ بِالْبِدْعَةِ مَا أُحْدِثَ مِمَّا لَا أَصْلَ لَهُ فِي الشَّرِيعَةِ يَدُلُّ عَلَيْهِ، فَأَمَّا مَا كَانَ لَهُ أَصْلٌ مِنَ الشَّرْعِ يَدُلُّ عَلَيْهِ فَلَيْسَ بِبِدْعَةٍ شَرْعًا، وَإِنْ كَانَ بِدْعَةً لُغَةً",
         "quoteArNormalized": "والمراد بالبدعة ما احدث مما لا اصل له في الشريعة يدل عليه فاما ما كان له اصل من الشرع يدل عليه فليس ببدعة شرعا وان كان بدعة لغة",
         "translationFr": "« Ce qui est visé par la bidʿa est ce qui a été introduit sans qu’un fondement dans la Sharīʿa ne l’indique. Quant à ce qui possède un fondement dans la Sharīʿa, ce n’est pas une bidʿa au sens religieux, même si cela peut être appelé bidʿa linguistiquement. »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "Philological Committee / TABAYYUN",
         "consultationUrl": "https://shamela.ws/book/11822/581"
       }
     },
     {
       "evidenceId": "ev-nawawi-kullu-bidah",
       "role": "SCHOLARLY_EXPLANATION",
-      "order": 6,
+      "order": 7,
       "stepNumber": 7,
       "commentFr": "Commentaire d'an-Nawawī qualifiant le hadith de ʿāmm makhṣūṣ et ventilant les nouveautés selon les cinq statuts légaux.",
       "commentAr": "شرح الإمام النووي لحديث «كل بدعة ضلالة» باعتباره عاماً مخصوصاً وتقسيمه للبدع بحسب الأحكام الخمسة.",
@@ -603,28 +649,30 @@
         "primarySource": true,
         "sourceWork": "Sharḥ Ṣaḥīḥ Muslim",
         "author": "Abū Zakariyyā Yaḥyā ibn Sharaf an-Nawawī",
-        "editionVolumePage": "Tome 6, p. 153-154 (Dār al-Maʿrifah)",
+        "editionVolumePage": "Tome 6, p. 153-154, commentaire du hadith n°867 (Dār al-Maʿrifah, Beyrouth, 1414/1994)",
         "quoteArOriginal": "قوله صلى الله عليه وسلم: وكل بدعة ضلالة هذا عام مخصوص، والمراد غالب البدع... ثم البدعة منقسمة إلى الأحكام الخمسة",
         "quoteArVocalized": "قَوْلُهُ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: «وَكُلُّ بِدْعَةٍ ضَلَالَةٌ» هَذَا عَامٌّ مَخْصُوصٌ، وَالْمُرَادُ غَالِبُ الْبِدَعِ... ثُمَّ الْبِدْعَةُ مُنْقَسِمَةٌ إِلَى الْأَحْكَامِ الْخَمْسَةِ",
         "quoteArNormalized": "قوله صلى الله عليه وسلم: وكل بدعة ضلالة هذا عام مخصوص والمراد غالب البدع... ثم البدعة منقسمة الى الاحكام الخمسة",
         "translationFr": "« Sa parole ﷺ “et toute bidʿa est égarement” est un terme général spécifié (ʿāmm makhṣūṣ) visant la majorité des bidʿas... Puis l'innovation se subdivise selon les cinq statuts légaux (wājib, mandūb, muḥarram, makrūh, mubāḥ). »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "Philological Committee / TABAYYUN",
         "consultationUrl": "https://islamweb.net/ar/library/content/53/1335/%D8%A8%D8%A7%D8%A8-%D8%AA%D8%AE%D9%81%D9%8A%D9%81-%D8%A7%D9%84%D8%B5%D9%84%D8%A7%D8%A9-%D9%88%D8%A7%D9%84%D8%AE%D8%B7%D8%A8%D8%A9"
       }
     }
   ],
   "conclusionSheet": {
     "established": {
-      "fr": "Le Prophète ﷺ a authentiquement mis en garde contre les innovations religieuses en proclamant : « كل بدعة ضلالة ». L’interdiction d’introduire dans le culte ce qui n’a aucun fondement légitime est un principe majeur et constant de l’Islam.",
-      "ar": "ثبت عن النبي ﷺ قوله: «كل بدعة ضلالة»، والتحذير من إحداث ما لا أصل له في الدين أصل عظيم ثابت لا يجوز تهوينه.",
+      "fr": "La condamnation de la bidʿa religieuse sans fondement est solidement établie par des textes authentiques (notamment Muslim 867 : « كل بدعة ضلالة »). L’interdiction d’introduire dans le culte ce qui n’a aucun fondement légitime est un principe majeur de l’Islam.",
+      "ar": "تحريم الابتداع في الدين مما لا أصل له ثابت بنصوص صحيحة (لا سيما حديث مسلم 867: «كل بدعة ضلالة»)؛ والتحذير من إحداث ما لا أصل له في الدين أصل شرعي عظيم ثابت.",
       "evidenceIds": [
         "ev-muslim-kullu-bidah"
       ]
     },
     "discussed": {
-      "fr": "La parole de ʿUmar (« نعمت البدعة هذه ») à propos du qiyām de Ramaḍān, la distinction d'ash-Shāfiʿī entre nouveauté en contradiction et nouveauté conforme, et les deux cadres terminologiques d'Ibn Rajab (bidʿa religieuse vs linguistique) et d'an-Nawawī (qualification selon les cinq statuts légaux). Ces divergences d'expression se rejoignent sur le fond : rejeter ce qui n'a aucun fondement dans la Sharīʿa.",
-      "ar": "أثر عمر («نعمت البدعة هذه») في قيام رمضان، وتفريق الشافعي بين المحدثات المخالفة وغير المخالفة، ومسلكا ابن رجب (بدعة شرعية ولغوية) والنووي (تقسيم المحدثات للأحكام الخمسة)؛ حيث تنوعت العبارات والاصطلاحات مع الاتفاق على رد ما لا مستند له في الشريعة.",
+      "fr": "La parole de ʿUmar (« نعمت البدعة هذه ») à propos du qiyām de Ramaḍān, la distinction d'ash-Shāfiʿī entre nouveauté en contradiction et nouveauté conforme, et les deux cadres terminologiques d'Ibn Rajab (bidʿa religieuse vs linguistique) et d'an-Nawawī (qualification selon les cinq statuts légaux). Il existe une convergence substantielle sur la nécessité de distinguer la nouveauté condamnable de ce qui possède un fondement légitime, avec des cadres terminologiques différents qu’il ne faut pas artificiellement rendre identiques.",
+      "ar": "أثر عمر («نعمت البدعة هذه») في قيام رمضان، وتفريق الشافعي بين المحدثات المخالفة وغير المخالفة، ومسلكا ابن رجب (بدعة شرعية ولغوية) والنووي (تقسيم المحدثات للأحكام الخمسة)؛ حيث توجد قناعة مشتركة بوجوب التمييز بين المحدثات المذمومة وما له أصل، مع تباين في الأطر الاصطلاحية التي ينبغي عدم مطابقتها قسراً.",
       "evidenceIds": [
         "ev-bukhari-umar-nimat-bidah",
         "ev-shafii-muhdathat-two-types",
@@ -637,42 +685,45 @@
       "ar": "لا يثبت أن كل ما لم يوجد بصورته المادية في العهد النبوي يعد تلقائياً بدعة شرعية محرمة، كما لا يثبت أن حديث «من سن سنة حسنة» يسوغ اختراع شعائر وعبادات بلا أصل.",
       "evidenceIds": [
         "ev-bukhari-umar-nimat-bidah",
+        "ev-bukhari-qiyam-ramadan",
         "ev-muslim-sunna-hasana",
         "ev-shafii-muhdathat-two-types"
       ]
     },
     "primaryEvidences": [
       "Ṣaḥīḥ Muslim (n°867 et n°1017)",
-      "Ṣaḥīḥ al-Bukhārī (n°2010)",
+      "Ṣaḥīḥ al-Bukhārī (n°1129 et n°2010)",
       "Al-Bayhaqī, Al-Madkhal ilā as-Sunan al-Kubrā (n°253)",
       "Ibn Rajab, Jāmiʿ al-ʿUlūm wa-l-Ḥikam",
       "An-Nawawī, Sharḥ Ṣaḥīḥ Muslim"
     ],
     "salafUnderstanding": {
-      "fr": "Les Compagnons et grands imams anciens (ʿUmar, ash-Shāfiʿī) distinguaient la nouveauté d'organisation ou la mise en œuvre d'un bien possédant un fondement légitime de l'innovation blâmable contredisant les sources. L'application de ʿUmar au qiyām de Ramaḍān et les définitions ultérieures des vérificateurs (Ibn Rajab, an-Nawawī) illustrent la nécessité d'auditer le fondement légal avant de qualifier l'acte.",
-      "ar": "ميز الصحابة وأئمة السلف (كعمر والشافعي) بين المستحدثات التنظيمية أو ما كان له أصل معتبر في الشرع، وبين البدع المذمومة المنابذة للأصول؛ ويبين فقه عمر في التراويح وتحقيقات أهل العلم (كابن رجب والنووي) وجوب البحث عن أصل العمل قبل إطلاق حكم التبديع.",
+      "fr": "Les Compagnons et grands imams anciens (ʿUmar, ash-Shāfiʿī) distinguaient la nouveauté d'organisation ou la mise en œuvre d'un bien possédant un fondement légitime de l'innovation blâmable contredisant les sources. Le hadith de ʿĀʾisha (Bukhārī 1129) prouve que la prière nocturne de Ramaḍān en congrégation avait un précédent prophétique direct, et que ʿUmar a réactivé cette pratique une fois levée la crainte de son obligation. Les vérificateurs (Ibn Rajab, an-Nawawī) confirment l'obligation d'analyser le fondement légal avant de qualifier l'acte.",
+      "ar": "ميز الصحابة وأئمة السلف (كعمر والشافعي) بين المستحدثات التنظيمية أو ما كان له أصل معتبر في الشرع، وبين البدع المذمومة المنابذة للأصول. ويثبت حديث عائشة (البخاري 1129) أن صلاة التراويح جماعة كانت ذات أصل نبوي مباشر، وأن عمر أحياها بعد زوال علة الخوف من فرضيتها. وتؤكد تحقيقات ابن رجب والنووي وجوب فحص أصل العمل قبل التبديع.",
       "evidenceIds": [
         "ev-muslim-kullu-bidah",
         "ev-bukhari-umar-nimat-bidah",
+        "ev-bukhari-qiyam-ramadan",
         "ev-shafii-muhdathat-two-types",
         "ev-ibnrajab-bidah-definition",
         "ev-nawawi-kullu-bidah"
       ]
     },
     "scholarlyPositions": {
-      "fr": "1. Consensus sunnite sur la réprobation de la bidʿa : ce qui est introduit dans la religion sans aucun fondement dans la Sharīʿa est nul et rejeté. 2. Cadre d'Ibn Rajab : la bidʿa sharʿiyya est strictement ce qui n'a aucun fondement, tandis que ce qui en possède un ne relève de la bidʿa qu'au sens linguistique. 3. Cadre d'an-Nawawī : le hadith est un ʿāmm makhṣūṣ et les nouveautés se ventilent selon les cinq statuts légaux. 4. Convergence méthodologique : l'absence matérielle d'une pratique à l'époque prophétique ne vaut pas à elle seule preuve d'interdiction sans examen du délaissement (at-tark) et du fondement.",
-      "ar": "1. إجماع أهل السنة على تحريم الابتداع: ما أُحدث في الدين بلا مستند شرعي فهو مردود باطل. 2. مسلك ابن رجب: قصر البدعة الشرعية على ما لا أصل له في الدين، وجعل ما له أصل بدعة لغوية. 3. مسلك النووي: حمل الحديث على العام المخصوص وتقسيم المحدثات بحسب الأحكام التكليفية الخمسة. 4. التحقيق الأصولي المشترك: مجرد عدم الفعل في العهد النبوي لا يقتضي التحريم بمفرده دون فقه شروط الترك والبحث عن الأصل.",
+      "fr": "1. Principe partagé : ce qui est introduit dans la religion sans aucun fondement dans la Sharīʿa est nul et rejeté. 2. Cadre d'Ibn Rajab : la bidʿa sharʿiyya est strictement ce qui n'a aucun fondement, tandis que ce qui en possède un ne relève de la bidʿa qu'au sens linguistique. 3. Cadre d'an-Nawawī : le hadith est un ʿāmm makhṣūṣ et les nouveautés se ventilent selon les cinq statuts légaux. 4. Convergence substantielle : accord sur la nécessité de distinguer la nouveauté condamnable de ce qui possède un fondement légitime, avec des cadres terminologiques distincts. 5. Analyse du délaissement (at-tark) : le simple constat d'absence matérielle ne suffit pas sans examen du motif, de l'empêchement et de la nature de l'acte.",
+      "ar": "1. أصل مشترك: ما أحدث في الدين بلا مستند شرعي فهو مردود باطل. 2. مسلك ابن رجب: قصر البدعة الشرعية على ما لا أصل له في الدين، وجعل ما له أصل بدعة لغوية. 3. مسلك النووي: حمل الحديث على العام المخصوص وتقسيم المحدثات بحسب الأحكام التكليفية الخمسة. 4. توافق جوهري: التمييز بين المحدثات المذمومة وما له أصل معتبر مع احترام تباين الأطر الاصطلاحية. 5. فقه الترك: مجرد عدم الفعل لا يقتضي التحريم بمفرده دون فحص المقتضي والمانع وطبيعة العمل.",
       "evidenceIds": [
         "ev-muslim-kullu-bidah",
         "ev-bukhari-umar-nimat-bidah",
+        "ev-bukhari-qiyam-ramadan",
         "ev-shafii-muhdathat-two-types",
         "ev-ibnrajab-bidah-definition",
         "ev-nawawi-kullu-bidah"
       ]
     },
     "methodologicalPitfall": {
-      "fr": "Confondre un hadith authentique (« كُلُّ بِدْعَةٍ ضَلَالَةٌ ») avec son application mécanique à n'importe quel cas concret : décréter « X n'existait pas sous cette forme à l'époque prophétique donc X est une bidʿa d'égarement » sans vérifier le contexte, les usages des Compagnons (ʿUmar), les critères de contradiction (ash-Shāfiʿī), les conventions terminologiques (Ibn Rajab vs an-Nawawī), ni les règles d'uṣūl sur le délaissement (at-tark). La méthode TABAYYUN impose : authenticité → contexte → textes du même chapitre → sémantique légale → usages des Salaf → règles d'uṣūl → conclusion proportionnée.",
-      "ar": "الخلط بين ورود نص نبوي صحيح («كُلُّ بِدْعَةٍ ضَلَالَةٌ») وبين الإسقاط الآلي على الوقائع: كالقول «هذه الصورة لم تكن في العهد النبوي إذن هي بدعة ضلالة» دون فقه السياق، ولا اعتبار عمل الصحابة (كعمر)، ولا معيار المخالفة (عند الشافعي)، ولا تحرير المصطلحات (بين ابن رجب والنووي)، ولا فقه مسألة الترك. ومسار تَبَيُّن الصارم يفرض: الثبوت ← السياق ← نصوص الباب ← الدلالة الشرعية ← عمل السلف ← قواعد الأصول ← الحكم المتزن بقدر الدليل."
+      "fr": "Confondre un hadith authentique (« كُلُّ بِدْعَةٍ ضَلَالَةٌ ») avec son application mécanique à n'importe quel cas concret : décréter « X n'existait pas sous cette forme à l'époque prophétique donc X est une bidʿa d'égarement » sans vérifier le contexte, le précédent prophétique (Bukhārī 1129), les usages des Compagnons (ʿUmar), les critères de contradiction (ash-Shāfiʿī), la nuance des cadres terminologiques (Ibn Rajab vs an-Nawawī), ni les règles d'uṣūl sur le délaissement (at-tark). La méthode TABAYYUN impose : authenticité → contexte → textes du même chapitre → sémantique légale → usages des Salaf → règles d'uṣūl → conclusion proportionnée.",
+      "ar": "الخلط بين ورود نص نبوي صحيح («كُلُّ بِدْعَةٍ ضَلَالَةٌ») وبين الإسقاط الآلي على الوقائع: كالقول «هذه الصورة لم تكن في العهد النبوي إذن هي بدعة ضلالة» دون فقه السياق، ولا فحص الأصل السابق (البخاري 1129)، ولا اعتبار عمل الصحابة (كعمر)، ولا معيار المخالفة (عند الشافعي)، ولا دقة الأطر الاصطلاحية (بين ابن رجب والنووي)، ولا فقه مسألة الترك. ومسار تَبَيُّن الصارم يفرض: الثبوت ← السياق ← نصوص الباب ← الدلالة الشرعية ← عمل السلف ← قواعد الأصول ← الحكم المتزن بقدر الدليل."
     },
     "originalSources": [
       "Ṣaḥīḥ Muslim",
