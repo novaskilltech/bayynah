@@ -2,7 +2,10 @@
   "id": "inquiry-08",
   "slug": "salaf-iman-parole-acte",
   "domain": "AQIDA",
-  "editorialStatus": "DRAFT",
+  "editorialStatus": "PUBLISHED",
+  "reviewerId": "reviewer-01",
+  "reviewedAt": "2026-09-21",
+  "lastVerifiedAt": "2026-09-21",
   "title": {
     "fr": "« Les Salaf ont dit… » : comment vérifier une attribution collective ?",
     "ar": "«قال السلف»: كيف نتحقق من النسبة الجماعية؟"
@@ -238,8 +241,8 @@
       "stepNumber": 6,
       "titleFr": "Le témoignage d’al-Bukhārī",
       "titleAr": "شهادة البخاري على الاتساع",
-      "instructionFr": "Al-Bukhārī est rapporté comme disant avoir rencontré plus de mille savants sans constater de divergence sur cette formule. Quelle est la portée critique de cette preuve ?",
-      "instructionAr": "نُقل عن البخاري أنه قال: لقيت أكثر من ألف رجل من العلماء بالأمصار فما رأيت أحداً يختلف في ذلك؛ فما هي قيمتها النقدية؟",
+      "instructionFr": "Al-Bukhārī est rapporté dans deux sources majeures : chez al-Lālakāʾī (n°320), il affirme avoir rencontré plus de mille hommes de science sans divergence sur le fait que la religion est parole et acte ; et chez adh-Dhahabī (Siyar 12/395, via son copiste al-Warrāq), il rapporte avoir écrit d'après 1080 gens du hadith disant que l'īmān est parole et acte, augmente et diminue. Quelle est la portée critique de ces témoignages complémentaires ?",
+      "instructionAr": "نُقل عن البخاري في أصلين معتبرين: عند اللالكائي (رقم 320) أنه لقي أكثر من ألف رجل من أهل العلم فما رأى أحداً يختلف في أن الدين قول وعمل؛ وعند الذهبي في السير (12/395 عن وراقه) أنه كتب عن ألف وثمانين رجلاً كلهم أصحاب حديث يقولون: الإيمان قول وعمل يزيد وينقص. فما هي القيمة النقدية لهاتين الروايتين المتكاملتين؟",
       "options": [
         {
           "textFr": "Ce témoignage renforce considérablement l’idée d’une doctrine extrêmement répandue parmi les savants qu’al-Bukhārī a rencontrés. Mais méthodologiquement, nous devons toujours distinguer le témoignage global d’al-Bukhārī d’une vérification indépendante des mille individus.",
@@ -275,7 +278,8 @@
         }
       ],
       "revealedEvidenceIds": [
-        "ev-bukhari-thousand-scholars-iman"
+        "ev-bukhari-thousand-scholars-iman",
+        "ev-bukhari-warraq-1080-scholars"
       ],
       "revealPolicy": "AFTER_ANSWER"
     },
@@ -491,17 +495,21 @@
       "evidence": {
         "id": "ev-shafii-iman-qawl-amal",
         "type": "BOOK",
-        "referenceCode": "Manāqib ash-Shāfiʿī d'al-Bayhaqī, t. 1, p. 385-387",
+        "referenceCode": "Manāqib ash-Shāfiʿī d'al-Bayhaqī, t. 1, p. 385",
         "primarySource": true,
         "sourceWork": "Manāqib ash-Shāfiʿī",
         "author": "Abū Bakr Aḥmad ibn al-Ḥusayn al-Bayhaqī",
-        "editionVolumePage": "Tome 1, p. 385–387 (taḥqīq as-Sayyid Aḥmad Ṣaqr, Dār at-Turāth ; riwāyat ar-Rabīʿ ibn Sulaymān)",
+        "editionVolumePage": "Tome 1, p. 385, taḥqīq as-Sayyid Aḥmad Ṣaqr, Dār at-Turāth (riwāyat ar-Rabīʿ ibn Sulaymān)",
         "quoteArOriginal": "سمعت الشافعي يقول: الإيمان قول وعمل يزيد وينقص",
         "quoteArVocalized": "سَمِعْتُ الشَّافِعِيَّ يَقُولُ: الْإِيمَانُ قَوْلٌ وَعَمَلٌ يَزِيدُ وَيَنْقُصُ",
         "quoteArNormalized": "سمعت الشافعي يقول الايمان قول وعمل يزيد وينقص",
         "translationFr": "« J’ai entendu ash-Shāfiʿī dire : l’īmān est parole et acte, il augmente et diminue. »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://islamcontent.com/ar/content/1041",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
@@ -518,13 +526,17 @@
         "primarySource": true,
         "sourceWork": "Sharḥ Uṣūl Iʿtiqād Ahl as-Sunnah wa-l-Jamāʿa",
         "author": "Abū al-Qāsim Hibat Allāh ibn al-Ḥasan al-Lālakāʾī",
-        "editionVolumePage": "Tome 1, p. 197–198, récit n°321 (taḥqīq Aḥmad Saʿd Ḥamdān, Dār Ṭaybah)",
+        "editionVolumePage": "Tome 1, p. 198, récit n°321 (taḥqīq Aḥmad Saʿd Ḥamdān, Dār Ṭaybah)",
         "quoteArOriginal": "أدركنا العلماء في جميع الأمصار حجازا وعراقا وشاما ويمنا فكان من مذهبهم: الإيمان قول وعمل، يزيد وينقص",
         "quoteArVocalized": "أَدْرَكْنَا الْعُلَمَاءَ فِي جَمِيعِ الْأَمْصَارِ حِجَازًا وَعِرَاقًا وَشَامًا وَيَمَنًا فَكَانَ مِنْ مَذْهَبِهِمْ: الْإِيمَانُ قَوْلٌ وَعَمَلٌ، يَزِيدُ وَيَنْقُصُ",
         "quoteArNormalized": "ادركنا العلماء في جميع الامصار حجازا وعراقا وشاما ويمنا فكان من مذهبهم الايمان قول وعمل يزيد وينقص",
         "translationFr": "« Nous avons rencontré les savants dans les différentes régions — Ḥijāz, Irak, Shām et Yémen — et parmi leurs positions figurait : l’īmān est parole et acte, il augmente et diminue. »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://www.islamweb.net/ar/library/content/110/35/index.php?ID=36&bk_no=110&idfrom=36&idto=36&page=bookcontents_ver3",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
@@ -532,8 +544,8 @@
       "role": "PRIMARY_PROOF",
       "order": 4,
       "stepNumber": 6,
-      "commentFr": "Témoignage très large de l'imam al-Bukhārī sur plus de mille savants rencontrés dans les différentes contrées.",
-      "commentAr": "شهادة البخاري الكبرى على إدراك أكثر من ألف رجل من العلماء في الأمصار على هذا المعتقد بلا نزاع.",
+      "commentFr": "Témoignage très large de l'imam al-Bukhārī sur plus de mille hommes de science rencontrés dans les différentes contrées (al-Lālakāʾī n°320).",
+      "commentAr": "شهادة البخاري الكبرى عند اللالكائي (رقم 320) على لقاء أكثر من ألف رجل من أهل العلم بلا خلاف في أن الدين قول وعمل.",
       "evidence": {
         "id": "ev-bukhari-thousand-scholars-iman",
         "type": "BOOK",
@@ -541,24 +553,56 @@
         "primarySource": true,
         "sourceWork": "Sharḥ Uṣūl Iʿtiqād Ahl as-Sunnah wa-l-Jamāʿa",
         "author": "Abū al-Qāsim Hibat Allāh ibn al-Ḥasan al-Lālakāʾī",
-        "editionVolumePage": "Tome 1, p. 196, récit n°320 (cité également par Ibn Ḥajar dans Fatḥ al-Bārī 1/47)",
-        "quoteArOriginal": "لقيت أكثر من ألف رجل من العلماء بالأمصار، فما رأيت أحدا منهم يختلف في أن الإيمان قول وعمل، ويزيد وينقص",
-        "quoteArVocalized": "لَقِيتُ أَكْثَرَ مِنْ أَلْفِ رَجُلٍ مِنَ الْعُلَمَاءِ بِالْأَمْصَارِ، فَمَا رَأَيْتُ أَحَدًا مِنْهُمْ يَخْتَلِفُ فِي أَنَّ الْإِيمَانَ قَوْلٌ وَعَمَلٌ، وَيَزِيدُ وَيَنْقُصُ",
-        "quoteArNormalized": "لقيت اكثر من الف رجل من العلماء بالامصار فما رايت احدا منهم يختلف في ان الايمان قول وعمل ويزيد وينقص",
-        "translationFr": "« J’ai rencontré plus de mille savants dans les différentes régions et je n’en ai vu aucun diverger sur le fait que l’īmān est parole et acte, et qu’il augmente et diminue. »",
+        "editionVolumePage": "Tome 1, p. 196, récit n°320 (taḥqīq Aḥmad Saʿd Ḥamdān, Dār Ṭaybah)",
+        "quoteArOriginal": "لقيت أكثر من ألف رجل من أهل العلم... فما رأيت واحدا منهم يختلف في هذه الأشياء: أن الدين قول وعمل",
+        "quoteArVocalized": "لَقِيتُ أَكْثَرَ مِنْ أَلْفِ رَجُلٍ مِنْ أَهْلِ الْعِلْمِ... فَمَا رَأَيْتُ وَاحِدًا مِنْهُمْ يَخْتَلِفُ فِي هَذِهِ الْأَشْيَاءِ: أَنَّ الدِّينَ قَوْلٌ وَعَمَلٌ",
+        "quoteArNormalized": "لقيت اكثر من الف رجل من اهل العلم... فما رايت واحدا منهم يختلف في هذه الاشياء: ان الدين قول وعمل",
+        "translationFr": "« J’ai rencontré plus de mille hommes parmi les gens de science... et je n’en ai vu aucun diverger sur ces choses : que la religion est parole et acte. »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://hadithportal.com/index.php?bab_id=14&book=78&chapter_id=1&show=bab",
+        "lastVerifiedAt": "2026-09-21"
+      }
+    },
+    {
+      "evidenceId": "ev-bukhari-warraq-1080-scholars",
+      "role": "PRIMARY_PROOF",
+      "order": 5,
+      "stepNumber": 6,
+      "commentFr": "Transmission par son copiste (al-Warrāq) chez adh-Dhahabī sur mille quatre-vingts savants avec la mention expresse d'augmentation et diminution.",
+      "commentAr": "رواية وراق البخاري محمد بن أبي حاتم عند الذهبي في السير على الكتابة عن ألف وثمانين رجلاً بلفظ: يزيد وينقص.",
+      "evidence": {
+        "id": "ev-bukhari-warraq-1080-scholars",
+        "type": "BOOK",
+        "referenceCode": "Siyar Aʿlām an-Nubalāʾ, t. 12, p. 395",
+        "primarySource": true,
+        "sourceWork": "Siyar Aʿlām an-Nubalāʾ",
+        "author": "Shams ad-Dīn Muḥammad ibn Aḥmad adh-Dhahabī",
+        "editionVolumePage": "Tome 12, p. 395 (Mu’assasat ar-Risālah, riwāyat Muḥammad ibn Abī Ḥātim al-Warrāq)",
+        "quoteArOriginal": "كتبت عن ألف وثمانين رجلا، ليس فيهم إلا صاحب حديث، كانوا يقولون: الإيمان قول وعمل، يزيد وينقص",
+        "quoteArVocalized": "كَتَبْتُ عَنْ أَلْفٍ وَثَمَانِينَ رَجُلًا، لَيْسَ فِيهِمْ إِلَّا صَاحِبُ حَدِيثٍ، كَانُوا يَقُولُونَ: الْإِيمَانُ قَوْلٌ وَعَمَلٌ، يَزِيدُ وَيَنْقُصُ",
+        "quoteArNormalized": "كتبت عن الف وثمانين رجلا ليس فيهم الا صاحب حديث كانوا يقولون الايمان قول وعمل يزيد وينقص",
+        "translationFr": "« J’ai écrit d’après mille quatre-vingts hommes, tous sans exception adeptes du hadith ; ils disaient tous : l’īmān est parole et acte, il augmente et diminue. »",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://shamela.ws/book/10906/5567",
+        "lastVerifiedAt": "2026-09-21"
       }
     }
   ],
   "conclusionSheet": {
     "established": {
-      "fr": "La conception selon laquelle l’īmān comporte parole et acte et qu’il augmente et diminue est largement documentée chez des imams anciens. Elle est explicitement rapportée d’ash-Shāfiʿī ; Abū Zurʿa et Abū Ḥātim la décrivent comme la position des savants qu’ils avaient rencontrés dans plusieurs grandes régions du monde musulman ; al-Bukhārī est rapporté avec un témoignage encore plus large.",
-      "ar": "ثبتت هذه الصيغة أو معناها عن عدد كبير من أئمة السلف، ونقل أبو زرعة وأبو حاتم أنها كانت من مذهب العلماء الذين أدركاهم في أمصار متعددة، وروي عن البخاري نقل واسع في المعنى نفسه.",
+      "fr": "La conception selon laquelle l’īmān comporte parole et acte et qu’il augmente et diminue est largement documentée chez des imams anciens. Elle est explicitement rapportée d’ash-Shāfiʿī ; Abū Zurʿa et Abū Ḥātim la décrivent comme la position des savants qu’ils avaient rencontrés dans plusieurs grandes régions du monde musulman ; al-Bukhārī est rapporté avec deux témoignages massifs (al-Lālakāʾī n°320 et adh-Dhahabī 12/395).",
+      "ar": "ثبتت هذه الصيغة أو معناها عن عدد كبير من أئمة السلف، ونقل أبو زرعة وأبو حاتم أنها كانت من مذهب العلماء الذين أدركاهم في أمصار متعددة، وروي عن البخاري نقلان واسعان في المعنى نفسه (عند اللالكائي رقم 320 وفي السير 12/395).",
       "evidenceIds": [
         "ev-shafii-iman-qawl-amal",
         "ev-abuzura-abuhatim-iman-regions",
-        "ev-bukhari-thousand-scholars-iman"
+        "ev-bukhari-thousand-scholars-iman",
+        "ev-bukhari-warraq-1080-scholars"
       ]
     },
     "discussed": {
@@ -566,7 +610,8 @@
       "ar": "الانتقال من «قول واسع الثبوت عند أئمة السلف» إلى «كل فرد من السلف قال هذه العبارة نفسها بلا استثناء» زيادة في الدعوى تحتاج إلى دليل مستقل.",
       "evidenceIds": [
         "ev-abuzura-abuhatim-iman-regions",
-        "ev-bukhari-thousand-scholars-iman"
+        "ev-bukhari-thousand-scholars-iman",
+        "ev-bukhari-warraq-1080-scholars"
       ]
     },
     "notEstablished": {
@@ -579,25 +624,28 @@
     "primaryEvidences": [
       "Coran (Sourate Al-Fatḥ 48:4)",
       "Al-Lālakāʾī, Sharḥ Uṣūl Iʿtiqād Ahl as-Sunnah (n°320 et n°321)",
-      "Al-Bayhaqī, Manāqib ash-Shāfiʿī (1/385-387)"
+      "Al-Bayhaqī, Manāqib ash-Shāfiʿī (1/385)",
+      "Adh-Dhahabī, Siyar Aʿlām an-Nubalāʾ (12/395)"
     ],
     "salafUnderstanding": {
       "fr": "Les imams des générations anciennes concevaient l'īmān comme une réalité englobant la parole et l'action, susceptible d'augmenter par l'obéissance et de diminuer, tout en exprimant cette doctrine sous des nuances verbales complémentaires (avec la mention de l'intention ou des piliers).",
-      "ar": "كان فهم أئمة السلف للإيمان أنه حقيقة مركبة من القول والعمل، قابل للزيادة والنقصان، مع تنوع في صياغاتهم التعبيرية (كزكاة النية والاعتقاد) الدالة على المعنى المتسق.",
+      "ar": "كان فهم أئمة السلف للإيمان أنه حقيقة مركبة من القول والعمل، قابل للزيادة والنقصان، مع تنوع في صيغ التعبير، كإضافة النية أو الاعتقاد في بعض الروايات الدالة على المعنى المتسق.",
       "evidenceIds": [
         "ev-quran-iman-increase-48-4",
+        "ev-shafii-iman-qawl-amal",
         "ev-abuzura-abuhatim-iman-regions",
         "ev-bukhari-thousand-scholars-iman",
-        "ev-shafii-iman-qawl-amal"
+        "ev-bukhari-warraq-1080-scholars"
       ]
     },
     "scholarlyPositions": {
-      "fr": "1. Position majoritaire et constante des Salaf et ahl al-ḥadīth (ash-Shāfiʿī, Aḥmad, al-Bukhārī, Abū Zurʿa, Abū Ḥātim) : l'īmān est parole et acte, augmente et diminue. 2. Précision méthodologique des vérificateurs : l'accord doctrinal n'exige pas l'identité mécanique mot à mot de chaque énoncé et le rapport global témoigne d'une diffusion sans valoir recensement nominatif exhaustif.",
-      "ar": "1. مذهب عامة السلف وأهل الحديث (الشافعي، أحمد، البخاري، أبو زرعة، أبو حاتم): أن الإيمان قول وعمل، يزيد وينقص. 2. التحقيق المنهجي لأهل العلم: أن اتفاقهم على الأصل لا يستلزم تطابق الألفاظ حرفياً، وأن النقل الإجمالي حجة على الانتشار لا حصر اسمي لكل فرد.",
+      "fr": "1. Position majoritaire et constante des Salaf et ahl al-ḥadīth (ash-Shāfiʿī, al-Bukhārī, Abū Zurʿa, Abū Ḥātim) : l'īmān est parole et acte, augmente et diminue. 2. Précision méthodologique des vérificateurs : l'accord doctrinal n'exige pas l'identité mécanique mot à mot de chaque énoncé et le rapport global témoigne d'une diffusion sans valoir recensement nominatif exhaustif.",
+      "ar": "1. مذهب عامة السلف وأهل الحديث (الشافعي، البخاري، أبو زرعة، أبو حاتم): أن الإيمان قول وعمل، يزيد وينقص. 2. التحقيق المنهجي لأهل العلم: أن اتفاقهم على الأصل لا يستلزم تطابق الألفاظ حرفياً، وأن النقل الإجمالي حجة على الانتشار لا حصر اسمي لكل فرد.",
       "evidenceIds": [
+        "ev-shafii-iman-qawl-amal",
         "ev-abuzura-abuhatim-iman-regions",
         "ev-bukhari-thousand-scholars-iman",
-        "ev-shafii-iman-qawl-amal"
+        "ev-bukhari-warraq-1080-scholars"
       ]
     },
     "methodologicalPitfall": {
@@ -607,7 +655,8 @@
     "originalSources": [
       "Le Saint Coran",
       "Al-Lālakāʾī, Sharḥ Uṣūl Iʿtiqād Ahl as-Sunnah wa-l-Jamāʿa",
-      "Al-Bayhaqī, Manāqib ash-Shāfiʿī"
+      "Al-Bayhaqī, Manāqib ash-Shāfiʿī",
+      "Adh-Dhahabī, Siyar Aʿlām an-Nubalāʾ"
     ],
     "certaintyLevel": "FORTEMENT_ETABLI"
   }
