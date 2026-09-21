@@ -153,8 +153,8 @@
           "textAr": "حديث صحيح متصل الإسناد برواة عدول ضابطين، مخرج في صحيح مسلم وتلقته الأمة بالقبول.",
           "quality": "BEST",
           "methodologicalScore": 3,
-          "feedbackFr": "Exactitude scientifique ! L'authenticité du texte est fermement établie selon les critères stricts de la science du hadith.",
-          "feedbackAr": "تحقيق علمي محكم! ثبوت الحديث قطعي الإسناد وفق موازين الصنعة الحديثية."
+          "feedbackFr": "Exactitude scientifique ! Hadith authentique établi rapporté par Muslim dans son Sahih selon les critères stricts de la science du hadith.",
+          "feedbackAr": "حديث صحيح ثابت أخرجه مسلم في صحيحه."
         },
         {
           "textFr": "Considérer le hadith comme recevable a priori sans chercher qui en a évalué la chaîne.",
@@ -229,42 +229,42 @@
     },
     {
       "stepNumber": 6,
-      "titleFr": "Séparer texte et istidlâl",
-      "titleAr": "الفصل بين النص ودلالة الاستدلال",
-      "instructionFr": "La lettre du hadith donne un ordre (« fais tes ablutions »). Comment la méthodologie juridique (uṣûl al-fiqh) distingue-t-elle le texte lui-même de l'istidlâl (la déduction du statut) ?",
-      "instructionAr": "صيغة الحديث أمر («فتوضأ»). كيف يفرق علم أصول الفقه بين منطوق النص وبين استنباط الحكم التكليفي؟",
+      "titleFr": "Comprendre l'argumentation des juristes (istidlâl) et le rapport entre textes",
+      "titleAr": "فهم استدلال الفقهاء والعلاقة بين النصوص",
+      "instructionFr": "Face à l'ordre prophétique explicite (« fais tes ablutions »), quel est l'argument textuel réellement invoqué par le jumhûr pour ne pas annuler le wuḍû', et quelle est la réponse méthodologique d'an-Nawawî et des partisans de l'obligation ?",
+      "instructionAr": "أمام الأمر النبوي الصريح («فتوضأ»)، ما هو المستند الحقيقي الذي اعتمده الجمهور للقول بعدم النقض، وكيف أجابهم النووي وموجبو الوضوء؟",
       "options": [
         {
-          "textFr": "Le texte fournit le dalîl brut ; l'istidlâl consiste à déterminer si l'impératif vaut ici obligation juridique annulant la pureté (wujûb ناقض), ou s'il s'agit d'un simple nettoyage linguistique et d'hygiène recommandé (nadb).",
-          "textAr": "النص يمثل أصل الدليل، والاستدلال يبحث هل صيغة «افعل» هنا تفيد الوجوب الناقض للطهارة، أم مجرد النظافة اللغوية المستحبة.",
+          "textFr": "Le jumhûr s'appuie notamment sur le hadith de Jâbir établissant que la dernière pratique du Prophète ﷺ était l'abandon du wuḍû' pour ce qui a touché le feu ; an-Nawawî et les hanbalites répondent que ce hadith est général (ʿâmm) alors que le hadith du chameau est spécifique (khâṣṣ), et que le spécifique prévaut sur le général.",
+          "textAr": "احتج الجمهور بحديث جابر في «ترك الوضوء مما مست النار» كحكم عام متأخر، وأجاب النووي والحنابلة بأن حديث ترك الوضوء عام وحديث لحوم الإبل خاص، والخاص مقدم على العام.",
           "quality": "BEST",
           "methodologicalScore": 3,
-          "feedbackFr": "Précision d'orfèvre ! C'est exactement sur cette distinction que repose la pluralité des compréhensions jurisprudentielles.",
-          "feedbackAr": "تحرير أصولي بالغ الدقة! هذا التمييز بين أصل الأمر ومقتضاه هو مناط الخلاف الفقهي."
+          "feedbackFr": "Excellente analyse des uṣûl ! C'est exactement le débat rapporté par an-Nawawî dans son Sharḥ de Ṣaḥîḥ Muslim : l'opposition entre un texte général (abandon du wuḍû' pour ce qui a touché le feu) et un texte spécifique (la viande de chameau).",
+          "feedbackAr": "تحرير أصولي بالغ الدقة! هذا عين ما قرره الإمام النووي في شرح صحيح مسلم: مناط البحث في تعارض العام مع الخاص وتقديم النص الخاص."
         },
         {
-          "textFr": "Reconnaître qu'il y a une étape de déduction entre la phrase entendue et le statut de validité de la prière.",
-          "textAr": "إدراك وجود مرحلة استنباط بين سماع اللفظ وبين إصدار الحكم على صحة الصلاة.",
+          "textFr": "Le jumhûr soutient que l'ordre est simplement abrogé par des règles générales postérieures, sans expliciter la règle technique de préséance du spécifique sur le général.",
+          "textAr": "ذهب الجمهور إلى أن الأمر منسوخ بحكم عام لاحق، دون بيان قاعدة تقديم النص الخاص على العام.",
           "quality": "ACCEPTABLE",
           "methodologicalScore": 2,
-          "feedbackFr": "Bonne intuition méthodologique, bien que l'analyse uṣûlî puisse être encore plus explicitement qualifiée.",
-          "feedbackAr": "إدراك منهجي طيب، وإن كان يحتاج لمزيد من التأصيل الأصولي."
+          "feedbackFr": "L'évocation de l'abrogation par le jumhûr est exacte, mais l'analyse uṣûlî reste incomplète sans mentionner l'articulation entre texte général et texte spécifique.",
+          "feedbackAr": "القول بالنسخ وجه معتبر عند الجمهور، لكن التحرير الأصولي يتطلب بيان إعمال الخاص مع العام."
         },
         {
-          "textFr": "Tout ordre dans un hadith implique automatiquement et sans exception l'annulation de la prière et des ablutions sans autre interprétation possible.",
-          "textAr": "كل أمر في الحديث يقتضي بطلان الوضوء حتماً دون أي احتمال آخر.",
+          "textFr": "Le jumhûr a rejeté le hadith de Muslim car il contredisait leur avis d'école préétabli.",
+          "textAr": "رد الجمهور حديث مسلم لمخالفته أصل مذهبهم.",
           "quality": "PREMATURE",
           "methodologicalScore": 1,
-          "feedbackFr": "Trop catégorique : les uṣûliyyûn savent que l'impératif peut être modulé par des indices (qarâ'in) textuels ou contextuels.",
-          "feedbackAr": "إطلاق غير منضبط: صيغة الأمر قد تصرفها القرائن من الوجوب إلى الندب، أو من المعنى الشرعي إلى اللغوي."
+          "feedbackFr": "Jugement hâtif et erroné : les imams du jumhûr ne rejettent pas un hadith authentique par parti pris, ils cherchent à concilier les textes par l'abrogation ou la qualification.",
+          "feedbackAr": "حكم متسرع ومجحف: أئمة الفقهاء لا يردون الحديث تعصباً، بل يجمعون بين النصوص بقواعد الأصول."
         },
         {
-          "textFr": "Déclarer que le texte n'a aucune valeur tant qu'un savant contemporain ne l'a pas confirmé.",
-          "textAr": "إسقاط حجية النص حتى يثبته فقيه معاصر.",
+          "textFr": "Le mot 'wuḍû'' signifierait simplement ici se laver les mains pour des raisons d'hygiène, sans aucune portée religieuse ou rituelle.",
+          "textAr": "الوضوء هنا مجرد غسل اليدين للنظافة اللغوية، ولا علاقة له بالصلاة أو الطهارة الشرعية.",
           "quality": "INCORRECT",
           "methodologicalScore": 0,
-          "feedbackFr": "Inversion des sources : c'est la parole des savants qui est pesée à la lumière du dalîl, et non l'inverse.",
-          "feedbackAr": "قلب للأصول: كلام العلماء يُستدل له بالنص ولا يُستدل به عليه."
+          "feedbackFr": "Piège méthodologique : le terme wuḍû' dans le discours prophétique désigne la purification rituelle légale par défaut, et la question du compagnon portait explicitement sur la prière.",
+          "feedbackAr": "خطأ منهجي: الأصل حمل ألفاظ الشارع على الحقيقة الشرعية لا اللغوية إلا بدليل صارف."
         }
       ],
       "revealedEvidenceIds": [],
@@ -331,10 +331,10 @@
         {
           "textFr": "L'imam an-Nawawî documente la position du jumhûr mais reconnaît honnêtement que l'avis d'Ahmad et Ishâq est 'plus fort quant à la preuve' (aqwâ dalîlan).",
           "textAr": "نقل الإمام النووي لمذهب الجمهور مع اعترافه المنصف بأن قول أحمد وإسحاق «أقوى دليلاً».",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Excellente précision documentaire ! An-Nawawî (shâfi'ite) témoigne avec impartialité de la force de la preuve de ses contradicteurs (Sharḥ Ṣaḥîḥ Muslim 4/48).",
-          "feedbackAr": "توثيق علمي نفيس! شهادة الإمام النووي الشافعي بأرجحية دليل مخالفيه تنم عن قمة الإنصاف العلمي."
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Précision documentaire appréciable : an-Nawawî témoigne effectivement de la force de la preuve des contradicteurs (Sharḥ Ṣaḥîḥ Muslim 4/48), même si la réponse complète (Option A) doit englober la qualification globale de la divergence comme khilâf sa'igh.",
+          "feedbackAr": "ملحظ توثيقي طيب: شهادة النووي بأرجحية دليل مخالفيه مهمة، وإن كان الاستيعاب المنهجي الأكمل (الخيار أ) يقتضي توصيف الخلاف كخلاف سائغ وتبيين مذهب الفريقين."
         },
         {
           "textFr": "Considérer que les avis divergents sont tous des égarements condamnables.",
@@ -482,8 +482,8 @@
       "role": "PRIMARY_PROOF",
       "order": 2,
       "stepNumber": 7,
-      "commentFr": "Hadith corrobant d'al-Barâ' ibn 'Âzib dans les Sunan confirmant l'ordre pour le chameau et la dispense pour le mouton.",
-      "commentAr": "حديث البراء بن عازب في السنن مؤكداً للأمر في الإبل ونفيه في الغنم.",
+      "commentFr": "Hadith d'al-Barâ' ibn 'Âzib dans les Sunan confirmant l'ordre pour le chameau et la dispense pour le mouton (authentifié par al-Albânî, avec parallèles chez at-Tirmidhî, Ibn Mâjah et Ahmad).",
+      "commentAr": "حديث البراء بن عازب في سنن أبي داود مؤكداً للأمر في الإبل ونفيه في الغنم (صححه الألباني، وله شواهد عند الترمذي وابن ماجه وأحمد).",
       "evidence": {
         "id": "ev-hadith-baraa",
         "type": "HADITH",
@@ -497,7 +497,7 @@
         "chapterFr": "Chapitre sur les ablutions après la viande de chameau",
         "editionVolumePage": "Kitāb aṭ-Ṭahāra, n°184 (Éd. al-Maktaba al-'Aṣriyya)",
         "authenticityGrade": "Ṣaḥîḥ",
-        "gradeScholar": "Abû Dâwûd / at-Tirmidhî / al-Albânî",
+        "gradeScholar": "Al-Albânî (Ṣaḥîḥ Abî Dâwûd 184)",
         "quoteArOriginal": "سُئِلَ رَسُولُ اللَّهِ صلى الله عليه وسلم عَنِ الْوُضُوءِ مِنْ لُحُومِ الإِبِلِ فَقَالَ: «تَوَضَّئُوا مِنْهَا»، وَسُئِلَ عَنْ لُحُومِ الْغَنَمِ فَقَالَ: «لاَ تَتَوَضَّئُوا مِنْهَا».",
         "quoteArVocalized": "سُئِلَ رَسُولُ اللهِ ﷺ عَنِ الْوُضُوءِ مِنْ لُحُومِ الإِبِلِ فَقَالَ: «تَوَضَّئُوا مِنْهَا»، وَسُئِلَ عَنْ لُحُومِ الْغَنَمِ فَقَالَ: «لَا تَتَوَضَّئُوا مِنْهَا».",
         "quoteArNormalized": "سئل رسول الله صلى الله عليه وسلم عن الوضوء من لحوم الابل فقال توضؤوا منها وسئل عن لحوم الغنم فقال لا تتوضؤوا منها",
@@ -563,8 +563,8 @@
       "evidenceIds": ["ev-athar-nawawi"]
     },
     "scholarlyPositions": {
-      "fr": "Position 1 (Ahmad ibn Hanbal, Ishâq ibn Râhawayh, Ibn Hazm) : La consommation annule les ablutions en vertu de l'ordre explicite. Position 2 (Jumhûr : Hanafites, Mâlikites, Shâfi'ites) : Elle n'annule pas les ablutions, l'ordre étant compris comme une recommandation ou considéré comme abrogé.",
-      "ar": "القول الأول (أحمد بن حنبل، وإسحاق بن راهويه، وابن حزم): ينقض الوضوء لظاهر الأمر الصريح. القول الثاني (جمهور العلماء: الحنفية والمالكية والشافعية): لا ينقض الوضوء، وحملوا الأمر على الاستحباب أو النسخ.",
+      "fr": "Position 1 (Ahmad ibn Hanbal, Ishâq ibn Râhawayh et traditionnistes) : La consommation annule les ablutions en vertu de l'ordre explicite. Position 2 (Jumhûr : Hanafites, Mâlikites, Shâfi'ites) : Elle n'annule pas les ablutions, l'ordre étant compris à la lumière du hadith d'abandon du wuḍû' pour ce qui a touché le feu.",
+      "ar": "القول الأول (أحمد بن حنبل، وإسحاق بن راهويه، وفقهاء الحديث): ينقض الوضوء لظاهر الأمر الصريح. القول الثاني (جمهور العلماء: الحنفية والمالكية والشافعية): لا ينقض الوضوء، تأويلاً للأمر على ضوء حديث ترك الوضوء مما مست النار.",
       "evidenceIds": ["ev-athar-nawawi"]
     },
     "methodologicalPitfall": {

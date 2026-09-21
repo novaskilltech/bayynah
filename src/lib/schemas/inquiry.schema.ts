@@ -51,25 +51,52 @@ export const RevealPolicyEnum = z.enum([
   "NEXT_STEP",
 ]);
 
-export const InquiryStepOptionSchema = z.object({
-  textFr: z.string().min(1),
-  textAr: z.string().optional(),
-  quality: StepOptionQualityEnum,
-  methodologicalScore: z.union([z.literal(0), z.literal(1), z.literal(2), z.literal(3)]),
-  feedbackFr: z.string().min(1),
-  feedbackAr: z.string().optional(),
-});
+export const InquiryStepOptionSchema = z
+  .object({
+    textFr: z.string().min(1),
+    textAr: z.string().optional(),
+    quality: StepOptionQualityEnum,
+    methodologicalScore: z.union([z.literal(0), z.literal(1), z.literal(2), z.literal(3)]),
+    feedbackFr: z.string().min(1),
+    feedbackAr: z.string().optional(),
+  })
+  .superRefine((opt, ctx) => {
+    const expectedScoreMap: Record<z.infer<typeof StepOptionQualityEnum>, number> = {
+      INCORRECT: 0,
+      PREMATURE: 1,
+      ACCEPTABLE: 2,
+      BEST: 3,
+    };
+    if (opt.methodologicalScore !== expectedScoreMap[opt.quality]) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `Incohérence score/qualité : pour la qualité "${opt.quality}", le score attendu est ${expectedScoreMap[opt.quality]}, mais ${opt.methodologicalScore} a été fourni.`,
+        path: ["methodologicalScore"],
+      });
+    }
+  });
 
-export const InquiryStepSchema = z.object({
-  stepNumber: z.number().int().positive(),
-  titleFr: z.string().min(1),
-  titleAr: z.string().optional(),
-  instructionFr: z.string().min(1),
-  instructionAr: z.string().optional(),
-  options: z.array(InquiryStepOptionSchema).min(2, "Au moins 2 options par étape"),
-  revealedEvidenceIds: z.array(z.string()).default([]),
-  revealPolicy: RevealPolicyEnum.default("AFTER_ANSWER"),
-});
+export const InquiryStepSchema = z
+  .object({
+    stepNumber: z.number().int().positive(),
+    titleFr: z.string().min(1),
+    titleAr: z.string().optional(),
+    instructionFr: z.string().min(1),
+    instructionAr: z.string().optional(),
+    options: z.array(InquiryStepOptionSchema).min(2, "Au moins 2 options par étape"),
+    revealedEvidenceIds: z.array(z.string()).default([]),
+    revealPolicy: RevealPolicyEnum.default("AFTER_ANSWER"),
+  })
+  .superRefine((step, ctx) => {
+    const bestCount = step.options.filter((o) => o.quality === "BEST").length;
+    if (bestCount !== 1) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `Chaque étape doit comporter exactement une seule option avec la qualité "BEST" (trouvé : ${bestCount}).`,
+        path: ["options"],
+      });
+    }
+  });
 
 export const InquiryEvidenceSchema = z.object({
   evidenceId: z.string().min(1, "L'ID de la preuve est requis"),
@@ -109,26 +136,51 @@ export const InquirySchema = z
     reviewedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Format de date YYYY-MM-DD").optional(),
     lastVerifiedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Format de date YYYY-MM-DD").optional(),
   })
-  .refine(
-    (inquiry) => {
-      if (inquiry.editorialStatus === "PUBLISHED") {
-        if (!inquiry.reviewerId || !inquiry.reviewedAt) {
-          return false;
-        }
-        // Vérifier qu'aucune preuve liée n'est encore TO_BE_CHECKED
-        for (const ie of inquiry.inquiryEvidences) {
-          if (ie.evidence && ie.evidence.citationStatus === "TO_BE_CHECKED") {
-            return false;
-          }
+  .superRefine((inquiry, ctx) => {
+    if (inquiry.editorialStatus === "PUBLISHED") {
+      if (!inquiry.reviewerId || !inquiry.reviewedAt) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "Une enquête au statut PUBLISHED exige obligatoirement un reviewerId et un reviewedAt.",
+          path: ["editorialStatus"],
+        });
+      }
+
+      // Vérifier qu'aucune preuve liée n'est encore TO_BE_CHECKED
+      for (let i = 0; i < inquiry.inquiryEvidences.length; i++) {
+        const ie = inquiry.inquiryEvidences[i];
+        if (ie.evidence && ie.evidence.citationStatus === "TO_BE_CHECKED") {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `La preuve "${ie.evidenceId}" a le statut TO_BE_CHECKED, interdit pour une enquête PUBLISHED.`,
+            path: ["inquiryEvidences", i, "evidence", "citationStatus"],
+          });
         }
       }
-      return true;
-    },
-    {
-      message:
-        "Une enquête au statut PUBLISHED exige obligatoirement un reviewerId, un reviewedAt et aucune preuve avec le statut TO_BE_CHECKED.",
-      path: ["editorialStatus"],
+
+      // Exiger exactement 10 étapes pour une enquête PUBLISHED
+      if (inquiry.steps.length !== 10) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `Une enquête PUBLISHED doit comporter exactement 10 étapes (trouvé : ${inquiry.steps.length}).`,
+          path: ["steps"],
+        });
+      }
+
+      // Vérifier la numérotation séquentielle 1 à 10 sans doublon
+      const stepNumbers = inquiry.steps.map((s) => s.stepNumber);
+      const isSequential =
+        stepNumbers.length === 10 &&
+        stepNumbers.every((num, idx) => num === idx + 1);
+
+      if (!isSequential) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `Les 10 étapes d'une enquête PUBLISHED doivent être numérotées séquentiellement de 1 à 10 sans doublon ni saut (trouvé : [${stepNumbers.join(", ")}]).`,
+          path: ["steps"],
+        });
+      }
     }
-  );
+  });
 
 export type InquiryInput = z.infer<typeof InquirySchema>;
