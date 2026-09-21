@@ -2,7 +2,10 @@
   "id": "inquiry-06",
   "slug": "la-adwa-istidlal",
   "domain": "HADITH",
-  "editorialStatus": "DRAFT",
+  "editorialStatus": "PUBLISHED",
+  "reviewerId": "reviewer-01",
+  "reviewedAt": "2026-09-21",
+  "lastVerifiedAt": "2026-09-21",
   "title": {
     "fr": "« Il n’y a pas de contagion » : hadith authentique, conclusion correcte ?",
     "ar": "«لا عدوى»: الحديث صحيح، فهل كل استدلال به صحيح؟"
@@ -479,7 +482,11 @@
         "quoteArNormalized": "لا عدوى ولا طيرة ولا هامة ولا صفر فقال اعرابي يا رسول الله فما بال ابلي تكون في الرمل كانها الظباء فياتي البعير الاجرب فيدخل فيها فيجربها فقال فمن اعدى الاول",
         "translationFr": "« Il n'y a pas de contagion, ni d'augure, ni de hâmah, ni de safar. » Un Bédouin dit alors : « Ô Messager d'Allah, qu'en est-il donc de mes chameaux qui sont dans le sable comme des gazelles, puis arrive un chameau galeux qui se mêle à eux et leur transmet la gale ? » Il répondit : « Qui donc a contaminé le premier ? »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://dorar.net/h/TOIUW3lM?osoul=1",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
@@ -508,7 +515,11 @@
         "quoteArNormalized": "لا يورد ممرض على مصح",
         "translationFr": "Celui qui possède des animaux malades ne doit pas les faire arriver auprès de ceux qui sont sains.",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://dorar.net/h/TOIUW3lM?osoul=1",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
@@ -537,7 +548,11 @@
         "quoteArNormalized": "وفر من المجذوم كما تفر من الاسد",
         "translationFr": "Fuis le lépreux comme tu fuirais le lion.",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://dorar.net/h/p6uCrnZ4?osoul=1",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
@@ -560,7 +575,11 @@
         "quoteArNormalized": "قال جمهور العلماء يجب الجمع بين هذين الحديثين وهما صحيحان وطريق الجمع ان حديث لا عدوى المراد به نفي ما كانت الجاهلية تعتقده ان المرض يعدي بطبعه لا بتقدير الله تعالى وحديث لا يورد ممرض على مصح ارشاد الى اجتناب ما جعله الله سببا عاديا لوقوع الضرر بمشيئته",
         "translationFr": "Le jumhūr des savants a dit : il est obligatoire de concilier ces deux hadiths, qui sont tous deux authentiques. La voie de conciliation est que le hadith « Il n'y a pas de contagion » vise à nier ce que l'époque préislamique (Jâhiliyya) croyait, à savoir que la maladie transmet par sa propre nature et non par le décret d'Allah تعالى ; tandis que le hadith « Que le malade ne soit pas amené chez le bien-portant » est une orientation prescrivant d'éviter ce qu'Allah a établi comme cause habituelle de survenue du dommage par Sa volonté.",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://www.islamweb.net/ar/library/content/53/984",
+        "lastVerifiedAt": "2026-09-21"
       }
     }
   ],
