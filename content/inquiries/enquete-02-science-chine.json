@@ -2,7 +2,10 @@
   "id": "inquiry-02",
   "slug": "cherchez-science-chine",
   "domain": "HADITH",
-  "editorialStatus": "DRAFT",
+  "editorialStatus": "PUBLISHED",
+  "reviewerId": "reviewer-01",
+  "reviewedAt": "2026-09-21",
+  "lastVerifiedAt": "2026-09-21",
   "title": {
     "fr": "« Cherchez la science même en Chine » : célèbre signifie-t-il authentique ?",
     "ar": "«اطلبوا العلم ولو بالصين»: هل الشهرة تعني صحة الحديث؟"
@@ -236,12 +239,12 @@
       "instructionAr": "تنوعت عبارات الأئمة بين الضعيف وشديد الضعف والباطل والموضوع؛ فما الموقف المنهجي من هذا التباين؟",
       "options": [
         {
-          "textFr": "Les critiques ne sont pas nécessairement unanimes sur l'étiquette technique finale — faible, très faible, bāṭil ou mawḍûʿ — mais le dossier ne permet pas de présenter « ولو بالصين » comme un hadith authentique établi.",
-          "textAr": "لم تتحد عبارات النقاد في المصطلح النهائي — بين ضعيف، وشديد الضعف، وباطل، وموضوع — لكن مجموع أحكامهم يقطع بأنه لا يصح تقديم زيادة «ولو بالصين» كحديث صحيح ثابت.",
+          "textFr": "Les critiques convergent largement sur la faiblesse des voies individuelles, mais divergent sur l'évaluation finale de l'ensemble des transmissions (al-Mizzî envisageant une élévation au ḥasan par la réunion des voies, là où d'autres comme Ibn al-Jawzî ou al-Albânî maintiennent l'invalidation). En tout état de cause, la formule ne doit pas être présentée sans nuance comme un hadith ṣaḥîḥ incontesté.",
+          "textAr": "تقارب النقاد على تضعيف الأفراد، ولكن وقع النظر في مجموع الطرق (فبينما رجا المزي ارتقاءها بمجموعها إلى الحسن، جزم آخرون كابن الجوزي والألباني ببطلانها)؛ وفي كل الأحوال لا يصح تقديم اللفظ كحديث صحيح ثابت بلا تردد.",
           "quality": "BEST",
           "methodologicalScore": 3,
-          "feedbackFr": "Excellente synthèse critique : distinguer le consensus de fond (non-authenticité) de la nuance terminologique.",
-          "feedbackAr": "تحقيق رائع: التفريق بين الاتفاق على عدم الثبوت وبين التفاوت في التوصيف الاصطلاحي."
+          "feedbackFr": "Excellente rigueur méthodologique : ne pas fabriquer un faux consensus critique. Reconnaître que les spécialistes s'accordent sur la faiblesse de chaque chaîne isolée tout en constatant leur divergence sur l'effet du regroupement des voies.",
+          "feedbackAr": "تحقيق نقدي بالغ الدقة: تجنب ادعاء إجماع موهوم، والاعتراف بتوافق الأئمة على ضعف الأسانيد المفردة مع إبراز تباينهم في أثر ضم الطرق والشواهد."
         },
         {
           "textFr": "Plusieurs spécialistes le jugent très faible ou invalide.",
@@ -465,7 +468,11 @@
         "quoteArNormalized": "لا يحفظ ولو بالصين الا عن ابي عاتكة وهو متروك الحديث",
         "translationFr": "L’ajout “même en Chine” n’est connu que par la voie d’Abû ʿÂtika, qui est délaissé dans le hadith.",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://dorar.net/h/eBDJvqUi",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
@@ -478,17 +485,21 @@
       "evidence": {
         "id": "ev-bayhaqi-china",
         "type": "BOOK",
-        "referenceCode": "Shuʿab al-Îmân / Al-Madkhal",
+        "referenceCode": "Al-Madkhal ilâ as-Sunan 1/292",
         "primarySource": false,
-        "sourceWork": "Shuʿab al-Îmân",
+        "sourceWork": "Al-Madkhal ilâ as-Sunan al-Kubrâ",
         "author": "Abû Bakr Aḥmad ibn al-Ḥusayn al-Bayhaqî",
-        "editionVolumePage": "Rapporté par al-ʿIrâqî dans Takhrîj Aḥâdîth al-Iḥyâʾ (1/14)",
-        "quoteArOriginal": "متنه مشهور وأسانيده ضعيفة.",
-        "quoteArVocalized": "مَتْنُهُ مَشْهُورٌ وَأَسَانِيدُهُ ضَعِيفَةٌ.",
-        "quoteArNormalized": "متنه مشهور واسانيده ضعيفة",
-        "translationFr": "Son texte est célèbre, mais ses chaînes sont faibles.",
+        "editionVolumePage": "Tome 1, page 292 (Éd. Dâr al-Khulafâʾ / Mu'assasat ar-Risâla)",
+        "quoteArOriginal": "متنه مشهور وأسانيده ضعيفة لا أعرف له إسنادا يثبت بمثله الحديث.",
+        "quoteArVocalized": "مَتْنُهُ مَشْهُورٌ وَأَسَانِيدُهُ ضَعِيفَةٌ لَا أَعْرِفُ لَهُ إِسْنَادًا يَثْبُتُ بِمِثْلِهِ الْحَدِيثُ.",
+        "quoteArNormalized": "متنه مشهور واسانيده ضعيفة لا اعرف له اسنادا يثبت بمثله الحديث",
+        "translationFr": "Son texte est célèbre, mais ses chaînes sont faibles ; je ne lui connais pas de chaîne de transmission avec laquelle un hadith puisse être établi.",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://islamweb.net/ar/library/content/1037/251/%D8%A8%D8%A7%D8%A8-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D8%A7%D9%84%D8%B9%D8%A7%D9%85-%D8%A7%D9%84%D8%B0%D9%8A-%D9%84%D8%A7-%D9%8A%D8%B3%D8%B9-%D8%A7%D9%84%D8%A8%D8%A7%D9%84%D8%BA-%D8%A7%D9%84%D8%B9%D8%A7%D9%82%D9%84-%D8%AC%D9%87%D9%84%D9%87",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
@@ -511,9 +522,12 @@
         "quoteArNormalized": "طلب العلم فريضة على كل مسلم صحيح وزيادة ولو بالصين باطلة",
         "translationFr": "« La quête de la science est une obligation pour chaque musulman » : authentique... et l'ajout « même en Chine » : nul et non avenu (bâṭila).",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
         "consultationDate": "2026-09-21",
-        "consultationUrl": "https://dorar.net/h/eBDJvqUi"
+        "consultationUrl": "https://dorar.net/h/sPOduhUK",
+        "lastVerifiedAt": "2026-09-21"
       }
     }
   ],
@@ -524,8 +538,8 @@
       "evidenceIds": ["ev-uqayli-china", "ev-bayhaqi-china"]
     },
     "discussed": {
-      "fr": "Le degré technique exact appliqué à la formule varie selon les critiques : faiblesse sévère, bāṭil, ou mawḍûʿ chez certains. Cette divergence de terminologie ne transforme cependant pas la formule en hadith authentique.",
-      "ar": "اختلفت عبارات النقاد في الدرجة النهائية للرواية بين الضعف الشديد والبطلان والوضع عند بعضهم، لكن هذا الاختلاف لا يجعلها حديثاً صحيحاً.",
+      "fr": "L'évaluation finale de la formule varie selon les critiques : si la plupart maintiennent la faiblesse sévère, le bāṭil ou le mawḍûʿ (al-ʿUqaylî, Ibn Ḥibbân, Ibn al-Jawzî, al-Albânî), al-Mizzî a envisagé qu'elle puisse atteindre le degré ḥasan par la réunion de ses voies. En tout état de cause, elle ne peut être présentée sans nuance comme un hadith ṣaḥîḥ établi.",
+      "ar": "وقع النظر بين أهل العلم في الدرجة النهائية للرواية: فبينما جزم الأكثر بضعفها الشديد أو بطلانها أو وضعها (كالعقيلي وابن حبان وابن الجوزي والألباني)، رجا المزي ارتقاءها بمجموع طرقها إلى درجة الحسن؛ وفي كل الأحوال لا يصح تقديمها بلا تردد كحديث صحيح ثابت.",
       "evidenceIds": ["ev-bayhaqi-china", "ev-albani-talab-ilm-china"]
     },
     "notEstablished": {
@@ -535,7 +549,7 @@
     },
     "primaryEvidences": [
       "Al-ʿUqaylî — aḍ-Ḍuʿafâʾ al-Kabîr, 2/230",
-      "Al-Bayhaqî — Shuʿab al-Îmân / al-Madkhal",
+      "Al-Bayhaqî — Al-Madkhal ilâ as-Sunan al-Kubrâ, 1/292",
       "Al-Albânî — Hidâyat ar-Ruwât, p. 214"
     ],
     "salafUnderstanding": {
@@ -544,8 +558,8 @@
       "evidenceIds": ["ev-uqayli-china"]
     },
     "scholarlyPositions": {
-      "fr": "Plusieurs critiques ont rejeté ou fortement affaibli l’attribution de « ولو بالصين ». La qualification précise varie, mais le dossier ne permet pas de la présenter comme ṣaḥîḥ.",
-      "ar": "رد عدد من النقاد أو ضعفوا بشدة نسبة «ولو بالصين»، وتنوعت عباراتهم بين شديد الضعف والباطل والموضوع، لكن لم يثبت تصحيحها.",
+      "fr": "Position 1 (Majorité des critiques : al-ʿUqaylî, al-Bayhaqî, Ibn Ḥibbân, Ibn al-Jawzî, al-Albânî) : Les chaînes sont faibles ou sans fondement, l'ajout sur la Chine est rejeté (ḍaʿîf jiddan, bāṭil ou mawḍûʿ). Position 2 (Al-Mizzî) : Possibilité pour l'ensemble des voies d'atteindre le rang de ḥasan. Aucune position savante ne l'établit comme ṣaḥîḥ incontesté.",
+      "ar": "الموقف الأول (جمهور النقاد: العقيلي، البيهقي، ابن حبان، ابن الجوزي، الألباني): الأسانيد واهية أو ساقطة، وزيادة الصين مردودة (شديدة الضعف، باطلة أو موضوعة). الموقف الثاني (المزي): احتمال ترقي مجموع الطرق إلى رتبة الحسن. ولا يوجد قول معتبر يثبت صحته بلا تردد.",
       "evidenceIds": ["ev-uqayli-china", "ev-bayhaqi-china", "ev-albani-talab-ilm-china"]
     },
     "methodologicalPitfall": {
@@ -554,7 +568,7 @@
     },
     "originalSources": [
       "Al-ʿUqaylî, aḍ-Ḍuʿafâʾ al-Kabîr (2/230)",
-      "Al-Bayhaqî, Shuʿab al-Îmân et al-Madkhal ilâ as-Sunan",
+      "Al-Bayhaqî, Al-Madkhal ilâ as-Sunan al-Kubrâ (1/292)",
       "Al-Albânî, Hidâyat ar-Ruwât ilâ Takhrîj Aḥâdîth al-Maṣâbîḥ wa-l-Mishkât (p. 214)"
     ],
     "certaintyLevel": "FORTEMENT_ETABLI"
