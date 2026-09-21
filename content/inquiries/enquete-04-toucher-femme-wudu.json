@@ -2,7 +2,10 @@
   "id": "inquiry-04",
   "slug": "toucher-femme-wudu",
   "domain": "FIQH",
-  "editorialStatus": "DRAFT",
+  "editorialStatus": "PUBLISHED",
+  "reviewerId": "reviewer-01",
+  "reviewedAt": "2026-09-21",
+  "lastVerifiedAt": "2026-09-21",
   "title": {
     "fr": "Toucher une femme annule-t-il les ablutions ?",
     "ar": "هل لمس المرأة ينقض الوضوء؟"
@@ -49,8 +52,8 @@
           "textAr": "إن كان الفقهاء قد اختلفوا، فالسبب حتماً أن بعضهم جهل وجود الآية.",
           "quality": "INCORRECT",
           "methodologicalScore": 0,
-          "feedbackFr": "Erreur grossière : le verset est au cœur de la sourate An-Nisâʾ et tous les juristes le connaissent ; le désaccord porte sur sa dalāla.",
-          "feedbackAr": "خطأ جسيم وسوء ظن بالعلماء: فالآية معلومة لجميع الفقهاء قطعاً، والنزاع إنما هو في دلالتها وكيفية الاستدلال بها."
+          "feedbackFr": "Erreur méthodologique : le verset est un texte central du dossier et le khilāf documenté porte notamment sur sa dalāla.",
+          "feedbackAr": "خطأ منهجي: فالآية نص مركزي في الباب، والخلاف الموثق إنما هو في دلالتها ومناط الاستدلال بها."
         }
       ],
       "revealedEvidenceIds": [],
@@ -185,7 +188,8 @@
         }
       ],
       "revealedEvidenceIds": [
-        "ev-tabari-lamastum"
+        "ev-tabari-ibnabbas-lams",
+        "ev-tabari-ibnmasud-lams"
       ],
       "revealPolicy": "AFTER_ANSWER"
     },
@@ -420,8 +424,8 @@
           "textAr": "النص القطعي الثبوت قد يحتمل دلالات فقهية متعددة إذا كان اللفظ مشتركاً أو وردت نصوص أخرى تشهد للباب. وقبل اتهام أي رأي بمخالفة النص، يجب تفكيك وجه استدلاله ومسلكه في الجمع.",
           "quality": "BEST",
           "methodologicalScore": 3,
-          "feedbackFr": "Règle d'or méthodologique de TABAYYUN : distinguer certitude du texte et pluralité de la dalâla pour préserver la rigueur critique.",
-          "feedbackAr": "القاعدة الذهبية لمنهج تَبَيُّن: التمييز بين قطعية الثبوت وظنية الدلالة، وإحسان الظن باجتهاد الفقهاء المبني على أصول محققة."
+          "feedbackFr": "Règle d'or méthodologique de TABAYYUN : distinguer certitude du texte et analyse de sa dalāla pour préserver la rigueur critique.",
+          "feedbackAr": "القاعدة الذهبية لمنهج تَبَيُّن: التمييز بين قطعية ثبوت النص وموضع الخلاف في دلالته، وإحسان الظن باجتهاد الفقهاء المبني على أصول محققة."
         },
         {
           "textFr": "Il faut connaître les preuves des différentes écoles.",
@@ -482,34 +486,65 @@
       }
     },
     {
-      "evidenceId": "ev-tabari-lamastum",
+      "evidenceId": "ev-tabari-ibnabbas-lams",
       "role": "SCHOLARLY_EXPLANATION",
       "order": 2,
       "stepNumber": 4,
-      "commentFr": "Aṭ-Ṭabarī consigne la divergence d'interprétation ancienne entre Ibn ʿAbbās (rapport sexuel) et Ibn Masʿūd (contact inférieur au rapport).",
-      "commentAr": "جامع البيان للإمام الطبري يوثق اختلاف التفسير المأثور عن الصحابة بين ابن عباس وابن مسعود.",
+      "commentFr": "Aṭ-Ṭabarī consigne l'interprétation d'Ibn ʿAbbās comprenant le verset comme une allusion au rapport sexuel.",
+      "commentAr": "الإمام الطبري يوثق تفسير ابن عباس بحمل اللمس على الجماع بالكناية.",
       "evidence": {
-        "id": "ev-tabari-lamastum",
+        "id": "ev-tabari-ibnabbas-lams",
         "type": "BOOK",
-        "referenceCode": "Jâmiʿ al-Bayân 4:43",
+        "referenceCode": "Jâmiʿ al-Bayân 4:43 (Ibn ʿAbbâs)",
         "primarySource": true,
         "sourceWork": "Jâmiʿ al-Bayân ʿan Taʾwîl Ây al-Qurʾân (Tafsîr aṭ-Ṭabarî)",
         "author": "Abû Jaʿfar Muḥammad ibn Jarîr aṭ-Ṭabarî",
-        "editionVolumePage": "Commentaire de la sourate An-Nisâʾ, verset 43",
+        "editionVolumePage": "Commentaire de la sourate An-Nisâʾ, verset 43 (t. 8, p. 389, notice n°9499, Éd. Mu'assasat ar-Risâla)",
         "quoteArOriginal": "اللمس والمس والمباشرة الجماع ولكن الله يكني بما شاء",
         "quoteArVocalized": "اللَّمْسُ وَالْمَسُّ وَالْمُبَاشَرَةُ الْجِمَاعُ، وَلَكِنَّ اللَّهَ يَكْنِي بِمَا شَاءَ",
         "quoteArNormalized": "اللمس والمس والمباشرة الجماع ولكن الله يكني بما شاء",
         "translationFr": "Le toucher, le contact et la mubāshara désignent ici le rapport sexuel ; Allah emploie la formulation indirecte qu’Il veut.",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://islamweb.net/ar/library/index.php?ID=1280&ayano=0&bk_no=50&bookhad=0&flag=0&idfrom=1273&idto=1273&page=bookcontents",
+        "lastVerifiedAt": "2026-09-21"
+      }
+    },
+    {
+      "evidenceId": "ev-tabari-ibnmasud-lams",
+      "role": "SCHOLARLY_EXPLANATION",
+      "order": 3,
+      "stepNumber": 4,
+      "commentFr": "Aṭ-Ṭabarī consigne séparément la parole d'Ibn Masʿūd comprenant le contact comme inférieur au rapport sexuel.",
+      "commentAr": "الإمام الطبري يوثق تفسير ابن مسعود بحمل اللمس على ما دون الجماع.",
+      "evidence": {
+        "id": "ev-tabari-ibnmasud-lams",
+        "type": "BOOK",
+        "referenceCode": "Jâmiʿ al-Bayân 4:43 (Ibn Masʿûd)",
+        "primarySource": true,
+        "sourceWork": "Jâmiʿ al-Bayân ʿan Taʾwîl Ây al-Qurʾân (Tafsîr aṭ-Ṭabarî)",
+        "author": "Abû Jaʿfar Muḥammad ibn Jarîr aṭ-Ṭabarî",
+        "editionVolumePage": "Commentaire de la sourate An-Nisâʾ, verset 43 (t. 8, p. 396, notice n°9520, Éd. Mu'assasat ar-Risâla)",
+        "quoteArOriginal": "قال ابن مسعود: اللمس ما دون الجماع.",
+        "quoteArVocalized": "قَالَ ابْنُ مَسْعُودٍ: اللَّمْسُ مَا دُونَ الْجِمَاعِ.",
+        "quoteArNormalized": "قال ابن مسعود اللمس ما دون الجماع",
+        "translationFr": "Ibn Masʿūd a dit : le toucher désigne ce qui est inférieur au rapport sexuel.",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://islamweb.net/ar/library/index.php?ID=1280&ayano=0&bk_no=50&bookhad=0&flag=0&idfrom=1273&idto=1273&page=bookcontents",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
       "evidenceId": "ev-muslim-aisha-feet",
       "role": "PRIMARY_PROOF",
-      "order": 3,
+      "order": 4,
       "stepNumber": 5,
-      "commentFr": "Hadith authentique dans Ṣaḥîḥ Muslim rapportant un contact physique direct avec ʿÂʾisha pendant la prière.",
+      "commentFr": "Hadith authentique dans Ṣaḥîḥ Muslim rapportant un contact physique avec ʿÂʾisha pendant la prière.",
       "commentAr": "حديث عائشة في صحيح مسلم في وقوع مماسة بدنية بينها وبين النبي ﷺ أثناء صلاته.",
       "evidence": {
         "id": "ev-muslim-aisha-feet",
@@ -530,13 +565,17 @@
         "quoteArNormalized": "فالتمسته فوقعت يدي على بطن قدميه وهو في المسجد وهما منصوبتان",
         "translationFr": "Je le cherchai et ma main tomba sur la plante de ses deux pieds alors qu’il était dans la mosquée, les pieds dressés.",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://dorar.net/h/p6uCrnZ4",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
       "evidenceId": "ev-ibnrushd-lams",
       "role": "SCHOLARLY_EXPLANATION",
-      "order": 4,
+      "order": 5,
       "stepNumber": 7,
       "commentFr": "Ibn Rushd analyse la cause linguistique de la divergence (polysémie de lams) et synthétise les orientations des écoles.",
       "commentAr": "ابن رشد يحرر سبب اختلاف الفقهاء في المسألة باشتراك اسم اللمس وتعدد وجوه الجمع.",
@@ -547,13 +586,17 @@
         "primarySource": true,
         "sourceWork": "Bidâyat al-Mujtahid wa Nihâyat al-Muqtaṣid",
         "author": "Ibn Rushd al-Ḥafîd (Averroès)",
-        "editionVolumePage": "Livre de la purification, chapitre des annulatifs du wuḍûʾ",
+        "editionVolumePage": "Tome 1, page 36 (Éd. Dâr al-Ḥadîth / notice numérique Islamweb n°30, Le livre de la purification, chapitre des annulatifs)",
         "quoteArOriginal": "وسبب اختلافهم في هذه المسألة اشتراك اسم اللمس في كلام العرب، فإن العرب تطلقه مرة على اللمس الذي هو باليد، ومرة تكني به عن الجماع",
         "quoteArVocalized": "وَسَبَبُ اخْتِلَافِهِمْ فِي هَذِهِ الْمَسْأَلَةِ اشْتِرَاكُ اسْمِ اللَّمْسِ فِي كَلَامِ الْعَرَبِ، فَإِنَّ الْعَرَبَ تُطْلِقُهُ مَرَّةً عَلَى اللَّمْسِ الَّذِي هُوَ بِالْيَدِ، وَمَرَّةً تَكْنِي بِهِ عَنِ الْجِمَاعِ",
         "quoteArNormalized": "وسبب اختلافهم في هذه المسالة اشتراك اسم اللمس في كلام العرب فان العرب تطلقه مرة على اللمس الذي هو باليد ومرة تكني به عن الجماع",
         "translationFr": "La cause de leur divergence dans cette question est que le terme “toucher” est polysémique dans la langue arabe : les Arabes l’emploient parfois pour le contact de la main et parfois comme euphémisme pour le rapport sexuel.",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://islamweb.net/ar/library/content/97/30/%D8%A7%D9%84%D8%A8%D8%A7%D8%A8-%D8%A7%D9%84%D8%B1%D8%A7%D8%A8%D8%B9-%D9%81%D9%8A-%D9%86%D9%88%D8%A7%D9%82%D8%B6-%D8%A7%D9%84%D9%88%D8%B6%D9%88%D8%A1",
+        "lastVerifiedAt": "2026-09-21"
       }
     }
   ],
@@ -563,7 +606,8 @@
       "ar": "ثبت ورود قوله تعالى «أو لامستم النساء»، وثبت اختلاف التفسير المأثور في معنى الملامسة؛ فمنهم من حملها على الجماع ومنهم من حملها على ما دونه.",
       "evidenceIds": [
         "ev-quran-lamastum-4-43",
-        "ev-tabari-lamastum"
+        "ev-tabari-ibnabbas-lams",
+        "ev-tabari-ibnmasud-lams"
       ]
     },
     "discussed": {
@@ -583,15 +627,16 @@
     },
     "primaryEvidences": [
       "Sourate An-Nisâʾ (4:43)",
-      "Jâmiʿ al-Bayân (Tafsîr aṭ-Ṭabarî, sourate 4, verset 43)",
+      "Jâmiʿ al-Bayân (Tafsîr aṭ-Ṭabarî, Ibn ʿAbbâs et Ibn Masʿûd, verset 4:43)",
       "Ṣaḥîḥ Muslim (n°486)",
-      "Bidâyat al-Mujtahid wa Nihâyat al-Muqtaṣid d'Ibn Rushd (Chapitre des annulatifs du wuḍûʾ)"
+      "Bidâyat al-Mujtahid wa Nihâyat al-Muqtaṣid d'Ibn Rushd (1/36)"
     ],
     "salafUnderstanding": {
       "fr": "Ibn ʿAbbās est rapporté comme interprétant « اللمس » par le rapport sexuel, tandis qu’Ibn Masʿūd est rapporté avec une compréhension incluant le contact inférieur au rapport.",
       "ar": "روي عن ابن عباس تفسير اللمس بالجماع، وروي عن ابن مسعود حمله على ما دون الجماع.",
       "evidenceIds": [
-        "ev-tabari-lamastum"
+        "ev-tabari-ibnabbas-lams",
+        "ev-tabari-ibnmasud-lams"
       ]
     },
     "scholarlyPositions": {
