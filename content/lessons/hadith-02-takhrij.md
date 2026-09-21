@@ -4,7 +4,7 @@ slug: "hadith-02-takhrij"
 school: "HADITH"
 level: 1
 order: 2
-editorialStatus: "DRAFT"
+editorialStatus: "PUBLISHED"
 titleFr: "Retrouver un hadith : le takhrîj"
 titleAr: "تخريج الحديث: كيف نرجع إلى المصدر الأصلي؟"
 summaryFr: "Apprendre à remonter d'une citation populaire ou d'un extrait vers les sources originales du hadith et les jugements des spécialistes."
@@ -12,6 +12,9 @@ summaryAr: "تعلم كيفية الرجوع من النص المتداول إل
 methodologyPrincipleFr: "Trouver une phrase sur Internet n'est pas retrouver un hadith : il faut remonter à ses sources."
 methodologyPrincipleAr: "العثور على عبارة في الإنترنت لا يعني تخريج الحديث، بل لا بد من الرجوع إلى مصادره الأصلية."
 authorId: "author-01"
+reviewerId: "reviewer-01"
+reviewedAt: "2026-09-21"
+lastVerifiedAt: "2026-09-21"
 quizzes:
   - id: "quiz-h02-1"
     questionFr: "Vous trouvez sur un site : « Hadith authentique : cherchez la science même en Chine. » Quelle est la meilleure étape suivante ?"
