@@ -6,39 +6,25 @@ import {
 import {
   hashPassword,
   verifyPassword,
-  createSessionToken,
-  verifySessionToken,
 } from "../src/lib/auth";
 import { SkillAttempt, MethodologicalSkill } from "../src/types/skills";
 import { SkillAttemptInput } from "../src/lib/progress-sync/types";
 
 console.log("🧪 Démarrage de la suite de tests — Phase 6 : Synchronisation, Intégrité & Attestations...");
 
-// 1. Test d'authentification robuste (hachage scrypt & sessions HMAC)
+// 1. Test d'authentification robuste (hachage scrypt OWASP)
 async function testAuth() {
   const pwd = "SuperSecretPassword123!";
   const hash = await hashPassword(pwd);
 
-  assert.ok(hash.includes(":"), "Le hachage doit comporter un sel et une clé séparés par ':'");
+  assert.ok(hash.startsWith("scrypt$N=131072,r=8,p=1$"), "Le hachage doit attester des paramètres OWASP N=2^17, r=8, p=1");
   const isValid = await verifyPassword(pwd, hash);
   assert.strictEqual(isValid, true, "Le mot de passe correct doit être validé");
 
   const isInvalid = await verifyPassword("WrongPassword123!", hash);
   assert.strictEqual(isInvalid, false, "Un mauvais mot de passe doit être rejeté");
 
-  // Session token
-  const userId = "user-test-cuid-12345";
-  const token = createSessionToken(userId);
-  const session = verifySessionToken(token);
-  assert.ok(session, "Le jeton de session valide doit être décodé");
-  assert.strictEqual(session?.userId, userId, "L'ID utilisateur doit correspondre");
-
-  // Tampered token test
-  const tamperedToken = token.slice(0, -4) + "abcd";
-  const tamperedSession = verifySessionToken(tamperedToken);
-  assert.strictEqual(tamperedSession, null, "Un jeton altéré doit être immédiatement rejeté");
-
-  console.log("  ✅ Authentification, hachage scrypt et sessions signées validés.");
+  console.log("  ✅ Authentification et hachage scrypt OWASP validés.");
 }
 
 // 2. Test des deux niveaux d'attestations (Parcours vs Maîtrise Méthodologique)

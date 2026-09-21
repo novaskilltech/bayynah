@@ -83,7 +83,8 @@ model User {
   inquiryProgress         InquiryProgress[]
   revisions               Revision[]
   
-  // Phase 6 : Données d'apprentissage et attestations
+  // Phase 6 & 6.1 : Données d'apprentissage, sessions et attestations
+  sessions                Session[]
   skillAttempts           SkillAttempt[]
   diagnosticAttempts      DiagnosticAttempt[]
   finalAssessmentAttempts FinalAssessmentAttempt[]
@@ -349,6 +350,8 @@ model Attestation {
   recipientName           String
   issuedAt                DateTime        @default(now())
   rulesVersion            String          @default("skills-v1")
+  keyVersion              String          @default("v1") // Identifiant de clé (kid) pour rotation
+  canonicalPayload        String?         @db.Text       // Payload canonique signé
   finalScorePercent       Float
   demonstratedSkillsCount Int
   contextCount            Int
@@ -359,6 +362,21 @@ model Attestation {
   createdAt               DateTime        @default(now())
 
   @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique // Hachage SHA-256 du jeton opaque aléatoire
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  userAgent    String?
+  ipAddress    String?
+
+  @@index([userId])
+  @@index([expiresAt])
 }
 
 model AuditLog {
@@ -374,4 +392,5 @@ model AuditLog {
   @@index([userId, createdAt])
   @@index([action, createdAt])
 }
+
 

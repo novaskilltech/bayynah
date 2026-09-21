@@ -125,6 +125,12 @@ export function buildFullLocalSyncPayload(): SyncPayload {
   };
 }
 
+export function getCsrfTokenFromCookie(): string | null {
+  if (typeof document === "undefined") return null;
+  const match = document.cookie.match(/(?:^|;\s*)(?:__Host-tabayyun_csrf|tabayyun_csrf)=([^;]+)/);
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
 /**
  * Envoie la synchronisation au serveur
  */
@@ -148,9 +154,15 @@ export async function syncLocalProgressToServer(): Promise<SyncResult | null> {
   };
 
   try {
+    const csrfToken = getCsrfTokenFromCookie();
+    const headers: Record<string, string> = { "Content-Type": "application/json" };
+    if (csrfToken) {
+      headers["x-csrf-token"] = csrfToken;
+    }
+
     const res = await fetch("/api/progress/sync", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers,
       body: JSON.stringify(payload),
     });
 

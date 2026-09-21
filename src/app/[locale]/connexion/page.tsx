@@ -3,7 +3,7 @@
 import { useState, useTransition } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { LogIn, UserPlus, Shield, CheckCircle2, AlertCircle } from "lucide-react";
-import { syncLocalProgressToServer } from "@/lib/progress-sync/client-sync";
+import { syncLocalProgressToServer, getCsrfTokenFromCookie } from "@/lib/progress-sync/client-sync";
 
 export default function ConnexionPage() {
   const params = useParams();
@@ -29,9 +29,19 @@ export default function ConnexionPage() {
 
     startTransition(async () => {
       try {
+        let csrf = getCsrfTokenFromCookie();
+        if (!csrf) {
+          const meRes = await fetch("/api/auth/me");
+          const meData = await meRes.json();
+          csrf = meData.csrfToken || getCsrfTokenFromCookie();
+        }
+
+        const headers: Record<string, string> = { "Content-Type": "application/json" };
+        if (csrf) headers["x-csrf-token"] = csrf;
+
         const res = await fetch(endpoint, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers,
           body: JSON.stringify(payload),
         });
 

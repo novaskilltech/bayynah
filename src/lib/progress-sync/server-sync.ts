@@ -11,6 +11,10 @@ import {
   evaluateAttestationEligibility,
 } from "@/lib/skills-calculator";
 import {
+  issueOfficialAttestation,
+} from "@/lib/attestation-service";
+import { recordAuditEvent } from "@/lib/audit-logger";
+import {
   SyncPayload,
   SyncResult,
   ExportedUserData,
@@ -18,23 +22,6 @@ import {
   DiagnosticAttemptInput,
   FinalAssessmentAttemptInput,
 } from "./types";
-
-/**
- * Génère une signature HMAC-SHA256 pour sceller l'attestation côté serveur
- */
-function generateAttestationHash(
-  attestationId: string,
-  userId: string,
-  type: string,
-  finalScore: number,
-  issuedAt: string
-): string {
-  const secret = process.env.AUTH_SECRET || "tabayyun-secret-key-phase6";
-  return crypto
-    .createHmac("sha256", secret)
-    .update(`${attestationId}:${userId}:${type}:${finalScore}:${issuedAt}`)
-    .digest("hex");
-}
 
 /**
  * Reconstruit le profil d'apprentissage de l'utilisateur à partir des tentatives brutes stockées en base
@@ -97,13 +84,13 @@ export async function rebuildLearningProfile(userId: string): Promise<Methodolog
 }
 
 /**
- * Synchronise les données d'apprentissage (idempotence stricte par UUID)
+ * Synchronise les données d'apprentissage (transaction atomique & idempotence stricte)
  */
 export async function syncUserProgress(
   userId: string,
   payload: SyncPayload,
-  clientIp?: string,
-  userAgent?: string
+  _clientIp?: string,
+  _userAgent?: string
 ): Promise<SyncResult> {
   const user = await prisma.user.findUnique({
     where: { id: userId },
@@ -117,100 +104,111 @@ export async function syncUserProgress(
   let syncedAttemptsCount = 0;
   let ignoredDuplicatesCount = 0;
 
-  // 1. Ingestion idempotente des SkillAttempts
-  if (payload.skillAttempts && payload.skillAttempts.length > 0) {
-    const candidateIds = payload.skillAttempts.map((a) => a.id);
-    const existing = await prisma.skillAttempt.findMany({
-      where: { userId, id: { in: candidateIds } },
-      select: { id: true },
-    });
-    const existingIdSet = new Set(existing.map((e) => e.id));
-
-    const toInsert = payload.skillAttempts.filter((a) => !existingIdSet.has(a.id));
-    ignoredDuplicatesCount += candidateIds.length - toInsert.length;
-
-    if (toInsert.length > 0) {
-      await prisma.skillAttempt.createMany({
-        data: toInsert.map((a) => ({
-          id: a.id,
-          userId,
-          skillId: a.skillId,
-          contextId: a.contextId,
-          contextType: a.contextType,
-          score: a.score,
-          weight: a.weight ?? 1.0,
-          metadata: a.metadata ? JSON.parse(JSON.stringify(a.metadata)) : undefined,
-          clientTimestamp: new Date(a.clientTimestamp),
-        })),
-      });
-      syncedAttemptsCount += toInsert.length;
-    }
-  }
-
-  // 2. Ingestion idempotente des DiagnosticAttempts
-  if (payload.diagnosticAttempts && payload.diagnosticAttempts.length > 0) {
-    for (const diag of payload.diagnosticAttempts) {
-      const exists = await prisma.diagnosticAttempt.findUnique({
-        where: { id: diag.id },
+  // Transaction atomique pour garantir la cohérence absolue
+  await prisma.$transaction(async (tx) => {
+    // 1. Ingestion idempotente des SkillAttempts
+    if (payload.skillAttempts && payload.skillAttempts.length > 0) {
+      const candidateIds = payload.skillAttempts.map((a) => a.id);
+      const existing = await tx.skillAttempt.findMany({
+        where: { userId, id: { in: candidateIds } },
         select: { id: true },
       });
-      if (!exists) {
-        await prisma.diagnosticAttempt.create({
-          data: {
-            id: diag.id,
-            userId,
-            scorePercent: diag.scorePercent,
-            answers: JSON.parse(JSON.stringify(diag.answers)),
-            rulesVersion: diag.rulesVersion || "diagnostic-v1",
-            clientTimestamp: new Date(diag.clientTimestamp),
-          },
-        });
-      }
-    }
-  }
+      const existingIdSet = new Set(existing.map((e) => e.id));
 
-  // 3. Ingestion idempotente des FinalAssessmentAttempts
-  if (payload.finalAssessmentAttempts && payload.finalAssessmentAttempts.length > 0) {
-    for (const finalAssess of payload.finalAssessmentAttempts) {
-      const exists = await prisma.finalAssessmentAttempt.findUnique({
-        where: { id: finalAssess.id },
-        select: { id: true },
-      });
-      if (!exists) {
-        await prisma.finalAssessmentAttempt.create({
-          data: {
-            id: finalAssess.id,
-            userId,
-            scorePercent: finalAssess.scorePercent,
-            answers: JSON.parse(JSON.stringify(finalAssess.answers)),
-            rulesVersion: finalAssess.rulesVersion || "assessment-v1",
-            eligibleForPathAttestation: finalAssess.scorePercent >= 75,
-            eligibleForMasteryAttestation: finalAssess.scorePercent >= 85,
-            clientTimestamp: new Date(finalAssess.clientTimestamp),
-          },
-        });
-      }
-    }
-  }
+      const toInsert = payload.skillAttempts.filter((a) => !existingIdSet.has(a.id));
+      ignoredDuplicatesCount += candidateIds.length - toInsert.length;
 
-  // 4. Ingestion des contenus terminés (leçons / enquêtes)
-  if (payload.completedContentIds && payload.completedContentIds.length > 0) {
-    for (const contentId of payload.completedContentIds) {
-      if (contentId.startsWith("inquiry-")) {
-        await prisma.inquiryProgress.upsert({
-          where: { userId_inquiryId: { userId, inquiryId: contentId } },
-          create: { userId, inquiryId: contentId, completed: true, completedAt: new Date() },
-          update: { completed: true, completedAt: new Date() },
+      if (toInsert.length > 0) {
+        // createMany avec gestion des conflits
+        await tx.skillAttempt.createMany({
+          data: toInsert.map((a) => ({
+            id: a.id,
+            userId,
+            skillId: a.skillId,
+            contextId: a.contextId,
+            contextType: a.contextType,
+            score: a.score,
+            weight: a.weight ?? 1.0,
+            metadata: a.metadata ? JSON.parse(JSON.stringify(a.metadata)) : undefined,
+            clientTimestamp: new Date(a.clientTimestamp),
+          })),
+          skipDuplicates: true,
         });
-      } else if (contentId.startsWith("lesson-") || contentId.startsWith("h") || contentId.startsWith("f") || contentId.startsWith("a") || contentId.startsWith("c")) {
-        await prisma.lessonProgress.upsert({
-          where: { userId_lessonId: { userId, lessonId: contentId } },
-          create: { userId, lessonId: contentId, completed: true, completedAt: new Date() },
-          update: { completed: true, completedAt: new Date() },
-        });
+        syncedAttemptsCount += toInsert.length;
       }
     }
-  }
+
+    // 2. Ingestion idempotente des DiagnosticAttempts
+    if (payload.diagnosticAttempts && payload.diagnosticAttempts.length > 0) {
+      for (const diag of payload.diagnosticAttempts) {
+        const exists = await tx.diagnosticAttempt.findUnique({
+          where: { id: diag.id },
+          select: { id: true },
+        });
+        if (!exists) {
+          await tx.diagnosticAttempt.create({
+            data: {
+              id: diag.id,
+              userId,
+              scorePercent: diag.scorePercent,
+              answers: JSON.parse(JSON.stringify(diag.answers)),
+              rulesVersion: diag.rulesVersion || "diagnostic-v1",
+              clientTimestamp: new Date(diag.clientTimestamp),
+            },
+          });
+        }
+      }
+    }
+
+    // 3. Ingestion idempotente des FinalAssessmentAttempts
+    if (payload.finalAssessmentAttempts && payload.finalAssessmentAttempts.length > 0) {
+      for (const finalAssess of payload.finalAssessmentAttempts) {
+        const exists = await tx.finalAssessmentAttempt.findUnique({
+          where: { id: finalAssess.id },
+          select: { id: true },
+        });
+        if (!exists) {
+          await tx.finalAssessmentAttempt.create({
+            data: {
+              id: finalAssess.id,
+              userId,
+              scorePercent: finalAssess.scorePercent,
+              answers: JSON.parse(JSON.stringify(finalAssess.answers)),
+              rulesVersion: finalAssess.rulesVersion || "assessment-v1",
+              eligibleForPathAttestation: finalAssess.scorePercent >= 75,
+              eligibleForMasteryAttestation: finalAssess.scorePercent >= 85,
+              clientTimestamp: new Date(finalAssess.clientTimestamp),
+            },
+          });
+        }
+      }
+    }
+
+    // 4. Ingestion des contenus terminés (leçons / enquêtes)
+    if (payload.completedContentIds && payload.completedContentIds.length > 0) {
+      for (const contentId of payload.completedContentIds) {
+        if (contentId.startsWith("inquiry-")) {
+          await tx.inquiryProgress.upsert({
+            where: { userId_inquiryId: { userId, inquiryId: contentId } },
+            create: { userId, inquiryId: contentId, completed: true, completedAt: new Date() },
+            update: { completed: true, completedAt: new Date() },
+          });
+        } else if (
+          contentId.startsWith("lesson-") ||
+          contentId.startsWith("h") ||
+          contentId.startsWith("f") ||
+          contentId.startsWith("a") ||
+          contentId.startsWith("c")
+        ) {
+          await tx.lessonProgress.upsert({
+            where: { userId_lessonId: { userId, lessonId: contentId } },
+            create: { userId, lessonId: contentId, completed: true, completedAt: new Date() },
+            update: { completed: true, completedAt: new Date() },
+          });
+        }
+      }
+    }
+  });
 
   // 5. Reconstitution recalculée côté serveur
   const recalculatedProfile = await rebuildLearningProfile(userId);
@@ -242,57 +240,28 @@ export async function syncUserProgress(
     );
 
     const recipientName = user.name || "Apprenant TABAYYUN";
-    const nowIso = new Date().toISOString();
 
     // Attestation Maîtrise
     if (eligibility.eligibleForMasteryAttestation && !existingTypes.has("MAITRISE_METHODOLOGIQUE")) {
-      const attId = `ATT-MAITRISE-${Date.now()}-${userId.slice(-6)}`;
-      const hash = generateAttestationHash(
-        attId,
+      await issueOfficialAttestation({
         userId,
-        "MAITRISE_METHODOLOGIQUE",
-        latestFinal.scorePercent,
-        nowIso
-      );
-
-      await prisma.attestation.create({
-        data: {
-          id: attId,
-          userId,
-          type: "MAITRISE_METHODOLOGIQUE",
-          recipientName,
-          rulesVersion: "skills-v1",
-          finalScorePercent: latestFinal.scorePercent,
-          demonstratedSkillsCount: recalculatedProfile.solidSkillsCount + recalculatedProfile.masteredSkillsCount,
-          contextCount: Math.max(...Object.values(recalculatedProfile.skills).map((s) => s.distinctContextsCount), 1),
-          verificationHash: hash,
-        },
+        type: "MAITRISE_METHODOLOGIQUE",
+        recipientName,
+        finalScorePercent: latestFinal.scorePercent,
+        demonstratedSkillsCount: recalculatedProfile.solidSkillsCount + recalculatedProfile.masteredSkillsCount,
+        contextCount: Math.max(...Object.values(recalculatedProfile.skills).map((s) => s.distinctContextsCount), 1),
       });
     }
 
     // Attestation Parcours
     if (eligibility.eligibleForPathAttestation && !existingTypes.has("PARCOURS")) {
-      const attId = `ATT-PARCOURS-${Date.now()}-${userId.slice(-6)}`;
-      const hash = generateAttestationHash(
-        attId,
+      await issueOfficialAttestation({
         userId,
-        "PARCOURS",
-        latestFinal.scorePercent,
-        nowIso
-      );
-
-      await prisma.attestation.create({
-        data: {
-          id: attId,
-          userId,
-          type: "PARCOURS",
-          recipientName,
-          rulesVersion: "skills-v1",
-          finalScorePercent: latestFinal.scorePercent,
-          demonstratedSkillsCount: recalculatedProfile.solidSkillsCount + recalculatedProfile.masteredSkillsCount,
-          contextCount: Math.max(...Object.values(recalculatedProfile.skills).map((s) => s.distinctContextsCount), 1),
-          verificationHash: hash,
-        },
+        type: "PARCOURS",
+        recipientName,
+        finalScorePercent: latestFinal.scorePercent,
+        demonstratedSkillsCount: recalculatedProfile.solidSkillsCount + recalculatedProfile.masteredSkillsCount,
+        contextCount: Math.max(...Object.values(recalculatedProfile.skills).map((s) => s.distinctContextsCount), 1),
       });
     }
   }
@@ -319,19 +288,11 @@ export async function syncUserProgress(
       "تشهد هذه الإفادة بإتمام تدريب منهجي على قواعد التثبت والنقد الحديثي والأصولي وفق معايير أهل السنة والجماعة، ولا تُعد إجازة تدريس ولا ترخيصاً بالفتوى أو الاجتهاد.",
   }));
 
-  // 8. Audit log
-  await prisma.auditLog.create({
-    data: {
-      userId,
-      action: "SYNC_ATTEMPTS",
-      details: {
-        syncedAttemptsCount,
-        ignoredDuplicatesCount,
-        totalAttempts: await prisma.skillAttempt.count({ where: { userId } }),
-      },
-      ipAddress: clientIp,
-      userAgent,
-    },
+  // 8. Audit log sécurisé
+  await recordAuditEvent("SYNC_ATTEMPTS", userId, {
+    syncedAttemptsCount,
+    ignoredDuplicatesCount,
+    totalAttempts: await prisma.skillAttempt.count({ where: { userId } }),
   });
 
   return {
@@ -346,7 +307,6 @@ export async function syncUserProgress(
 
 /**
  * Export complet des données utilisateur conforme RGPD / DSAR
- * Droit d'accès et de portabilité des données
  */
 export async function exportUserData(userId: string): Promise<ExportedUserData> {
   const user = await prisma.user.findUnique({
@@ -429,13 +389,7 @@ export async function exportUserData(userId: string): Promise<ExportedUserData> 
       "تشهد هذه الإفادة بإتمام تدريب منهجي على قواعد التثبت والنقد الحديثي والأصولي وفق معايير أهل السنة والجماعة، ولا تُعد إجازة تدريس ولا ترخيصاً بالفتوى أو الاجتهاد.",
   }));
 
-  await prisma.auditLog.create({
-    data: {
-      userId,
-      action: "EXPORT_DATA",
-      details: { exportType: "RGPD_DSAR_FULL_EXPORT" },
-    },
-  });
+  await recordAuditEvent("EXPORT_DATA", userId, { exportType: "RGPD_DSAR_FULL_EXPORT" });
 
   return {
     account: {
@@ -458,19 +412,45 @@ export async function exportUserData(userId: string): Promise<ExportedUserData> 
 
 /**
  * Suppression de compte conforme RGPD (Droit à l'effacement / Droit à l'oubli)
+ * Transaction atomique avec anonymisation des traces et révocation complète
  */
 export async function deleteUserAccount(userId: string): Promise<{ success: boolean; deletedAt: string }> {
-  // Enregistre l'action d'audit anonymisée avant suppression
-  await prisma.auditLog.create({
-    data: {
-      action: "DELETE_ACCOUNT",
-      details: { deletedUserIdHash: crypto.createHash("sha256").update(userId).digest("hex") },
-    },
-  });
+  await prisma.$transaction(async (tx) => {
+    // 1. Révocation et anonymisation des attestations délivrées
+    await tx.attestation.updateMany({
+      where: { userId },
+      data: {
+        recipientName: "Compte supprimé",
+        revoked: true,
+        revokedReason: "Compte supprimé par l'utilisateur (Droit à l'effacement RGPD)",
+      },
+    });
 
-  // Suppression en cascade du User (supprime attempts, profile, progress, etc.)
-  await prisma.user.delete({
-    where: { id: userId },
+    // 2. Anonymisation des logs d'audit historiques liés à cet utilisateur
+    await tx.auditLog.updateMany({
+      where: { userId },
+      data: {
+        userId: null,
+        ipAddress: null,
+        userAgent: null,
+      },
+    });
+
+    // 3. Enregistrement d'un log anonyme de suppression
+    await tx.auditLog.create({
+      data: {
+        action: "DELETE_ACCOUNT",
+        details: {
+          anonymizedTimestamp: new Date().toISOString(),
+          hashedId: crypto.createHash("sha256").update(userId).digest("hex"),
+        },
+      },
+    });
+
+    // 4. Suppression en cascade du User (supprime sessions, attempts, profile, progress)
+    await tx.user.delete({
+      where: { id: userId },
+    });
   });
 
   return {

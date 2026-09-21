@@ -18,6 +18,7 @@ import {
   syncLocalProgressToServer,
   getLastSyncTimestamp,
   getServerAttestations,
+  getCsrfTokenFromCookie,
 } from "@/lib/progress-sync/client-sync";
 import { AttestationData } from "@/types/skills";
 import AttestationCard from "@/components/skills/AttestationCard";
@@ -84,7 +85,10 @@ export default function ComptePage() {
   };
 
   const handleLogout = async () => {
-    await fetch("/api/auth/logout", { method: "POST" });
+    const csrf = getCsrfTokenFromCookie();
+    const headers: Record<string, string> = {};
+    if (csrf) headers["x-csrf-token"] = csrf;
+    await fetch("/api/auth/logout", { method: "POST", headers });
     setUser(null);
     router.push(`/${locale}`);
     router.refresh();
@@ -102,7 +106,10 @@ export default function ComptePage() {
   const handleDeleteAccount = async () => {
     setIsDeleting(true);
     try {
-      const res = await fetch("/api/account/delete-account", { method: "POST" });
+      const csrf = getCsrfTokenFromCookie();
+      const headers: Record<string, string> = {};
+      if (csrf) headers["x-csrf-token"] = csrf;
+      const res = await fetch("/api/account/delete-account", { method: "POST", headers });
       if (res.ok) {
         alert(
           isArabic

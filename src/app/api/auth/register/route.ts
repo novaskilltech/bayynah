@@ -1,15 +1,44 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { hashPassword, createSessionToken, SESSION_CONFIG } from "@/lib/auth";
+import {
+  hashPassword,
+  createServerSession,
+  SESSION_CONFIG,
+  SCRYPT_CONFIG,
+} from "@/lib/auth";
+import { checkRateLimit } from "@/lib/rate-limit";
+import {
+  validateMutationRequest,
+  generateCsrfToken,
+  CSRF_COOKIE_NAME,
+} from "@/lib/csrf";
+import { recordAuditEvent } from "@/lib/audit-logger";
 
 export async function POST(req: NextRequest) {
   try {
+    const ip = req.headers.get("x-forwarded-for") || "127.0.0.1";
+
+    // 1. Rate limiting : 3 inscriptions par heure par IP
+    const rateLimit = checkRateLimit(`register:${ip}`, 3, 60 * 60 * 1000);
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: `Trop de tentatives de création de compte. Réessayez dans ${rateLimit.retryAfterSeconds} secondes.` },
+        { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } }
+      );
+    }
+
+    // 2. Protection CSRF & Origin
+    const csrfCheck = validateMutationRequest(req);
+    if (!csrfCheck.valid) {
+      return NextResponse.json({ error: csrfCheck.error }, { status: 403 });
+    }
+
     const body = await req.json();
     const { email, password, name } = body;
 
     if (!email || !password) {
       return NextResponse.json(
-        { error: "L'email et le mot de passe sont obligatoires." },
+        { error: "L'adresse email et le mot de passe sont obligatoires." },
         { status: 400 }
       );
     }
@@ -17,6 +46,13 @@ export async function POST(req: NextRequest) {
     if (typeof password !== "string" || password.length < 8) {
       return NextResponse.json(
         { error: "Le mot de passe doit comporter au moins 8 caractères." },
+        { status: 400 }
+      );
+    }
+
+    if (password.length > SCRYPT_CONFIG.maxPasswordLength) {
+      return NextResponse.json(
+        { error: `Le mot de passe ne doit pas dépasser ${SCRYPT_CONFIG.maxPasswordLength} caractères.` },
         { status: 400 }
       );
     }
@@ -49,25 +85,30 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    await prisma.auditLog.create({
-      data: {
-        userId: user.id,
-        action: "REGISTER",
-        details: { email: normalizedEmail },
-        ipAddress: req.headers.get("x-forwarded-for") || undefined,
-        userAgent: req.headers.get("user-agent") || undefined,
-      },
-    });
+    await recordAuditEvent("REGISTER", user.id, { email: normalizedEmail }, req);
 
-    const token = createSessionToken(user.id);
-    const response = NextResponse.json({ success: true, user });
+    // Création d'une session opaque en base
+    const { rawToken, expiresAt } = await createServerSession(user.id, req);
+    const csrfToken = generateCsrfToken();
 
-    response.cookies.set(SESSION_CONFIG.COOKIE_NAME, token, {
+    const response = NextResponse.json({ success: true, user, csrfToken });
+
+    // Cookie de session sécurisé
+    response.cookies.set(SESSION_CONFIG.COOKIE_NAME, rawToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
-      maxAge: SESSION_CONFIG.MAX_AGE,
       path: "/",
+      expires: expiresAt,
+    });
+
+    // Cookie CSRF Double-Submit
+    response.cookies.set(CSRF_COOKIE_NAME, csrfToken, {
+      httpOnly: false, // Accessible JS pour l'envoi dans le header x-csrf-token
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
+      expires: expiresAt,
     });
 
     return response;
