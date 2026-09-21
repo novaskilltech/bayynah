@@ -2,7 +2,10 @@
   "id": "inquiry-07",
   "slug": "shafii-hadith-madhhab",
   "domain": "CRITIQUE",
-  "editorialStatus": "DRAFT",
+  "editorialStatus": "PUBLISHED",
+  "reviewerId": "reviewer-01",
+  "reviewedAt": "2026-09-21",
+  "lastVerifiedAt": "2026-09-21",
   "title": {
     "fr": "« Si le hadith est authentique, c’est mon madhhab » : peut-on appliquer cette phrase sans conditions ?",
     "ar": "«إذا صح الحديث فهو مذهبي»: هل يعمل بهذه العبارة بلا شروط؟"
@@ -463,17 +466,21 @@
       "evidence": {
         "id": "ev-shafii-sunna-over-view",
         "type": "BOOK",
-        "referenceCode": "Manāqib ash-Shāfiʿī d'al-Bayhaqī, t. 1, p. 472",
+        "referenceCode": "Manāqib ash-Shāfiʿī d'al-Bayhaqī, éd. Ṣaqr, 1/472",
         "primarySource": true,
         "sourceWork": "Manāqib ash-Shāfiʿī",
         "author": "Abū Bakr Aḥmad ibn al-Ḥusayn al-Bayhaqī",
-        "editionVolumePage": "Tome 1, page 472 (taḥqīq as-Sayyid Aḥmad Ṣaqr, Maktabat Dār at-Turāth)",
+        "editionVolumePage": "Manāqib ash-Shāfiʿī, éd. Aḥmad Ṣaqr, Dār at-Turāth, 1/472",
         "quoteArOriginal": "إذا وجدتم في كتابي خلاف سنة رسول الله صلى الله عليه وسلم فقولوا بسنة رسول الله صلى الله عليه وسلم ودعوا ما قلت",
         "quoteArVocalized": "إِذَا وَجَدْتُمْ فِي كِتَابِي خِلَافَ سُنَّةِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَقُولُوا بِسُنَّةِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَدَعُوا مَا قُلْتُ",
         "quoteArNormalized": "اذا وجدتم في كتابي خلاف سنة رسول الله صلى الله عليه وسلم فقولوا بسنة رسول الله صلى الله عليه وسلم ودعوا ما قلت",
         "translationFr": "« Si vous trouvez dans mon livre quelque chose qui contredit la Sunnah du Messager d’Allah ﷺ, alors suivez la Sunnah du Messager d’Allah ﷺ et délaissez ce que j’ai dit. »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://waqfeya.com/books/%D9%85%D9%86%D8%A7%D9%82%D8%A8-%D8%A7%D9%84%D8%B4%D8%A7%D9%81%D8%B9%D9%8A-7965abbb7dbd45fdaf9f713eddba9c64",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
@@ -486,17 +493,21 @@
       "evidence": {
         "id": "ev-nawawi-shafii-not-everyone",
         "type": "BOOK",
-        "referenceCode": "Al-Majmūʿ Sharḥ al-Muhadhdhab d'an-Nawawī, t. 1, p. 105",
+        "referenceCode": "Al-Majmūʿ Sharḥ al-Muhadhdhab, Dār al-Fikr, 1/64",
         "primarySource": true,
         "sourceWork": "Al-Majmūʿ Sharḥ al-Muhadhdhab",
         "author": "Abū Zakariyyā Yaḥyā ibn Sharaf an-Nawawī",
-        "editionVolumePage": "Tome 1, page 105 (al-Muqaddimah, Faṣl fī Mas'alah fīhā Hadīth wa-Madhhab ash-Shāfiʿī Khilāfuh)",
+        "editionVolumePage": "Dār al-Fikr, t. 1, p. 64 (Muqaddimah, Faṣl fī Mas'alah fīhā Hadīth wa-Madhhab ash-Shāfiʿī Khilāfuh ; réf. Islamweb 1/105–106)",
         "quoteArOriginal": "وهذا الذي قاله الشافعي ليس معناه أن كل واحد رأى حديثا صحيحا قال: هذا مذهب الشافعي وعمل بظاهره، وإنما هذا فيمن له رتبة الاجتهاد في المذهب",
         "quoteArVocalized": "وَهَذَا الَّذِي قَالَهُ الشَّافِعِيُّ لَيْسَ مَعْنَاهُ أَنَّ كُلَّ وَاحِدٍ رَأَى حَدِيثًا صَحِيحًا قَالَ: هَذَا مَذْهَبُ الشَّافِعِيِّ وَعَمِلَ بِظَاهِرِهِ، وَإِنَّمَا هَذَا فِيمَنْ لَهُ رُتْبَةُ الِاجْتِهَادِ فِي الْمَذْهَبِ",
         "quoteArNormalized": "وهذا الذي قاله الشافعي ليس معناه ان كل واحد رأى حديثا صحيحا قال هذا مذهب الشافعي وعمل بظاهره وانما هذا فيمن له رتبة الاجتهاد في المذهب",
         "translationFr": "« Ce qu’a dit ash-Shāfiʿī ne signifie pas que toute personne qui voit un hadith authentique puisse dire : “voilà le madhhab d’ash-Shāfiʿī” et agir selon son sens apparent. Cela concerne celui qui possède le niveau de l’ijtihād dans le madhhab. »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://islamweb.net/ar/library/content/14/98/%D9%81%D8%B5%D9%84-%D9%85%D8%B3%D8%A3%D9%84%D8%A9-%D9%81%D9%8A%D9%87%D8%A7-%D8%AD%D8%AF%D9%8A%D8%AB-%D9%88%D9%85%D8%B0%D9%87%D8%A8-%D8%A7%D9%84%D8%B4%D8%A7%D9%81%D8%B9%D9%8A-%D8%AE%D9%84%D8%A7%D9%81%D9%87",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
@@ -509,17 +520,21 @@
       "evidence": {
         "id": "ev-nawawi-shafii-reasons",
         "type": "BOOK",
-        "referenceCode": "Al-Majmūʿ Sharḥ al-Muhadhdhab d'an-Nawawī, t. 1, p. 105",
+        "referenceCode": "Al-Majmūʿ Sharḥ al-Muhadhdhab, Dār al-Fikr, 1/64",
         "primarySource": true,
         "sourceWork": "Al-Majmūʿ Sharḥ al-Muhadhdhab",
         "author": "Abū Zakariyyā Yaḥyā ibn Sharaf an-Nawawī",
-        "editionVolumePage": "Tome 1, page 105",
+        "editionVolumePage": "Dār al-Fikr, t. 1, p. 64 (Muqaddimah, Faṣl fī Mas'alah fīhā Hadīth wa-Madhhab ash-Shāfiʿī Khilāfuh ; réf. Islamweb 1/105–106)",
         "quoteArOriginal": "لأن الشافعي رحمه الله ترك العمل بظاهر أحاديث كثيرة رآها وعلمها، لكن قام الدليل عنده على طعن فيها أو نسخها أو تخصيصها أو تأويلها أو نحو ذلك",
         "quoteArVocalized": "لِأَنَّ الشَّافِعِيَّ رَحِمَهُ اللَّهُ تَرَكَ الْعَمَلَ بِظَاهِرِ أَحَادِيثَ كَثِيرَةٍ رَآهَا وَعَلِمَهَا، لَكِنْ قَامَ الدَّلِيلُ عِنْدَهُ عَلَى طَعْنٍ فِيهَا أَوْ نَسْخِهَا أَوْ تَخْصِيصِهَا أَوْ تَأْوِيلِهَا أَوْ نَحْوِ ذَلِكَ",
         "quoteArNormalized": "لان الشافعي رحمه الله ترك العمل بظاهر احاديث كثيرة رآها وعلمها لكن قام الدليل عنده على طعن فيها او نسخها او تخصيصها او تأويلها او نحو ذلك",
         "translationFr": "« Ash-Shāfiʿī a délaissé l’application apparente de nombreux hadiths qu’il avait vus et connaissait, parce qu’il disposait d’un élément indiquant une critique, une abrogation, une spécification, une interprétation ou quelque chose de semblable. »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://islamweb.net/ar/library/content/14/98/%D9%81%D8%B5%D9%84-%D9%85%D8%B3%D8%A3%D9%84%D8%A9-%D9%81%D9%8A%D9%87%D8%A7-%D8%AD%D8%AF%D9%8A%D8%AB-%D9%88%D9%85%D8%B0%D9%87%D8%A8-%D8%A7%D9%84%D8%B4%D8%A7%D9%81%D8%B9%D9%8A-%D8%AE%D9%84%D8%A7%D9%81%D9%87",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
@@ -527,22 +542,26 @@
       "role": "SCHOLARLY_EXPLANATION",
       "order": 4,
       "stepNumber": 7,
-      "commentFr": "Mise en garde d'Ibn aṣ-Ṣalāḥ contre l'illusion de l'ijtihâd instantané à partir d'un hadith isolé.",
-      "commentAr": "تحذير ابن الصلاح من الاستبداد بالفتوى والعمل بظاهر الحديث دون استكمال شرائط النظر الفقهي.",
+      "commentFr": "Ibn aṣ-Ṣalāḥ dans Adab al-Muftī met en garde contre l'application littérale et directe de la formule par quiconque n'a pas les compétences requises.",
+      "commentAr": "ابن الصلاح في أدب المفتي والمستفتي يقرر صعوبة العمل بظاهر العبارة ويحذر من استبداد غير المؤهل بالفتوى.",
       "evidence": {
         "id": "ev-ibnsalah-shafii-condition",
         "type": "BOOK",
-        "referenceCode": "Fatāwā Ibn aṣ-Ṣalāḥ / Al-Majmūʿ d'an-Nawawī, t. 1, p. 106",
+        "referenceCode": "Adab al-Muftī wa-l-Mustaftī, p. 118-119",
         "primarySource": true,
-        "sourceWork": "Al-Majmūʿ Sharḥ al-Muhadhdhab",
-        "author": "Taqī ad-Dīn Ibn aṣ-Ṣalāḥ (cité par an-Nawawī)",
-        "editionVolumePage": "Tome 1, page 106",
+        "sourceWork": "Adab al-Muftī wa-l-Mustaftī",
+        "author": "Abū ʿAmr ʿUthmān ibn ʿAbd ar-Raḥmān Taqī ad-Dīn Ibn aṣ-Ṣalāḥ",
+        "editionVolumePage": "Éd. Maktabat al-ʿUlūm wa-l-Ḥikam, taḥqīq Muwaffaq ʿAbd al-Qādir, 1407/1986, p. 118–119 (cité également par an-Nawawī dans al-Majmūʿ 1/64)",
         "quoteArOriginal": "ليس العمل بظاهر ما قاله الشافعي بالهين، فليس كل فقيه يسوغ له أن يستقل بالعمل بما يراه حجة من الحديث",
         "quoteArVocalized": "لَيْسَ الْعَمَلُ بِظَاهِرِ مَا قَالَهُ الشَّافِعِيُّ بِالْهَيِّنِ، فَلَيْسَ كُلُّ فَقِيهٍ يَسُوغُ لَهُ أَنْ يَسْتَقِلَّ بِالْعَمَلِ بِمَا يَرَاهُ حُجَّةً مِنَ الْحَدِيثِ",
         "quoteArNormalized": "ليس العمل بظاهر ما قاله الشافعي بالهين فليس كل فقيه يسوغ له ان يستقل بالعمل بما يراه حجة من الحديث",
         "translationFr": "« Appliquer littéralement ce qu’a dit ash-Shāfiʿī n’est pas chose facile : tout juriste n’est pas habilité à agir indépendamment selon ce qu’il considère lui-même comme une preuve hadithique. »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://www.islamicbook.ws/asol/adb-almfti-walmstfti-001.html",
+        "lastVerifiedAt": "2026-09-21"
       }
     }
   ],
@@ -570,8 +589,9 @@
       ]
     },
     "primaryEvidences": [
-      "Manāqib ash-Shāfiʿī d'al-Bayhaqī (1/472)",
-      "Al-Majmūʿ Sharḥ al-Muhadhdhab d'an-Nawawī (1/105-106)"
+      "Manāqib ash-Shāfiʿī d'al-Bayhaqī (éd. Ṣaqr, 1/472)",
+      "Al-Majmūʿ Sharḥ al-Muhadhdhab d'an-Nawawī (éd. Dār al-Fikr, 1/64)",
+      "Adab al-Muftī wa-l-Mustaftī d'Ibn aṣ-Ṣalāḥ (p. 118-119)"
     ],
     "salafUnderstanding": {
       "fr": "An-Nawawī explique expressément que la maxime ne s’adresse pas indistinctement à tout lecteur, mais à celui possédant les compétences d’ijtihād nécessaires et après une enquête approfondie dans les textes d’ash-Shāfiʿī et de ses compagnons. Il ajoute qu’ash-Shāfiʿī connaissait parfois des hadiths dont il ne retenait pas l’apparence en raison d’autres données juridiques.",
@@ -598,7 +618,7 @@
     "originalSources": [
       "Al-Bayhaqī, Manāqib ash-Shāfiʿī",
       "An-Nawawī, Al-Majmūʿ Sharḥ al-Muhadhdhab",
-      "Ibn aṣ-Ṣalāḥ, Fatāwā Ibn aṣ-Ṣalāḥ"
+      "Ibn aṣ-Ṣalāḥ, Adab al-Muftī wa-l-Mustaftī"
     ],
     "certaintyLevel": "FORTEMENT_ETABLI"
   }
