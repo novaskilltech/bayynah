@@ -3,9 +3,13 @@ import path from "path";
 import matter from "gray-matter";
 import { LessonFrontmatterSchema } from "./schemas/lesson.schema";
 import { InquirySchema } from "./schemas/inquiry.schema";
+import { SKILLS_METADATA, LESSON_SKILLS_MAP, INQUIRY_STEP_SKILLS_MAP } from "./skills-registry";
+import { RECOMMENDED_PREREQUISITES, LEARNING_PATH_LEVELS } from "./learning-path";
+import { MethodologicalSkill } from "../types/skills";
+import { DiagnosticQuestionSchema, FinalAssessmentScenarioSchema } from "./schemas/skills.schema";
 
 /**
- * Validateur de contenu Tabayyun (Phase 2.1 - Integrity Gate Strict)
+ * Validateur de contenu Tabayyun (Phase 2.1 & Phase 5 - Integrity Gate Étendu)
  * - Utilise gray-matter restreint au YAML pur (aucun moteur exécutable).
  * - Valide le frontmatter contre LessonFrontmatterSchema (Zod 4).
  * - Valide les enquêtes JSON contre InquirySchema (Zod 4).
@@ -13,6 +17,10 @@ import { InquirySchema } from "./schemas/inquiry.schema";
  *     1. Aucun ID de preuve orphelin.
  *     2. Aucun doublon d'evidenceId dans inquiryEvidences.
  *     3. Tout contenu PUBLISHED ne doit comporter aucune preuve TO_BE_CHECKED.
+ *     4. Intégrité du modèle de compétences (Phase 5) :
+ *        - Aucune compétence canonique orpheline.
+ *        - Toutes les leçons et étapes mappées existent physiquement.
+ *        - Tous les prérequis recommandés et niveaux ciblent des contenus réels.
  */
 export function validateAllContent(): { valid: boolean; errors: string[] } {
   const errors: string[] = [];
@@ -138,6 +146,132 @@ export function validateAllContent(): { valid: boolean; errors: string[] } {
         errors.push(`[Enquête ${file}] Erreur JSON : ${errorMsg}`);
       }
     }
+  }
+
+  // 3. Valider l'intégrité du Modèle de Compétences (Phase 5)
+  const existingLessonSlugs = new Set(
+    fs.existsSync(lessonsDir)
+      ? fs.readdirSync(lessonsDir).filter((f) => f.endsWith(".md")).map((f) => f.replace(/\.md$/, ""))
+      : []
+  );
+
+  const existingInquirySlugs = new Set<string>();
+  if (fs.existsSync(inquiriesDir)) {
+    const inquiryFiles = fs.readdirSync(inquiriesDir).filter((f) => f.endsWith(".json"));
+    for (const file of inquiryFiles) {
+      try {
+        const json = JSON.parse(fs.readFileSync(path.join(inquiriesDir, file), "utf-8"));
+        if (json.slug) existingInquirySlugs.add(json.slug);
+      } catch {
+        // Erreurs déjà gérées par la validation Zod des enquêtes
+      }
+    }
+  }
+
+  // 3.1 Vérifier que chaque leçon déclarée dans LESSON_SKILLS_MAP existe physiquement
+  for (const lessonSlug of Object.keys(LESSON_SKILLS_MAP)) {
+    if (!existingLessonSlugs.has(lessonSlug)) {
+      errors.push(`[Compétences Registry] La leçon "${lessonSlug}" déclarée dans LESSON_SKILLS_MAP n'existe pas dans content/lessons/.`);
+    }
+  }
+
+  // 3.2 Vérifier que chaque enquête déclarée dans INQUIRY_STEP_SKILLS_MAP existe
+  for (const inqSlug of Object.keys(INQUIRY_STEP_SKILLS_MAP)) {
+    if (!existingInquirySlugs.has(inqSlug)) {
+      errors.push(`[Compétences Registry] L'enquête "${inqSlug}" déclarée dans INQUIRY_STEP_SKILLS_MAP n'existe pas dans content/inquiries/.`);
+    }
+  }
+
+  // 3.3 Vérifier qu'aucune compétence canonique n'est orpheline
+  const referencedSkills = new Set<MethodologicalSkill>();
+  for (const skills of Object.values(LESSON_SKILLS_MAP)) {
+    skills.forEach((s) => referencedSkills.add(s));
+  }
+  for (const steps of Object.values(INQUIRY_STEP_SKILLS_MAP)) {
+    for (const skills of Object.values(steps)) {
+      skills.forEach((s) => referencedSkills.add(s));
+    }
+  }
+
+  for (const skillId of Object.keys(SKILLS_METADATA) as MethodologicalSkill[]) {
+    if (!referencedSkills.has(skillId)) {
+      errors.push(`[Compétences Registry] La compétence canonique "${skillId}" est orpheline (aucun exercice/leçon ne la couvre).`);
+    }
+  }
+
+  // 3.4 Vérifier la cohérence des prérequis recommandés
+  for (const [targetInq, reqs] of Object.entries(RECOMMENDED_PREREQUISITES)) {
+    if (!existingInquirySlugs.has(targetInq)) {
+      errors.push(`[Prérequis] La cible "${targetInq}" dans RECOMMENDED_PREREQUISITES n'existe pas dans les enquêtes.`);
+    }
+    for (const lId of reqs.lessonIds) {
+      if (!existingLessonSlugs.has(lId)) {
+        errors.push(`[Prérequis] Le prérequis de leçon "${lId}" pour l'enquête "${targetInq}" n'existe pas.`);
+      }
+    }
+    for (const inqId of reqs.inquiryIds) {
+      if (!existingInquirySlugs.has(inqId)) {
+        errors.push(`[Prérequis] Le prérequis d'enquête "${inqId}" pour l'enquête "${targetInq}" n'existe pas.`);
+      }
+    }
+  }
+
+  // 3.5 Vérifier la cohérence des paliers du parcours
+  for (const level of LEARNING_PATH_LEVELS) {
+    for (const lId of level.lessonIds) {
+      if (!existingLessonSlugs.has(lId)) {
+        errors.push(`[Parcours Niveau ${level.levelNumber}] La leçon "${lId}" n'existe pas dans content/lessons/.`);
+      }
+    }
+    for (const inqId of level.inquiryIds) {
+      if (!existingInquirySlugs.has(inqId)) {
+        errors.push(`[Parcours Niveau ${level.levelNumber}] L'enquête "${inqId}" n'existe pas dans content/inquiries/.`);
+      }
+    }
+  }
+
+  // 4. Valider le Diagnostic Initial
+  const diagnosticFile = path.join(process.cwd(), "content", "diagnostic", "questions.json");
+  if (fs.existsSync(diagnosticFile)) {
+    try {
+      const json = JSON.parse(fs.readFileSync(diagnosticFile, "utf-8"));
+      if (!Array.isArray(json)) {
+        errors.push("[Diagnostic] Le fichier questions.json doit contenir un tableau de questions.");
+      } else {
+        json.forEach((q, idx) => {
+          const result = DiagnosticQuestionSchema.safeParse(q);
+          if (!result.success) {
+            errors.push(`[Diagnostic Question #${idx + 1} (${q.id || "sans-id"})] Erreur Zod : ` + JSON.stringify(result.error.format(), null, 2));
+          }
+        });
+      }
+    } catch (err: unknown) {
+      errors.push(`[Diagnostic] Erreur de parsing JSON : ${err instanceof Error ? err.message : String(err)}`);
+    }
+  } else {
+    errors.push("[Diagnostic] Le fichier content/diagnostic/questions.json est introuvable.");
+  }
+
+  // 5. Valider l'Évaluation Finale
+  const assessmentFile = path.join(process.cwd(), "content", "assessment", "scenarios.json");
+  if (fs.existsSync(assessmentFile)) {
+    try {
+      const json = JSON.parse(fs.readFileSync(assessmentFile, "utf-8"));
+      if (!Array.isArray(json)) {
+        errors.push("[Évaluation Finale] Le fichier scenarios.json doit contenir un tableau de scénarios.");
+      } else {
+        json.forEach((s, idx) => {
+          const result = FinalAssessmentScenarioSchema.safeParse(s);
+          if (!result.success) {
+            errors.push(`[Évaluation Finale Scénario #${idx + 1} (${s.id || "sans-id"})] Erreur Zod : ` + JSON.stringify(result.error.format(), null, 2));
+          }
+        });
+      }
+    } catch (err: unknown) {
+      errors.push(`[Évaluation Finale] Erreur de parsing JSON : ${err instanceof Error ? err.message : String(err)}`);
+    }
+  } else {
+    errors.push("[Évaluation Finale] Le fichier content/assessment/scenarios.json est introuvable.");
   }
 
   return {

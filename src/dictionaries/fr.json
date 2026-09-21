@@ -6,7 +6,12 @@
       "method": "La Méthode",
       "schools": "Les Écoles",
       "laboratory": "Le Laboratoire",
-      "library": "Bibliothèque"
+      "library": "Bibliothèque",
+      "learningPath": "Parcours",
+      "progression": "Compétences",
+      "revision": "Révision",
+      "diagnostic": "Diagnostic",
+      "finalAssessment": "Évaluation"
     },
     "footer": "تَبَيُّن — Apprendre à vérifier avant d'affirmer • Ahl as-Sunnah wa-l-Jamâʿa",
     "switchLanguage": "العربية"
@@ -75,5 +80,15 @@
     "title": "La Bibliothèque de Référence",
     "subtitle": "Index des sources et références patrimoniales classées par domaine et niveau.",
     "description": "La bibliothèque rassemblera les ouvrages fondamentaux (Tafsîr, Hadith, Uṣûl, 'Aqida) avec liens d'accès légaux."
+  },
+  "skills": {
+    "title": "Modèle de Compétences Méthodologiques",
+    "subtitle": "14 compétences pour forger un esprit critique rigoureux",
+    "categories": {
+      "sources": "Identification & Sources Primaires",
+      "critique": "Critique Textuelle & Chaînes",
+      "hermeneutique": "Compréhension & Herméneutique",
+      "posture": "Posture Épistémique & Rigueur"
+    }
   }
 }

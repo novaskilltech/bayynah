@@ -1,0 +1,570 @@
+[
+  {
+    "id": "eval-01",
+    "order": 1,
+    "title": {
+      "fr": "Cas du texte viral attribué à Ibn Taymiyya",
+      "ar": "حالة النقل الرائج المنسوب لابن تيمية"
+    },
+    "contextDescription": {
+      "fr": "Dans un débat public houleux, un intervenant lit un paragraphe virulent attribué à Ibn Taymiyya pour légitimer la rupture immédiate des liens familiaux avec tout proche pécheur.",
+      "ar": "في سجال حاد، قرأ أحد المشاركين فقرة قاسية نُسبت لشيخ الإسلام ابن تيمية لتسويغ القطيعة التامة مع أي قريب يقع في معصية."
+    },
+    "claim": {
+      "fr": "« Ibn Taymiyya a formellement ordonné dans ses Fatāwā de boycotter et maudire tout proche qui commet un péché public, sans exception. »",
+      "ar": "«أوجب ابن تيمية في الفتاوى هجر ولعن كل قريب يعلن المعصية، دون أي استثناء.»"
+    },
+    "primarySkill": "PRIMARY_SOURCE_RETRIEVAL",
+    "options": [
+      {
+        "id": "eval-opt-1a",
+        "text": {
+          "fr": "Exiger l'emplacement exact dans Majmūʿ al-Fatāwā et vérifier le chapitre : Ibn Taymiyya y détaille que le boycott (hajr) est un remède soumis à la balance des intérêts et préjudices (maṣlaḥa/mafsada), et non une fin aveugle.",
+          "ar": "المطالبة بالإحالة الدقيقة في «مجموع الفتاوى» وفحص الباب: حيث يقرر ابن تيمية أن الهجر دواء يدور مع المصلحة والمفسدة، وليس عقوبة عمياء تُفسد أكثر مما تُصلح."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Transfert parfait : remonter au texte original dans son contexte dissipe l'instrumentalisation d'une citation tronquée.",
+          "ar": "تحقيق ممتاز: مراجعة النص في مظانه وسياقه تكشف بتر الكلام وتثبت توازنه المنهجي."
+        }
+      },
+      {
+        "id": "eval-opt-1b",
+        "text": {
+          "fr": "Demander à l'intervenant s'il a lu le tome en entier ou s'il s'agit d'un copier-coller d'Internet.",
+          "ar": "سؤال المتحدث هل طالع المجلد بنفسه أم نسخ النص من الإنترنت."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Question pertinente mais qui reste sur le plan oratoire au lieu d'effectuer l'audit documentaire.",
+          "ar": "سؤال وجيه لكشف مصدره، لكنه لا يغني عن التحقق المكتبي من عبارة المصدر."
+        }
+      },
+      {
+        "id": "eval-opt-1c",
+        "text": {
+          "fr": "Rejeter l'affirmation en affirmant qu'Ibn Taymiyya n'a jamais parlé de ce sujet.",
+          "ar": "إنكار النقل فوراً بدعوى أن ابن تيمية لم يتناول هذه المسألة أصلاً."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Inexact : Ibn Taymiyya a longuement traité du boycott relationnel, mais avec des conditions strictes.",
+          "ar": "نفي متسرع: فقد بحث المسألة في مواضع متعددة ولكن بضوابط دقيقة."
+        }
+      },
+      {
+        "id": "eval-opt-1d",
+        "text": {
+          "fr": "Appliquer immédiatement ce boycott dans sa propre famille pour se conformer au texte cité.",
+          "ar": "تطبيق القطيعة فوراً في الأسرة التزاماً بالنص المذكور."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Passage à l'acte destructeur fondé sur une citation déformée et non vérifiée.",
+          "ar": "سلوك متهور يبني قطيعة الأرحام على بتر النقول دون فقه."
+        }
+      }
+    ]
+  },
+  {
+    "id": "eval-02",
+    "order": 2,
+    "title": {
+      "fr": "Hadith médical et rejet des soins contemporains",
+      "ar": "الحديث الطبي ودعوى الاستغناء عن الطب الحديث"
+    },
+    "contextDescription": {
+      "fr": "À propos d'un hadith authentique mentionnant les vertus de la graine noire (ḥabba sawdā') comme « guérison pour toute maladie sauf la mort », une personne refuse toute chimiothérapie ou chirurgie pour un cancer avancé.",
+      "ar": "بناء على حديث «الحبة السوداء شفاء من كل داء إلا السام»، رفض مريض إجراء جراحة عاجلة أو علاجاً كيميائياً لورم متقدم."
+    },
+    "claim": {
+      "fr": "« Le hadith est authentique, et le terme “kull dā'” (toute maladie) est absolu. Avoir recours à la médecine moderne trahit un manque de foi dans la véracité du Prophète ﷺ. »",
+      "ar": "«الحديث صحيح، ولفظ “كل داء” عام، فاللجوء للطب الحديث نقص في اليقين وتكذيب للنص.»"
+    },
+    "primarySkill": "DALALA_ANALYSIS",
+    "options": [
+      {
+        "id": "eval-opt-2a",
+        "text": {
+          "fr": "Analyser la portée du terme général (ʿāmm maqsūṣ) : les spécialistes de la langue et de la médecine prophétique (comme Ibn Hajar et Ibn al-Qayyim) soulignent qu'il s'agit d'un général au sens particulier (les maladies froides), et la Sunna ordonne par ailleurs formellement de consulter les médecins compétents.",
+          "ar": "إعمال قواعد العموم والخصوص: بين شراح الحديث (كابن حجر وابن القيم) أن الحديث من العام المخصوص أو المراد به الخصوص (الأدواء الباردة)، مع ثبوت أمره ﷺ الصريح بالتداوي عند الأطباء الحذاق."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Parfaite articulation herméneutique : comprendre les règles de la langue arabe et l'ensemble des commandements de soins évite le fanatisme suicidaire.",
+          "ar": "فقه دقيق يجمع بين النص الشرعي وقواعد اللسان وحفظ النفس التي هي من كليات الشريعة."
+        }
+      },
+      {
+        "id": "eval-opt-2b",
+        "text": {
+          "fr": "Prendre la graine noire en complément du traitement médical sans contester l'interprétation littérale de la personne.",
+          "ar": "تناول الحبة السوداء بالتوازي مع العلاج الطبي دون الدخول في تفنيد استدلاله."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Sage compromis pratique pour la santé, mais qui laisse subsister la faille méthodologique dans la compréhension du texte.",
+          "ar": "حل عملي يحفظ الحياة، لكنه يترك الخلل الأصولي في فهم النصوص دون علاج."
+        }
+      },
+      {
+        "id": "eval-opt-2c",
+        "text": {
+          "fr": "Rejeter le hadith d'al-Bukhārī en prétendant que la science moderne a rendu les hadiths caducs.",
+          "ar": "الطعن في الحديث بدعوى أن الطب الحديث أبطل الاعتماد على السنة."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Confusion dommageable entre la parole prophétique véridique et la mauvaise lecture des hommes.",
+          "ar": "خلط باطل بين النص المعصوم وسوء فهم القارئ له."
+        }
+      },
+      {
+        "id": "eval-opt-2d",
+        "text": {
+          "fr": "Approuver le refus des soins hospitaliers et accuser de faiblesse de foi quiconque consulte un oncologue.",
+          "ar": "تأييد رفض العلاج واتهام كل من راجع الأطباء بالشك في قدرة الله ورسوله."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Mise en danger d'autrui et trahison de l'esprit de la Sharīʿa.",
+          "ar": "إلقاء بالنفس إلى التهلكة وتصرف محرم يناقض مقاصد الشريعة."
+        }
+      }
+    ]
+  },
+  {
+    "id": "eval-03",
+    "order": 3,
+    "title": {
+      "fr": "Le verset du jugement et les gloses des Salaf",
+      "ar": "آية الحكم بما أنزل الله وتفسير السلف"
+    },
+    "contextDescription": {
+      "fr": "Un groupe utilise le verset « Et ceux qui ne jugent pas d'après ce qu'Allah a fait descendre, les voilà les mécréants » (Al-Mā'ida: 44) pour anathématiser en masse les populations et les fonctionnaires d'un pays.",
+      "ar": "احتجت جماعة بآية: ﴿وَمَن لَّمْ يَحْكُم بِمَا أَنزَلَ اللَّهُ فَأُولَٰئِكَ هُمُ الْكَافِرُونَ﴾ لتكفير المجتمعات وموظفي الدولة بإطلاق."
+    },
+    "claim": {
+      "fr": "« Le verset est catégorique et sans condition : quiconque applique une règle positive commet le grand kufr qui exclut de l'islam, sans distinction entre croyance et acte. »",
+      "ar": "«الآية عامة جازمة: كل من حكم أو تحاكم لقانون فهو كافر كفراً أكبر مخرجاً من الملة، بلا تفريق بين الاعتقاد والعمل.»"
+    },
+    "primarySkill": "SALAF_ATTRIBUTION",
+    "options": [
+      {
+        "id": "eval-opt-3a",
+        "text": {
+          "fr": "Confronter cette lecture aux exégèses documentées des Compagnons (notamment Ibn ʿAbbās : « kufr dūna kufr ») et des grands exégètes (aṭ-Ṭabarī, al-Qurṭubī) qui distinguent l'istiḥlāl (rendre licite dans le cœur) du péché ou de l'injustice pratique.",
+          "ar": "مقارنة هذا الفهم بتفسير السلف الثابت (كقول ابن عباس: «كفر دون كفر») وما قرره أئمة التفسير (كالطبري والقرطبي) من التفريق بين الجحود والاستحلال وبين المعصية والظلم."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Rempart méthodologique fondamental : l'exégèse des Salaf documentée avec chaîne empêche le glissement vers l'idéologie kharijite.",
+          "ar": "حصن منهجي مكين: الرجوع إلى فهم الصحابة يقطع دابر فكر الخوارج وغلوهم في تكفير المسلمين."
+        }
+      },
+      {
+        "id": "eval-opt-3b",
+        "text": {
+          "fr": "Argumenter que les temps ont changé et que les versets médiévaux ne s'appliquent plus aux États modernes.",
+          "ar": "القول بأن الزمان تغير وأن الآيات لا علاقة لها بالدولة الحديثة."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Argumentation fragile qui concède implicitement aux extrémistes que le sens originel du verset était bien le leur.",
+          "ar": "حجة واهية تسلم للمتطرفين بصحة فهمهم وتفر إلى دعوى تعطيل دلالة النص."
+        }
+      },
+      {
+        "id": "eval-opt-3c",
+        "text": {
+          "fr": "Éviter tout débat et se désintéresser complètement de la question.",
+          "ar": "السكوت التام والهروب من المسألة بدعوى أنها معقدة."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "La démission intellectuelle laisse le champ libre aux lectures dévoyées.",
+          "ar": "الانسحاب السلبي يترك الساحة للأفهام المنحرفة تعبث بعقول الشباب."
+        }
+      },
+      {
+        "id": "eval-opt-3d",
+        "text": {
+          "fr": "Rejoindre leur position pour ne pas être soupçonné de compromission.",
+          "ar": "موافقتهم على التكفير خشية أن يُتهم بالنفاق أو مداهنة السلطة."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Adhésion criminelle à l'anathème aveugle, en contradiction avec le consensus des gens de la Sunna.",
+          "ar": "سقوط في بدعة التكفير المهلكة التي حذر منها النبي ﷺ وأجمع المسلمون على نكارتها."
+        }
+      }
+    ]
+  },
+  {
+    "id": "eval-04",
+    "order": 4,
+    "title": {
+      "fr": "Glissement sémantique d'un terme légal",
+      "ar": "الانزلاق الدلالي لمصطلح شرعي"
+    },
+    "contextDescription": {
+      "fr": "Un polémiste affirme que la taxe douanière ou l'impôt sur les entreprises est assimilable au 'maks' maudit dans les hadiths, et déclare donc illicite tout travail dans l'administration fiscale.",
+      "ar": "زعم كاتب أن الضرائب والرسوم الجمركية المعاصرة هي عين «المَكْس» الملعون في الأحاديث، وحرم العمل في مصلحة الضرائب بإطلاق."
+    },
+    "claim": {
+      "fr": "« Tout prélèvement financier public est un maks, or le percepteur de maks (ṣāḥib al-maks) est en enfer selon le hadith. Donc les impôts sont tous illicites. »",
+      "ar": "«كل جباية مالية هي مكس، وصاحب المكس في النار بنص الحديث، فجميع الضرائب محرمة قطباً.»"
+    },
+    "primarySkill": "TERMINOLOGY_ANALYSIS",
+    "options": [
+      {
+        "id": "eval-opt-4a",
+        "text": {
+          "fr": "Distinguer le terme technique historique : les juristes (Ibn Rajab, al-Qarāfī) définissent le 'maks' comme le racket arbitraire et extortionnaire de l'époque préislamique sans contrepartie, tandis que les contributions publiques destinées aux services communs (infrastructures, sécurité) relèvent de la politique légale (siyāsa sharʿiyya) et de l'intérêt général (maṣlaḥa).",
+          "ar": "تحرير المصطلح في عرف الخطاب: بين الفقهاء (كالقرافي وابن رجب) أن المكس هو الخوة والظلم الجاهلي الذي يؤخذ بلا حق ولا منفعة مقابلة، بخلاف الرسوم المنظمة لخدمات المجتمع ومرافقه المندرجة في السياسة الشرعية والمصالح المرسلة."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Distinction terminologique et uṣūlī magistrale : ne pas confondre un brigandage antique avec la gestion fiscale moderne d'un service public.",
+          "ar": "تحرير مصطلحي رفيع يمنع قياس الواجبات التنظيمية العادلة على مظالم الجاهلية وقطع الطريق."
+        }
+      },
+      {
+        "id": "eval-opt-4b",
+        "text": {
+          "fr": "Reconnaître que les impôts sont contestables, mais dire qu'on les tolère par nécessité impérieuse (ḍarūra).",
+          "ar": "التسليم بأنها مكس محرم، ولكن القول بجوازها للمواطن من باب الضرورة والحاجة."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "La règle de nécessité est valide, mais accepter la prémisse terminologique fausse maintient le malentendu.",
+          "ar": "إعمال الضرورة مسلك فقهي، لكن التسليم بمطابقة المصطلح للواقع خطأ أصولي في التكييف."
+        }
+      },
+      {
+        "id": "eval-opt-4c",
+        "text": {
+          "fr": "Déclarer que l'islam interdit tout impôt autre que la zakāt stricte.",
+          "ar": "الجزم بأنه لا يجوز في مال المسلم أي حق سوى الزكاة بإطلاق."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Ignorance des règles financières de l'État musulman historique (kharāj, jizya, ʿushūr).",
+          "ar": "إغفال لما استقر في الفقه الإسلامي وتاريخ الخلافة من الخراج والجمارك (العشور) ونوائب المال."
+        }
+      },
+      {
+        "id": "eval-opt-4d",
+        "text": {
+          "fr": "Appeler à la fraude fiscale massive sous prétexte de piété religieuse.",
+          "ar": "الدعوة للتهرب الضريبي وأكل أموال الناس بالباطل بدعوى التدين."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Violation des pactes de citoyenneté et de résidence, assimilable à la trahison (ghadr).",
+          "ar": "غدر ونقض للعهود وأكل لأموال الناس بغير حق يفسد النظام العام."
+        }
+      }
+    ]
+  },
+  {
+    "id": "eval-05",
+    "order": 5,
+    "title": {
+      "fr": "Contradiction apparente entre deux hadiths",
+      "ar": "التعارض الظاهري بين حديثين"
+    },
+    "contextDescription": {
+      "fr": "Deux hadiths authentiques sont présentés : l'un indique que le Prophète ﷺ a prié debout lors d'une circonstance, l'autre qu'il a prié assis et a ordonné à ses fidèles de s'asseoir s'il priait assis.",
+      "ar": "ورد حديثان صحيحان: أحدهما صلى فيه النبي ﷺ جالساً وأمر من خلفه بالجلوس، والآخر في مرضه الأخير صلى فيه جالساً وصلى الناس خلفه قياماً."
+    },
+    "claim": {
+      "fr": "« Ces deux hadiths se contredisent frontalement ; l'un des deux doit nécessairement être faux ou rejeté. »",
+      "ar": "«الحديثان متناقضان تناقضاً كلياً؛ ولا بد أن أحدهما مكذوب أو ساقط الاعتبار.»"
+    },
+    "primarySkill": "EVIDENCE_AGGREGATION",
+    "options": [
+      {
+        "id": "eval-opt-5a",
+        "text": {
+          "fr": "Appliquer la méthodologie de conciliation des juristes (al-jamʿ) ou de chronologie (naskh) : comme l'ont expliqué ash-Shāfiʿī, an-Nawawī et Aḥmad, le second hadith dans la maladie ultime est postérieur et abroge le premier, ou indique une distinction selon que l'imam commence la prière assis ou debout.",
+          "ar": "تطبيق منهجية أئمة الجمع والترجيح: إما بالنسخ لكون صلاته في مرض موته متأخرة كما رجحه الشافعي، أو بالجمع الفقهي الدقيق كما فصله الإمام أحمد (إن بدأ الإمام جالساً جلسوا، وإن طرأ عليه الجلوس أتموا قياماً)."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Méthode des maîtres : 'Iʿmāl al-kalāmayn awlā min ihmāl aḥadihimā' (appliquer les deux textes par conciliation est prioritaire sur l'abandon d'un seul).",
+          "ar": "قاعدة ذهبية في أصول الفقه: «إعمال الكلامين أولى من إهمال أحدهما»، والتوفيق هو مسلك الراسخين."
+        }
+      },
+      {
+        "id": "eval-opt-5b",
+        "text": {
+          "fr": "Prendre uniquement le hadith rapporté par le recueil le plus prestigieux.",
+          "ar": "الاعتماد على الحديث الوارد في أصح الكتابين وإهمال الآخر."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Ici les deux sont dans al-Bukhārī et Muslim, ce critère superficiel est donc inopérant.",
+          "ar": "الحديثان كلاهما في الصحيحين، فالترجيح برتبة الكتاب هنا متعذر وغير مفيد."
+        }
+      },
+      {
+        "id": "eval-opt-5c",
+        "text": {
+          "fr": "Choisir celui qui convient le mieux à la santé des fidèles de sa mosquée.",
+          "ar": "اختيار ما يناسب صحة المصلين وكبار السن في المسجد دون تأصيل."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Le pragmatisme pastoral a sa place, mais la solution juridique doit d'abord reposer sur l'exégèse des textes.",
+          "ar": "مراعاة أحوال المصلين مطلوبة، لكن الفتوى تبنى على قواعد الاستدلال لا على الهوى."
+        }
+      },
+      {
+        "id": "eval-opt-5d",
+        "text": {
+          "fr": "Déclarer que le Prophète ﷺ ne savait pas comment prier de manière constante.",
+          "ar": "الطعن في استقرار الشريعة والادعاء بأن الصلاة النبوية كانت مضطربة."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Audace sacrilège et ignorance des règles fondamentales des uṣūl al-fiqh.",
+          "ar": "جهل وقح بمقام النبوة وقواعد تنوع التشريع ومراحله."
+        }
+      }
+    ]
+  },
+  {
+    "id": "eval-06",
+    "order": 6,
+    "title": {
+      "fr": "Audit d'une prétention de consensus sur un contrat moderne",
+      "ar": "فحص دعوى الإجماع في معاملة مالية معاصرة"
+    },
+    "contextDescription": {
+      "fr": "Un conférencier proclame que le leasing financier moderne (ijāra muntahiya bi-t-tamlīk) est frappé d'un consensus absolu de nullité et d'usure (ribā).",
+      "ar": "أعلن محاضر أن عقد «الإجارة المنتهية بالتمليك» باطل بالإجماع المطبق ومحرم تحريماً قطعياً لكونه رباً."
+    },
+    "claim": {
+      "fr": "« L'ijmāʿ interdit tout contrat combinant deux contrats en un, donc le leasing sous toutes ses formes est unanimement illicite. »",
+      "ar": "«الإجماع منعقد على تحريم بيعتين في بيعة، فالإجارة المنتهية بالتمليك بجميع صورها محرمة إجماعاً.»"
+    },
+    "primarySkill": "IJMA_VERIFICATION",
+    "options": [
+      {
+        "id": "eval-opt-6a",
+        "text": {
+          "fr": "Auditer la prétention : vérifier les résolutions des académies de fiqh (Majmaʿ al-Fiqh al-Islāmī de la BID et Majlis al-Iftā') qui autorisent certaines formes bien précises où le contrat de bail et la promesse de vente sont formellement séparés, prouvant qu'il n'y a aucun consensus d'interdiction globale.",
+          "ar": "تدقيق الدعوى ومراجعة قرارات المجامع الفقهية المعتمدة (كمجمع الفقه الإسلامي الدولي وهيئة المحاسبة والمراجعة للمؤسسات المالية الإسلامية): حيث أجازوا صورا منضبطة تفصل بين عقد الإجارة ووعد التمليك، مما ينقض دعوى الإجماع على التحريم."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Démonstration parfaite : opposer les décisions documentées des institutions collectives de fiqh à une prétention individuelle d'ijmāʿ.",
+          "ar": "بصيرة نافذة: كشف زيف دعوى الإجماع بمطالعة بحوث وقرارات المجامع الفقهية المعاصرة."
+        }
+      },
+      {
+        "id": "eval-opt-6b",
+        "text": {
+          "fr": "Considérer que le conférencier a raison par précaution car l'argent moderne est suspect.",
+          "ar": "تصديق المحاضر من باب الورع المالي لأن المعاملات المعاصرة تكتنفها الشبهات."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "La piété financière est noble, mais elle ne doit pas justifier l'invention d'un consensus inexistant.",
+          "ar": "الورع محمود، لكنه لا يبيح نسبة الإجماع وتحريم ما أباحه العلماء بغير برهان."
+        }
+      },
+      {
+        "id": "eval-opt-6c",
+        "text": {
+          "fr": "Dire que le leasing étant pratiqué partout, cela constitue un 'ijmāʿ pratique' des musulmans d'aujourd'hui.",
+          "ar": "اعتبار انتشار الإجارة في البنوك بمثابة «إجماع عملي» يصحح العقد تلقائياً."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Confusion entre la diffusion d'une coutume de marché et la validation jurisprudentielle légitime.",
+          "ar": "خلط بين شيوع العرف التجاري وبين حجيته الفقهية الشرعية."
+        }
+      },
+      {
+        "id": "eval-opt-6d",
+        "text": {
+          "fr": "Déclarer toutes les banques et institutions islamiques mécréantes.",
+          "ar": "تكفير القائمين على المؤسسات المالية الإسلامية والعلماء الموقعين على الفتاوى."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Extrémisme aveugle qui substitue l'invective au travail d'analyse juridique.",
+          "ar": "غلو وطيش فكري يستبدل التكفير بالبحث الفقهي النزيه."
+        }
+      }
+    ]
+  },
+  {
+    "id": "eval-07",
+    "order": 7,
+    "title": {
+      "fr": "Posture épistémique face à un vide documentaire",
+      "ar": "الموقف عند انعدام الدليل الحاسم"
+    },
+    "contextDescription": {
+      "fr": "Une nouvelle technologie d'intelligence artificielle génère des questions éthiques inédites. Un groupe exige une réponse immédiate et catégorique : est-ce licite ou illicite ?",
+      "ar": "طُرحت مسألة مستجدة في الذكاء الاصطناعي التوليدي، وضغط بعض الحاضرين للحصول على حكم فوري قاطع: هل هو حلال أم حرام؟"
+    },
+    "claim": {
+      "fr": "« Un bon savant doit avoir une réponse immédiate pour chaque problème ; hésiter est un signe d'incompétence. »",
+      "ar": "«العالم الحق لا يتردد ويجب أن يكون جوابه حاضراً؛ والتوقف عجز وضعف في العلم.»"
+    },
+    "primarySkill": "EPISTEMIC_CAUTION",
+    "options": [
+      {
+        "id": "eval-opt-7a",
+        "text": {
+          "fr": "Affirmer la nécessité du tasawwur (conception précise du fait technique) avant le tasdīq (jugement), suspendre son avis tant que les experts techniques et les juristes n'ont pas fini leur expertise collective, et assumer sereinement l'incomplétude du savoir temporaire.",
+          "ar": "تقرير قاعدة: «الحكم على الشيء فرع عن تصوره»، والتوقف حتى يستكمل الخبراء تصوير الواقعة بدقة ويجتمع أهل النظر الفقهي، وإعلان التريث كدليل على الرسوخ والأمانة."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Modèle d'honnêteté épistémique : la précipitation dans les nāzila (faits nouveaux) engendre les pires dérapages.",
+          "ar": "ذروة الاتزان: الاستعجال في النوازل المعاصرة قبل استيعاب مناطاتها مهلكة للفتوى."
+        }
+      },
+      {
+        "id": "eval-opt-7b",
+        "text": {
+          "fr": "Interdire immédiatement la technologie par précaution générale en attendant d'en savoir plus.",
+          "ar": "تحريم التقنية فوراً من باب سد الذرائع والاحتياط العام إلى حين اتضاح الأمر."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Le blocage conservateur est fréquent, mais il viole le principe que l'origine dans les choses profanes est la licéité (al-aṣl fī al-ashyā' al-ibāḥa).",
+          "ar": "التحريم الاحتياطي مسلك متعجل يصادم الأصل الشرعي وهو الإباحة في العادات والمصالح."
+        }
+      },
+      {
+        "id": "eval-opt-7c",
+        "text": {
+          "fr": "Autoriser tout sans limite pour paraître moderne et ouvert d'esprit.",
+          "ar": "إطلاق الإباحة المطلقة دون أي قيد للظهور بمظهر المتنور المساير للعصر."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Laxisme complaisant qui ignore les réels risques éthiques et juridiques (droits d'auteur, tromperie).",
+          "ar": "تمييع وتساهل يعمي عن المحاذير الأخلاقية والاعتداء على الحقوق المعنوية."
+        }
+      },
+      {
+        "id": "eval-opt-7d",
+        "text": {
+          "fr": "Déclarer que les principes de l'islam sont inadaptés au monde moderne.",
+          "ar": "الادعاء بعجز الشريعة عن استيعاب التطور الإنساني المعاصر."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Reniement des capacités d'ijtihād et de la complétude méthodologique des uṣūl al-fiqh.",
+          "ar": "تشكيك منهجي مجحف في صلاحية أصول الفقه وقواعد الاستنباط لاستيعاب المستجدات."
+        }
+      }
+    ]
+  },
+  {
+    "id": "eval-08",
+    "order": 8,
+    "title": {
+      "fr": "Détection de l'isolationnisme et du cherry-picking",
+      "ar": "كشف الانتقائية والعزل النصي في المناظرات"
+    },
+    "contextDescription": {
+      "fr": "Dans une thèse universitaire, l'auteur veut prouver que le voile (ḥijāb) est une pure invention abbasside. Pour cela, il ne cite que deux poèmes d'amour préislamiques décrivant des chevelures et omet délibérément les versets coraniques d'Al-Aḥzāb et An-Nūr, les hadiths de ʿĀ'isha et les récits unanimes des premiers siècles.",
+      "ar": "في أطروحة، زعم باحث أن الحجاب بدعة عباسية مستحدثة، واكتفى بالاستشهاد ببيتين من الشعر الجاهلي في وصف شعر النساء، متعمداً إسقاط آيات سورتي الأحزاب والنور، وأحاديث عائشة في الصحيح، وإجماع الصدر الأول."
+    },
+    "claim": {
+      "fr": "« Ces deux poèmes prouvent de manière irréfutable que les femmes de la péninsule arabique ne se couvraient jamais la tête, le reste n'étant qu'une imposition théologique tardive. »",
+      "ar": "«البيتان برهان قاطع على أن نساء الجزيرة لم يكن يغطين رؤوسهن، وما جاء بعد ذلك مجرد اختلاق فقهي متأخر.»"
+    },
+    "primarySkill": "BIAS_DETECTION",
+    "options": [
+      {
+        "id": "eval-opt-8a",
+        "text": {
+          "fr": "Dénoncer le biais de sélection flagrant (cherry-picking) et l'isolationnisme textuel : une démarche scientifique probe ne peut pas fonder une conclusion historique sur deux fragments poétiques tout en censurant l'ensemble du corpus scripturaire, documentaire et sociologique convergent.",
+          "ar": "كشف الانتقائية الفاضحة (Cherry-picking) والعزل النصي: فالمنهج العلمي النزيه لا يبني حكماً تاريخياً وتشريعياً على شواهد شعرية معزولة مع التعمية التامة على النصوص القطعية والتواتر العملي المتصل."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Excellente analyse critique : identifier la méthode malhonnête qui consiste à isoler une exception pour nier la règle universellement établie.",
+          "ar": "نقد منهجي قاطع يفضح تهافت الاستدلال الانتقائي الذي يتجاهل ركام الأدلة الموثقة."
+        }
+      },
+      {
+        "id": "eval-opt-8b",
+        "text": {
+          "fr": "Douter de l'authenticité des deux poèmes préislamiques.",
+          "ar": "التشكيك في ثبوت البيتين الشعريين من الناحية الأدبية."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "La critique de la poésie préislamique est un sujet classique (naqd ash-shiʿr), mais le cœur du problème ici est la censure délibérée du corpus contradictoire majeur.",
+          "ar": "نقد السند الشعري وارد، لكن العلة الكبرى في الأطروحة هي إسقاط النصوص المتواترة المعارضة."
+        }
+      },
+      {
+        "id": "eval-opt-8c",
+        "text": {
+          "fr": "Accepter la thèse parce qu'elle provient d'un cadre académique universitaire.",
+          "ar": "قبول النتيجة لأنها صدرت في سياق بحث جامعي أكاديمي."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "L'argument d'autorité institutionnelle ne protège jamais contre les fautes de méthode les plus grossières.",
+          "ar": "الافتتان بالشكل الأكاديمي لا يبرر إغماض العين عن خروقات المنهج العلمي الصارخة."
+        }
+      },
+      {
+        "id": "eval-opt-8d",
+        "text": {
+          "fr": "Brûler le livre et menacer son auteur.",
+          "ar": "الدعوة لحرق الكتاب والتحريض العنيف على كاتبه."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "La violence physique est la négation de l'argumentation scientifique et de l'éthique musulmane.",
+          "ar": "العنف والتطرف يسيء للإسلام ويشوه الحق، والواجب هو الدحض العلمي والبرهان."
+        }
+      }
+    ]
+  }
+]

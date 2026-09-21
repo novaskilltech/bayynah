@@ -37,7 +37,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
               </span>
             </div>
 
-            <nav className="flex items-center gap-6 text-sm font-medium">
+            <nav className="flex items-center gap-5 text-sm font-medium">
               <a href={`/${locale}/methode`} className="hover:text-vertProfond-700 transition">
                 {dict.common.nav.method}
               </a>
@@ -47,8 +47,14 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
               <a href={`/${locale}/laboratoire`} className="hover:text-vertProfond-700 transition">
                 {dict.common.nav.laboratory}
               </a>
-              <a href={`/${locale}/bibliotheque`} className="hover:text-vertProfond-700 transition">
-                {dict.common.nav.library}
+              <a href={`/${locale}/parcours`} className="hover:text-vertProfond-700 transition">
+                {dict.common.nav.learningPath}
+              </a>
+              <a href={`/${locale}/progression`} className="hover:text-vertProfond-700 transition">
+                {dict.common.nav.progression}
+              </a>
+              <a href={`/${locale}/revision`} className="hover:text-vertProfond-700 transition">
+                {dict.common.nav.revision}
               </a>
             </nav>
 

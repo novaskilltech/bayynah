@@ -1,0 +1,954 @@
+[
+  {
+    "id": "diag-01",
+    "order": 1,
+    "title": {
+      "fr": "Citation virale sur les réseaux",
+      "ar": "نقل واسع الانتشار في المنصات"
+    },
+    "situation": {
+      "fr": "Un message partagé massivement attribue à l'imām Mālik une règle catégorique avec la mention « Rapporté par al-Bukhārī ». La formulation paraît étrange et aucun numéro de hadith ni chapitre n'est précisé. Quel est votre premier réflexe ?",
+      "ar": "انتشر منشور واسع ينسب للإمام مالك حكماً قاطعاً ومكتوب في آخره: «رواه البخاري». صياغة النص غريبة ولا توجد إحالة لكتاب ولا باب. ما التصرف المنهجي الأول؟"
+    },
+    "primarySkill": "SOURCE_IDENTIFICATION",
+    "secondarySkills": ["PRIMARY_SOURCE_RETRIEVAL", "EPISTEMIC_CAUTION"],
+    "options": [
+      {
+        "id": "opt-1a",
+        "text": {
+          "fr": "Identifier précisément la source : rechercher le texte dans les ouvrages originaux pour vérifier s'il s'agit d'un hadith prophétique ou d'une parole d'un maître, et vérifier la chaîne.",
+          "ar": "تحديد المصدر بدقة: البحث في الأصول للتفريق بين الحديث النبوي وكلام العلماء والتأكد من صحة العزو والإسناد."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Excellent réflexe : l'identification de la source et la distinction entre texte prophétique et propos d'un savant est la première étape de toute critique.",
+          "ar": "ممتاز: التثبت من عزو النص والتمييز بين المرفوع والموقوف هو الخطوة الأولى في النقد العلمي."
+        }
+      },
+      {
+        "id": "opt-1b",
+        "text": {
+          "fr": "Vérifier sur un moteur de recherche si d'autres sites islamiques connus reprennent cette même citation.",
+          "ar": "البحث في محركات البحث للتأكد هل تكرر النقل في مواقع إسلامية مشهورة."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Utile pour trouver une piste, mais les sites secondaires recopient souvent les mêmes erreurs d'attribution sans vérification primaire.",
+          "ar": "مفيد كبداية، لكن النقل من المواقع المعاصرة لا يغني عن مراجعة المصادر الأصلية لانتشار الأخطاء بالنسخ."
+        }
+      },
+      {
+        "id": "opt-1c",
+        "text": {
+          "fr": "Accepter la citation telle quelle puisque le nom d'al-Bukhārī est mentionné et que la règle semble vertueuse.",
+          "ar": "قبول النقل مباشرة لأن اسم البخاري مذكور فيه والمعنى يبدو حسناً."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Attention : la simple mention d'un recueil célèbre ne garantit pas la réalité de la citation ni l'exactitude de l'attribution.",
+          "ar": "مجرد ذكر اسم علم أو كتاب لا يكفي دون ثبوت النص في ذلك الكتاب."
+        }
+      },
+      {
+        "id": "opt-1d",
+        "text": {
+          "fr": "Partager immédiatement le texte pour avertir les gens, tout en précisant « sous réserve de vérification ».",
+          "ar": "نشر الكلام فوراً لتحذير الناس مع كتابة: «العهدة على الراوي» أو «للتثبت»."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Erreur critique : diffuser sans vérification préalable alimente la propagation des fausses attributions.",
+          "ar": "خطأ منهجي: النشر قبل التثبت يساهم في إشاعة الأوهام ونسبة ما لم يثبت."
+        }
+      }
+    ]
+  },
+  {
+    "id": "diag-02",
+    "order": 2,
+    "title": {
+      "fr": "Consultation d'une source primaire",
+      "ar": "الرجوع إلى المصادر الأصلية"
+    },
+    "situation": {
+      "fr": "Vous devez analyser une citation juridique complexe d'ash-Shāfiʿī. Vous avez le choix entre une publication sur un blog contemporain, un résumé en français et le traité original « Kitāb al-Umm » avec appareil critique. Que faites-vous ?",
+      "ar": "أردت دراسة مسألة دقيقة نُسب فيها قول للإمام الشافعي، وأمامك مقال في مدونة معاصرة، وملخص بالفرنسية، وكتاب «الأم» بتحقيق علمي. ماذا تختار؟"
+    },
+    "primarySkill": "PRIMARY_SOURCE_RETRIEVAL",
+    "secondarySkills": ["SOURCE_IDENTIFICATION"],
+    "options": [
+      {
+        "id": "opt-2a",
+        "text": {
+          "fr": "Consulter en priorité « Kitāb al-Umm » dans une édition vérifiée pour lire le texte dans son contexte intégral et ses nuances.",
+          "ar": "الرجوع أولاً لكتاب «الأم» في طبعة محققة لقراءة النص في سياقه التام واستيعاب قيوده."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Parfait : le retour aux sources primaires imprimées avec rigueur philologique élimine les déformations de seconde main.",
+          "ar": "ممتاز: الرجوع للأصل المحقق يقطع الشك باليقين ويصون من تحريفات النقل بالمعنى."
+        }
+      },
+      {
+        "id": "opt-2b",
+        "text": {
+          "fr": "Lire d'abord le résumé contemporain pour comprendre les enjeux généraux, puis confronter au texte original d'al-Umm.",
+          "ar": "قراءة الملخص المعاصر أولاً لفهم التصور العام ثم مراجعة النص في كتاب «الأم» للتأكد."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Démarche pragmatique, à condition de ne jamais fonder le jugement final sur le seul résumé.",
+          "ar": "مسلك حسن للاستئناس، شريطة ألا يبنى الحكم النهائي إلا على فحص عبارة الأصل."
+        }
+      },
+      {
+        "id": "opt-2c",
+        "text": {
+          "fr": "Se contenter de la citation du blog si l'auteur cite le numéro de page d'al-Umm.",
+          "ar": "الاكتفاء بما ذكره صاحب المدونة طالما أنه وضع رقم الصفحة في كتاب «الأم»."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Insuffisant : les citations isolées coupent souvent des conditions ou des exceptions déterminantes.",
+          "ar": "قاصر: النقول المجتزأة كثيراً ما تسقط القيود والاحترازات الجوهرية في كلام الإمام."
+        }
+      },
+      {
+        "id": "opt-2d",
+        "text": {
+          "fr": "Prendre n'importe quelle version trouvée en ligne puisque le texte porte le même titre.",
+          "ar": "الاعتماد على أي نسخة إلكترونية سريعة طالما أنها تحمل نفس عنوان الكتاب."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Dangereux : les versions non vérifiées pullulent de coquilles, de sauts de texte et de mauvaises attributions.",
+          "ar": "مسلك فاسد: النسخ غير المقابلة على الأصول يعتريها التصحيف والسقط الذي يقلب المعنى."
+        }
+      }
+    ]
+  },
+  {
+    "id": "diag-03",
+    "order": 3,
+    "title": {
+      "fr": "Authenticité du texte vs Validité de l'argumentation",
+      "ar": "صحة الحديث وصحة الاستدلال"
+    },
+    "situation": {
+      "fr": "Un interlocuteur vous présente un hadith dont l'authenticité est unanimement reconnue (ṣaḥīḥ) et en déduit immédiatement une interdiction catégorique sans vérifier les avis des fuqahā' ni les autres textes. Quelle est votre réaction méthodologique ?",
+      "ar": "احتج عليك أحدهم بحديث مجمع على صحته واستنبط منه مباشرة تحريماً قاطعاً دون مراجعة أقوال الفقهاء ولا جمع نصوص الباب. ما الموقف المنهجي؟"
+    },
+    "primarySkill": "AUTHENTICITY_CHECK",
+    "secondarySkills": ["DALALA_ANALYSIS", "EVIDENCE_AGGREGATION"],
+    "options": [
+      {
+        "id": "opt-3a",
+        "text": {
+          "fr": "Distinguer la validité de la chaîne (thubūt) de la pertinence de la déduction (dalāla) : un texte authentique peut être non univoque ou restreint par d'autres preuves.",
+          "ar": "التفريق بين ثبوت النص ودلالته: فصحة الإسناد لا تقتضي بالضرورة قطعية الدلالة ولا نفي وجود مخصص أو مقيد."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Excellente distinction : comme le disaient les Anciens, « la santé du hadith est une condition nécessaire, mais non suffisante pour l'istidlāl ».",
+          "ar": "أصبت: صحة السند ركن أول، لكن وجه الدلالة واستيفاء الشروط وانتفاء الموانع ركن لا ينفك عنه."
+        }
+      },
+      {
+        "id": "opt-3b",
+        "text": {
+          "fr": "Vérifier uniquement si l'un des quatre imāms a interprété ce hadith de cette manière avant de vous prononcer.",
+          "ar": "النظر هل وافق أحد الأئمة الأربعة هذا الاستنباط قبل إبداء الرأي."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Bonne précaution jurisprudentielle, même si l'examen direct du mode d'inférence (uṣūl) reste requis.",
+          "ar": "تحفظ فقهي معتبر، وإن كان فحص وجه الدلالة وقواعد الأصول يمنح الباحث بصيرة أكمل."
+        }
+      },
+      {
+        "id": "opt-3c",
+        "text": {
+          "fr": "Contester l'authenticité du hadith simplement parce que la conclusion vous paraît trop stricte.",
+          "ar": "التشكيك في صحة الحديث لمجرد أن النتيجة المستنبطة منه تبدو لك متشددة."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Biais grave : on ne rejette pas une chaîne authentique par répugnance envers une interprétation subjective.",
+          "ar": "انحراف منهجي: لا يطعن في ثبوت السند بمجرد استشكال الفهم أو نفور الطبع من النتيجة."
+        }
+      },
+      {
+        "id": "opt-3d",
+        "text": {
+          "fr": "Accepter immédiatement son interdiction sans réserve, car s'opposer à son déduit équivaudrait à rejeter le hadith.",
+          "ar": "التسليم بالحرمة فوراً بدعوى أن مناقشة الاستدلال تعد طعناً في الحديث نفسه."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Confusion classique : discuter la portée d'un texte (fahm) n'est en rien rejeter la parole prophétique.",
+          "ar": "خلط شنيع: مناقشة الفهم والاستنباط ليست رداً للنص، بل هي عين التحري في مراد الشارع."
+        }
+      }
+    ]
+  },
+  {
+    "id": "diag-04",
+    "order": 4,
+    "title": {
+      "fr": "Contexte textuel et cause d'énonciation",
+      "ar": "السياق وسبب الورود"
+    },
+    "situation": {
+      "fr": "Un texte prophétique comporte une réprimande sévère envers un comportement précis. Un internaute en fait une règle universelle applicable en tout temps et en tout lieu. Que vérifiez-vous d'abord ?",
+      "ar": "ورد في حديث زجر شديد في واقعة معينة، فجعلها شخص حكماً عاماً في كل زمان ومكان. ما الذي ينبغي فحصه أولاً؟"
+    },
+    "primarySkill": "CONTEXT_ANALYSIS",
+    "secondarySkills": ["DALALA_ANALYSIS"],
+    "options": [
+      {
+        "id": "opt-4a",
+        "text": {
+          "fr": "Examiner le contexte de l'incident (sabab al-wurūd), les personnes visées, la cause sous-jacente (ʿilla) et la façon dont les Compagnons ont compris cette réprimande.",
+          "ar": "بحث سبب ورود الحديث، وظروف الواقعة، والعلة التي علق عليها الحكم، وكيف فهمه الصحابة رضي الله عنهم."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Parfait : le contexte d'énonciation éclaire la portée réelle du discours et évite de généraliser un blâme circonstancié.",
+          "ar": "إصابة تامة: معرفة سبب الورود وسياق الحال تمنع من تنزيل الخاص منزلة العام وتكشف مناط الحكم."
+        }
+      },
+      {
+        "id": "opt-4b",
+        "text": {
+          "fr": "Vérifier si le texte utilise des termes grammaticaux généraux (comme 'kull' ou un nom indéfini dans une négation).",
+          "ar": "النظر في ألفاظ الحديث هل تضمنت صيغ عموم كألفاظ الشرط أو النكرة في سياق النفي."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "L'analyse linguistique est utile, mais l'analyse du contexte situationnel est indispensable pour déterminer si le terme général a une portée restreinte.",
+          "ar": "التحليل اللغوي ركن مهم، لكن لا يستغنى به عن سياق الواقعة لمعرفة هل العموم مراد أم هو عام أريد به خصوص."
+        }
+      },
+      {
+        "id": "opt-4c",
+        "text": {
+          "fr": "Supposer d'emblée que l'incident était purement anecdotique et sans aucune valeur législative permanente.",
+          "ar": "افتراض أن الواقعة قضية عين خاصة لا دلالة تشريعية فيها على الإطلاق دون دليل."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Précipité : affirmer qu'un fait est une 'qadiyyatu ʿayn' (cas d'espèce) requiert une preuve concordante.",
+          "ar": "استعجال: دعوى «قضية العين» تحتاج إلى برهان شرعي يمنع من التعدية والقياس."
+        }
+      },
+      {
+        "id": "opt-4d",
+        "text": {
+          "fr": "Appliquer immédiatement le texte à tous les cas contemporains sans s'intéresser à l'histoire du texte.",
+          "ar": "إسقاط الحكم على كل الوقائع المعاصرة دون مبالاة بملابسات النص ولا علته."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Littéralisme naïf qui ignore la finalité et le contexte des déclarations prophétiques.",
+          "ar": "جمود ظاهري يغفل مقاصد الخطاب ومناطات الأحكام النبوية."
+        }
+      }
+    ]
+  },
+  {
+    "id": "diag-05",
+    "order": 5,
+    "title": {
+      "fr": "Sens des mots dans la langue révélée",
+      "ar": "فهم الألفاظ في لسان الخطاب"
+    },
+    "situation": {
+      "fr": "Un mot figurant dans un texte du 1er siècle de l'hégire possède aujourd'hui un sens familier très péjoratif dans l'arabe moderne de certains pays. Comment éviter le contresens ?",
+      "ar": "وردت لفظة في نص من الصدر الأول، ولها في الاستعمال المعاصر لبعض البلدان معنى مبتذل أو سلبي. كيف تصون النص من الخطأ؟"
+    },
+    "primarySkill": "TEXT_MEANING",
+    "secondarySkills": ["TERMINOLOGY_ANALYSIS"],
+    "options": [
+      {
+        "id": "opt-5a",
+        "text": {
+          "fr": "Se référer aux lexiques arabes classiques (Lisān al-ʿArab, al-Qāmūs) et à l'usage des Arabes à l'époque de la Révélation.",
+          "ar": "الرجوع للمعاجم القديمة كلسان العرب والقاموس واستعمالات العرب زمن النزول لتحديد المعنى الأصلي."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Règle fondamentale : un texte s'interprète selon l'usage linguistique de son auteur à son époque, non selon les glissements sémantiques modernes.",
+          "ar": "أصل منهجي مقرر: تفسير كلام الشارع بلغة عصره وعرف خطابه لا بما استحدث من دلالات متأخرة."
+        }
+      },
+      {
+        "id": "opt-5b",
+        "text": {
+          "fr": "Consulter un dictionnaire bilingue arabe-français contemporain.",
+          "ar": "الرجوع إلى قاموس فرنسي-عربي معاصر للترجمة."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Les dictionnaires modernes peuvent dépanner mais enregistrent souvent des glissements sémantiques récents incompatibles avec les textes classiques.",
+          "ar": "المعاجم الحديثة تسجل غالباً المعاني المولدة وقد تؤدي إلى تشويه مراد النص التراثي."
+        }
+      },
+      {
+        "id": "opt-5c",
+        "text": {
+          "fr": "Faire confiance à son intuition de locuteur arabophone natif d'aujourd'hui.",
+          "ar": "الاعتماد على الفهم العفوي للمتحدث العربي اليوم بحجة أنه يفهم لغته."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "L'arabe moderne (ou dialectal) a subi des évolutions profondes : s'y fier aveuglément conduit à des anachronismes graves.",
+          "ar": "اللغة تتطور وتتحول دلالاتها؛ والاتكال على الفهم المعاصر يوقع في جناية الأناكرونيزم (إسقاط الحاضر على الماضي)."
+        }
+      },
+      {
+        "id": "opt-5d",
+        "text": {
+          "fr": "Considérer que le texte est corrompu ou choquant et refuser de l'étudier.",
+          "ar": "اتهام النص بالركاكة أو القبح ورفض النظر فيه استناداً للمصطلح المعاصر."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Juger un texte ancien à l'aune d'une sensibilité linguistique moderne est une faillite méthodologique totale.",
+          "ar": "محاكمة نصوص الوحي بلغة الشارع المعاصرة جهل بأبجديات فقه اللغة وتاريخها."
+        }
+      }
+    ]
+  },
+  {
+    "id": "diag-06",
+    "order": 6,
+    "title": {
+      "fr": "Réunion des textes d'un même chapitre",
+      "ar": "جمع نصوص الباب الواحد"
+    },
+    "situation": {
+      "fr": "Dans une controverse sur les règles de pureté rituelle, une personne cite un verset coranique général. Une autre réplique avec un hadith précis. Une troisième avec la pratique d'un Compagnon. Quelle démarche s'impose ?",
+      "ar": "في مسألة فقهية في الطهارة، احتج الأول بآية عامة، والآخر بحديث مخصص، وثالث بعمل صحابي. ما المسلك العلمي الواجب؟"
+    },
+    "primarySkill": "EVIDENCE_AGGREGATION",
+    "secondarySkills": ["DALALA_ANALYSIS", "CONCLUSION_CALIBRATION"],
+    "options": [
+      {
+        "id": "opt-6a",
+        "text": {
+          "fr": "Réunir l'ensemble des textes du chapitre (jamʿ nuṣūṣ al-bāb) afin d'articuler le général et le particulier, l'absolu et le restreint avant de statuer.",
+          "ar": "جمع كافة نصوص الباب والتوفيق بين العام والخاص والمطلق والمقيد لبناء حكم منضبط يستوعب جميع الأدلة."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "C'est la règle d'or énoncée par Aḥmad ibn Ḥanbal et al-Khaṭīb al-Baghdādī : « Le hadith, si l'on n'en réunit pas toutes les voies et textes du chapitre, on n'en comprend pas le sens ».",
+          "ar": "قاعدة أئمة النقد: «الحديث إذا لم تجمع طرقه ونصوص بابه لم يتبين فقهه»."
+        }
+      },
+      {
+        "id": "opt-6b",
+        "text": {
+          "fr": "Préférer d'office le verset coranique et écarter les hadiths pour éviter les complications.",
+          "ar": "الاكتفاء بالآية القرآنية وإهمال الأحاديث درءاً للتعارض وتسهيلاً للمسألة."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Bien que le Coran soit la source première, la Sunna l'explicite et en précise les contours ; les opposer mutuellement est une erreur de méthode.",
+          "ar": "القرآن هو الأصل، لكن السنة مبينة له ومقيدة لمطلقه، وعزل السنة عن القرآن تفريط في البيان الشرعي."
+        }
+      },
+      {
+        "id": "opt-6c",
+        "text": {
+          "fr": "Choisir le texte qui correspond le mieux à l'avis majoritaire de son entourage sans approfondir.",
+          "ar": "اختيار النص الذي يوافق ما عليه أكثر الناس في محيطك دون بحث."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Suivre l'usage local par commodité n'est pas une démarche de recherche de vérité fondée sur la preuve.",
+          "ar": "موافقة العادة أو السائد ليست مسلكاً استدلالياً منضبطاً."
+        }
+      },
+      {
+        "id": "opt-6d",
+        "text": {
+          "fr": "Déclarer que les textes sont contradictoires et que la religion comporte des paradoxes insolubles.",
+          "ar": "الادعاء بأن النصوص متناقضة لا يمكن التوفيق بينها وأن الشريعة مضطربة في الباب."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "La contradiction apparente (taʿāruḍ) est résolue par les règles du tarjīḥ, de la conciliation (jamʿ) ou de l'abrogation, non par le défaitisme.",
+          "ar": "التعارض الظاهري يرفع بقواعد الجمع والترجيح والنسخ، ودعوى التناقض عجز منهجي."
+        }
+      }
+    ]
+  },
+  {
+    "id": "diag-07",
+    "order": 7,
+    "title": {
+      "fr": "Modes d'inférence et audite de déduction",
+      "ar": "تحقيق مناط الدلالة وطرق الاستنباط"
+    },
+    "situation": {
+      "fr": "Le Prophète ﷺ n'a pas accompli une certaine action dans une circonstance donnée. Quelqu'un affirme : « L'abstention (at-tark) équivaut formellement et en toute circonstance à une interdiction divine catégorique (ḥarām) ». Qu'en dit la méthodologie ?",
+      "ar": "لم يفعل النبي ﷺ أمراً معيناً في ظرف ما، فقال قائل: «مجرد الترك يقتضي التحريم القاطع في كل حال». ما التحقيق الأصولي؟"
+    },
+    "primarySkill": "DALALA_ANALYSIS",
+    "secondarySkills": ["TERMINOLOGY_ANALYSIS", "CONCLUSION_CALIBRATION"],
+    "options": [
+      {
+        "id": "opt-7a",
+        "text": {
+          "fr": "Analyser les motifs du 'tark' : distinguer l'abstention motivée par l'absence d'intérêt, l'habitude culturelle, ou la crainte d'imposer une charge, et vérifier si l'acte entre sous un principe général légiféré.",
+          "ar": "تفصيل أحوال الترك: التمييز بين ما تركه مع قيام المقتضي وانتفاء المانع، وما تركه لمانع أو جبلة، والنظر هل يندرج الفعل تحت أصل شرعي عام."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Analyse uṣūlī rigoureuse : tous les délaissements ne valent pas interdiction (ex: ne pas manger de lézard par goût n'en fait pas un aliment illicite).",
+          "ar": "تحقيق أصولي رصين: فالترك المجرد لا يستلزم التحريم إلا بقرائن، كما في تركه ﷺ أكل الضب عيافة لا تحريماً."
+        }
+      },
+      {
+        "id": "opt-7b",
+        "text": {
+          "fr": "Considérer que le 'tark' indique au moins une détestabilité (karāha) par précaution, sans aller jusqu'à l'interdiction.",
+          "ar": "اعتبار الترك مفيداً للكراهة على الأقل من باب الاحتياط دون الجزم بالتحريم."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Position plus nuancée, bien que la karāha elle-même requière un indice légal pour être établie comme statut juridique.",
+          "ar": "مسلك أقرب، وإن كان إثبات حكم الكراهة يتطلب أيضاً دليلاً شرعياً ينقل عن الأصل."
+        }
+      },
+      {
+        "id": "opt-7c",
+        "text": {
+          "fr": "Affirmer que tout ce qui n'a pas été fait explicitement est automatiquement obligatoire à rejeter sans exception.",
+          "ar": "الجزم بأن كل ما لم يفعله حرفياً فهو مردود بإطلاق دون أي تمييز."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Généralisation hâtive contredite par l'agrément prophétique d'initiatives vertueuses prises par des Compagnons.",
+          "ar": "تعميم مجحف يخالف إقرار النبي ﷺ لبعض اجتهادات أصحابه في الذكر والدعاء."
+        }
+      },
+      {
+        "id": "opt-7d",
+        "text": {
+          "fr": "Déclarer que les actions du Prophète ﷺ ne concernaient que son époque et n'ont aucune valeur pour nous.",
+          "ar": "القول بأن أفعاله وتروكه ﷺ خاصة ببيئته ولا تلزمنا في شيء."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Négation de l'exemplarité prophétique, fondement de la législation musulmane.",
+          "ar": "إسقاط للاقتداء والتأسي النبوي وهو أصل الدين والاتباع."
+        }
+      }
+    ]
+  },
+  {
+    "id": "diag-08",
+    "order": 8,
+    "title": {
+      "fr": "Cartographie de la divergence (Ikhtilāf)",
+      "ar": "فقه الخلاف وتمييز مراتبه"
+    },
+    "situation": {
+      "fr": "Sur une question subsidiaire de prière (ex: position des mains au redressement de l'inclinaison), deux prédicateurs s'accusent mutuellement d'hérésie et d'abandon de la Sunna. Comment qualifier méthodologiquement cette querelle ?",
+      "ar": "في مسألة فرعية في الصلاة (كوضع اليدين بعد الركوع)، تبادل خطيبان التبديع وتهمة مخالفة السنة. كيف تقيم هذا الموقف منهجياً؟"
+    },
+    "primarySkill": "KHILAF_IDENTIFICATION",
+    "secondarySkills": ["EPISTEMIC_CAUTION", "CONCLUSION_CALIBRATION"],
+    "options": [
+      {
+        "id": "opt-8a",
+        "text": {
+          "fr": "Identifier qu'il s'agit d'un ikhtilāf sā'igh (divergence légitime et tolérée au sein de l'effort d'interprétation des preuves), où le tabdīʿ (accusation d'hérésie) et l'anathème sont méthodologiquement illicites.",
+          "ar": "تشخيص المسألة بأنها من الخلاف السائغ المعتبر بين المجتهدين، والذي لا يجوز فيه التبديع ولا التضليل ولا التناحر."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Règle unanime des savants : 'Lā inkāra fī masā'il al-ijtihād' (pas de réprobation violente dans les questions ouvertes à l'ijtihād fondé).",
+          "ar": "قاعدة ذهبية: «لا إنكار في مسائل الاجتهاد»، ونقل الخلاف السائغ إلى باب الولاء والبراء جناية على الفقه."
+        }
+      },
+      {
+        "id": "opt-8b",
+        "text": {
+          "fr": "Choisir l'un des deux avis comme étant supérieur et inviter l'autre prédicateur à se taire pour préserver l'unité.",
+          "ar": "ترجيح أحد القولين ومطالبة الطرف الآخر بالسكوت منعاً للفرقة."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Vouloir l'unité est louable, mais imposer le silence sur un avis juridisque valide est contre-productif.",
+          "ar": "قصد جمع الكلمة حسن، لكن إسكات الرأي الفقهي المعتبر ليس حلاً علمياً."
+        }
+      },
+      {
+        "id": "opt-8c",
+        "text": {
+          "fr": "Considérer que l'un des deux est nécessairement un hypocrite égaré.",
+          "ar": "اعتبار أحد الطرفين حتماً من أهل الأهواء والزيغ."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Confusion toxique entre divergence jurisprudentielle et déviation dogmatique.",
+          "ar": "خلط خطير بين اجتهاد الفروع وانحراف العقائد."
+        }
+      },
+      {
+        "id": "opt-8d",
+        "text": {
+          "fr": "En conclure que la prière n'a aucune règle fixe et que chacun fait comme il veut sans référence aux textes.",
+          "ar": "الاستنتاج بأنه لا توجد ضوابط في الصلاة وأن لكل إنسان أن يصلي كيفما شاء بلا مرجعية."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Relativisme absolu destructeur de tout cadre méthodologique.",
+          "ar": "نسبية مطلقة تهدم بنيان الشريعة وأصول التعبد."
+        }
+      }
+    ]
+  },
+  {
+    "id": "diag-09",
+    "order": 9,
+    "title": {
+      "fr": "Traçabilité documentaire des citations collectives",
+      "ar": "توثيق الدعاوى الجماعية عن السلف"
+    },
+    "situation": {
+      "fr": "Un ouvrage affirme : « Les Salaf ont tous été d'accord pour considérer telle action comme une apostasie majeure ». Aucun nom de compagnon ni de tābiʿī n'est cité, aucune référence à un recueil ancien n'est fournie. Que convient-il d'exiger ?",
+      "ar": "جاء في كتاب: «أجمع السلف قاطبة على أن هذا الفعل كفر مخرج من الملة»، دون ذكر اسم صحابي ولا تابعي ولا إحالة لمصدر قديم. ما المتعين علمياً؟"
+    },
+    "primarySkill": "SALAF_ATTRIBUTION",
+    "secondarySkills": ["IJMA_VERIFICATION", "PRIMARY_SOURCE_RETRIEVAL"],
+    "options": [
+      {
+        "id": "opt-9a",
+        "text": {
+          "fr": "Exiger un dossier documentaire probant : citations nominales vérifiées avec chaînes de transmission (isnād) ou attestations explicites dans les recueils de consensus reconnus.",
+          "ar": "المطالبة ببيان توثيقي صريح: تسمية الأعلام بأسانيدهم الثابتة، أو إثبات النقل عن أئمة معتمدين في كتب الإجماع والآثار."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Inattaquable : 'In kunta nāqilan fa-ṣ-ṣiḥḥa' (si tu rapportes, prouve l'authenticité). Les slogans collectifs ne remplacent pas les sources.",
+          "ar": "عين التحقيق: «إن كنت ناقلاً فالصحة، أو مدعياً فالدليل». والدعاوى المجملة تعوزها البينة."
+        }
+      },
+      {
+        "id": "opt-9b",
+        "text": {
+          "fr": "Faire confiance à l'auteur si c'est un savant ou prédicateur connu contemporain.",
+          "ar": "حسن الظن بالكاتب إذا كان من الدعاة أو المشايخ المشهورين المعاصرين."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Le respect des personnes ne dispense jamais de la vérification des sources, surtout en matière d'accusation d'apostasie.",
+          "ar": "احترام الأشخاص لا يلغي واجب التثبت من النقول، سيما في مسائل التكفير الخطيرة."
+        }
+      },
+      {
+        "id": "opt-9c",
+        "text": {
+          "fr": "Rejeter l'affirmation d'emblée en déclarant que les Salaf n'ont jamais rien tranché d'important.",
+          "ar": "رد الكلام مباشرة بادعاء أن السلف لم يتفقوا على شيء ذي بال."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Refus dogmatique inverse : les consensus des Salaf existent et sont consignés, mais ils se prouvent par des textes.",
+          "ar": "مكابرة مضادة: فإجماع السلف حجة معتبرة متى ثبت بالنقل الصحيح."
+        }
+      },
+      {
+        "id": "opt-9d",
+        "text": {
+          "fr": "Considérer toute personne qui ne souscrit pas immédiatement à cette affirmation comme un renégat.",
+          "ar": "تبديع وتكفير كل من توقف في قبول هذا النقل المجمل."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Dérive sectaire majeure : faire d'une prétention non étayée un critère d'exclusion de la foi.",
+          "ar": "غلو وانحراف: جعل الدعاوى غير المبرهنة أصلاً في الموالاة والمعاداة."
+        }
+      }
+    ]
+  },
+  {
+    "id": "diag-10",
+    "order": 10,
+    "title": {
+      "fr": "Vérification des prétentions de consensus (Ijmāʿ)",
+      "ar": "تحرير دعاوى الإجماع"
+    },
+    "situation": {
+      "fr": "Un auteur écrit : « Il y a consensus absolu (ijmāʿ) sur l'obligation de la zakāt sur les bijoux personnels de la femme ». Or vous trouvez dans les livres de fiqh qu'Ibn ʿUmar, ʿĀ'isha et l'école mālikite estimaient qu'il n'y a pas de zakāt dessus. Comment analysez-vous cette situation ?",
+      "ar": "كتب باحث: «انعقد الإجماع على وجوب زكاة حلي المرأة المعد للاستعمال»، بينما ثبت في كتب الفقه عن ابن عمر وعائشة ومالك عدم الوجوب. كيف تحلل هذا؟"
+    },
+    "primarySkill": "IJMA_VERIFICATION",
+    "secondarySkills": ["KHILAF_IDENTIFICATION", "SOURCE_IDENTIFICATION"],
+    "options": [
+      {
+        "id": "opt-10a",
+        "text": {
+          "fr": "Constater la nullité ou le caractère abusif de la prétention de consensus : l'existence d'une divergence attestée parmi les Compagnons et les imāms invalide la prétention d'unanimité.",
+          "ar": "بطلان دعوى الإجماع أو عدم انضباطها: فوجود الخلاف الثابت عن كبار الصحابة وأئمة الفقه ينقض دعوى الاتفاق."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Parfait : comme le rappelait Aḥmad ibn Ḥanbal : « Quiconque prétend le consensus [sur ces questions débattues] est un menteur ou ignore la divergence ».",
+          "ar": "إصابة دقيقة: كما قال الإمام أحمد: «من ادعى الإجماع فهو كاذب، ما يدريه لعل الناس اختلفوا»."
+        }
+      },
+      {
+        "id": "opt-10b",
+        "text": {
+          "fr": "Supposer que l'auteur entendait par 'ijmāʿ' le consensus de sa propre école ou de la majorité.",
+          "ar": "افتراض أن الكاتب قصد بالإجماع إجماع أهل مذهبه أو قول الأكثرية وتجوز في العبارة."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Explication philologique plausible chez certains auteurs anciens, mais qui souligne l'obligation de préciser la portée exacte du terme.",
+          "ar": "تأويل سائغ في مصطلحات بعض القدماء، لكنه يؤكد ضرورة الحذر من إطلاق لفظ الإجماع على قول الجمهور."
+        }
+      },
+      {
+        "id": "opt-10c",
+        "text": {
+          "fr": "Rejeter l'avis des Compagnons pour sauver la prétention de consensus de l'auteur.",
+          "ar": "إسقاط آثار الصحابة الثابتة لحساب تصحيح كلام الباحث المعاصر."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Renversement des priorités : ce sont les prétentions des contemporains qui se plient aux données de l'histoire, non l'inverse.",
+          "ar": "قلب للموازين: فكلام المتأخرين يحاكم إلى الآثار والنصوص لا العكس."
+        }
+      },
+      {
+        "id": "opt-10d",
+        "text": {
+          "fr": "Déclarer que le concept d'ijmāʿ n'a jamais existé et qu'il est une invention tardive inutile.",
+          "ar": "إنكار أصل الإجماع والادعاء بأنه خيال لا حقيقة له في الشريعة."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "L'ijmāʿ sur les piliers et les règles catégoriques est un fondement de l'islam ; c'est son usage abusif dans les questions secondaires qui doit être assaini.",
+          "ar": "الإجماع على قطعيات الدين أصل عظيم، والتثبت في دعاويه صيانة له وليس إلغاءً لحجيته."
+        }
+      }
+    ]
+  },
+  {
+    "id": "diag-11",
+    "order": 11,
+    "title": {
+      "fr": "Posture épistémique et suspension du jugement",
+      "ar": "التوقف عند اشتباه الأدلة والتواضع العلمي"
+    },
+    "situation": {
+      "fr": "Vous examinez un dossier complexe où deux chaînes de transmission de force comparable s'opposent et où les savants majeurs se sont abstenus de trancher. Que convient-il de faire ?",
+      "ar": "عرضت عليك مسألة حديثية تكافأت فيها الأدلة، وتوقف كبار النقاد عن الترجيح فيها لغموض العلة. ما الموقف اللائق؟"
+    },
+    "primarySkill": "EPISTEMIC_CAUTION",
+    "secondarySkills": ["CONCLUSION_CALIBRATION"],
+    "options": [
+      {
+        "id": "opt-11a",
+        "text": {
+          "fr": "Suspendre son jugement (tawaqquf), déclarer honnêtement « je ne sais pas » ou « la question requiert un examen plus approfondi », et respecter la réserve des maîtres.",
+          "ar": "التوقف والقول بإنصاف: «لا أدري» أو «المسألة محتملة تحتاج مزيد تحرير»، والاهتداء بمسلك الأكابر في عدم التكلف."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Sommet de la maturité scientifique : l'imām Mālik disait : « Le bouclier du savant est : je ne sais pas ».",
+          "ar": "قمة النضج العلمي: «جنة العالم: لا أدري، فإذا أغفلها أُصيبت مقاتله»."
+        }
+      },
+      {
+        "id": "opt-11b",
+        "text": {
+          "fr": "Choisir provisoirement l'avis le plus prudent en précisant explicitement qu'il s'agit d'une position de précaution personnelle.",
+          "ar": "الأخذ بالأحوط في حق النفس مع النص الصريح على أنه تورع لا حكم قاطع."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Attitude spirituelle convenable pour la pratique individuelle, tant qu'on ne l'érige pas en vérité académique tranchée.",
+          "ar": "مسلك حسن في الورع الفردي ما لم يتحول إلى إلزام للغير بلا حجة جازمة."
+        }
+      },
+      {
+        "id": "opt-11c",
+        "text": {
+          "fr": "Tirer au sort ou choisir au hasard pour ne pas laisser de vide intellectuel.",
+          "ar": "الترجيح بالهوى أو الاختيار العشوائي كراهية بقاء المسألة دون جزم."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "L'inconfort du doute ne justifie jamais un choix arbitraire sans fondement probatoire.",
+          "ar": "استثقال التوقف لا يسوغ القول في دين الله بالتحكم والظن العاري."
+        }
+      },
+      {
+        "id": "opt-11d",
+        "text": {
+          "fr": "Inventer une conciliation artificielle sans aucun appui philologique pour paraître supérieur aux savants anciens.",
+          "ar": "اختراع تلفيق لا أصل له في لسان العرب وقواعد الأصول للظهور بمظهر المحقق الفذ."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Prétention prétentieuse qui viole les règles de la recherche honnête.",
+          "ar": "تكلف ممقوت وادعاء لما لم يحط به علم، وخرق لإجماع السلف في التواضع."
+        }
+      }
+    ]
+  },
+  {
+    "id": "diag-12",
+    "order": 12,
+    "title": {
+      "fr": "Calibration des conclusions",
+      "ar": "معايرة النتائج وتناسب الحكم مع الدليل"
+    },
+    "situation": {
+      "fr": "Une preuve repose sur un ḥadīth āḥād (à transmission singulière) dont l'authenticité est probable (ḥasan) et la déduction conjecturale (ẓanniyyat ad-dalāla). Comment formulez-vous la conclusion ?",
+      "ar": "دليل المسألة حديث آحاد حسن دلالته ظنية محتملة لأكثر من وجه. كيف تصوغ النتيجة؟"
+    },
+    "primarySkill": "CONCLUSION_CALIBRATION",
+    "secondarySkills": ["EPISTEMIC_CAUTION", "DALALA_ANALYSIS"],
+    "options": [
+      {
+        "id": "opt-12a",
+        "text": {
+          "fr": "Formuler une conclusion nuancée et proportionnée : « Cet avis est le plus probable (ar-rājiḥ) selon cette lecture, sans que l'on puisse anathématiser ou condamner l'avis contraire ».",
+          "ar": "صياغة حكم متزن ومقاس بدقة: «هذا القول أظهر أو راجح بالنظر للدليل، مع عدم القطع ولا تثريب على المخالف»."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Rigueur uṣūlī absolue : l'intensité de la conclusion doit épouser exactement le degré de certitude ou de probabilité des prémisses.",
+          "ar": "أصالة أصولية: يجب أن تتطابق قوة النتيجة مع قوة المقدمات ثبوتاً ودلالة دون غلو."
+        }
+      },
+      {
+        "id": "opt-12b",
+        "text": {
+          "fr": "Déclarer que l'avis est solidement appuyé, mais éviter de mentionner les faiblesses potentielles pour ne pas troubler le public.",
+          "ar": "القول بأن الحكم قوي، مع إغفال الاحتمالات والوجوه الأخرى خشية تشويش العامة."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "La pédagogie s'entend, mais dissimuler les nuances affaiblit l'éducation à l'esprit critique.",
+          "ar": "مراعاة فهم العامة أمر مطلوب، ولكن إخفاء الاحتمال الأصولي يفقد الباحث أمانته العلمية."
+        }
+      },
+      {
+        "id": "opt-12c",
+        "text": {
+          "fr": "Affirmer que c'est la vérité absolue de Dieu révélée du haut des sept cieux et que quiconque en doute est coupable.",
+          "ar": "الجزم بأنه حكم الله القطعي الذي لا مرية فيه وأن من خالفه فهو مضيع للحق."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Erreur classique : attribuer un caractère catégorique (qaṭʿī) à une déduction spéculative (ẓannī).",
+          "ar": "خلط شنيع بين القطعي والظني وإلزام الناس بما لم يلزمهم الله به جزماً."
+        }
+      },
+      {
+        "id": "opt-12d",
+        "text": {
+          "fr": "Dire que comme le dalīl est ẓannī, il n'a aucune valeur juridique et peut être purement ignoré.",
+          "ar": "الادعاء بأن الدليل طالما أنه ظني فلا قيمة له ولا يترتب عليه أي حكم."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "La majorité écrasante des règles de fiqh repose sur des preuves ẓannī probables et contraignantes dans la pratique.",
+          "ar": "معظم أحكام الفروع مبنية على غلبة الظن المعتبر، وإسقاطها جهل بأصول الفقه."
+        }
+      }
+    ]
+  },
+  {
+    "id": "diag-13",
+    "order": 13,
+    "title": {
+      "fr": "Détection des biais et du cherry-picking",
+      "ar": "كشف الانتقائية والانحياز التأكيدي"
+    },
+    "situation": {
+      "fr": "Dans une recherche, vous avez une intuition de départ très forte. En lisant les textes, vous trouvez 10 citations qui la contredisent et 1 seule formulation ambiguë qui semble la conforter. Quelle est l'attitude intellectuelle probe ?",
+      "ar": "دخلت في بحث ومعك فكرة مسبقة مقتنع بها جداً، فوجدت عشرة نصوص صريحة تخالفها، ونصاً واحداً مجملاً يمكن تأويله لموافقتها. ما الموقف النزيه؟"
+    },
+    "primarySkill": "BIAS_DETECTION",
+    "secondarySkills": ["EVIDENCE_AGGREGATION", "EPISTEMIC_CAUTION"],
+    "options": [
+      {
+        "id": "opt-13a",
+        "text": {
+          "fr": "Remettre en cause son hypothèse de départ, exposer loyalement les 10 textes contradictoires et réviser sa position à la lumière des preuves réelles.",
+          "ar": "مراجعة الفكرة المسبقة بشجاعة، وعرض النصوص العشرة بأمانة، وتعديل الموقف انقياداً للبرهان."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "C'est l'essence même du tabayyun : soumettre ses désirs à la preuve et non forcer la preuve à servir ses penchants.",
+          "ar": "جوهر التبين والإنصاف: «أن تكون مستدلاً لا مستدِلاً لهواك»، واتباع الحق حيث دار."
+        }
+      },
+      {
+        "id": "opt-13b",
+        "text": {
+          "fr": "Citer les 10 textes mais tenter de les réinterpréter tous pour sauvegarder son idée initiale.",
+          "ar": "ذكر النصوص العشرة لكن مع تكلف تأويلها جميعاً لنصرة الرأي المسبق."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "La tentative d'interprétation est légitime, mais forcer 10 textes clairs pour sauver une opinion révèle un biais de confirmation.",
+          "ar": "التأويل المتكلف لعشرة نصوص واضحة من أجل نص مجمل دلالة على سطوة الانحياز النفسي."
+        }
+      },
+      {
+        "id": "opt-13c",
+        "text": {
+          "fr": "Ne citer dans son article que le texte favorable et passer sous silence les 10 autres.",
+          "ar": "الاكتفاء في المنشور بالنص الموافق وإخفاء النصوص العشرة الأخرى عن القراء."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "C'est la définition même du 'cherry-picking' (cueillette sélective déloyale) : une faute morale et scientifique majeure.",
+          "ar": "الانتقائية الفجة (Cherry-picking): وهي خيانة علمية تسلب الباحث مصداقيته."
+        }
+      },
+      {
+        "id": "opt-13d",
+        "text": {
+          "fr": "Déclarer que les auteurs des 10 textes contraires n'ont rien compris au sujet.",
+          "ar": "اتهام أصحاب النصوص المخالفة بالجهل وعدم الفهم."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Orgueil et aveuglement dogmatique incompatibles avec l'éthique de la recherche du savoir.",
+          "ar": "غرور وهوى مطبق يطمس بصيرة صاحبه عن رؤية الحق."
+        }
+      }
+    ]
+  },
+  {
+    "id": "diag-14",
+    "order": 14,
+    "title": {
+      "fr": "Distinction terminologique (Linguistique vs Juridique)",
+      "ar": "التمييز بين الحقيقة اللغوية والاصطلاحية"
+    },
+    "situation": {
+      "fr": "Dans un texte ancien, le calife ʿUmar ibn al-Khaṭṭāb s'exclame à propos de la réunion des fidèles derrière un seul imam pour Tarāwīḥ : « Quelle excellente bidʿa que celle-ci ! ». Comment interpréter le terme 'bidʿa' ici ?",
+      "ar": "قال عمر بن الخطاب رضي الله عنه لما جمع الناس على إمام واحد في التراويح: «نِعْمَتِ البِدْعَةُ هَذِهِ». كيف يفسر لفظ «البدعة» هنا منهجياً؟"
+    },
+    "primarySkill": "TERMINOLOGY_ANALYSIS",
+    "secondarySkills": ["CONTEXT_ANALYSIS", "TEXT_MEANING"],
+    "options": [
+      {
+        "id": "opt-14a",
+        "text": {
+          "fr": "Distinguer le sens linguistique (nouveauté dans la forme d'organisation) du sens sharʿī/technique blâmable (invention cultuelle sans fondement scripturaire).",
+          "ar": "التفريق بين الحقيقة اللغوية (كل ما أحدث على غير مثال سابق كالتنظيم والجمع) والبدعة الشرعية المذمومة (ما أحدث في الدين بلا أصل ولا سند)."
+        },
+        "quality": "BEST",
+        "methodologicalScore": 3,
+        "feedback": {
+          "fr": "Analyse philologique exacte adoptée par Ibn Rajab, an-Nawawī et Ibn Kathīr : ʿUmar parlait au sens littéraire de nouveauté organisée d'une pratique ayant son origine dans la Sunna.",
+          "ar": "تحرير أئمة التحقيق (كالنووي وابن رجب): سماها بدعة باعتبار اللغة، إذ كانت الصلاة جماعة مشروعة بأصلها في زمن النبي ﷺ."
+        }
+      },
+      {
+        "id": "opt-14b",
+        "text": {
+          "fr": "Considérer que ʿUmar a créé une véritable innovation religieuse mais qu'il en avait le droit en tant que calife bien guidé.",
+          "ar": "اعتبار عمر قد استحدث بدعة دينية حقيقية لكن جاز له ذلك لكونه خليفة راشداً."
+        },
+        "quality": "ACCEPTABLE",
+        "methodologicalScore": 2,
+        "feedback": {
+          "fr": "Même si la Sunna des califes bien guidés a un statut d'autorité, ʿUmar n'a pas innové dans le culte mais réactivé une pratique prophétique.",
+          "ar": "سنة الخلفاء الراشدين متبعة، لكن التدقيق يدل على أن عمر أحيا سنة كان النبي ﷺ صلاها ليالي ثم تركها خشية الفرض."
+        }
+      },
+      {
+        "id": "opt-14c",
+        "text": {
+          "fr": "En déduire que n'importe quel croyant contemporain peut inventer de nouvelles prières rituelles et les qualifier de « bonnes bidʿa ».",
+          "ar": "الاستدلال بالأثر على جواز استحداث أي عبادات جديدة والقول بأنها «بدعة حسنة»."
+        },
+        "quality": "PREMATURE",
+        "methodologicalScore": 1,
+        "feedback": {
+          "fr": "Généralisation abusive : Tarāwīḥ a une source prophétique directe ; inventer de nouveaux rites sans source n'est pas comparable.",
+          "ar": "توسع باطل في قياس ما لا أصل له على عبادة لها أصل نبوي صريح."
+        }
+      },
+      {
+        "id": "opt-14d",
+        "text": {
+          "fr": "Rejeter le récit d'al-Bukhārī en prétendant qu'il est impossible qu'un Compagnon ait prononcé ce mot.",
+          "ar": "رد الرواية في صحيح البخاري بزعم استحالة صدور هذه العبارة عن صحابي."
+        },
+        "quality": "INCORRECT",
+        "methodologicalScore": 0,
+        "feedback": {
+          "fr": "Refus textuel injustifié né d'une incompréhension des subtilités du vocabulaire arabe ancien.",
+          "ar": "رد لنص متواتر المعنى سببه الجهل بأساليب الخطاب العربي وحقائقه اللغوية."
+        }
+      }
+    ]
+  }
+]
