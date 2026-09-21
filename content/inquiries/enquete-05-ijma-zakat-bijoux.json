@@ -1,0 +1,578 @@
+{
+  "id": "inquiry-05",
+  "slug": "ijma-zakat-bijoux",
+  "domain": "FIQH",
+  "editorialStatus": "DRAFT",
+  "title": {
+    "fr": "« Il y a consensus » : comment vérifier une prétention d’ijmāʿ ?",
+    "ar": "«هناك إجماع»: كيف نتحقق من دعوى الإجماع؟"
+  },
+  "initialClaim": {
+    "fr": "On m’a dit : « Tous les savants sont d’accord : une femme doit obligatoirement payer la zakāt sur ses bijoux en or, même lorsqu’ils sont destinés à son usage personnel. Il y a ijmāʿ sur la question. »",
+    "ar": "قيل لي: «أجمع العلماء على أن المرأة يجب عليها إخراج زكاة حلي الذهب ولو كان معداً للاستعمال والزينة، ولا خلاف في المسألة.»"
+  },
+  "authorId": "author-01",
+  "steps": [
+    {
+      "stepNumber": 1,
+      "titleFr": "Décomposer la prétention",
+      "titleAr": "تفكيك دعوى الإجماع",
+      "instructionFr": "Face à l'affirmation : « Tous les savants sont d’accord : une femme doit obligatoirement payer la zakāt sur ses bijoux en or... Il y a ijmāʿ sur la question », quelles propositions distinctes faut-il séparer ?",
+      "instructionAr": "أمام دعوى: «أجمع العلماء على أن المرأة يجب عليها إخراج زكاة حلي الذهب... ولا خلاف في المسألة»، ما هي القضايا المتمايزة الواجب فصلها؟",
+      "options": [
+        {
+          "textFr": "Il faut distinguer au moins : 1. le jugement juridique sur les bijoux d’usage ; 2. l’affirmation qu’il s’agit de l’avis de tous les savants ; 3. la prétention technique d’ijmāʿ ; 4. la question séparée de savoir quel avis est le plus fort.",
+          "textAr": "يجب التمييز بين: 1. الحكم الفقهي لزكاة حلي الاستعمال؛ 2. دعوى أن هذا قول جميع العلماء؛ 3. دعوى الإجماع الاصطلاحي؛ 4. المسألة المنفصلة في ترجيح أي القولين أقوى دليلاً.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Exact. Prouver qu’un avis est juste et prouver qu’il existe un consensus sont deux enquêtes différentes.",
+          "feedbackAr": "تحرير منهجي سديد: فإثبات صحة القول الفقهي شيء، وإثبات وقوع الإجماع عليه شيء آخر تماماً."
+        },
+        {
+          "textFr": "Il faut vérifier si plusieurs madhāhib imposent la zakāt.",
+          "textAr": "التحقق مما إذا كانت عدة مذاهب توجب الزكاة.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Recherche utile, mais qui ne sépare pas la question de l'unanimité de celle des écoles qui soutiennent l'avis.",
+          "feedbackAr": "خطوة بحثية جيدة، لكنها لا تفصل بين وجود موافقين للمذهب وبين تحقق الإجماع العام."
+        },
+        {
+          "textFr": "Si l’avis semble appuyé par plusieurs hadiths, alors il doit forcément faire consensus.",
+          "textAr": "إذا كان القول مؤيداً بعدة أحاديث، فالأرجح أنه محل إجماع حتماً.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Jugement hâtif : l'existence de hadiths n'empêche pas les juristes de diverger sur leur authenticité ou leur interprétation.",
+          "feedbackAr": "حكم متسرع: فورود نصوص في الباب لا يمنع وقوع الخلاف في ثبوتها أو في وجه دلالتها والجمع بينها."
+        },
+        {
+          "textFr": "Dire « ijmāʿ » signifie simplement « c’est un avis populaire ».",
+          "textAr": "إطلاق لفظ «الإجماع» يعني فقط أنه «رأي مشهور وشائع».",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Erreur sémantique totale : l'ijmāʿ en uṣūl al-fiqh est un accord unanime contraignant, non une simple notoriété d'usage.",
+          "feedbackAr": "خطأ اصطلاحي فاحش: فالإجماع في أصول الفقه حجة قطعية عند أهله، وليس مجرد شهرة جماهيرية."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "ON_STEP_ENTER"
+    },
+    {
+      "stepNumber": 2,
+      "titleFr": "Que signifie réellement « ijmāʿ » ?",
+      "titleAr": "ماذا نعني بالإجماع؟",
+      "instructionFr": "Sur le plan méthodologique en uṣūl al-fiqh, qu'implique rigoureusement la qualification d'ijmāʿ ?",
+      "instructionAr": "من الناحية الأصولية، ما الذي يعنيه مصطلح 'الإجماع' بدقة علمية؟",
+      "options": [
+        {
+          "textFr": "Une prétention d’ijmāʿ est beaucoup plus forte qu’une majorité : elle suppose un accord correspondant aux conditions définies par les uṣūliyyūn. Il faut donc identifier l’époque, les savants concernés et vérifier l’absence réelle de divergence pertinente.",
+          "textAr": "دعوى الإجماع أقوى بكثير من مجرد الأغلبية: فهي تفترض اتفاقاً مستوفياً لشروط الأصوليين، مما يوجب تحرير العصر والعلماء والتحقق من عدم وجود مخالف معتبر.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Définition rigoureuse : l'ijmāʿ exclut par principe la divergence d'ijtihâd reconnue entre mujtahidûn.",
+          "feedbackAr": "تأصيل دقيق: فالإجماع يقتضي انتفاء الخلاف المعتبر بين المجتهدين، ولا يصح الخلط بينه وبين الكثرة."
+        },
+        {
+          "textFr": "L’ijmāʿ veut dire qu’une grande majorité suit le même avis.",
+          "textAr": "الإجماع يعني أن جمهوراً كبيراً جداً يتبع نفس القول.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Non exactement. Une majorité, même très large, reste un jumhūr si une divergence reconnue existe.",
+          "feedbackAr": "غير دقيق: فالأغلبية مهما بلغت تظل مذهب 'جمهور' ما دام الخلاف المعتبر قائماً."
+        },
+        {
+          "textFr": "Si trois grands imams disent la même chose, on peut appeler cela ijmāʿ.",
+          "textAr": "إذا اتفق ثلاثة من كبار الأئمة على رأي، فيمكن تسمية ذلك إجماعاً.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Raccourci fallacieux : l'accord de plusieurs grands noms n'annule pas l'opinion d'autres sommités de l'islam.",
+          "feedbackAr": "تساهل اصطلاحي مرفوض: فقول عدة أئمة لا يلغي أقوال غيرهم من أئمة الاجتهاد."
+        },
+        {
+          "textFr": "Tout avis enseigné aujourd’hui comme dominant constitue automatiquement un ijmāʿ ancien.",
+          "textAr": "كل حكم فقهي يُدرس اليوم على أنه السائد يعتبر تلقائياً إجماعاً قديماً.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Anachronisme absolu : la prédominance contemporaine dans un milieu ne renseigne en rien sur le consensus des premières générations.",
+          "feedbackAr": "إسقاط تاريخي باطل: فشيوع رأي في بيئة معاصرة لا يعني بحال ثبوت إجماع السلف والقرون المفضلة عليه."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 3,
+      "titleFr": "Avant de chercher l’avis dominant, chercher l’opposant",
+      "titleAr": "قبل البحث عن الجمهور ابحث عن المخالف",
+      "instructionFr": "Pour tester l’affirmation « Tous les savants sont d’accord », quelle démarche de recherche critique est la plus efficace ?",
+      "instructionAr": "لاختبار دعوى «أجمع العلماء»، ما هو المسلك البحثي الأنفع في التحقيق النقدي؟",
+      "options": [
+        {
+          "textFr": "Chercher dans les ouvrages de khilāf et de comparaison juridique si un avis contraire ancien et documenté existe.",
+          "textAr": "البحث في كتب الخلاف المقارن لمعرفة ما إذا كان هناك قول مخالف قديم وموثق.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Une affirmation universelle peut être réfutée par l’existence d’un seul contre-exemple historique pertinent et réellement établi.",
+          "feedbackAr": "مسلك علمي محكم: فالدعوى الكلية تنقض بوجود مثال مضاد واحد موثق ومعتبر تاريخياً."
+        },
+        {
+          "textFr": "Compter les madhāhib qui soutiennent la position.",
+          "textAr": "إحصاء عدد المذاهب التي تتبنى هذا الحكم.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Démarche utile pour mesurer le jumhûr, mais inadaptée pour tester l'absence absolue de divergence.",
+          "feedbackAr": "إحصاء مفيد لمعرفة مذهب الأكثرية، لكنه لا يجيب مباشرة عن سؤال نفي الخلاف كلياً."
+        },
+        {
+          "textFr": "Chercher uniquement des fatwas qui utilisent le mot « ijmāʿ ».",
+          "textAr": "الاقتصار على تتبع الفتاوى التي تكرر كلمة «إجماع».",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Biais de circularité : collecter des affirmations d'ijmâ' ne dispense pas d'en auditer la véracité matérielle.",
+          "feedbackAr": "استدلال دائري: فتكرار نقل كلمة الإجماع في الفتاوى المتأخرة لا يثبت صحة الواقعة تاريخياً."
+        },
+        {
+          "textFr": "Vérifier quel avis obtient le plus de résultats sur Internet.",
+          "textAr": "التحقق من الرأي الذي يحصل على أكبر عدد من نتائج البحث في الإنترنت.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Absurdité méthodologique : les moteurs de recherche reflètent des flux d'algorithmes et non l'épistémologie d'uṣûl.",
+          "feedbackAr": "عبث منهجي: فخوارزميات البحث تعكس الكثافة الرقمية لا الحقيقة التاريخية والأصولية."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 4,
+      "titleFr": "La prudence d’Aḥmad face aux prétentions d’ijmāʿ",
+      "titleAr": "الاحتياط في دعوى الإجماع",
+      "instructionFr": "Quelle leçon méthodologique fondamentale tirer de la mise en garde de l’imam Aḥmad dans les Masâ'il ?",
+      "instructionAr": "ما هي القاعدة المنهجية الجوهرية المستفادة من تنبيه الإمام أحمد في المسائل؟",
+      "options": [
+        {
+          "textFr": "Il faut éviter de transformer notre ignorance d’un opposant en affirmation universelle. Une formulation comme « je ne connais pas de divergence » est épistémiquement différente de « tous les savants sont unanimes ».",
+          "textAr": "يجب الحذر من تحويل عدم العلم بالمخالف إلى جزم بنفي وجوده؛ فقول الباحث «لا أعلم فيه خلافاً» يختلف معرفياً عن دعوى «أجمع الناس كلهم».",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Leçon centrale d'Ahmad : distinguer le constat personnel d'absence d'opposant trouvé de la certitude ontologique d'une unanimité universelle.",
+          "feedbackAr": "قاعدة ذهبية حررها الإمام أحمد: التمييز بين عدم العلم بالخلاف وبين العلم بعدم الخلاف."
+        },
+        {
+          "textFr": "Aḥmad conseillait d’être prudent lorsqu’on rapporte un consensus.",
+          "textAr": "نصح الإمام أحمد بالاحتياط والتثبت عند نقل الإجماع.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Bonne remarque générale, mais l'analyse BEST formule précisément la distinction épistémique entre les deux expressions.",
+          "feedbackAr": "ملاحظة صحيحة في الجملة، والخيار الأول يبرز بدقة الفارق المعرفي بين صيغ النقل."
+        },
+        {
+          "textFr": "Aḥmad niait l’existence de tout ijmāʿ.",
+          "textAr": "الإمام أحمد كان ينكر وجود أي إجماع في الشريعة أصلاً.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Non. D’autres transmissions montrent qu’il utilisait lui-même certains consensus établis. Sa mise en garde porte sur la prétention injustifiée.",
+          "feedbackAr": "فهم خاطئ: فالإمام أحمد صح عنه الاحتجاج بالإجماع المتيقن، وإنما قصد الإنكار على من يدعي الإجماع تحكماً مع جهله بأقوال السلف."
+        },
+        {
+          "textFr": "Puisqu’Aḥmad a dit cela, le concept d’ijmāʿ n’existe pas en uṣūl al-fiqh.",
+          "textAr": "بما أن الإمام أحمد قال ذلك، فإن أصل الإجماع باطل ولا وجود له في أصول الفقه.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Contresens absolu : l'ijmâ' est l'une des quatre sources fondamentales du droit musulman reconnues par les quatre écoles.",
+          "feedbackAr": "مصادمة لأصول الشريعة: فالإجماع هو الأصل الثالث المعتمد عند جماهير الأمة وأئمة المذاهب."
+        }
+      ],
+      "revealedEvidenceIds": [
+        "ev-ahmad-ijma-warning"
+      ],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 5,
+      "titleFr": "Ouvrir un ouvrage qui recense réellement les avis",
+      "titleAr": "الرجوع إلى كتب الخلاف",
+      "instructionFr": "Face à l'énoncé d'Ibn al-Mundhir : « واختلفوا في وجوب الزكاة في حلي الذهب والفضة », quelle est la conséquence immédiate pour la prétention initiale ?",
+      "instructionAr": "أمام قول ابن المنذر: «واختلفوا في وجوب الزكاة في حلي الذهب والفضة»، ما النتيجة المباشرة على دعوى الإجماع؟",
+      "options": [
+        {
+          "textFr": "Elle suffit à montrer qu’Ibn al-Mundhir connaît et documente un khilāf sur la question. On ne peut donc plus répéter sans qualification qu’il existe un consensus universel sur l’obligation.",
+          "textAr": "تكفي لإثبات أن ابن المنذر يعلم ويوثق خلافاً صريحاً في المسألة، فلا يسوغ بعد ذلك إطلاق دعوى الإجماع على الوجوب.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Preuve directe réfutant l'affirmation : le maître incontesté du recensement de l'ijmâ' et du khilâf atteste que la question est divergente.",
+          "feedbackAr": "دليل قاطع على بطلان دعوى الإجماع: فإمام الإجماع والاختلاف ابن المنذر يثبت الخلاف ابتداءً."
+        },
+        {
+          "textFr": "Il existe probablement plusieurs avis.",
+          "textAr": "يحتمل وجود أكثر من رأي في المسألة.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat prudent, mais l'énoncé d'Ibn al-Mundhir ne relève pas de la probabilité : il affirme catégoriquement la divergence.",
+          "feedbackAr": "استنتاج حذر، لكن عبارة ابن المنذر تفيد الجزم بوقوع الخلاف لا مجرد الاحتمال."
+        },
+        {
+          "textFr": "Puisqu’Ibn al-Mundhir rapporte un désaccord, l’avis imposant la zakāt est forcément faux.",
+          "textAr": "بما أن ابن المنذر نقل الخلاف، فإن القول بوجوب الزكاة باطل حتماً.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Non. L’existence du khilāf répond à la question de l’ijmāʿ, pas encore à celle du tarjīḥ.",
+          "feedbackAr": "خلط بين المسائل: فوجود الخلاف يسقط دعوى الإجماع، لكنه لا يبطل أدلة القائلين بالوجوب."
+        },
+        {
+          "textFr": "Ibn al-Mundhir emploie « اختلفوا », mais cela signifie quand même qu’ils sont unanimes.",
+          "textAr": "استعمال ابن المنذر للفظ «اختلفوا» يعني مع ذلك أنهم متفقون.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Négation pure et simple de la langue arabe : « اختلفوا » signifie qu'ils ont divergé, à l'opposé exact de « أجمعوا ».",
+          "feedbackAr": "مكابرة لغوية: فلفظ 'اختلفوا' ضد 'أجمعوا' صراحة في لسان العرب واستعمال أهل العلم."
+        }
+      ],
+      "revealedEvidenceIds": [
+        "ev-ibnmundhir-jewelry-khilaf"
+      ],
+      "revealPolicy": "ON_STEP_ENTER"
+    },
+    {
+      "stepNumber": 6,
+      "titleFr": "Vérifier que la divergence est substantielle",
+      "titleAr": "هل الخلاف حقيقي ومعتبر؟",
+      "instructionFr": "En examinant les autorités anciennes rapportées par Ibn al-Mundhir des deux côtés, que constate-t-on ?",
+      "instructionAr": "بالنظر في أئمة السلف والفقهاء المنقولة أقوالهم عند ابن المنذر في الطرفين، ما الذي يتبين؟",
+      "options": [
+        {
+          "textFr": "Le désaccord n’est pas constitué par une opinion moderne isolée : Ibn al-Mundhir rapporte des autorités anciennes et des juristes établis des deux côtés. Le khilāf est donc historiquement substantiel.",
+          "textAr": "الخلاف ليس رأياً حادثاً ولا قولاً شاذاً: بل نقل ابن المنذر أئمة أعلاماً وفقهاء متقدمين في كلا الطرفين، فالخلاف تاريخي معتبر وأصيل.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Analyse historique solide : la présence de Compagnons et de grands imams des deux côtés confère au khilâf une force indéniable.",
+          "feedbackAr": "تحقيق تاريخي متين: فورود أسماء كبار الصحابة والأئمة في كلا القولين يجعل النزاع من الخلاف السائغ المعتبر."
+        },
+        {
+          "textFr": "Plusieurs grands savants ont effectivement divergé.",
+          "textAr": "عدة علماء كبار اختلفوا بالفعل في الحكم.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Vrai, mais il convient de préciser la nature de ces autorités (Compagnons, Tâbi'ûn, fondateurs d'écoles).",
+          "feedbackAr": "صحيح في الجملة، والأدق منه تفصيل طبقات هؤلاء العلماء من الصحابة والتابعين والأئمة المتبوعين."
+        },
+        {
+          "textFr": "Toute parole attribuée à n’importe quel individu suffit automatiquement à casser un ijmāʿ.",
+          "textAr": "أي قول منسوب إلى أي شخص يكفي تلقائياً لنقض الإجماع وإسقاطه.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Il faut vérifier l’attribution, l’époque et la pertinence juridique du désaccord (un avis shâdhdh ou non expert ne brise pas un ijmâ').",
+          "feedbackAr": "تسوية باطلة: فلابد من التحقق من صحة النسبة، ورتبة المخالف الفقهية، وعدم شذوذ القول."
+        },
+        {
+          "textFr": "Seuls les quatre madhāhib comptent ; les positions des Compagnons n’ont aucun intérêt pour l’étude d’un consensus.",
+          "textAr": "العبرة بالمذاهب الأربعة فقط، أما أقوال الصحابة فلا مدخل لها في تحقيق الإجماع.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Aberration méthodologique : les Compagnons sont la première génération de l'Islam et leur accord ou désaccord est le premier niveau de l'ijmâ'.",
+          "feedbackAr": "انحراف أصولي فاحش: فالصحابة هم الأصل في الإجماع والاختلاف، ولا يستقيم بحث أصولي بمعزل عن آثارهم."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 7,
+      "titleFr": "Jumhūr n’est pas ijmāʿ",
+      "titleAr": "الجمهور ليس إجماعاً",
+      "instructionFr": "Si une opinion apparaît largement majoritaire après recensement, peut-on légitimement affirmer qu'il y a ijmāʿ ?",
+      "instructionAr": "إذا ظهر أن أحد القولين هو رأي الأكثرية، فهل يسوغ إطلاق وصف 'الإجماع' عليه؟",
+      "options": [
+        {
+          "textFr": "Non. Un avis majoritaire est un avis du jumhūr. Dès lors qu’un khilāf juridiquement reconnu et documenté existe, il faut le nommer comme tel.",
+          "textAr": "لا يجوز؛ فرأي الأكثرية يسمى مذهب 'الجمهور'، ومتى ثبت الخلاف الفقهي المعتبر تعين تسميته خلافاً لا إجماعاً.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Distinction cardinale en uṣūl : la majorité, même écrasante, n'a jamais été assimilée à l'ijmāʿ par les savants rigoureux.",
+          "feedbackAr": "فارق جوهري في الأصول: فالأكثرية لا ترفع الخلاف، والخلط بين الجمهور والإجماع تدليس علمي."
+        },
+        {
+          "textFr": "Il faut au minimum préciser « majorité ».",
+          "textAr": "ينبغي على الأقل الاكتفاء بعبارة 'الأغلبية'.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Bon réflexe terminologique, mais il faut expliciter pourquoi le terme ijmāʿ est proscrit dans ce cas.",
+          "feedbackAr": "تنبيه اصطلاحي سليم، والأكمل منه بيان سبب المنع من استعمال لفظ الإجماع هنا."
+        },
+        {
+          "textFr": "Si la majorité est très importante, le mot ijmāʿ devient acceptable.",
+          "textAr": "إذا كانت الأغلبية ساحقة وكبيرة جداً، جاز التسامح في إطلاق لفظ الإجماع.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Laxisme dangereux : tolérer l'usage abusif d'ijmāʿ pour une majorité crée une fausse obligation doctrinale et étouffe le débat.",
+          "feedbackAr": "تساهل خطير: فالإجماع يترتب عليه أحكام قطعية، وإطلاقه على الأغلبية إيهام باطل يغلق باب الاجتهاد السائغ."
+        },
+        {
+          "textFr": "Jumhūr et ijmāʿ sont deux mots pour la même réalité.",
+          "textAr": "لفظ 'الجمهور' ولفظ 'الإجماع' مترادفان ويدلان على نفس المعنى تماماً.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Erreur conceptuelle majeure : l'un admet l'existence d'opposants reconnus, l'autre affirme leur inexistence totale.",
+          "feedbackAr": "جهل فاضح بمصطلحات الفقه والأصول: فالأول يقر بوجود مخالف معتبر، والثاني ينفيه قطعاً."
+        }
+      ],
+      "revealedEvidenceIds": [
+        "ev-ibnqudama-jewelry-nozakat"
+      ],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 8,
+      "titleFr": "Le piège chronologique",
+      "titleAr": "هل يمكن أن يقع الخلاف بعد إجماع سابق؟",
+      "instructionFr": "Un avis contraire trouvé dans un livre tardif suffit-il toujours à infirmer une prétention d'ijmāʿ ?",
+      "instructionAr": "هل وجود قول مخالف في كتاب متأخر كافٍ بمجرده لنقض أي دعوى إجماع سابقة؟",
+      "options": [
+        {
+          "textFr": "Pas automatiquement. Il faut demander à quelle époque le consensus est prétendu. Un désaccord postérieur ne réfute pas nécessairement un ijmāʿ antérieur déjà établi. Ici, cependant, les divergences rapportées concernent déjà des Compagnons et des générations anciennes, ce qui empêche de présenter simplement la question comme unanimement acquise depuis l’origine.",
+          "textAr": "ليس تلقائياً؛ إذ يجب تحرير العصر المدعى فيه الإجماع: فالخلاف الحادث بعد إجماع مستقر لا ينقضه عند الجمهور. غير أن الخلاف في زكاة الحلي واقع بين الصحابة والتابعين أنفسهم، مما يمنع دعوى الإجماع من أصلها.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Maîtrise remarquable de la dimension chronologique de l'ijmāʿ : vérifier si le consensus était antérieur à l'apparition du désaccord.",
+          "feedbackAr": "تحرير بارع للبعد الزمني في الإجماع: فالخلاف الحادث لا يرفع الإجماع السابق، لكن مسألتنا الخلاف فيها قديم ومواكب."
+        },
+        {
+          "textFr": "Il faut tenir compte de la chronologie.",
+          "textAr": "يجب مراعاة الترتيب الزمني للعلماء.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Principe exact, mais la formulation BEST en démontre précisément l'application au cas des bijoux.",
+          "feedbackAr": "مبدأ سليم، والخيار الأول يوضح تطبيقه العملي على قضية زكاة الحلي بدقة تاريخية."
+        },
+        {
+          "textFr": "Dès qu’une personne diverge à n’importe quelle époque, aucun consensus n’a jamais pu exister.",
+          "textAr": "متى خالف أحد في أي عصر متأخر، فذلك دليل على أنه لم يقع أي إجماع في التاريخ أبداً.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Fausse règle : si un ijmāʿ des Compagnons était formellement avéré, une divergence apparue au 5e siècle ne le briserait pas rétroactivement.",
+          "feedbackAr": "قاعدة فاسدة: فلو ثبت إجماع متقدم بيقين، لم يلتفت إلى خلاف من جاء بعدهم عند جماهير الأصوليين."
+        },
+        {
+          "textFr": "La chronologie n’a aucun rôle dans l’étude de l’ijmāʿ.",
+          "textAr": "التاريخ وعصر العالم لا عبرة بهما مطلقاً في دراسة مسائل الإجماع.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Non-sens méthodologique : l'ijmāʿ est par définition un événement historique situé dans le temps.",
+          "feedbackAr": "إلغاء لجوهر الأصول: فالإجماع واقعة تاريخية تنعقد في عصر معين ويشترط فيها استقرار أقوال ذلك العصر."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 9,
+      "titleFr": "Formuler la conclusion proportionnée",
+      "titleAr": "صياغة الخلاصة بقدر الدليل",
+      "instructionFr": "Quelle conclusion synthétique respecte avec exactitude les éléments historiques et méthodologiques du dossier ?",
+      "instructionAr": "أي خلاصة جامعة هي الأوفى بالمعطيات التاريخية والمنهجية في القضية؟",
+      "options": [
+        {
+          "textFr": "« Il n’est pas exact de présenter l’obligation de zakāt sur les bijoux d’or destinés à l’usage personnel comme faisant l’objet d’un ijmāʿ incontesté. Ibn al-Mundhir documente explicitement une divergence ancienne et cite des autorités reconnues des deux côtés. Cela établit un khilāf réel. Une enquête distincte serait nécessaire pour déterminer quel avis possède les preuves les plus fortes. »",
+          "textAr": "«لا يصح علمياً دعوى الإجماع على وجوب زكاة حلي الذهب المعد للاستعمال الشخصي؛ فقد وثق ابن المنذر خلافاً قديماً ونقل أئمة أعلاماً في الطرفين. وهذا يثبت وجود خلاف حقيقي معتبر، ويبقى بعد ذلك بحث مستقل في ترجيح الأدلة.»",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Conclusion modèle : elle déconstruit l'affirmation d'ijmāʿ sans trancher prématurément le fond du litige juridique.",
+          "feedbackAr": "خلاصة محكمة ومنصفة: تسقط دعوى الإجماع ببرهان تاريخي، دون التسرع في حسم الترجيح الفقهي بغير موضعه."
+        },
+        {
+          "textFr": "« Les savants ont divergé sur la zakāt des bijoux d’usage. »",
+          "textAr": "«العلماء مختلفون في زكاة حلي الاستعمال.»",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat vrai mais très sommaire, qui n'articule pas la réfutation de l'ijmāʿ initialement affirmé.",
+          "feedbackAr": "تقرير صحيح للواقع، لكنه شديد الإيجاز ولا يبين أثر ذلك على دعوى الإجماع المزعومة."
+        },
+        {
+          "textFr": "« Puisqu’il y a divergence, il est impossible de rechercher l’avis le plus fort. »",
+          "textAr": "«طالما أن هناك خلافاً، فيستحيل ترجيح أي قول أو معرفة الراجح.»",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Scepticisme infondé : le khilāf est le point de départ du travail d'ijtihād et de pesée des preuves, non son terme.",
+          "feedbackAr": "تعطيل للمنهج: فالخلاف منطلق النظر والترجيح بين الأدلة، وليس مانعاً من الوصول إلى رأي راجح."
+        },
+        {
+          "textFr": "« Tous les savants sont unanimes pour imposer la zakāt. »",
+          "textAr": "«جميع العلماء متفقون على وجوب إخراج الزكاة ولا خلاف.»",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Contrevérité flagrante réfutée par les écrits d'Ibn al-Mundhir, d'Ibn Qudāma et de l'ensemble des recueils de khilāf.",
+          "feedbackAr": "دعوى باطلة ومكابرة للواقع التاريخي الموثق في كتب الخلاف قاطبة."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 10,
+      "titleFr": "Audit méthodologique final",
+      "titleAr": "المراجعة المنهجية الختامية",
+      "instructionFr": "Quelle démarche critique globale faut-il adopter à l'avenir face à toute affirmation d'unanimité ?",
+      "instructionAr": "ما هو المسار النقدي الشامل الواجب اتباعه مستقبلاً أمام أي دعوى إجماع؟",
+      "options": [
+        {
+          "textFr": "Avant de répéter « il y a ijmāʿ », il faut identifier exactement la proposition, la période et les savants concernés, consulter des sources capables de documenter le khilāf, distinguer consensus, majorité et absence d’opposant connu, puis limiter la conclusion au niveau réellement établi.",
+          "textAr": "قبل ترديد دعوى الإجماع، يتعين تحرير المسألة وعصرها والعلماء المعنيين، ومراجعة مصادر الخلاف المقارن، والتمييز بين الإجماع والجمهور وعدم العلم بالمخالف، وصياغة النتيجة بقدر الثابت علمياً.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Charte méthodologique d'excellence pour l'audit de toute prétention d'unanimité religieuse.",
+          "feedbackAr": "منهجية علمية نموذجية لتحقيق دعاوى الإجماع في العلوم الشرعية."
+        },
+        {
+          "textFr": "Il faut vérifier les consensus avant de les citer.",
+          "textAr": "ينبغي التثبت من صحة الإجماع قبل نقله والاستدلال به.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Recommandation saine, mais l'option BEST formalise les étapes concrètes de cette vérification.",
+          "feedbackAr": "وصية صحيحة، والخيار الأول يقدم الخطوات الإجرائية الدقيقة لهذا التحقيق."
+        },
+        {
+          "textFr": "Il vaut mieux ne jamais employer le mot ijmāʿ.",
+          "textAr": "الأفضل الامتناع عن استعمال كلمة 'إجماع' بالكلية في أي مسألة.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Excès de prudence négatif : les consensus incontestés (fondements de la prière, piliers, etc.) doivent être affirmés avec force.",
+          "feedbackAr": "غلو في الاحتياط: فالإجماعات القطعية في كليات الدين وأصوله حجة ثابتة لا يجوز التشكيك فيها."
+        },
+        {
+          "textFr": "Si mon enseignant n’a jamais mentionné de divergence, cela prouve le consensus.",
+          "textAr": "إذا لم يذكر أستاذي أي خلاف في المسألة، فذلك دليل كافٍ على انعقاد الإجماع.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Argument d'autorité naïf : l'horizon d'un enseignant ou d'un cours ne délimite pas l'ensemble du patrimoine jurisprudentiel.",
+          "feedbackAr": "تقليد ساذج: فإحاطة المعلم ليست إحاطة بكل ما كتبه أئمة الإسلام عبر العصور."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    }
+  ],
+  "inquiryEvidences": [
+    {
+      "evidenceId": "ev-ahmad-ijma-warning",
+      "role": "SCHOLARLY_EXPLANATION",
+      "order": 1,
+      "stepNumber": 4,
+      "commentFr": "L'imam Aḥmad met en garde contre les prétentions hâtives d'unanimité masquant l'ignorance de la divergence.",
+      "commentAr": "تحذير الإمام أحمد من المجازفة في نقل الإجماع مع الجهل بخلاف الناس.",
+      "evidence": {
+        "id": "ev-ahmad-ijma-warning",
+        "type": "BOOK",
+        "referenceCode": "Masāʾil al-Imām Aḥmad (riwāyat ʿAbd Allāh) n°1587",
+        "primarySource": true,
+        "sourceWork": "Masāʾil al-Imām Aḥmad ibn Ḥanbal bi-riwāyat ibnih ʿAbd Allāh",
+        "author": "ʿAbd Allāh ibn Aḥmad ibn Ḥanbal",
+        "editionVolumePage": "Notice n°1587",
+        "quoteArOriginal": "ما يدعي الرجل فيه الإجماع هذا كذب، من ادعى الإجماع فهو كذب، لعل الناس قد اختلفوا... ولكن يقول: لا أعلم الناس اختلفوا",
+        "quoteArVocalized": "مَا يَدَّعِي الرَّجُلُ فِيهِ الْإِجْمَاعَ هَذَا كَذِبٌ، مَنِ ادَّعَى الْإِجْمَاعَ فَهُوَ كَذِبٌ، لَعَلَّ النَّاسَ قَدِ اخْتَلَفُوا... وَلَكِنْ يَقُولُ: لَا أَعْلَمُ النَّاسَ اخْتَلَفُوا",
+        "quoteArNormalized": "ما يدعي الرجل فيه الاجماع هذا كذب من ادعى الاجماع فهو كذب لعل الناس قد اختلفوا ولكن يقول لا اعلم الناس اختلفوا",
+        "translationFr": "Ce que l'homme prétend être un consensus relève du mensonge ; quiconque prétend l'ijmāʿ ment, car peut-être que les gens ont divergé... Qu'il dise plutôt : je n'ai pas connaissance que les gens aient divergé.",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "TO_BE_CHECKED"
+      }
+    },
+    {
+      "evidenceId": "ev-ibnmundhir-jewelry-khilaf",
+      "role": "PRIMARY_PROOF",
+      "order": 2,
+      "stepNumber": 5,
+      "commentFr": "Ibn al-Mundhir consigne explicitement la divergence historique sur la zakât des bijoux d'or et d'argent.",
+      "commentAr": "ابن المنذر يثبت صراحة الخلاف بين السلف والفقهاء في وجوب زكاة الحلي.",
+      "evidence": {
+        "id": "ev-ibnmundhir-jewelry-khilaf",
+        "type": "BOOK",
+        "referenceCode": "Al-Ishrāf ʿalā Madhāhib al-ʿUlamāʾ, Bāb Zakāt al-Ḥuly",
+        "primarySource": true,
+        "sourceWork": "Al-Ishrāf ʿalā Madhāhib al-ʿUlamāʾ",
+        "author": "Abû Bakr Muḥammad ibn Ibrâhîm ibn al-Mundhir an-Naysâbûrî",
+        "editionVolumePage": "Livre de la zakât, chapitre de la zakât des bijoux (Bāb Zakāt al-Ḥuly)",
+        "quoteArOriginal": "واختلفوا في وجوب الزكاة في حلي الذهب والفضة",
+        "quoteArVocalized": "وَاخْتَلَفُوا فِي وُجُوبِ الزَّكَاةِ فِي حُلِيِّ الذَّهَبِ وَالْفِضَّةِ",
+        "quoteArNormalized": "واختلفوا في وجوب الزكاة في حلي الذهب والفضة",
+        "translationFr": "Ils ont divergé concernant l’obligation de la zakāt sur les bijoux d’or et d’argent.",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "TO_BE_CHECKED"
+      }
+    },
+    {
+      "evidenceId": "ev-ibnqudama-jewelry-nozakat",
+      "role": "SCHOLARLY_EXPLANATION",
+      "order": 3,
+      "stepNumber": 7,
+      "commentFr": "Ibn Qudāma détaille la position ḥanbalite et le camp des juristes retenant l'absence d'obligation sur le bijou d'usage.",
+      "commentAr": "ابن قدامة يحرر مذهب أحمد والأئمة القائلين بعدم وجوب الزكاة في الحلي المباح المعد للاستعمال.",
+      "evidence": {
+        "id": "ev-ibnqudama-jewelry-nozakat",
+        "type": "BOOK",
+        "referenceCode": "Al-Mughnī, Kitāb az-Zakāh, Mas'alat Ḥuly al-Mar'ah",
+        "primarySource": true,
+        "sourceWork": "Al-Mughnī",
+        "author": "Muwaffaq ad-Dîn ʿAbd Allâh ibn Aḥmad ibn Qudâma al-Maqdisî",
+        "editionVolumePage": "Kitāb az-Zakāh, mas'ala : wa laysa fî ḥuly al-mar'ah zakâh",
+        "quoteArOriginal": "وليس في حلي المرأة زكاة إذا كان مما تلبسه أو تعيره... هذا ظاهر المذهب",
+        "quoteArVocalized": "وَلَيْسَ فِي حُلِيِّ الْمَرْأَةِ زَكَاةٌ إِذَا كَانَ مِمَّا تَلْبَسُهُ أَوْ تُعِيرُهُ... هَذَا ظَاهِرُ الْمَذْهَبِ",
+        "quoteArNormalized": "وليس في حلي المرأة زكاة اذا كان مما تلبسه او تعيره هذا ظاهر المذهب",
+        "translationFr": "Et il n'y a pas de zakāt sur les bijoux de la femme lorsqu'ils font partie de ce qu'elle porte ou prête... C'est la position apparente de l'école.",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "TO_BE_CHECKED"
+      }
+    }
+  ],
+  "conclusionSheet": {
+    "established": {
+      "fr": "Une divergence ancienne et documentée existe concernant la zakāt des bijoux d’or et d’argent licites destinés à l’usage. Ibn al-Mundhir introduit explicitement la question par « واختلفوا في وجوب الزكاة في حلي الذهب والفضة » et rapporte des autorités des deux côtés.",
+      "ar": "ثبت وجود خلاف قديم موثق في زكاة حلي الذهب والفضة المعد للاستعمال، وقد صرح ابن المنذر بقوله: «واختلفوا في وجوب الزكاة في حلي الذهب والفضة»، ثم نقل أقوالاً معتبرة في الطرفين.",
+      "evidenceIds": [
+        "ev-ibnmundhir-jewelry-khilaf"
+      ]
+    },
+    "discussed": {
+      "fr": "Le jugement juridique le plus fort concernant la zakāt des bijoux d’usage. Cette enquête ne tranche pas ce tarjīḥ : elle vérifie uniquement la prétention d’ijmāʿ.",
+      "ar": "محل النظر بعد ثبوت الخلاف هو الترجيح بين أدلة الموجبين للزكاة والنافين لها في حلي الاستعمال، وهذا خارج المقصود الأساسي من هذه الدراسة.",
+      "evidenceIds": [
+        "ev-ibnqudama-jewelry-nozakat"
+      ]
+    },
+    "notEstablished": {
+      "fr": "Que tous les savants, Compagnons et juristes aient été unanimes pour imposer la zakāt sur les bijoux d’usage.",
+      "ar": "لم يثبت إجماع الصحابة والفقهاء على وجوب الزكاة في الحلي المباح المعد للاستعمال.",
+      "evidenceIds": [
+        "ev-ibnmundhir-jewelry-khilaf",
+        "ev-ibnqudama-jewelry-nozakat"
+      ]
+    },
+    "primaryEvidences": [
+      "Masāʾil al-Imām Aḥmad (riwāyat ʿAbd Allāh, n°1587)",
+      "Al-Ishrāf ʿalā Madhāhib al-ʿUlamāʾ d'Ibn al-Mundhir (Bāb Zakāt al-Ḥuly)",
+      "Al-Mughnī d'Ibn Qudāma (Kitāb az-Zakāh)"
+    ],
+    "salafUnderstanding": {
+      "fr": "L'imam Aḥmad mettait en garde contre les affirmations téméraires d'ijmāʿ masquant une méconnaissance de la divergence réelle (« لعل الناس قد اختلفوا »), invitant à la prudence épistémique (« لا أعلم الناس اختلفوا »).",
+      "ar": "حذر الإمام أحمد من المجازفة في ادعاء الإجماع مع احتمال وجود خلاف لم يبلغه («لعل الناس قد اختلفوا»)، ودعا إلى التورع في العبارة («لا أعلم الناس اختلفوا»).",
+      "evidenceIds": [
+        "ev-ahmad-ijma-warning"
+      ]
+    },
+    "scholarlyPositions": {
+      "fr": "1. Obligation de la zakāt sur le bijou d'usage : rapporté notamment de ʿUmar, Ibn Masʿūd, Ibn ʿAbbās, Saʿīd ibn al-Musayyib, Sufyān ath-Thawrī et des aṣḥāb ar-raʾy (école hanafite). 2. Absence d'obligation sur le bijou d'usage : rapporté d'Ibn ʿUmar, Jābir, ʿĀʾisha, Asmāʾ, ash-Shaʿbī, Mālik, Aḥmad et Isḥāq. 3. Tawaqquf d'ash-Shāfiʿī rapporté par Ibn al-Mundhir.",
+      "ar": "1. وجوب الزكاة في حلي الاستعمال: مروي عن عمر وابن مسعود وابن عباس وسعيد بن المسيب والثوري وأصحاب الرأي. 2. عدم الوجوب في الحلي المباح: مروي عن ابن عمر وجابر وعائشة وأسماء والشعبي ومالك وأحمد وإسحاق. 3. التوقف أو التردد المنقول عن الشافعي عند ابن المنذر.",
+      "evidenceIds": [
+        "ev-ibnmundhir-jewelry-khilaf",
+        "ev-ibnqudama-jewelry-nozakat"
+      ]
+    },
+    "methodologicalPitfall": {
+      "fr": "Confondre avis souvent entendu, avis dominant localement, avis du jumhūr, absence personnelle d'opposant connu et ijmāʿ universel établi.",
+      "ar": "الخلط بين: القول الشائع سماعه، والقول الراجح محلياً، ومذهب الجمهور، وعدم العلم بالمخالف، والإجماع الشرعي المحقق."
+    },
+    "originalSources": [
+      "ʿAbd Allāh ibn Aḥmad, Masāʾil al-Imām Aḥmad",
+      "Ibn al-Mundhir, Al-Ishrāf ʿalā Madhāhib al-ʿUlamāʾ",
+      "Ibn Qudāma, Al-Mughnī"
+    ],
+    "certaintyLevel": "KHILAF_RECONNU"
+  }
+}
