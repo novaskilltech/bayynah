@@ -2,7 +2,10 @@
   "id": "inquiry-09",
   "slug": "allah-pardonne-tous-peches",
   "domain": "AQIDA",
-  "editorialStatus": "DRAFT",
+  "editorialStatus": "PUBLISHED",
+  "reviewerId": "reviewer-01",
+  "reviewedAt": "2026-09-21",
+  "lastVerifiedAt": "2026-09-21",
   "title": {
     "fr": "« Allah pardonne tous les péchés » : un verset isolé suffit-il ?",
     "ar": "«إن الله يغفر الذنوب جميعاً»: هل يكفي نص واحد لبناء الحكم؟"
@@ -581,14 +584,17 @@
         "primarySource": true,
         "sourceWork": "Tafsīr al-Qurʾān al-ʿAẓīm",
         "author": "Abū al-Fidāʾ Ismāʿīl ibn ʿUmar ibn Kathīr",
-        "editionVolumePage": "Tome 2, p. 327 (taḥqīq Sāmī as-Salāmah, Dār Ṭaybah ; ad An-Nisāʾ 4:48)",
+        "editionVolumePage": "Tome 2, p. 327 (taḥqīq Sāmī ibn Muḥammad as-Salāmah, Dār Ṭaybah, 2e éd. 1420/1999 ; ad An-Nisāʾ 4:48)",
         "quoteArOriginal": "أي: بشرط التوبة، ولو لم يكن كذلك لدخل الشرك فيه، ولا يصح ذلك",
         "quoteArVocalized": "أَيْ: بِشَرْطِ التَّوْبَةِ، وَلَوْ لَمْ يَكُنْ كَذَلِكَ لَدَخَلَ الشِّرْكُ فِيهِ، وَلَا يَصِحُّ ذَلِكَ",
         "quoteArNormalized": "اي: بشرط التوبة، ولو لم يكن كذلك لدخل الشرك فيه، ولا يصح ذلك",
         "translationFr": "« C’est-à-dire sous condition de repentance ; s’il n’en était pas ainsi, le shirk entrerait dans cette généralité, ce qui n’est pas correct. »",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED",
-        "consultationUrl": "https://islamweb.net/ar/library/content/49/319/%D8%AA%D9%81%D8%B3%D9%8A%D8%B1-%D9%82%D9%88%D9%84%D9%87-%D8%AA%D8%B9%D8%A7%D9%84%D9%89-%D9%8A%D8%A7-%D8%A3%D9%8A%D9%87%D8%A7-%D8%A7%D9%84%D8%B0%D9%8A%D9%86-%D8%A3%D9%88%D8%AA%D9%88%D8%A7-%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8-%D8%A2%D9%85%D9%86%D9%88%D8%A7-%D8%A8%D9%85%D8%A7-%D9%86%D8%B2%D9%84%D9%86%D8%A7-%D9%85%D8%B5%D8%AF%D9%82%D8%A7-%D9%84%D9%85%D8%A7-%D9%85%D8%B9%D9%83%D9%85-%D9%85%D9%86-%D9%82%D8%A8%D9%84-%D8%A3%D9%86-%D9%86%D8%B7%D9%85%D8%B3-%D9%88%D8%AC%D9%88%D9%87%D8%A7-"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://quran.ksu.edu.sa/tafseer/katheer/sura4-aya48.html",
+        "lastVerifiedAt": "2026-09-21"
       }
     }
   ],
@@ -626,8 +632,8 @@
       "Ibn Kathīr, Tafsīr al-Qurʾān al-ʿAẓīm (ad 4:48)"
     ],
     "salafUnderstanding": {
-      "fr": "Les exégètes et premiers imams réunissaient l'ensemble de ces textes sans en rejeter aucun : la miséricorde et le pardon divin sont infinis et accueillent tout repentant quel que soit son péché passé (même le shirk), tandis que la justice divine s'applique à celui qui s'obstine dans le polythéisme jusqu'à la mort sans repentir.",
-      "ar": "كان فهم أئمة السلف والمفسرين مبنياً على إعمال نصوص الباب مجتمعة دون ضرب بعضها ببعض: فباب التوبة مفتوح لكل ذنب مهما عظم حتى الشرك، ومن مات مصراً على الشرك حُرم من المغفرة، وما دون الشرك تحت مشيئة الله إن شاء عفا عنه وإن شاء عذبه.",
+      "fr": "La lecture réunissant ces textes est explicitement exposée par Ibn Kathīr : la repentance ouvre le pardon pour tous les péchés, y compris le shirk, tandis que celui qui meurt sur le shirk sans repentance n’entre pas dans cette promesse.",
+      "ar": "المسلك الجامع بين هذه النصوص بَيَّنَهُ ابن كثير بوضوح: فالتوبة تفتح باب المغفرة لجميع الذنوب حتى الشرك، في حين أن من مات على الشرك بلا توبة لا يدخل في هذا الوعد.",
       "evidenceIds": [
         "ev-quran-zumar-39-53",
         "ev-quran-zumar-39-54",
@@ -637,8 +643,8 @@
       ]
     },
     "scholarlyPositions": {
-      "fr": "1. Consensus des mufassirūn et des théologiens sunnites : les péchés, y compris le shirk, sont pardonnés par la repentance sincère avant la mort. 2. Règle doctrinale sur le shirk non repenti : celui qui meurt sur le shirk n'est pas pardonné en vertu d'An-Nisāʾ 4:48, tandis que les autres grands péchés demeurent sous la volonté divine (mashī'ah). 3. Règle méthodologique de jamʿ nuṣūṣ al-bāb : l'obligation d'harmoniser les textes généraux et spécifiques régissant un même sujet.",
-      "ar": "1. إجماع المفسرين وأهل السنة: أن التوبة الصادقة قبل الموت تجبّ ما قبلها من الذنوب حتى الشرك. 2. حكم الموت على الشرك: من مات عليه بلا توبة حُرم المغفرة قطعاً بآية النساء، وما دونه تحت المشيئة. 3. القاعدة الأصولية في «جمع نصوص الباب»: وجوب حمل العام على الخاص وتقييد المطلق بقرائنه ونصوص بابه.",
+      "fr": "Ibn Kathīr explique explicitement que la généralité d’Az-Zumar 39:53 concerne celui qui se repent ; An-Nisāʾ 4:48 distingue le cas de celui qui rencontre Allah sur le shirk sans repentance.",
+      "ar": "بيّن ابن كثير أن عموم آية الزمر محمول على التوبة، بينما تتناول آية النساء من لقي الله مشركاً بلا توبة.",
       "evidenceIds": [
         "ev-quran-zumar-39-53",
         "ev-quran-nisa-4-48",
