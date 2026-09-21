@@ -6,8 +6,13 @@ import {
   recordSkillAttempt,
   saveStoredProfile,
   getStoredAttempts,
+  getCompletedLessons,
+  getCompletedInquiries,
 } from "@/lib/storage-adapter";
-import { calculateMethodologicalProfile } from "@/lib/skills-calculator";
+import {
+  calculateMethodologicalProfile,
+  evaluateAttestationEligibility,
+} from "@/lib/skills-calculator";
 import { SKILLS_METADATA } from "@/lib/skills-registry";
 import AttestationCard from "./AttestationCard";
 import {
@@ -18,6 +23,7 @@ import {
   ArrowRight,
   RotateCcw,
   HelpCircle,
+  Sparkles,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -25,8 +31,6 @@ interface FinalAssessmentRunnerProps {
   scenarios: FinalAssessmentScenario[];
   locale: string;
 }
-
-const SUCCESS_THRESHOLD = 75; // Seuil d'admissibilité à l'attestation (75%)
 
 export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssessmentRunnerProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,6 +40,12 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
   const [isCompleted, setIsCompleted] = useState(false);
   const [recipientName, setRecipientName] = useState("");
   const [attestation, setAttestation] = useState<AttestationData | null>(null);
+  const [eligibilityResult, setEligibilityResult] = useState<{
+    eligibleForPathAttestation: boolean;
+    eligibleForMasteryAttestation: boolean;
+    reasonsPath: { fr: string; ar: string };
+    reasonsMastery: { fr: string; ar: string };
+  } | null>(null);
 
   const isArabic = locale === "ar";
   const currentScenario = scenarios[currentIndex];
@@ -78,26 +88,60 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
       const newProfile = calculateMethodologicalProfile(allAttempts, true, true);
       saveStoredProfile(newProfile);
 
-      if (finalScorePercent >= SUCCESS_THRESHOLD) {
-        const uniqueId = `TAB-${new Date().getFullYear()}-${Math.random()
+      const completedLessons = getCompletedLessons();
+      const completedInquiries = getCompletedInquiries();
+      const completedCount = completedLessons.length + completedInquiries.length;
+
+      const eligibility = evaluateAttestationEligibility(
+        newProfile,
+        finalScorePercent,
+        completedCount
+      );
+      setEligibilityResult(eligibility);
+
+      const legalFr =
+        "Cette attestation valide un parcours d'entraînement à l'esprit critique et aux règles de vérification méthodologique selon la tradition d'Ahl as-Sunnah wa-l-Jamāʿa. Elle ne constitue en aucun cas une ijāza religieuse, une habilitation à délivrer des avis juridiques (fatwas), ni un diplôme d'État.";
+      const legalAr =
+        "هذه الإفادة تشهد بإتمام تدريب منهجي على التثبت العلمي وقواعد النقد وفق أصول أهل السنة والجماعة. ولا تُعد بحال من الأحوال إجازة رواية أو دراية، ولا تصريحاً بالفتوى والاجتهاد، ولا شهادة جامعية رسمية.";
+
+      if (eligibility.eligibleForMasteryAttestation) {
+        const uniqueId = `TAB-MAITRISE-${new Date().getFullYear()}-${Math.random()
           .toString(36)
           .substring(2, 7)
           .toUpperCase()}`;
 
-        const attestationData: AttestationData = {
+        setAttestation({
+          type: "MAITRISE_METHODOLOGIQUE",
           recipientName: recipientName.trim() || (isArabic ? "المتعلم المنهجي" : "Apprenant Méthodique"),
           issuedAt: new Date().toISOString(),
           attestationId: uniqueId,
           globalScore: finalScorePercent,
           masteredSkillsCount: newProfile.masteredSkillsCount,
           totalSkillsCount: 14,
+          rulesVersion: "assessment-v1",
           signatureAuthority: "Comité Pédagogique & Scientifique TABAYYUN",
-          legalNoticeFr:
-            "Cette attestation valide un parcours d'entraînement à l'esprit critique et aux règles de vérification méthodologique selon la tradition d'Ahl as-Sunnah wa-l-Jamāʿa. Elle ne constitue en aucun cas une ijāza religieuse, une habilitation à délivrer des avis juridiques (fatwas), ni un diplôme d'État.",
-          legalNoticeAr:
-            "هذه الإفادة تشهد بإتمام تدريب منهجي على التثبت العلمي وقواعد النقد وفق أصول أهل السنة والجماعة. ولا تُعد بحال من الأحوال إجازة رواية أو دراية، ولا تصريحاً بالفتوى والاجتهاد، ولا شهادة جامعية رسمية.",
-        };
-        setAttestation(attestationData);
+          legalNoticeFr: legalFr,
+          legalNoticeAr: legalAr,
+        });
+      } else if (eligibility.eligibleForPathAttestation) {
+        const uniqueId = `TAB-PARCOURS-${new Date().getFullYear()}-${Math.random()
+          .toString(36)
+          .substring(2, 7)
+          .toUpperCase()}`;
+
+        setAttestation({
+          type: "PARCOURS",
+          recipientName: recipientName.trim() || (isArabic ? "المتعلم المنهجي" : "Apprenant Méthodique"),
+          issuedAt: new Date().toISOString(),
+          attestationId: uniqueId,
+          globalScore: finalScorePercent,
+          masteredSkillsCount: newProfile.masteredSkillsCount,
+          totalSkillsCount: 14,
+          rulesVersion: "assessment-v1",
+          signatureAuthority: "Comité Pédagogique & Scientifique TABAYYUN",
+          legalNoticeFr: legalFr,
+          legalNoticeAr: legalAr,
+        });
       }
 
       setIsCompleted(true);
@@ -117,7 +161,8 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
     const totalPoints = Object.values(answers).reduce((a, b) => a + b, 0);
     const maxPoints = scenarios.length * 3;
     const finalScorePercent = Math.round((totalPoints / maxPoints) * 100);
-    const isEligible = finalScorePercent >= SUCCESS_THRESHOLD;
+    const isEligible = !!attestation;
+    const isMastery = attestation?.type === "MAITRISE_METHODOLOGIQUE";
 
     return (
       <div className="space-y-8 text-start">
@@ -135,22 +180,30 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
 
           <div className="space-y-2">
             <h2 className="text-2xl md:text-3xl font-extrabold text-bleuNuit-900">
-              {isEligible
+              {isMastery
                 ? isArabic
-                  ? "تهانينا! لقد أتممت التقويم الختامي بنجاح"
-                  : "Félicitations ! Évaluation finale validée"
+                  ? "تهانينا! استحقاق إفادة التمكن المنهجي (المستوى الأعلى)"
+                  : "Félicitations ! Attestation de Maîtrise Méthodologique obtenue"
+                : isEligible
+                ? isArabic
+                  ? "تهانينا! لقد استحققت إفادة مسار تَبَيُّن"
+                  : "Félicitations ! Attestation de Parcours TABAYYUN obtenue"
                 : isArabic
                 ? "نتيجة التقويم الختامي: في حاجة لمزيد تثبت"
                 : "Évaluation terminée : consolidation recommandée"}
             </h2>
             <p className="text-sm text-sable-500 max-w-xl mx-auto">
-              {isEligible
+              {isMastery
                 ? isArabic
-                  ? `أحرزت معدل ${finalScorePercent}% متجاوزاً عتبة الاستحقاق (${SUCCESS_THRESHOLD}%). يمكنك استلام إفادة التمكن المنهجي أدناه.`
-                  : `Vous avez obtenu un score de ${finalScorePercent}%, franchissant le seuil requis (${SUCCESS_THRESHOLD}%). Votre attestation est disponible ci-dessous.`
+                  ? `أحرزت معدل ${finalScorePercent}% واستوفيت كافة الشروط الصارمة: عدم وجود أي كفاءة تحت 70%، وتمكن صلب في الكفاءات وتنوع سياقي مثبت.`
+                  : `Score de ${finalScorePercent}% avec conformité totale aux exigences d'excellence : aucune compétence < 70%, 10+ compétences solides et diversité contextuelle.`
+                : isEligible
+                ? isArabic
+                  ? `أحرزت معدل ${finalScorePercent}% واستوفيت شروط إتمام المسار. إفادة المسار متاحة لك أدناه.`
+                  : `Score de ${finalScorePercent}% validant l'assimilation du parcours méthodologique. Votre attestation de parcours est prête.`
                 : isArabic
-                ? `حصلت على ${finalScorePercent}%، بينما عتبة الاستحقاق هي ${SUCCESS_THRESHOLD}%. ننصحك بمراجعة الكفاءات التي شهدت تعجلاً ثم إعادة المحاولة.`
-                : `Vous avez obtenu ${finalScorePercent}%, le seuil étant de ${SUCCESS_THRESHOLD}%. Nous vous invitons à consolider les compétences fragiles via la révision avant de retenter.`}
+                ? `حصلت على ${finalScorePercent}%. ${eligibilityResult?.reasonsPath.ar || ""}`
+                : `Vous avez obtenu ${finalScorePercent}%. ${eligibilityResult?.reasonsPath.fr || ""}`}
             </p>
           </div>
 
@@ -162,6 +215,20 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
               {finalScorePercent}%
             </span>
           </div>
+
+          {!isMastery && isEligible && eligibilityResult && (
+            <div className="max-w-md mx-auto p-3.5 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-900 leading-relaxed text-start flex items-start gap-2">
+              <Sparkles className="w-4 h-4 text-blue-700 shrink-0 mt-0.5" />
+              <div>
+                <span className="font-bold block">
+                  {isArabic ? "شروط الترقية لإفادة التمكن المنهجي:" : "Pour viser l'Attestation de Maîtrise Méthodologique :"}
+                </span>
+                <span className="text-blue-800">
+                  {eligibilityResult.reasonsMastery[isArabic ? "ar" : "fr"]}
+                </span>
+              </div>
+            </div>
+          )}
 
           {!isEligible && (
             <div className="pt-4 flex justify-center gap-4">

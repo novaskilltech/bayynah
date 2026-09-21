@@ -154,15 +154,15 @@ export default function DiagnosticRunner({ questions, locale }: DiagnosticRunner
           </div>
         </div>
 
-        {/* Biais observés éventuels */}
-        {profile.identifiedBiases.length > 0 && (
+        {/* Tendances méthodologiques observées */}
+        {(profile.identifiedPatterns || profile.identifiedBiases || []).length > 0 && (
           <div className="p-5 rounded-xl border border-sable-300 bg-sable-50 space-y-3">
             <h3 className="font-bold text-sm text-bleuNuit-900 flex items-center gap-2">
               <Brain className="w-4 h-4 text-vertProfond-700" />
-              {isArabic ? "تنبيهات حول العادات الفكرية المرصودة" : "Biais méthodologiques détectés"}
+              {isArabic ? "الأنماط والاتجاهات المنهجية المرصودة" : "Tendances méthodologiques observées"}
             </h3>
             <div className="space-y-3">
-              {profile.identifiedBiases.map((bias) => (
+              {(profile.identifiedPatterns || profile.identifiedBiases || []).map((bias) => (
                 <div key={bias.id} className="text-xs space-y-1 bg-white p-3 rounded-lg border border-sable-200">
                   <span className="font-bold text-bleuNuit-900 block">
                     {bias.title[isArabic ? "ar" : "fr"]}

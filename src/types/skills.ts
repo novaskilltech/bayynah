@@ -19,6 +19,8 @@ export type MethodologicalSkill =
   | "BIAS_DETECTION"             // Repérer l'isolationnisme textuel, le faux dilemme et le cherry-picking
   | "TERMINOLOGY_ANALYSIS";      // Distinguer le sens linguistique, légal et conventionnel (lā mushāḥḥata)
 
+export type SkillId = MethodologicalSkill;
+
 /**
  * Niveaux de maîtrise d'une compétence
  */
@@ -80,16 +82,19 @@ export interface MethodologicalProfile {
   solidSkillsCount: number;
   weakestSkills: MethodologicalSkill[];
   strongestSkills: MethodologicalSkill[];
-  identifiedBiases: IdentifiedMethodologicalBias[];
+  identifiedPatterns: IdentifiedMethodologicalPattern[];
+  identifiedBiases: IdentifiedMethodologicalPattern[]; // Alias de rétrocompatibilité (toujours initialisé)
   diagnosticCompleted: boolean;
   finalAssessmentCompleted: boolean;
   updatedAt: string;
 }
 
+export type UserLearningProfile = MethodologicalProfile;
+
 /**
- * Biais méthodologique identifié (comportement d'erreur récurrent)
+ * Tendance ou erreur méthodologique observée (comportement d'erreur récurrent lors des exercices)
  */
-export interface IdentifiedMethodologicalBias {
+export interface IdentifiedMethodologicalPattern {
   id: string;
   skillId: MethodologicalSkill;
   title: BilingualText;
@@ -98,6 +103,9 @@ export interface IdentifiedMethodologicalBias {
   occurrenceCount: number;
   recommendedAction: BilingualText;
 }
+
+// Alias de rétrocompatibilité
+export type IdentifiedMethodologicalBias = IdentifiedMethodologicalPattern;
 
 /**
  * Structure d'une question de Diagnostic Initial
@@ -139,12 +147,17 @@ export interface FinalAssessmentScenario {
   options: DiagnosticOption[];
 }
 
+export type AttestationType = "PARCOURS" | "MAITRISE_METHODOLOGIQUE";
+
 export interface FinalAssessmentAttempt {
   completedAt: string;
   answers: Record<string, string>; // scenarioId -> optionId
   skillScores: Record<MethodologicalSkill, { score: number; maxScore: number; percentage: number }>;
   globalPercentage: number;
-  eligibleForAttestation: boolean;
+  eligibleForPathAttestation: boolean;
+  eligibleForMasteryAttestation: boolean;
+  eligibleForAttestation?: boolean; // Alias de rétrocompatibilité
+  rulesVersion?: string;
 }
 
 /**
@@ -177,15 +190,17 @@ export interface LearningPathLevel {
 }
 
 /**
- * Attestation de maîtrise méthodologique
+ * Données d'une Attestation officielle TABAYYUN (Parcours ou Maîtrise)
  */
 export interface AttestationData {
+  type: AttestationType;
   recipientName: string;
   issuedAt: string;
   attestationId: string;
   globalScore: number;
   masteredSkillsCount: number;
   totalSkillsCount: number;
+  rulesVersion: string;
   signatureAuthority: string;
   legalNoticeFr: string;
   legalNoticeAr: string;

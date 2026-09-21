@@ -11,7 +11,7 @@ export const LEARNING_PATH_LEVELS: LearningPathLevel[] = [
       ar: "المستوى الأول — اليقظة النقدية التأسيسية",
     },
     description: {
-      fr: "Acquérir les premiers réflexes d'immunité intellectuelle : identifier les sophismes d'autorité, le cherry-picking et le biais de confirmation.",
+      fr: "Acquérir les premiers réflexes d'immunité intellectuelle : identifier les sophismes d'autorité, le cherry-picking et les erreurs méthodologiques d'évaluation.",
       ar: "بناء الحصانة العقلية الأولى: كشف مغالطة الشهرة وسلطة القائل، ورصد الاجتزاء، وتفادي الانحياز التأكيدي.",
     },
     targetSkills: [

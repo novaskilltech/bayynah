@@ -4,7 +4,7 @@ import {
   SkillAttempt,
   SkillMastery,
   MethodologicalProfile,
-  IdentifiedMethodologicalBias,
+  IdentifiedMethodologicalPattern,
 } from "@/types/skills";
 
 const ALL_SKILLS: MethodologicalSkill[] = [
@@ -131,20 +131,20 @@ export function computeSkillMastery(
 }
 
 /**
- * Détecte les biais et faiblesses méthodologiques observables à partir des erreurs répétées
+ * Détecte les tendances et erreurs méthodologiques récurrentes observables à partir des erreurs répétées
  * RÈGLE DÉONTOLOGIQUE STRICTE : Analyse exclusivement les comportements d'uṣūl dans les exercices,
  * sans aucune inférence sur la foi, la personnalité ou la pratique religieuse.
  */
-export function detectMethodologicalBiases(
+export function detectMethodologicalPatterns(
   skillsMap: Record<MethodologicalSkill, SkillMastery>
-): IdentifiedMethodologicalBias[] {
-  const biases: IdentifiedMethodologicalBias[] = [];
+): IdentifiedMethodologicalPattern[] {
+  const patterns: IdentifiedMethodologicalPattern[] = [];
 
   // 1. Isolationnisme textuel (EVIDENCE_AGGREGATION faible)
   const aggSkill = skillsMap.EVIDENCE_AGGREGATION;
   if (aggSkill && aggSkill.totalAttempts >= 2 && aggSkill.repeatedErrorsCount >= 1 && aggSkill.scorePercentage < 65) {
-    biases.push({
-      id: "bias-isolationnisme-textuel",
+    patterns.push({
+      id: "pattern-isolationnisme-textuel",
       skillId: "EVIDENCE_AGGREGATION",
       title: {
         fr: "Tendance à l'isolationnisme textuel",
@@ -169,8 +169,8 @@ export function detectMethodologicalBiases(
   // 2. Précipitation sur l'Ijmāʿ (IJMA_VERIFICATION faible)
   const ijmaSkill = skillsMap.IJMA_VERIFICATION;
   if (ijmaSkill && ijmaSkill.totalAttempts >= 2 && ijmaSkill.repeatedErrorsCount >= 1 && ijmaSkill.scorePercentage < 65) {
-    biases.push({
-      id: "bias-ijma-hatif",
+    patterns.push({
+      id: "pattern-ijma-hatif",
       skillId: "IJMA_VERIFICATION",
       title: {
         fr: "Adhésion hâtive aux prétentions d'Ijmāʿ",
@@ -195,8 +195,8 @@ export function detectMethodologicalBiases(
   // 3. Vulnérabilité au sophisme d'autorité (BIAS_DETECTION / SOURCE_IDENTIFICATION faible)
   const biasSkill = skillsMap.BIAS_DETECTION;
   if (biasSkill && biasSkill.totalAttempts >= 2 && biasSkill.repeatedErrorsCount >= 1 && biasSkill.scorePercentage < 65) {
-    biases.push({
-      id: "bias-autorite-notoriete",
+    patterns.push({
+      id: "pattern-autorite-notoriete",
       skillId: "BIAS_DETECTION",
       title: {
         fr: "Sensibilité à l'argument de notoriété",
@@ -221,8 +221,8 @@ export function detectMethodologicalBiases(
   // 4. Déduction hâtive sur le délaissement (DALALA_ANALYSIS faible)
   const dalalaSkill = skillsMap.DALALA_ANALYSIS;
   if (dalalaSkill && dalalaSkill.totalAttempts >= 2 && dalalaSkill.repeatedErrorsCount >= 1 && dalalaSkill.scorePercentage < 65) {
-    biases.push({
-      id: "bias-dalala-tark",
+    patterns.push({
+      id: "pattern-dalala-tark",
       skillId: "DALALA_ANALYSIS",
       title: {
         fr: "Saut déductif sur le délaissement prophétique (At-Tark)",
@@ -244,8 +244,10 @@ export function detectMethodologicalBiases(
     });
   }
 
-  return biases;
+  return patterns;
 }
+
+export const detectMethodologicalBiases = detectMethodologicalPatterns;
 
 /**
  * Construit le profil méthodologique complet à partir de l'historique des tentatives
@@ -287,7 +289,7 @@ export function buildMethodologicalProfile(
   const weakestSkills = evaluatedList.slice(0, 3);
   const strongestSkills = evaluatedList.slice(-3).reverse();
 
-  const identifiedBiases = detectMethodologicalBiases(skillsMap);
+  const identifiedPatterns = detectMethodologicalPatterns(skillsMap);
 
   return {
     skills: skillsMap,
@@ -297,7 +299,8 @@ export function buildMethodologicalProfile(
     solidSkillsCount,
     weakestSkills,
     strongestSkills,
-    identifiedBiases,
+    identifiedPatterns,
+    identifiedBiases: identifiedPatterns, // Alias de rétrocompatibilité
     diagnosticCompleted,
     finalAssessmentCompleted,
     updatedAt: new Date().toISOString(),
@@ -309,4 +312,62 @@ export const calculateMethodologicalProfile = buildMethodologicalProfile;
 export function createInitialMethodologicalProfile(): MethodologicalProfile {
   return buildMethodologicalProfile([], false, false);
 }
+
+/**
+ * Évalue l'éligibilité aux deux niveaux d'attestations officielles TABAYYUN
+ * RÈGLE STRICTE :
+ * - Niveau 1 (Parcours) : FinalAssessment >= 75% ET >= 5 contenus terminés
+ * - Niveau 2 (Maîtrise) : FinalAssessment >= 85% ET aucune compétence critique < 70%
+ *   ET >= 10 compétences SOLID/MASTERED ET diversité contextuelle (>= 3 contextes différents)
+ */
+export function evaluateAttestationEligibility(
+  profile: MethodologicalProfile,
+  finalScorePercent: number,
+  completedItemsCount = 0
+): {
+  eligibleForPathAttestation: boolean;
+  eligibleForMasteryAttestation: boolean;
+  reasonsPath: { fr: string; ar: string };
+  reasonsMastery: { fr: string; ar: string };
+} {
+  // 1. Niveau 1 : Attestation de parcours TABAYYUN
+  const pathScoreOk = finalScorePercent >= 75;
+  const pathExperienceOk = completedItemsCount >= 5;
+  const eligibleForPathAttestation = pathScoreOk && pathExperienceOk;
+
+  // 2. Niveau 2 : Attestation de maîtrise méthodologique TABAYYUN
+  const masteryScoreOk = finalScorePercent >= 85;
+  const allEvaluatedAbove70 = Object.values(profile.skills).every(
+    (s) => s.level === "UNTESTED" || s.scorePercentage >= 70
+  );
+  const solidOrMasteredCount = profile.solidSkillsCount + profile.masteredSkillsCount;
+  const solidOrMasteredOk = solidOrMasteredCount >= 10;
+  const contextualDiversityOk =
+    Object.values(profile.skills).filter((s) => s.distinctContextsCount >= 3).length >= 2;
+
+  const eligibleForMasteryAttestation =
+    masteryScoreOk && allEvaluatedAbove70 && solidOrMasteredOk && contextualDiversityOk;
+
+  return {
+    eligibleForPathAttestation,
+    eligibleForMasteryAttestation,
+    reasonsPath: {
+      fr: eligibleForPathAttestation
+        ? "Score final ≥ 75% et parcours minimum accompli (≥ 5 contenus)."
+        : "Nécessite au moins 75% au test final et au moins 5 leçons ou enquêtes accomplies.",
+      ar: eligibleForPathAttestation
+        ? "نتيجة التقويم الختامي ≥ 75% مع إتمام 5 مسارات دراسية على الأقل."
+        : "يتطلب الحصول على 75% على الأقل في التقويم الختامي وإتمام 5 مسارات.",
+    },
+    reasonsMastery: {
+      fr: eligibleForMasteryAttestation
+        ? "Excellence méthodologique confirmée (≥85%), aucune compétence <70%, ≥10 compétences solides et diversité contextuelle établie."
+        : "Exige ≥85% au test final, aucune compétence sous 70%, 10+ compétences solides et preuve de diversité contextuelle (≥3 contextes).",
+      ar: eligibleForMasteryAttestation
+        ? "تمكن منهجي شامل (≥85%)، دون أي كفاءة تحت 70%، مع تمكن صلب في 10 كفاءات وتنوع سياقي مثبت."
+        : "يتطلب ≥85%، مع عدم وجود أي كفاءة دون 70%، وتمكن صلب في 10 كفاءات مع التنوع السياقي (≥3 سياقات).",
+    },
+  };
+}
+
 

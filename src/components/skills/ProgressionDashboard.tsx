@@ -115,18 +115,18 @@ export default function ProgressionDashboard({ locale }: ProgressionDashboardPro
         </div>
       </div>
 
-      {/* Alertes de biais méthodologiques (si détectés) */}
-      {profile.identifiedBiases.length > 0 && (
+      {/* Alertes de tendances méthodologiques (si détectées) */}
+      {(profile.identifiedPatterns || profile.identifiedBiases || []).length > 0 && (
         <div className="rounded-2xl border border-amber-200 bg-amber-50/60 p-6 space-y-4">
           <div className="flex items-center gap-2 text-amber-900 font-bold text-sm">
             <Brain className="w-5 h-5 text-amber-700" />
             <span>
-              {isArabic ? "تنبيهات منهجية موجهة" : "Biais méthodologiques récurrents identifiés"}
+              {isArabic ? "الأنماط والاتجاهات المنهجية المرصودة" : "Tendances méthodologiques récurrentes observées"}
             </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {profile.identifiedBiases.map((bias) => (
+            {(profile.identifiedPatterns || profile.identifiedBiases || []).map((bias) => (
               <div
                 key={bias.id}
                 className="bg-white p-4 rounded-xl border border-amber-200 shadow-xs space-y-2 text-xs"

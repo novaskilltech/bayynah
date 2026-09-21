@@ -48,15 +48,19 @@ export default function AttestationCard({ attestation, locale }: AttestationCard
 
           <div className="space-y-1">
             <h2 className="text-2xl md:text-3xl font-bold text-bleuNuit-900 font-arabic">
-              إفادة تمكن منهجي في منصة تَبَيُّن
+              {attestation.type === "MAITRISE_METHODOLOGIQUE"
+                ? "إفادة تمكن منهجي في منصة تَبَيُّن"
+                : "إفادة إتمام مسار في منصة تَبَيُّن"}
             </h2>
             <h3 className="text-lg md:text-xl font-semibold text-vertProfond-800 font-sans">
-              Attestation de Maîtrise Méthodologique TABAYYUN
+              {attestation.type === "MAITRISE_METHODOLOGIQUE"
+                ? "Attestation de Maîtrise Méthodologique TABAYYUN"
+                : "Attestation de Parcours TABAYYUN"}
             </h3>
           </div>
 
           <p className="text-xs uppercase tracking-widest text-sable-500 font-sans">
-            Système d&apos;évaluation de la rigueur critique &amp; des compétences méthodologiques
+            Système d&apos;évaluation de la rigueur critique &amp; des compétences méthodologiques • {attestation.rulesVersion}
           </p>
         </div>
 
@@ -73,9 +77,13 @@ export default function AttestationCard({ attestation, locale }: AttestationCard
           </div>
 
           <p className="text-sm text-bleuNuit-800 leading-relaxed">
-            {isArabic
-              ? "قد أتم بنجاح البرنامج التكويني والتقويم الختامي للتحقق النقدي وفقه الاستدلال، وأثبت تمكنه من المهارات المنهجية الأساسية وفق المعايير المعتمدة."
-              : "a complété avec succès le cursus de vérification critique et l'évaluation finale de transfert méthodologique, démontrant une maîtrise rigoureuse des compétences d'Ahl as-Sunnah wa-l-Jamāʿa."}
+            {attestation.type === "MAITRISE_METHODOLOGIQUE"
+              ? isArabic
+                ? "قد أتم بنجاح البرنامج التكويني والتقويم الختامي للتحقق النقدي وفقه الاستدلال، وأثبت تمكنه واستقراره في الكفاءات المنهجية الأساسية والتنوع السياقي وفق المعايير المعتمدة."
+                : "a complété avec succès le cursus de vérification critique et l'évaluation finale de transfert méthodologique, démontrant une maîtrise rigoureuse, solide et diversifiée des compétences d'Ahl as-Sunnah wa-l-Jamāʿa."
+              : isArabic
+              ? "قد أتم بنجاح مسار التحقق النقدي والتقويم الختامي، وأظهر استيعاباً طيباً للضوابط المنهجية العامة في التثبت وفقه الاستدلال."
+              : "a complété avec succès le parcours d'apprentissage et l'évaluation finale de transfert, attestant de son engagement et de son assimilation des règles fondamentales du tabayyun."}
           </p>
 
           {/* Statistiques de maîtrise */}

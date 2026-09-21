@@ -79,12 +79,20 @@ model User {
   authoredInquiries Inquiry[]         @relation("AuthoredInquiries")
   reviewedInquiries Inquiry[]         @relation("ReviewedInquiries")
   
-  lessonProgress    LessonProgress[]
-  inquiryProgress   InquiryProgress[]
-  revisions         Revision[]
+  lessonProgress          LessonProgress[]
+  inquiryProgress         InquiryProgress[]
+  revisions               Revision[]
   
-  createdAt         DateTime          @default(now())
-  updatedAt         DateTime          @updatedAt
+  // Phase 6 : Données d'apprentissage et attestations
+  skillAttempts           SkillAttempt[]
+  diagnosticAttempts      DiagnosticAttempt[]
+  finalAssessmentAttempts FinalAssessmentAttempt[]
+  learningProfile         LearningProfile?
+  attestations            Attestation[]
+  auditLogs               AuditLog[]
+  
+  createdAt               DateTime          @default(now())
+  updatedAt               DateTime          @updatedAt
 }
 
 model Lesson {
@@ -259,3 +267,111 @@ model InquiryProgress {
 
   @@unique([userId, inquiryId])
 }
+
+// ==========================================
+// PHASE 6 : ENUMS ET MODÈLES D'APPRENTISSAGE
+// ==========================================
+
+enum AttestationType {
+  PARCOURS
+  MAITRISE_METHODOLOGIQUE
+}
+
+enum SyncStatus {
+  PENDING
+  SYNCED
+}
+
+model SkillAttempt {
+  id               String   @id // UUID généré par le client pour idempotence
+  userId           String
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  skillId          String
+  contextId        String   // Ex: "inquiry-01", "lesson-05", "diag-01", "final-eval"
+  contextType      String   // "LESSON" | "INQUIRY" | "DIAGNOSTIC" | "FINAL_ASSESSMENT"
+  score            Float    // 0.0 à 1.0
+  weight           Float    @default(1.0)
+  metadata         Json?    // Détails de la réponse, question, etc.
+  clientTimestamp  DateTime
+  createdAt        DateTime @default(now())
+
+  @@index([userId, skillId])
+  @@index([userId, contextId])
+}
+
+model DiagnosticAttempt {
+  id               String   @id // UUID
+  userId           String
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  scorePercent     Float
+  answers          Json     // Record<string, string>
+  rulesVersion     String   @default("diagnostic-v1")
+  clientTimestamp  DateTime
+  createdAt        DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+model FinalAssessmentAttempt {
+  id                             String   @id // UUID
+  userId                         String
+  user                           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  scorePercent                   Float
+  answers                        Json     // Record<string, string>
+  rulesVersion                   String   @default("assessment-v1")
+  eligibleForPathAttestation     Boolean  @default(false)
+  eligibleForMasteryAttestation  Boolean  @default(false)
+  clientTimestamp                DateTime
+  createdAt                      DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+model LearningProfile {
+  id                   String   @id @default(cuid())
+  userId               String   @unique
+  user                 User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  evaluatedSkillsCount Int      @default(0)
+  globalScorePercent   Float    @default(0.0)
+  skillsData           Json     // Record<SkillId, SkillProgression>
+  observedPatterns     Json     // IdentifiedMethodologicalPattern[]
+  rulesVersion         String   @default("skills-v1")
+  lastRecalculatedAt   DateTime @default(now())
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+}
+
+model Attestation {
+  id                      String          @id // Ex: "ATT-2026-..."
+  userId                  String
+  user                    User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type                    AttestationType
+  recipientName           String
+  issuedAt                DateTime        @default(now())
+  rulesVersion            String          @default("skills-v1")
+  finalScorePercent       Float
+  demonstratedSkillsCount Int
+  contextCount            Int
+  verificationHash        String          @unique
+  revoked                 Boolean         @default(false)
+  revokedReason           String?
+  metadata                Json?
+  createdAt               DateTime        @default(now())
+
+  @@index([userId])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  action    String   // Ex: "SYNC_ATTEMPTS", "RECALCULATE_PROFILE", "ISSUE_ATTESTATION", "EXPORT_DATA", "DELETE_ACCOUNT"
+  details   Json?
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@index([action, createdAt])
+}
+

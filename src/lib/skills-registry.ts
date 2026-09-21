@@ -213,8 +213,8 @@ export const SKILLS_METADATA: Record<MethodologicalSkill, SkillMetadata> = {
     category: "POSTURE_EPISTEMIQUE",
     iconName: "AlertTriangle",
     name: {
-      fr: "Détection des sophismes et biais",
-      ar: "كشف المغالطات والانحيازات",
+      fr: "Détection des sophismes et erreurs méthodologiques",
+      ar: "كشف المغالطات والأنماط المنهجية الخاطئة",
     },
     shortDescription: {
       fr: "Identifier le cherry-picking, l'argument d'autorité, le faux dilemme et la décontextualisation.",

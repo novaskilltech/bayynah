@@ -11,7 +11,10 @@
       "progression": "Compétences",
       "revision": "Révision",
       "diagnostic": "Diagnostic",
-      "finalAssessment": "Évaluation"
+      "finalAssessment": "Évaluation",
+      "account": "Mon Compte",
+      "login": "Connexion",
+      "admin": "Audit Éditorial"
     },
     "footer": "تَبَيُّن — Apprendre à vérifier avant d'affirmer • Ahl as-Sunnah wa-l-Jamâʿa",
     "switchLanguage": "العربية"
@@ -66,7 +69,7 @@
         "id": "critique",
         "title": "École de l'Esprit Critique",
         "titleAr": "مدرسة التفكير النقدي",
-        "description": "Détection des biais cognitifs, faux dilemmes, arguments d'autorité et citations tronquées."
+        "description": "Détection des erreurs méthodologiques récurrentes, faux dilemmes, arguments d'autorité et citations tronquées."
       }
     ]
   },

@@ -11,7 +11,10 @@
       "progression": "الكفاءات",
       "revision": "المراجعة",
       "diagnostic": "التشخيص",
-      "finalAssessment": "التقويم الختامي"
+      "finalAssessment": "التقويم الختامي",
+      "account": "حسابي",
+      "login": "دخول",
+      "admin": "المراجعة العلمية"
     },
     "footer": "تَبَيُّن — تعلّم كيف تتثبت قبل أن تجزم • وفق منهج أهل السنة والجماعة",
     "switchLanguage": "Français"

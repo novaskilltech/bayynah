@@ -56,6 +56,9 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
               <a href={`/${locale}/revision`} className="hover:text-vertProfond-700 transition">
                 {dict.common.nav.revision}
               </a>
+              <a href={`/${locale}/compte`} className="hover:text-vertProfond-700 transition font-semibold text-vertProfond-800">
+                {dict.common.nav.account || (isArabic ? "حسابي" : "Compte")}
+              </a>
             </nav>
 
             <div className="flex items-center gap-3">
