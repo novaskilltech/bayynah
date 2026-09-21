@@ -1,0 +1,616 @@
+{
+  "id": "inquiry-04",
+  "slug": "toucher-femme-wudu",
+  "domain": "FIQH",
+  "editorialStatus": "DRAFT",
+  "title": {
+    "fr": "Toucher une femme annule-t-il les ablutions ?",
+    "ar": "هل لمس المرأة ينقض الوضوء؟"
+  },
+  "initialClaim": {
+    "fr": "On m’a dit : « Le Coran dit clairement “ou si vous avez touché les femmes”. Donc tout contact entre un homme et une femme annule forcément les ablutions ; les avis contraires contredisent le verset. »",
+    "ar": "قيل لي: «القرآن يقول بوضوح: أو لامستم النساء، فكل لمس بين الرجل والمرأة ينقض الوضوء حتماً، ومن خالف ذلك فقد خالف ظاهر الآية.»"
+  },
+  "authorId": "author-01",
+  "steps": [
+    {
+      "stepNumber": 1,
+      "titleFr": "Décomposer l’affirmation",
+      "titleAr": "تفكيك الدعوى وفصل أجزائها",
+      "instructionFr": "Face à l'affirmation : « Le Coran dit clairement “ou si vous avez touché les femmes”. Donc tout contact entre un homme et une femme annule forcément les ablutions ; les avis contraires contredisent le verset », quelle est la première analyse méthodologique ?",
+      "instructionAr": "أمام دعوى: «القرآن يقول بوضوح: أو لامستم النساء، فكل لمس بين الرجل والمرأة ينقض الوضوء حتماً، ومن خالف ذلك فقد خالف ظاهر الآية»، ما هو التحليل المنهجي الأول؟",
+      "options": [
+        {
+          "textFr": "Il faut distinguer : le texte du verset, le sens du mot « لامستم », la question de savoir si ce sens englobe tout contact physique, et le jugement juridique finalement déduit.",
+          "textAr": "يجب التمييز بين: ورود النص القرآني، ومعنى لفظ «لامستم»، وهل يشمل كل لمس بدني، والحكم الفقهي المستنبط منه في النهاية.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Exact. La présence d’un mot dans le Coran et la règle juridique tirée de ce mot ne sont pas une seule et même étape.",
+          "feedbackAr": "صحيح ومحرر. فورود اللفظ في القرآن والحكم الفقهي المستنبط منه ليسا خطوة واحدة، بل يمر الاستدلال بمراحل دلالية وأصولية."
+        },
+        {
+          "textFr": "Il faut regarder ce que disent les quatre écoles.",
+          "textAr": "النظر مباشرة فيما تقوله المذاهب الأربعة.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Consulter les écoles est utile, mais cela ne dispense pas de décomposer l'affirmation et ses prémisses méthodologiques.",
+          "feedbackAr": "مراجعة المذاهب خطوة مفيدة، لكنها لا تغني عن تفكيك الدعوى وفحص مقدماتها المنهجية أولاً."
+        },
+        {
+          "textFr": "Le verset paraît clair en français, donc le problème est probablement réglé.",
+          "textAr": "الآية تبدو واضحة في الترجمة، فالأرجح أن المسألة محسومة.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Jugement hâtif : une impression de clarté sur une traduction ne résout pas la polysémie du terme dans la langue d'origine.",
+          "feedbackAr": "حكم متسرع: فالظن المبدئي من خلال الترجمة لا يحل إشكال الاشتراك اللغوي في لسان العرب."
+        },
+        {
+          "textFr": "Si les juristes divergent, c’est nécessairement que certains ignorent le verset.",
+          "textAr": "إن كان الفقهاء قد اختلفوا، فالسبب حتماً أن بعضهم جهل وجود الآية.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Erreur grossière : le verset est au cœur de la sourate An-Nisâʾ et tous les juristes le connaissent ; le désaccord porte sur sa dalāla.",
+          "feedbackAr": "خطأ جسيم وسوء ظن بالعلماء: فالآية معلومة لجميع الفقهاء قطعاً، والنزاع إنما هو في دلالتها وكيفية الاستدلال بها."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "ON_STEP_ENTER"
+    },
+    {
+      "stepNumber": 2,
+      "titleFr": "Que faut-il vérifier ?",
+      "titleAr": "ما الذي ينبغي التحقق منه؟",
+      "instructionFr": "Pour traiter rigoureusement cette question, quels éléments d'investigation faut-il rassembler ?",
+      "instructionAr": "لبحث هذه المسألة بدقة علمية، ما هي المحاور الواجب التحقق منها؟",
+      "options": [
+        {
+          "textFr": "Il faut rechercher : 1. le texte arabe exact ; 2. les usages possibles de « لمس / لامس » ; 3. les interprétations des Compagnons et premières générations ; 4. les hadiths authentiques où un contact homme-femme se produit ; 5. la manière dont les fuqahāʾ ont concilié ces données.",
+          "textAr": "يجب استقصاء: 1. النص العربي الدقيق؛ 2. وجوه استعمال «لمس / لامس»؛ 3. تفاسير الصحابة والسلف؛ 4. الأحاديث الصحيحة الواردة في وقوع اللمس؛ 5. مسالك الفقهاء في الجمع والترجيح.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Plan d'investigation exhaustif et rigoureux, qui intègre langue, tafsir ma'thûr, hadith et uṣûl.",
+          "feedbackAr": "خطة تحقيق علمية متكاملة تجمع بين فقه اللغة، والتفسير المأثور، والحديث المسند، ومناهج الأصوليين."
+        },
+        {
+          "textFr": "Chercher uniquement une fatwa contemporaine.",
+          "textAr": "البحث عن فتوى معاصرة مقتضبة فقط.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Une fatwa peut donner une réponse pratique, mais ne permet pas de comprendre la méthode ni les preuves du dossier.",
+          "feedbackAr": "الفتوى المعاصرة تعطي حكماً جاهزاً، لكنها لا تبين مسار النظر ولا تبرز مناهج الاستدلال في المسألة."
+        },
+        {
+          "textFr": "Choisir l’avis qui paraît le plus prudent avant de regarder les preuves.",
+          "textAr": "اختيار القول الذي يبدو أكثر احتياطاً قبل النظر في الأدلة.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Inversion méthodologique : la prudence juridique ne peut être définie a priori sans avoir examiné le faisceau de preuves.",
+          "feedbackAr": "تقديم للرأي على الدليل: فالاحتياط الشرعي لا ينضبط إلا بعد الإحاطة بمجموع النصوص ومسالك الجمع."
+        },
+        {
+          "textFr": "Chercher quelle école possède le plus grand nombre d’adeptes.",
+          "textAr": "معرفة المذهب الذي يملك أكبر عدد من الأتباع.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Sophisme du nombre : la vérité d'une règle juridique ne se mesure pas au poids démographique de ses partisans.",
+          "feedbackAr": "مغالطة الكثرة العددية: فالترجيح الفقهي قائم على قوة الاستدلال وصحة المأخذ لا على الكثرة الجغرافية."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 3,
+      "titleFr": "Lire le verset sans imposer la conclusion",
+      "titleAr": "قراءة الآية قبل فرض التفسير",
+      "instructionFr": "En examinant le verset révélé, que pouvons-nous affirmer immédiatement ?",
+      "instructionAr": "عند النظر في الآية الكريمة، ما الذي يمكن الجزم به ابتداءً؟",
+      "options": [
+        {
+          "textFr": "Le verset emploie bien l’expression « لامستم النساء ». Il reste encore à déterminer ce que cette expression signifie précisément dans ce contexte.",
+          "textAr": "الآية تتضمن يقيناً عبارة «لامستم النساء»، ويبقى بعد ذلك تحرير معناها الدقيق وسياق دلالتها في هذا الموضع.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Exact : l'existence du texte coranique est certaine (qat'î ath-thubût), mais son indication juridique précise (dalâla) nécessite l'analyse.",
+          "feedbackAr": "تحرير دقيق: فالنص قطعي الثبوت، لكن وجه دلالته على مسألة نقض الوضوء بمجرد المماسة يحتاج إلى بيان."
+        },
+        {
+          "textFr": "Le verset établit un lien entre « لامستم النساء » et la purification.",
+          "textAr": "الآية تثبت ارتباطاً وثيقاً بين قوله «لامستم النساء» وبين الطهارة.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat exact du contexte textuel, mais insuffisant pour savoir si le lien concerne le ghusl ou le wudû'.",
+          "feedbackAr": "ملاحظة صحيحة لسياق الآية، لكنها لا تكفي لتعيين نوع الطهارة المطلوبة أهي الوضوء أم الغسل."
+        },
+        {
+          "textFr": "« لامستم » signifie nécessairement un simple contact peau contre peau.",
+          "textAr": "«لامستم» تدل حتماً وبالضرورة على مجرد مس البشرة للبشرة.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Présomption prématurée : cela pose comme acquis le sens propre sans avoir exploré l'usage métaphorique ou polysémique.",
+          "feedbackAr": "مصادرة على المطلوب: ففرض المعنى الحسي المباشر يتجاهل احتمال الكناية المشهورة في لسان العرب."
+        },
+        {
+          "textFr": "Le verset ne parle absolument pas de purification.",
+          "textAr": "الآية لا صلة لها مطلقاً بأحكام الطهارة والوضوء.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Contradiction flagrante avec le texte même de la sourate An-Nisâʾ (4:43) et d'Al-Mâ'ida (5:6).",
+          "feedbackAr": "مصادمة صريحة لنص الآية الكريمة وسياقها في أحكام التيمم والطهارة."
+        }
+      ],
+      "revealedEvidenceIds": [
+        "ev-quran-lamastum-4-43"
+      ],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 4,
+      "titleFr": "Un mot peut-il avoir plusieurs usages ?",
+      "titleAr": "هل للفظ أكثر من استعمال؟",
+      "instructionFr": "Que montre le dossier transmis par aṭ-Ṭabarī dans son Tafsîr ?",
+      "instructionAr": "ما الذي يظهره التفسير المأثور المنقول عند الإمام الطبري؟",
+      "options": [
+        {
+          "textFr": "Les premières générations ne comprennent pas toutes le mot de façon identique : Ibn ʿAbbās l’interprète ici comme un euphémisme du rapport sexuel, tandis que d’autres transmissions l’appliquent au contact physique inférieur au rapport.",
+          "textAr": "الصحابة والسلف لم يفهموا اللفظ على وجه واحد: فابن عباس يفسره بالكناية عن الجماع، بينما ورد عن غيره كابن مسعود حمله على ما دون الجماع من اللمس الحسي.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "C’est le cœur de l’enquête : le texte est certain, mais sa dalāla sur ce point précis fait l’objet d’une divergence ancienne.",
+          "feedbackAr": "جوهر التحقيق العلمي: النص قطعي الثبوت، لكن دلالته على هذا الحكم بالذات محل خلاف مأثور ومبكر بين الصحابة."
+        },
+        {
+          "textFr": "Le mot possède au moins deux interprétations anciennes documentées.",
+          "textAr": "اللفظ يحتمل في النقل القديم وجهين تفسيريين موثقين على الأقل.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Bonne observation générale, mais il convient d'attribuer précisément ces compréhensions (Ibn ʿAbbâs vs Ibn Masʿûd).",
+          "feedbackAr": "تقرير صحيح للإجمال، والأكمل منه عزو كل وجه إلى قائله من أعلام الصحابة لتبيين منشأ النزاع."
+        },
+        {
+          "textFr": "Puisqu’Ibn ʿAbbās dit « rapport sexuel », toute autre interprétation ancienne est inexistante.",
+          "textAr": "طالما أن ابن عباس فسر اللمس بالجماع، فأي تفسير قديم آخر غير موجود أو ملغى.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Vision réductrice : aṭ-Ṭabarī consigne également la position d'Ibn Masʿûd ; on ne peut nier l'existence d'une transmission par préférence doctrinale.",
+          "feedbackAr": "إلغاء متعسف: فالطبري روى الرأيين بأسانيدهما، ولا يصح إسقاط نقل ابن مسعود لمجرد ترجيح قول ابن عباس."
+        },
+        {
+          "textFr": "Une divergence lexicale signifie que le Coran est contradictoire.",
+          "textAr": "وجود خلاف لغوي في التفسير يعني تناقضاً في نص القرآن نفسه.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Confusion épistémologique : la richesse polysémique d'une langue humaine n'est pas une contradiction interne du texte divin.",
+          "feedbackAr": "خلط معرفي فادح: فاتساع لسان العرب للمجاز والكناية من وجوه البلاغة، وليس تناقضاً في كلام الله تعالى."
+        }
+      ],
+      "revealedEvidenceIds": [
+        "ev-tabari-lamastum"
+      ],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 5,
+      "titleFr": "Introduire un hadith authentique",
+      "titleAr": "إدخال الحديث الصحيح في البحث",
+      "instructionFr": "Quel fait le hadith de Ṣaḥîḥ Muslim rapporté par ʿÂʾisha établit-il directement ?",
+      "instructionAr": "ما الذي يثبته حديث عائشة في صحيح مسلم مباشرة؟",
+      "options": [
+        {
+          "textFr": "ʿĀʾisha toucha les pieds du Prophète ﷺ alors qu’il était en prière. Le récit constitue donc une donnée authentique montrant qu’un contact physique s’est produit pendant la prière.",
+          "textAr": "عائشة رضي الله عنها مست قدمي النبي ﷺ وهو في الصلاة، فالحديث يثبت واقعة لمس بدني وقعت أثناء الصلاة بإسناد صحيح.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Lecture factuelle rigoureuse : le hadith atteste un contact physique authentiquement documenté, sans préjuger encore de sa règle juridique.",
+          "feedbackAr": "توصيف واقعي محكم: الحديث يثبت واقعة المماسة سنداً ومتناً، دون القفز إلى تعميم الحكم الفقهي قبل استيفاء أوجه النظر."
+        },
+        {
+          "textFr": "Il existe au moins un hadith authentique dans lequel un contact entre époux est mentionné pendant la prière.",
+          "textAr": "وجود حديث صحيح واحد على الأقل يذكر مماسة بين الزوجين أثناء الصلاة.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat correct, mais la formulation BEST en précise la teneur exacte (qui touche qui, contexte de la prière).",
+          "feedbackAr": "استنتاج مقبول، لكن صياغة الخيار الأول أدق في تحديد أطراف اللمس وسياقه النبوي."
+        },
+        {
+          "textFr": "Ce seul hadith réfute définitivement toute position juridique selon laquelle un contact pourrait annuler le wuḍūʾ.",
+          "textAr": "هذا الحديث وحده كافٍ لإبطال أي مذهب فقهي يقول بنقض الوضوء باللمس بصفة نهائية.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Déduction hâtive : les juristes ont analysé la différence entre être touché et toucher, le contact volontaire ou fortuit, etc.",
+          "feedbackAr": "استعجال في حسم الخلاف: فالفقهاء فرقوا بين اللامس والملموس، وبين العارض والمقصود، فلا يُلغى استدلالهم برواية واحدة مجردة."
+        },
+        {
+          "textFr": "Puisque le hadith concerne une invocation, il n’a aucun intérêt pour le dossier juridique.",
+          "textAr": "بما أن الحديث ورد في سياق الدعاء، فلا مدخل له في مباحث الفقه وأحكام الطهارة.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Rejet non fondé : tout geste prophétique ou événement authentifié en prière constitue une pièce juridique majeure.",
+          "feedbackAr": "إسقاط باطل للدليل: فأفعال النبي ﷺ وأحوال صلاته من أعظم مصادر التشريع واستنباط الأحكام."
+        }
+      ],
+      "revealedEvidenceIds": [
+        "ev-muslim-aisha-feet"
+      ],
+      "revealPolicy": "ON_STEP_ENTER"
+    },
+    {
+      "stepNumber": 6,
+      "titleFr": "Texte authentique ≠ conclusion automatique",
+      "titleAr": "صحة الحديث لا تعني حسم الدلالة",
+      "instructionFr": "Pourquoi le hadith authentique de ʿÂʾisha ne termine-t-il pas automatiquement le débat juridique ?",
+      "instructionAr": "لماذا لا يحسم حديث عائشة الخلاف الفقهي بصورة تلقائية؟",
+      "options": [
+        {
+          "textFr": "Parce qu’il faut encore déterminer sa portée juridique : qui touche qui, la nature du contact, les éventuelles distinctions retenues par les juristes et son rapport avec « لامستم النساء ».",
+          "textAr": "لأن دلالته الفقهية تحتاج إلى تحرير: من اللامس ومن الملموس، وطبيعة اللمس، والفروق التي اعتبرها الفقهاء، وكيفية التوفيق بينه وبين الآية.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Exact : l'authenticité d'un hadith établit le fait, mais la déduction juridique dépend de l'analyse des circonstances et du jamʿ des textes.",
+          "feedbackAr": "صحيح ومحكم: فصحة النقل تثبت الواقعة، لكن استخراج الحكم يتطلب فحص المناط والجمع بين النصوص الشرعية."
+        },
+        {
+          "textFr": "Parce que les fuqahāʾ peuvent interpréter différemment un même hadith authentique.",
+          "textAr": "لأن الفقهاء قد يختلفون في فهم الحديث الصحيح الواحد وتوجيهه.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Vrai sur le plan du constat, mais cela n'explique pas sur quels critères précis porte cette divergence d'interprétation.",
+          "feedbackAr": "تقرير صحيح للواقع، لكنه لا يفصل الأوجه المنهجية التي اختلف الفقهاء حولها في هذا الحديث."
+        },
+        {
+          "textFr": "Parce qu’un hadith ne peut jamais expliquer un verset.",
+          "textAr": "لأن الحديث النبوي لا يمكن أن يفسر القرآن أو يبين مجمله أبداً.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Principe erroné : la Sunna a précisément pour rôle explicite d'éclairer, préciser et expliciter le Coran.",
+          "feedbackAr": "قاعدة باطلة ومخالفة للإجماع: فوظيفة السنة الثابتة هي بيان القرآن وتخصيص عامه وتقييد مطلقه."
+        },
+        {
+          "textFr": "Parce qu’un hadith de Ṣaḥîḥ Muslim est moins important qu’une opinion de madhhab.",
+          "textAr": "لأن حديث صحيح مسلم أدنى منزلة من رأي المذهب الفقهي.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Inversion inacceptable des sources : aucun madhhab ne place l'opinion humaine au-dessus du hadith authentique.",
+          "feedbackAr": "انحراف أصولي مرفوض: فكافة الأئمة متفقون على تقديم النص الثابت على الرأي والقياس."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 7,
+      "titleFr": "Comparer les solutions juridiques",
+      "titleAr": "مقارنة مناهج الفقهاء",
+      "instructionFr": "À la lecture de la synthèse d'Ibn Rushd dans Bidâyat al-Mujtahid, que comprend-on sur la divergence des écoles ?",
+      "instructionAr": "عند قراءة خلاصة ابن رشد في بداية المجتهد، ما الذي نفهمه عن منشأ اختلاف المذاهب؟",
+      "options": [
+        {
+          "textFr": "Les juristes ne divergent pas nécessairement parce qu’ils connaissent des textes différents : ils peuvent connaître le même verset et diverger sur sa dalāla et sur la manière de le combiner avec les hadiths.",
+          "textAr": "الفقهاء لا يختلفون بالضرورة لجهل أحدهم بالنصوص: بل قد يتفقون على ورود الآية ويختلفون في دلالتها وكيفية الجمع بينها وبين الأحاديث.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Synthèse remarquable : Ibn Rushd montre que la divergence est une construction d'ijtihâd fondée sur la polysémie et la conciliation textuelle.",
+          "feedbackAr": "تحرير نفيس: يبرز ابن رشد أن الخلاف نشأ عن اشتراك لغوي واجتهاد في الجمع بين الأدلة، لا عن عناد أو إعراض عن الشرع."
+        },
+        {
+          "textFr": "Ash-Shāfiʿī, Mālik et Abū Ḥanīfa n’appliquent pas exactement la même règle au contact.",
+          "textAr": "الشافعي ومالك وأبو حنيفة لا يطبقون نفس الحكم بالتطابق على مسألة اللمس.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat factuel utile, mais qui ne met pas en lumière la cause sous-jacente dégagée par Ibn Rushd.",
+          "feedbackAr": "وصف واقعي لمذاهبهم، لكنه يقف عند ظاهر الفروع دون كشف العلة الأصولية التي حررها ابن رشد."
+        },
+        {
+          "textFr": "Puisque trois avis existent, ils sont nécessairement tous également vrais dans tous les cas.",
+          "textAr": "بما أن هناك ثلاثة أقوال، فهي جميعاً صحيحة بنفس الدرجة في كل حالة دون تمايز.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Relativisme méthodologique hâtif : chaque école a ses arguments et ses conditions d'application précises.",
+          "feedbackAr": "نسبية متسرعة: فلكل مذهب سياقه وأدلته وضوابطه، والتحقيق يقتضي معرفة مداركهم لا التسوية المطلقة بينها."
+        },
+        {
+          "textFr": "L’existence de plusieurs madhāhib prouve qu’aucune règle n’est fondée sur des preuves.",
+          "textAr": "تعدد المذاهب دليل على أن أياً من الأحكام لم يُبنَ على دليل شرعي أصلاً.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Nihilisme juridique : au contraire, les madhâhib ont développé des appareils méthodologiques d'une extrême minutie.",
+          "feedbackAr": "عدمية باطلة: بل العكس هو الصحيح، فتعدد الاجتهادات ثمرة إعمال الدليل والنظر العميق في مقتضيات الألفاظ."
+        }
+      ],
+      "revealedEvidenceIds": [
+        "ev-ibnrushd-lams"
+      ],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 8,
+      "titleFr": "Identifier la vraie nature du khilāf",
+      "titleAr": "تحرير سبب الخلاف",
+      "instructionFr": "Quelle description de ce désaccord juridique est la plus exacte et la plus rigoureuse ?",
+      "instructionAr": "أي وصف لهذا الخلاف الفقهي هو الأدق والأقرب إلى التحرير العلمي؟",
+      "options": [
+        {
+          "textFr": "Il s’agit d’un khilāf juridique reconnu portant notamment sur la dalāla de « لامستم », l’usage linguistique du terme et la manière d’articuler le verset avec les hadiths relatifs au contact.",
+          "textAr": "هو خلاف فقهي معتبر مبني على دلالة «لامستم»، ووجوه استعماله في لسان العرب، ومسالك الجمع بين الآية وأحاديث الباب.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Définition uṣûlî exacte : le désaccord est qualifié de khilâf mu'tabar parce qu'il repose sur des critères scientifiques identifiables.",
+          "feedbackAr": "تحرير أصولي دقيق: فهو خلاف معتبر ناشئ عن أصول لغوية وحديثية منضبطة، لا عن اتباع للهوى."
+        },
+        {
+          "textFr": "Les écoles divergent sur ce qui annule le wuḍūʾ.",
+          "textAr": "المذاهب تختلف في نواقض الوضوء.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Formulation générale correcte mais superficielle : elle ne nomme ni le mot clé ni les mécanismes d'articulation.",
+          "feedbackAr": "عبارة مجملة لا تبين محل النزاع الخاص بلمس المرأة ولا أسبابه المنهجية."
+        },
+        {
+          "textFr": "C’est un conflit entre ceux qui suivent le Coran et ceux qui suivent leur opinion.",
+          "textAr": "هو صراع بين من يتبع القرآن ومن يتبع رأيه وهواه.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Caricature polémique : tous les imams se réclament du Coran et de la Sunna ; le litige porte sur l'interprétation, non sur la soumission.",
+          "feedbackAr": "تصوير زائف ومشوه: فكل الأئمة متبعون لكتاب الله وسنة رسوله ﷺ، والنزاع في مقتضى الفهم لا في أصل الاتباع."
+        },
+        {
+          "textFr": "C’est uniquement une divergence sur l’authenticité du verset.",
+          "textAr": "هو خلاف في ثبوت الآية القرآنية وصحة نقلها فقط.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Erreur totale : le Coran est mutawâtir et nul ne conteste l'authenticité textuelle de la sourate 4 ou 5.",
+          "feedbackAr": "خطأ فاحش: فالقرآن الكريم قطعي الثبوت بالتواتر، ولا يماري مسلم في ثبوت آيات الطهارة حرفاً بحرف."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 9,
+      "titleFr": "Conclusion proportionnée",
+      "titleAr": "صياغة خلاصة منضبطة",
+      "instructionFr": "Quelle conclusion synthétique respecte le mieux l'ensemble des données réunies ?",
+      "instructionAr": "أي خلاصة جامعة هي الأوفى بجميع معطيات القضية؟",
+      "options": [
+        {
+          "textFr": "« Le Coran emploie l’expression « أو لامستم النساء », mais son indication juridique précise a été comprise différemment dès les premières générations. Ibn ʿAbbās l’interprète comme une référence au rapport sexuel, tandis que d’autres l’appliquent au contact physique. Des hadiths authentiques mentionnent par ailleurs un contact entre le Prophète ﷺ et ʿĀʾisha dans le contexte de la prière. Les fuqahāʾ ont donc élaboré plusieurs solutions juridiques reconnues. Il est incorrect de réduire ce khilāf à “le Coran est clair et l’avis contraire le rejette”. »",
+          "textAr": "«ورد في القرآن «أو لامستم النساء»، غير أن دلالته الدقيقة وقع فيها خلاف مبكر بين الصحابة؛ فابن عباس يراه كناية عن الجماع، وغيره يحمله على المس الحسي. وثبت في الصحيح وقوع مماسة بين النبي ﷺ وعائشة في الصلاة؛ فبنى الفقهاء حلولاً اجتهادية معتبرة. فلا يصح اختزال المسألة في دعوى أن الآية صريحة وأن من خالفها قد رد القرآن.»",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Conclusion proportionnée exemplaire : elle intègre toutes les pièces du dossier, réfute l'anathème hâtif et respecte le khilâf légitime.",
+          "feedbackAr": "خلاصة محكمة ومنصفة: تعطي كل دليل حقه، وتدفع التبديع والتجهيل، وتبين حقيقة الاجتهاد الفقهي."
+        },
+        {
+          "textFr": "« Il existe une divergence reconnue sur le contact avec une femme et le wuḍūʾ. »",
+          "textAr": "«هناك خلاف فقهي معتبر في نقض الوضوء بلمس المرأة.»",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Vrai mais minimaliste : cela n'offre pas la justification détaillée requise pour un audit critique complet.",
+          "feedbackAr": "كلام صحيح في الجملة، لكنه شديد الاقتضاب ولا يفي بحاجة الباحث في استيعاب علل الأقوال."
+        },
+        {
+          "textFr": "« Puisque la question est discutée, aucune preuve n’est plus forte qu’une autre. »",
+          "textAr": "«بما أن المسألة مختلف فيها، فكل الأدلة متساوية ولا يمكن لأحد أن يرجح قولاً.»",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Confusion entre existence d'un khilâf et impossibilité du tarjîḥ : un juriste peut tout à fait argumenter une préférence méthodologique.",
+          "feedbackAr": "خلط بين مشروعية الخلاف وبين الترجيح: فللفقيه أن يرجح ما يراه أقوى دليلاً دون إسقاط اعتبار القول الآخر."
+        },
+        {
+          "textFr": "« Tous ceux qui ne refont pas leur wuḍūʾ après chaque contact contredisent explicitement le Coran. »",
+          "textAr": "«كل من لا يتوضأ من مجرد اللمس فهو مصادم للقرآن ومبتدع صراحة.»",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Accusation infondée issue d'une lecture littérale aveugle aux règles d'uṣûl et au tafsir des Compagnons.",
+          "feedbackAr": "حكم جائر ومصادرة على الخلاف، ناشئ عن الجهل بأساليب البيان القرآني وفهم أئمة السلف."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 10,
+      "titleFr": "Audit méthodologique final",
+      "titleAr": "المراجعة المنهجية الختامية",
+      "instructionFr": "Quelle règle méthodologique fondamentale cette enquête permet-elle de dégager pour tout étudiant ?",
+      "instructionAr": "ما هي القاعدة المنهجية الجوهرية التي تخرج بها هذه الدراسة؟",
+      "options": [
+        {
+          "textFr": "Un texte certain peut donner lieu à une divergence juridique réelle lorsque le désaccord porte sur la portée d’un terme, son contexte et son articulation avec d’autres preuves. Avant d’accuser un avis de contredire le texte, il faut reconstruire son istidlāl.",
+          "textAr": "النص القطعي الثبوت قد يحتمل دلالات فقهية متعددة إذا كان اللفظ مشتركاً أو وردت نصوص أخرى تشهد للباب. وقبل اتهام أي رأي بمخالفة النص، يجب تفكيك وجه استدلاله ومسلكه في الجمع.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Règle d'or méthodologique de TABAYYUN : distinguer certitude du texte et pluralité de la dalâla pour préserver la rigueur critique.",
+          "feedbackAr": "القاعدة الذهبية لمنهج تَبَيُّن: التمييز بين قطعية الثبوت وظنية الدلالة، وإحسان الظن باجتهاد الفقهاء المبني على أصول محققة."
+        },
+        {
+          "textFr": "Il faut connaître les preuves des différentes écoles.",
+          "textAr": "ينبغي الإحاطة بأدلة المذاهب الفقهية المختلفة.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Objectif louable, mais la règle méthodologique fondamentale va plus loin en formalisant le rapport entre texte et dalâla.",
+          "feedbackAr": "مطلب حسن، لكن القاعدة الأصولية أعمق إذ تؤصل للعلاقة بين النص الثابت ووجوه الدلالة والجمع."
+        },
+        {
+          "textFr": "Lorsqu’un mot possède plusieurs sens possibles, on ne peut jamais conclure.",
+          "textAr": "إذا احتمل اللفظ أكثر من معنى، تعذر الوصول إلى أي حكم شرعي.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Scepticisme infondé : les règles de la linguistique et de l'uṣûl permettent d'argumenter et de trancher avec nuance.",
+          "feedbackAr": "تعطيل للأحكام: فالاشتراك اللغوي يُرجح فيه بالسياق والقرائن الخارجية وأصول الاستنباط."
+        },
+        {
+          "textFr": "Une traduction française littérale suffit pour résoudre les questions d’uṣūl.",
+          "textAr": "الترجمة الحرفية تكفي وحدها للفصل في المسائل الأصولية المعقدة.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Illusion totale : la traduction est déjà une interprétation et ne peut remplacer l'étude du texte en langue arabe.",
+          "feedbackAr": "وهم خطير: فالترجمة اجتهاد بشري وتفسير تقريبي لا يستقل ببناء الأحكام الشرعية التكليفية."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    }
+  ],
+  "inquiryEvidences": [
+    {
+      "evidenceId": "ev-quran-lamastum-4-43",
+      "role": "PRIMARY_PROOF",
+      "order": 1,
+      "stepNumber": 3,
+      "commentFr": "Le texte coranique fondateur portant l'expression « أو لامستم النساء ».",
+      "commentAr": "النص القرآني في سورة النساء المتضمن لقوله تعالى «أو لامستم النساء».",
+      "evidence": {
+        "id": "ev-quran-lamastum-4-43",
+        "type": "QURAN",
+        "referenceCode": "Coran 4:43",
+        "primarySource": true,
+        "surahNumber": 4,
+        "ayahNumber": 43,
+        "surahNameAr": "النساء",
+        "surahNameFr": "An-Nisāʾ",
+        "quoteArOriginal": "أَوْ لَامَسْتُمُ النِّسَاءَ",
+        "quoteArVocalized": "أَوْ لَامَسْتُمُ النِّسَاءَ",
+        "quoteArNormalized": "او لامستم النساء",
+        "translationFr": "…ou si vous avez touché / eu contact avec les femmes…",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://quran.com/4/43",
+        "lastVerifiedAt": "2026-09-21"
+      }
+    },
+    {
+      "evidenceId": "ev-tabari-lamastum",
+      "role": "SCHOLARLY_EXPLANATION",
+      "order": 2,
+      "stepNumber": 4,
+      "commentFr": "Aṭ-Ṭabarī consigne la divergence d'interprétation ancienne entre Ibn ʿAbbās (rapport sexuel) et Ibn Masʿūd (contact inférieur au rapport).",
+      "commentAr": "جامع البيان للإمام الطبري يوثق اختلاف التفسير المأثور عن الصحابة بين ابن عباس وابن مسعود.",
+      "evidence": {
+        "id": "ev-tabari-lamastum",
+        "type": "BOOK",
+        "referenceCode": "Jâmiʿ al-Bayân 4:43",
+        "primarySource": true,
+        "sourceWork": "Jâmiʿ al-Bayân ʿan Taʾwîl Ây al-Qurʾân (Tafsîr aṭ-Ṭabarî)",
+        "author": "Abû Jaʿfar Muḥammad ibn Jarîr aṭ-Ṭabarî",
+        "editionVolumePage": "Commentaire de la sourate An-Nisâʾ, verset 43",
+        "quoteArOriginal": "اللمس والمس والمباشرة الجماع ولكن الله يكني بما شاء",
+        "quoteArVocalized": "اللَّمْسُ وَالْمَسُّ وَالْمُبَاشَرَةُ الْجِمَاعُ، وَلَكِنَّ اللَّهَ يَكْنِي بِمَا شَاءَ",
+        "quoteArNormalized": "اللمس والمس والمباشرة الجماع ولكن الله يكني بما شاء",
+        "translationFr": "Le toucher, le contact et la mubāshara désignent ici le rapport sexuel ; Allah emploie la formulation indirecte qu’Il veut.",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "TO_BE_CHECKED"
+      }
+    },
+    {
+      "evidenceId": "ev-muslim-aisha-feet",
+      "role": "PRIMARY_PROOF",
+      "order": 3,
+      "stepNumber": 5,
+      "commentFr": "Hadith authentique dans Ṣaḥîḥ Muslim rapportant un contact physique direct avec ʿÂʾisha pendant la prière.",
+      "commentAr": "حديث عائشة في صحيح مسلم في وقوع مماسة بدنية بينها وبين النبي ﷺ أثناء صلاته.",
+      "evidence": {
+        "id": "ev-muslim-aisha-feet",
+        "type": "HADITH",
+        "referenceCode": "Ṣaḥîḥ Muslim 486",
+        "primarySource": true,
+        "collection": "Ṣaḥîḥ Muslim",
+        "author": "Muslim ibn al-Ḥajjâj an-Naysâbûrî",
+        "hadithNumber": "486",
+        "numberingSystem": "Muḥammad Fu'âd ʿAbd al-Bâqî",
+        "chapterAr": "باب ما يقال في الركوع والسجود",
+        "chapterFr": "Chapitre sur ce qui se dit dans l'inclinaison et la prosternation",
+        "editionVolumePage": "Tome 1, page 352, n°486",
+        "authenticityGrade": "Ṣaḥîḥ",
+        "gradeScholar": "Imam Muslim",
+        "quoteArOriginal": "فَالْتَمَسْتُهُ فَوَقَعَتْ يَدِي عَلَى بَطْنِ قَدَمَيْهِ وَهُوَ فِي الْمَسْجِدِ وَهُمَا مَنْصُوبَتَانِ",
+        "quoteArVocalized": "فَالْتَمَسْتُهُ فَوَقَعَتْ يَدِي عَلَى بَطْنِ قَدَمَيْهِ وَهُوَ فِي الْمَسْجِدِ وَهُمَا مَنْصُوبَتَانِ",
+        "quoteArNormalized": "فالتمسته فوقعت يدي على بطن قدميه وهو في المسجد وهما منصوبتان",
+        "translationFr": "Je le cherchai et ma main tomba sur la plante de ses deux pieds alors qu’il était dans la mosquée, les pieds dressés.",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "TO_BE_CHECKED"
+      }
+    },
+    {
+      "evidenceId": "ev-ibnrushd-lams",
+      "role": "SCHOLARLY_EXPLANATION",
+      "order": 4,
+      "stepNumber": 7,
+      "commentFr": "Ibn Rushd analyse la cause linguistique de la divergence (polysémie de lams) et synthétise les orientations des écoles.",
+      "commentAr": "ابن رشد يحرر سبب اختلاف الفقهاء في المسألة باشتراك اسم اللمس وتعدد وجوه الجمع.",
+      "evidence": {
+        "id": "ev-ibnrushd-lams",
+        "type": "BOOK",
+        "referenceCode": "Bidâyat al-Mujtahid (Annulatifs du wuḍûʾ)",
+        "primarySource": true,
+        "sourceWork": "Bidâyat al-Mujtahid wa Nihâyat al-Muqtaṣid",
+        "author": "Ibn Rushd al-Ḥafîd (Averroès)",
+        "editionVolumePage": "Livre de la purification, chapitre des annulatifs du wuḍûʾ",
+        "quoteArOriginal": "وسبب اختلافهم في هذه المسألة اشتراك اسم اللمس في كلام العرب، فإن العرب تطلقه مرة على اللمس الذي هو باليد، ومرة تكني به عن الجماع",
+        "quoteArVocalized": "وَسَبَبُ اخْتِلَافِهِمْ فِي هَذِهِ الْمَسْأَلَةِ اشْتِرَاكُ اسْمِ اللَّمْسِ فِي كَلَامِ الْعَرَبِ، فَإِنَّ الْعَرَبَ تُطْلِقُهُ مَرَّةً عَلَى اللَّمْسِ الَّذِي هُوَ بِالْيَدِ، وَمَرَّةً تَكْنِي بِهِ عَنِ الْجِمَاعِ",
+        "quoteArNormalized": "وسبب اختلافهم في هذه المسالة اشتراك اسم اللمس في كلام العرب فان العرب تطلقه مرة على اللمس الذي هو باليد ومرة تكني به عن الجماع",
+        "translationFr": "La cause de leur divergence dans cette question est que le terme “toucher” est polysémique dans la langue arabe : les Arabes l’emploient parfois pour le contact de la main et parfois comme euphémisme pour le rapport sexuel.",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "TO_BE_CHECKED"
+      }
+    }
+  ],
+  "conclusionSheet": {
+    "established": {
+      "fr": "Le verset emploie bien « أو لامستم النساء ». Des interprétations anciennes différentes du terme sont documentées, notamment chez Ibn ʿAbbās et Ibn Masʿūd.",
+      "ar": "ثبت ورود قوله تعالى «أو لامستم النساء»، وثبت اختلاف التفسير المأثور في معنى الملامسة؛ فمنهم من حملها على الجماع ومنهم من حملها على ما دونه.",
+      "evidenceIds": [
+        "ev-quran-lamastum-4-43",
+        "ev-tabari-lamastum"
+      ]
+    },
+    "discussed": {
+      "fr": "La portée exacte du mot « لامستم » et les conditions selon lesquelles un contact physique entraîne ou non la rupture du wuḍūʾ. Ibn Rushd rattache explicitement le désaccord à la polysémie du terme et expose plusieurs solutions juridiques.",
+      "ar": "المراد الدقيق بلفظ «لامستم» وشروط نقض الوضوء باللمس؛ وقد رد ابن رشد الخلاف صراحة إلى اشتراك اللفظ في لسان العرب وتعدد وجوه الجمع بين الأدلة.",
+      "evidenceIds": [
+        "ev-ibnrushd-lams"
+      ]
+    },
+    "notEstablished": {
+      "fr": "L'affirmation selon laquelle l’existence du verset suffirait, sans analyse supplémentaire, à démontrer que tout contact physique avec une femme annule nécessairement les ablutions.",
+      "ar": "دعوى أن مجرد ورود الآية كافٍ بذاته للجزم بأن كل لمس للمرأة ينقض الوضوء حتماً دون حاجة إلى نظر أصولي في دلالة اللفظ والجمع بين النصوص.",
+      "evidenceIds": [
+        "ev-quran-lamastum-4-43",
+        "ev-muslim-aisha-feet"
+      ]
+    },
+    "primaryEvidences": [
+      "Sourate An-Nisâʾ (4:43)",
+      "Jâmiʿ al-Bayân (Tafsîr aṭ-Ṭabarî, sourate 4, verset 43)",
+      "Ṣaḥîḥ Muslim (n°486)",
+      "Bidâyat al-Mujtahid wa Nihâyat al-Muqtaṣid d'Ibn Rushd (Chapitre des annulatifs du wuḍûʾ)"
+    ],
+    "salafUnderstanding": {
+      "fr": "Ibn ʿAbbās est rapporté comme interprétant « اللمس » par le rapport sexuel, tandis qu’Ibn Masʿūd est rapporté avec une compréhension incluant le contact inférieur au rapport.",
+      "ar": "روي عن ابن عباس تفسير اللمس بالجماع، وروي عن ابن مسعود حمله على ما دون الجماع.",
+      "evidenceIds": [
+        "ev-tabari-lamastum"
+      ]
+    },
+    "scholarlyPositions": {
+      "fr": "Sur la base du résumé d’Ibn Rushd : 1. ash-Shāfiʿī et ses compagnons : le contact direct est traité comme annulatif dans l’orientation exposée ; 2. Mālik et la majorité de ses compagnons : distinction liée notamment au plaisir ou à son intention ; 3. Abū Ḥanīfa : le simple contact ne constitue pas en lui-même un annulatif du wuḍūʾ.",
+      "ar": "بناء على تقرير ابن رشد: 1. الشافعي وأصحابه: اللمس المباشر ناقض للوضوء في الجملة؛ 2. مالك وجمهور أصحابه: التفريق بين اللمس بشهوة أو قصدها وما كان بغيرها؛ 3. أبو حنيفة: مجرد اللمس لا ينقض الوضوء بحال.",
+      "evidenceIds": [
+        "ev-ibnrushd-lams"
+      ]
+    },
+    "methodologicalPitfall": {
+      "fr": "Confondre texte authentique, traduction immédiate, sens univoque présumé et règle juridique déduite sans passer par l'analyse lexicale, les commentaires transmis, les hadiths pertinents et les méthodes de conciliation (jamʿ).",
+      "ar": "الخلط بين ورود النص والترجمة الفورية، وافتراض معنى واحد وحكم قطعي دون المرور بدرجات النظر: اللغة، والتفسير المأثور، والأحاديث المقارنة، والجمع، والدلالة."
+    },
+    "originalSources": [
+      "Le Coran (4:43 et 5:6)",
+      "Aṭ-Ṭabarī, Jâmiʿ al-Bayân ʿan Taʾwîl Ây al-Qurʾân",
+      "Muslim ibn al-Ḥajjâj, Ṣaḥîḥ Muslim (n°486)",
+      "Ibn Rushd, Bidâyat al-Mujtahid wa Nihâyat al-Muqtaṣid"
+    ],
+    "certaintyLevel": "KHILAF_RECONNU"
+  }
+}
