@@ -27,8 +27,20 @@ jobs:
       - name: Validate Scientific Content (Zod + YAML)
         run: npm run validate-content
 
+      - name: Validate Prisma Schema
+        run: npx prisma validate
+
       - name: Generate Prisma Client
         run: npm run prisma:generate
+
+      - name: Test Methodological Skills
+        run: npx tsx tests/skills-calculator.test.ts
+
+      - name: Test Progress Sync
+        run: npx tsx tests/progress-sync.test.ts
+
+      - name: Run Security Gate Tests
+        run: npx tsx tests/security.test.ts
 
       - name: Typecheck TypeScript
         run: npx tsc --noEmit
