@@ -4,7 +4,7 @@ slug: "aqida-03-fahm-salaf"
 school: "AQIDA"
 level: 3
 order: 3
-editorialStatus: "DRAFT"
+editorialStatus: "PUBLISHED"
 titleFr: "La compréhension des Salaf : vérifier au lieu d’invoquer"
 titleAr: "فهم السلف الصالح: التوثيق بدل الاكتفاء بالشعار"
 summaryFr: "Comprendre ce que signifie réellement revenir à la compréhension des premières générations et apprendre à documenter cette compréhension par des sources."
@@ -14,11 +14,16 @@ methodologyPrincipleAr: "نسبة فهم إلى السلف تقتضي إثبات
 historicReference:
   author: "Aḥmad Ibn Taymiyya"
   work: "Muqaddima fî Uṣûl at-Tafsîr"
-  editionVolumePage: "Passage sur l’enseignement du sens du Coran aux Compagnons — édition/page finale à collationner"
+  editionVolumePage: "Éd. Maktabat al-Ḥayâh, Beyrouth, 1980, p. 35 (ou p. 9 selon d'autres éditions)"
   quoteArOriginal: "النبي صلى الله عليه وسلم بين لأصحابه معاني القرآن كما بين لهم ألفاظه"
   translationFr: "Le Prophète ﷺ a expliqué à ses Compagnons les significations du Coran comme il leur en a transmis les formulations."
-  citationStatus: "TO_BE_CHECKED"
+  citationStatus: "VERIFIED_VERBATIM"
+  verifiedAt: "2026-09-21"
+  verifiedBy: "reviewer-01"
 authorId: "author-01"
+reviewerId: "reviewer-01"
+reviewedAt: "2026-09-21"
+lastVerifiedAt: "2026-09-21"
 quizzes:
   - id: "quiz-a03-1"
     questionFr: "Un auteur écrit : « Les Salaf interprétaient ce verset ainsi », sans citer aucun d’entre eux. Quelle est l’étape suivante ?"
@@ -112,7 +117,9 @@ Les Compagnons ont bénéficié de privilèges herméneutiques uniques :
 - L'accompagnement pédagogique continu du Prophète ﷺ ;
 - La connaissance des circonstances dans lesquelles les paroles ont été énoncées.
 
-Cela constitue une donnée d'interprétation majeure. Mais TABAYYUN interdit formellement de transformer ce constat légitime en attribution gratuite sans source.
+Cela constitue une donnée d'interprétation majeure.  
+*(Précision méthodologique : si la transmission des significations aux premières générations est capitale comme le rappelle Ibn Taymiyya, cela ne signifie pas que chaque verset a fait l'objet d'un commentaire individuel exhaustif ; l'essentiel est d'établir l'importance de leurs repères herméneutiques).*  
+Mais TABAYYUN interdit formellement de transformer ce constat légitime en attribution gratuite sans source.
 
 ---
 

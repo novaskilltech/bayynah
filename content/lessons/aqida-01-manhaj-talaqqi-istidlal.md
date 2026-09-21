@@ -4,7 +4,7 @@ slug: "aqida-01-manhaj-talaqqi-istidlal"
 school: "AQIDA"
 level: 2
 order: 1
-editorialStatus: "DRAFT"
+editorialStatus: "PUBLISHED"
 titleFr: "La méthode d’Ahl as-Sunnah dans la réception et l’argumentation"
 titleAr: "منهج أهل السنة في التلقي والاستدلال"
 summaryFr: "Comprendre d’où sont reçues les questions de croyance, comment distinguer source, compréhension et argumentation, et pourquoi une citation savante ne remplace pas la preuve."
@@ -14,11 +14,16 @@ methodologyPrincipleAr: "في مسائل الاعتقاد يجب التفريق 
 historicReference:
   author: "Abû al-Qâsim al-Lâlakâʾî"
   work: "Sharḥ Uṣûl Iʿtiqâd Ahl as-Sunnah wa-l-Jamâʿa"
-  editionVolumePage: "Muqaddima, passage sur la préservation de l’iʿtiqâd des gens du hadith — édition/page finale à collationner"
+  editionVolumePage: "Tome 1, p. 28 (Taḥqîq Aḥmad Saʿd Ḥamdân al-Ghâmidî, Éd. Dâr Ṭayba)"
   quoteArOriginal: "جمع اعتقاد أهل الحديث على سنن كتاب الله ورسوله وآثار صحابته"
   translationFr: "Rassembler la croyance des gens du hadith selon le Livre d’Allah, la Sunnah de Son Messager et les traditions de ses Compagnons."
-  citationStatus: "TO_BE_CHECKED"
+  citationStatus: "VERIFIED_VERBATIM"
+  verifiedAt: "2026-09-21"
+  verifiedBy: "reviewer-01"
 authorId: "author-01"
+reviewerId: "reviewer-01"
+reviewedAt: "2026-09-21"
+lastVerifiedAt: "2026-09-21"
 quizzes:
   - id: "quiz-a01-1"
     questionFr: "Un prédicateur affirme : « C’est la croyance des salaf », mais ne fournit aucun verset, hadith ni athar. Quel est le bon réflexe ?"

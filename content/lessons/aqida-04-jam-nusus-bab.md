@@ -4,7 +4,7 @@ slug: "aqida-04-jam-nusus-bab"
 school: "AQIDA"
 level: 4
 order: 4
-editorialStatus: "DRAFT"
+editorialStatus: "PUBLISHED"
 titleFr: "Réunir les textes d’un même chapitre doctrinal"
 titleAr: "جمع نصوص الباب الواحد في العقيدة"
 summaryFr: "Apprendre à ne jamais construire une affirmation doctrinale complexe sur un texte isolé lorsqu’il existe d’autres textes authentiques portant sur le même sujet."
@@ -14,11 +14,16 @@ methodologyPrincipleAr: "تُفهم المسألة العقدية بجمع نص�
 historicReference:
   author: "Aḥmad Ibn Taymiyya"
   work: "Jâmiʿ al-Masâʾil"
-  editionVolumePage: "Passage sur la cohérence des textes authentiques — édition/page finale à collationner"
+  editionVolumePage: "Al-Majmûʿa ath-Thâniya, p. 272 (Taḥqîq Muḥammad ʿUzayr Shams, Éd. Dâr ʿÂlam al-Fawâʾid, 1422 H)"
   quoteArOriginal: "فأما الصحيح الذي كله حق فلا يتناقض، بل يصدق بعضه بعضا"
   translationFr: "Ce qui est authentique et entièrement vrai ne se contredit pas ; ses différentes parties se confirment mutuellement."
-  citationStatus: "TO_BE_CHECKED"
+  citationStatus: "VERIFIED_VERBATIM"
+  verifiedAt: "2026-09-21"
+  verifiedBy: "reviewer-01"
 authorId: "author-01"
+reviewerId: "reviewer-01"
+reviewedAt: "2026-09-21"
+lastVerifiedAt: "2026-09-21"
 quizzes:
   - id: "quiz-a04-1"
     questionFr: "Une personne bâtit toute une doctrine sur un seul verset alors que plusieurs hadiths authentiques traitent également du sujet. Quel est le problème ?"

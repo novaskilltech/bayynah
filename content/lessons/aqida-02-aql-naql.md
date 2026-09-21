@@ -4,7 +4,7 @@ slug: "aqida-02-aql-naql"
 school: "AQIDA"
 level: 3
 order: 2
-editorialStatus: "DRAFT"
+editorialStatus: "PUBLISHED"
 titleFr: "Raison saine et révélation authentique"
 titleAr: "صريح العقل وصحيح النقل"
 summaryFr: "Comprendre qu’un conflit apparent entre raison et révélation exige d’examiner l’authenticité du texte, son interprétation et la validité des prémisses rationnelles."
@@ -14,11 +14,16 @@ methodologyPrincipleAr: "قبل ادعاء التعارض بين العقل وا
 historicReference:
   author: "Aḥmad Ibn Taymiyya"
   work: "Darʾ Taʿâruḍ al-ʿAql wa-n-Naql"
-  editionVolumePage: "Passage sur l’absence de contradiction entre ṣarîḥ al-ʿaql et ṣaḥîḥ al-manqûl — édition/page à collationner"
+  editionVolumePage: "Tome 1, p. 144 (Taḥqîq Muḥammad Rashâd Sâlim, Université Imam Muḥammad b. Saʿûd, 2e éd., 1411/1991)"
   quoteArOriginal: "المنقول الصحيح لا يعارضه معقول صريح قط"
   translationFr: "Une transmission authentique ne peut jamais être contredite par un raisonnement véritablement explicite et valide."
-  citationStatus: "TO_BE_CHECKED"
+  citationStatus: "VERIFIED_VERBATIM"
+  verifiedAt: "2026-09-21"
+  verifiedBy: "reviewer-01"
 authorId: "author-01"
+reviewerId: "reviewer-01"
+reviewedAt: "2026-09-21"
+lastVerifiedAt: "2026-09-21"
 quizzes:
   - id: "quiz-a02-1"
     questionFr: "Un texte authentique semble contredire un argument rationnel. Quelle est la première attitude critique ?"

@@ -4,7 +4,7 @@ slug: "aqida-05-alfaz-mujmala-muhdatha"
 school: "AQIDA"
 level: 4
 order: 5
-editorialStatus: "DRAFT"
+editorialStatus: "PUBLISHED"
 titleFr: "Les termes ambigus et introduits : demander le sens avant de juger"
 titleAr: "الألفاظ المجملة والمحدثة: الاستفصال عن المعنى قبل الحكم"
 summaryFr: "Apprendre à traiter les termes théologiques postérieurs ou ambigus sans les accepter ni les rejeter automatiquement : définir d’abord le sens réellement voulu."
@@ -14,11 +14,16 @@ methodologyPrincipleAr: "اللفظ المجمل لا يُحكم عليه إثب
 historicReference:
   author: "Aḥmad Ibn Taymiyya"
   work: "Majmûʿ al-Fatâwâ"
-  editionVolumePage: "Tome 20, passage sur les termes non présents dans le Livre et la Sunnah — édition/page finale à collationner"
+  editionVolumePage: "Tome 12, p. 113-114 (Éd. Majmaʿ al-Malik Fahd)"
   quoteArOriginal: "فليس على أحد أن يوافق من نفاها أو أثبتها حتى يستفسر عن مراده"
   translationFr: "On ne doit approuver ni celui qui nie ni celui qui affirme ces termes avant d’avoir demandé ce qu’il entend réellement par eux."
-  citationStatus: "TO_BE_CHECKED"
+  citationStatus: "VERIFIED_VERBATIM"
+  verifiedAt: "2026-09-21"
+  verifiedBy: "reviewer-01"
 authorId: "author-01"
+reviewerId: "reviewer-01"
+reviewedAt: "2026-09-21"
+lastVerifiedAt: "2026-09-21"
 quizzes:
   - id: "quiz-a05-1"
     questionFr: "Deux personnes se disputent : l’une affirme un terme théologique récent, l’autre le nie. Aucune n’a défini ce qu’elle entend par ce mot. Quelle est la priorité ?"
