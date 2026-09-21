@@ -9,7 +9,6 @@ import {
 import { checkRateLimit } from "@/lib/rate-limit";
 import {
   validateMutationRequest,
-  generateCsrfToken,
   CSRF_COOKIE_NAME,
 } from "@/lib/csrf";
 import { recordAuditEvent } from "@/lib/audit-logger";
@@ -18,8 +17,8 @@ export async function POST(req: NextRequest) {
   try {
     const ip = req.headers.get("x-forwarded-for") || "127.0.0.1";
 
-    // 1. Rate limiting : 3 inscriptions par heure par IP
-    const rateLimit = checkRateLimit(`register:${ip}`, 3, 60 * 60 * 1000);
+    // 1. Rate limiting : 3 inscriptions par heure par IP (store asynchrone)
+    const rateLimit = await checkRateLimit(`register:${ip}`, 3, 60 * 60 * 1000);
     if (!rateLimit.allowed) {
       return NextResponse.json(
         { error: `Trop de tentatives de création de compte. Réessayez dans ${rateLimit.retryAfterSeconds} secondes.` },
@@ -28,7 +27,7 @@ export async function POST(req: NextRequest) {
     }
 
     // 2. Protection CSRF & Origin
-    const csrfCheck = validateMutationRequest(req);
+    const csrfCheck = validateMutationRequest(req, { isPreAuth: true });
     if (!csrfCheck.valid) {
       return NextResponse.json({ error: csrfCheck.error }, { status: 403 });
     }
@@ -75,7 +74,7 @@ export async function POST(req: NextRequest) {
         email: normalizedEmail,
         passwordHash,
         name: name ? name.trim() : null,
-        role: "STUDENT",
+        role: "USER",
       },
       select: {
         id: true,
@@ -87,14 +86,13 @@ export async function POST(req: NextRequest) {
 
     await recordAuditEvent("REGISTER", user.id, { email: normalizedEmail }, req);
 
-    // Création d'une session opaque en base
-    const { rawToken, expiresAt } = await createServerSession(user.id, req);
-    const csrfToken = generateCsrfToken();
+    // Création d'une session opaque en base avec Synchronizer Token CSRF
+    const { rawSessionToken, rawCsrfToken, expiresAt } = await createServerSession(user.id, req);
 
-    const response = NextResponse.json({ success: true, user, csrfToken });
+    const response = NextResponse.json({ success: true, user, csrfToken: rawCsrfToken });
 
     // Cookie de session sécurisé
-    response.cookies.set(SESSION_CONFIG.COOKIE_NAME, rawToken, {
+    response.cookies.set(SESSION_CONFIG.COOKIE_NAME, rawSessionToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
@@ -102,8 +100,8 @@ export async function POST(req: NextRequest) {
       expires: expiresAt,
     });
 
-    // Cookie CSRF Double-Submit
-    response.cookies.set(CSRF_COOKIE_NAME, csrfToken, {
+    // Cookie CSRF
+    response.cookies.set(CSRF_COOKIE_NAME, rawCsrfToken, {
       httpOnly: false, // Accessible JS pour l'envoi dans le header x-csrf-token
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",

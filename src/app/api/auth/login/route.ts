@@ -9,7 +9,6 @@ import {
 import { checkRateLimit } from "@/lib/rate-limit";
 import {
   validateMutationRequest,
-  generateCsrfToken,
   CSRF_COOKIE_NAME,
 } from "@/lib/csrf";
 import { recordAuditEvent } from "@/lib/audit-logger";
@@ -30,8 +29,8 @@ export async function POST(req: NextRequest) {
 
     const normalizedEmail = typeof email === "string" ? email.trim().toLowerCase() : "";
 
-    // 1. Rate limiting : 5 tentatives par 15 minutes par IP + email
-    const rateLimit = checkRateLimit(`login:${ip}:${normalizedEmail}`, 5, 15 * 60 * 1000);
+    // 1. Rate limiting : 5 tentatives par 15 minutes par IP + email (store asynchrone)
+    const rateLimit = await checkRateLimit(`login:${ip}:${normalizedEmail}`, 5, 15 * 60 * 1000);
     if (!rateLimit.allowed) {
       return NextResponse.json(
         { error: `Trop de tentatives de connexion échouées. Réessayez dans ${rateLimit.retryAfterSeconds} secondes.` },
@@ -39,8 +38,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // 2. Protection CSRF & Origin
-    const csrfCheck = validateMutationRequest(req);
+    // 2. Protection CSRF & Origin (contrôle strict Origin/Referer + pré-auth)
+    const csrfCheck = validateMutationRequest(req, { isPreAuth: true });
     if (!csrfCheck.valid) {
       return NextResponse.json({ error: csrfCheck.error }, { status: 403 });
     }
@@ -65,10 +64,13 @@ export async function POST(req: NextRequest) {
 
     await recordAuditEvent("LOGIN", user.id, null, req);
 
-    // Rotation de session : révocation de l'ancienne et création d'une nouvelle en base
+    // Rotation de session : révocation de l'ancienne et génération synchronisée de sessionToken + csrfToken
     const oldSessionToken = req.cookies.get(SESSION_CONFIG.COOKIE_NAME)?.value || null;
-    const { rawToken, expiresAt } = await rotateServerSession(oldSessionToken, user.id, req);
-    const csrfToken = generateCsrfToken();
+    const { rawSessionToken, rawCsrfToken, expiresAt } = await rotateServerSession(
+      oldSessionToken,
+      user.id,
+      req
+    );
 
     const response = NextResponse.json({
       success: true,
@@ -78,10 +80,10 @@ export async function POST(req: NextRequest) {
         name: user.name,
         role: user.role,
       },
-      csrfToken,
+      csrfToken: rawCsrfToken,
     });
 
-    response.cookies.set(SESSION_CONFIG.COOKIE_NAME, rawToken, {
+    response.cookies.set(SESSION_CONFIG.COOKIE_NAME, rawSessionToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
@@ -89,7 +91,7 @@ export async function POST(req: NextRequest) {
       expires: expiresAt,
     });
 
-    response.cookies.set(CSRF_COOKIE_NAME, csrfToken, {
+    response.cookies.set(CSRF_COOKIE_NAME, rawCsrfToken, {
       httpOnly: false,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",

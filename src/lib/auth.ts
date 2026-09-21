@@ -112,15 +112,20 @@ export function hashSessionToken(rawToken: string): string {
 }
 
 /**
- * Crée une session serveur opaque en base de données
+ * Crée une session serveur opaque en base de données avec token CSRF synchronisé
  */
 export async function createServerSession(
   userId: string,
   req?: NextRequest
-): Promise<{ rawToken: string; expiresAt: Date }> {
-  // Jeton opaque aléatoire de 32 octets (256 bits d'entropie)
-  const rawToken = crypto.randomBytes(32).toString("base64url");
-  const hashedToken = hashSessionToken(rawToken);
+): Promise<{ rawSessionToken: string; rawCsrfToken: string; expiresAt: Date }> {
+  // Jeton de session opaque aléatoire de 32 octets (256 bits d'entropie)
+  const rawSessionToken = crypto.randomBytes(32).toString("base64url");
+  const hashedSessionToken = hashSessionToken(rawSessionToken);
+
+  // Jeton CSRF de session aléatoire de 32 octets (Synchronizer Token Pattern)
+  const rawCsrfToken = crypto.randomBytes(32).toString("hex");
+  const hashedCsrfToken = hashSessionToken(rawCsrfToken);
+
   const expiresAt = new Date(Date.now() + SESSION_CONFIG.MAX_AGE * 1000);
 
   const ip = req ? req.headers.get("x-forwarded-for") || undefined : undefined;
@@ -128,7 +133,8 @@ export async function createServerSession(
 
   await prisma.session.create({
     data: {
-      sessionToken: hashedToken,
+      sessionToken: hashedSessionToken,
+      csrfTokenHash: hashedCsrfToken,
       userId,
       expiresAt,
       ipAddress: ip,
@@ -136,14 +142,14 @@ export async function createServerSession(
     },
   });
 
-  return { rawToken, expiresAt };
+  return { rawSessionToken, rawCsrfToken, expiresAt };
 }
 
 /**
  * Valide une session serveur à partir du jeton opaque fourni
  */
 export async function validateServerSession(rawToken: string): Promise<{
-  session: { id: string; userId: string; expiresAt: Date };
+  session: { id: string; userId: string; expiresAt: Date; csrfTokenHash: string | null };
   user: { id: string; email: string; name: string | null; role: Role };
 } | null> {
   if (!rawToken || typeof rawToken !== "string") return null;
@@ -167,19 +173,25 @@ export async function validateServerSession(rawToken: string): Promise<{
   }
 
   return {
-    session: { id: session.id, userId: session.userId, expiresAt: session.expiresAt },
+    session: {
+      id: session.id,
+      userId: session.userId,
+      expiresAt: session.expiresAt,
+      csrfTokenHash: session.csrfTokenHash,
+    },
     user: session.user,
   };
 }
 
 /**
  * Renouvelle la session (rotation de session après login ou changement de rôle)
+ * Émet simultanément un nouveau jeton de session et un nouveau jeton CSRF lié
  */
 export async function rotateServerSession(
   oldRawToken: string | null,
   userId: string,
   req?: NextRequest
-): Promise<{ rawToken: string; expiresAt: Date }> {
+): Promise<{ rawSessionToken: string; rawCsrfToken: string; expiresAt: Date }> {
   if (oldRawToken) {
     await revokeServerSession(oldRawToken);
   }

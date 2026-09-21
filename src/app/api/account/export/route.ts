@@ -13,8 +13,8 @@ export async function GET(_req: NextRequest) {
       );
     }
 
-    // Rate limiting : 5 exports par heure par utilisateur
-    const rateLimit = checkRateLimit(`export:${user.id}`, 5, 60 * 60 * 1000);
+    // Rate limiting : 5 exports par heure par utilisateur (store asynchrone)
+    const rateLimit = await checkRateLimit(`export:${user.id}`, 5, 60 * 60 * 1000);
     if (!rateLimit.allowed) {
       return NextResponse.json(
         { error: `Limite d'export atteinte. Réessayez dans ${rateLimit.retryAfterSeconds} secondes.` },

@@ -9,8 +9,6 @@ generator client {
 
 enum Role {
   USER
-  STUDENT
-  AUTHOR
   REVIEWER
   ADMIN
 }
@@ -348,6 +346,7 @@ model Attestation {
   user                    User            @relation(fields: [userId], references: [id], onDelete: Cascade)
   type                    AttestationType
   recipientName           String
+  publicNameConsent       Boolean         @default(false) // Consentement explicite pour affichage public
   issuedAt                DateTime        @default(now())
   rulesVersion            String          @default("skills-v1")
   keyVersion              String          @default("v1") // Identifiant de clé (kid) pour rotation
@@ -365,15 +364,16 @@ model Attestation {
 }
 
 model Session {
-  id           String   @id @default(cuid())
-  sessionToken String   @unique // Hachage SHA-256 du jeton opaque aléatoire
-  userId       String
-  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  expiresAt    DateTime
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-  userAgent    String?
-  ipAddress    String?
+  id            String   @id @default(cuid())
+  sessionToken  String   @unique // Hachage SHA-256 du jeton opaque aléatoire
+  csrfTokenHash String?  // Hachage SHA-256 du jeton CSRF lié à la session (Synchronizer Token Pattern)
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt     DateTime
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  userAgent     String?
+  ipAddress     String?
 
   @@index([userId])
   @@index([expiresAt])

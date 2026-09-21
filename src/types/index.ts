@@ -1,6 +1,6 @@
 export type Locale = "fr" | "ar";
 
-export type Role = "USER" | "STUDENT" | "AUTHOR" | "REVIEWER" | "ADMIN";
+export type Role = "USER" | "REVIEWER" | "ADMIN";
 
 export type SchoolType = "HADITH" | "FIQH" | "AQIDA" | "CRITIQUE";
 
