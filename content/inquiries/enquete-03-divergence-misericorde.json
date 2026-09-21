@@ -2,7 +2,10 @@
   "id": "inquiry-03",
   "slug": "ikhtilaf-ummati-rahma",
   "domain": "HADITH",
-  "editorialStatus": "DRAFT",
+  "editorialStatus": "PUBLISHED",
+  "reviewerId": "reviewer-01",
+  "reviewedAt": "2026-09-21",
+  "lastVerifiedAt": "2026-09-21",
   "title": {
     "fr": "« La divergence de ma communauté est une miséricorde » : hadith ou maxime ?",
     "ar": "«اختلاف أمتي رحمة»: حديث نبوي أم مقولة مشهورة؟"
@@ -447,7 +450,7 @@
   "inquiryEvidences": [
     {
       "evidenceId": "ev-subki-ikhtilaf-umma",
-      "role": "PRIMARY_PROOF",
+      "role": "SCHOLARLY_EXPLANATION",
       "order": 1,
       "stepNumber": 3,
       "commentFr": "As-Subkî atteste ne connaître aucun isnâd (ṣaḥîḥ, ḍaʿîf ou mawḍûʿ) pour cette formulation.",
@@ -465,7 +468,11 @@
         "quoteArNormalized": "ليس بمعروف عند المحدثين ولم اقف له على اسناد صحيح ولا ضعيف ولا موضوع",
         "translationFr": "Cette parole n’est pas connue des spécialistes du hadith, et je n’ai trouvé pour elle aucun isnâd authentique, faible ou fabriqué.",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://islamweb.net/ar/library/content/304/583/-%D8%AD%D8%B1%D9%81-%D8%A7%D9%84%D9%87%D9%85%D8%B2%D8%A9-",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
@@ -488,8 +495,12 @@
         "quoteArNormalized": "لا اصل له",
         "translationFr": "Il n’a pas de base connue.",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED",
-        "consultationDate": "2026-09-21"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationDate": "2026-09-21",
+        "consultationUrl": "https://dorar.net/h/Rf4rusmc",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
@@ -511,14 +522,18 @@
         "chapterAr": "باب ما ذكر في اختلاف الصحابة رضي الله عنهم",
         "chapterFr": "Chapitre sur ce qui a été mentionné concernant la divergence des Compagnons",
         "editionVolumePage": "Tome 1, page 162, n°152 (Éd. Dâr al-Khulafâʾ)",
-        "authenticityGrade": "Ḍaʿîf jiddan (chaîne défaillante avec Juwaybir et interruption)",
-        "gradeScholar": "Al-Bayhaqî et les critiques du hadith",
+        "authenticityGrade": "Ḍaʿîf",
+        "gradeScholar": "Al-Bayhaqî et les critiques du hadith (notamment Ibn Ḥajar et al-ʿIrâqî)",
         "quoteArOriginal": "واختلاف أصحابي لكم رحمة.",
         "quoteArVocalized": "وَاخْتِلَافُ أَصْحَابِي لَكُمْ رَحْمَةٌ.",
         "quoteArNormalized": "واختلاف اصحابي لكم رحمة",
         "translationFr": "Et la divergence de mes compagnons est une miséricorde pour vous.",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://islamweb.net/ar/library/content/1037/125/%D8%A8%D8%A7%D8%A8-%D8%A3%D9%82%D8%A7%D9%88%D9%8A%D9%84-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D8%A8%D8%A9-%D8%B1%D8%B6%D9%8A-%D8%A7%D9%84%D9%84%D9%87-%D8%B9%D9%86%D9%87%D9%85-%D8%A5%D8%B0%D8%A7-%D8%AA%D9%81%D8%B1%D9%82%D9%88%D8%A7-%D9%81%D9%8A%D9%87%D8%A7",
+        "lastVerifiedAt": "2026-09-21"
       }
     },
     {
@@ -542,7 +557,11 @@
         "quoteArNormalized": "ما سرني لو ان اصحاب محمد صلى الله عليه وسلم لم يختلفوا لانهم لو لم يختلفوا لم تكن رخصة",
         "translationFr": "Je n’aurais pas aimé que les Compagnons de Muḥammad ﷺ ne divergent jamais ; car s’ils n’avaient pas divergé, il n’y aurait pas eu de latitude.",
         "translationStatus": "TRANSLATION_PROPOSED",
-        "citationStatus": "TO_BE_CHECKED"
+        "citationStatus": "VERIFIED_VERBATIM",
+        "verifiedAt": "2026-09-21",
+        "verifiedBy": "reviewer-01",
+        "consultationUrl": "https://islamweb.net/ar/library/content/1042/775/%D8%A8%D8%A7%D8%A8-%D8%A7%D9%84%D9%83%D9%84%D8%A7%D9%85-%D9%81%D9%8A-%D8%A3%D9%82%D9%88%D8%A7%D9%84-%D8%A7%D9%84%D9%85%D8%AC%D8%AA%D9%87%D8%AF%D9%8A%D9%86-%D9%88%D9%87%D9%84-%D8%A7%D9%84%D8%AD%D9%82-%D9%81%D9%8A-%D9%88%D8%A7%D8%AD%D8%AF-%D8%A3%D9%88-%D9%83%D9%84-%D9%85%D8%AC%D8%AA%D9%87%D8%AF-%D9%85%D8%B5%D9%8A%D8%A8",
+        "lastVerifiedAt": "2026-09-21"
       }
     }
   ],
@@ -553,8 +572,8 @@
       "evidenceIds": ["ev-subki-ikhtilaf-umma", "ev-albani-ikhtilaf-umma"]
     },
     "discussed": {
-      "fr": "La terminologie utilisée par les spécialistes pour qualifier cette formule varie : « لا أصل له » (al-Albânî), « non reconnu chez les traditionnistes » (as-Subkî), ou « faible » chez certains compilateurs tardifs (as-Suyûṭî). Cette variation terminologique reflète des approches critiques distinctes mais ne transforme pas la formule en hadith authentique.",
-      "ar": "تنوعت عبارات العلماء في توصيف العبارة، بين «لا أصل له» (الألباني) ونفي معرفتها عند المحدثين (السبكي) والضعف عند بعض المتأخرين (كالسيوطي)؛ وهذا التباين الاصطلاحي لا يجعلها حديثاً صحيحاً بوجه.",
+      "fr": "La terminologie utilisée par les spécialistes pour qualifier cette formule varie : « لا أصل له » (al-Albânî), ou « non reconnu chez les traditionnistes » (as-Subkî). Cette variation d’expression ne transforme cependant pas la formule en hadith authentique.",
+      "ar": "تنوعت عبارات العلماء في توصيف العبارة، بين «لا أصل له» (الألباني) ونفي معرفتها عند المحدثين (السبكي)؛ وهذا التباين الاصطلاحي لا يجعلها حديثاً صحيحاً بوجه.",
       "evidenceIds": ["ev-subki-ikhtilaf-umma", "ev-albani-ikhtilaf-umma"]
     },
     "notEstablished": {
@@ -569,13 +588,13 @@
       "Al-Faqîh wa-l-Mutafaqqih d'al-Khaṭîb al-Baghdâdî (1/436, n°744)"
     ],
     "salafUnderstanding": {
-      "fr": "Les premières générations, à l'image de ʿUmar ibn ʿAbd al-ʿAzîz, ont reconnu que la pluralité des avis des Compagnons offrait une latitude pratique dans les questions ouvertes, sans ériger le désaccord en idéal ni forger de hadith à ce propos.",
-      "ar": "أدرك الصدر الأول، كعمر بن عبد العزيز، أن تنوع اجتهادات الصحابة يورث سعة ورخصة في فروع المسائل، دون أن يجعلوا الخلاف غاية في ذاته أو ينسبوا ذلك إلى النبي ﷺ بغير ثبت.",
+      "fr": "Il est rapporté de ʿUmar ibn ʿAbd al-ʿAzîz qu’il voyait dans la divergence des Compagnons une latitude pratique, ce qui montre qu’une appréciation positive de certaines divergences existait indépendamment de la formule prophétique non établie.",
+      "ar": "رُوي عن عمر بن عبد العزيز أنه رأى في اختلاف الصحابة سعةً ورخصة، وهذا يثبت وجود هذا المعنى عند بعض السلف دون أن يثبت به الحديث المرفوع.",
       "evidenceIds": ["ev-umar-abdaziz-rukhsa"]
     },
     "scholarlyPositions": {
-      "fr": "Position 1 (Critiques du hadith : as-Subkî, al-Albânî, Ibn Ḥazm) : La formule n'a pas d'isnâd prophétique établi et ne peut être attribuée au Prophète ﷺ. Position 2 (Juristes classiques) : Certaines divergences de furûʿ issues d'un ijtihâd légitime créent une facilitation pour les fidèles, tandis que les divergences fondées sur des textes rejetés restent sans valeur.",
-      "ar": "الموقف الأول (نقاد الحديث: السبكي، الألباني، ابن حزم): العبارة لا أصل لها مسنداً ولا تصح نسبتها إلى النبي ﷺ. الموقف الثاني (أهل الفقه والأصول): بعض خلاف الفروع المبني على اجتهاد سائغ يفيد سعة وتيسيراً، بخلاف التفرق المذموم أو الخلاف الشاذ المصادم للنصوص.",
+      "fr": "Position 1 (Critiques du hadith : as-Subkî, al-Albânî) : La formule n'a pas d'isnâd prophétique établi et ne peut être attribuée au Prophète ﷺ. Position 2 (Juristes classiques) : Certaines divergences de furûʿ issues d'un ijtihâd légitime créent une facilitation pour les fidèles (comme exprimé dans l'athar de ʿUmar ibn ʿAbd al-ʿAzîz), tandis que les divergences fondées sur des textes rejetés restent sans valeur.",
+      "ar": "الموقف الأول (نقاد الحديث: السبكي، الألباني): العبارة لا أصل لها مسنداً ولا تصح نسبتها إلى النبي ﷺ. الموقف الثاني (أهل الفقه والأصول): بعض خلاف الفروع المبني على اجتهاد سائغ يفيد سعة وتيسيراً (كما في أثر عمر بن عبد العزيز)، بخلاف التفرق المذموم أو الخلاف الشاذ المصادم للنصوص.",
       "evidenceIds": ["ev-subki-ikhtilaf-umma", "ev-albani-ikhtilaf-umma", "ev-umar-abdaziz-rukhsa"]
     },
     "methodologicalPitfall": {
