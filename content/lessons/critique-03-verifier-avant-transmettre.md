@@ -4,7 +4,7 @@ slug: "critique-03-verifier-avant-transmettre"
 school: "CRITIQUE"
 level: 1
 order: 3
-editorialStatus: "APPROVED"
+editorialStatus: "PUBLISHED"
 titleFr: "Vérifier avant de transmettre"
 titleAr: "التثبت قبل النقل"
 summaryFr: "Comprendre l'impératif éthique et scientifique de remonter à la source originale avant de relayer une information religieuse."

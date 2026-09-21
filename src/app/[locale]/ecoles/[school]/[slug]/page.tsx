@@ -103,7 +103,7 @@ export default async function SingleLessonPage({ params }: PageProps) {
 
           <div className="flex items-center gap-2 text-xs text-vertProfond-700">
             <ShieldCheck className="w-4 h-4" />
-            <span>{isArabic ? "محتوى علمي محكم" : "Revue scientifique certifiée"}</span>
+            <span>{isArabic ? "مراجعة علمية مسجلة" : "Révision scientifique enregistrée"}</span>
           </div>
         </div>
 

@@ -30,8 +30,9 @@ export default function LessonContent({ content, locale }: LessonContentProps) {
 
       {/* Rendu Markdown sécurisé avec react-markdown et remark-gfm */}
       <div
+        dir={isArabic ? "ltr" : undefined}
         className={`prose prose-sable max-w-none text-bleuNuit-950 ${
-          isArabic ? "font-arabic" : ""
+          isArabic ? "font-latin text-left" : ""
         }`}
       >
         <ReactMarkdown

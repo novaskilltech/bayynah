@@ -4,7 +4,7 @@ slug: "critique-04-biais-sophismes"
 school: "CRITIQUE"
 level: 2
 order: 4
-editorialStatus: "APPROVED"
+editorialStatus: "PUBLISHED"
 titleFr: "Biais et sophismes religieux"
 titleAr: "المغالطات والتحيزات في الخطاب الديني"
 summaryFr: "Détecter les sophismes fréquents : argument d'autorité abusive, appel à la popularité, citation tronquée et faux dilemme."

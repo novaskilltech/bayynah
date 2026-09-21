@@ -4,7 +4,7 @@ slug: "critique-02-hierarchie-sources"
 school: "CRITIQUE"
 level: 1
 order: 2
-editorialStatus: "APPROVED"
+editorialStatus: "PUBLISHED"
 titleFr: "Hiérarchie des sources"
 titleAr: "مراتب المصادر"
 summaryFr: "Apprendre à ordonner les sources du savoir religieux : Révélation scripturaire, consensus, compréhension des salaf et avis jurisprudentiels."

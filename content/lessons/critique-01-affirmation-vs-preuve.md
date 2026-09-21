@@ -4,7 +4,7 @@ slug: "critique-01-affirmation-vs-preuve"
 school: "CRITIQUE"
 level: 1
 order: 1
-editorialStatus: "APPROVED"
+editorialStatus: "PUBLISHED"
 titleFr: "Une affirmation n'est pas une preuve"
 titleAr: "الدعوى ليست دليلاً"
 summaryFr: "Apprendre à distinguer rigoureusement entre une affirmation, un argument et une preuve probante."

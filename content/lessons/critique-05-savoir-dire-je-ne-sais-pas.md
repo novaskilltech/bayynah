@@ -4,7 +4,7 @@ slug: "critique-05-savoir-dire-je-ne-sais-pas"
 school: "CRITIQUE"
 level: 4
 order: 5
-editorialStatus: "APPROVED"
+editorialStatus: "PUBLISHED"
 titleFr: "Savoir dire : je ne sais pas"
 titleAr: "شجاعة قول: لا أدري"
 summaryFr: "Comprendre que 'je ne sais pas' est le sommet de la rigueur scientifique et intégrer le principe : l'absence de connaissance n'est pas la connaissance de l'absence."
