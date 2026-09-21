@@ -150,7 +150,7 @@
       "options": [
         {
           "textFr": "C'est un hadith authentique (Ṣaḥîḥ), transmis par une chaîne continue de narrateurs dignes de confiance ('adl ḍâbiṭ), sans rupture ni défaut caché, intégré par l'imam Muslim dans son recueil canonique.",
-          "textAr": "حديث صحيح متصل الإسناد برواة عدول ضابطين، مخرج في صحيح مسلم وتلقته الأمة بالقبول.",
+          "textAr": "حديث صحيح متصل الإسناد برواة عدول ضابطين أخرجه مسلم في صحيحه.",
           "quality": "BEST",
           "methodologicalScore": 3,
           "feedbackFr": "Exactitude scientifique ! Hadith authentique établi rapporté par Muslim dans son Sahih selon les critères stricts de la science du hadith.",
@@ -385,7 +385,7 @@
           "quality": "PREMATURE",
           "methodologicalScore": 1,
           "feedbackFr": "Fausse prudence : nous disposons de textes scripturaires authentiques et de citations historiques formelles qui permettent de trancher sans équivoque sur la fausseté de l'affirmation de départ.",
-          "feedbackAr": "تردد في غير محله: الأدلة المسندة القاطعة كافية تماماً لإبطال دعوى 'الابتداع المعاصر'."
+          "feedbackAr": "تردد في غير محله: الأدلة الصحيحة الثابتة كافية تماماً لإبطال دعوى 'الابتداع المعاصر'."
         },
         {
           "textFr": "Déclarer que tout le monde doit obligatoirement suivre notre avis sous peine de voir toutes ses prières annulées.",
@@ -544,8 +544,8 @@
       "evidenceIds": ["ev-hadith-jabir", "ev-hadith-baraa"]
     },
     "discussed": {
-      "fr": "La portée juridique de l'ordre prophétique : constitue-t-il une obligation stricte annulant l'état de pureté rituelle (position de l'imam Ahmad, Ishâq ibn Râhawayh et des traditionnistes), ou s'agit-il d'une recommandation / nettoyage linguistique selon la majorité des juristes (Abû Hanîfa, Mâlik, ash-Shâfi'î) ?",
-      "ar": "مقتضى دلالة الأمر في الحديث: هل هو للوجوب الناقض للطهارة (مذهب أحمد بن حنبل وإسحاق بن راهويه وفقهاء الحديث)، أم هو للاستحباب والنظافة اللغوية عند جمهور العلماء (أبو حنيفة ومالك والشافعي)؟",
+      "fr": "La divergence porte sur la portée juridique des hadiths : Aḥmad, Isḥâq et d'autres considèrent que l'ordre spécifique concernant la viande de chameau impose le wuḍûʾ ; le jumhûr invoque notamment le hadith général relatif à l'abandon du wuḍûʾ pour ce qui a touché le feu. An-Nawawî répond que le texte concernant le chameau est spécifique et que le spécifique prévaut sur le général.",
+      "ar": "وقع الخلاف في دلالة الأحاديث: فذهب أحمد وإسحاق وغيرهما إلى أن الأمر الخاص بلحوم الإبل يوجب الوضوء؛ واحتج الجمهور بحديث جابر العام في ترك الوضوء مما مست النار، وأجاب النووي بأن حديث لحوم الإبل خاص، والخاص يقدم على العام.",
       "evidenceIds": ["ev-athar-nawawi"]
     },
     "notEstablished": {
