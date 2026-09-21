@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/lib/dictionary";
-import { getAllLessons } from "@/lib/lesson-service";
+import { getLessonsBySchool } from "@/lib/lesson-service";
+import { SchoolType } from "@/lib/schemas/lesson.schema";
 import { ArrowRight, ArrowLeft, Brain, BookOpen, Scale, Landmark, CheckCircle, ShieldCheck } from "lucide-react";
 
 interface PageProps {
@@ -11,10 +12,10 @@ interface PageProps {
   }>;
 }
 
-const SCHOOLS_DATA: Record<
+const ALLOWED_SCHOOLS: Record<
   string,
   {
-    code: string;
+    code: SchoolType;
     titleFr: string;
     titleAr: string;
     descFr: string;
@@ -63,24 +64,31 @@ const LEVEL_NAMES: Record<number, { fr: string; ar: string }> = {
   4: { fr: "Niveau 4 — Tâlib 'Ilm (Étudiant)", ar: "المستوى 4 — طَالِبُ عِلْم" },
 };
 
+export function generateStaticParams() {
+  return Object.keys(ALLOWED_SCHOOLS).map((school) => ({
+    school,
+  }));
+}
+
 export default async function SchoolLessonsPage({ params }: PageProps) {
   const { locale, school } = await params;
   const normalizedSchool = school.toLowerCase();
-  const schoolMeta = SCHOOLS_DATA[normalizedSchool];
+  const schoolMeta = ALLOWED_SCHOOLS[normalizedSchool];
 
+  // Toute autre valeur retourne strictement notFound()
   if (!schoolMeta) {
     notFound();
   }
 
   const dict = getDictionary(locale);
   const isArabic = locale === "ar";
-  const lessons = getAllLessons(schoolMeta.code);
+  const lessons = getLessonsBySchool(schoolMeta.code);
   const Icon = schoolMeta.icon;
 
   return (
     <div className="max-w-4xl mx-auto py-8 space-y-8">
       {/* Fil d'Ariane */}
-      <nav className="text-xs text-sable-500 flex items-center gap-2">
+      <nav className="text-xs text-sable-500 flex items-center gap-2" aria-label="Fil d'Ariane">
         <Link href={`/${locale}`} className="hover:underline">
           {isArabic ? "الرئيسية" : "Accueil"}
         </Link>
@@ -125,7 +133,7 @@ export default async function SchoolLessonsPage({ params }: PageProps) {
         </div>
       </div>
 
-      {/* Liste des leçons */}
+      {/* Liste des leçons ordonnées */}
       <div className="space-y-4">
         <h3 className="text-xl font-bold text-bleuNuit-900">
           {isArabic ? "برنامج الدروس" : "Programme des leçons"}
@@ -149,7 +157,7 @@ export default async function SchoolLessonsPage({ params }: PageProps) {
                 <Link
                   key={lesson.id}
                   href={`/${locale}/ecoles/${normalizedSchool}/${lesson.slug}`}
-                  className="group block p-5 sm:p-6 rounded-xl border border-sable-200 bg-white hover:border-vertProfond-600 hover:shadow-md transition-all duration-200 space-y-3"
+                  className="group block p-5 sm:p-6 rounded-xl border border-sable-200 bg-white hover:border-vertProfond-600 hover:shadow-md transition-all duration-200 space-y-3 focus:ring-2 focus:ring-vertProfond-500 focus:outline-none"
                 >
                   <div className="flex items-center justify-between gap-3">
                     <div className="flex items-center gap-2">

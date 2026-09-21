@@ -94,3 +94,5 @@ export const LessonFrontmatterSchema = z
   );
 
 export type LessonFrontmatter = z.infer<typeof LessonFrontmatterSchema>;
+export type SchoolType = z.infer<typeof SchoolTypeEnum>;
+export type EditorialStatus = z.infer<typeof EditorialStatusEnum>;

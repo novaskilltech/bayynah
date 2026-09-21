@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 import { getDictionary } from "@/lib/dictionary";
-import { getLessonBySlug, getAdjacentLessons } from "@/lib/lesson-service";
+import { getLessonBySlug, getAdjacentLessons, getAllLessons } from "@/lib/lesson-service";
 import HistoricReferenceCard from "@/components/lessons/HistoricReferenceCard";
 import LessonQuiz from "@/components/lessons/LessonQuiz";
 import LessonContent from "@/components/lessons/LessonContent";
@@ -22,17 +23,44 @@ const LEVEL_NAMES: Record<number, { fr: string; ar: string }> = {
   4: { fr: "Niveau 4 — Tâlib 'Ilm (Étudiant)", ar: "المستوى 4 — طَالِبُ عِلْم" },
 };
 
+export function generateStaticParams() {
+  const allLessons = getAllLessons();
+  return allLessons.map((l) => ({
+    school: l.school.toLowerCase(),
+    slug: l.slug,
+  }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale, school, slug } = await params;
+  const lesson = getLessonBySlug(slug);
+
+  if (!lesson || lesson.school.toLowerCase() !== school.toLowerCase()) {
+    return {
+      title: "Leçon non trouvée — تَبَيُّن",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const isArabic = locale === "ar";
+  return {
+    title: `${isArabic ? lesson.titleAr : lesson.titleFr} — تَبَيُّن (Tabayyun)`,
+    description: isArabic ? lesson.summaryAr : lesson.summaryFr,
+  };
+}
+
 export default async function SingleLessonPage({ params }: PageProps) {
   const { locale, school, slug } = await params;
   const lesson = getLessonBySlug(slug);
 
-  if (!lesson) {
+  // Vérifier que la leçon existe et appartient bien à l'école demandée
+  if (!lesson || lesson.school.toLowerCase() !== school.toLowerCase()) {
     notFound();
   }
 
   const dict = getDictionary(locale);
   const isArabic = locale === "ar";
-  const { prev, next } = getAdjacentLessons(lesson.school, lesson.order);
+  const { prev, next } = getAdjacentLessons(lesson.school, lesson.slug);
 
   const levelMeta = LEVEL_NAMES[lesson.level] || {
     fr: `Niveau ${lesson.level}`,
@@ -41,8 +69,8 @@ export default async function SingleLessonPage({ params }: PageProps) {
 
   return (
     <article className="max-w-4xl mx-auto py-8 space-y-8">
-      {/* Fil d'Ariane */}
-      <nav className="text-xs text-sable-500 flex items-center gap-2">
+      {/* 1. Fil d'Ariane */}
+      <nav className="text-xs text-sable-500 flex items-center gap-2" aria-label="Fil d'Ariane">
         <Link href={`/${locale}`} className="hover:underline">
           {isArabic ? "الرئيسية" : "Accueil"}
         </Link>
@@ -67,6 +95,7 @@ export default async function SingleLessonPage({ params }: PageProps) {
             <span className="px-3 py-1 rounded-lg bg-bleuNuit-900 text-white text-xs font-bold">
               {lesson.school[0]}0{lesson.order}
             </span>
+            {/* 4. Niveau */}
             <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-900 border border-amber-200">
               {isArabic ? levelMeta.ar : levelMeta.fr}
             </span>
@@ -78,6 +107,7 @@ export default async function SingleLessonPage({ params }: PageProps) {
           </div>
         </div>
 
+        {/* 2. Titre & 3. Résumé */}
         <div className="space-y-2">
           <h1 className="text-2xl sm:text-3xl font-bold font-arabic text-vertProfond-800 leading-tight">
             {lesson.titleAr}
@@ -90,7 +120,7 @@ export default async function SingleLessonPage({ params }: PageProps) {
           </p>
         </div>
 
-        {/* Principe méthodologique en bannière */}
+        {/* 5. Principe méthodologique */}
         <div className="rounded-xl bg-vertProfond-50/70 border border-vertProfond-200 p-4 flex items-start gap-3">
           <Sparkles className="w-5 h-5 text-vertProfond-600 mt-0.5 flex-shrink-0" />
           <div className="space-y-1">
@@ -107,31 +137,31 @@ export default async function SingleLessonPage({ params }: PageProps) {
         </div>
       </header>
 
-      {/* Fiche de citation historique de référence */}
+      {/* 6. Corps de la leçon */}
+      <section className="rounded-2xl border border-sable-200 bg-white p-6 sm:p-8 shadow-sm" aria-label="Corps de la leçon">
+        <LessonContent content={lesson.content} locale={locale} />
+      </section>
+
+      {/* 7. Fiche de citation historique de référence */}
       {lesson.historicReference && (
-        <section aria-label="Référence historique">
+        <section aria-label="Référence historique vérifiée">
           <HistoricReferenceCard reference={lesson.historicReference} locale={locale} />
         </section>
       )}
 
-      {/* Corps didactique de la leçon */}
-      <section className="rounded-2xl border border-sable-200 bg-white p-6 sm:p-8 shadow-sm">
-        <LessonContent content={lesson.content} locale={locale} />
-      </section>
-
-      {/* Section interactive de Quiz */}
+      {/* 8. Quiz interactif */}
       {lesson.quizzes && lesson.quizzes.length > 0 && (
-        <section aria-label="Quiz interactif">
-          <LessonQuiz quizzes={lesson.quizzes} locale={locale} />
+        <section aria-label="Exercice méthodologique">
+          <LessonQuiz quizzes={lesson.quizzes} lessonSlug={lesson.slug} locale={locale} />
         </section>
       )}
 
-      {/* Navigation précédent / suivant */}
-      <nav className="flex items-center justify-between gap-4 pt-4 border-t border-sable-200">
+      {/* 9. Navigation précédente / suivante (strictement dans la même école) */}
+      <nav className="flex items-center justify-between gap-4 pt-4 border-t border-sable-200" aria-label="Navigation entre leçons">
         {prev ? (
           <Link
             href={`/${locale}/ecoles/${school}/${prev.slug}`}
-            className="group flex items-center gap-2 px-4 py-3 rounded-xl border border-sable-300 bg-white hover:border-vertProfond-600 transition text-sm font-semibold text-bleuNuit-900"
+            className="group flex items-center gap-2 px-4 py-3 rounded-xl border border-sable-300 bg-white hover:border-vertProfond-600 transition text-sm font-semibold text-bleuNuit-900 focus:ring-2 focus:ring-vertProfond-500 focus:outline-none"
           >
             {isArabic ? (
               <ArrowRight className="w-4 h-4 text-sable-500 group-hover:text-vertProfond-700 group-hover:translate-x-1 transition-transform" />
@@ -154,7 +184,7 @@ export default async function SingleLessonPage({ params }: PageProps) {
         {next ? (
           <Link
             href={`/${locale}/ecoles/${school}/${next.slug}`}
-            className="group flex items-center gap-2 px-4 py-3 rounded-xl border border-sable-300 bg-white hover:border-vertProfond-600 transition text-sm font-semibold text-bleuNuit-900"
+            className="group flex items-center gap-2 px-4 py-3 rounded-xl border border-sable-300 bg-white hover:border-vertProfond-600 transition text-sm font-semibold text-bleuNuit-900 focus:ring-2 focus:ring-vertProfond-500 focus:outline-none"
           >
             <div className="text-end">
               <span className="block text-xs text-sable-500 font-normal">

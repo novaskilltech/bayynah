@@ -104,4 +104,4 @@ Le savant est un guide qui éclaire et explicite la preuve ; il n'est ni le lég
 
 # 4. Exercice d'application (Mini-Quiz)
 
-Testez votre capacité à hiérarchiser les arguments dans le quiz interactif ci-dessus.
+Testez votre capacité à hiérarchiser les arguments dans le quiz interactif ci-dessous.

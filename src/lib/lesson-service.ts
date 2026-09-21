@@ -1,15 +1,20 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { LessonFrontmatterSchema, LessonFrontmatter } from "./schemas/lesson.schema";
+import {
+  LessonFrontmatterSchema,
+  LessonFrontmatter,
+  SchoolType,
+  EditorialStatus,
+} from "./schemas/lesson.schema";
 
 export interface LessonSummary {
   id: string;
   slug: string;
-  school: string;
-  level: number;
+  school: SchoolType;
+  level: 1 | 2 | 3 | 4;
   order: number;
-  editorialStatus: string;
+  editorialStatus: EditorialStatus;
   titleFr: string;
   titleAr: string;
   summaryFr: string;
@@ -26,24 +31,43 @@ export interface LessonDetail extends LessonFrontmatter {
 const lessonsDir = path.join(process.cwd(), "content", "lessons");
 
 /**
- * Récupère la liste de toutes les leçons (résumés), avec filtre optionnel par école
+ * Règle éditoriale d'exposition :
+ * - En développement : APPROVED et PUBLISHED
+ * - En production : uniquement PUBLISHED
+ * - Jamais DRAFT, IN_REVIEW ou ARCHIVED en production
  */
-export function getAllLessons(school?: string): LessonSummary[] {
+function isExposedStatus(status: EditorialStatus): boolean {
+  const isProd = process.env.NODE_ENV === "production";
+  if (isProd) {
+    return status === "PUBLISHED";
+  }
+  return status === "APPROVED" || status === "PUBLISHED";
+}
+
+/**
+ * Charge de manière sécurisée tous les fichiers de leçons répertoriés
+ */
+function loadAllLessonFiles(): LessonDetail[] {
   if (!fs.existsSync(lessonsDir)) {
     return [];
   }
 
-  const files = fs.readdirSync(lessonsDir).filter((f) => f.endsWith(".md") && f !== "template.md");
-  const lessons: LessonSummary[] = [];
+  // Liste contrôlée des fichiers .md uniquement, en ignorant template.md
+  const fileNames = fs
+    .readdirSync(lessonsDir)
+    .filter((f) => f.endsWith(".md") && f !== "template.md");
 
-  for (const file of files) {
+  const results: LessonDetail[] = [];
+
+  for (const fileName of fileNames) {
     try {
-      const filePath = path.join(lessonsDir, file);
+      const filePath = path.join(lessonsDir, fileName);
       const fileContent = fs.readFileSync(filePath, "utf-8");
+
       const parsed = matter(fileContent, {
         engines: {
           javascript: () => {
-            throw new Error("JS engines disabled");
+            throw new Error("L'exécution de JavaScript dans le frontmatter est strictement interdite.");
           },
         },
       });
@@ -51,82 +75,83 @@ export function getAllLessons(school?: string): LessonSummary[] {
       const validated = LessonFrontmatterSchema.safeParse(parsed.data);
       if (validated.success) {
         const data = validated.data;
-        if (!school || data.school.toLowerCase() === school.toLowerCase()) {
-          lessons.push({
-            id: data.id,
-            slug: data.slug,
-            school: data.school,
-            level: data.level,
-            order: data.order,
-            editorialStatus: data.editorialStatus,
-            titleFr: data.titleFr,
-            titleAr: data.titleAr,
-            summaryFr: data.summaryFr,
-            summaryAr: data.summaryAr,
-            methodologyPrincipleFr: data.methodologyPrincipleFr,
-            methodologyPrincipleAr: data.methodologyPrincipleAr,
-            hasQuiz: !!data.quizzes && data.quizzes.length > 0,
+        if (isExposedStatus(data.editorialStatus)) {
+          results.push({
+            ...data,
+            content: parsed.content,
           });
         }
+      } else {
+        console.error(
+          `[lesson-service] Erreur de validation Zod pour ${fileName}:`,
+          validated.error.format()
+        );
       }
     } catch (err: unknown) {
-      console.error(`Erreur lors du chargement de la leçon ${file}:`, err);
+      const msg = err instanceof Error ? err.message : String(err);
+      console.error(`[lesson-service] Erreur lors de la lecture de ${fileName}:`, msg);
     }
   }
 
-  return lessons.sort((a, b) => a.order - b.order);
+  return results.sort((a, b) => a.order - b.order);
 }
 
 /**
- * Récupère une leçon complète par son slug
+ * Récupère la liste de toutes les leçons (résumés), avec filtre optionnel par école
+ */
+export function getAllLessons(school?: SchoolType): LessonSummary[] {
+  const allDetails = loadAllLessonFiles();
+  const filtered = school
+    ? allDetails.filter((l) => l.school === school)
+    : allDetails;
+
+  return filtered.map((data) => ({
+    id: data.id,
+    slug: data.slug,
+    school: data.school,
+    level: data.level,
+    order: data.order,
+    editorialStatus: data.editorialStatus,
+    titleFr: data.titleFr,
+    titleAr: data.titleAr,
+    summaryFr: data.summaryFr,
+    summaryAr: data.summaryAr,
+    methodologyPrincipleFr: data.methodologyPrincipleFr,
+    methodologyPrincipleAr: data.methodologyPrincipleAr,
+    hasQuiz: !!data.quizzes && data.quizzes.length > 0,
+  }));
+}
+
+/**
+ * Récupère les leçons d'une école spécifique
+ */
+export function getLessonsBySchool(school: SchoolType): LessonSummary[] {
+  return getAllLessons(school);
+}
+
+/**
+ * Récupère une leçon complète par son slug.
+ * Ne construit JAMAIS directement un chemin filesystem à partir du slug fourni :
+ * charge la liste contrôlée puis recherche l'élément correspondant.
  */
 export function getLessonBySlug(slug: string): LessonDetail | null {
-  if (!fs.existsSync(lessonsDir)) {
-    return null;
-  }
-
-  const files = fs.readdirSync(lessonsDir).filter((f) => f.endsWith(".md") && f !== "template.md");
-
-  for (const file of files) {
-    try {
-      const filePath = path.join(lessonsDir, file);
-      const fileContent = fs.readFileSync(filePath, "utf-8");
-      const parsed = matter(fileContent, {
-        engines: {
-          javascript: () => {
-            throw new Error("JS engines disabled");
-          },
-        },
-      });
-
-      if (parsed.data.slug === slug) {
-        const validated = LessonFrontmatterSchema.safeParse(parsed.data);
-        if (validated.success) {
-          return {
-            ...validated.data,
-            content: parsed.content,
-          };
-        } else {
-          console.error(`Erreur de validation pour ${slug}:`, validated.error.format());
-        }
-      }
-    } catch (err: unknown) {
-      console.error(`Erreur lors de la lecture de la leçon ${slug}:`, err);
-    }
-  }
-
-  return null;
+  const allDetails = loadAllLessonFiles();
+  const found = allDetails.find((l) => l.slug === slug);
+  return found || null;
 }
 
 /**
- * Récupère les leçons précédente et suivante dans une école
+ * Récupère les leçons précédente et suivante strictement au sein de la même école
  */
 export function getAdjacentLessons(
-  school: string,
-  currentOrder: number
-): { prev: LessonSummary | null; next: LessonSummary | null } {
-  const schoolLessons = getAllLessons(school);
-  const currentIndex = schoolLessons.findIndex((l) => l.order === currentOrder);
+  school: SchoolType,
+  currentSlug: string
+): {
+  prev: LessonSummary | null;
+  next: LessonSummary | null;
+} {
+  const schoolLessons = getLessonsBySchool(school);
+  const currentIndex = schoolLessons.findIndex((l) => l.slug === currentSlug);
 
   if (currentIndex === -1) {
     return { prev: null, next: null };
@@ -139,11 +164,11 @@ export function getAdjacentLessons(
 }
 
 /**
- * Résumé du nombre de leçons par école
+ * Résumé du nombre de leçons exposées par école
  */
-export function getSchoolCounts(): Record<string, number> {
+export function getSchoolCounts(): Record<SchoolType, number> {
   const all = getAllLessons();
-  const counts: Record<string, number> = {
+  const counts: Record<SchoolType, number> = {
     CRITIQUE: 0,
     HADITH: 0,
     FIQH: 0,

@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { CheckCircle2, XCircle, HelpCircle, Award, RotateCcw } from "lucide-react";
+import React, { useState, useSyncExternalStore, useMemo } from "react";
+import { CheckCircle2, XCircle, HelpCircle, Award, RotateCcw, Check } from "lucide-react";
 
 interface QuizOption {
   textFr: string;
@@ -21,23 +21,91 @@ interface QuizItem {
 
 interface LessonQuizProps {
   quizzes: QuizItem[];
+  lessonSlug: string;
   locale: string;
 }
 
-export default function LessonQuiz({ quizzes, locale }: LessonQuizProps) {
+interface StoredLessonProgress {
+  completed: boolean;
+  completedAt?: string;
+  correctQuizIds: string[];
+}
+
+const STORAGE_KEY = "tabayyun.lessonProgress";
+
+function subscribe(callback: () => void) {
+  if (typeof window === "undefined") return () => {};
+  window.addEventListener("storage", callback);
+  window.addEventListener("tabayyun-progress-updated", callback);
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener("tabayyun-progress-updated", callback);
+  };
+}
+
+function getSnapshot() {
+  if (typeof window === "undefined") return null;
+  return localStorage.getItem(STORAGE_KEY);
+}
+
+function getServerSnapshot() {
+  return null;
+}
+
+export default function LessonQuiz({ quizzes, lessonSlug, locale }: LessonQuizProps) {
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, number>>({});
   const isArabic = locale === "ar";
+
+  const rawProgress = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  const validatedQuizzes = useMemo(() => {
+    if (!rawProgress) return new Set<string>();
+    try {
+      const data: Record<string, StoredLessonProgress> = JSON.parse(rawProgress);
+      const progress = data[lessonSlug];
+      if (progress && Array.isArray(progress.correctQuizIds)) {
+        return new Set(progress.correctQuizIds);
+      }
+    } catch {
+      // ignore
+    }
+    return new Set<string>();
+  }, [rawProgress, lessonSlug]);
 
   if (!quizzes || quizzes.length === 0) {
     return null;
   }
 
   const handleSelectOption = (quizId: string, optionIndex: number) => {
-    // Si l'utilisateur a déjà répondu correctement, on ne bloque pas mais on met à jour
+    const targetQuiz = quizzes.find((q) => q.id === quizId);
+    if (!targetQuiz) return;
+
+    const option = targetQuiz.options[optionIndex];
     setSelectedAnswers((prev) => ({
       ...prev,
       [quizId]: optionIndex,
     }));
+
+    if (option.isCorrect) {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        const allProgress: Record<string, StoredLessonProgress> = raw ? JSON.parse(raw) : {};
+        const currentCorrect = new Set(allProgress[lessonSlug]?.correctQuizIds || []);
+        currentCorrect.add(quizId);
+        const isAllCompleted = quizzes.every((q) => q.id === quizId || currentCorrect.has(q.id));
+
+        allProgress[lessonSlug] = {
+          completed: isAllCompleted,
+          completedAt: isAllCompleted ? new Date().toISOString() : allProgress[lessonSlug]?.completedAt,
+          correctQuizIds: Array.from(currentCorrect),
+        };
+
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(allProgress));
+        window.dispatchEvent(new Event("tabayyun-progress-updated"));
+      } catch {
+        // Erreur silencieuse de stockage local
+      }
+    }
   };
 
   const handleReset = (quizId: string) => {
@@ -48,9 +116,12 @@ export default function LessonQuiz({ quizzes, locale }: LessonQuizProps) {
     });
   };
 
+  const isAllValidated = quizzes.every((q) => validatedQuizzes.has(q.id));
+
   return (
     <div className="rounded-2xl border-2 border-vertProfond-700/20 bg-white p-6 sm:p-8 shadow-sm space-y-8 my-10">
-      <div className="flex items-center justify-between border-b border-sable-200 pb-4">
+      {/* En-tête du Quiz */}
+      <div className="flex flex-wrap items-center justify-between border-b border-sable-200 pb-4 gap-3">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-vertProfond-100 flex items-center justify-center text-vertProfond-700">
             <HelpCircle className="w-6 h-6" />
@@ -62,16 +133,27 @@ export default function LessonQuiz({ quizzes, locale }: LessonQuizProps) {
             <p className="text-xs text-sable-500">
               {isArabic
                 ? "قس مهاراتك في التفكير النقدي قبل الانتقال للمستوى الموالي"
-                : "Évaluez votre réflexe critique avant de passer à l'étape suivante"}
+                : "Évaluez votre réflexe critique avant de poursuivre votre progression"}
             </p>
           </div>
         </div>
 
-        <span className="text-xs font-semibold px-3 py-1 rounded-full bg-sable-100 text-sable-700">
-          {quizzes.length} {isArabic ? "سؤال" : quizzes.length > 1 ? "questions" : "question"}
-        </span>
+        {/* Indicateur de validation */}
+        {isAllValidated ? (
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 animate-fadeIn">
+            <Check className="w-4 h-4" />
+            <span>
+              {isArabic ? "تم تثبيت الوعي المنهجي" : "Réflexe méthodologique validé"}
+            </span>
+          </span>
+        ) : (
+          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-sable-100 text-sable-700">
+            {quizzes.length} {isArabic ? "سؤال" : quizzes.length > 1 ? "questions" : "question"}
+          </span>
+        )}
       </div>
 
+      {/* Questions */}
       <div className="space-y-8">
         {quizzes.map((quiz, qIndex) => {
           const selectedIdx = selectedAnswers[quiz.id];
@@ -99,12 +181,12 @@ export default function LessonQuiz({ quizzes, locale }: LessonQuizProps) {
                 </div>
               </div>
 
-              {/* Liste des options */}
-              <div className="space-y-3 pt-2">
+              {/* Options */}
+              <div className="space-y-3 pt-2" role="radiogroup" aria-label={quiz.questionFr}>
                 {quiz.options.map((option, optIdx) => {
                   const isSelected = selectedIdx === optIdx;
                   let optionStyles =
-                    "border-sable-200 bg-white hover:border-vertProfond-400 hover:bg-vertProfond-50/20 text-bleuNuit-900";
+                    "border-sable-200 bg-white hover:border-vertProfond-400 hover:bg-vertProfond-50/20 text-bleuNuit-900 focus:ring-2 focus:ring-vertProfond-500 focus:outline-none";
 
                   if (hasAnswered) {
                     if (option.isCorrect) {
@@ -123,8 +205,15 @@ export default function LessonQuiz({ quizzes, locale }: LessonQuizProps) {
                       type="button"
                       onClick={() => handleSelectOption(quiz.id, optIdx)}
                       className={`w-full text-start p-4 rounded-xl border-2 transition flex items-start gap-3 ${optionStyles}`}
+                      aria-label={`${isArabic && option.textAr ? option.textAr : option.textFr} - ${
+                        hasAnswered && option.isCorrect
+                          ? isArabic ? "إجابة صحيحة" : "Bonne réponse"
+                          : hasAnswered && isSelected
+                          ? isArabic ? "إجابة غير صحيحة" : "Réponse incorrecte"
+                          : ""
+                      }`}
                     >
-                      <div className="flex-shrink-0 mt-0.5">
+                      <div className="flex-shrink-0 mt-0.5" aria-hidden="true">
                         {hasAnswered && option.isCorrect ? (
                           <CheckCircle2 className="w-5 h-5 text-emerald-600" />
                         ) : hasAnswered && isSelected && !option.isCorrect ? (
@@ -155,7 +244,7 @@ export default function LessonQuiz({ quizzes, locale }: LessonQuizProps) {
                 })}
               </div>
 
-              {/* Feedback didactique après sélection */}
+              {/* Feedback didactique explicite */}
               {hasAnswered && selectedOption && (
                 <div
                   className={`rounded-xl p-4 border text-sm leading-relaxed space-y-2 mt-4 transition animate-fadeIn ${
@@ -163,6 +252,7 @@ export default function LessonQuiz({ quizzes, locale }: LessonQuizProps) {
                       ? "bg-emerald-50/80 border-emerald-300 text-emerald-900"
                       : "bg-red-50/80 border-red-300 text-red-900"
                   }`}
+                  role="alert"
                 >
                   <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center gap-2 font-bold">
@@ -170,14 +260,18 @@ export default function LessonQuiz({ quizzes, locale }: LessonQuizProps) {
                         <>
                           <Award className="w-4 h-4 text-emerald-600" />
                           <span>
-                            {isArabic ? "أحسنت! إجابة موفقة ومنهجية" : "Excellent réflexe méthodologique !"}
+                            {isArabic
+                              ? "إجابة صحيحة — تم تثبيت الوعي المنهجي"
+                              : "Bonne réponse — Réflexe méthodologique validé"}
                           </span>
                         </>
                       ) : (
                         <>
                           <XCircle className="w-4 h-4 text-red-600" />
                           <span>
-                            {isArabic ? "تنبيه منهجي" : "Attention à l'écueil méthodologique"}
+                            {isArabic
+                              ? "إجابة غير صحيحة — تنبيه منهجي"
+                              : "Réponse incorrecte — Attention à l'écueil méthodologique"}
                           </span>
                         </>
                       )}
@@ -185,8 +279,9 @@ export default function LessonQuiz({ quizzes, locale }: LessonQuizProps) {
 
                     {!selectedOption.isCorrect && (
                       <button
+                        type="button"
                         onClick={() => handleReset(quiz.id)}
-                        className="inline-flex items-center gap-1 text-xs text-red-700 hover:text-red-900 font-semibold underline"
+                        className="inline-flex items-center gap-1 text-xs text-red-700 hover:text-red-900 font-semibold underline focus:ring-2 focus:ring-red-400 rounded px-1"
                       >
                         <RotateCcw className="w-3.5 h-3.5" />
                         <span>{isArabic ? "إعادة المحاولة" : "Réessayer"}</span>

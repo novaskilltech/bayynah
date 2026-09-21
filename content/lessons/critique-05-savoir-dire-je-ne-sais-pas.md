@@ -95,4 +95,4 @@ est récompensé **plus hautement** que celui qui devine par chance une réponse
 
 # 4. Exercice d'application (Mini-Quiz)
 
-Mettez à l'épreuve votre humilité méthodologique dans le quiz interactif ci-dessus.
+Mettez à l'épreuve votre humilité méthodologique dans le quiz interactif ci-dessous.

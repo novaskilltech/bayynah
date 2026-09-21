@@ -94,4 +94,4 @@ L'étudiant en quête de vérité cherche ce qui est authentiquement établi, m�
 
 # 4. Exercice d'application (Mini-Quiz)
 
-Détectez le sophisme dans le quiz interactif ci-dessus.
+Détectez le sophisme dans le quiz interactif ci-dessous.

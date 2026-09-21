@@ -96,4 +96,4 @@ Tant que la personne qui affirme n'a pas produit le texte exact, le recueil, la 
 
 # 4. Exercice d'application (Mini-Quiz)
 
-Consultez le quiz interactif ci-dessus pour tester votre réflexe face à une affirmation sans preuve.
+Consultez le quiz interactif ci-dessous pour tester votre réflexe face à une affirmation sans preuve.

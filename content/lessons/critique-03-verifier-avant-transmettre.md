@@ -92,4 +92,4 @@ En Islam, on n'adore pas Dieu par le mensonge ou l'approximation. La fin ne just
 
 # 4. Exercice d'application (Mini-Quiz)
 
-Appliquez le filtre du *tathabbut* dans le quiz ci-dessus.
+Appliquez le filtre du *tathabbut* dans le quiz ci-dessous.
