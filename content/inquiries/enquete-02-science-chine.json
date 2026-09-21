@@ -1,0 +1,562 @@
+{
+  "id": "inquiry-02",
+  "slug": "cherchez-science-chine",
+  "domain": "HADITH",
+  "editorialStatus": "DRAFT",
+  "title": {
+    "fr": "« Cherchez la science même en Chine » : célèbre signifie-t-il authentique ?",
+    "ar": "«اطلبوا العلم ولو بالصين»: هل الشهرة تعني صحة الحديث؟"
+  },
+  "initialClaim": {
+    "fr": "On m’a dit : « Cherchez la science même en Chine » est forcément un hadith authentique : tout le monde le connaît et son sens est excellent.",
+    "ar": "قيل لي: «اطلبوا العلم ولو بالصين» حديث صحيح حتماً؛ فهو مشهور جداً ومعناه حسن."
+  },
+  "authorId": "author-01",
+  "steps": [
+    {
+      "stepNumber": 1,
+      "titleFr": "Décomposer l'affirmation",
+      "titleAr": "تفكيك الدعوى وفصل أجزائها",
+      "instructionFr": "L'affirmation initiale contient plusieurs raisonnements. Quelle est la meilleure analyse ?",
+      "instructionAr": "تتضمن الدعوى الابتدائية عدة مسالك استدلالية. ما هو التحليل الأسد لها؟",
+      "options": [
+        {
+          "textFr": "Il faut séparer au moins trois affirmations : la phrase est réellement rapportée ; elle est authentiquement attribuable au Prophète ﷺ ; sa célébrité et la qualité de son sens seraient des preuves de son authenticité.",
+          "textAr": "يجب فصل ثلاث دعاوى على الأقل: وجود الرواية، وثبوت نسبتها إلى النبي ﷺ، ثم دعوى أن شهرتها وحسن معناها دليل على صحتها.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Excellent. « On la trouve », « elle est authentique » et « son sens est bon » sont trois propositions différentes.",
+          "feedbackAr": "أحسنت! وجود النص في الكتب، وثبوته، وحسن معناه، ثلاث قضايا متمايزة يجب عدم الخلط بينها."
+        },
+        {
+          "textFr": "Chercher immédiatement si un site de hadith la classe comme faible ou authentique.",
+          "textAr": "البحث الفوري في مواقع الحديث لمعرفة هل الحديث ضعيف أم صحيح.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Bonne direction, mais il faut d'abord identifier précisément ce que l'on cherche à démontrer.",
+          "feedbackAr": "مسلك عملي مفيد، لكن الأولى تحرير ما يراد البرهنة عليه بدقة قبل البحث."
+        },
+        {
+          "textFr": "Comme je l'ai entendue depuis mon enfance, elle est probablement authentique.",
+          "textAr": "بما أنني سمعتها منذ الصغر، فهي صحيحة غالباً.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Jugement prématuré : la familiarité auditive ne constitue pas un critère d'authenticité.",
+          "feedbackAr": "حكم متسرع: مجرد الألفة السمعية والاعتياد لا ينهض دليلاً على الصحة."
+        },
+        {
+          "textFr": "Un beau conseil ne peut pas être un faux hadith.",
+          "textAr": "الكلام الجميل والنصيحة الحسنة لا يمكن أن تكون حديثاً مكذوباً.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Piège classique : la noblesse du propos n'est pas un gage d'authenticité prophétique.",
+          "feedbackAr": "مغالطة شائعة: جودة المعنى لا تعني أبداً صدق النسبة إلى النبي ﷺ."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "ON_STEP_ENTER"
+    },
+    {
+      "stepNumber": 2,
+      "titleFr": "Déterminer ce qu'il faut vérifier",
+      "titleAr": "تحديد محاور التثبت",
+      "instructionFr": "Pour vérifier scientifiquement cette affirmation, quels sont les axes précis de recherche à établir ?",
+      "instructionAr": "للتحقق العلمي من هذه الدعوى، ما هي المحاور الدقيقة الواجب فحصها؟",
+      "options": [
+        {
+          "textFr": "Rechercher : les plus anciennes sources où la formule apparaît ; ses chaînes de transmission ; les critiques portant sur ses narrateurs ; les jugements des muḥaddithûn ; si la phrase complète est homogène ou composée de segments ayant des statuts différents.",
+          "textAr": "البحث عن: أقدم المصادر التي وردت فيها الرواية؛ وأسانيدها؛ ونقد رواتها؛ وأحكام المحدثين عليها؛ وما إذا كانت العبارة متجانسة أم مركبة من أجزاء تختلف رتبتها.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Parfait ! Ces cinq axes couvrent l'ensemble du cycle critique en science du hadith.",
+          "feedbackAr": "أحسنت! هذه المحاور الخمسة تستوعب أركان التحقيق الحديثي المتكامل."
+        },
+        {
+          "textFr": "Chercher uniquement l'avis d'un spécialiste contemporain.",
+          "textAr": "الاقتصار على البحث عن فتوى أو حكم لعالم معاصر.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Utile pour s'orienter, mais insuffisant pour comprendre les fondements critiques du jugement.",
+          "feedbackAr": "مفيد للاستئناس، لكنه لا يكفي لإدراك مآخذ الحكم وعلله الإسنادية."
+        },
+        {
+          "textFr": "Dire « Allah sait mieux » sans commencer la recherche.",
+          "textAr": "القول «الله أعلم» والتوقف التام دون الشروع في البحث.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Ici, le tawaqquf définitif est prématuré : nous avons les moyens méthodologiques de mener l'enquête.",
+          "feedbackAr": "التوقف هنا في غير محله؛ فالأدوات العلمية متوفرة لخوض التحقيق والتثبت."
+        },
+        {
+          "textFr": "Vérifier combien de fois la citation apparaît sur Google ou les réseaux sociaux.",
+          "textAr": "إحصاء عدد مرات ظهور العبارة في محركات البحث ومواقع التواصل.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "La fréquence numérique sur internet mesure la viralité, non la vérité historique.",
+          "feedbackAr": "الانتشار الرقمي يقيس الذيوع لا الصحة والتحقيق التاريخي."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 3,
+      "titleFr": "Retrouver la transmission",
+      "titleAr": "تخريج الرواية",
+      "instructionFr": "Que découvre-t-on lorsqu'on remonte aux sources ?",
+      "instructionAr": "ماذا يتبين للباحث عند الرجوع إلى المصادر الحديثية المسندة؟",
+      "options": [
+        {
+          "textFr": "La formule est effectivement rapportée dans des ouvrages anciens, notamment par la voie d'Anas ibn Mâlik via Abû ʿÂtika. Sa présence dans les livres prouve donc qu'elle a circulé comme riwâya, mais ne prouve pas encore son authenticité.",
+          "textAr": "العبارة مروية بالفعل في مصنفات قديمة، ولا سيما من طريق أنس بن مالك عن طريق أبي عاتكة؛ فوجودها في الكتب يثبت ورودها كرواية، لكنه لا يثبت صحتها بعد.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Excellente distinction : consigner une riwâya dans un recueil n'équivaut pas à la valider.",
+          "feedbackAr": "تمييز دقيق: مجرد تخريج الرواية في الكتب لا يستلزم صحتها وثبوتها."
+        },
+        {
+          "textFr": "Elle n'est pas dans al-Bukhârî ou Muslim, donc elle doit être faible.",
+          "textAr": "ليست في البخاري ولا مسلم، فلا بد أن تكون ضعيفة.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "La conclusion ne découle pas de cette seule absence. De nombreux hadiths authentiques se trouvent en dehors des deux Ṣaḥîḥ.",
+          "feedbackAr": "استنتاج قاصر: فعدم الإخراج في الصحيحين لا يستلزم الضعف حتماً، لكثرة الصحاح خارجهما."
+        },
+        {
+          "textFr": "Je ne la trouve pas dans les Six Livres, donc elle n'a aucune source.",
+          "textAr": "لم أجدها في الكتب الستة، إذن لا أصل لها في الرواية.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Conclusion hâtive : les recueils de hadiths dépassent largement les Six Livres.",
+          "feedbackAr": "تسرع استقرائي: فدواوين السنة أوسع من الكتب الستة المشهورة."
+        },
+        {
+          "textFr": "Puisqu'elle apparaît dans un ouvrage de hadith, elle est authentique.",
+          "textAr": "طالما أنها مذكورة في كتاب حديث، فهي صحيحة حتماً.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Erreur grossière : les recueils de traditions contiennent du sahîh, du da'îf et parfois du mawdû'.",
+          "feedbackAr": "خطأ فادح: فكتب الرواية تجمع الصحيح والضعيف والموضوع للبيان والتمييز."
+        }
+      ],
+      "revealedEvidenceIds": ["ev-uqayli-china"],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 4,
+      "titleFr": "Examiner le transmetteur problématique",
+      "titleAr": "فحص الراوي",
+      "instructionFr": "Al-ʿUqaylî indique que l'ajout « ولو بالصين » est connu par Abû ʿÂtika et qualifie celui-ci de « متروك الحديث » (délaissé dans le hadith). Que peut-on conclure ?",
+      "instructionAr": "بين العقيلي أن زيادة «ولو بالصين» لا تُحفظ إلا عن أبي عاتكة، ووصفه بأنه «متروك الحديث». فماذا نستنتج؟",
+      "options": [
+        {
+          "textFr": "La voie célèbre présente une faiblesse critique très importante. On ne peut donc pas attribuer la formule au Prophète ﷺ sur la seule base de cette chaîne.",
+          "textAr": "الطريق المشهور يشتمل على علة قادحة شديدة؛ فلا يجوز الجزم بنسبة الحديث إلى النبي ﷺ بناءً على هذا الإسناد وحده.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Rigueur exemplaire : un narrateur 'matrûk' anéantit la force probante de la chaîne.",
+          "feedbackAr": "تحقيق منهجي محكم: وجود الراوي المتروك يسقط الاحتجاج بالسند."
+        },
+        {
+          "textFr": "Le hadith paraît faible, mais il faut encore vérifier les autres voies et les jugements des spécialistes.",
+          "textAr": "يبدو الحديث ضعيفاً، لكن لا بد من مراجعة بقية الطرق وأقوال أهل العلم.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Cette réponse est excellente en prudence mais moins complète que BEST parce que la gravité de la critique d'Abû ʿÂtika est déjà documentée.",
+          "feedbackAr": "جواب حسن في جانب الاحتياط، لكنه دون الخيار الأول لأن جرح أبي عاتكة شديد ومفسر."
+        },
+        {
+          "textFr": "Abû ʿÂtika est critiqué, donc toute phrase concernant la recherche de science est fausse.",
+          "textAr": "أبو عاتكة مطعون فيه، إذن كل عبارة وردت في طلب العلم باطلة.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Généralisation abusive : la critique d'un narrateur sur un ajout ne condamne pas le sujet de la science.",
+          "feedbackAr": "تعميم باطل: جرح راوٍ في زيادة لا يسقط أصل الترغيب في العلم الثابت بنصوص أخرى."
+        },
+        {
+          "textFr": "La faiblesse d'un transmetteur n'a aucune importance si le sens du texte est correct.",
+          "textAr": "ضعف الراوي لا يضر ما دام معنى المتن مستقيماً وحسناً.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Négation totale de la science du hadith : la chaîne est la condition première de l'attribution.",
+          "feedbackAr": "إهدار لقواعد الرواية: فالإسناد هو الأصل في ثبوت نسبة الكلام لقائله."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_BEST_ANSWER"
+    },
+    {
+      "stepNumber": 5,
+      "titleFr": "« Célèbre » n'est pas une catégorie d'authenticité",
+      "titleAr": "الشهرة لا تعني الصحة",
+      "instructionFr": "Que nous apprend la formule attribuée à al-Bayhaqî : « متنه مشهور وأسانيده ضعيفة » (Son texte est célèbre, mais ses chaînes sont faibles) ?",
+      "instructionAr": "ماذا تفيدنا عبارة الإمام البيهقي: «متنه مشهور وأسانيده ضعيفة»؟",
+      "options": [
+        {
+          "textFr": "Qu'un texte peut être très répandu tout en reposant sur des chaînes insuffisantes. La célébrité sociologique d'une formule et son authenticité hadithique sont deux données différentes.",
+          "textAr": "أن النص قد يكون واسع الشهرة والانتشار مع كونه مستنداً إلى أسانيد واهية؛ فالشهرة الاجتماعية للعبارة شيء، وثبوتها الحديثي شيء آخر تماماً.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Principe central de TABAYYUN : mashhûr ≠ sahîh. La célébrité sur les langues ne valide pas l'isnad.",
+          "feedbackAr": "أصل منهجي أصيل: الشهرة لا تعني الصحة، والذيوع على الألسنة لا يصحح إسناداً."
+        },
+        {
+          "textFr": "Qu'un hadith célèbre est parfois faible.",
+          "textAr": "أن الحديث المشهور قد يكون ضعيفاً في بعض الأحيان.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat juste, mais il faut théoriser la différence entre statut sociologique et statut critique.",
+          "feedbackAr": "ملاحظة صحيحة، لكن الأولى تقرير الانفصال المنهجي بين الشهرة والثبوت."
+        },
+        {
+          "textFr": "Que tout hadith populaire est probablement faible.",
+          "textAr": "أن كل حديث مشهور بين الناس فهو ضعيف على الأرجح.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Excès inverse : de nombreux hadiths célèbres sont authentiques (comme 'al-a'mâlu bi-n-niyyât').",
+          "feedbackAr": "إفراط في التشكيك: فكثير من الأحاديث المشهورة صحيحة ثابتة كحديث النيات."
+        },
+        {
+          "textFr": "Si le matn est مشهور, cela renforce automatiquement l'isnâd.",
+          "textAr": "إذا كان المتن مشهوراً، فإن ذلك يقوي إسناده تلقائياً.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Erreur conceptuelle : la renommée d'un texte ne répare jamais un isnad défaillant.",
+          "feedbackAr": "خطأ منهجي: شهرة المتن لا تجبر الإسناد التالف ولا تعوض عدالة الرواة."
+        }
+      ],
+      "revealedEvidenceIds": ["ev-bayhaqi-china"],
+      "revealPolicy": "ON_STEP_ENTER"
+    },
+    {
+      "stepNumber": 6,
+      "titleFr": "Comparer les jugements des spécialistes",
+      "titleAr": "مقارنة أحكام المحدثين",
+      "instructionFr": "Al-ʿUqaylî, al-Bayhaqî, Ibn Ḥibbân, Ibn al-Jawzî et al-Albânî emploient des termes variés (faible, très faible, bâṭil, mawḍûʿ). Que retenir de cette comparaison ?",
+      "instructionAr": "تنوعت عبارات الأئمة بين الضعيف وشديد الضعف والباطل والموضوع؛ فما الموقف المنهجي من هذا التباين؟",
+      "options": [
+        {
+          "textFr": "Les critiques ne sont pas nécessairement unanimes sur l'étiquette technique finale — faible, très faible, bāṭil ou mawḍûʿ — mais le dossier ne permet pas de présenter « ولو بالصين » comme un hadith authentique établi.",
+          "textAr": "لم تتحد عبارات النقاد في المصطلح النهائي — بين ضعيف، وشديد الضعف، وباطل، وموضوع — لكن مجموع أحكامهم يقطع بأنه لا يصح تقديم زيادة «ولو بالصين» كحديث صحيح ثابت.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Excellente synthèse critique : distinguer le consensus de fond (non-authenticité) de la nuance terminologique.",
+          "feedbackAr": "تحقيق رائع: التفريق بين الاتفاق على عدم الثبوت وبين التفاوت في التوصيف الاصطلاحي."
+        },
+        {
+          "textFr": "Plusieurs spécialistes le jugent très faible ou invalide.",
+          "textAr": "العديد من أئمة الحديث حكموا عليه بالضعف الشديد أو البطلان.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Exact, mais il est pédagogiquement précieux d'expliciter la nuance terminologique des critiques.",
+          "feedbackAr": "صحيح، لكن الأفضل بيان دلالة تنوع العبارات مع اتحاد النتيجة."
+        },
+        {
+          "textFr": "Ibn al-Jawzî l'a déclaré fabriqué, donc il est interdit de mentionner qu'il existe d'autres appréciations.",
+          "textAr": "ابن الجوزي حكم بوضعه، فلا يجوز ذكر أي حكم آخر للعلماء.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Dogmatisme réducteur : Ibn al-Jawzi est connu pour sa sévérité, et d'autres critiques ont nuancé son verdict.",
+          "feedbackAr": "تضييق غير مبرر: فابن الجوزي معروف بتوسعه في كتاب الموضوعات، ولغيره تعقبات معتبرة."
+        },
+        {
+          "textFr": "Puisque les spécialistes n'emploient pas tous exactement le même mot, nous ne pouvons absolument rien conclure.",
+          "textAr": "بما أن المحدثين لم يتفقوا على لفظ اصطلاحي واحد، فلا يمكننا الخروج بأي نتيجة.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Sophisme relativiste : le désaccord sur le degré de faiblesse n'a jamais signifié que le texte était authentique !",
+          "feedbackAr": "سفسطة نسبية: فالخلاف في درجة الضعف لا يجعل الرواية صحيحة بوجه."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 7,
+      "titleFr": "Séparer les deux formulations",
+      "titleAr": "فصل الزيادة عن أصل الحديث",
+      "instructionFr": "Quelle distinction faut-il faire entre « طلب العلم فريضة على كل مسلم » et « اطلبوا العلم ولو بالصين » ?",
+      "instructionAr": "ما هو التمييز الواجب بين جملة «طلب العلم فريضة على كل مسلم» وزيادة «اطلبوا العلم ولو بالصين»؟",
+      "options": [
+        {
+          "textFr": "Elles ne doivent pas recevoir automatiquement le même jugement. Le premier segment possède ses propres voies et a été jugé recevable/authentique par certains spécialistes, tandis que l'ajout concernant la Chine possède un dossier distinct et beaucoup plus faible.",
+          "textAr": "لا يصح إعطاؤهما حكماً واحداً تلقائياً؛ فالشطر الأول له طرقه الخاصة وقد صححه أو حسنه جمع من أهل العلم، بينما زيادة الصين لها مسار إسنادي مستقل وشديد الضعف.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Règle d'or : une phrase composite doit être découpée puis étudiée segment par segment.",
+          "feedbackAr": "قاعدة ذهبية: العبارة المركبة تفكك وتدرس أسانيد كل شطر منها على حدة."
+        },
+        {
+          "textFr": "Il semble que les deux phrases n'aient pas exactement la même force.",
+          "textAr": "يبدو أن العبارتين لا تتمتعان بنفس الدرجة من القوة الإسنادية.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Intuition correcte, mais il faut nommer le principe : dissociation du matn de base et de la ziyâda.",
+          "feedbackAr": "ملاحظة في الاتجاه الصحيح، لكن يلزم تحرير مبدأ فصل الزيادة عن الأصل."
+        },
+        {
+          "textFr": "Puisqu'une partie est jugée authentique par un spécialiste, tout l'ensemble devient automatiquement authentique.",
+          "textAr": "بما أن أحد الشطرين صححه بعض العلماء، فإن العبارة بأكملها تصبح صحيحة بالتبعية.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Contamination fallacieuse : l'authenticité d'un tronc ne valide pas les greffes douteuses.",
+          "feedbackAr": "تعدية فاسدة: صحة الأصل لا تصحح الزيادات المدرجة الضعيفة."
+        },
+        {
+          "textFr": "Si un ajout est faible, toute phrase à laquelle il a été ajouté devient nécessairement inventée.",
+          "textAr": "إذا كانت الزيادة ضعيفة، فإن أصل الجملة المقترن بها يصبح مكذوباً بالضرورة.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Erreur inverse : la faiblesse d'une excroissance n'invalide pas le texte d'origine sain.",
+          "feedbackAr": "إسقاط جائر: فسقوط الزيادة لا يبطل النص الأصلي الثابت بأسانيد صحيحة."
+        }
+      ],
+      "revealedEvidenceIds": ["ev-albani-talab-ilm-china"],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 8,
+      "titleFr": "Le sophisme du « bon sens »",
+      "titleAr": "حسن المعنى لا يثبت النسبة",
+      "instructionFr": "La phrase encourage à voyager très loin pour acquérir la science. Son sens général paraît positif. Est-ce une preuve qu'elle vient du Prophète ﷺ ?",
+      "instructionAr": "تحث العبارة على الرحلة في طلب العلم، ومعناها يبدو نافعاً ومستحسناً؛ فهل هذا دليل على أنها كلام النبوة؟",
+      "options": [
+        {
+          "textFr": "Non. Un sens correct peut être exprimé dans une parole qui n'est pas authentiquement prophétique. La valeur morale d'une idée et l'authenticité de son attribution sont deux questions différentes.",
+          "textAr": "لا؛ فصحة المعنى قد تثبت في كلام ليس من كلام النبوة، ونبالة المقصد الأخلاقي شيء، وصحة النسبة الحديثية شيء آخر تماماً.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Limpide ! La bienveillance ou la beauté d'un propos n'autorise jamais à l'attribuer faussement au Prophète ﷺ.",
+          "feedbackAr": "تحرير بالغ الوضوح! جمال المعنى واستقامته لا يبرر نسبة القول للنبي ﷺ بغير ثبوت."
+        },
+        {
+          "textFr": "Le sens peut être acceptable même si le hadith est faible.",
+          "textAr": "المعنى قد يكون مقبولاً ومستحسناً حتى لو لم يصح الحديث.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Vrai, mais il faut souligner l'interdiction de confondre cette utilité avec une validation de la transmission.",
+          "feedbackAr": "حق، ولكن يجب التأكيد على منع استغلال حسن المعنى لتمرير النسبة الحديثية."
+        },
+        {
+          "textFr": "Comme l'islam encourage la science, cette phrase doit probablement provenir du Prophète ﷺ.",
+          "textAr": "بما أن الإسلام يحث على العلم، فالأرجح أن العبارة نبوية.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Raisonnement fallacieux : l'adéquation thématique ne prouve pas l'origine textuelle.",
+          "feedbackAr": "استدلال واهٍ: فالموافقة العامة لمقاصد الدين لا تغني عن ثبوت السند الخاص."
+        },
+        {
+          "textFr": "Toute parole non authentiquement prophétique possède nécessairement un mauvais sens.",
+          "textAr": "كل كلام لم يثبت رفعه إلى النبي ﷺ فهو بالضرورة كلام فاسد المعنى.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Absurdité : les sagesses humaines, les proverbes et la poésie peuvent exprimer des vérités sans être prophétiques.",
+          "feedbackAr": "غلو باطل: فالحكمة قد تجري على ألسنة الحكماء والشعراء دون أن تكون وحياً."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 9,
+      "titleFr": "Formuler une conclusion proportionnée",
+      "titleAr": "صياغة النتيجة بقدر الدليل",
+      "instructionFr": "Quelle formulation de conclusion est la plus rigoureuse au terme de l'enquête ?",
+      "instructionAr": "ما هي الصياغة الختامية الأكثر انضباطاً وتوازناً في نهاية هذا التحقيق؟",
+      "options": [
+        {
+          "textFr": "« La formule “Cherchez la science même en Chine” est rapportée dans plusieurs ouvrages, mais ses voies connues sont sévèrement critiquées et elle ne peut pas être présentée comme un hadith authentique établi. Certains critiques l'ont qualifiée de très faible, bāṭila ou même mawḍûʿ. Il faut distinguer cet ajout de la formule “La recherche de la science est une obligation pour tout musulman”, qui possède un dossier de transmission distinct. »",
+          "textAr": "«عبارة \"اطلبوا العلم ولو بالصين\" مروية في عدة مصنفات، لكن طرقها المشهورة شديدة الضعف ولا يصح تقديمها كحديث ثابت؛ وقد وصفها بعض النقاد بالضعف الشديد أو البطلان أو الوضع. ويجب فصل هذه الزيادة عن جملة \"طلب العلم فريضة على كل مسلم\" التي لها مسار إسنادي مستقل.»",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Exemplaire de mesure et d'exactitude : les faits sont exposés, les nuances savantes respectées et les amalgames évités.",
+          "feedbackAr": "قمة الإنصاف والتحقيق: عرض للحقائق، وصيانة لمراتب النقد، واجتناب تام للمغالطات."
+        },
+        {
+          "textFr": "« Ce hadith est faible ; mieux vaut ne pas l'attribuer au Prophète ﷺ sans préciser son statut. »",
+          "textAr": "«الحديث ضعيف، والأولى عدم نسبته إلى النبي ﷺ دون بيان حاله.»",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Bonne conclusion pratique, mais il manque la précision sur le statut de l'ajout par rapport au tronc.",
+          "feedbackAr": "خلاصة عملية جيدة، لكن يعوزها تفصيل حكم الزيادة وتمييزها عن الأصل."
+        },
+        {
+          "textFr": "« Nous ne saurons jamais rien sur cette phrase. »",
+          "textAr": "«لا يمكننا معرفة أي شيء دقيق حول هذه الرواية.»",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Scepticisme infondé : le travail documentaire a précisément établi l'état critique de ses chaînes.",
+          "feedbackAr": "تشكيك سلبي: فالبحث العلمي قد كشف بدقة علل الرواية وحال رواتها."
+        },
+        {
+          "textFr": "« C'est un hadith authentique parce qu'il est célèbre et bénéfique. »",
+          "textAr": "«الحديث صحيح لأنه مشهور بين المسلمين ويحث على الخير.»",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Retour à la case départ : réitération du sophisme initial réfuté par toute l'enquête.",
+          "feedbackAr": "انتكاس إلى المغالطة الأولى التي أثبتت جميع مراحل التحقيق بطلانها."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    },
+    {
+      "stepNumber": 10,
+      "titleFr": "Audit méthodologique final",
+      "titleAr": "المراجعة المنهجية الختامية",
+      "instructionFr": "Quel est le principal enseignement transférable à d'autres recherches ?",
+      "instructionAr": "ما هي الفائدة المنهجية الكبرى القابلة للنقل والتطبيق في سائر الأبحاث والتحقيقات؟",
+      "options": [
+        {
+          "textFr": "La célébrité, la présence dans un livre, la beauté du sens et le nombre de partages ne prouvent pas l'authenticité d'une attribution. Il faut retrouver la source, examiner les voies, distinguer les segments du texte et rapporter fidèlement le degré de certitude réel.",
+          "textAr": "الشهرة، والورود في كتاب، وحسن المعنى، وكثرة التداول، لا تثبت صحة النسبة؛ بل الواجب تخريج الرواية، وفحص أسانيدها، وفصل زياداتها، وتقرير درجة الثبوت بدقة وأمانة.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "C'est l'essence même de TABAYYUN : une méthode rigoureuse, transférable et immunisée contre les biais populaires.",
+          "feedbackAr": "هذا هو جوهر «تبيّن»: منهج نقدي محرر يعصم العقل من الانخداع بالذيوع والزخرف."
+        },
+        {
+          "textFr": "Il faut vérifier les hadiths avant de les partager.",
+          "textAr": "يجب التثبت من الأحاديث قبل نشرها وتداولها.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Règle de conduite salutaire, mais la formalisation méthodologique doit aller plus loin.",
+          "feedbackAr": "أدب سلوكي حسن، لكن التكوين المنهجي يتطلب استحضار القواعد النقدية الكلية."
+        },
+        {
+          "textFr": "Il vaut mieux considérer tous les hadiths populaires comme suspects.",
+          "textAr": "الأفضل الشك في جميع الأحاديث المشهورة بين الناس.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Attitude cynique injustifiée : la prudence critique n'est pas le soupçon systématique.",
+          "feedbackAr": "ريبة غير مسوغة: فالتثبت المنهجي ميزان عادل وليس تشكيكاً عشوائياً."
+        },
+        {
+          "textFr": "Seuls les hadiths présents dans al-Bukhârî et Muslim doivent être utilisés.",
+          "textAr": "لا يجوز استعمال أي حديث إلا إذا كان في صحيحي البخاري ومسلم فقط.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Réductionnisme erroné : les spécialistes du hadith authentifient des milliers de récits hors des deux Sahihs.",
+          "feedbackAr": "تضييق فاسد: فأهل العلم يصححون آلاف الروايات الثابتة في السنن والمسانيد والمعاجم."
+        }
+      ],
+      "revealedEvidenceIds": [],
+      "revealPolicy": "AFTER_ANSWER"
+    }
+  ],
+  "inquiryEvidences": [
+    {
+      "evidenceId": "ev-uqayli-china",
+      "role": "PRIMARY_PROOF",
+      "order": 1,
+      "stepNumber": 3,
+      "commentFr": "Al-ʿUqaylî documente la voie d'Abû ʿÂtika et souligne qu'il est délaissé.",
+      "commentAr": "العقيلي يخرج الرواية من طريق أبي عاتكة ويبين أنه متروك الحديث.",
+      "evidence": {
+        "id": "ev-uqayli-china",
+        "type": "BOOK",
+        "referenceCode": "Aḍ-Ḍuʿafâʾ al-Kabîr 2/230",
+        "primarySource": true,
+        "sourceWork": "Aḍ-Ḍuʿafâʾ al-Kabîr",
+        "author": "Abû Jaʿfar Muḥammad ibn ʿAmr al-ʿUqaylî",
+        "editionVolumePage": "Tome 2, page 230 (Notice n°679, Éd. Dâr al-Bâz)",
+        "quoteArOriginal": "لا يُحفظ «ولو بالصين» إلا عن أبي عاتكة، وهو متروك الحديث.",
+        "quoteArVocalized": "لَا يُحْفَظُ «وَلَوْ بِالصِّينِ» إِلَّا عَنْ أَبِي عَاتِكَةَ، وَهُوَ مَتْرُوكُ الْحَدِيثِ.",
+        "quoteArNormalized": "لا يحفظ ولو بالصين الا عن ابي عاتكة وهو متروك الحديث",
+        "translationFr": "L’ajout “même en Chine” n’est connu que par la voie d’Abû ʿÂtika, qui est délaissé dans le hadith.",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "TO_BE_CHECKED"
+      }
+    },
+    {
+      "evidenceId": "ev-bayhaqi-china",
+      "role": "SCHOLARLY_EXPLANATION",
+      "order": 2,
+      "stepNumber": 5,
+      "commentFr": "Al-Bayhaqî formule la dissociation essentielle entre célébrité du matn et faiblesse de l'isnâd.",
+      "commentAr": "البيهقي يقرر الانفصال بين شهرة المتن وضعف أسانيده.",
+      "evidence": {
+        "id": "ev-bayhaqi-china",
+        "type": "BOOK",
+        "referenceCode": "Shuʿab al-Îmân / Al-Madkhal",
+        "primarySource": false,
+        "sourceWork": "Shuʿab al-Îmân",
+        "author": "Abû Bakr Aḥmad ibn al-Ḥusayn al-Bayhaqî",
+        "editionVolumePage": "Rapporté par al-ʿIrâqî dans Takhrîj Aḥâdîth al-Iḥyâʾ (1/14)",
+        "quoteArOriginal": "متنه مشهور وأسانيده ضعيفة.",
+        "quoteArVocalized": "مَتْنُهُ مَشْهُورٌ وَأَسَانِيدُهُ ضَعِيفَةٌ.",
+        "quoteArNormalized": "متنه مشهور واسانيده ضعيفة",
+        "translationFr": "Son texte est célèbre, mais ses chaînes sont faibles.",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "TO_BE_CHECKED"
+      }
+    },
+    {
+      "evidenceId": "ev-albani-talab-ilm-china",
+      "role": "SCHOLARLY_EXPLANATION",
+      "order": 3,
+      "stepNumber": 7,
+      "commentFr": "Al-Albânî distingue expressément le tronc authentique de l'ajout nul et non avenu.",
+      "commentAr": "الألباني يميز صراحة بين الأصل الصحيح والزيادة الباطلة.",
+      "evidence": {
+        "id": "ev-albani-talab-ilm-china",
+        "type": "CONTEMPORARY",
+        "referenceCode": "Hidâyat ar-Ruwât 214",
+        "primarySource": false,
+        "sourceWork": "Hidâyat ar-Ruwât ilâ Takhrîj Aḥâdîth al-Maṣâbîḥ wa-l-Mishkât",
+        "author": "Muḥammad Nâṣir ad-Dîn al-Albânî",
+        "editionVolumePage": "Tome 1, page 214 (Éd. Dâr Ibn al-Qayyim)",
+        "quoteArOriginal": "«طلب العلم فريضة على كل مسلم»: صحيح... وزيادة «ولو بالصين»: باطلة.",
+        "quoteArVocalized": "«طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ»: صَحِيحٌ... وَزِيَادَةُ «وَلَوْ بِالصِّينِ»: بَاطِلَةٌ.",
+        "quoteArNormalized": "طلب العلم فريضة على كل مسلم صحيح وزيادة ولو بالصين باطلة",
+        "translationFr": "« La quête de la science est une obligation pour chaque musulman » : authentique... et l'ajout « même en Chine » : nul et non avenu (bâṭila).",
+        "translationStatus": "TRANSLATION_PROPOSED",
+        "citationStatus": "TO_BE_CHECKED",
+        "consultationDate": "2026-09-21",
+        "consultationUrl": "https://dorar.net/h/eBDJvqUi"
+      }
+    }
+  ],
+  "conclusionSheet": {
+    "established": {
+      "fr": "La formule « اطلبوا العلم ولو بالصين » est réellement attestée dans la littérature de transmission, mais sa voie célèbre par Abû ʿÂtika est sévèrement critiquée. Elle ne doit pas être présentée comme un hadith ṣaḥîḥ établi.",
+      "ar": "وردت عبارة «اطلبوا العلم ولو بالصين» في كتب الرواية، لكن أشهر أسانيدها يدور على أبي عاتكة وقد اشتد نقد المحدثين له، فلا يصح تقديمها للناس على أنها حديث صحيح ثابت.",
+      "evidenceIds": ["ev-uqayli-china", "ev-bayhaqi-china"]
+    },
+    "discussed": {
+      "fr": "Le degré technique exact appliqué à la formule varie selon les critiques : faiblesse sévère, bāṭil, ou mawḍûʿ chez certains. Cette divergence de terminologie ne transforme cependant pas la formule en hadith authentique.",
+      "ar": "اختلفت عبارات النقاد في الدرجة النهائية للرواية بين الضعف الشديد والبطلان والوضع عند بعضهم، لكن هذا الاختلاف لا يجعلها حديثاً صحيحاً.",
+      "evidenceIds": ["ev-bayhaqi-china", "ev-albani-talab-ilm-china"]
+    },
+    "notEstablished": {
+      "fr": "Qu’elle soit authentique simplement parce qu’elle est célèbre, fréquemment citée ou conforme à un sens général valorisant la recherche de la science.",
+      "ar": "لا يثبت الحديث بمجرد الشهرة أو كثرة التداول أو حسن المعنى.",
+      "evidenceIds": ["ev-uqayli-china", "ev-albani-talab-ilm-china"]
+    },
+    "primaryEvidences": [
+      "Al-ʿUqaylî — aḍ-Ḍuʿafâʾ al-Kabîr, 2/230",
+      "Al-Bayhaqî — Shuʿab al-Îmân / al-Madkhal",
+      "Al-Albânî — Hidâyat ar-Ruwât, p. 214"
+    ],
+    "salafUnderstanding": {
+      "fr": "Les critiques anciens documentés dans le dossier, notamment al-ʿUqaylî, ont signalé la faiblesse grave de sa voie célèbre.",
+      "ar": "ثبت عن عدد من نقاد الحديث المتقدمين نقد الطريق المشهور للرواية، ومن ذلك كلام العقيلي في أبي عاتكة.",
+      "evidenceIds": ["ev-uqayli-china"]
+    },
+    "scholarlyPositions": {
+      "fr": "Plusieurs critiques ont rejeté ou fortement affaibli l’attribution de « ولو بالصين ». La qualification précise varie, mais le dossier ne permet pas de la présenter comme ṣaḥîḥ.",
+      "ar": "رد عدد من النقاد أو ضعفوا بشدة نسبة «ولو بالصين»، وتنوعت عباراتهم بين شديد الضعف والباطل والموضوع، لكن لم يثبت تصحيحها.",
+      "evidenceIds": ["ev-uqayli-china", "ev-bayhaqi-china", "ev-albani-talab-ilm-china"]
+    },
+    "methodologicalPitfall": {
+      "fr": "Confondre véracité du sens et authenticité de l’attribution. Une phrase peut être vraie ou utile sans être une parole du Prophète ﷺ.",
+      "ar": "الخلط بين صحة المعنى وثبوت النسبة؛ فقد تكون العبارة صحيحة المعنى أو نافعة دون أن تكون من كلام النبي ﷺ."
+    },
+    "originalSources": [
+      "Al-ʿUqaylî, aḍ-Ḍuʿafâʾ al-Kabîr (2/230)",
+      "Al-Bayhaqî, Shuʿab al-Îmân et al-Madkhal ilâ as-Sunan",
+      "Al-Albânî, Hidâyat ar-Ruwât ilâ Takhrîj Aḥâdîth al-Maṣâbîḥ wa-l-Mishkât (p. 214)"
+    ],
+    "certaintyLevel": "FORTEMENT_ETABLI"
+  }
+}
