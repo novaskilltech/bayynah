@@ -45,6 +45,9 @@ jobs:
       - name: Run Security Gate Tests
         run: npx tsx tests/security.test.ts
 
+      - name: Run Scientific Governance & Back-office Tests
+        run: npx tsx tests/scientific-governance.test.ts
+
       - name: Typecheck TypeScript
         run: npx tsc --noEmit
 
