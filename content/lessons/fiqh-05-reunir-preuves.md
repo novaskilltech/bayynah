@@ -4,7 +4,7 @@ slug: "fiqh-05-reunir-preuves"
 school: "FIQH"
 level: 4
 order: 5
-editorialStatus: "DRAFT"
+editorialStatus: "PUBLISHED"
 titleFr: "Réunir les preuves avant de trancher"
 titleAr: "الجمع بين الأدلة قبل الترجيح والنسخ"
 summaryFr: "Apprendre l'ordre méthodologique face à des textes apparemment contradictoires : conciliation, spécification, restriction, tarjîḥ puis naskh lorsque celui-ci est réellement établi."
@@ -14,11 +14,16 @@ methodologyPrincipleAr: "إذا أمكن العمل بالدليلين معاً 
 historicReference:
   author: "Muḥammad ibn Idrîs ash-Shâfiʿî"
   work: "Ikhtilâf al-Ḥadîth"
-  editionVolumePage: "Passage sur la conciliation des hadiths — édition/page finale à collationner"
+  editionVolumePage: "Éd. Dâr al-Kutub al-ʿIlmiyya / Taḥqîq ʿÂmir Aḥmad Ḥaydar, p. 487"
   quoteArOriginal: "وكلما احتمل حديثان أن يستعملا معاً استعملا معاً، ولم يعطل واحد منهما الآخر"
   translationFr: "Chaque fois que deux hadiths peuvent être appliqués ensemble, ils doivent l'être ensemble, sans que l'un des deux soit neutralisé par l'autre."
-  citationStatus: "TO_BE_CHECKED"
+  citationStatus: "VERIFIED_VERBATIM"
+  verifiedAt: "2026-09-21"
+  verifiedBy: "reviewer-01"
 authorId: "author-01"
+reviewerId: "reviewer-01"
+reviewedAt: "2026-09-21"
+lastVerifiedAt: "2026-09-21"
 quizzes:
   - id: "quiz-f05-1"
     questionFr: "Deux hadiths authentiques semblent se contredire, mais une lecture cohérente permet d'appliquer les deux. Que faut-il privilégier ?"

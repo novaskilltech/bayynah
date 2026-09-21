@@ -4,7 +4,7 @@ slug: "fiqh-01-dalil-au-hukm"
 school: "FIQH"
 level: 2
 order: 1
-editorialStatus: "DRAFT"
+editorialStatus: "PUBLISHED"
 titleFr: "Du dalîl au ḥukm : trouver un texte ne suffit pas"
 titleAr: "من الدليل إلى الحكم: العثور على النص لا يكفي"
 summaryFr: "Comprendre qu'entre la découverte d'un verset ou d'un hadith et la formulation d'un jugement juridique se trouvent plusieurs étapes méthodologiques."
@@ -12,6 +12,9 @@ summaryAr: "فهم المراحل المنهجية الفاصلة بين الع�
 methodologyPrincipleFr: "Une preuve ne produit un jugement qu'après examen de son authenticité, de sa signification, de son champ d'application et des autres textes du sujet."
 methodologyPrincipleAr: "لا يُستخرج الحكم من الدليل حتى يُنظر في ثبوته ودلالته ومحل تطبيقه وسائر نصوص الباب."
 authorId: "author-01"
+reviewerId: "reviewer-01"
+reviewedAt: "2026-09-21"
+lastVerifiedAt: "2026-09-21"
 quizzes:
   - id: "quiz-f01-1"
     questionFr: "Vous trouvez un hadith authentique contenant un ordre. Quelle conclusion pouvez-vous tirer immédiatement ?"

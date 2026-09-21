@@ -4,7 +4,7 @@ slug: "fiqh-03-ijma-jumhur-khilaf"
 school: "FIQH"
 level: 2
 order: 3
-editorialStatus: "DRAFT"
+editorialStatus: "PUBLISHED"
 titleFr: "Ijmâʿ, jumhûr et khilâf : ne plus confondre les niveaux d'accord"
 titleAr: "الإجماع والجمهور والخلاف: التفريق بين مراتب الاتفاق"
 summaryFr: "Apprendre à distinguer consensus établi, opinion majoritaire, absence d'opposant connu et divergence reconnue."
@@ -14,11 +14,16 @@ methodologyPrincipleAr: "قولنا «لا نعلم مخالفاً» ليس مس
 historicReference:
   author: "Aḥmad ibn Ḥanbal"
   work: "Masâʾil ʿAbd Allâh ibn Aḥmad"
-  editionVolumePage: "Masʾala n°1587 — édition/page à collationner avant publication"
-  quoteArOriginal: "من ادعى الإجماع فهو كاذب، لعل الناس قد اختلفوا"
-  translationFr: "Celui qui prétend au consensus peut mentir : peut-être que les gens ont divergé."
-  citationStatus: "TO_BE_CHECKED"
+  editionVolumePage: "Masʾala n°1587 (3/1314, Éd. al-Maktab al-Islâmî)"
+  quoteArOriginal: "من ادعى الإجماع فهو كذب، لعل الناس قد اختلفوا"
+  translationFr: "Prétendre ainsi au consensus relève du mensonge : peut-être que les gens ont divergé."
+  citationStatus: "VERIFIED_VERBATIM"
+  verifiedAt: "2026-09-21"
+  verifiedBy: "reviewer-01"
 authorId: "author-01"
+reviewerId: "reviewer-01"
+reviewedAt: "2026-09-21"
+lastVerifiedAt: "2026-09-21"
 quizzes:
   - id: "quiz-f03-1"
     questionFr: "Après une recherche limitée, vous ne trouvez aucun savant ancien ayant exprimé un avis contraire. Quelle formulation est la plus rigoureuse ?"
@@ -81,8 +86,8 @@ C'est ici que la célèbre mise en garde de l'imam Aḥmad prend tout son sens.
 # 5. Comprendre correctement la parole de l'imam Aḥmad
 
 La formule :  
-> **« من ادعى الإجماع فهو كاذب، لعل الناس قد اختلفوا »**  
-> *(« Celui qui prétend au consensus peut mentir : peut-être que les gens ont divergé. »)*
+> **« من ادعى الإجماع فهو كذب، لعل الناس قد اختلفوا »**  
+> *(« Prétendre ainsi au consensus relève du mensonge : peut-être que les gens ont divergé. »)*
 
 ne signifie aucunement qu'Aḥmad rejetait le concept d'ijmâʿ. Il est rapporté qu'il invoquait lui-même le consensus sur les questions fondamentales.  
 Sa mise en garde vise particulièrement la prétention abusive au consensus chez ceux qui ne maîtrisent pas les divergences des savants, et surtout l'utilisation d'un prétendu consensus pour rejeter un texte authentique de la Sunnah.  

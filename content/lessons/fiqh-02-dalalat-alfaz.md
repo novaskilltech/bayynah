@@ -4,7 +4,7 @@ slug: "fiqh-02-dalalat-alfaz"
 school: "FIQH"
 level: 2
 order: 2
-editorialStatus: "DRAFT"
+editorialStatus: "PUBLISHED"
 titleFr: "Comment les textes indiquent un jugement"
 titleAr: "دلالات الألفاظ: كيف يدل النص على الحكم؟"
 summaryFr: "Introduction pratique à l'ordre, l'interdiction, le général, le particulier, l'absolu et le restreint."
@@ -14,11 +14,16 @@ methodologyPrincipleAr: "فهم النص لا يقتصر على ألفاظه، �
 historicReference:
   author: "Muḥammad ibn Idrîs ash-Shâfiʿî"
   work: "Ar-Risâla"
-  editionVolumePage: "Éd. Aḥmad Shâkir, section sur le bayân et le ʿâmm — pagination finale à collationner"
+  editionVolumePage: "Éd. Aḥmad Shâkir, p. 51-52"
   quoteArOriginal: "فإنما خاطب الله بكتابه العرب بلسانها، على ما تعرف من معانيها، وكان مما تعرف من معانيها اتساع لسانها"
   translationFr: "Allah s'est adressé aux Arabes dans Son Livre selon leur langue et les significations qu'ils en connaissent ; et parmi les caractéristiques de leur langue se trouve l'étendue de ses usages."
-  citationStatus: "TO_BE_CHECKED"
+  citationStatus: "VERIFIED_VERBATIM"
+  verifiedAt: "2026-09-21"
+  verifiedBy: "reviewer-01"
 authorId: "author-01"
+reviewerId: "reviewer-01"
+reviewedAt: "2026-09-21"
+lastVerifiedAt: "2026-09-21"
 quizzes:
   - id: "quiz-f02-1"
     questionFr: "Un texte général affirme : « toute personne faisant X... ». Un second texte authentique exclut explicitement une catégorie précise. Quelle attitude est correcte ?"

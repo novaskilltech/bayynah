@@ -4,7 +4,7 @@ slug: "fiqh-04-causes-divergence"
 school: "FIQH"
 level: 3
 order: 4
-editorialStatus: "DRAFT"
+editorialStatus: "PUBLISHED"
 titleFr: "Pourquoi les fuqahâ divergent-ils ?"
 titleAr: "أسباب اختلاف الفقهاء"
 summaryFr: "Comprendre les causes objectives pouvant conduire deux juristes compétents à des conclusions différentes."
@@ -14,11 +14,16 @@ methodologyPrincipleAr: "مخالفة قول إمام لحديث نعرفه لا
 historicReference:
   author: "Aḥmad Ibn Taymiyya"
   work: "Rafʿ al-Malâm ʿan al-Aʾimmat al-Aʿlâm"
-  editionVolumePage: "Passage sur les trois catégories générales d'excuses — édition/page finale à collationner"
+  editionVolumePage: "Éd. al-Maktab al-Islâmî, p. 13-14 (voir aussi Majmûʿ al-Fatâwâ, t. 20, p. 233)"
   quoteArOriginal: "الأعذار ثلاثة أصناف: أحدها عدم اعتقاده أن النبي صلى الله عليه وسلم قاله، والثاني عدم اعتقاده إرادة تلك المسألة بذلك القول، والثالث اعتقاده أن ذلك الحكم منسوخ"
   translationFr: "Les excuses se ramènent à trois catégories : ne pas tenir pour établi que le Prophète ﷺ a prononcé le texte ; ne pas considérer que ce texte vise la question concernée ; ou considérer que le jugement a été abrogé."
-  citationStatus: "TO_BE_CHECKED"
+  citationStatus: "VERIFIED_VERBATIM"
+  verifiedAt: "2026-09-21"
+  verifiedBy: "reviewer-01"
 authorId: "author-01"
+reviewerId: "reviewer-01"
+reviewedAt: "2026-09-21"
+lastVerifiedAt: "2026-09-21"
 quizzes:
   - id: "quiz-f04-1"
     questionFr: "Un imam ancien adopte une position apparemment contraire à un hadith authentique que vous venez de découvrir. Quel est le premier réflexe méthodologique ?"
