@@ -4,11 +4,61 @@ import { getDictionary } from "@/lib/dictionary";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import PilotNoticeFooter from "@/components/PilotNoticeFooter";
 
-export const metadata: Metadata = {
-  title: "تَبَيُّن (Tabayyun) — Apprendre à vérifier avant d’affirmer",
-  description:
-    "Plateforme pédagogique destinée à développer l’esprit critique dans l’étude de la religion selon la méthodologie d’Ahl as-Sunnah wa-l-Jamâʿa",
-};
+const SITE_URL = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://bayynah-two.vercel.app");
+
+export async function generateMetadata({ params }: RootLayoutProps): Promise<Metadata> {
+  const { locale } = await params;
+  const isArabic = locale === "ar";
+  const title = isArabic
+    ? "تَبَيُّن — تعلّم كيف تتثبت قبل أن تجزم"
+    : "تَبَيُّن (Tabayyun) — Apprendre à vérifier avant d’affirmer";
+  const description = isArabic
+    ? "منصة بيداغوجية لتنمية التفكير النقدي والتثبت من الدعاوى الدينية قبل قبولها أو نشرها أو الرد عليها."
+    : "Plateforme pédagogique pour développer l’esprit critique et vérifier une affirmation religieuse avant de l’accepter, la transmettre ou la réfuter.";
+  const socialImage = `/${locale}/opengraph-image`;
+  const twitterImage = `/${locale}/twitter-image`;
+
+  return {
+    metadataBase: SITE_URL,
+    applicationName: "TABAYYUN",
+    title: {
+      default: title,
+      template: `%s — TABAYYUN`,
+    },
+    description,
+    authors: [{ name: "TABAYYUN" }],
+    creator: "TABAYYUN",
+    publisher: "TABAYYUN",
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      type: "website",
+      siteName: "TABAYYUN",
+      locale: isArabic ? "ar_AR" : "fr_FR",
+      alternateLocale: isArabic ? ["fr_FR"] : ["ar_AR"],
+      title,
+      description,
+      images: [
+        {
+          url: socialImage,
+          width: 1200,
+          height: 630,
+          alt: isArabic
+            ? "تَبَيُّن — تعلّم كيف تتثبت قبل أن تجزم"
+            : "TABAYYUN — Apprendre à vérifier avant d’affirmer",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [twitterImage],
+    },
+  };
+}
 
 interface RootLayoutProps {
   children: React.ReactNode;
