@@ -51,6 +51,9 @@ jobs:
       - name: Run Git/PR Workflow & Integrity Tests
         run: npx tsx tests/github-workflow.test.ts
 
+      - name: Run Pedagogical Telemetry & Glossary Tests
+        run: npx tsx tests/pedagogical-telemetry.test.ts
+
       - name: Typecheck TypeScript
         run: npx tsc --noEmit
 

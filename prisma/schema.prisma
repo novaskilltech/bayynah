@@ -393,4 +393,24 @@ model AuditLog {
   @@index([action, createdAt])
 }
 
+// ==========================================
+// TÉLÉMÉTRIE PÉDAGOGIQUE ANONYME (PHASE 8)
+// Modèle append-only, zéro PII, zéro IP
+// ==========================================
+model PedagogicalMetric {
+  id           String   @id @default(cuid())
+  sessionId    String   // Identifiant de session client éphémère (UUID)
+  eventType    String   // DIAGNOSTIC_STARTED, LESSON_OPENED, LESSON_COMPLETED, INQUIRY_STEP_ANSWERED, INQUIRY_ABANDONED, GLOSSARY_OPENED, FINAL_ASSESSMENT_COMPLETED
+  resourceType String?  // "lesson", "inquiry", "diagnostic", "final_assessment", "glossary"
+  resourceId   String?  // Ex: "critique-01", "enquete-01", "dalala"
+  stepNumber   Int?     // Numéro d'étape dans l'enquête ou l'exercice
+  durationMs   Int?     // Temps passé en millisecondes sur l'étape/ressource
+  metadata     Json?    // Métadonnées techniques non-sensibles
+  createdAt    DateTime @default(now())
+
+  @@index([sessionId])
+  @@index([eventType, createdAt])
+  @@index([resourceType, resourceId])
+}
+
 
