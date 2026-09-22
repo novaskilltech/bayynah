@@ -7,7 +7,6 @@
  * Toute proposition de modification passe obligatoirement par une branche dédiée et une Pull Request.
  */
 
-import crypto from "crypto";
 import matter from "gray-matter";
 import { LessonFrontmatterSchema } from "./schemas/lesson.schema";
 import { InquirySchema } from "./schemas/inquiry.schema";
@@ -22,19 +21,20 @@ import {
   InquiryEvidenceItem,
   DiffEntry,
 } from "./scientific-governance";
-import { getCanonicalScientificContent } from "./canonical-content";
+import { getCanonicalScientificContentFromGitHub } from "./canonical-content";
+import { getGitHubAuthHeader } from "./github-auth";
 import { recordAuditEvent } from "./audit-logger";
 
 export interface ProposalRequest {
   type: "lesson" | "inquiry";
   slug: string;
-  originalContent?: Record<string, unknown>; // Ignoré par le serveur (chargement canonique strict)
+  originalContent?: Record<string, unknown>; // Ignoré par le serveur (chargement canonique strict depuis GitHub main)
   proposedContent: Record<string, unknown>;
   checklistAnswers: Record<string, boolean>;
   reviewerNotes?: string;
   userId: string;
   userEmail: string;
-  baseCommitSha?: string;
+  baseFileSha: string; // OBLIGATOIRE (Invariant Stale-Edit)
 }
 
 export interface ProposalResult {
@@ -48,6 +48,10 @@ export interface ProposalResult {
   error?: string;
 }
 
+export const REQUIRED_SCIENTIFIC_CHECKS = [
+  "Scientific & Technical Integrity Check",
+] as const;
+
 export interface PullRequestChecksResult {
   prNumber: number;
   state: "open" | "closed";
@@ -59,61 +63,6 @@ export interface PullRequestChecksResult {
     status: string;
     conclusion: string | null;
   }>;
-}
-
-/**
- * Obtient le header d'authentification pour l'API GitHub.
- * Supporte une GitHub App (RS256 JWT) ou un GITHUB_TOKEN standard.
- */
-async function getGitHubAuthHeader(): Promise<string> {
-  const appId = process.env.GITHUB_APP_ID;
-  const privateKey = process.env.GITHUB_APP_PRIVATE_KEY;
-  const installationId = process.env.GITHUB_APP_INSTALLATION_ID;
-
-  if (appId && privateKey && installationId) {
-    const now = Math.floor(Date.now() / 1000);
-    const payload = {
-      iat: now - 60,
-      exp: now + 600,
-      iss: appId,
-    };
-
-    const formattedKey = privateKey.replace(/\\n/g, "\n");
-    const header = { alg: "RS256", typ: "JWT" };
-    const b64Header = Buffer.from(JSON.stringify(header)).toString("base64url");
-    const b64Payload = Buffer.from(JSON.stringify(payload)).toString("base64url");
-    const signInput = `${b64Header}.${b64Payload}`;
-
-    const signer = crypto.createSign("RSA-SHA256");
-    signer.update(signInput);
-    const signature = signer.sign(formattedKey, "base64url");
-    const jwt = `${signInput}.${signature}`;
-
-    const tokenRes = await fetch(
-      `https://api.github.com/app/installations/${installationId}/access_tokens`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${jwt}`,
-          Accept: "application/vnd.github.v3+json",
-        },
-      }
-    );
-
-    if (!tokenRes.ok) {
-      throw new Error(`Échec génération token GitHub App : ${tokenRes.status} ${tokenRes.statusText}`);
-    }
-
-    const tokenData = await tokenRes.json();
-    return `Bearer ${tokenData.token}`;
-  }
-
-  const token = process.env.GITHUB_TOKEN;
-  if (token) {
-    return `Bearer ${token}`;
-  }
-
-  return "";
 }
 
 /**
@@ -131,8 +80,13 @@ export async function createScientificProposalPR(
     reviewerNotes,
     userId,
     userEmail,
-    baseCommitSha,
+    baseFileSha,
   } = params;
+
+  // 0. Vérification obligatoire du paramètre baseFileSha (Invariant Stale-Edit)
+  if (!baseFileSha || typeof baseFileSha !== "string" || !baseFileSha.trim()) {
+    throw new Error("Paramètre baseFileSha obligatoire pour protéger contre les modifications concurrentes.");
+  }
 
   // 1. Validation de la checklist scientifique en 11 points
   const checklistCheck = validateChecklistAnswers(checklistAnswers);
@@ -144,14 +98,14 @@ export async function createScientificProposalPR(
     );
   }
 
-  // 2. Chargement canonique serveur (Sanctuaire Git & Frontière de confiance)
-  const canonical = getCanonicalScientificContent(type, slug);
+  // 2. Chargement canonique depuis GitHub main (Source de Vérité Absolue)
+  const canonical = await getCanonicalScientificContentFromGitHub(type, slug);
   const originalContent = canonical.content;
 
-  // Détection des modifications concurrentes (Stale Edit / 409)
-  if (baseCommitSha && baseCommitSha !== canonical.contentHash) {
+  // Détection des modifications concurrentes (Stale Edit / 409) basée sur le SHA Git réel
+  if (baseFileSha !== canonical.gitBlobSha) {
     const err = new Error(
-      "Conflit de concurrence (Stale Edit) : le contenu a été modifié sur le serveur depuis l'ouverture de votre session. Veuillez recharger la page."
+      "Conflit de concurrence (Stale Edit) : le fichier a été modifié sur GitHub main depuis l'ouverture de votre session. Veuillez recharger la page."
     );
     (err as unknown as { code: string }).code = "STALE_EDIT_CONFLICT";
     throw err;
@@ -459,6 +413,9 @@ export async function getPullRequestChecks(
   const repoName = process.env.GITHUB_REPOSITORY_NAME || "bayynah";
 
   if (!authHeader) {
+    if (process.env.NODE_ENV === "production") {
+      throw new Error("GitHub CI verification unavailable en production sans identifiants valides.");
+    }
     // Mode dev/test : renvoyer un statut simulé
     return {
       prNumber: pullRequestNumber,
@@ -505,12 +462,25 @@ export async function getPullRequestChecks(
   const checkRuns = checksData.check_runs || [];
 
   let checkStatus: "PENDING" | "RUNNING" | "SUCCESS" | "FAILED" = "SUCCESS";
+
   if (checkRuns.length === 0) {
     checkStatus = "PENDING";
-  } else if (checkRuns.some((c: { conclusion: string }) => c.conclusion === "failure" || c.conclusion === "timed_out")) {
-    checkStatus = "FAILED";
   } else if (checkRuns.some((c: { status: string }) => c.status !== "completed")) {
     checkStatus = "RUNNING";
+  } else {
+    // Tous les check runs sont terminés (completed)
+    // a. Vérifier la présence obligatoire de tous les checks scientifiques requis
+    const checkNames = new Set(checkRuns.map((c: { name: string }) => c.name));
+    const missingRequired = REQUIRED_SCIENTIFIC_CHECKS.some((reqName) => !checkNames.has(reqName));
+
+    if (missingRequired) {
+      checkStatus = prData.state === "open" ? "PENDING" : "FAILED";
+    } else {
+      // b. Règle de conclusion stricte : TOUS les checks doivent être "success"
+      // Toute autre conclusion terminale (failure, timed_out, cancelled, action_required, startup_failure, stale, neutral, skipped, null) -> FAILED
+      const allSuccess = checkRuns.every((c: { conclusion: string | null }) => c.conclusion === "success");
+      checkStatus = allSuccess ? "SUCCESS" : "FAILED";
+    }
   }
 
   return {

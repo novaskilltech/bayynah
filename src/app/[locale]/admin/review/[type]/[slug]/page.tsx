@@ -62,7 +62,7 @@ export default async function AdminReviewPage({ params }: PageProps) {
   }
 
   const originalContent = canonical.content;
-  const baseCommitSha = canonical.contentHash;
+  const baseFileSha = canonical.gitBlobSha;
 
   // 3. Récupération ou génération du token CSRF
   const cookieStore = await cookies();
@@ -107,7 +107,7 @@ export default async function AdminReviewPage({ params }: PageProps) {
         type={type as "lesson" | "inquiry"}
         slug={slug}
         initialContent={originalContent}
-        baseCommitSha={baseCommitSha}
+        baseFileSha={baseFileSha}
         locale={locale}
         csrfToken={csrfToken}
         userRole={user.role}

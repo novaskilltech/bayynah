@@ -8,6 +8,7 @@ import {
   EvidenceRecord,
 } from "../src/lib/scientific-governance";
 import { createScientificProposalPR } from "../src/lib/github-service";
+import { getCanonicalScientificContent } from "../src/lib/canonical-content";
 
 console.log("🔬 Démarrage de la suite de tests — Phase 7 : Gouvernance Scientifique & Workflow Git/PR...");
 
@@ -233,6 +234,8 @@ async function testGithubPRProposalService() {
     summaryFr: "Comprendre rigoureusement la distinction entre affirmation et preuve.",
   };
 
+  const canonical = getCanonicalScientificContent("lesson", "critique-01-affirmation-vs-preuve");
+
   // Création d'une proposition légitime
   const result = await createScientificProposalPR({
     type: "lesson",
@@ -243,6 +246,7 @@ async function testGithubPRProposalService() {
     reviewerNotes: "Précision philologique apportée au résumé français.",
     userId: "reviewer-user-456",
     userEmail: "reviewer@tabayyun.org",
+    baseFileSha: canonical.gitBlobSha,
   });
 
   assert.strictEqual(result.success, true);
@@ -261,6 +265,7 @@ async function testGithubPRProposalService() {
         checklistAnswers: { ...completeChecklist, check_primary_source: false },
         userId: "reviewer-user-456",
         userEmail: "reviewer@tabayyun.org",
+        baseFileSha: canonical.gitBlobSha,
       });
     },
     /Checklist scientifique incomplète/,
@@ -281,6 +286,8 @@ async function testZodPreValidationGate() {
     completeChecklist[item.id] = true;
   }
 
+  const canonical = getCanonicalScientificContent("lesson", "critique-01-affirmation-vs-preuve");
+
   // Contenu corrompu (manque des champs obligatoires du frontmatter)
   const invalidLesson = {
     id: "invalid-lesson",
@@ -297,6 +304,7 @@ async function testZodPreValidationGate() {
         checklistAnswers: completeChecklist,
         userId: "reviewer-123",
         userEmail: "rev@tabayyun.org",
+        baseFileSha: canonical.gitBlobSha,
       });
     },
     /Validation Zod de la leçon échouée/,

@@ -24,7 +24,7 @@ interface ReviewEditorProps {
   type: "lesson" | "inquiry";
   slug: string;
   initialContent: Record<string, unknown>;
-  baseCommitSha: string;
+  baseFileSha: string;
   locale: string;
   csrfToken: string;
   userRole: string;
@@ -34,7 +34,7 @@ export default function ReviewEditor({
   type,
   slug,
   initialContent,
-  baseCommitSha,
+  baseFileSha,
   locale,
   csrfToken,
   userRole: _userRole,
@@ -140,7 +140,7 @@ export default function ReviewEditor({
           proposedContent,
           checklistAnswers,
           reviewerNotes,
-          baseCommitSha,
+          baseFileSha,
         }),
       });
 

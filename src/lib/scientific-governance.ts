@@ -587,3 +587,27 @@ export function computeScientificDiff(
 
   return diffs;
 }
+
+/**
+ * Contrôle d'accès RBAC pour la soumission de propositions scientifiques.
+ * Seuls les utilisateurs avec le rôle REVIEWER ou ADMIN sont autorisés.
+ */
+export function validateAdminProposalAccess(user: { role?: string } | null): {
+  allowed: boolean;
+  status: number;
+  error?: string;
+} {
+  if (!user) {
+    return { allowed: false, status: 401, error: "Authentification requise." };
+  }
+
+  if (user.role !== "REVIEWER" && user.role !== "ADMIN") {
+    return {
+      allowed: false,
+      status: 403,
+      error: "Accès refusé : rôle REVIEWER ou ADMIN requis pour soumettre une proposition scientifique.",
+    };
+  }
+
+  return { allowed: true, status: 200 };
+}

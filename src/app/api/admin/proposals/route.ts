@@ -3,6 +3,7 @@ import { getCurrentUser } from "@/lib/auth";
 import { validateMutationRequest } from "@/lib/csrf";
 import { createScientificProposalPR, ProposalRequest } from "@/lib/github-service";
 import { checkRateLimit } from "@/lib/rate-limit";
+import { validateAdminProposalAccess } from "@/lib/scientific-governance";
 
 export async function POST(req: NextRequest) {
   try {
@@ -10,15 +11,9 @@ export async function POST(req: NextRequest) {
 
     // 1. Contrôle d'accès RBAC : seuls REVIEWER et ADMIN ont accès aux propositions scientifiques
     const user = await getCurrentUser();
-    if (!user) {
-      return NextResponse.json({ error: "Authentification requise." }, { status: 401 });
-    }
-
-    if (user.role !== "REVIEWER" && user.role !== "ADMIN") {
-      return NextResponse.json(
-        { error: "Accès refusé : rôle REVIEWER ou ADMIN requis pour soumettre une proposition scientifique." },
-        { status: 403 }
-      );
+    const accessCheck = validateAdminProposalAccess(user);
+    if (!accessCheck.allowed || !user) {
+      return NextResponse.json({ error: accessCheck.error }, { status: accessCheck.status });
     }
 
     // 2. Rate limiting spécifique aux propositions (10 propositions par heure par utilisateur et IP)
@@ -44,12 +39,12 @@ export async function POST(req: NextRequest) {
       proposedContent,
       checklistAnswers,
       reviewerNotes,
-      baseCommitSha,
+      baseFileSha,
     } = body;
 
-    if (!type || !slug || !proposedContent || !checklistAnswers) {
+    if (!type || !slug || !proposedContent || !checklistAnswers || !baseFileSha) {
       return NextResponse.json(
-        { error: "Champs obligatoires manquants (type, slug, proposedContent, checklistAnswers)." },
+        { error: "Champs obligatoires manquants (type, slug, proposedContent, checklistAnswers, baseFileSha)." },
         { status: 400 }
       );
     }
@@ -70,7 +65,7 @@ export async function POST(req: NextRequest) {
       reviewerNotes,
       userId: user.id,
       userEmail: user.email,
-      baseCommitSha,
+      baseFileSha,
     };
 
     const result = await createScientificProposalPR(proposalParams);
