@@ -10,6 +10,7 @@ import {
 import { EvidenceItem } from "@/types/evidence";
 import EvidenceDrawer from "./EvidenceDrawer";
 import ConclusionSheetView from "./ConclusionSheetView";
+import { usePedagogicalTracker } from "@/lib/usePedagogicalTracker";
 import {
   HelpCircle,
   CheckCircle2,
@@ -88,6 +89,13 @@ export default function InquiryEngine({ inquiry, locale }: InquiryEngineProps) {
   const currentStep = steps[currentStepIndex];
   const isLastStep = currentStepIndex === steps.length - 1;
 
+  // Initialisation du tracker de télémétrie pédagogique pour l'enquête
+  const { trackInquiryStep, trackInquiryComplete } = usePedagogicalTracker({
+    resourceType: "inquiry",
+    resourceId: inquiry.id,
+    autoTrackOpen: true,
+  });
+
   // Sélection et validation d'une option
   const handleSelectOption = (index: number) => {
     const option = currentStep.options[index];
@@ -110,6 +118,14 @@ export default function InquiryEngine({ inquiry, locale }: InquiryEngineProps) {
     } catch {
       // Ignorer si indisponible
     }
+
+    // Télémétrie : mesure de la réponse à l'étape
+    const attemptsForThisStep = attempts.filter((a) => a.stepNumber === currentStep.stepNumber);
+    trackInquiryStep(currentStep.stepNumber, {
+      quality: option.quality,
+      methodologicalScore: option.methodologicalScore,
+      attemptNumber: attemptsForThisStep.length + 1,
+    });
 
     // Gestion de la politique de déblocage des preuves
     const policy: RevealPolicy = (currentStep.revealPolicy as RevealPolicy) || "AFTER_ANSWER";
@@ -143,6 +159,15 @@ export default function InquiryEngine({ inquiry, locale }: InquiryEngineProps) {
 
     if (isLastStep) {
       setIsConclusionUnlocked(true);
+
+      // Télémétrie : complétion d'enquête
+      const totalPoints = attempts.reduce((acc, att) => acc + att.score, 0);
+      const lastOpt = selectedOption || currentStep.options[0];
+      trackInquiryComplete({
+        finalQuality: lastOpt.quality,
+        totalMethodologicalScore: totalPoints,
+        stepsCount: steps.length,
+      });
     } else {
       const nextIndex = currentStepIndex + 1;
       const nextStep = steps[nextIndex];

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FinalAssessmentScenario, AttestationData } from "@/types/skills";
 import {
   recordSkillAttempt,
@@ -14,6 +14,7 @@ import {
   evaluateAttestationEligibility,
 } from "@/lib/skills-calculator";
 import { SKILLS_METADATA } from "@/lib/skills-registry";
+import { sendTelemetryEvent } from "@/lib/usePedagogicalTracker";
 import AttestationCard from "./AttestationCard";
 import {
   Award,
@@ -50,6 +51,19 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
   const isArabic = locale === "ar";
   const currentScenario = scenarios[currentIndex];
   const progressPercent = Math.round(((currentIndex + 1) / scenarios.length) * 100);
+
+  const hasTrackedStartRef = useRef(false);
+  useEffect(() => {
+    if (!hasTrackedStartRef.current) {
+      hasTrackedStartRef.current = true;
+      sendTelemetryEvent({
+        eventType: "FINAL_ASSESSMENT_STARTED",
+        resourceType: "final_assessment",
+        resourceId: "evaluation-finale",
+        metadata: { totalQuestions: scenarios.length },
+      });
+    }
+  }, [scenarios.length]);
 
   const handleSelectOption = (optionId: string) => {
     if (showFeedback) return;
@@ -104,7 +118,10 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
       const legalAr =
         "هذه الإفادة تشهد بإتمام تدريب منهجي على التثبت العلمي وقواعد النقد وفق أصول أهل السنة والجماعة. ولا تُعد بحال من الأحوال إجازة رواية أو دراية، ولا تصريحاً بالفتوى والاجتهاد، ولا شهادة جامعية رسمية.";
 
+      let attType: "PARCOURS" | "MAITRISE_METHODOLOGIQUE" | "NONE" = "NONE";
+
       if (eligibility.eligibleForMasteryAttestation) {
+        attType = "MAITRISE_METHODOLOGIQUE";
         const uniqueId = `TAB-MAITRISE-${new Date().getFullYear()}-${Math.random()
           .toString(36)
           .substring(2, 7)
@@ -124,6 +141,7 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
           legalNoticeAr: legalAr,
         });
       } else if (eligibility.eligibleForPathAttestation) {
+        attType = "PARCOURS";
         const uniqueId = `TAB-PARCOURS-${new Date().getFullYear()}-${Math.random()
           .toString(36)
           .substring(2, 7)
@@ -143,6 +161,18 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
           legalNoticeAr: legalAr,
         });
       }
+
+      sendTelemetryEvent({
+        eventType: "FINAL_ASSESSMENT_COMPLETED",
+        resourceType: "final_assessment",
+        resourceId: "evaluation-finale",
+        metadata: {
+          finalScorePercent,
+          eligibleForAttestation:
+            eligibility.eligibleForMasteryAttestation || eligibility.eligibleForPathAttestation,
+          attestationType: attType,
+        },
+      });
 
       setIsCompleted(true);
     }

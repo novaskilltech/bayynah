@@ -54,6 +54,9 @@ jobs:
       - name: Run Pedagogical Telemetry & Glossary Tests
         run: npx tsx tests/pedagogical-telemetry.test.ts
 
+      - name: Run Pilot Funnel & Invariants Tests
+        run: npx tsx tests/pilot-funnel.test.ts
+
       - name: Typecheck TypeScript
         run: npx tsc --noEmit
 

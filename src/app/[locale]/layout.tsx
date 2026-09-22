@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 import { getDictionary } from "@/lib/dictionary";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import PilotNoticeFooter from "@/components/PilotNoticeFooter";
 
 export const metadata: Metadata = {
   title: "تَبَيُّن (Tabayyun) — Apprendre à vérifier avant d’affirmer",
@@ -71,6 +72,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
 
         <footer className="border-t border-sable-200 py-6 text-center text-xs text-sable-500 mt-16">
           <p>{dict.common.footer}</p>
+          <PilotNoticeFooter locale={locale} />
         </footer>
       </body>
     </html>

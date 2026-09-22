@@ -137,24 +137,32 @@ export default function GlossaryClientView({ terms, locale }: GlossaryClientView
                 </p>
 
                 {/* Analogie moderne */}
-                {term.analogyFr && (
+                {(isArabic ? term.analogyAr : term.analogyFr) && (
                   <div className="p-2.5 rounded-xl bg-vertProfond-50/70 border border-vertProfond-100 text-vertProfond-900 flex items-start gap-2 text-[11px] leading-relaxed">
                     <Lightbulb className="w-3.5 h-3.5 text-vertProfond-700 shrink-0 mt-0.5" />
                     <div>
                       <strong className="font-bold">{isArabic ? "مثال تقريبي:" : "Analogie :"}</strong>{" "}
-                      {term.analogyFr}
+                      {isArabic ? term.analogyAr : term.analogyFr}
                     </div>
                   </div>
                 )}
 
                 {/* Piège fréquent */}
-                {term.trapFr && (
+                {(isArabic ? term.trapAr : term.trapFr) && (
                   <div className="p-2.5 rounded-xl bg-amber-50/70 border border-amber-100 text-amber-900 flex items-start gap-2 text-[11px] leading-relaxed">
                     <AlertCircle className="w-3.5 h-3.5 text-amber-700 shrink-0 mt-0.5" />
                     <div>
                       <strong className="font-bold">{isArabic ? "المحذور الشائع:" : "Piège fréquent :"}</strong>{" "}
-                      {term.trapFr}
+                      {isArabic ? term.trapAr : term.trapFr}
                     </div>
+                  </div>
+                )}
+
+                {/* Sources de référence classiques */}
+                {term.sources && term.sources.length > 0 && (
+                  <div className="pt-2 text-[10px] text-sable-500 font-mono">
+                    <span className="font-bold text-sable-700">{isArabic ? "المصادر المعتمدة: " : "Sources : "}</span>
+                    <span>{term.sources.join(" • ")}</span>
                   </div>
                 )}
               </div>

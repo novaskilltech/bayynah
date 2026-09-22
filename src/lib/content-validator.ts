@@ -7,6 +7,7 @@ import { SKILLS_METADATA, LESSON_SKILLS_MAP, INQUIRY_STEP_SKILLS_MAP } from "./s
 import { RECOMMENDED_PREREQUISITES, LEARNING_PATH_LEVELS } from "./learning-path";
 import { MethodologicalSkill } from "../types/skills";
 import { DiagnosticQuestionSchema, FinalAssessmentScenarioSchema } from "./schemas/skills.schema";
+import { GlossaryFileSchema } from "./schemas/glossary.schema";
 
 /**
  * Validateur de contenu Tabayyun (Phase 2.1 & Phase 5 - Integrity Gate Étendu)
@@ -272,6 +273,34 @@ export function validateAllContent(): { valid: boolean; errors: string[] } {
     }
   } else {
     errors.push("[Évaluation Finale] Le fichier content/assessment/scenarios.json est introuvable.");
+  }
+
+  // 6. Valider le Lexique Méthodologique (Phase 8.1 - Integrity Gate)
+  const glossaryFile = path.join(process.cwd(), "content", "glossary", "terms.json");
+  if (fs.existsSync(glossaryFile)) {
+    try {
+      const json = JSON.parse(fs.readFileSync(glossaryFile, "utf-8"));
+      const result = GlossaryFileSchema.safeParse(json);
+      if (!result.success) {
+        errors.push("[Lexique Méthodologique] Erreur de validation Zod :\n" + JSON.stringify(result.error.format(), null, 2));
+      } else {
+        const termIds = new Set<string>();
+        for (const term of result.data) {
+          if (termIds.has(term.id)) {
+            errors.push(`[Lexique Méthodologique] Doublon d'identifiant de terme : ${term.id}`);
+          }
+          termIds.add(term.id);
+
+          if (term.editorialStatus === "PUBLISHED" && (!term.reviewerId || !term.reviewedAt)) {
+            errors.push(`[Lexique Méthodologique ${term.id}] Un terme PUBLISHED doit comporter reviewerId et reviewedAt.`);
+          }
+        }
+      }
+    } catch (err: unknown) {
+      errors.push(`[Lexique Méthodologique] Erreur de parsing JSON : ${err instanceof Error ? err.message : String(err)}`);
+    }
+  } else {
+    errors.push("[Lexique Méthodologique] Le fichier content/glossary/terms.json est introuvable.");
   }
 
   return {

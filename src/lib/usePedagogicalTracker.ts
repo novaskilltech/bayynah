@@ -1,48 +1,225 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
-import { TelemetryEvent } from "@/lib/telemetry";
 
-const SESSION_STORAGE_KEY = "tabayyun_pilot_session_id";
+const PILOT_SESSION_STORAGE_KEY = "tabayyun_pilot_session";
+const PILOT_OPT_OUT_KEY = "tabayyun_telemetry_opt_out";
+
+export interface StoredPilotSession {
+  pilotSessionId: string;
+  pilotSessionSignature: string;
+  expiresAt: number;
+}
+
+export type TelemetryClientPayload =
+  | {
+      eventType: "DIAGNOSTIC_STARTED";
+      resourceType?: "diagnostic";
+      resourceId?: string;
+      stepNumber?: number;
+      durationMs?: number;
+      metadata?: { questionCount?: number };
+    }
+  | {
+      eventType: "DIAGNOSTIC_COMPLETED";
+      resourceType?: "diagnostic";
+      resourceId?: string;
+      stepNumber?: number;
+      durationMs?: number;
+      metadata: { totalQuestions: number; correctAnswers: number; initialScorePercent: number };
+    }
+  | {
+      eventType: "LESSON_OPENED";
+      resourceType?: "lesson";
+      resourceId?: string;
+      stepNumber?: number;
+      durationMs?: number;
+      metadata?: { school?: string; level?: number };
+    }
+  | {
+      eventType: "LESSON_COMPLETED";
+      resourceType?: "lesson";
+      resourceId?: string;
+      stepNumber?: number;
+      durationMs?: number;
+      metadata: { quizScorePercent: number; passed: boolean };
+    }
+  | {
+      eventType: "INQUIRY_STARTED";
+      resourceType?: "inquiry";
+      resourceId?: string;
+      stepNumber?: number;
+      durationMs?: number;
+      metadata?: { certaintyLevelTarget?: string };
+    }
+  | {
+      eventType: "INQUIRY_STEP_ANSWERED";
+      resourceType?: "inquiry";
+      resourceId?: string;
+      stepNumber: number;
+      durationMs?: number;
+      metadata: {
+        quality: "INCORRECT" | "PREMATURE" | "ACCEPTABLE" | "BEST";
+        methodologicalScore: number;
+        attemptNumber: number;
+      };
+    }
+  | {
+      eventType: "INQUIRY_ABANDONED";
+      resourceType?: "inquiry";
+      resourceId?: string;
+      stepNumber?: number;
+      durationMs?: number;
+      metadata?: { lastCompletedStep?: number };
+    }
+  | {
+      eventType: "INQUIRY_COMPLETED";
+      resourceType?: "inquiry";
+      resourceId?: string;
+      stepNumber?: number;
+      durationMs?: number;
+      metadata: {
+        finalQuality: "INCORRECT" | "PREMATURE" | "ACCEPTABLE" | "BEST";
+        totalMethodologicalScore: number;
+        stepsCount: number;
+      };
+    }
+  | {
+      eventType: "FINAL_ASSESSMENT_STARTED";
+      resourceType?: "final_assessment";
+      resourceId?: string;
+      stepNumber?: number;
+      durationMs?: number;
+      metadata?: { totalQuestions?: number };
+    }
+  | {
+      eventType: "FINAL_ASSESSMENT_COMPLETED";
+      resourceType?: "final_assessment";
+      resourceId?: string;
+      stepNumber?: number;
+      durationMs?: number;
+      metadata: {
+        finalScorePercent: number;
+        eligibleForAttestation: boolean;
+        attestationType?: "PARCOURS" | "MAITRISE_METHODOLOGIQUE" | "NONE";
+      };
+    }
+  | {
+      eventType: "GLOSSARY_OPENED";
+      resourceType?: "glossary";
+      resourceId?: string;
+      stepNumber?: number;
+      durationMs?: number;
+      metadata: { termId: string; fromResource?: string };
+    };
 
 /**
- * Récupère ou génère un identifiant de session éphémère pour le pilote.
- * Stocké en sessionStorage (détruit dès la fermeture du navigateur).
+ * Vérifie si l'utilisateur a activé l'opt-out de la télémétrie pilote.
  */
-export function getOrCreatePilotSessionId(): string {
-  if (typeof window === "undefined") {
-    return "server-session";
-  }
-
+export function isTelemetryOptedOut(): boolean {
+  if (typeof window === "undefined") return false;
   try {
-    let sid = window.sessionStorage.getItem(SESSION_STORAGE_KEY);
-    if (!sid) {
-      // Générer un UUIDv4 simple
-      sid = "pilot_" + crypto.randomUUID();
-      window.sessionStorage.setItem(SESSION_STORAGE_KEY, sid);
-    }
-    return sid;
+    return (
+      window.localStorage.getItem(PILOT_OPT_OUT_KEY) === "true" ||
+      window.sessionStorage.getItem(PILOT_OPT_OUT_KEY) === "true"
+    );
   } catch {
-    return "memory_session_" + Math.random().toString(36).substring(2, 15);
+    return false;
   }
 }
 
 /**
- * Envoie un événement de télémétrie de manière asynchrone et non-bloquante.
+ * Active ou désactive l'opt-out de télémétrie.
  */
-export async function sendTelemetryEvent(
-  event: Omit<TelemetryEvent, "sessionId">
-): Promise<void> {
+export function setTelemetryOptOut(optOut: boolean): void {
   if (typeof window === "undefined") return;
+  try {
+    if (optOut) {
+      window.localStorage.setItem(PILOT_OPT_OUT_KEY, "true");
+      window.sessionStorage.setItem(PILOT_OPT_OUT_KEY, "true");
+      window.sessionStorage.removeItem(PILOT_SESSION_STORAGE_KEY);
+    } else {
+      window.localStorage.removeItem(PILOT_OPT_OUT_KEY);
+      window.sessionStorage.removeItem(PILOT_OPT_OUT_KEY);
+    }
+    window.dispatchEvent(new Event("tabayyun-telemetry-opt-out-changed"));
+  } catch {
+    // Ignore
+  }
+}
 
-  const sessionId = getOrCreatePilotSessionId();
-  const payload: TelemetryEvent = {
-    ...event,
-    sessionId,
-  };
+let inFlightSessionPromise: Promise<StoredPilotSession | null> | null = null;
+
+/**
+ * Récupère ou négocie une session pilote signée HMAC auprès du serveur.
+ */
+export async function getValidPilotSession(): Promise<StoredPilotSession | null> {
+  if (typeof window === "undefined") return null;
+  if (isTelemetryOptedOut()) return null;
 
   try {
-    // Utiliser fetch avec keepalive pour survivre aux navigations de page
+    const cached = window.sessionStorage.getItem(PILOT_SESSION_STORAGE_KEY);
+    if (cached) {
+      const parsed: StoredPilotSession = JSON.parse(cached);
+      // Validité avec marge de sécurité de 60 secondes
+      if (
+        parsed.pilotSessionId &&
+        parsed.pilotSessionSignature &&
+        parsed.expiresAt > Date.now() + 60_000
+      ) {
+        return parsed;
+      }
+    }
+  } catch {
+    // Ignore parsing error
+  }
+
+  if (inFlightSessionPromise) {
+    return inFlightSessionPromise;
+  }
+
+  inFlightSessionPromise = (async () => {
+    try {
+      const res = await fetch("/api/telemetry/session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+      if (!res.ok) return null;
+      const data = await res.json();
+      if (data.success && data.session) {
+        const session: StoredPilotSession = data.session;
+        window.sessionStorage.setItem(PILOT_SESSION_STORAGE_KEY, JSON.stringify(session));
+        return session;
+      }
+    } catch {
+      // Défaillance réseau silencieuse
+    } finally {
+      inFlightSessionPromise = null;
+    }
+    return null;
+  })();
+
+  return inFlightSessionPromise;
+}
+
+/**
+ * Envoie un événement de télémétrie pédagogique signé de façon asynchrone et non-bloquante.
+ */
+export async function sendTelemetryEvent(eventData: TelemetryClientPayload): Promise<void> {
+  if (typeof window === "undefined") return;
+  if (isTelemetryOptedOut()) return;
+
+  try {
+    const session = await getValidPilotSession();
+    if (!session) return;
+
+    const payload = {
+      ...eventData,
+      pilotSessionId: session.pilotSessionId,
+      pilotSessionSignature: session.pilotSessionSignature,
+      expiresAt: session.expiresAt,
+    };
+
     await fetch("/api/telemetry", {
       method: "POST",
       headers: {
@@ -52,7 +229,7 @@ export async function sendTelemetryEvent(
       keepalive: true,
     });
   } catch {
-    // Échec silencieux : la télémétrie ne doit jamais bloquer ou alerter l'utilisateur
+    // Échec silencieux garanti : la télémétrie n'interrompt jamais l'expérience d'apprentissage
   }
 }
 
@@ -63,7 +240,7 @@ export interface UsePedagogicalTrackerOptions {
 }
 
 /**
- * Hook React pour mesurer les temps passés, les étapes d'enquête et les interactions.
+ * Hook React pour mesurer le parcours pédagogique sur les 11 événements canoniques.
  */
 export function usePedagogicalTracker({
   resourceType,
@@ -74,8 +251,9 @@ export function usePedagogicalTracker({
   const lastStepTimeRef = useRef<number | null>(null);
   const currentStepRef = useRef<number>(0);
   const isCompletedRef = useRef<boolean>(false);
+  const hasInteractedRef = useRef<boolean>(false);
 
-  // 1. Événement d'ouverture automatique
+  // 1. Événement d'ouverture automatique (avec typage strict par type de ressource)
   useEffect(() => {
     const now = Date.now();
     startTimeRef.current = now;
@@ -83,37 +261,74 @@ export function usePedagogicalTracker({
     isCompletedRef.current = false;
 
     if (autoTrackOpen) {
-      let eventType: TelemetryEvent["eventType"] = "LESSON_OPENED";
-      if (resourceType === "diagnostic") eventType = "DIAGNOSTIC_STARTED";
-      else if (resourceType === "inquiry") eventType = "LESSON_OPENED"; // ou étape 0
-
-      sendTelemetryEvent({
-        eventType,
-        resourceType,
-        resourceId,
-        stepNumber: 0,
-        durationMs: 0,
-      });
+      if (resourceType === "diagnostic") {
+        sendTelemetryEvent({
+          eventType: "DIAGNOSTIC_STARTED",
+          resourceType: "diagnostic",
+          resourceId,
+          stepNumber: 0,
+          durationMs: 0,
+        });
+      } else if (resourceType === "inquiry") {
+        sendTelemetryEvent({
+          eventType: "INQUIRY_STARTED",
+          resourceType: "inquiry",
+          resourceId,
+          stepNumber: 0,
+          durationMs: 0,
+        });
+      } else if (resourceType === "lesson") {
+        sendTelemetryEvent({
+          eventType: "LESSON_OPENED",
+          resourceType: "lesson",
+          resourceId,
+          stepNumber: 0,
+          durationMs: 0,
+        });
+      } else if (resourceType === "final_assessment") {
+        sendTelemetryEvent({
+          eventType: "FINAL_ASSESSMENT_STARTED",
+          resourceType: "final_assessment",
+          resourceId,
+          stepNumber: 0,
+          durationMs: 0,
+        });
+      }
     }
 
-    // 2. Gestion de l'abandon en cas de démontage sans complétion
+    // 2. Gestion de l'abandon : uniquement si l'enquête a réellement démarré avec interaction
+    // (évite tout faux positif lié au double-mount de React StrictMode ou aux rebonds immédiats)
     return () => {
-      if (!isCompletedRef.current && resourceType === "inquiry") {
+      if (
+        !isCompletedRef.current &&
+        resourceType === "inquiry" &&
+        hasInteractedRef.current &&
+        currentStepRef.current > 0
+      ) {
         const totalDuration = startTimeRef.current ? Date.now() - startTimeRef.current : 0;
         sendTelemetryEvent({
           eventType: "INQUIRY_ABANDONED",
-          resourceType,
+          resourceType: "inquiry",
           resourceId,
           stepNumber: currentStepRef.current,
           durationMs: totalDuration,
+          metadata: { lastCompletedStep: currentStepRef.current },
         });
       }
     };
   }, [resourceType, resourceId, autoTrackOpen]);
 
-  // 3. Suivi du passage d'étape
-  const trackStepAnswered = useCallback(
-    (stepNumber: number, metadata?: Record<string, unknown>) => {
+  // 3. Suivi d'une réponse à une étape d'enquête
+  const trackInquiryStep = useCallback(
+    (
+      stepNumber: number,
+      metadata: {
+        quality: "INCORRECT" | "PREMATURE" | "ACCEPTABLE" | "BEST";
+        methodologicalScore: number;
+        attemptNumber: number;
+      }
+    ) => {
+      hasInteractedRef.current = true;
       const now = Date.now();
       const last = lastStepTimeRef.current ?? now;
       const stepDuration = now - last;
@@ -122,52 +337,79 @@ export function usePedagogicalTracker({
 
       sendTelemetryEvent({
         eventType: "INQUIRY_STEP_ANSWERED",
-        resourceType,
+        resourceType: "inquiry",
         resourceId,
         stepNumber,
         durationMs: stepDuration,
         metadata,
       });
     },
-    [resourceType, resourceId]
+    [resourceId]
   );
 
-  // 4. Suivi de la complétion
-  const trackCompleted = useCallback(
-    (metadata?: Record<string, unknown>) => {
+  // 4. Suivi de la complétion d'enquête
+  const trackInquiryComplete = useCallback(
+    (metadata: {
+      finalQuality: "INCORRECT" | "PREMATURE" | "ACCEPTABLE" | "BEST";
+      totalMethodologicalScore: number;
+      stepsCount: number;
+    }) => {
       isCompletedRef.current = true;
       const now = Date.now();
       const start = startTimeRef.current ?? now;
       const totalDuration = now - start;
 
-      let eventType: TelemetryEvent["eventType"] = "LESSON_COMPLETED";
-      if (resourceType === "final_assessment") eventType = "FINAL_ASSESSMENT_COMPLETED";
-
       sendTelemetryEvent({
-        eventType,
-        resourceType,
+        eventType: "INQUIRY_COMPLETED",
+        resourceType: "inquiry",
         resourceId,
         stepNumber: currentStepRef.current,
         durationMs: totalDuration,
         metadata,
       });
     },
-    [resourceType, resourceId]
+    [resourceId]
   );
 
-  // 5. Suivi de l'ouverture d'un terme du lexique
-  const trackGlossaryOpen = useCallback((termId: string) => {
-    sendTelemetryEvent({
-      eventType: "GLOSSARY_OPENED",
-      resourceType: "glossary",
-      resourceId: termId,
-      metadata: { openedFrom: resourceId },
-    });
-  }, [resourceId]);
+  // 5. Suivi de la complétion de leçon
+  const trackLessonComplete = useCallback(
+    (metadata: { quizScorePercent: number; passed: boolean }) => {
+      isCompletedRef.current = true;
+      const now = Date.now();
+      const start = startTimeRef.current ?? now;
+      const totalDuration = now - start;
+
+      sendTelemetryEvent({
+        eventType: "LESSON_COMPLETED",
+        resourceType: "lesson",
+        resourceId,
+        stepNumber: currentStepRef.current,
+        durationMs: totalDuration,
+        metadata,
+      });
+    },
+    [resourceId]
+  );
+
+  // 6. Suivi de l'ouverture d'un terme du lexique
+  const trackGlossaryOpen = useCallback(
+    (termId: string, fromResource?: string) => {
+      sendTelemetryEvent({
+        eventType: "GLOSSARY_OPENED",
+        resourceType: "glossary",
+        resourceId: termId,
+        metadata: { termId, fromResource: fromResource || resourceId },
+      });
+    },
+    [resourceId]
+  );
 
   return {
-    trackStepAnswered,
-    trackCompleted,
+    trackInquiryStep,
+    trackInquiryComplete,
+    trackLessonComplete,
     trackGlossaryOpen,
+    isCompletedRef,
+    hasInteractedRef,
   };
 }

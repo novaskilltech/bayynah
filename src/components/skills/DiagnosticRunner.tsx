@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { DiagnosticQuestion, MethodologicalProfile } from "@/types/skills";
 import {
   recordSkillAttempt,
@@ -9,6 +9,7 @@ import {
 } from "@/lib/storage-adapter";
 import { calculateMethodologicalProfile } from "@/lib/skills-calculator";
 import { SKILLS_METADATA } from "@/lib/skills-registry";
+import { sendTelemetryEvent } from "@/lib/usePedagogicalTracker";
 import {
   CheckCircle2,
   AlertTriangle,
@@ -37,6 +38,19 @@ export default function DiagnosticRunner({ questions, locale }: DiagnosticRunner
   const isArabic = locale === "ar";
   const currentQ = questions[currentIndex];
   const progressPercent = Math.round(((currentIndex + 1) / questions.length) * 100);
+
+  const hasTrackedStartRef = useRef(false);
+  useEffect(() => {
+    if (!hasTrackedStartRef.current) {
+      hasTrackedStartRef.current = true;
+      sendTelemetryEvent({
+        eventType: "DIAGNOSTIC_STARTED",
+        resourceType: "diagnostic",
+        resourceId: "diagnostic-initial",
+        metadata: { questionCount: questions.length },
+      });
+    }
+  }, [questions.length]);
 
   const handleSelectOption = (optionId: string) => {
     if (showFeedback) return; // Empêcher le changement une fois validé
@@ -71,6 +85,20 @@ export default function DiagnosticRunner({ questions, locale }: DiagnosticRunner
       saveStoredProfile(newProfile);
       setProfile(newProfile);
       setIsCompleted(true);
+
+      const diagnosticAttempts = allAttempts.filter((a) => a.sourceType === "DIAGNOSTIC");
+      const correctAnswers = diagnosticAttempts.filter((a) => a.firstScore === 3).length;
+
+      sendTelemetryEvent({
+        eventType: "DIAGNOSTIC_COMPLETED",
+        resourceType: "diagnostic",
+        resourceId: "diagnostic-initial",
+        metadata: {
+          totalQuestions: questions.length,
+          correctAnswers,
+          initialScorePercent: newProfile.globalMasteryPercentage,
+        },
+      });
     }
   };
 

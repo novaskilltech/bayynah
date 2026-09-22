@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useSyncExternalStore, useMemo } from "react";
+import React, { useState, useSyncExternalStore, useMemo, useRef } from "react";
 import { CheckCircle2, XCircle, HelpCircle, Award, RotateCcw, Check } from "lucide-react";
+import { usePedagogicalTracker } from "@/lib/usePedagogicalTracker";
 
 interface QuizOption {
   textFr: string;
@@ -55,6 +56,13 @@ function getServerSnapshot() {
 export default function LessonQuiz({ quizzes, lessonSlug, locale }: LessonQuizProps) {
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, number>>({});
   const isArabic = locale === "ar";
+  const hasTrackedCompletionRef = useRef(false);
+
+  const { trackLessonComplete } = usePedagogicalTracker({
+    resourceType: "lesson",
+    resourceId: lessonSlug,
+    autoTrackOpen: true,
+  });
 
   const rawProgress = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
@@ -99,6 +107,14 @@ export default function LessonQuiz({ quizzes, lessonSlug, locale }: LessonQuizPr
           completedAt: isAllCompleted ? new Date().toISOString() : allProgress[lessonSlug]?.completedAt,
           correctQuizIds: Array.from(currentCorrect),
         };
+
+        if (isAllCompleted && !hasTrackedCompletionRef.current) {
+          hasTrackedCompletionRef.current = true;
+          trackLessonComplete({
+            quizScorePercent: 100,
+            passed: true,
+          });
+        }
 
         localStorage.setItem(STORAGE_KEY, JSON.stringify(allProgress));
         window.dispatchEvent(new Event("tabayyun-progress-updated"));
