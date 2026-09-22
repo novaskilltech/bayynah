@@ -28,6 +28,9 @@ export async function GET(req: NextRequest) {
     return response;
   } catch (err) {
     console.error("Erreur API me:", err);
-    return NextResponse.json({ user: null, csrfToken: generatePreAuthCsrfToken() });
+    return NextResponse.json(
+      { user: null, csrfToken: null, error: "ACCOUNT_SERVICE_UNAVAILABLE" },
+      { status: 503 }
+    );
   }
 }

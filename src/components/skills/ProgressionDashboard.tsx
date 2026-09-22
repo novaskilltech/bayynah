@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useSyncExternalStore } from "react";
-import { MethodologicalProfile } from "@/types/skills";
-import { getStoredProfile, initializeEmptyProfile } from "@/lib/storage-adapter";
+import React from "react";
+import { useLocalProgress } from "@/lib/useLocalProgress";
 import SkillBarList from "./SkillBarList";
 import {
   Award,
@@ -19,14 +18,8 @@ interface ProgressionDashboardProps {
   locale: string;
 }
 
-const emptySubscribe = () => () => {};
-
 export default function ProgressionDashboard({ locale }: ProgressionDashboardProps) {
-  const profile = useSyncExternalStore<MethodologicalProfile>(
-    emptySubscribe,
-    () => getStoredProfile() || initializeEmptyProfile(),
-    () => initializeEmptyProfile()
-  );
+  const { profile } = useLocalProgress();
 
   const isArabic = locale === "ar";
 

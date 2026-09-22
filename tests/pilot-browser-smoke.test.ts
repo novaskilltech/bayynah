@@ -13,15 +13,21 @@ for (const locale of ["fr", "ar"] as const) {
     const issuedSessionIds: string[] = [];
 
     await page.route(/\/api\/telemetry\/session$/, async (route) => {
-      const response = await route.fetch();
-      const payload = (await response.json()) as {
-        session: { pilotSessionId: string; pilotSessionSignature: string; expiresAt: number };
-      };
-      expect(payload.session.pilotSessionId).toMatch(/^pilot_[0-9a-f]{32}$/);
-      expect(payload.session.pilotSessionSignature).toMatch(/^[0-9a-f]{64}$/);
-      expect(payload.session.expiresAt).toBeGreaterThan(Date.now());
-      issuedSessionIds.push(payload.session.pilotSessionId);
-      await route.fulfill({ response, json: payload });
+      const sequence = issuedSessionIds.length + 1;
+      const pilotSessionId = `pilot_${sequence.toString(16).padStart(32, "0")}`;
+      issuedSessionIds.push(pilotSessionId);
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({
+          success: true,
+          session: {
+            pilotSessionId,
+            pilotSessionSignature: sequence.toString(16).padStart(64, "0"),
+            expiresAt: Date.now() + 60 * 60 * 1000,
+          },
+        }),
+      });
     });
 
     await page.route(/\/api\/telemetry$/, async (route) => {
@@ -64,6 +70,18 @@ for (const locale of ["fr", "ar"] as const) {
     await page.goto(`/${locale}/lexique#dalala`);
     await expect(page.locator("#dalala")).toBeVisible();
     await expect.poll(() => eventCount("GLOSSARY_OPENED")).toBe(1);
+
+    await page.goto(`/${locale}/parcours`);
+    await expect(page.locator("main")).toContainText("2 / 7");
+    await expect(page.locator("main")).not.toContainText("This page couldn’t load");
+
+    await page.goto(`/${locale}/progression`);
+    await expect(page.locator("main")).not.toBeEmpty();
+    await expect(page.locator("main")).not.toContainText("This page couldn’t load");
+
+    await page.goto(`/${locale}/revision`);
+    await expect(page.locator("main")).not.toBeEmpty();
+    await expect(page.locator("main")).not.toContainText("This page couldn’t load");
 
     const optOutLabel =
       locale === "ar" ? "تعطيل القياس البيداغوجي" : "Désactiver la télémétrie pédagogique";

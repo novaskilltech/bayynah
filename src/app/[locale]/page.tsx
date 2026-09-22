@@ -46,7 +46,7 @@ export default async function HomePage({ params }: PageProps) {
           {dict.home.ctaLab}
         </a>
         <a
-          href={`/${locale}/ecoles`}
+          href={`/${locale}/diagnostic`}
           className="w-full sm:w-auto px-6 py-3 rounded-lg bg-white border border-sable-300 text-bleuNuit-900 font-semibold hover:bg-sable-50 transition shadow-sm"
         >
           {dict.home.ctaTest}

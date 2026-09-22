@@ -4,6 +4,8 @@ import React, { useState, useSyncExternalStore, useMemo, useRef } from "react";
 import { CheckCircle2, XCircle, HelpCircle, Award, RotateCcw, Check } from "lucide-react";
 import { usePedagogicalTracker } from "@/lib/usePedagogicalTracker";
 import type { LessonSlug } from "@/lib/telemetry-contract";
+import { markLessonCompleted, recordSkillAttempt } from "@/lib/storage-adapter";
+import { getSkillsForLesson } from "@/lib/skills-registry";
 
 interface QuizOption {
   textFr: string;
@@ -58,6 +60,7 @@ export default function LessonQuiz({ quizzes, lessonSlug, locale }: LessonQuizPr
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, number>>({});
   const isArabic = locale === "ar";
   const hasTrackedCompletionRef = useRef(false);
+  const quizAttemptStateRef = useRef<Record<string, { firstScore: number; attemptCount: number }>>({});
 
   const { trackLessonComplete } = usePedagogicalTracker({
     resourceType: "lesson",
@@ -90,6 +93,12 @@ export default function LessonQuiz({ quizzes, lessonSlug, locale }: LessonQuizPr
     if (!targetQuiz) return;
 
     const option = targetQuiz.options[optionIndex];
+    const score = option.isCorrect ? 3 : 0;
+    const previousAttempt = quizAttemptStateRef.current[quizId];
+    quizAttemptStateRef.current[quizId] = {
+      firstScore: previousAttempt?.firstScore ?? score,
+      attemptCount: (previousAttempt?.attemptCount ?? 0) + 1,
+    };
     setSelectedAnswers((prev) => ({
       ...prev,
       [quizId]: optionIndex,
@@ -111,6 +120,7 @@ export default function LessonQuiz({ quizzes, lessonSlug, locale }: LessonQuizPr
 
         if (isAllCompleted && !hasTrackedCompletionRef.current) {
           hasTrackedCompletionRef.current = true;
+          markLessonCompleted(lessonSlug);
           trackLessonComplete({
             quizScorePercent: 100,
             passed: true,
@@ -119,6 +129,19 @@ export default function LessonQuiz({ quizzes, lessonSlug, locale }: LessonQuizPr
 
         localStorage.setItem(STORAGE_KEY, JSON.stringify(allProgress));
         window.dispatchEvent(new Event("tabayyun-progress-updated"));
+
+        const attemptState = quizAttemptStateRef.current[quizId];
+        for (const skillId of getSkillsForLesson(lessonSlug)) {
+          recordSkillAttempt({
+            skillId,
+            sourceType: "LESSON_QUIZ",
+            sourceId: `${lessonSlug}:${quizId}`,
+            firstScore: attemptState.firstScore,
+            finalScore: 3,
+            attemptCount: attemptState.attemptCount,
+            correctedAfterFeedback: attemptState.attemptCount > 1,
+          });
+        }
       } catch {
         // Erreur silencieuse de stockage local
       }

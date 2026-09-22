@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useMemo, useState, useSyncExternalStore } from "react";
+import React, { useState } from "react";
 import { checkPrerequisites } from "@/lib/learning-path";
+import { useLocalProgress } from "@/lib/useLocalProgress";
+import { getLessonPath } from "@/lib/resource-paths";
 import { AlertCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -10,39 +12,9 @@ interface PrerequisiteAlertProps {
   locale: string;
 }
 
-const EMPTY_PROGRESS = "[]";
-
-function subscribe(callback: () => void) {
-  window.addEventListener("storage", callback);
-  return () => window.removeEventListener("storage", callback);
-}
-
-function getProgressSnapshot() {
-  return JSON.stringify({
-    lessons: localStorage.getItem("tabayyun_completed_lessons") ?? EMPTY_PROGRESS,
-    inquiries: localStorage.getItem("tabayyun_completed_inquiries") ?? EMPTY_PROGRESS,
-  });
-}
-
-function getServerSnapshot() {
-  return JSON.stringify({ lessons: EMPTY_PROGRESS, inquiries: EMPTY_PROGRESS });
-}
-
 export default function PrerequisiteAlert({ inquirySlug, locale }: PrerequisiteAlertProps) {
   const [isDismissed, setIsDismissed] = useState(false);
-
-  const rawProgress = useSyncExternalStore(subscribe, getProgressSnapshot, getServerSnapshot);
-  const { completedLessons, completedInquiries } = useMemo(() => {
-    try {
-      const snapshot = JSON.parse(rawProgress) as { lessons: string; inquiries: string };
-      return {
-        completedLessons: JSON.parse(snapshot.lessons) as string[],
-        completedInquiries: JSON.parse(snapshot.inquiries) as string[],
-      };
-    } catch {
-      return { completedLessons: [], completedInquiries: [] };
-    }
-  }, [rawProgress]);
+  const { completedLessons, completedInquiries } = useLocalProgress();
 
   const isArabic = locale === "ar";
 
@@ -78,7 +50,7 @@ export default function PrerequisiteAlert({ inquirySlug, locale }: PrerequisiteA
             {check.missingLessons.map((lSlug) => (
               <Link
                 key={lSlug}
-                href={`/${locale}/ecoles/${lSlug}`}
+                href={getLessonPath(locale, lSlug)}
                 className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium bg-white text-amber-900 border border-amber-200 hover:bg-amber-100 transition"
               >
                 <span>{isArabic ? `درس: ${lSlug}` : `Leçon: ${lSlug}`}</span>

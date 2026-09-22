@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useSyncExternalStore } from "react";
+import React from "react";
 import { LEARNING_PATH_LEVELS } from "@/lib/learning-path";
 import { SKILLS_METADATA } from "@/lib/skills-registry";
-import { getCompletedLessonSlugs, getCompletedInquirySlugs } from "@/lib/storage-adapter";
+import { useLocalProgress } from "@/lib/useLocalProgress";
+import { getLessonPath } from "@/lib/resource-paths";
 import {
   CheckCircle2,
   Circle,
@@ -18,19 +19,8 @@ interface LearningPathViewProps {
   locale: string;
 }
 
-const emptySubscribe = () => () => {};
-
 export default function LearningPathView({ locale }: LearningPathViewProps) {
-  const completedLessons = useSyncExternalStore(
-    emptySubscribe,
-    () => getCompletedLessonSlugs(),
-    () => []
-  );
-  const completedInquiries = useSyncExternalStore(
-    emptySubscribe,
-    () => getCompletedInquirySlugs(),
-    () => []
-  );
+  const { completedLessons, completedInquiries } = useLocalProgress();
 
   const isArabic = locale === "ar";
 
@@ -145,7 +135,7 @@ export default function LearningPathView({ locale }: LearningPathViewProps) {
                       return (
                         <Link
                           key={lSlug}
-                          href={`/${locale}/ecoles/${lSlug}`}
+                          href={getLessonPath(locale, lSlug)}
                           className="flex items-center justify-between p-3 rounded-xl border border-sable-100 hover:border-sable-300 bg-sable-50/40 hover:bg-sable-50 transition text-xs font-medium text-bleuNuit-900 group"
                         >
                           <div className="flex items-center gap-2.5">

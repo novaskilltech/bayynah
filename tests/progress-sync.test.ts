@@ -9,6 +9,7 @@ import {
 } from "../src/lib/auth";
 import { SkillAttempt, MethodologicalSkill } from "../src/types/skills";
 import { SkillAttemptInput } from "../src/lib/progress-sync/types";
+import { getLessonPath } from "../src/lib/resource-paths";
 
 console.log("🧪 Démarrage de la suite de tests — Phase 6 : Synchronisation, Intégrité & Attestations...");
 
@@ -199,11 +200,25 @@ function testIdempotenceAndMerge() {
   console.log("  ✅ Idempotence stricte et fusion non-destructive validées.");
 }
 
+function testCanonicalLessonPaths() {
+  assert.strictEqual(
+    getLessonPath("fr", "critique-01-affirmation-vs-preuve"),
+    "/fr/ecoles/critique/critique-01-affirmation-vs-preuve"
+  );
+  assert.strictEqual(
+    getLessonPath("ar", "hadith-05-authenticite-vs-istidlal"),
+    "/ar/ecoles/hadith/hadith-05-authenticite-vs-istidlal"
+  );
+  assert.strictEqual(getLessonPath("fr", "slug-inconnu"), "/fr/ecoles");
+  console.log("  ✅ Construction canonique des liens de leçons validée.");
+}
+
 async function runAll() {
   await testAuth();
   testAttestationEligibility();
   testMethodologicalPatterns();
   testIdempotenceAndMerge();
+  testCanonicalLessonPaths();
   console.log("🎉 Tous les tests Phase 6 (Intégrité, Synchronisation, Attestations) ont réussi avec brio !");
 }
 

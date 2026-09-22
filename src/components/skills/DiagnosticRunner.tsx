@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { DiagnosticQuestion, MethodologicalProfile } from "@/types/skills";
+import { DiagnosticAttempt, DiagnosticQuestion, MethodologicalProfile } from "@/types/skills";
 import {
   recordSkillAttempt,
   saveStoredProfile,
   getStoredAttempts,
+  saveDiagnosticAttempt,
 } from "@/lib/storage-adapter";
 import { calculateMethodologicalProfile } from "@/lib/skills-calculator";
 import { SKILLS_METADATA } from "@/lib/skills-registry";
@@ -34,6 +35,7 @@ export default function DiagnosticRunner({ questions, locale }: DiagnosticRunner
   const [showFeedback, setShowFeedback] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   const [profile, setProfile] = useState<MethodologicalProfile | null>(null);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
 
   const isArabic = locale === "ar";
   const currentQ = questions[currentIndex];
@@ -41,7 +43,7 @@ export default function DiagnosticRunner({ questions, locale }: DiagnosticRunner
 
   const hasTrackedStartRef = useRef(false);
   useEffect(() => {
-    if (!hasTrackedStartRef.current) {
+    if (questions.length > 0 && !hasTrackedStartRef.current) {
       hasTrackedStartRef.current = true;
       sendTelemetryEvent({
         eventType: "DIAGNOSTIC_STARTED",
@@ -52,11 +54,22 @@ export default function DiagnosticRunner({ questions, locale }: DiagnosticRunner
     }
   }, [questions.length]);
 
+  if (!currentQ) {
+    return (
+      <div className="rounded-2xl border border-amber-200 bg-amber-50 p-8 text-center text-sm text-amber-900">
+        {isArabic
+          ? "التشخيص غير متاح حالياً. يرجى المحاولة لاحقاً."
+          : "Le diagnostic est indisponible pour le moment. Veuillez réessayer plus tard."}
+      </div>
+    );
+  }
+
   const handleSelectOption = (optionId: string) => {
     if (showFeedback) return; // Empêcher le changement une fois validé
 
     setSelectedOptionId(optionId);
     setShowFeedback(true);
+    setAnswers((previous) => ({ ...previous, [currentQ.id]: optionId }));
 
     const opt = currentQ.options.find((o) => o.id === optionId);
     if (!opt) return;
@@ -82,6 +95,29 @@ export default function DiagnosticRunner({ questions, locale }: DiagnosticRunner
       // Fin du test : recalcul du profil global
       const allAttempts = getStoredAttempts();
       const newProfile = calculateMethodologicalProfile(allAttempts, true);
+      const skillScores = Object.fromEntries(
+        Object.keys(SKILLS_METADATA).map((skillId) => {
+          const relatedQuestions = questions.filter((question) => question.primarySkill === skillId);
+          const score = relatedQuestions.reduce((total, question) => {
+            const selectedId = answers[question.id];
+            return total + (question.options.find((option) => option.id === selectedId)?.methodologicalScore ?? 0);
+          }, 0);
+          const maxScore = relatedQuestions.length * 3;
+          return [
+            skillId,
+            {
+              score,
+              maxScore,
+              percentage: maxScore > 0 ? Math.round((score / maxScore) * 100) : 0,
+            },
+          ];
+        })
+      ) as DiagnosticAttempt["skillScores"];
+      saveDiagnosticAttempt({
+        completedAt: new Date().toISOString(),
+        answers,
+        skillScores,
+      });
       saveStoredProfile(newProfile);
       setProfile(newProfile);
       setIsCompleted(true);

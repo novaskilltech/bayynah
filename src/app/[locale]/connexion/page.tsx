@@ -32,7 +32,15 @@ export default function ConnexionPage() {
         let csrf = getCsrfTokenFromCookie();
         if (!csrf) {
           const meRes = await fetch("/api/auth/me");
-          const meData = await meRes.json();
+          const meData = await meRes.json().catch(() => null);
+          if (!meRes.ok || !meData?.csrfToken) {
+            setError(
+              isArabic
+                ? "خدمة الحسابات غير متاحة حالياً. يبقى تقدمك محفوظاً محلياً."
+                : "Le service de comptes est indisponible pour le moment. Votre progression reste enregistrée localement."
+            );
+            return;
+          }
           csrf = meData.csrfToken || getCsrfTokenFromCookie();
         }
 
@@ -45,10 +53,10 @@ export default function ConnexionPage() {
           body: JSON.stringify(payload),
         });
 
-        const data = await res.json();
+        const data = await res.json().catch(() => null);
 
         if (!res.ok) {
-          setError(data.error || (isArabic ? "حدث خطأ أثناء المعالجة." : "Une erreur est survenue."));
+          setError(data?.error || (isArabic ? "حدث خطأ أثناء المعالجة." : "Une erreur est survenue."));
           return;
         }
 

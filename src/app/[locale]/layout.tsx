@@ -107,6 +107,9 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
               <a href={`/${locale}/revision`} className="hover:text-vertProfond-700 transition">
                 {dict.common.nav.revision}
               </a>
+              <a href={`/${locale}/lexique`} className="hover:text-vertProfond-700 transition">
+                {dict.common.nav.glossary}
+              </a>
               <a href={`/${locale}/compte`} className="hover:text-vertProfond-700 transition font-semibold text-vertProfond-800">
                 {dict.common.nav.account || (isArabic ? "حسابي" : "Compte")}
               </a>
@@ -122,6 +125,14 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
 
         <footer className="border-t border-sable-200 py-6 text-center text-xs text-sable-500 mt-16">
           <p>{dict.common.footer}</p>
+          <div className="mt-3 flex items-center justify-center gap-4">
+            <a href={`/${locale}/lexique`} className="hover:text-vertProfond-700 transition">
+              {dict.common.nav.glossary}
+            </a>
+            <a href={`/${locale}/bibliotheque`} className="hover:text-vertProfond-700 transition">
+              {dict.common.nav.library}
+            </a>
+          </div>
           <PilotNoticeFooter locale={locale} />
         </footer>
       </body>

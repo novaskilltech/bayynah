@@ -6,13 +6,19 @@ import {
 } from "@/types/skills";
 import { buildMethodologicalProfile, createInitialMethodologicalProfile } from "./skills-calculator";
 
-const STORAGE_KEYS = {
+export const STORAGE_KEYS = {
   SKILL_ATTEMPTS: "tabayyun_skill_attempts",
   DIAGNOSTIC_ATTEMPT: "tabayyun_diagnostic_attempt",
   FINAL_ASSESSMENT_ATTEMPT: "tabayyun_final_assessment_attempt",
   COMPLETED_LESSONS: "tabayyun_completed_lessons",
   COMPLETED_INQUIRIES: "tabayyun_completed_inquiries",
 };
+
+export const PROGRESS_UPDATED_EVENT = "tabayyun-progress-updated";
+
+function notifyProgressUpdated(): void {
+  if (isClient()) window.dispatchEvent(new Event(PROGRESS_UPDATED_EVENT));
+}
 
 /**
  * Accès sécurisé au localStorage pour le mode invité (client-side uniquement)
@@ -38,6 +44,7 @@ export function saveSkillAttempt(attempt: SkillAttempt): void {
     const current = getSkillAttempts();
     current.push(attempt);
     localStorage.setItem(STORAGE_KEYS.SKILL_ATTEMPTS, JSON.stringify(current));
+    notifyProgressUpdated();
   } catch (err) {
     console.error("Erreur d'enregistrement de SkillAttempt:", err);
   }
@@ -58,6 +65,7 @@ export function saveDiagnosticAttempt(attempt: DiagnosticAttempt): void {
   if (!isClient()) return;
   try {
     localStorage.setItem(STORAGE_KEYS.DIAGNOSTIC_ATTEMPT, JSON.stringify(attempt));
+    notifyProgressUpdated();
   } catch (err) {
     console.error("Erreur d'enregistrement du DiagnosticAttempt:", err);
   }
@@ -78,6 +86,7 @@ export function saveFinalAssessmentAttempt(attempt: FinalAssessmentAttempt): voi
   if (!isClient()) return;
   try {
     localStorage.setItem(STORAGE_KEYS.FINAL_ASSESSMENT_ATTEMPT, JSON.stringify(attempt));
+    notifyProgressUpdated();
   } catch (err) {
     console.error("Erreur d'enregistrement du FinalAssessmentAttempt:", err);
   }
@@ -100,6 +109,7 @@ export function markLessonCompleted(lessonId: string): void {
     if (!current.includes(lessonId)) {
       current.push(lessonId);
       localStorage.setItem(STORAGE_KEYS.COMPLETED_LESSONS, JSON.stringify(current));
+      notifyProgressUpdated();
     }
   } catch (err) {
     console.error("Erreur marquer leçon terminée:", err);
@@ -123,6 +133,7 @@ export function markInquiryCompleted(inquiryId: string): void {
     if (!current.includes(inquiryId)) {
       current.push(inquiryId);
       localStorage.setItem(STORAGE_KEYS.COMPLETED_INQUIRIES, JSON.stringify(current));
+      notifyProgressUpdated();
     }
   } catch (err) {
     console.error("Erreur marquer enquête terminée:", err);
@@ -162,13 +173,16 @@ export function clearAllLocalProgress(): void {
   for (const key of Object.values(STORAGE_KEYS)) {
     localStorage.removeItem(key);
   }
+  notifyProgressUpdated();
 }
 
 export function recordSkillAttempt(
   attemptInput: Omit<SkillAttempt, "id" | "timestamp"> & { id?: string; timestamp?: string }
 ): void {
   const attempt: SkillAttempt = {
-    id: attemptInput.id || `${attemptInput.sourceId}-${Date.now()}`,
+    id:
+      attemptInput.id ||
+      `${attemptInput.sourceId}-${attemptInput.skillId}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
     timestamp: attemptInput.timestamp || new Date().toISOString(),
     ...attemptInput,
   };
@@ -189,4 +203,3 @@ export function saveStoredProfile(profile: MethodologicalProfile): void {
     console.error("Erreur d'enregistrement du profil:", err);
   }
 }
-

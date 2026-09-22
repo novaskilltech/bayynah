@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { FinalAssessmentScenario, AttestationData } from "@/types/skills";
+import { FinalAssessmentAttempt, FinalAssessmentScenario, AttestationData } from "@/types/skills";
 import {
   recordSkillAttempt,
   saveStoredProfile,
   getStoredAttempts,
   getCompletedLessons,
   getCompletedInquiries,
+  saveFinalAssessmentAttempt,
 } from "@/lib/storage-adapter";
 import {
   calculateMethodologicalProfile,
@@ -38,6 +39,7 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [answers, setAnswers] = useState<Record<string, number>>({}); // scenarioId -> score
+  const [answerOptionIds, setAnswerOptionIds] = useState<Record<string, string>>({});
   const [isCompleted, setIsCompleted] = useState(false);
   const [recipientName, setRecipientName] = useState("");
   const [attestation, setAttestation] = useState<AttestationData | null>(null);
@@ -54,7 +56,7 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
 
   const hasTrackedStartRef = useRef(false);
   useEffect(() => {
-    if (!hasTrackedStartRef.current) {
+    if (scenarios.length > 0 && !hasTrackedStartRef.current) {
       hasTrackedStartRef.current = true;
       sendTelemetryEvent({
         eventType: "FINAL_ASSESSMENT_STARTED",
@@ -64,6 +66,16 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
       });
     }
   }, [scenarios.length]);
+
+  if (!currentScenario) {
+    return (
+      <div className="rounded-2xl border border-amber-200 bg-amber-50 p-8 text-center text-sm text-amber-900">
+        {isArabic
+          ? "التقويم الختامي غير متاح حالياً. يرجى المحاولة لاحقاً."
+          : "L’évaluation finale est indisponible pour le moment. Veuillez réessayer plus tard."}
+      </div>
+    );
+  }
 
   const handleSelectOption = (optionId: string) => {
     if (showFeedback) return;
@@ -75,6 +87,7 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
     if (!opt) return;
 
     setAnswers((prev) => ({ ...prev, [currentScenario.id]: opt.methodologicalScore }));
+    setAnswerOptionIds((previous) => ({ ...previous, [currentScenario.id]: optionId }));
 
     recordSkillAttempt({
       skillId: currentScenario.primarySkill,
@@ -112,6 +125,36 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
         completedCount
       );
       setEligibilityResult(eligibility);
+
+      const skillScores = Object.fromEntries(
+        Object.keys(SKILLS_METADATA).map((skillId) => {
+          const relatedScenarios = scenarios.filter((scenario) => scenario.primarySkill === skillId);
+          const score = relatedScenarios.reduce(
+            (total, scenario) => total + (answers[scenario.id] ?? 0),
+            0
+          );
+          const maxScore = relatedScenarios.length * 3;
+          return [
+            skillId,
+            {
+              score,
+              maxScore,
+              percentage: maxScore > 0 ? Math.round((score / maxScore) * 100) : 0,
+            },
+          ];
+        })
+      ) as FinalAssessmentAttempt["skillScores"];
+      saveFinalAssessmentAttempt({
+        completedAt: new Date().toISOString(),
+        answers: answerOptionIds,
+        skillScores,
+        globalPercentage: finalScorePercent,
+        eligibleForPathAttestation: eligibility.eligibleForPathAttestation,
+        eligibleForMasteryAttestation: eligibility.eligibleForMasteryAttestation,
+        eligibleForAttestation:
+          eligibility.eligibleForPathAttestation || eligibility.eligibleForMasteryAttestation,
+        rulesVersion: "assessment-v1",
+      });
 
       const legalFr =
         "Cette attestation valide un parcours d'entraînement à l'esprit critique et aux règles de vérification méthodologique selon la tradition d'Ahl as-Sunnah wa-l-Jamāʿa. Elle ne constitue en aucun cas une ijāza religieuse, une habilitation à délivrer des avis juridiques (fatwas), ni un diplôme d'État.";

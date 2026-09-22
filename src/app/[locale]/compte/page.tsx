@@ -44,13 +44,18 @@ export default function ComptePage() {
   const [isSyncing, startSyncTransition] = useTransition();
   const [isDeleting, setIsDeleting] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [serviceUnavailable, setServiceUnavailable] = useState(false);
 
   useEffect(() => {
     async function loadAccount() {
       try {
         const res = await fetch("/api/auth/me");
-        const data = await res.json();
-        if (data.user) {
+        const data = await res.json().catch(() => null);
+        if (!res.ok) {
+          setServiceUnavailable(true);
+          return;
+        }
+        if (data?.user) {
           setUser(data.user);
           setLastSync(getLastSyncTimestamp());
           setAttestations(getServerAttestations());
@@ -148,12 +153,27 @@ export default function ComptePage() {
             ? "أنت تتصفح حالياً في «وضع الضيف» المحلي. يمكنك حفظ تقدمك، مزامنة إنجازاتك بين أجهزتك، واستصدار إفاداتك الرسمية المعتمدة عبر إنشاء حساب مجاني."
             : "Vous naviguez actuellement en « Mode invité » (données stockées localement sur votre navigateur). Créez un compte ou connectez-vous pour sécuriser votre progression et obtenir vos attestations certifiées."}
         </p>
+        {serviceUnavailable && (
+          <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs text-amber-900">
+            {isArabic
+              ? "خدمة الحسابات والمزامنة غير متاحة حالياً. يمكنك متابعة التعلم في وضع الضيف، وسيبقى تقدمك محفوظاً في هذا المتصفح."
+              : "Le service de comptes et de synchronisation est indisponible pour le moment. Vous pouvez continuer en mode invité ; votre progression reste conservée dans ce navigateur."}
+          </div>
+        )}
         <div className="pt-4 flex items-center justify-center gap-4">
+          {!serviceUnavailable && (
+            <button
+              onClick={() => router.push(`/${locale}/connexion`)}
+              className="px-6 py-3 rounded-xl bg-vertProfond-700 hover:bg-vertProfond-800 text-white font-bold text-sm shadow-md transition cursor-pointer"
+            >
+              {isArabic ? "تسجيل الدخول أو إنشاء حساب" : "Se connecter / Créer un compte"}
+            </button>
+          )}
           <button
-            onClick={() => router.push(`/${locale}/connexion`)}
-            className="px-6 py-3 rounded-xl bg-vertProfond-700 hover:bg-vertProfond-800 text-white font-bold text-sm shadow-md transition cursor-pointer"
+            onClick={() => router.push(`/${locale}/parcours`)}
+            className="px-6 py-3 rounded-xl border border-sable-300 bg-white text-bleuNuit-900 font-bold text-sm transition"
           >
-            {isArabic ? "تسجيل الدخول أو إنشاء حساب" : "Se connecter / Créer un compte"}
+            {isArabic ? "متابعة المسار محلياً" : "Continuer le parcours local"}
           </button>
         </div>
       </div>

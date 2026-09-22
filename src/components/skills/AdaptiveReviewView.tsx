@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useSyncExternalStore } from "react";
+import React from "react";
 import { AdaptiveReviewItem } from "@/types/skills";
-import { getStoredProfile, initializeEmptyProfile } from "@/lib/storage-adapter";
+import { useLocalProgress } from "@/lib/useLocalProgress";
+import { getLessonPath } from "@/lib/resource-paths";
 import { getRecommendedReviews } from "@/lib/adaptive-review";
 import { SKILLS_METADATA } from "@/lib/skills-registry";
 import {
@@ -19,14 +20,8 @@ interface AdaptiveReviewViewProps {
   locale: string;
 }
 
-const emptySubscribe = () => () => {};
-
 export default function AdaptiveReviewView({ locale }: AdaptiveReviewViewProps) {
-  const profile = useSyncExternalStore(
-    emptySubscribe,
-    () => getStoredProfile() || initializeEmptyProfile(),
-    () => initializeEmptyProfile()
-  );
+  const { profile } = useLocalProgress();
 
   const reviews: AdaptiveReviewItem[] = getRecommendedReviews(profile);
   const isArabic = locale === "ar";
@@ -153,7 +148,7 @@ export default function AdaptiveReviewView({ locale }: AdaptiveReviewViewProps) 
                         {item.recommendedLessons.map((lSlug) => (
                           <Link
                             key={lSlug}
-                            href={`/${locale}/ecoles/${lSlug}`}
+                            href={getLessonPath(locale, lSlug)}
                             className="flex items-center justify-between p-3 rounded-xl border border-sable-200 hover:border-vertProfond-600 bg-white transition text-xs font-semibold text-bleuNuit-900 group"
                           >
                             <span>{lSlug}</span>

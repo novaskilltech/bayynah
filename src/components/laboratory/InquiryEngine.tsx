@@ -12,6 +12,8 @@ import EvidenceDrawer from "./EvidenceDrawer";
 import ConclusionSheetView from "./ConclusionSheetView";
 import { usePedagogicalTracker } from "@/lib/usePedagogicalTracker";
 import type { InquiryId } from "@/lib/telemetry-contract";
+import { markInquiryCompleted, recordSkillAttempt } from "@/lib/storage-adapter";
+import { getSkillsForInquiryStep } from "@/lib/skills-registry";
 import {
   HelpCircle,
   CheckCircle2,
@@ -120,6 +122,19 @@ export default function InquiryEngine({ inquiry, locale }: InquiryEngineProps) {
       // Ignorer si indisponible
     }
 
+    for (const skillId of getSkillsForInquiryStep(inquiry.slug, currentStep.stepNumber)) {
+      recordSkillAttempt({
+        skillId,
+        sourceType: "INQUIRY_STEP",
+        sourceId: `${inquiry.slug}:step-${currentStep.stepNumber}`,
+        stepNumber: currentStep.stepNumber,
+        firstScore: option.methodologicalScore,
+        finalScore: option.methodologicalScore,
+        attemptCount: 1,
+        correctedAfterFeedback: false,
+      });
+    }
+
     // Télémétrie : mesure de la réponse à l'étape
     const attemptsForThisStep = attempts.filter((a) => a.stepNumber === currentStep.stepNumber);
     trackInquiryStep(currentStep.stepNumber, {
@@ -160,9 +175,19 @@ export default function InquiryEngine({ inquiry, locale }: InquiryEngineProps) {
 
     if (isLastStep) {
       setIsConclusionUnlocked(true);
+      markInquiryCompleted(inquiry.slug);
 
       // Télémétrie : complétion d'enquête
-      const totalPoints = attempts.reduce((acc, att) => acc + att.score, 0);
+      const firstAttemptByStep = new Map<number, AttemptRecord>();
+      for (const attempt of attempts) {
+        if (!firstAttemptByStep.has(attempt.stepNumber)) {
+          firstAttemptByStep.set(attempt.stepNumber, attempt);
+        }
+      }
+      const totalPoints = Array.from(firstAttemptByStep.values()).reduce(
+        (acc, attempt) => acc + attempt.score,
+        0
+      );
       const lastOpt = selectedOption || currentStep.options[0];
       trackInquiryComplete({
         finalQuality: lastOpt.quality,
