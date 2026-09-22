@@ -3,6 +3,7 @@ import "../globals.css";
 import { getDictionary } from "@/lib/dictionary";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import PilotNoticeFooter from "@/components/PilotNoticeFooter";
+import VisitCounter from "@/components/VisitCounter";
 
 const SITE_URL = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://bayynah-two.vercel.app");
 
@@ -125,6 +126,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
 
         <footer className="border-t border-sable-200 py-6 text-center text-xs text-sable-500 mt-16">
           <p>{dict.common.footer}</p>
+          <VisitCounter locale={locale} />
           <div className="mt-3 flex items-center justify-center gap-4">
             <a href={`/${locale}/lexique`} className="hover:text-vertProfond-700 transition">
               {dict.common.nav.glossary}

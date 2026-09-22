@@ -413,4 +413,10 @@ model PedagogicalMetric {
   @@index([resourceType, resourceId])
 }
 
+// Compteur agrégé de visites : aucune IP, aucun user-agent ni identifiant visiteur persisté.
+model SiteCounter {
+  key       String   @id
+  count     BigInt   @default(0)
+  updatedAt DateTime @updatedAt
+}
 

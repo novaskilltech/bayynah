@@ -1,5 +1,13 @@
 # TABAYYUN Decision Log
 
+## 2026-09-23 - Compteur de visites agrégé
+
+- Compteur global affiché dans le pied de page FR/AR.
+- Une visite est comptée par session de navigation, avec déduplication dans `sessionStorage`.
+- Incrémentation PostgreSQL atomique via `upsert` ; aucune IP, aucun user-agent et aucun identifiant visiteur n'est persisté.
+- L'IP n'est utilisée que comme clé éphémère de limitation de débit.
+- Le compteur se masque sans bloquer le site lorsque l'infrastructure est indisponible.
+
 Ce fichier consigne les décisions techniques, produit, sécurité et éditoriales qui affectent le lancement pilote de TABAYYUN.
 
 ## 2026-09-22 - Clôture technique du pilote et stabilisation production
