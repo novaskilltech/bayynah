@@ -1,6 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
+import {
+  VALID_LESSON_SLUGS,
+  VALID_INQUIRY_IDS_AND_SLUGS,
+  VALID_GLOSSARY_TERM_IDS,
+  CANONICAL_SCHOOLS,
+  CANONICAL_CERTAINTY_LEVELS,
+} from "@/lib/telemetry-contract";
 
 const PILOT_SESSION_STORAGE_KEY = "tabayyun_pilot_session";
 const PILOT_OPT_OUT_KEY = "tabayyun_telemetry_opt_out";
@@ -14,48 +21,48 @@ export interface StoredPilotSession {
 export type TelemetryClientPayload =
   | {
       eventType: "DIAGNOSTIC_STARTED";
-      resourceType?: "diagnostic";
-      resourceId?: string;
+      resourceType: "diagnostic";
+      resourceId: "diagnostic-initial";
       stepNumber?: number;
       durationMs?: number;
       metadata?: { questionCount?: number };
     }
   | {
       eventType: "DIAGNOSTIC_COMPLETED";
-      resourceType?: "diagnostic";
-      resourceId?: string;
+      resourceType: "diagnostic";
+      resourceId: "diagnostic-initial";
       stepNumber?: number;
       durationMs?: number;
       metadata: { totalQuestions: number; correctAnswers: number; initialScorePercent: number };
     }
   | {
       eventType: "LESSON_OPENED";
-      resourceType?: "lesson";
-      resourceId?: string;
+      resourceType: "lesson";
+      resourceId: typeof VALID_LESSON_SLUGS[number];
       stepNumber?: number;
       durationMs?: number;
-      metadata?: { school?: string; level?: number };
+      metadata?: { school?: typeof CANONICAL_SCHOOLS[number]; level?: number };
     }
   | {
       eventType: "LESSON_COMPLETED";
-      resourceType?: "lesson";
-      resourceId?: string;
+      resourceType: "lesson";
+      resourceId: typeof VALID_LESSON_SLUGS[number];
       stepNumber?: number;
       durationMs?: number;
       metadata: { quizScorePercent: number; passed: boolean };
     }
   | {
       eventType: "INQUIRY_STARTED";
-      resourceType?: "inquiry";
-      resourceId?: string;
+      resourceType: "inquiry";
+      resourceId: typeof VALID_INQUIRY_IDS_AND_SLUGS[number];
       stepNumber?: number;
       durationMs?: number;
-      metadata?: { certaintyLevelTarget?: string };
+      metadata?: { certaintyLevelTarget?: typeof CANONICAL_CERTAINTY_LEVELS[number] };
     }
   | {
       eventType: "INQUIRY_STEP_ANSWERED";
-      resourceType?: "inquiry";
-      resourceId?: string;
+      resourceType: "inquiry";
+      resourceId: typeof VALID_INQUIRY_IDS_AND_SLUGS[number];
       stepNumber: number;
       durationMs?: number;
       metadata: {
@@ -66,16 +73,16 @@ export type TelemetryClientPayload =
     }
   | {
       eventType: "INQUIRY_ABANDONED";
-      resourceType?: "inquiry";
-      resourceId?: string;
+      resourceType: "inquiry";
+      resourceId: typeof VALID_INQUIRY_IDS_AND_SLUGS[number];
       stepNumber?: number;
       durationMs?: number;
       metadata?: { lastCompletedStep?: number };
     }
   | {
       eventType: "INQUIRY_COMPLETED";
-      resourceType?: "inquiry";
-      resourceId?: string;
+      resourceType: "inquiry";
+      resourceId: typeof VALID_INQUIRY_IDS_AND_SLUGS[number];
       stepNumber?: number;
       durationMs?: number;
       metadata: {
@@ -86,16 +93,16 @@ export type TelemetryClientPayload =
     }
   | {
       eventType: "FINAL_ASSESSMENT_STARTED";
-      resourceType?: "final_assessment";
-      resourceId?: string;
+      resourceType: "final_assessment";
+      resourceId: "evaluation-finale";
       stepNumber?: number;
       durationMs?: number;
       metadata?: { totalQuestions?: number };
     }
   | {
       eventType: "FINAL_ASSESSMENT_COMPLETED";
-      resourceType?: "final_assessment";
-      resourceId?: string;
+      resourceType: "final_assessment";
+      resourceId: "evaluation-finale";
       stepNumber?: number;
       durationMs?: number;
       metadata: {
@@ -106,11 +113,15 @@ export type TelemetryClientPayload =
     }
   | {
       eventType: "GLOSSARY_OPENED";
-      resourceType?: "glossary";
-      resourceId?: string;
+      resourceType: "glossary";
+      resourceId: typeof VALID_GLOSSARY_TERM_IDS[number];
       stepNumber?: number;
       durationMs?: number;
-      metadata: { termId: string; fromResource?: string };
+      metadata?: {
+        termId: typeof VALID_GLOSSARY_TERM_IDS[number];
+        fromResourceType?: "lesson" | "inquiry" | "diagnostic" | "final_assessment";
+        fromResourceId?: typeof VALID_LESSON_SLUGS[number] | typeof VALID_INQUIRY_IDS_AND_SLUGS[number] | "diagnostic-initial" | "evaluation-finale";
+      };
     };
 
 /**
@@ -233,25 +244,44 @@ export async function sendTelemetryEvent(eventData: TelemetryClientPayload): Pro
   }
 }
 
-export interface UsePedagogicalTrackerOptions {
-  resourceType: "lesson" | "inquiry" | "diagnostic" | "final_assessment" | "glossary";
-  resourceId: string;
-  autoTrackOpen?: boolean;
-}
+export type UsePedagogicalTrackerOptions =
+  | {
+      resourceType: "diagnostic";
+      resourceId: "diagnostic-initial";
+      autoTrackOpen?: boolean;
+    }
+  | {
+      resourceType: "final_assessment";
+      resourceId: "evaluation-finale";
+      autoTrackOpen?: boolean;
+    }
+  | {
+      resourceType: "lesson";
+      resourceId: typeof VALID_LESSON_SLUGS[number];
+      autoTrackOpen?: boolean;
+    }
+  | {
+      resourceType: "inquiry";
+      resourceId: typeof VALID_INQUIRY_IDS_AND_SLUGS[number];
+      autoTrackOpen?: boolean;
+    }
+  | {
+      resourceType: "glossary";
+      resourceId: typeof VALID_GLOSSARY_TERM_IDS[number];
+      autoTrackOpen?: boolean;
+    };
 
 /**
  * Hook React pour mesurer le parcours pédagogique sur les 11 événements canoniques.
  */
-export function usePedagogicalTracker({
-  resourceType,
-  resourceId,
-  autoTrackOpen = true,
-}: UsePedagogicalTrackerOptions) {
+export function usePedagogicalTracker(options: UsePedagogicalTrackerOptions) {
+  const { resourceType, resourceId, autoTrackOpen = true } = options;
   const startTimeRef = useRef<number | null>(null);
   const lastStepTimeRef = useRef<number | null>(null);
   const currentStepRef = useRef<number>(0);
   const isCompletedRef = useRef<boolean>(false);
   const hasInteractedRef = useRef<boolean>(false);
+  const openedResourceRef = useRef<string | null>(null);
 
   // 1. Événement d'ouverture automatique (avec typage strict par type de ressource)
   useEffect(() => {
@@ -260,12 +290,14 @@ export function usePedagogicalTracker({
     lastStepTimeRef.current = now;
     isCompletedRef.current = false;
 
-    if (autoTrackOpen) {
+    const resourceKey = `${resourceType}:${resourceId}`;
+    if (autoTrackOpen && openedResourceRef.current !== resourceKey) {
+      openedResourceRef.current = resourceKey;
       if (resourceType === "diagnostic") {
         sendTelemetryEvent({
           eventType: "DIAGNOSTIC_STARTED",
           resourceType: "diagnostic",
-          resourceId,
+          resourceId: "diagnostic-initial",
           stepNumber: 0,
           durationMs: 0,
         });
@@ -273,7 +305,7 @@ export function usePedagogicalTracker({
         sendTelemetryEvent({
           eventType: "INQUIRY_STARTED",
           resourceType: "inquiry",
-          resourceId,
+          resourceId: resourceId as typeof VALID_INQUIRY_IDS_AND_SLUGS[number],
           stepNumber: 0,
           durationMs: 0,
         });
@@ -281,7 +313,7 @@ export function usePedagogicalTracker({
         sendTelemetryEvent({
           eventType: "LESSON_OPENED",
           resourceType: "lesson",
-          resourceId,
+          resourceId: resourceId as typeof VALID_LESSON_SLUGS[number],
           stepNumber: 0,
           durationMs: 0,
         });
@@ -289,7 +321,7 @@ export function usePedagogicalTracker({
         sendTelemetryEvent({
           eventType: "FINAL_ASSESSMENT_STARTED",
           resourceType: "final_assessment",
-          resourceId,
+          resourceId: "evaluation-finale",
           stepNumber: 0,
           durationMs: 0,
         });
@@ -309,7 +341,7 @@ export function usePedagogicalTracker({
         sendTelemetryEvent({
           eventType: "INQUIRY_ABANDONED",
           resourceType: "inquiry",
-          resourceId,
+          resourceId: resourceId as typeof VALID_INQUIRY_IDS_AND_SLUGS[number],
           stepNumber: currentStepRef.current,
           durationMs: totalDuration,
           metadata: { lastCompletedStep: currentStepRef.current },
@@ -328,6 +360,7 @@ export function usePedagogicalTracker({
         attemptNumber: number;
       }
     ) => {
+      if (resourceType !== "inquiry") return;
       hasInteractedRef.current = true;
       const now = Date.now();
       const last = lastStepTimeRef.current ?? now;
@@ -338,13 +371,13 @@ export function usePedagogicalTracker({
       sendTelemetryEvent({
         eventType: "INQUIRY_STEP_ANSWERED",
         resourceType: "inquiry",
-        resourceId,
+        resourceId: resourceId as typeof VALID_INQUIRY_IDS_AND_SLUGS[number],
         stepNumber,
         durationMs: stepDuration,
         metadata,
       });
     },
-    [resourceId]
+    [resourceType, resourceId]
   );
 
   // 4. Suivi de la complétion d'enquête
@@ -354,6 +387,7 @@ export function usePedagogicalTracker({
       totalMethodologicalScore: number;
       stepsCount: number;
     }) => {
+      if (resourceType !== "inquiry") return;
       isCompletedRef.current = true;
       const now = Date.now();
       const start = startTimeRef.current ?? now;
@@ -362,18 +396,19 @@ export function usePedagogicalTracker({
       sendTelemetryEvent({
         eventType: "INQUIRY_COMPLETED",
         resourceType: "inquiry",
-        resourceId,
+        resourceId: resourceId as typeof VALID_INQUIRY_IDS_AND_SLUGS[number],
         stepNumber: currentStepRef.current,
         durationMs: totalDuration,
         metadata,
       });
     },
-    [resourceId]
+    [resourceType, resourceId]
   );
 
   // 5. Suivi de la complétion de leçon
   const trackLessonComplete = useCallback(
     (metadata: { quizScorePercent: number; passed: boolean }) => {
+      if (resourceType !== "lesson") return;
       isCompletedRef.current = true;
       const now = Date.now();
       const start = startTimeRef.current ?? now;
@@ -382,26 +417,30 @@ export function usePedagogicalTracker({
       sendTelemetryEvent({
         eventType: "LESSON_COMPLETED",
         resourceType: "lesson",
-        resourceId,
+        resourceId: resourceId as typeof VALID_LESSON_SLUGS[number],
         stepNumber: currentStepRef.current,
         durationMs: totalDuration,
         metadata,
       });
     },
-    [resourceId]
+    [resourceType, resourceId]
   );
 
   // 6. Suivi de l'ouverture d'un terme du lexique
   const trackGlossaryOpen = useCallback(
-    (termId: string, fromResource?: string) => {
+    (
+      termId: typeof VALID_GLOSSARY_TERM_IDS[number],
+      fromResourceType?: "lesson" | "inquiry" | "diagnostic" | "final_assessment",
+      fromResourceId?: typeof VALID_LESSON_SLUGS[number] | typeof VALID_INQUIRY_IDS_AND_SLUGS[number] | "diagnostic-initial" | "evaluation-finale"
+    ) => {
       sendTelemetryEvent({
         eventType: "GLOSSARY_OPENED",
         resourceType: "glossary",
         resourceId: termId,
-        metadata: { termId, fromResource: fromResource || resourceId },
+        metadata: { termId, fromResourceType, fromResourceId },
       });
     },
-    [resourceId]
+    []
   );
 
   return {

@@ -72,8 +72,8 @@ function testFunnelFlowSimulation() {
     ...base,
     eventType: "LESSON_OPENED",
     resourceType: "lesson",
-    resourceId: "hanafi-01",
-    metadata: { school: "Hanafi", level: 1 },
+    resourceId: "critique-01-affirmation-vs-preuve",
+    metadata: { school: "CRITIQUE", level: 1 },
   });
   assert.strictEqual(lessonOpen.success, true);
 
@@ -83,7 +83,11 @@ function testFunnelFlowSimulation() {
     eventType: "GLOSSARY_OPENED",
     resourceType: "glossary",
     resourceId: "dalala",
-    metadata: { termId: "dalala", fromResource: "hanafi-01" },
+    metadata: {
+      termId: "dalala",
+      fromResourceType: "lesson",
+      fromResourceId: "critique-01-affirmation-vs-preuve",
+    },
   });
   assert.strictEqual(glossaryOpen.success, true);
 
@@ -92,7 +96,7 @@ function testFunnelFlowSimulation() {
     ...base,
     eventType: "LESSON_COMPLETED",
     resourceType: "lesson",
-    resourceId: "hanafi-01",
+    resourceId: "critique-01-affirmation-vs-preuve",
     metadata: { quizScorePercent: 100, passed: true },
   });
   assert.strictEqual(lessonComplete.success, true);
@@ -102,8 +106,8 @@ function testFunnelFlowSimulation() {
     ...base,
     eventType: "INQUIRY_STARTED",
     resourceType: "inquiry",
-    resourceId: "inquiry-hadith-01",
-    metadata: { certaintyLevelTarget: "hadith" },
+    resourceId: "inquiry-01",
+    metadata: { certaintyLevelTarget: "ETABLI" },
   });
   assert.strictEqual(inquiryStart.success, true);
 
@@ -112,7 +116,7 @@ function testFunnelFlowSimulation() {
     ...base,
     eventType: "INQUIRY_STEP_ANSWERED",
     resourceType: "inquiry",
-    resourceId: "inquiry-hadith-01",
+    resourceId: "inquiry-01",
     stepNumber: 1,
     durationMs: 8500,
     metadata: { quality: "BEST", methodologicalScore: 3, attemptNumber: 1 },
@@ -124,7 +128,7 @@ function testFunnelFlowSimulation() {
     ...base,
     eventType: "INQUIRY_COMPLETED",
     resourceType: "inquiry",
-    resourceId: "inquiry-hadith-01",
+    resourceId: "inquiry-01",
     stepNumber: 10,
     durationMs: 145000,
     metadata: { finalQuality: "BEST", totalMethodologicalScore: 29, stepsCount: 10 },
@@ -245,6 +249,63 @@ function testZeroFreeTextStrictness() {
         eligibleForAttestation: true,
         userName: "Ahmed", // Champ interdit !
       },
+    },
+    {
+      ...base,
+      eventType: "LESSON_OPENED",
+      resourceType: "lesson",
+      resourceId: "unlisted-lesson-slug", // Slug interdit !
+      metadata: { school: "CRITIQUE", level: 1 },
+    },
+    {
+      ...base,
+      eventType: "LESSON_OPENED",
+      resourceType: "lesson",
+      resourceId: "critique-01-affirmation-vs-preuve",
+      metadata: { school: "Maliki", level: 1 }, // École non canonique interdite !
+    },
+    {
+      ...base,
+      eventType: "INQUIRY_STARTED",
+      resourceType: "inquiry",
+      resourceId: "inquiry-01",
+      metadata: { certaintyLevelTarget: "NON_CANONIQUE" }, // Niveau de certitude non canonique interdit !
+    },
+    {
+      ...base,
+      eventType: "GLOSSARY_OPENED",
+      resourceType: "glossary",
+      resourceId: "terme-inconnu-123", // Terme inconnu interdit !
+      metadata: { termId: "terme-inconnu-123" },
+    },
+    {
+      ...base,
+      eventType: "GLOSSARY_OPENED",
+      resourceType: "glossary",
+      resourceId: "dalala",
+      metadata: { termId: "dalala", fromResourceType: "lesson", fromResourceId: "/fr/lecons/page-pirate" }, // fromResourceId libre interdit !
+    },
+    {
+      ...base,
+      eventType: "GLOSSARY_OPENED",
+      resourceType: "glossary",
+      resourceId: "dalala",
+      metadata: { termId: "takrij" }, // termId doit correspondre à resourceId
+    },
+    {
+      ...base,
+      eventType: "GLOSSARY_OPENED",
+      resourceType: "glossary",
+      resourceId: "dalala",
+      metadata: { termId: "dalala", fromResourceType: "lesson", fromResourceId: "inquiry-01" },
+    },
+    {
+      ...base,
+      eventType: "LESSON_OPENED",
+      resourceType: "lesson",
+      resourceId: "critique-01-affirmation-vs-preuve",
+      metadata: { school: "CRITIQUE" },
+      arbitraryText: "champ racine interdit",
     },
   ];
 

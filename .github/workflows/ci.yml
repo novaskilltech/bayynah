@@ -57,6 +57,12 @@ jobs:
       - name: Run Pilot Funnel & Invariants Tests
         run: npx tsx tests/pilot-funnel.test.ts
 
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Pilot Browser Smoke Test
+        run: npm run test:pilot-browser
+
       - name: Typecheck TypeScript
         run: npx tsc --noEmit
 

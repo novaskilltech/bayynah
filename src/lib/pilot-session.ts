@@ -6,12 +6,14 @@ export interface PilotSessionToken {
   pilotSessionSignature: string;
 }
 
-function getPilotSecret(): string {
-  return (
-    process.env.CSRF_SECRET ||
-    process.env.AUTH_SECRET ||
-    "tabayyun-pilot-ephemeral-secret-key-2026-strict"
-  );
+export function getPilotSecret(): string {
+  const secret = process.env.PILOT_TELEMETRY_SECRET;
+
+  if (!secret && process.env.NODE_ENV === "production") {
+    throw new Error("PILOT_TELEMETRY_SECRET must be configured in production.");
+  }
+
+  return secret ?? "dev-only-pilot-secret";
 }
 
 /**

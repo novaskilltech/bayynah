@@ -7,6 +7,7 @@ import HistoricReferenceCard from "@/components/lessons/HistoricReferenceCard";
 import LessonQuiz from "@/components/lessons/LessonQuiz";
 import LessonContent from "@/components/lessons/LessonContent";
 import { ArrowLeft, ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
+import { isLessonSlug } from "@/lib/telemetry-contract";
 
 interface PageProps {
   params: Promise<{
@@ -150,7 +151,7 @@ export default async function SingleLessonPage({ params }: PageProps) {
       )}
 
       {/* 8. Quiz interactif */}
-      {lesson.quizzes && lesson.quizzes.length > 0 && (
+      {lesson.quizzes && lesson.quizzes.length > 0 && isLessonSlug(lesson.slug) && (
         <section aria-label="Exercice méthodologique">
           <LessonQuiz quizzes={lesson.quizzes} lessonSlug={lesson.slug} locale={locale} />
         </section>

@@ -6,16 +6,33 @@ import { getGlossaryTerm } from "@/lib/glossary-data";
 import { sendTelemetryEvent } from "@/lib/usePedagogicalTracker";
 import { BookOpen, ExternalLink, X, AlertCircle, Lightbulb } from "lucide-react";
 
+import {
+  VALID_GLOSSARY_TERM_IDS,
+  VALID_LESSON_SLUGS,
+  VALID_INQUIRY_IDS_AND_SLUGS,
+} from "@/lib/telemetry-contract";
+
+const VALID_FROM_RESOURCE_IDS: readonly string[] = [
+  ...VALID_LESSON_SLUGS,
+  ...VALID_INQUIRY_IDS_AND_SLUGS,
+  "diagnostic-initial",
+  "evaluation-finale",
+];
+
 export interface GlossaryPopoverProps {
   termId: string;
   children?: React.ReactNode;
   locale?: string;
+  fromResourceType?: "lesson" | "inquiry" | "diagnostic" | "final_assessment";
+  fromResourceId?: string;
 }
 
 export default function GlossaryPopover({
   termId,
   children,
   locale = "fr",
+  fromResourceType,
+  fromResourceId,
 }: GlossaryPopoverProps) {
   const isArabic = locale === "ar";
   const [isOpen, setIsOpen] = useState(false);
@@ -88,14 +105,19 @@ export default function GlossaryPopover({
     const nextState = !isOpen;
     setIsOpen(nextState);
 
-    if (nextState) {
+    if (nextState && (VALID_GLOSSARY_TERM_IDS as readonly string[]).includes(term.id)) {
+      const validatedFromResourceId =
+        fromResourceId && VALID_FROM_RESOURCE_IDS.includes(fromResourceId)
+          ? (fromResourceId as typeof VALID_LESSON_SLUGS[number] | typeof VALID_INQUIRY_IDS_AND_SLUGS[number] | "diagnostic-initial" | "evaluation-finale")
+          : undefined;
       sendTelemetryEvent({
         eventType: "GLOSSARY_OPENED",
         resourceType: "glossary",
-        resourceId: term.id,
+        resourceId: term.id as (typeof VALID_GLOSSARY_TERM_IDS)[number],
         metadata: {
-          termId: term.id,
-          fromResource: typeof window !== "undefined" ? window.location.pathname : "unknown",
+          termId: term.id as (typeof VALID_GLOSSARY_TERM_IDS)[number],
+          fromResourceType,
+          fromResourceId: validatedFromResourceId,
         },
       });
     }

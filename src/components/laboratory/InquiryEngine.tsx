@@ -11,6 +11,7 @@ import { EvidenceItem } from "@/types/evidence";
 import EvidenceDrawer from "./EvidenceDrawer";
 import ConclusionSheetView from "./ConclusionSheetView";
 import { usePedagogicalTracker } from "@/lib/usePedagogicalTracker";
+import type { InquiryId } from "@/lib/telemetry-contract";
 import {
   HelpCircle,
   CheckCircle2,
@@ -29,7 +30,7 @@ import {
 } from "lucide-react";
 
 interface InquiryEngineProps {
-  inquiry: InquiryInput;
+  inquiry: InquiryInput & { id: InquiryId };
   locale: string;
 }
 
@@ -353,6 +354,7 @@ export default function InquiryEngine({ inquiry, locale }: InquiryEngineProps) {
                 <button
                   key={idx}
                   onClick={() => handleSelectOption(idx)}
+                  data-testid={`inquiry-option-${idx}`}
                   className={`w-full p-4 rounded-xl border text-start transition flex items-start gap-3 shadow-xs ${btnClass}`}
                 >
                   <span className="w-6 h-6 rounded-full border border-sable-300 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
@@ -457,6 +459,7 @@ export default function InquiryEngine({ inquiry, locale }: InquiryEngineProps) {
 
                 <button
                   onClick={handleNextStep}
+                  data-testid="inquiry-next"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-vertProfond-700 text-white font-semibold hover:bg-vertProfond-800 transition shadow-sm text-sm ms-auto"
                 >
                   <span>

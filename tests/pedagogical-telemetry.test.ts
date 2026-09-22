@@ -5,9 +5,19 @@ import {
   searchGlossary,
   getGlossaryTermsByCategory,
 } from "../src/lib/glossary-data";
-import { TelemetryEventSchema, purgeOldPedagogicalMetrics } from "../src/lib/telemetry";
-import { generatePilotSession, verifyPilotSession } from "../src/lib/pilot-session";
+import {
+  TelemetryEventSchema,
+  purgeOldPedagogicalMetrics,
+  VALID_GLOSSARY_TERM_IDS,
+  VALID_INQUIRY_IDS_AND_SLUGS,
+  VALID_LESSON_SLUGS,
+} from "../src/lib/telemetry";
+import { generatePilotSession, getPilotSecret, verifyPilotSession } from "../src/lib/pilot-session";
 import { prisma } from "../src/lib/prisma";
+import { handlePurgeRequest } from "../src/lib/pedagogical-retention-route";
+import type { NextRequest } from "next/server";
+import { getAllLessons } from "../src/lib/lesson-service";
+import { getAllInquiries } from "../src/lib/inquiry-service";
 
 console.log("🔬 Démarrage de la suite de tests — Phase 8.1 : Lexique & Télémétrie Pédagogique Pilote...");
 
@@ -43,6 +53,26 @@ function testGlossaryDataIntegrity() {
     assert.ok(term.reviewedAt && term.reviewedAt.length > 0, `reviewedAt requis pour ${term.id}`);
     assert.ok(Array.isArray(term.sources) && term.sources.length > 0, `sources requises pour ${term.id}`);
   }
+
+  assert.deepStrictEqual(
+    [...VALID_GLOSSARY_TERM_IDS].sort(),
+    GLOSSARY_TERMS.map((term) => term.id).sort(),
+    "Le contrat de télémétrie doit refléter exactement les termes publiés"
+  );
+
+  assert.deepStrictEqual(
+    [...VALID_LESSON_SLUGS].sort(),
+    getAllLessons().map((lesson) => lesson.slug).sort(),
+    "Le contrat de télémétrie doit refléter exactement les leçons publiées"
+  );
+
+  const inquiries = getAllInquiries();
+  const inquiryResources = inquiries.flatMap((inquiry) => [inquiry.id, inquiry.slug]).sort();
+  assert.deepStrictEqual(
+    [...VALID_INQUIRY_IDS_AND_SLUGS].sort(),
+    inquiryResources,
+    "Le contrat de télémétrie doit refléter exactement les enquêtes publiées"
+  );
 
   console.log(`    ✅ ${GLOSSARY_TERMS.length} termes du lexique vérifiés avec conformité bilingue 100% (FR/AR).`);
 }
@@ -121,6 +151,32 @@ function testPilotSessionHmac() {
   );
   assert.strictEqual(isExpiredValid, false, "Une session expirée doit être rejetée");
 
+  const previousPilotSecret = process.env.PILOT_TELEMETRY_SECRET;
+  const previousCsrfSecret = process.env.CSRF_SECRET;
+  const previousAuthSecret = process.env.AUTH_SECRET;
+  const previousNodeEnv = process.env.NODE_ENV;
+  const mutableEnv = process.env as Record<string, string | undefined>;
+  try {
+    delete process.env.PILOT_TELEMETRY_SECRET;
+    process.env.CSRF_SECRET = "must-not-be-used";
+    process.env.AUTH_SECRET = "must-not-be-used";
+    mutableEnv.NODE_ENV = "production";
+    assert.throws(
+      () => getPilotSecret(),
+      /PILOT_TELEMETRY_SECRET must be configured in production/,
+      "La production doit échouer sans secret dédié, même si CSRF_SECRET ou AUTH_SECRET existent"
+    );
+  } finally {
+    if (previousPilotSecret === undefined) delete process.env.PILOT_TELEMETRY_SECRET;
+    else process.env.PILOT_TELEMETRY_SECRET = previousPilotSecret;
+    if (previousCsrfSecret === undefined) delete process.env.CSRF_SECRET;
+    else process.env.CSRF_SECRET = previousCsrfSecret;
+    if (previousAuthSecret === undefined) delete process.env.AUTH_SECRET;
+    else process.env.AUTH_SECRET = previousAuthSecret;
+    if (previousNodeEnv === undefined) delete mutableEnv.NODE_ENV;
+    else mutableEnv.NODE_ENV = previousNodeEnv;
+  }
+
   console.log("    ✅ Sessions pilotes HMAC infalsifiables et contrôlées.");
 }
 
@@ -139,14 +195,28 @@ function testTelemetryEventValidation() {
     expiresAt: session.expiresAt,
     eventType: "LESSON_OPENED" as const,
     resourceType: "lesson" as const,
-    resourceId: "critique-01",
+    resourceId: "critique-01-affirmation-vs-preuve" as const,
     stepNumber: 0,
     durationMs: 1500,
-    metadata: { school: "Hanafi", level: 1 },
+    metadata: { school: "CRITIQUE" as const, level: 1 },
   };
 
   const validResult = TelemetryEventSchema.safeParse(validEvent);
   assert.strictEqual(validResult.success, true);
+
+  // Rejet si resourceId n'est pas dans la liste fermée canonique
+  const invalidResourceId = {
+    ...validEvent,
+    resourceId: "malicious-unknown-slug",
+  };
+  assert.strictEqual(TelemetryEventSchema.safeParse(invalidResourceId).success, false);
+
+  // Rejet si school n'est pas dans les écoles canoniques
+  const invalidSchool = {
+    ...validEvent,
+    metadata: { school: "Hanafi", level: 1 },
+  };
+  assert.strictEqual(TelemetryEventSchema.safeParse(invalidSchool).success, false);
 
   // Rejet si pilotSessionId trop court (< 8 caractères)
   const invalidSession = {
@@ -172,9 +242,21 @@ function testTelemetryEventValidation() {
   // Rejet si texte libre présent dans les métadonnées (anti-exfiltration)
   const illegalMetadata = {
     ...validEvent,
-    metadata: { school: "Hanafi", comment: "Mon opinion libre...", email: "user@test.com" },
+    metadata: { school: "CRITIQUE", comment: "Mon opinion libre...", email: "user@test.com" },
   };
   assert.strictEqual(TelemetryEventSchema.safeParse(illegalMetadata).success, false);
+
+  const illegalTopLevelText = {
+    ...validEvent,
+    freeText: "Texte arbitraire hors metadata",
+  };
+  assert.strictEqual(TelemetryEventSchema.safeParse(illegalTopLevelText).success, false);
+
+  const nonHexSignature = {
+    ...validEvent,
+    pilotSessionSignature: "z".repeat(64),
+  };
+  assert.strictEqual(TelemetryEventSchema.safeParse(nonHexSignature).success, false);
 
   // Rejet si durée négative
   const negativeDuration = {
@@ -218,28 +300,28 @@ function testPilotEventTypesCoverage() {
       ...base,
       eventType: "LESSON_OPENED",
       resourceType: "lesson",
-      resourceId: "critique-01",
-      metadata: { school: "Maliki", level: 2 },
+      resourceId: "critique-01-affirmation-vs-preuve",
+      metadata: { school: "CRITIQUE", level: 2 },
     },
     {
       ...base,
       eventType: "LESSON_COMPLETED",
       resourceType: "lesson",
-      resourceId: "critique-01",
+      resourceId: "critique-01-affirmation-vs-preuve",
       metadata: { quizScorePercent: 100, passed: true },
     },
     {
       ...base,
       eventType: "INQUIRY_STARTED",
       resourceType: "inquiry",
-      resourceId: "hadith-intention",
-      metadata: { certaintyLevelTarget: "hadith" },
+      resourceId: "inquiry-01",
+      metadata: { certaintyLevelTarget: "ETABLI" },
     },
     {
       ...base,
       eventType: "INQUIRY_STEP_ANSWERED",
       resourceType: "inquiry",
-      resourceId: "hadith-intention",
+      resourceId: "inquiry-01",
       stepNumber: 1,
       durationMs: 12000,
       metadata: { quality: "BEST", methodologicalScore: 3, attemptNumber: 1 },
@@ -248,7 +330,7 @@ function testPilotEventTypesCoverage() {
       ...base,
       eventType: "INQUIRY_ABANDONED",
       resourceType: "inquiry",
-      resourceId: "hadith-intention",
+      resourceId: "inquiry-01",
       stepNumber: 2,
       durationMs: 35000,
       metadata: { lastCompletedStep: 2 },
@@ -257,7 +339,7 @@ function testPilotEventTypesCoverage() {
       ...base,
       eventType: "INQUIRY_COMPLETED",
       resourceType: "inquiry",
-      resourceId: "hadith-intention",
+      resourceId: "inquiry-01",
       stepNumber: 10,
       durationMs: 180000,
       metadata: { finalQuality: "BEST", totalMethodologicalScore: 28, stepsCount: 10 },
@@ -285,7 +367,11 @@ function testPilotEventTypesCoverage() {
       eventType: "GLOSSARY_OPENED",
       resourceType: "glossary",
       resourceId: "dalala",
-      metadata: { termId: "dalala", fromResource: "critique-01" },
+      metadata: {
+        termId: "dalala",
+        fromResourceType: "lesson",
+        fromResourceId: "critique-01-affirmation-vs-preuve",
+      },
     },
   ];
 
@@ -305,14 +391,14 @@ function testPilotEventTypesCoverage() {
 // 6. Test de Non-Conservation d'IP et Confidentialité RGPD
 // =========================================================================
 function testPrivacyAndNoIpStorage() {
-  console.log("  [6/7] Test d'architecture RGPD : zéro stockage d'IP dans PedagogicalMetric...");
+  console.log("  [6/8] Test d'architecture RGPD : zéro stockage d'IP dans PedagogicalMetric...");
 
   // Vérifier que le modèle Prisma ne contient aucune colonne d'IP ni de User-Agent
   const _testMetricModel: Parameters<typeof prisma.pedagogicalMetric.create>[0]["data"] = {
     sessionId: "pilot_test_session_123",
     eventType: "LESSON_OPENED",
     resourceType: "lesson",
-    resourceId: "critique-01",
+    resourceId: "critique-01-affirmation-vs-preuve",
     // ipAddress ou userAgent provoqueraient une erreur TypeScript si présents
   };
 
@@ -324,23 +410,72 @@ function testPrivacyAndNoIpStorage() {
 // 7. Test de Rétention et Procédure de Purge (90 jours)
 // =========================================================================
 async function testRetentionPurge() {
-  console.log("  [7/7] Test de la procédure de purge des métriques pédagogiques (90 jours)...");
+  console.log("  [7/8] Test de la procédure de purge des métriques pédagogiques (90 jours)...");
 
   assert.strictEqual(typeof purgeOldPedagogicalMetrics, "function");
 
+  const now = Date.UTC(2026, 8, 22, 12, 0, 0);
+  const records = [
+    { id: "older", createdAt: new Date(now - 91 * 24 * 60 * 60 * 1000) },
+    { id: "boundary", createdAt: new Date(now - 90 * 24 * 60 * 60 * 1000) },
+    { id: "recent", createdAt: new Date(now - 89 * 24 * 60 * 60 * 1000) },
+  ];
+  const store = {
+    async deleteMany({ where }: { where: { createdAt: { lt: Date } } }) {
+      const deleted = records.filter((record) => record.createdAt < where.createdAt.lt);
+      for (const record of deleted) records.splice(records.indexOf(record), 1);
+      return { count: deleted.length };
+    },
+  };
+
+  const deletedCount = await purgeOldPedagogicalMetrics(90, store, now);
+  assert.strictEqual(deletedCount, 1);
+  assert.deepStrictEqual(records.map((record) => record.id), ["boundary", "recent"]);
+  assert.strictEqual(await purgeOldPedagogicalMetrics(90, store, now), 0, "La purge doit être idempotente");
+  await assert.rejects(() => purgeOldPedagogicalMetrics(0, store, now), RangeError);
+  console.log("    ✅ Les données > 90 jours sont supprimées, les données récentes conservées, de façon idempotente.");
+}
+
+// =========================================================================
+// 8. Test de Sécurité de la Route Cron de Purge (/api/cron/purge-pedagogical-metrics)
+// =========================================================================
+async function testCronRouteSecurity() {
+  console.log("  [8/8] Test d'authentification et sécurité de la route cron de purge...");
+
+  const previousSecret = process.env.CRON_SECRET;
   try {
-    const deletedCount = await purgeOldPedagogicalMetrics(90);
-    assert.ok(typeof deletedCount === "number");
-    console.log(`    ✅ Procédure de purge exécutée en base (${deletedCount} entrées purgées).`);
-  } catch (err: unknown) {
-    const isPrismaDbError =
-      err instanceof Error &&
-      (err.message.includes("database") ||
-        err.message.includes("Authentication failed") ||
-        err.message.includes("Can't reach database server"));
-    assert.ok(isPrismaDbError, `Erreur inattendue dans la purge: ${String(err)}`);
-    console.log("    ✅ Procédure de purge validée (environnement sans DB locale active détecté et géré).");
+    delete process.env.CRON_SECRET;
+    const noConfiguredSecretReq = {
+      headers: new Headers({ authorization: "Bearer dev-only-change-me" }),
+    } as unknown as NextRequest;
+    assert.strictEqual((await handlePurgeRequest(noConfiguredSecretReq)).status, 401);
+
+    process.env.CRON_SECRET = "test-cron-secret";
+    const unauthReq = { headers: new Headers() } as unknown as NextRequest;
+    assert.strictEqual((await handlePurgeRequest(unauthReq)).status, 401);
+
+    const badSecretReq = {
+      headers: new Headers({ authorization: "Bearer wrong-secret-token" }),
+    } as unknown as NextRequest;
+    assert.strictEqual((await handlePurgeRequest(badSecretReq)).status, 401);
+
+    let requestedDays: number | undefined;
+    const authReq = {
+      headers: new Headers({ authorization: "Bearer test-cron-secret" }),
+    } as unknown as NextRequest;
+    const authRes = await handlePurgeRequest(authReq, async (days) => {
+      requestedDays = days;
+      return 123;
+    });
+    assert.strictEqual(authRes.status, 200);
+    assert.strictEqual(requestedDays, 90);
+    assert.deepStrictEqual(await authRes.json(), { success: true, deleted: 123 });
+  } finally {
+    if (previousSecret === undefined) delete process.env.CRON_SECRET;
+    else process.env.CRON_SECRET = previousSecret;
   }
+
+  console.log("    ✅ Route cron de purge protégée par CRON_SECRET (fail-closed sans clé valide).");
 }
 
 // =========================================================================
@@ -354,6 +489,7 @@ async function runSuite() {
   testPilotEventTypesCoverage();
   testPrivacyAndNoIpStorage();
   await testRetentionPurge();
+  await testCronRouteSecurity();
 
   console.log("🎉 TOUS LES TESTS DE LA PHASE 8.1 (PILOT INSTRUMENTATION CLOSURE) ONT ÉTÉ VALIDÉS AVEC SUCCÈS !");
 }

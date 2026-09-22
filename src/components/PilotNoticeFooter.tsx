@@ -47,7 +47,7 @@ export default function PilotNoticeFooter({ locale }: PilotNoticeFooterProps) {
         <p className="leading-relaxed">
           {isArabic ? (
             <>
-              <strong>قياس بيداغوجي مرحلي :</strong> بيانات إحصائية مجهولة ومؤقتة (حفظ 90 يوماً كحد أقصى، صفر عنوان IP محفوظ، صفر نصوص حرة). لا ترتبط بحساب المستخدم.
+              <strong>قياس بيداغوجي مرحلي :</strong> بيانات بيداغوجية مؤقتة مرتبطة بمعرّف مستعار (حفظ 90 يوماً كحد أقصى، صفر عنوان IP محفوظ، صفر نصوص حرة). لا ترتبط بحساب المستخدم.
             </>
           ) : (
             <>

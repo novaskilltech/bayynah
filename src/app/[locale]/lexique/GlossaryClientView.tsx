@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { GlossaryTerm, GlossaryCategory } from "@/lib/glossary-data";
+import { VALID_GLOSSARY_TERM_IDS } from "@/lib/telemetry-contract";
+import { sendTelemetryEvent } from "@/lib/usePedagogicalTracker";
 import { Search, BookOpen, Lightbulb, AlertCircle, Sparkles, Filter } from "lucide-react";
 
 interface GlossaryClientViewProps {
@@ -21,6 +23,33 @@ export default function GlossaryClientView({ terms, locale }: GlossaryClientView
   const isArabic = locale === "ar";
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<GlossaryCategory | "all">("all");
+  const trackedTermsRef = useRef(new Set<string>());
+
+  useEffect(() => {
+    const trackHashTerm = () => {
+      const termId = decodeURIComponent(window.location.hash.slice(1));
+      if (
+        !termId ||
+        trackedTermsRef.current.has(termId) ||
+        !(VALID_GLOSSARY_TERM_IDS as readonly string[]).includes(termId)
+      ) {
+        return;
+      }
+
+      trackedTermsRef.current.add(termId);
+      const canonicalTermId = termId as (typeof VALID_GLOSSARY_TERM_IDS)[number];
+      sendTelemetryEvent({
+        eventType: "GLOSSARY_OPENED",
+        resourceType: "glossary",
+        resourceId: canonicalTermId,
+        metadata: { termId: canonicalTermId },
+      });
+    };
+
+    trackHashTerm();
+    window.addEventListener("hashchange", trackHashTerm);
+    return () => window.removeEventListener("hashchange", trackHashTerm);
+  }, []);
 
   const filteredTerms = useMemo(() => {
     return terms.filter((term) => {

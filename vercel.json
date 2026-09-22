@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/purge-pedagogical-metrics",
+      "schedule": "0 3 * * *"
+    }
+  ]
+}

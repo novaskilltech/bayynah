@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState, useSyncExternalStore } from "react";
+import React, { useMemo, useState, useSyncExternalStore } from "react";
 import { checkPrerequisites } from "@/lib/learning-path";
-import { getCompletedLessonSlugs, getCompletedInquirySlugs } from "@/lib/storage-adapter";
 import { AlertCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -11,21 +10,39 @@ interface PrerequisiteAlertProps {
   locale: string;
 }
 
-const emptySubscribe = () => () => {};
+const EMPTY_PROGRESS = "[]";
+
+function subscribe(callback: () => void) {
+  window.addEventListener("storage", callback);
+  return () => window.removeEventListener("storage", callback);
+}
+
+function getProgressSnapshot() {
+  return JSON.stringify({
+    lessons: localStorage.getItem("tabayyun_completed_lessons") ?? EMPTY_PROGRESS,
+    inquiries: localStorage.getItem("tabayyun_completed_inquiries") ?? EMPTY_PROGRESS,
+  });
+}
+
+function getServerSnapshot() {
+  return JSON.stringify({ lessons: EMPTY_PROGRESS, inquiries: EMPTY_PROGRESS });
+}
 
 export default function PrerequisiteAlert({ inquirySlug, locale }: PrerequisiteAlertProps) {
   const [isDismissed, setIsDismissed] = useState(false);
 
-  const completedLessons = useSyncExternalStore(
-    emptySubscribe,
-    () => getCompletedLessonSlugs(),
-    () => []
-  );
-  const completedInquiries = useSyncExternalStore(
-    emptySubscribe,
-    () => getCompletedInquirySlugs(),
-    () => []
-  );
+  const rawProgress = useSyncExternalStore(subscribe, getProgressSnapshot, getServerSnapshot);
+  const { completedLessons, completedInquiries } = useMemo(() => {
+    try {
+      const snapshot = JSON.parse(rawProgress) as { lessons: string; inquiries: string };
+      return {
+        completedLessons: JSON.parse(snapshot.lessons) as string[],
+        completedInquiries: JSON.parse(snapshot.inquiries) as string[],
+      };
+    } catch {
+      return { completedLessons: [], completedInquiries: [] };
+    }
+  }, [rawProgress]);
 
   const isArabic = locale === "ar";
 

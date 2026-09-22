@@ -3,6 +3,7 @@
 import React, { useState, useSyncExternalStore, useMemo, useRef } from "react";
 import { CheckCircle2, XCircle, HelpCircle, Award, RotateCcw, Check } from "lucide-react";
 import { usePedagogicalTracker } from "@/lib/usePedagogicalTracker";
+import type { LessonSlug } from "@/lib/telemetry-contract";
 
 interface QuizOption {
   textFr: string;
@@ -22,7 +23,7 @@ interface QuizItem {
 
 interface LessonQuizProps {
   quizzes: QuizItem[];
-  lessonSlug: string;
+  lessonSlug: LessonSlug;
   locale: string;
 }
 
@@ -220,6 +221,7 @@ export default function LessonQuiz({ quizzes, lessonSlug, locale }: LessonQuizPr
                       key={optIdx}
                       type="button"
                       onClick={() => handleSelectOption(quiz.id, optIdx)}
+                      data-testid={`lesson-quiz-${qIndex}-option-${optIdx}`}
                       className={`w-full text-start p-4 rounded-xl border-2 transition flex items-start gap-3 ${optionStyles}`}
                       aria-label={`${isArabic && option.textAr ? option.textAr : option.textFr} - ${
                         hasAnswered && option.isCorrect

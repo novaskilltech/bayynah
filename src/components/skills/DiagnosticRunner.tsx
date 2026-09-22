@@ -315,6 +315,15 @@ export default function DiagnosticRunner({ questions, locale }: DiagnosticRunner
               <div
                 key={option.id}
                 onClick={() => handleSelectOption(option.id)}
+                data-testid={`diagnostic-option-${option.id}`}
+                role="button"
+                tabIndex={showFeedback ? -1 : 0}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    handleSelectOption(option.id);
+                  }
+                }}
                 className={`p-4 rounded-xl border transition-all text-sm cursor-pointer ${borderClass}`}
               >
                 <div className="flex items-start justify-between gap-3">
@@ -340,6 +349,7 @@ export default function DiagnosticRunner({ questions, locale }: DiagnosticRunner
         <div className="flex justify-end pt-4 border-t border-sable-100">
           <button
             onClick={handleNext}
+            data-testid="diagnostic-next"
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-vertProfond-700 text-white font-semibold text-sm hover:bg-vertProfond-800 transition shadow-sm"
           >
             <span>

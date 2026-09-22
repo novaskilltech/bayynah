@@ -1,5 +1,24 @@
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
+import {
+  CANONICAL_CERTAINTY_LEVELS,
+  CANONICAL_SCHOOLS,
+  VALID_GLOSSARY_TERM_IDS,
+  VALID_INQUIRY_IDS_AND_SLUGS,
+  VALID_LESSON_SLUGS,
+} from "@/lib/telemetry-contract";
+
+export {
+  CANONICAL_CERTAINTY_LEVELS,
+  CANONICAL_SCHOOLS,
+  VALID_GLOSSARY_TERM_IDS,
+  VALID_INQUIRY_IDS_AND_SLUGS,
+  VALID_LESSON_SLUGS,
+} from "@/lib/telemetry-contract";
+
+// =========================================================================
+// Listes fermées canoniques de slugs et identifiants (ZÉRO chaîne libre)
+// =========================================================================
 
 // =========================================================================
 // Schémas de métadonnées strictement typés (ZÉRO texte libre, ZÉRO PII)
@@ -21,8 +40,8 @@ const DiagnosticCompletedMetadataSchema = z
 
 const LessonOpenedMetadataSchema = z
   .object({
-    school: z.string().max(32).optional(),
-    level: z.number().int().min(1).max(5).optional(),
+    school: z.enum(CANONICAL_SCHOOLS).optional(),
+    level: z.number().int().min(1).max(4).optional(),
   })
   .strict();
 
@@ -35,7 +54,7 @@ const LessonCompletedMetadataSchema = z
 
 const InquiryStartedMetadataSchema = z
   .object({
-    certaintyLevelTarget: z.string().max(32).optional(),
+    certaintyLevelTarget: z.enum(CANONICAL_CERTAINTY_LEVELS).optional(),
   })
   .strict();
 
@@ -49,7 +68,7 @@ const InquiryStepAnsweredMetadataSchema = z
 
 const InquiryAbandonedMetadataSchema = z
   .object({
-    lastCompletedStep: z.number().int().min(0).max(50).optional(),
+    lastCompletedStep: z.number().int().min(1).max(50).optional(),
   })
   .strict();
 
@@ -75,93 +94,177 @@ const FinalAssessmentCompletedMetadataSchema = z
   })
   .strict();
 
+// Union canonique fermée de tous les identifiants de ressources valides pour fromResourceId
+const VALID_FROM_RESOURCE_IDS = [
+  ...VALID_LESSON_SLUGS,
+  ...VALID_INQUIRY_IDS_AND_SLUGS,
+  "diagnostic-initial",
+  "evaluation-finale",
+] as const;
+
 const GlossaryOpenedMetadataSchema = z
   .object({
-    termId: z.string().max(64),
-    fromResource: z.string().max(128).optional(),
+    termId: z.enum(VALID_GLOSSARY_TERM_IDS),
+    fromResourceType: z.enum(["lesson", "inquiry", "diagnostic", "final_assessment"]).optional(),
+    fromResourceId: z.enum(VALID_FROM_RESOURCE_IDS).optional(),
   })
   .strict();
 
 // =========================================================================
-// Événements discriminés par eventType (Discriminated Union)
+// Événements discriminés par eventType avec validation stricte de resourceId
 // =========================================================================
 
-const BaseEventFields = {
-  pilotSessionId: z.string().min(8).max(64),
-  pilotSessionSignature: z.string().length(64),
+const BaseSecurityFields = {
+  pilotSessionId: z.string().regex(/^pilot_[0-9a-f]{32}$/),
+  pilotSessionSignature: z.string().regex(/^[0-9a-f]{64}$/),
   expiresAt: z.number().int().positive(),
-  resourceType: z.enum(["lesson", "inquiry", "diagnostic", "final_assessment", "glossary"]).optional(),
-  resourceId: z.string().max(128).optional(),
   stepNumber: z.number().int().min(0).max(100).optional(),
   durationMs: z.number().int().min(0).max(24 * 60 * 60 * 1000).optional(),
 };
 
 export const TelemetryEventSchema = z.discriminatedUnion("eventType", [
+  // 1. Diagnostic
   z.object({
-    ...BaseEventFields,
+    ...BaseSecurityFields,
     eventType: z.literal("DIAGNOSTIC_STARTED"),
+    resourceType: z.literal("diagnostic"),
+    resourceId: z.literal("diagnostic-initial"),
     metadata: DiagnosticStartedMetadataSchema.optional(),
-  }),
+  }).strict(),
   z.object({
-    ...BaseEventFields,
+    ...BaseSecurityFields,
     eventType: z.literal("DIAGNOSTIC_COMPLETED"),
+    resourceType: z.literal("diagnostic"),
+    resourceId: z.literal("diagnostic-initial"),
     metadata: DiagnosticCompletedMetadataSchema,
-  }),
+  }).strict(),
+
+  // 2. Leçon
   z.object({
-    ...BaseEventFields,
+    ...BaseSecurityFields,
     eventType: z.literal("LESSON_OPENED"),
+    resourceType: z.literal("lesson"),
+    resourceId: z.enum(VALID_LESSON_SLUGS),
     metadata: LessonOpenedMetadataSchema.optional(),
-  }),
+  }).strict(),
   z.object({
-    ...BaseEventFields,
+    ...BaseSecurityFields,
     eventType: z.literal("LESSON_COMPLETED"),
+    resourceType: z.literal("lesson"),
+    resourceId: z.enum(VALID_LESSON_SLUGS),
     metadata: LessonCompletedMetadataSchema,
-  }),
+  }).strict(),
+
+  // 3. Enquête
   z.object({
-    ...BaseEventFields,
+    ...BaseSecurityFields,
     eventType: z.literal("INQUIRY_STARTED"),
+    resourceType: z.literal("inquiry"),
+    resourceId: z.enum(VALID_INQUIRY_IDS_AND_SLUGS),
     metadata: InquiryStartedMetadataSchema.optional(),
-  }),
+  }).strict(),
   z.object({
-    ...BaseEventFields,
+    ...BaseSecurityFields,
     eventType: z.literal("INQUIRY_STEP_ANSWERED"),
+    resourceType: z.literal("inquiry"),
+    resourceId: z.enum(VALID_INQUIRY_IDS_AND_SLUGS),
     metadata: InquiryStepAnsweredMetadataSchema,
-  }),
+  }).strict(),
   z.object({
-    ...BaseEventFields,
+    ...BaseSecurityFields,
     eventType: z.literal("INQUIRY_ABANDONED"),
+    resourceType: z.literal("inquiry"),
+    resourceId: z.enum(VALID_INQUIRY_IDS_AND_SLUGS),
     metadata: InquiryAbandonedMetadataSchema.optional(),
-  }),
+  }).strict(),
   z.object({
-    ...BaseEventFields,
+    ...BaseSecurityFields,
     eventType: z.literal("INQUIRY_COMPLETED"),
+    resourceType: z.literal("inquiry"),
+    resourceId: z.enum(VALID_INQUIRY_IDS_AND_SLUGS),
     metadata: InquiryCompletedMetadataSchema,
-  }),
+  }).strict(),
+
+  // 4. Évaluation Finale
   z.object({
-    ...BaseEventFields,
+    ...BaseSecurityFields,
     eventType: z.literal("FINAL_ASSESSMENT_STARTED"),
+    resourceType: z.literal("final_assessment"),
+    resourceId: z.literal("evaluation-finale"),
     metadata: FinalAssessmentStartedMetadataSchema.optional(),
-  }),
+  }).strict(),
   z.object({
-    ...BaseEventFields,
+    ...BaseSecurityFields,
     eventType: z.literal("FINAL_ASSESSMENT_COMPLETED"),
+    resourceType: z.literal("final_assessment"),
+    resourceId: z.literal("evaluation-finale"),
     metadata: FinalAssessmentCompletedMetadataSchema,
-  }),
+  }).strict(),
+
+  // 5. Lexique
   z.object({
-    ...BaseEventFields,
+    ...BaseSecurityFields,
     eventType: z.literal("GLOSSARY_OPENED"),
+    resourceType: z.literal("glossary"),
+    resourceId: z.enum(VALID_GLOSSARY_TERM_IDS),
     metadata: GlossaryOpenedMetadataSchema.optional(),
-  }),
-]);
+  }).strict(),
+]).superRefine((event, context) => {
+  if (event.eventType !== "GLOSSARY_OPENED" || !event.metadata) return;
+
+  if (event.metadata.termId !== event.resourceId) {
+    context.addIssue({
+      code: "custom",
+      path: ["metadata", "termId"],
+      message: "termId must match resourceId.",
+    });
+  }
+
+  const { fromResourceType, fromResourceId } = event.metadata;
+  if ((fromResourceType && !fromResourceId) || (!fromResourceType && fromResourceId)) {
+    context.addIssue({
+      code: "custom",
+      path: ["metadata"],
+      message: "fromResourceType and fromResourceId must be provided together.",
+    });
+    return;
+  }
+
+  if (!fromResourceType || !fromResourceId) return;
+  const matchesType =
+    (fromResourceType === "lesson" && (VALID_LESSON_SLUGS as readonly string[]).includes(fromResourceId)) ||
+    (fromResourceType === "inquiry" && (VALID_INQUIRY_IDS_AND_SLUGS as readonly string[]).includes(fromResourceId)) ||
+    (fromResourceType === "diagnostic" && fromResourceId === "diagnostic-initial") ||
+    (fromResourceType === "final_assessment" && fromResourceId === "evaluation-finale");
+
+  if (!matchesType) {
+    context.addIssue({
+      code: "custom",
+      path: ["metadata", "fromResourceId"],
+      message: "fromResourceId does not match fromResourceType.",
+    });
+  }
+});
 
 export type TelemetryEvent = z.infer<typeof TelemetryEventSchema>;
 
 /**
  * Purge des métriques de télémétrie pédagogique brutes au-delà du seuil de rétention (90 jours).
  */
-export async function purgeOldPedagogicalMetrics(days = 90): Promise<number> {
-  const cutoff = new Date(Date.now() - days * 24 * 60 * 60 * 1000);
-  const result = await prisma.pedagogicalMetric.deleteMany({
+interface PedagogicalMetricRetentionStore {
+  deleteMany(args: { where: { createdAt: { lt: Date } } }): Promise<{ count: number }>;
+}
+
+export async function purgeOldPedagogicalMetrics(
+  days = 90,
+  store: PedagogicalMetricRetentionStore = prisma.pedagogicalMetric,
+  now = Date.now()
+): Promise<number> {
+  if (!Number.isInteger(days) || days < 1 || days > 3650) {
+    throw new RangeError("Retention days must be an integer between 1 and 3650.");
+  }
+  const cutoff = new Date(now - days * 24 * 60 * 60 * 1000);
+  const result = await store.deleteMany({
     where: {
       createdAt: {
         lt: cutoff,

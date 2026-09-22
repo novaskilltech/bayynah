@@ -9,6 +9,7 @@
     "build": "node scripts/build.mjs",
     "start": "next start",
     "lint": "eslint .",
+    "test:pilot-browser": "playwright test",
     "validate-content": "tsx src/lib/content-validator.ts",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev"
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.10.0",
+    "@playwright/test": "^1.63.0",
     "@types/node": "^20.16.5",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
