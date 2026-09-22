@@ -32,10 +32,10 @@ export default async function MethodePage({ params }: PageProps) {
               <span className="w-8 h-8 rounded-full bg-sable-100 flex items-center justify-center text-sm font-sans">
                 {step.num}
               </span>
-              <span className="font-arabic">{step.ar}</span>
+              <span className="font-arabic">{isArabic ? step.ar : step.question}</span>
             </div>
-            <p className="text-sm text-bleuNuit-800 font-medium">
-              {isArabic ? step.ar : step.question}
+            <p className="text-sm text-sable-600 leading-relaxed">
+              {step.explanation}
             </p>
           </div>
         ))}
