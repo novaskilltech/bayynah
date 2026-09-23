@@ -6,6 +6,7 @@
 - Une visite est comptée par session de navigation, avec déduplication dans `sessionStorage`.
 - Incrémentation PostgreSQL atomique via `upsert` ; aucune IP, aucun user-agent et aucun identifiant visiteur n'est persisté.
 - L'IP n'est utilisée que comme clé éphémère de limitation de débit.
+- La route publique utilise le limiteur mémoire best-effort afin de rester sans coût ; les routes sensibles conservent l'exigence Redis distribuée fail-closed.
 - Le compteur se masque sans bloquer le site lorsque l'infrastructure est indisponible.
 
 Ce fichier consigne les décisions techniques, produit, sécurité et éditoriales qui affectent le lancement pilote de TABAYYUN.
