@@ -1,5 +1,14 @@
 # TABAYYUN Decision Log
 
+## 2026-09-23 - Identité visuelle et logo officiel
+
+- La proposition V1 est retenue comme logo officiel de TABAYYUN.
+- Le symbole associe un `T` latin et un `ت` arabe, avec une ouverture centrale évoquant la lecture, la clarification et la vérification des preuves.
+- Palette : vert profond `#174530`, sable doré `#C2A97B` et ivoire `#FBF9F5`.
+- Fichier maître actuel : `public/brand/tabayyun-logo-v1.png`, PNG transparent de 1254 × 1254 px.
+- Les propositions V2 et V3 sont écartées et ne font pas partie des assets du projet.
+- Une déclinaison simplifiée devra être produite avant remplacement du favicon aux tailles 32–64 px.
+
 ## 2026-09-23 - Bascule PostgreSQL vers Supabase
 
 - Production reliée au projet Supabase `novaiq-dev` via le pool de session Supavisor.
