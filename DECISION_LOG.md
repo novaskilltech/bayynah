@@ -1,5 +1,14 @@
 # TABAYYUN Decision Log
 
+## 2026-09-23 - Bascule PostgreSQL vers Supabase
+
+- Production reliée au projet Supabase `novaiq-dev` via le pool de session Supavisor.
+- Rôle dédié `bayynah_prisma`, non-superutilisateur, secret limité à Vercel Production.
+- Le rôle serveur dispose de `BYPASSRLS` pour Prisma ; les rôles Data API `anon` et `authenticated` restent protégés par RLS.
+- RLS activé sur toutes les tables TABAYYUN sans politique publique.
+- La ressource Neon est déconnectée du projet Vercel mais conservée comme retour arrière temporaire.
+- Compteur initial conservé, puis incrémentation atomique et rendu FR/AR validés en production.
+
 ## 2026-09-23 - Compteur de visites agrégé
 
 - Compteur global affiché dans le pied de page FR/AR.
