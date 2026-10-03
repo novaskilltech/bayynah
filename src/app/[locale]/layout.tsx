@@ -27,9 +27,12 @@ export async function generateMetadata({ params }: RootLayoutProps): Promise<Met
       template: `%s — TABAYYUN`,
     },
     description,
-    authors: [{ name: "TABAYYUN" }],
-    creator: "TABAYYUN",
-    publisher: "TABAYYUN",
+    authors: [
+      { name: "Salah Eddine Abou Soulaymane" },
+      { name: "NovaSkill Tech" },
+    ],
+    creator: "Salah Eddine Abou Soulaymane",
+    publisher: "NovaSkill Tech",
     robots: {
       index: true,
       follow: true,
@@ -124,8 +127,11 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
 
         <main className="max-w-7xl mx-auto px-4 py-8">{children}</main>
 
-        <footer className="border-t border-sable-200 py-6 text-center text-xs text-sable-500 mt-16">
+        <footer className="border-t border-sable-200 py-6 text-center text-xs text-sable-500 mt-16 space-y-2">
           <p>{dict.common.footer}</p>
+          <p className="text-[11px] text-sable-400">
+            {dict.common.copyright}
+          </p>
           <VisitCounter locale={locale} />
           <div className="mt-3 flex items-center justify-center gap-4">
             <a href={`/${locale}/lexique`} className="hover:text-vertProfond-700 transition">

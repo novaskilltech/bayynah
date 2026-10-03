@@ -1,5 +1,16 @@
 # TABAYYUN Decision Log
 
+## 2026-10-03 - Mentions de copyright et signature d'auteur
+
+- Intégration du copyright institutionnel `NovaSkill Tech 2026` et de la signature d'auteur nominative `Salah Eddine Abou Soulaymane`.
+- Footer bilingue (`layout.tsx`) :
+  - FR : `© 2026 NovaSkill Tech. Tous droits réservés • Salah Eddine Abou Soulaymane`
+  - AR : `© 2026 NovaSkill Tech. جميع الحقوق محفوظة • صلاح الدين أبو سليمان`
+- Métadonnées HTML (`generateMetadata`) :
+  - `authors` : `Salah Eddine Abou Soulaymane` et `NovaSkill Tech`.
+  - `creator` : `Salah Eddine Abou Soulaymane`.
+  - `publisher` : `NovaSkill Tech`.
+
 ## 2026-09-23 - Identité visuelle et logo officiel
 
 - La proposition V1 est retenue comme logo officiel de TABAYYUN.
