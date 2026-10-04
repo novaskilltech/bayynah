@@ -14,6 +14,7 @@ import { usePedagogicalTracker } from "@/lib/usePedagogicalTracker";
 import type { InquiryId } from "@/lib/telemetry-contract";
 import { markInquiryCompleted, recordSkillAttempt } from "@/lib/storage-adapter";
 import { getSkillsForInquiryStep } from "@/lib/skills-registry";
+import { shuffleWithSeed, stringToSeed } from "@/lib/shuffle";
 import {
   HelpCircle,
   CheckCircle2,
@@ -358,40 +359,51 @@ export default function InquiryEngine({ inquiry, locale }: InquiryEngineProps) {
           </div>
 
           {/* Options de réponse */}
-          <div className="space-y-3">
-            {currentStep.options.map((option, idx) => {
-              const isSelected = selectedOptionIndex === idx;
-              let btnClass = "border-sable-200 bg-white hover:bg-sable-50 text-bleuNuit-900";
+          {(() => {
+            const seed = stringToSeed(`${inquiry.id}-step-${currentStep.stepNumber}`);
+            const indexedOptions = currentStep.options.map((option, originalIdx) => ({
+              option,
+              originalIdx,
+            }));
+            const shuffledOptions = shuffleWithSeed(indexedOptions, seed);
 
-              if (isSelected && isAnswerSubmitted) {
-                if (option.quality === "BEST") {
-                  btnClass = "border-emerald-500 bg-emerald-50 text-emerald-950 ring-2 ring-emerald-500/20";
-                } else if (option.quality === "ACCEPTABLE") {
-                  btnClass = "border-sky-500 bg-sky-50 text-sky-950 ring-2 ring-sky-500/20";
-                } else if (option.quality === "PREMATURE") {
-                  btnClass = "border-amber-400 bg-amber-50 text-amber-950 ring-2 ring-amber-400/20";
-                } else {
-                  btnClass = "border-rose-400 bg-rose-50 text-rose-950 ring-2 ring-rose-400/20";
-                }
-              }
+            return (
+              <div className="space-y-3">
+                {shuffledOptions.map(({ option, originalIdx }, displayIdx) => {
+                  const isSelected = selectedOptionIndex === originalIdx;
+                  let btnClass = "border-sable-200 bg-white hover:bg-sable-50 text-bleuNuit-900";
 
-              return (
-                <button
-                  key={idx}
-                  onClick={() => handleSelectOption(idx)}
-                  data-testid={`inquiry-option-${idx}`}
-                  className={`w-full p-4 rounded-xl border text-start transition flex items-start gap-3 shadow-xs ${btnClass}`}
-                >
-                  <span className="w-6 h-6 rounded-full border border-sable-300 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
-                    {String.fromCharCode(65 + idx)}
-                  </span>
-                  <span className="text-sm font-medium leading-relaxed">
-                    {isArabic ? option.textAr || option.textFr : option.textFr}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
+                  if (isSelected && isAnswerSubmitted) {
+                    if (option.quality === "BEST") {
+                      btnClass = "border-emerald-500 bg-emerald-50 text-emerald-950 ring-2 ring-emerald-500/20";
+                    } else if (option.quality === "ACCEPTABLE") {
+                      btnClass = "border-sky-500 bg-sky-50 text-sky-950 ring-2 ring-sky-500/20";
+                    } else if (option.quality === "PREMATURE") {
+                      btnClass = "border-amber-400 bg-amber-50 text-amber-950 ring-2 ring-amber-400/20";
+                    } else {
+                      btnClass = "border-rose-400 bg-rose-50 text-rose-950 ring-2 ring-rose-400/20";
+                    }
+                  }
+
+                  return (
+                    <button
+                      key={originalIdx}
+                      onClick={() => handleSelectOption(originalIdx)}
+                      data-testid={`inquiry-option-${originalIdx}`}
+                      className={`w-full p-4 rounded-xl border text-start transition flex items-start gap-3 shadow-xs ${btnClass}`}
+                    >
+                      <span className="w-6 h-6 rounded-full border border-sable-300 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+                        {String.fromCharCode(65 + displayIdx)}
+                      </span>
+                      <span className="text-sm font-medium leading-relaxed">
+                        {isArabic ? option.textAr || option.textFr : option.textFr}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            );
+          })()}
 
           {/* Rétroaction immédiate (Didactic Feedback nuancé) */}
           {isAnswerSubmitted && selectedOption && (

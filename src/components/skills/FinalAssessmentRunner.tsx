@@ -16,6 +16,7 @@ import {
 } from "@/lib/skills-calculator";
 import { SKILLS_METADATA } from "@/lib/skills-registry";
 import { sendTelemetryEvent } from "@/lib/usePedagogicalTracker";
+import { shuffleWithSeed, stringToSeed } from "@/lib/shuffle";
 import AttestationCard from "./AttestationCard";
 import {
   Award,
@@ -398,70 +399,75 @@ export default function FinalAssessmentRunner({ scenarios, locale }: FinalAssess
           {isArabic ? "حدد التقييم المنهجي الأصوب:" : "Sélectionnez l'évaluation méthodologique la plus rigoureuse :"}
         </h3>
         <div className="space-y-2.5">
-          {currentScenario.options.map((option) => {
-            const isSelected = selectedOptionId === option.id;
-            let borderClass = "border-sable-200 hover:border-sable-400 bg-white";
-            let qualityBadge = null;
+          {(() => {
+            const seed = stringToSeed(currentScenario.id);
+            const shuffledOptions = shuffleWithSeed(currentScenario.options, seed);
 
-            if (showFeedback) {
-              if (option.quality === "BEST") {
-                borderClass = "border-vertProfond-500 bg-vertProfond-50/50";
-                qualityBadge = (
-                  <span className="inline-flex items-center gap-1 text-[11px] font-bold text-vertProfond-700 bg-vertProfond-100 px-2 py-0.5 rounded">
-                    <CheckCircle2 className="w-3 h-3" />
-                    {isArabic ? "الموقف الأكمل (+3)" : "Optimal (+3)"}
-                  </span>
-                );
-              } else if (isSelected) {
-                if (option.quality === "ACCEPTABLE") {
-                  borderClass = "border-blue-400 bg-blue-50/50";
+            return shuffledOptions.map((option) => {
+              const isSelected = selectedOptionId === option.id;
+              let borderClass = "border-sable-200 hover:border-sable-400 bg-white";
+              let qualityBadge = null;
+
+              if (showFeedback) {
+                if (option.quality === "BEST") {
+                  borderClass = "border-vertProfond-500 bg-vertProfond-50/50";
                   qualityBadge = (
-                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded">
-                      <HelpCircle className="w-3 h-3" />
-                      {isArabic ? "مقبول (+2)" : "Acceptable (+2)"}
+                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-vertProfond-700 bg-vertProfond-100 px-2 py-0.5 rounded">
+                      <CheckCircle2 className="w-3 h-3" />
+                      {isArabic ? "الموقف الأكمل (+3)" : "Optimal (+3)"}
                     </span>
                   );
-                } else if (option.quality === "PREMATURE") {
-                  borderClass = "border-amber-400 bg-amber-50/50";
-                  qualityBadge = (
-                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">
-                      <AlertTriangle className="w-3 h-3" />
-                      {isArabic ? "متعجل (+1)" : "Précipité (+1)"}
-                    </span>
-                  );
-                } else {
-                  borderClass = "border-red-400 bg-red-50/50";
-                  qualityBadge = (
-                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-red-700 bg-red-100 px-2 py-0.5 rounded">
-                      <XCircle className="w-3 h-3" />
-                      {isArabic ? "خلل منهجي (0)" : "Incorrect (0)"}
-                    </span>
-                  );
+                } else if (isSelected) {
+                  if (option.quality === "ACCEPTABLE") {
+                    borderClass = "border-blue-400 bg-blue-50/50";
+                    qualityBadge = (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded">
+                        <HelpCircle className="w-3 h-3" />
+                        {isArabic ? "مقبول (+2)" : "Acceptable (+2)"}
+                      </span>
+                    );
+                  } else if (option.quality === "PREMATURE") {
+                    borderClass = "border-amber-400 bg-amber-50/50";
+                    qualityBadge = (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">
+                        <AlertTriangle className="w-3 h-3" />
+                        {isArabic ? "متعجل (+1)" : "Précipité (+1)"}
+                      </span>
+                    );
+                  } else {
+                    borderClass = "border-red-400 bg-red-50/50";
+                    qualityBadge = (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold text-red-700 bg-red-100 px-2 py-0.5 rounded">
+                        <XCircle className="w-3 h-3" />
+                        {isArabic ? "خلل منهجي (0)" : "Incorrect (0)"}
+                      </span>
+                    );
+                  }
                 }
               }
-            }
 
-            return (
-              <div
-                key={option.id}
-                onClick={() => handleSelectOption(option.id)}
-                className={`p-4 rounded-xl border transition-all text-sm cursor-pointer ${borderClass}`}
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <p className="text-bleuNuit-900 leading-relaxed font-medium">
-                    {option.text[isArabic ? "ar" : "fr"]}
-                  </p>
-                  {qualityBadge}
-                </div>
-
-                {showFeedback && (isSelected || option.quality === "BEST") && (
-                  <div className="mt-3 pt-3 border-t border-sable-200/60 text-xs text-sable-600 leading-relaxed">
-                    💡 {option.feedback[isArabic ? "ar" : "fr"]}
+              return (
+                <div
+                  key={option.id}
+                  onClick={() => handleSelectOption(option.id)}
+                  className={`p-4 rounded-xl border transition-all text-sm cursor-pointer ${borderClass}`}
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <p className="text-bleuNuit-900 leading-relaxed font-medium">
+                      {option.text[isArabic ? "ar" : "fr"]}
+                    </p>
+                    {qualityBadge}
                   </div>
-                )}
-              </div>
-            );
-          })}
+
+                  {showFeedback && (isSelected || option.quality === "BEST") && (
+                    <div className="mt-3 pt-3 border-t border-sable-200/60 text-xs text-sable-600 leading-relaxed">
+                      💡 {option.feedback[isArabic ? "ar" : "fr"]}
+                    </div>
+                  )}
+                </div>
+              );
+            });
+          })()}
         </div>
       </div>
 

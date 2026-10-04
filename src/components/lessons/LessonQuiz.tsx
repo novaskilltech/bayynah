@@ -6,6 +6,7 @@ import { usePedagogicalTracker } from "@/lib/usePedagogicalTracker";
 import type { LessonSlug } from "@/lib/telemetry-contract";
 import { markLessonCompleted, recordSkillAttempt } from "@/lib/storage-adapter";
 import { getSkillsForLesson } from "@/lib/skills-registry";
+import { shuffleWithSeed, stringToSeed } from "@/lib/shuffle";
 
 interface QuizOption {
   textFr: string;
@@ -83,6 +84,19 @@ export default function LessonQuiz({ quizzes, lessonSlug, locale }: LessonQuizPr
     }
     return new Set<string>();
   }, [rawProgress, lessonSlug]);
+
+  // Pré-calcul déterministe de l'ordre mélangé des options par quiz
+  const shuffledQuizzesMap = useMemo(() => {
+    const map = new Map<string, { option: QuizOption; originalIdx: number }[]>();
+    for (const quiz of quizzes) {
+      const indexed = quiz.options.map((opt, originalIdx) => ({
+        option: opt,
+        originalIdx,
+      }));
+      map.set(quiz.id, shuffleWithSeed(indexed, stringToSeed(quiz.id)));
+    }
+    return map;
+  }, [quizzes]);
 
   if (!quizzes || quizzes.length === 0) {
     return null;
@@ -200,6 +214,8 @@ export default function LessonQuiz({ quizzes, lessonSlug, locale }: LessonQuizPr
           const hasAnswered = selectedIdx !== undefined;
           const selectedOption = hasAnswered ? quiz.options[selectedIdx] : null;
 
+          const shuffledOptions = shuffledQuizzesMap.get(quiz.id) || quiz.options.map((opt, originalIdx) => ({ option: opt, originalIdx }));
+
           return (
             <div
               key={quiz.id}
@@ -223,8 +239,8 @@ export default function LessonQuiz({ quizzes, lessonSlug, locale }: LessonQuizPr
 
               {/* Options */}
               <div className="space-y-3 pt-2" role="radiogroup" aria-label={quiz.questionFr}>
-                {quiz.options.map((option, optIdx) => {
-                  const isSelected = selectedIdx === optIdx;
+                {shuffledOptions.map(({ option, originalIdx }, displayIdx) => {
+                  const isSelected = selectedIdx === originalIdx;
                   let optionStyles =
                     "border-sable-200 bg-white hover:border-vertProfond-400 hover:bg-vertProfond-50/20 text-bleuNuit-900 focus:ring-2 focus:ring-vertProfond-500 focus:outline-none";
 
@@ -241,10 +257,10 @@ export default function LessonQuiz({ quizzes, lessonSlug, locale }: LessonQuizPr
 
                   return (
                     <button
-                      key={optIdx}
+                      key={originalIdx}
                       type="button"
-                      onClick={() => handleSelectOption(quiz.id, optIdx)}
-                      data-testid={`lesson-quiz-${qIndex}-option-${optIdx}`}
+                      onClick={() => handleSelectOption(quiz.id, originalIdx)}
+                      data-testid={`lesson-quiz-${qIndex}-option-${originalIdx}`}
                       className={`w-full text-start p-4 rounded-xl border-2 transition flex items-start gap-3 ${optionStyles}`}
                       aria-label={`${isArabic && option.textAr ? option.textAr : option.textFr} - ${
                         hasAnswered && option.isCorrect
@@ -267,7 +283,7 @@ export default function LessonQuiz({ quizzes, lessonSlug, locale }: LessonQuizPr
                                 : "border-sable-400 text-sable-600"
                             }`}
                           >
-                            {String.fromCharCode(65 + optIdx)}
+                            {String.fromCharCode(65 + displayIdx)}
                           </div>
                         )}
                       </div>
