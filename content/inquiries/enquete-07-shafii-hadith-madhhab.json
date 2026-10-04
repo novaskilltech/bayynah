@@ -24,20 +24,20 @@
       "instructionAr": "أمام دعوى: «قال الشافعي: إذا صح الحديث فهو مذهبي، ولذلك فكل من وجد حديثاً صحيحاً يجوز له أن يترك قول المذهب ويقول إن هذا الحديث هو مذهب الشافعي مباشرة»، ما هو التحليل المنهجي الأسلم؟",
       "options": [
         {
-          "textFr": "Il faut distinguer quatre propositions : ash-Shāfiʿī a-t-il réellement dit quelque chose de ce sens ? Quel était le principe qu’il voulait affirmer ? Qui est compétent pour constater qu’un hadith contredit réellement son madhhab ? Trouver un hadith ṣaḥīḥ suffit-il à connaître toutes les données juridiques du dossier ?",
-          "textAr": "يجب فصل أربع مسائل: هل قال الشافعي معنى هذه العبارة؟ وما هو الأصل الذي أراد تقريره؟ ومن المؤهل للتحقق من مخالفة الحديث للمذهب؟ وهل مجرد الظفر بحديث صحيح كافٍ للإحاطة بأدلة المسألة؟",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Excellente analyse : décomposition rigoureuse entre l'énoncé, son principe directeur, la qualification requise et la totalité du dossier.",
-          "feedbackAr": "تفكيك منهجي سليم يميز بين صحة العبارة وأصلها، وبين شروط تنزيلها وأهلية المستدل بها."
-        },
-        {
           "textFr": "Il faut simplement vérifier si la citation existe.",
           "textAr": "ينبغي فقط التأكد من وجود هذه العبارة في كتب الشافعي.",
           "quality": "ACCEPTABLE",
           "methodologicalScore": 2,
           "feedbackFr": "Vérification textuelle nécessaire, mais très insuffisante pour auditer la prétention pratique.",
           "feedbackAr": "خطوة توثيقية أولية، لكنها لا تكفي لمعرفة كيفية العمل بالقاعدة."
+        },
+        {
+          "textFr": "Il faut distinguer quatre propositions : ash-Shāfiʿī a-t-il réellement dit quelque chose de ce sens ? Quel était le principe qu’il voulait affirmer ? Qui est compétent pour constater qu’un hadith contredit réellement son madhhab ? Trouver un hadith ṣaḥīḥ suffit-il à connaître toutes les données juridiques du dossier ?",
+          "textAr": "يجب فصل أربع مسائل: هل قال الشافعي معنى هذه العبارة؟ وما هو الأصل الذي أراد تقريره؟ ومن المؤهل للتحقق من مخالفة الحديث للمذهب؟ وهل مجرد الظفر بحديث صحيح كافٍ للإحاطة بأدلة المسألة؟",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Excellente analyse : décomposition rigoureuse entre l'énoncé, son principe directeur, la qualification requise et la totalité du dossier.",
+          "feedbackAr": "تفكيك منهجي سليم يميز بين صحة العبارة وأصلها، وبين شروط تنزيلها وأهلية المستدل بها."
         },
         {
           "textFr": "Comme la phrase est connue, son application doit être évidente.",
@@ -67,22 +67,6 @@
       "instructionAr": "بالنظر في الدليل الأول المنقول في مناقب الشافعي للبيهقي، ما الذي يثبته هذا النص بيقين؟",
       "options": [
         {
-          "textFr": "Ash-Shāfiʿī affirme clairement que sa propre parole ne doit pas être maintenue contre une Sunnah authentiquement établie. Cela établit un principe de soumission au texte, mais pas encore la procédure permettant d’établir qu’une contradiction réelle existe.",
-          "textAr": "يثبت النص بوضوح أن الشافعي يقرر وجوب تقديم السنة الصحيحة الصريحة على قوله؛ وهذا يؤصل مبدأ تعظيم الوحي، لكنه لا يبين بعد المسار الإجرائي للتحقق من وقوع المخالفة الحقيقية.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Parfait : distinction fondamentale entre l'affirmation d'un principe dogmatique (suprématie de la Sunnah) et son application herméneutique.",
-          "feedbackAr": "تحرير دقيق: النص يقرر أصلاً كلياً في تعظيم السنة، ولا يعطي شيكاً على بياض لأي مدعٍ دون ضوابط."
-        },
-        {
-          "textFr": "Ash-Shāfiʿī donnait priorité à la Sunnah.",
-          "textAr": "الشافعي كان يقدم نصوص السنة النبوية على اجتهاده.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Constat historique exact, mais incomplet sur les modalités pratiques d'application.",
-          "feedbackAr": "تقرير صحيح وموجز، والخيار الأول يزيد عليه بيان الجانب المنهجي والإجرائي."
-        },
-        {
           "textFr": "Cela signifie que tout lecteur peut modifier le madhhab dès qu’il trouve un hadith sur Internet.",
           "textAr": "هذا يعني أن أي قارئ يمكنه تغيير المذهب بمجرد عثوره على حديث في المواقع.",
           "quality": "PREMATURE",
@@ -97,6 +81,22 @@
           "methodologicalScore": 0,
           "feedbackFr": "Contresens total : ash-Shāfiʿī a écrit l'Umm et la Risâlah précisément pour enseigner la méthode.",
           "feedbackAr": "مصادمة للواقع: فالشافعي صنّف كتبه وأملاها على تلاميذه لتعليم المنهج وتوريث الفقه."
+        },
+        {
+          "textFr": "Ash-Shāfiʿī affirme clairement que sa propre parole ne doit pas être maintenue contre une Sunnah authentiquement établie. Cela établit un principe de soumission au texte, mais pas encore la procédure permettant d’établir qu’une contradiction réelle existe.",
+          "textAr": "يثبت النص بوضوح أن الشافعي يقرر وجوب تقديم السنة الصحيحة الصريحة على قوله؛ وهذا يؤصل مبدأ تعظيم الوحي، لكنه لا يبين بعد المسار الإجرائي للتحقق من وقوع المخالفة الحقيقية.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Parfait : distinction fondamentale entre l'affirmation d'un principe dogmatique (suprématie de la Sunnah) et son application herméneutique.",
+          "feedbackAr": "تحرير دقيق: النص يقرر أصلاً كلياً في تعظيم السنة، ولا يعطي شيكاً على بياض لأي مدعٍ دون ضوابط."
+        },
+        {
+          "textFr": "Ash-Shāfiʿī donnait priorité à la Sunnah.",
+          "textAr": "الشافعي كان يقدم نصوص السنة النبوية على اجتهاده.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat historique exact, mais incomplet sur les modalités pratiques d'application.",
+          "feedbackAr": "تقرير صحيح وموجز، والخيار الأول يزيد عليه بيان الجانب المنهجي والإجرائي."
         }
       ],
       "revealedEvidenceIds": [
@@ -120,20 +120,20 @@
           "feedbackAr": "استحضار نموذجي للفلاتر النقدية الأربعة في تحقيق مناط العمل بالقاعدة."
         },
         {
-          "textFr": "Il faut vérifier le hadith avant d’agir.",
-          "textAr": "يجب فحص الحديث قبل التسرع في العمل به.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Conseil pertinent, mais encore trop vague sur les dimensions juridiques et contextuelles.",
-          "feedbackAr": "مطلب سليم في الجملة، والخيار الأول يفصل أركان هذا التحقيق العلمي."
-        },
-        {
           "textFr": "Dès qu’un muhaddith moderne écrit « ṣaḥīḥ », toutes les étapes juridiques sont terminées.",
           "textAr": "بمجرد أن يحكم عالم حديث معاصر بصحة الحديث، تنتهي كافة الخطوات الفقهية.",
           "quality": "PREMATURE",
           "methodologicalScore": 1,
           "feedbackFr": "Confusion fréquente : l'authentification d'un texte n'est que la première étape de l'édifice jurisprudentiel.",
           "feedbackAr": "خلط شائع: فتصحيح السند بداية النظر، وليس نهاية استخراج الحكم والجمع بين الأدلة."
+        },
+        {
+          "textFr": "Il faut vérifier le hadith avant d’agir.",
+          "textAr": "يجب فحص الحديث قبل التسرع في العمل به.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Conseil pertinent, mais encore trop vague sur les dimensions juridiques et contextuelles.",
+          "feedbackAr": "مطلب سليم في الجملة، والخيار الأول يفصل أركان هذا التحقيق العلمي."
         },
         {
           "textFr": "Puisque la phrase est courte, aucune contextualisation n’est nécessaire.",
@@ -155,12 +155,12 @@
       "instructionAr": "بالنظر في نص الإمام النووي في المجموع: «ليس معناه أن كل واحد رأى حديثا صحيحا قال: هذا مذهب الشافعي وعمل بظاهره»، ما الذي تغيره هذه العبارة جذرياً؟",
       "options": [
         {
-          "textFr": "Elle réfute précisément l’interprétation selon laquelle n’importe quel lecteur peut prendre un hadith authentique, agir immédiatement selon son apparence et l’attribuer au madhhab d’ash-Shāfiʿī.",
-          "textAr": "تنقض تماماً الفهم السطحي القائل بأن كل قارئ يظفر بحديث صحيح يحق له العمل بظاهره ونسبته إلى مذهب الشافعي.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Impact décisif : le plus grand vérificateur shāfiʿite verrouille l'usage de la citation contre l'anarchie herméneutique.",
-          "feedbackAr": "نص حاسم من محقق المذهب يسد باب الفوضى في الاستنباط والتقول على الإمام."
+          "textFr": "An-Nawawī dit que le hadith ne doit jamais prévaloir sur le madhhab.",
+          "textAr": "النووي يقرر أن الحديث لا يجوز أن يقدم على المذهب أبداً.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Faute majeure : an-Nawawī lui-même a appliqué cette règle dans plusieurs masā'il où il a retenu le hadith !",
+          "feedbackAr": "افتراء على الإمام: فالنووي نفسه أفتى بالحديث في عدة مسائل رجح فيها السنة على ظاهر المذهب."
         },
         {
           "textFr": "An-Nawawī ajoute des conditions à l’application de la formule.",
@@ -179,12 +179,12 @@
           "feedbackAr": "سوء فهم شنيع: فالنووي يحرر مراد الشافعي ولا يعارضه."
         },
         {
-          "textFr": "An-Nawawī dit que le hadith ne doit jamais prévaloir sur le madhhab.",
-          "textAr": "النووي يقرر أن الحديث لا يجوز أن يقدم على المذهب أبداً.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Faute majeure : an-Nawawī lui-même a appliqué cette règle dans plusieurs masā'il où il a retenu le hadith !",
-          "feedbackAr": "افتراء على الإمام: فالنووي نفسه أفتى بالحديث في عدة مسائل رجح فيها السنة على ظاهر المذهب."
+          "textFr": "Elle réfute précisément l’interprétation selon laquelle n’importe quel lecteur peut prendre un hadith authentique, agir immédiatement selon son apparence et l’attribuer au madhhab d’ash-Shāfiʿī.",
+          "textAr": "تنقض تماماً الفهم السطحي القائل بأن كل قارئ يظفر بحديث صحيح يحق له العمل بظاهره ونسبته إلى مذهب الشافعي.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Impact décisif : le plus grand vérificateur shāfiʿite verrouille l'usage de la citation contre l'anarchie herméneutique.",
+          "feedbackAr": "نص حاسم من محقق المذهب يسد باب الفوضى في الاستنباط والتقول على الإمام."
         }
       ],
       "revealedEvidenceIds": [
@@ -200,22 +200,6 @@
       "instructionAr": "يشترط النووي أن يكون الناظر برتبة الاجتهاد في المذهب، وأن يغلب على ظنه أن الشافعي لم يقف على الحديث؛ فما العلة في ذلك؟",
       "options": [
         {
-          "textFr": "Parce qu’établir « le madhhab contredit ce hadith » suppose de connaître les textes d’ash-Shāfiʿī, les transmissions du madhhab, les différentes preuves du chapitre et les règles d’istidlāl.",
-          "textAr": "لأن الجزم بأن «المذهب يخالف هذا الحديث» يتطلب الإحاطة بنصوص الشافعي، وروايات أصحابه، ومجموع أدلة الباب، وقواعد الاستدلال والترجيح.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Démonstration imparable : affirmer la contradiction d'un madhhab exige une maîtrise complète de son corpus et des preuves concurrentes.",
-          "feedbackAr": "تعليل أصولي رصين: فدعوى المخالفة فرع عن الإحاطة بمذهب الإمام وبكافة أدلة المسألة."
-        },
-        {
-          "textFr": "Parce qu’il faut avoir étudié le fiqh et le hadith.",
-          "textAr": "لأنه لابد من دراسة الفقه والحديث قبل الخوض في هذه المسائل.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Juste mais générique : l'option BEST précise la double compétence (corpus du madhhab + uṣūl).",
-          "feedbackAr": "صحيح في الجملة، والخيار الأول يفصل الأدوات المنهجية المطلوبة."
-        },
-        {
           "textFr": "Parce qu’un non-mujtahid n’a même pas le droit de lire un hadith.",
           "textAr": "لأن غير المجتهد لا يجوز له قراءة كتب الحديث النبوي.",
           "quality": "PREMATURE",
@@ -224,12 +208,28 @@
           "feedbackAr": "غلو فاسد: فقراءة الحديث للتعبد والتذكر مشروعة للجميع، وإنما الحظر في استنباط الأحكام بغير أهلية."
         },
         {
+          "textFr": "Parce qu’établir « le madhhab contredit ce hadith » suppose de connaître les textes d’ash-Shāfiʿī, les transmissions du madhhab, les différentes preuves du chapitre et les règles d’istidlāl.",
+          "textAr": "لأن الجزم بأن «المذهب يخالف هذا الحديث» يتطلب الإحاطة بنصوص الشافعي، وروايات أصحابه، ومجموع أدلة الباب، وقواعد الاستدلال والترجيح.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Démonstration imparable : affirmer la contradiction d'un madhhab exige une maîtrise complète de son corpus et des preuves concurrentes.",
+          "feedbackAr": "تعليل أصولي رصين: فدعوى المخالفة فرع عن الإحاطة بمذهب الإمام وبكافة أدلة المسألة."
+        },
+        {
           "textFr": "Parce que seuls les savants ont le droit de connaître la Sunnah.",
           "textAr": "لأن معرفة السنة حكر حصري على العلماء دون سائر المسلمين.",
           "quality": "INCORRECT",
           "methodologicalScore": 0,
           "feedbackFr": "Dérive cléricale étrangère à l'Islam : la science est ouverte à tous, mais l'expertise requiert des compétences.",
           "feedbackAr": "كهنوت باطل: فالشريعة متاحة للكافة، ولكن ممارسة الاجتهاد تتطلب كفاءة وأدوات علمية."
+        },
+        {
+          "textFr": "Parce qu’il faut avoir étudié le fiqh et le hadith.",
+          "textAr": "لأنه لابد من دراسة الفقه والحديث قبل الخوض في هذه المسائل.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Juste mais générique : l'option BEST précise la double compétence (corpus du madhhab + uṣūl).",
+          "feedbackAr": "صحيح في الجملة، والخيار الأول يفصل الأدوات المنهجية المطلوبة."
         }
       ],
       "revealedEvidenceIds": [],
@@ -242,14 +242,6 @@
       "instructionFr": "En examinant la preuve révélée (al-Majmūʿ 1/105), pourquoi un imam comme ash-Shāfiʿī peut-il connaître un hadith authentique sans pour autant retenir son sens apparent ?",
       "instructionAr": "بالنظر في الدليل المنقول من المجموع، لماذا قد يعلم الإمام كالشافعي الحديث الصحيح ومع ذلك لا يعمل بظاهره في الحكم؟",
       "options": [
-        {
-          "textFr": "Parce qu’un autre élément peut intervenir : naskh (abrogation), takhṣīṣ (spécification), taʾwīl recevable (interprétation contextuelle), critique particulière de la transmission ou autre preuve du dossier.",
-          "textAr": "لوجود مانع معتبر شرعاً: كالنسخ، أو التخصيص، أو التأويل المقترن بالدليل، أو علة قادحة في الرواية، أو وجود دليل آخر أرجح منه في نفس المسألة.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Analyse canonique des 'Asbāb Ikhtilāf al-Fuqahāʾ' : le non-suivi d'un hadith repose souvent sur des motifs d'uṣūl légitimes et non sur son rejet.",
-          "feedbackAr": "تحرير بالغ الأهمية لقواعد أسباب اختلاف الفقهاء: فالعدول عن الظاهر يكون لقرائن شرعية معتبرة."
-        },
         {
           "textFr": "Parce qu’il peut exister d’autres textes.",
           "textAr": "لاحتمال وجود نصوص أخرى تعارض هذا الحديث.",
@@ -265,6 +257,14 @@
           "methodologicalScore": 1,
           "feedbackFr": "Accusation infondée : aucun des grands imams n'a jamais prétendu préférer sa simple opinion à un ordre prophétique.",
           "feedbackAr": "بهتان على الأئمة: فلم يكن أحد منهم يقدم مجرد الرأي على هدي النبي ﷺ."
+        },
+        {
+          "textFr": "Parce qu’un autre élément peut intervenir : naskh (abrogation), takhṣīṣ (spécification), taʾwīl recevable (interprétation contextuelle), critique particulière de la transmission ou autre preuve du dossier.",
+          "textAr": "لوجود مانع معتبر شرعاً: كالنسخ، أو التخصيص، أو التأويل المقترن بالدليل، أو علة قادحة في الرواية، أو وجود دليل آخر أرجح منه في نفس المسألة.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Analyse canonique des 'Asbāb Ikhtilāf al-Fuqahāʾ' : le non-suivi d'un hadith repose souvent sur des motifs d'uṣūl légitimes et non sur son rejet.",
+          "feedbackAr": "تحرير بالغ الأهمية لقواعد أسباب اختلاف الفقهاء: فالعدول عن الظاهر يكون لقرائن شرعية معتبرة."
         },
         {
           "textFr": "Si un imam connaît un hadith sans appliquer son apparence, cela prouve qu’il rejette la Sunnah.",
@@ -296,6 +296,14 @@
           "feedbackAr": "صياغة بارعة تضع العبارة في نصابها: كدليل على تواضع الإمام للأثر، لا ذريعة للاستبداد بالرأي."
         },
         {
+          "textFr": "Tout hadith qui semble contredire un madhhab doit être ignoré.",
+          "textAr": "كل حديث يخالف ظاهره المذهب يجب طرحه وإلغاؤه فوراً.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Dévoyance sectaire : le madhhab doit toujours être interrogé et vivifié par la confrontation aux preuves.",
+          "feedbackAr": "جمود وتعصب مقيت: فالمذهب وسيلة لفهم الوحي، وليس حاكماً يلغي نصوص الكتاب والسنة."
+        },
+        {
           "textFr": "Il faut être prudent avant d’opposer un hadith à un madhhab.",
           "textAr": "يجب التريث والحذر قبل معارضة المذهب بظاهر الحديث.",
           "quality": "ACCEPTABLE",
@@ -310,14 +318,6 @@
           "methodologicalScore": 1,
           "feedbackFr": "Théorie du complot récurrente mais absurde : les fuqahāʾ sont les serviteurs et commentateurs des hadiths.",
           "feedbackAr": "سوء ظن بأئمة الفقه، وهم الذين فنوا أعمارهم في خدمة الحديث واستخراج درره."
-        },
-        {
-          "textFr": "Tout hadith qui semble contredire un madhhab doit être ignoré.",
-          "textAr": "كل حديث يخالف ظاهره المذهب يجب طرحه وإلغاؤه فوراً.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Dévoyance sectaire : le madhhab doit toujours être interrogé et vivifié par la confrontation aux preuves.",
-          "feedbackAr": "جمود وتعصب مقيت: فالمذهب وسيلة لفهم الوحي، وليس حاكماً يلغي نصوص الكتاب والسنة."
         }
       ],
       "revealedEvidenceIds": [
@@ -333,20 +333,20 @@
       "instructionAr": "هل عبارة «إذا صح الحديث فهو مذهبي» تعد نقلاً مكذوباً ومخترعاً على الشافعي؟",
       "options": [
         {
-          "textFr": "Non. Le sens est bien rapporté d’ash-Shāfiʿī sous plusieurs formulations. Le problème méthodologique apparaît lorsqu’on transforme cette maxime en permission universelle d’ignorer le travail d’istidlāl et les conditions explicitées par les juristes du madhhab.",
-          "textAr": "لا؛ فالمعنى مروي عن الشافعي بألفاظ متعددة صحيحة. والإشكال المنهجي يقع عند تحويل هذه الحكمة إلى تفويض عام بإلغاء قواعد الاستدلال وإسقاط شروط أهل المذهب.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Diagnostic critique parfait : la distorsion ne réside pas dans le mot, mais dans la désactivation de son mode d'emploi.",
-          "feedbackAr": "تشخيص نقدي بالغ الدقة: فالآفة ليست في ثبوت العبارة، بل في تجريدها من سياقها وضوابطها العملية."
-        },
-        {
           "textFr": "La citation peut être vraie mais mal utilisée.",
           "textAr": "العبارة قد تكون صحيحة النسبة لكنها استعملت في غير موضعها.",
           "quality": "ACCEPTABLE",
           "methodologicalScore": 2,
           "feedbackFr": "Constat juste, qui résume l'essentiel du problème d'istidlāl.",
           "feedbackAr": "خلاصة صحيحة، والخيار الأول يبين مكمن الانحراف في إسقاط شروط الاستدلال."
+        },
+        {
+          "textFr": "Une citation authentique ne peut jamais être sortie de son contexte.",
+          "textAr": "العبارة الصحيحة يستحيل أن تُفهم خارج سياقها أو يُساء استخدامها.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Négation du réel : l'histoire intellectuelle est remplie de citations vraies employées à contre-sens.",
+          "feedbackAr": "إنكار للمشاهد: فكم من كلمة حق أُريد بها باطل ونُزعت من سياقها لخدمة أهواء شتى."
         },
         {
           "textFr": "Puisqu’elle est parfois mal utilisée, il faut dire qu’ash-Shāfiʿī ne l’a jamais dite.",
@@ -357,12 +357,12 @@
           "feedbackAr": "علاج خاطئ: فلا يجوز رد الحقائق التاريخية لمجرد سوء استخدام بعض الناس لها."
         },
         {
-          "textFr": "Une citation authentique ne peut jamais être sortie de son contexte.",
-          "textAr": "العبارة الصحيحة يستحيل أن تُفهم خارج سياقها أو يُساء استخدامها.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Négation du réel : l'histoire intellectuelle est remplie de citations vraies employées à contre-sens.",
-          "feedbackAr": "إنكار للمشاهد: فكم من كلمة حق أُريد بها باطل ونُزعت من سياقها لخدمة أهواء شتى."
+          "textFr": "Non. Le sens est bien rapporté d’ash-Shāfiʿī sous plusieurs formulations. Le problème méthodologique apparaît lorsqu’on transforme cette maxime en permission universelle d’ignorer le travail d’istidlāl et les conditions explicitées par les juristes du madhhab.",
+          "textAr": "لا؛ فالمعنى مروي عن الشافعي بألفاظ متعددة صحيحة. والإشكال المنهجي يقع عند تحويل هذه الحكمة إلى تفويض عام بإلغاء قواعد الاستدلال وإسقاط شروط أهل المذهب.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Diagnostic critique parfait : la distorsion ne réside pas dans le mot, mais dans la désactivation de son mode d'emploi.",
+          "feedbackAr": "تشخيص نقدي بالغ الدقة: فالآفة ليست في ثبوت العبارة، بل في تجريدها من سياقها وضوابطها العملية."
         }
       ],
       "revealedEvidenceIds": [],
@@ -375,6 +375,14 @@
       "instructionFr": "Quelle formulation synthétique exprime avec le plus de rigueur le statut méthodologique de cette maxime ?",
       "instructionAr": "أي صياغة جامعة تعبر بأعلى درجات الدقة عن الموقف المنهجي المحرر تجاه هذه القاعدة؟",
       "options": [
+        {
+          "textFr": "« Dès qu’un hadith est déclaré ṣaḥīḥ, toute personne peut redéfinir le madhhab. »",
+          "textAr": "«متى قيل عن حديث إنه صحيح، جاز لكل مسلم أن يعيد تشكيل المذهب بموجبه.»",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Anarchie méthodologique destructrice : confondre la lecture d'un texte avec l'art de la fatwa.",
+          "feedbackAr": "فوضى فقهية عارمة تمحو الفارق بين طالب العلم المبتدئ والمجتهد المحقق."
+        },
         {
           "textFr": "« Ash-Shāfiʿī a clairement enseigné que la Sunnah authentique prévaut sur sa propre parole. Cependant, les juristes shāfiʿites comme an-Nawawī ont explicitement expliqué que cela ne signifie pas que n’importe quelle personne découvrant un hadith ṣaḥīḥ puisse déclarer immédiatement : “c’est le madhhab d’ash-Shāfiʿī”. Il faut notamment vérifier que le hadith est réellement pertinent, qu’ash-Shāfiʿī ne l’avait pas déjà pris en compte, et qu’aucun élément de naskh, takhṣīṣ, interprétation ou preuve concurrente ne modifie son application. »",
           "textAr": "«قرر الشافعي بوضوح أن السنة الصحيحة مقدمة على قوله؛ غير أن محققي المذهب كالنووي بينوا صراحة أن هذا ليس إذناً لكل أحد إذا رأى حديثاً صحيحاً أن ينسبه إلى المذهب مباشرة، بل لابد من التحقق من انطباق الحديث، وغلبة الظن بأن الشافعي لم يقف عليه، وانتفاء موانع العمل به من نسخ أو تخصيص أو تأويل أو معارض راجح.»",
@@ -398,14 +406,6 @@
           "methodologicalScore": 1,
           "feedbackFr": "Démission intellectuelle qui aboutit au dogmatisme aveugle et à la sclérose de la pensée juridique.",
           "feedbackAr": "جمود وانسداد فكري يمنع مراجعة الفروع بالأصول المعتمدة."
-        },
-        {
-          "textFr": "« Dès qu’un hadith est déclaré ṣaḥīḥ, toute personne peut redéfinir le madhhab. »",
-          "textAr": "«متى قيل عن حديث إنه صحيح، جاز لكل مسلم أن يعيد تشكيل المذهب بموجبه.»",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Anarchie méthodologique destructrice : confondre la lecture d'un texte avec l'art de la fatwa.",
-          "feedbackAr": "فوضى فقهية عارمة تمحو الفارق بين طالب العلم المبتدئ والمجتهد المحقق."
         }
       ],
       "revealedEvidenceIds": [],
@@ -419,12 +419,12 @@
       "instructionAr": "ما هي القاعدة المنهجية الكلية التي ترسخها هذه الدراسة للتعامل مع نصوص الأئمة واقتباساتهم؟",
       "options": [
         {
-          "textFr": "Pour toute citation de savant, il faut vérifier trois niveaux : le verbatim, le contexte dans lequel la citation est comprise par les spécialistes de son œuvre, puis les conditions implicites ou explicites nécessaires à son application. Une citation vraie peut produire une conclusion fausse si on lui retire ces niveaux.",
-          "textAr": "عند التعامل مع أقوال العلماء يجب استيفاء ثلاث مراتب: ثبوت اللفظ، وسياقه وفهمه عند أهل مذهبه والمختصين بآثاره، وشروط تنزيله والعمل به. فالعبارة الصادقة قد تنتج حكماً باطلاً إذا جُردت من شروط إعمالها.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Règle universelle de TABAYYUN : une citation sans son mode d'emploi herméneutique est une arme de désinformation.",
-          "feedbackAr": "القاعدة الذهبية في تَبَيُّن: النص الحقيقي بلا سياق وبلا فقه تنزيل يُتحول إلى أداة للتضليل والافتراء."
+          "textFr": "Toute citation courte est forcément trompeuse.",
+          "textAr": "كل عبارة وجيزة ومختصرة فهي مضللة حتماً.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Généralisation hâtive : la concision est une qualité rhétorique majeure des maîtres (jawāmiʿ al-kalim).",
+          "feedbackAr": "حكم متسرع: فالإيجاز وبلاغة العبارة من محاسن كلام الأئمة متى فُهمت على وجهها."
         },
         {
           "textFr": "Il faut lire le contexte des citations.",
@@ -435,12 +435,12 @@
           "feedbackAr": "مطلب أساسي، والخيار الأول يبلوره في صورة معيار نقدي ثلاثي الأبعاد."
         },
         {
-          "textFr": "Toute citation courte est forcément trompeuse.",
-          "textAr": "كل عبارة وجيزة ومختصرة فهي مضللة حتماً.",
-          "quality": "PREMATURE",
-          "methodologicalScore": 1,
-          "feedbackFr": "Généralisation hâtive : la concision est une qualité rhétorique majeure des maîtres (jawāmiʿ al-kalim).",
-          "feedbackAr": "حكم متسرع: فالإيجاز وبلاغة العبارة من محاسن كلام الأئمة متى فُهمت على وجهها."
+          "textFr": "Pour toute citation de savant, il faut vérifier trois niveaux : le verbatim, le contexte dans lequel la citation est comprise par les spécialistes de son œuvre, puis les conditions implicites ou explicites nécessaires à son application. Une citation vraie peut produire une conclusion fausse si on lui retire ces niveaux.",
+          "textAr": "عند التعامل مع أقوال العلماء يجب استيفاء ثلاث مراتب: ثبوت اللفظ، وسياقه وفهمه عند أهل مذهبه والمختصين بآثاره، وشروط تنزيله والعمل به. فالعبارة الصادقة قد تنتج حكماً باطلاً إذا جُردت من شروط إعمالها.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Règle universelle de TABAYYUN : une citation sans son mode d'emploi herméneutique est une arme de désinformation.",
+          "feedbackAr": "القاعدة الذهبية في تَبَيُّن: النص الحقيقي بلا سياق وبلا فقه تنزيل يُتحول إلى أداة للتضليل والافتراء."
         },
         {
           "textFr": "Si le verbatim est exact, le contexte devient inutile.",

@@ -1,41 +1,63 @@
 ---
-id: "fiqh-01"
-slug: "fiqh-01-dalil-au-hukm"
-school: "FIQH"
+id: fiqh-01
+slug: fiqh-01-dalil-au-hukm
+school: FIQH
 level: 2
 order: 1
-editorialStatus: "PUBLISHED"
-titleFr: "Du dalîl au ḥukm : trouver un texte ne suffit pas"
-titleAr: "من الدليل إلى الحكم: العثور على النص لا يكفي"
-summaryFr: "Comprendre qu'entre la découverte d'un verset ou d'un hadith et la formulation d'un jugement juridique se trouvent plusieurs étapes méthodologiques."
-summaryAr: "فهم المراحل المنهجية الفاصلة بين العثور على النص الشرعي وبين إصدار الحكم الفقهي."
-methodologyPrincipleFr: "Une preuve ne produit un jugement qu'après examen de son authenticité, de sa signification, de son champ d'application et des autres textes du sujet."
-methodologyPrincipleAr: "لا يُستخرج الحكم من الدليل حتى يُنظر في ثبوته ودلالته ومحل تطبيقه وسائر نصوص الباب."
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+editorialStatus: PUBLISHED
+titleFr: 'Du dalîl au ḥukm : trouver un texte ne suffit pas'
+titleAr: 'من الدليل إلى الحكم: العثور على النص لا يكفي'
+summaryFr: >-
+  Comprendre qu'entre la découverte d'un verset ou d'un hadith et la formulation
+  d'un jugement juridique se trouvent plusieurs étapes méthodologiques.
+summaryAr: >-
+  فهم المراحل المنهجية الفاصلة بين العثور على النص الشرعي وبين إصدار الحكم
+  الفقهي.
+methodologyPrincipleFr: >-
+  Une preuve ne produit un jugement qu'après examen de son authenticité, de sa
+  signification, de son champ d'application et des autres textes du sujet.
+methodologyPrincipleAr: >-
+  لا يُستخرج الحكم من الدليل حتى يُنظر في ثبوته ودلالته ومحل تطبيقه وسائر نصوص
+  الباب.
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-f01-1"
-    questionFr: "Vous trouvez un hadith authentique contenant un ordre. Quelle conclusion pouvez-vous tirer immédiatement ?"
-    questionAr: "وجدت حديثاً صحيحاً يتضمن أمراً، فما الذي يمكنك الجزم به مباشرة؟"
+  - id: quiz-f01-1
+    questionFr: >-
+      Vous trouvez un hadith authentique contenant un ordre. Quelle conclusion
+      pouvez-vous tirer immédiatement ?
+    questionAr: وجدت حديثاً صحيحاً يتضمن أمراً، فما الذي يمكنك الجزم به مباشرة؟
     order: 1
     options:
-      - textFr: "Que l'acte est obligatoirement wâjib, sans autre analyse."
-        textAr: "أن الفعل واجب قطعاً بلا حاجة إلى مزيد من البحث."
+      - textFr: >-
+          Que l'ordre n'a aucune valeur tant qu'un savant contemporain ne l'a
+          pas commenté.
+        textAr: أن الأمر لا قيمة له حتى يشرحه عالم معاصر.
         isCorrect: false
-        feedbackFr: "La forme impérative est importante, mais son statut juridique final dépend aussi du contexte et des autres preuves."
-        feedbackAr: "صيغة الأمر مهمة، لكن الحكم النهائي يتوقف أيضاً على السياق وبقية الأدلة."
-      - textFr: "Que le texte contient un ordre ; il reste à étudier sa portée juridique et les autres preuves."
-        textAr: "أن النص يتضمن أمراً، ثم يُبحث في دلالته الشرعية وبقية أدلة الباب."
+        feedbackFr: >-
+          Le commentaire du savant aide à comprendre la preuve ; il ne crée pas
+          son autorité.
+        feedbackAr: شرح العالم يعين على فهم الدليل ولا ينشئ حجيته.
+      - textFr: >-
+          Que le texte contient un ordre ; il reste à étudier sa portée
+          juridique et les autres preuves.
+        textAr: أن النص يتضمن أمراً، ثم يُبحث في دلالته الشرعية وبقية أدلة الباب.
         isCorrect: true
-        feedbackFr: "Exact. Tu distingues désormais le texte, sa dalâla et le ḥukm finalement retenu."
-        feedbackAr: "صحيح. فرّقت بين النص ودلالته والحكم المستنبط منه."
-      - textFr: "Que l'ordre n'a aucune valeur tant qu'un savant contemporain ne l'a pas commenté."
-        textAr: "أن الأمر لا قيمة له حتى يشرحه عالم معاصر."
+        feedbackFr: >-
+          Exact. Tu distingues désormais le texte, sa dalâla et le ḥukm
+          finalement retenu.
+        feedbackAr: صحيح. فرّقت بين النص ودلالته والحكم المستنبط منه.
+      - textFr: 'Que l''acte est obligatoirement wâjib, sans autre analyse.'
+        textAr: أن الفعل واجب قطعاً بلا حاجة إلى مزيد من البحث.
         isCorrect: false
-        feedbackFr: "Le commentaire du savant aide à comprendre la preuve ; il ne crée pas son autorité."
-        feedbackAr: "شرح العالم يعين على فهم الدليل ولا ينشئ حجيته."
+        feedbackFr: >-
+          La forme impérative est importante, mais son statut juridique final
+          dépend aussi du contexte et des autres preuves.
+        feedbackAr: >-
+          صيغة الأمر مهمة، لكن الحكم النهائي يتوقف أيضاً على السياق وبقية
+          الأدلة.
 ---
 
 # 1. Le raccourci le plus fréquent

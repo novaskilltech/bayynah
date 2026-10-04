@@ -1,50 +1,74 @@
 ---
-id: "hadith-05"
-slug: "hadith-05-authenticite-vs-istidlal"
-school: "HADITH"
+id: hadith-05
+slug: hadith-05-authenticite-vs-istidlal
+school: HADITH
 level: 3
 order: 5
-editorialStatus: "PUBLISHED"
-titleFr: "Hadith authentique ≠ argumentation correcte"
-titleAr: "صحة الحديث لا تستلزم صحة الاستدلال به"
-summaryFr: "Comprendre qu'après avoir établi l'authenticité d'un récit commence une seconde enquête : déterminer ce qu'il signifie réellement et s'il prouve la conclusion avancée."
-summaryAr: "فهم أن ثبوت الحديث لا يعني صحة كل استدلال به، بل يبقى النظر في دلالته وسياقه وبقية النصوص."
-methodologyPrincipleFr: "L'authenticité répond à la question : « Est-ce transmis ? » ; l'istidlâl répond à une autre question : « Qu'est-ce que cela prouve réellement ? »"
-methodologyPrincipleAr: "ثبوت الحديث يجيب عن سؤال النقل، وصحة الاستدلال تتعلق بسؤال الدلالة."
+editorialStatus: PUBLISHED
+titleFr: Hadith authentique ≠ argumentation correcte
+titleAr: صحة الحديث لا تستلزم صحة الاستدلال به
+summaryFr: >-
+  Comprendre qu'après avoir établi l'authenticité d'un récit commence une
+  seconde enquête : déterminer ce qu'il signifie réellement et s'il prouve la
+  conclusion avancée.
+summaryAr: >-
+  فهم أن ثبوت الحديث لا يعني صحة كل استدلال به، بل يبقى النظر في دلالته وسياقه
+  وبقية النصوص.
+methodologyPrincipleFr: >-
+  L'authenticité répond à la question : « Est-ce transmis ? » ; l'istidlâl
+  répond à une autre question : « Qu'est-ce que cela prouve réellement ? »
+methodologyPrincipleAr: ثبوت الحديث يجيب عن سؤال النقل، وصحة الاستدلال تتعلق بسؤال الدلالة.
 historicReference:
-  author: "Aḥmad Ibn Taymiyya"
-  work: "Bayân Talbîs al-Jahmiyya fî Taʾsîs Bidaʿihim al-Kalâmiyya"
-  editionVolumePage: "Tome 7, p. 374 (Éd. Majmaʿ al-Malik Fahd li-Ṭibâʿat al-Muṣḥaf ash-Sharîf)"
-  quoteArOriginal: "ومن المعلوم أن الكلام المتصل بعضه ببعض يفسر بعضه بعضاً، ويدل آخره على معنى أوله، وأوله لا يتم معناه إلا بآخره"
-  translationFr: "Il est connu qu'un discours continu s'explique par ses différentes parties : sa fin éclaire le sens de son début, et son début ne prend pleinement sens qu'avec sa fin."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Aḥmad Ibn Taymiyya
+  work: Bayân Talbîs al-Jahmiyya fî Taʾsîs Bidaʿihim al-Kalâmiyya
+  editionVolumePage: 'Tome 7, p. 374 (Éd. Majmaʿ al-Malik Fahd li-Ṭibâʿat al-Muṣḥaf ash-Sharîf)'
+  quoteArOriginal: >-
+    ومن المعلوم أن الكلام المتصل بعضه ببعض يفسر بعضه بعضاً، ويدل آخره على معنى
+    أوله، وأوله لا يتم معناه إلا بآخره
+  translationFr: >-
+    Il est connu qu'un discours continu s'explique par ses différentes parties :
+    sa fin éclaire le sens de son début, et son début ne prend pleinement sens
+    qu'avec sa fin.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-h05-1"
-    questionFr: "Vous avez vérifié qu'un hadith est authentique. Quel est le réflexe correct avant d'en déduire qu'une pratique est obligatoire ou interdite ?"
-    questionAr: "ثبت عندك أن الحديث صحيح، فما الخطوة الصحيحة قبل الحكم بأن فعلاً ما واجب أو محرم؟"
+  - id: quiz-h05-1
+    questionFr: >-
+      Vous avez vérifié qu'un hadith est authentique. Quel est le réflexe
+      correct avant d'en déduire qu'une pratique est obligatoire ou interdite ?
+    questionAr: >-
+      ثبت عندك أن الحديث صحيح، فما الخطوة الصحيحة قبل الحكم بأن فعلاً ما واجب أو
+      محرم؟
     order: 1
     options:
-      - textFr: "Aucune autre étape : ṣaḥîḥ signifie automatiquement que mon interprétation est correcte."
-        textAr: "لا حاجة لشيء آخر، فصحة الحديث تعني صحة فهمي له."
-        isCorrect: false
-        feedbackFr: "Tu confonds authenticité de la transmission et validité de l'interprétation."
-        feedbackAr: "خلطت بين صحة النقل وصحة الفهم والاستدلال."
-      - textFr: "Examiner son contexte, son indication, les autres textes du sujet et la compréhension des spécialistes."
-        textAr: "النظر في السياق والدلالة وبقية نصوص الباب وفهم أهل العلم."
+      - textFr: >-
+          Examiner son contexte, son indication, les autres textes du sujet et
+          la compréhension des spécialistes.
+        textAr: النظر في السياق والدلالة وبقية نصوص الباب وفهم أهل العلم.
         isCorrect: true
-        feedbackFr: "Exact. Après la vérification de la transmission commence l'étude de la signification et de l'istidlâl."
-        feedbackAr: "صحيح. بعد ثبوت النقل يبدأ النظر في الدلالة وصحة الاستدلال."
-      - textFr: "Choisir l'interprétation qui produit la règle la plus stricte."
-        textAr: "اختيار التفسير الذي ينتج أشد الأحكام احتياطاً."
+        feedbackFr: >-
+          Exact. Après la vérification de la transmission commence l'étude de la
+          signification et de l'istidlâl.
+        feedbackAr: صحيح. بعد ثبوت النقل يبدأ النظر في الدلالة وصحة الاستدلال.
+      - textFr: Choisir l'interprétation qui produit la règle la plus stricte.
+        textAr: اختيار التفسير الذي ينتج أشد الأحكام احتياطاً.
         isCorrect: false
-        feedbackFr: "La sévérité n'est pas un critère autonome de vérité."
-        feedbackAr: "التشديد ليس معياراً مستقلاً للحق."
+        feedbackFr: La sévérité n'est pas un critère autonome de vérité.
+        feedbackAr: التشديد ليس معياراً مستقلاً للحق.
+      - textFr: >-
+          Aucune autre étape : ṣaḥîḥ signifie automatiquement que mon
+          interprétation est correcte.
+        textAr: لا حاجة لشيء آخر، فصحة الحديث تعني صحة فهمي له.
+        isCorrect: false
+        feedbackFr: >-
+          Tu confonds authenticité de la transmission et validité de
+          l'interprétation.
+        feedbackAr: خلطت بين صحة النقل وصحة الفهم والاستدلال.
 ---
 
 # 1. Une erreur extrêmement fréquente

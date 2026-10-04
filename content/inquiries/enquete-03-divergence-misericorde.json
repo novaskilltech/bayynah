@@ -24,20 +24,20 @@
       "instructionAr": "أمام دعوى: «اختلاف أمتي رحمة» حديث عن النبي ﷺ، ولذلك فكل خلاف بين العلماء رحمة في ذاته، ما هو التحليل المنهجي الأول؟",
       "options": [
         {
-          "textFr": "Il faut séparer au moins trois propositions : la formule est-elle réellement attribuable au Prophète ﷺ ? Certaines divergences peuvent-elles produire une latitude pratique ? Et peut-on en conclure que toute divergence est une miséricorde ?",
-          "textAr": "يجب فصل ثلاث قضايا: هل ثبتت العبارة عن النبي ﷺ؟ وهل قد يترتب على بعض الخلاف سعة أو رخصة؟ وهل يصح تعميم ذلك على كل خلاف؟",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Exact. Authenticité de la citation, sens éventuel et généralisation sont trois enquêtes différentes.",
-          "feedbackAr": "تحليل سديد ومحرر: فثبوت النسبة الحديثية، والمعنى الفقهي المحتمل، وحكم الخلاف عموماً، ثلاث قضايا متمايزة لا يصح الخلط بينها."
-        },
-        {
           "textFr": "Vérifier seulement si la phrase existe dans des livres de jurisprudence ou d'exhortation.",
           "textAr": "التحقق فقط من ورود العبارة في كتب الفقه أو الرقائق والمواعظ.",
           "quality": "ACCEPTABLE",
           "methodologicalScore": 2,
           "feedbackFr": "Bonne initiative documentaire, mais insuffisante sans décomposition préalable des trois propositions.",
           "feedbackAr": "خطوة بحثية مفيدة، لكنها قاصرة إن لم تسبقها تجزئة الدعوى المركبة وتحديد مسارات النظر."
+        },
+        {
+          "textFr": "Il faut séparer au moins trois propositions : la formule est-elle réellement attribuable au Prophète ﷺ ? Certaines divergences peuvent-elles produire une latitude pratique ? Et peut-on en conclure que toute divergence est une miséricorde ?",
+          "textAr": "يجب فصل ثلاث قضايا: هل ثبتت العبارة عن النبي ﷺ؟ وهل قد يترتب على بعض الخلاف سعة أو رخصة؟ وهل يصح تعميم ذلك على كل خلاف؟",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Exact. Authenticité de la citation, sens éventuel et généralisation sont trois enquêtes différentes.",
+          "feedbackAr": "تحليل سديد ومحرر: فثبوت النسبة الحديثية، والمعنى الفقهي المحتمل، وحكم الخلاف عموماً، ثلاث قضايا متمايزة لا يصح الخلط بينها."
         },
         {
           "textFr": "Puisque les écoles juridiques divergent, le hadith doit probablement être authentique.",
@@ -67,22 +67,6 @@
       "instructionAr": "لاختبار أوجه الدعوى علمياً، ما هي المحاور الدقيقة الواجب فحصها؟",
       "options": [
         {
-          "textFr": "Rechercher séparément : un isnâd de la formulation exacte « اختلاف أمتي رحمة » ; les jugements des muḥaddithûn ; les récits voisins éventuellement confondus avec elle ; les paroles des salaf ou juristes sur l'utilité de certaines divergences ; ce que signifie réellement « divergence » dans chaque contexte.",
-          "textAr": "البحث المستقل في: إسناد اللفظ المطابق «اختلاف أمتي رحمة»؛ وأحكام المحدثين عليه؛ والروايات القريبة التي قد تلتبس به؛ وآثار السلف والفقهاء في سعة بعض الخلاف؛ ومعنى 'الخلاف' في كل سياق.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Plan d'investigation modèle ! Il sépare rigoureusement la critique de l'isnad, la collation des variantes et l'analyse sémantique.",
-          "feedbackAr": "خطة تحقيق مثالية! تفصل بدقة بين نقد السند، وجمع الروايات المقاربة، والتحرير الدلالي لمعنى الخلاف."
-        },
-        {
-          "textFr": "Chercher uniquement qui a cité cette formule parmi les juristes célèbres sans vérifier l'isnad.",
-          "textAr": "الاقتصار على تتبع من استشهد بهذه العبارة من مشاهير الفقهاء دون بحث عن السند.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Constater l'usage de la citation par les juristes est instructif, mais ne dispense pas de l'examen hadithique de la chaîne.",
-          "feedbackAr": "معرفة استعمال الفقهاء للعبارة مفيد، لكنه لا يغني عن التحقيق الحديثي في ثبوت الإسناد."
-        },
-        {
           "textFr": "Décider d'abord si la divergence est bonne ou mauvaise, puis rechercher les preuves correspondantes.",
           "textAr": "تقرير الموقف المسبق بأن الخلاف خير أو شر، ثم انتقاء النصوص المؤيدة له.",
           "quality": "PREMATURE",
@@ -97,6 +81,22 @@
           "methodologicalScore": 0,
           "feedbackFr": "Confusion entre répétition bibliographique et authenticité : mille citations d'un texte sans isnâd ne lui créent pas une chaîne.",
           "feedbackAr": "خلط بين كثرة النقل في المصنفات المتأخرة وبين ثبوت الأصل: فتكرار نقل ما لا أصل له لا يجعله صحيحاً."
+        },
+        {
+          "textFr": "Rechercher séparément : un isnâd de la formulation exacte « اختلاف أمتي رحمة » ; les jugements des muḥaddithûn ; les récits voisins éventuellement confondus avec elle ; les paroles des salaf ou juristes sur l'utilité de certaines divergences ; ce que signifie réellement « divergence » dans chaque contexte.",
+          "textAr": "البحث المستقل في: إسناد اللفظ المطابق «اختلاف أمتي رحمة»؛ وأحكام المحدثين عليه؛ والروايات القريبة التي قد تلتبس به؛ وآثار السلف والفقهاء في سعة بعض الخلاف؛ ومعنى 'الخلاف' في كل سياق.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Plan d'investigation modèle ! Il sépare rigoureusement la critique de l'isnad, la collation des variantes et l'analyse sémantique.",
+          "feedbackAr": "خطة تحقيق مثالية! تفصل بدقة بين نقد السند، وجمع الروايات المقاربة، والتحرير الدلالي لمعنى الخلاف."
+        },
+        {
+          "textFr": "Chercher uniquement qui a cité cette formule parmi les juristes célèbres sans vérifier l'isnad.",
+          "textAr": "الاقتصار على تتبع من استشهد بهذه العبارة من مشاهير الفقهاء دون بحث عن السند.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constater l'usage de la citation par les juristes est instructif, mais ne dispense pas de l'examen hadithique de la chaîne.",
+          "feedbackAr": "معرفة استعمال الفقهاء للعبارة مفيد، لكنه لا يغني عن التحقيق الحديثي في ثبوت الإسناد."
         }
       ],
       "revealedEvidenceIds": [],
@@ -118,20 +118,20 @@
           "feedbackAr": "تمييز جوهري بالغ الدقة! فالأمر هنا ليس حديثاً ضعيف السند، بل مقولة لم يعثر لها الحافظ على أي زمام إسنادي."
         },
         {
-          "textFr": "La formule n'est pas authentique selon as-Subkî.",
-          "textAr": "العبارة غير صحيحة عند السبكي.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Exact, mais la formulation d'as-Subkî est beaucoup plus précise : elle constate l'absence totale d'isnâd repéré, et non une simple faiblesse.",
-          "feedbackAr": "صحيح في الجملة، لكن عبارة السبكي أخص؛ فهي تنفي وجود أصل إسنادي معروف أصلاً."
-        },
-        {
           "textFr": "Puisqu’as-Subkî n’a trouvé aucun isnâd, il a démontré historiquement que personne n’a jamais transmis cette phrase.",
           "textAr": "بما أن السبكي لم يقف على إسناد، فقد برهن قطعاً على أنه لم يروِ أحد هذا اللفظ قط في التاريخ.",
           "quality": "PREMATURE",
           "methodologicalScore": 1,
           "feedbackFr": "L’absence d’isnâd retrouvé n’est pas la démonstration métaphysique qu’aucun isnâd n’a jamais existé.",
           "feedbackAr": "توسع غير مبرر: فعدم الوجدان عند عالم لا يستلزم العدم المطلق في نفس الأمر، وإن كان حجة قوية في نفي الثبوت."
+        },
+        {
+          "textFr": "La formule n'est pas authentique selon as-Subkî.",
+          "textAr": "العبارة غير صحيحة عند السبكي.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Exact, mais la formulation d'as-Subkî est beaucoup plus précise : elle constate l'absence totale d'isnâd repéré, et non une simple faiblesse.",
+          "feedbackAr": "صحيح في الجملة، لكن عبارة السبكي أخص؛ فهي تنفي وجود أصل إسنادي معروف أصلاً."
         },
         {
           "textFr": "« Aucun isnâd retrouvé » signifie automatiquement « chaîne fabriquée identifiée ».",
@@ -142,7 +142,9 @@
           "feedbackAr": "خلط اصطلاحي فاحش: فالحديث الموضوع له إسناد مركب برواة كذابين، أما ما لا إسناد له فلم يروَ بإسناد أصلاً."
         }
       ],
-      "revealedEvidenceIds": ["ev-subki-ikhtilaf-umma"],
+      "revealedEvidenceIds": [
+        "ev-subki-ikhtilaf-umma"
+      ],
       "revealPolicy": "AFTER_ANSWER"
     },
     {
@@ -153,12 +155,12 @@
       "instructionAr": "حكم الألباني على الرواية في السلسلة الضعيفة (رقم 57) بأنها «لا أصل لها»؛ فما هو المعنى الدقيق لهذا التوصيف؟",
       "options": [
         {
-          "textFr": "Ici, le jugement signifie que l’attribution prophétique ne repose pas sur une origine hadithique établie identifiée. Il ne faut pas transformer mécaniquement cette expression en une chaîne précise que l’on aurait authentifiée comme fabrication.",
-          "textAr": "المعنى هنا أن نسبة الكلام إلى النبي ﷺ لا تستند إلى أصل حديثي ثابت مسند؛ فلا يصح تحويل هذا الحكم آلياً إلى دعوى وجود سند معين حكم بوضعه.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Parfaite compréhension critique ! 'Lâ aṣla lah' constate l'absence d'ancrage textuel prophétique مسند dans les corpus de référence.",
-          "feedbackAr": "فهم حديثي دقيق ومحرر! فقولهم 'لا أصل له' تقرير لعدم وجود سند يرجع إليه الحديث في دواوين السنة."
+          "textFr": "Cela signifie simplement que le hadith est au degré ḥasan.",
+          "textAr": "معناه ببساطة أن الحديث حسن لغيره ومقبول في العمل.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Contresens absolu : aucun traditionniste n'a jamais employé 'lâ aṣla lah' pour désigner un hadith ḥasan !",
+          "feedbackAr": "قلب تام للمصطلحات: لم يستعمل أحد من نقاد الأثر 'لا أصل له' بمعنى الحديث الحسن قط!"
         },
         {
           "textFr": "Cela signifie qu’al-Albânî rejette l’attribution comme hadith établi.",
@@ -177,15 +179,17 @@
           "feedbackAr": "تسوية اصطلاحية غير منضبطة: فالوضع وصف للإسناد برواة كذابين، بينما 'لا أصل له' قد يعني عدم ورود السند بالكلية."
         },
         {
-          "textFr": "Cela signifie simplement que le hadith est au degré ḥasan.",
-          "textAr": "معناه ببساطة أن الحديث حسن لغيره ومقبول في العمل.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Contresens absolu : aucun traditionniste n'a jamais employé 'lâ aṣla lah' pour désigner un hadith ḥasan !",
-          "feedbackAr": "قلب تام للمصطلحات: لم يستعمل أحد من نقاد الأثر 'لا أصل له' بمعنى الحديث الحسن قط!"
+          "textFr": "Ici, le jugement signifie que l’attribution prophétique ne repose pas sur une origine hadithique établie identifiée. Il ne faut pas transformer mécaniquement cette expression en une chaîne précise que l’on aurait authentifiée comme fabrication.",
+          "textAr": "المعنى هنا أن نسبة الكلام إلى النبي ﷺ لا تستند إلى أصل حديثي ثابت مسند؛ فلا يصح تحويل هذا الحكم آلياً إلى دعوى وجود سند معين حكم بوضعه.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Parfaite compréhension critique ! 'Lâ aṣla lah' constate l'absence d'ancrage textuel prophétique مسند dans les corpus de référence.",
+          "feedbackAr": "فهم حديثي دقيق ومحرر! فقولهم 'لا أصل له' تقرير لعدم وجود سند يرجع إليه الحديث في دواوين السنة."
         }
       ],
-      "revealedEvidenceIds": ["ev-albani-ikhtilaf-umma"],
+      "revealedEvidenceIds": [
+        "ev-albani-ikhtilaf-umma"
+      ],
       "revealPolicy": "AFTER_ANSWER"
     },
     {
@@ -196,22 +200,6 @@
       "instructionAr": "أخرج البيهقي في المدخل رواية قريبة: «واختلاف أصحابي لكم رحمة»؛ فهل تثبت هذه الرواية اللفظ المشهور؟",
       "options": [
         {
-          "textFr": "Il faut l’étudier séparément. Elle ressemble à la formule populaire, mais possède son propre matn et son propre isnâd, lequel est critiqué. Une narration voisine faible ne devient pas automatiquement la chaîne de « اختلاف أمتي رحمة ».",
-          "textAr": "يجب دراستها دراسة مستقلة؛ فهي تشبه العبارة المشهورة لكن لها متنها الخاص وإسنادها الخاص المعلول. والرواية المقاربة الضعيفة لا تصبح تلقائياً سنداً لعبارة «اختلاف أمتي رحمة».",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Règle de rigueur philologique : ne jamais transférer la chaîne d'une narration à une autre sous prétexte de proximité thématique.",
-          "feedbackAr": "تحقيق منهجي أصيل: منع تعدية الأسانيد أو تركيبها على متون أخرى لمجرد التشابه المعنوي."
-        },
-        {
-          "textFr": "Ce récit peut expliquer comment l’idée a circulé, mais il ne suffit pas à authentifier la formulation exacte.",
-          "textAr": "هذه الرواية قد تفسر كيفية انتشار المعنى، لكنها لا تكفي لتصحيح اللفظ المطابق المشهور.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Bonne remarque d'histoire du texte, mais la critique hadithique exige d'analyser les défauts propres à cette chaîne (Juwaybir, inqiṭâʿ).",
-          "feedbackAr": "ملاحظة تاريخية حسنة، لكن التحقيق يقتضي بيان علل هذا الإسناد بذاته (جويبر، والانقطاع)."
-        },
-        {
           "textFr": "Les deux phrases parlent de divergence et de miséricorde, donc il s’agit forcément du même hadith.",
           "textAr": "بما أن الجملتين تتحدثان عن الخلاف والرحمة، فلا بد أنهما حديث واحد بإسناد واحد.",
           "quality": "PREMATURE",
@@ -220,15 +208,33 @@
           "feedbackAr": "خلط متكرر: اشتراك الروايات في الألفاظ العامة لا يقتضي اتحاد مخرجها الإسنادي."
         },
         {
+          "textFr": "Il faut l’étudier séparément. Elle ressemble à la formule populaire, mais possède son propre matn et son propre isnâd, lequel est critiqué. Une narration voisine faible ne devient pas automatiquement la chaîne de « اختلاف أمتي رحمة ».",
+          "textAr": "يجب دراستها دراسة مستقلة؛ فهي تشبه العبارة المشهورة لكن لها متنها الخاص وإسنادها الخاص المعلول. والرواية المقاربة الضعيفة لا تصبح تلقائياً سنداً لعبارة «اختلاف أمتي رحمة».",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Règle de rigueur philologique : ne jamais transférer la chaîne d'une narration à une autre sous prétexte de proximité thématique.",
+          "feedbackAr": "تحقيق منهجي أصيل: منع تعدية الأسانيد أو تركيبها على متون أخرى لمجرد التشابه المعنوي."
+        },
+        {
           "textFr": "Toute ressemblance entre deux matn prouve une falsification intentionnelle.",
           "textAr": "أي تشابه بين متنين يقطع بوقوع التزوير والوضع المتعمد.",
           "quality": "INCORRECT",
           "methodologicalScore": 0,
           "feedbackFr": "Excès de soupçon : les recoupements textuels sont normaux dans la transmission orale et ne signent pas à eux seuls une falsification.",
           "feedbackAr": "إفراط ظاهري فاسد: فتوارد المعاني أمر طبيعي في التناقل ولا يدل بمجرده على التزوير العمدي."
+        },
+        {
+          "textFr": "Ce récit peut expliquer comment l’idée a circulé, mais il ne suffit pas à authentifier la formulation exacte.",
+          "textAr": "هذه الرواية قد تفسر كيفية انتشار المعنى، لكنها لا تكفي لتصحيح اللفظ المطابق المشهور.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Bonne remarque d'histoire du texte, mais la critique hadithique exige d'analyser les défauts propres à cette chaîne (Juwaybir, inqiṭâʿ).",
+          "feedbackAr": "ملاحظة تاريخية حسنة، لكن التحقيق يقتضي بيان علل هذا الإسناد بذاته (جويبر، والانقطاع)."
         }
       ],
-      "revealedEvidenceIds": ["ev-bayhaqi-ikhtilaf-ashab"],
+      "revealedEvidenceIds": [
+        "ev-bayhaqi-ikhtilaf-ashab"
+      ],
       "revealPolicy": "ON_STEP_ENTER"
     },
     {
@@ -238,14 +244,6 @@
       "instructionFr": "Quelle distinction méthodologique majeure faut-il établir entre un hadith affaibli par sa chaîne et une parole dont aucun isnâd n'est retrouvé ?",
       "instructionAr": "ما هو الفرق المنهجي الجوهري بين حديث معلول الإسناد وبين مقولة لم يُعثر لها على إسناد قط؟",
       "options": [
-        {
-          "textFr": "« اختلاف أصحابي لكم رحمة » possède des transmissions identifiables que les critiques peuvent analyser et affaiblir. Pour « اختلاف أمتي رحمة », as-Subkî dit ne pas avoir trouvé d’isnâd identifiable. Ce sont deux situations critiques différentes.",
-          "textAr": "«اختلاف أصحابي لكم رحمة» لها أسانيد مشخصة يمكن للنقاد فحص رواتها وتضعيفها، أما «اختلاف أمتي رحمة» فصرح السبكي بعدم وقوفه على إسناد مشخص لها؛ وهما حالتان نقدّيتان متمايزتان.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Excellent. TABAYYUN ne réduit pas toutes les non-authentifications à une seule case « faux hadith » : il distingue le hadith à chaîne défaillante du propos sans chaîne.",
-          "feedbackAr": "تحرير منهجي بالغ النفاسة: «تبيّن» لا يدمج كل ما لم يصح في خانة واحدة، بل يفرق بدقة بين السند الضعيف المشخص وبين انعدام الإسناد أصلاً."
-        },
         {
           "textFr": "Les deux ne sont pas authentiques, mais pour des raisons techniques différentes.",
           "textAr": "كلا النصين غير صحيح، لكن لعلل تقنية متباينة.",
@@ -261,6 +259,14 @@
           "methodologicalScore": 1,
           "feedbackFr": "Erreur méthodologique : la précision de diagnostic conditionne toute la suite de la recherche et les possibilités de renforcement mutuel.",
           "feedbackAr": "قصور منهجي: فدقة التكييف الحديثي تبنى عليها أحكام المتابعات وقواعد النظر الإسنادي."
+        },
+        {
+          "textFr": "« اختلاف أصحابي لكم رحمة » possède des transmissions identifiables que les critiques peuvent analyser et affaiblir. Pour « اختلاف أمتي رحمة », as-Subkî dit ne pas avoir trouvé d’isnâd identifiable. Ce sont deux situations critiques différentes.",
+          "textAr": "«اختلاف أصحابي لكم رحمة» لها أسانيد مشخصة يمكن للنقاد فحص رواتها وتضعيفها، أما «اختلاف أمتي رحمة» فصرح السبكي بعدم وقوفه على إسناد مشخص لها؛ وهما حالتان نقدّيتان متمايزتان.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Excellent. TABAYYUN ne réduit pas toutes les non-authentifications à une seule case « faux hadith » : il distingue le hadith à chaîne défaillante du propos sans chaîne.",
+          "feedbackAr": "تحرير منهجي بالغ النفاسة: «تبيّن» لا يدمج كل ما لم يصح في خانة واحدة، بل يفرق بدقة بين السند الضعيف المشخص وبين انعدام الإسناد أصلاً."
         },
         {
           "textFr": "Un texte sans isnâd connu est méthodologiquement plus fort qu’une chaîne faible.",
@@ -290,6 +296,14 @@
           "feedbackAr": "تثبت تاريخي متين: نسبة المعنى إلى قائله الحقيقي من التابعين، ومنع رفعه إلى النبي ﷺ بلا برهان."
         },
         {
+          "textFr": "Comme la formule prophétique n’est pas établie, toute latitude liée à une divergence juridique doit être rejetée.",
+          "textAr": "بما أن الحديث النبوي لم يثبت، فيجب إلغاء أي رخصة أو سعة ناتجة عن الخلاف الفقهي السائغ.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Excès destructeur : la non-authenticité d'un hadith n'annule pas les règles du fiqh établies par d'autres voies.",
+          "feedbackAr": "إفراط معطل: فعدم ثبوت لفظ حديث لا يبطل القواعد الفقهية المعتبرة المقررة بأدلتها الشرعية الأخرى."
+        },
+        {
           "textFr": "Le sens général de la formule populaire a des précédents chez certains anciens.",
           "textAr": "المعنى العام للعبارة المشهورة له شواهد وسوابق عند بعض السلف.",
           "quality": "ACCEPTABLE",
@@ -304,17 +318,11 @@
           "methodologicalScore": 1,
           "feedbackFr": "Projection anachronique : les savants formulent des pensées uṣûlîyyes propres qui ne sont pas des citations prophétiques implicites.",
           "feedbackAr": "إسقاط فاسد: فالأئمة يعبرون عن اجتهاداتهم ونظراتهم ولا يلزم أن يكون كل معنى حسناً منقولاً عن النبي ﷺ."
-        },
-        {
-          "textFr": "Comme la formule prophétique n’est pas établie, toute latitude liée à une divergence juridique doit être rejetée.",
-          "textAr": "بما أن الحديث النبوي لم يثبت، فيجب إلغاء أي رخصة أو سعة ناتجة عن الخلاف الفقهي السائغ.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Excès destructeur : la non-authenticité d'un hadith n'annule pas les règles du fiqh établies par d'autres voies.",
-          "feedbackAr": "إفراط معطل: فعدم ثبوت لفظ حديث لا يبطل القواعد الفقهية المعتبرة المقررة بأدلتها الشرعية الأخرى."
         }
       ],
-      "revealedEvidenceIds": ["ev-umar-abdaziz-rukhsa"],
+      "revealedEvidenceIds": [
+        "ev-umar-abdaziz-rukhsa"
+      ],
       "revealPolicy": "AFTER_ANSWER"
     },
     {
@@ -325,20 +333,20 @@
       "instructionAr": "من الناحية الأصولية والعقدية، هل يصح الإطلاق بأن 'كل خلاف فهو رحمة'؟",
       "options": [
         {
-          "textFr": "Non. Il faut distinguer notamment divergence d’ijtihâd dans des questions susceptibles d’interprétation, divergence condamnable, contradiction avec une preuve claire et simple pluralité de pratiques permises. Une formule générale ne peut pas effacer ces distinctions.",
-          "textAr": "لا؛ بل يجب التفريق بين خلاف الاجتهاد في المسائل الظنية، وبين الخلاف المذموم، ومخالفة النص الصريح، وتنوع المباحات. فالإطلاق المجمل لا يلغي هذه الفروق الأصولية الدقيقة.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Précision doctrinale indispensable ! Les juristes et traditionnistes (comme Ibn Hazm ou Ibn Taymiyya) ont fermement rejeté l'idée que le désaccord en soi soit toujours un bien.",
-          "feedbackAr": "تحرير أصولي بالغ الأهمية! فالمحققون (كابن حزم وابن تيمية) قرروا أن التفرق والاختلاف ليس محموداً بذاته، وإنما الرحمة في السعة الناتجة عن تيسير الفهم في الفروع."
-        },
-        {
           "textFr": "Certaines divergences peuvent créer une latitude, d’autres non.",
           "textAr": "بعض الخلاف قد يورث رخصة وسعة، وبعضه الآخر لا يورث ذلك.",
           "quality": "ACCEPTABLE",
           "methodologicalScore": 2,
           "feedbackFr": "Observation juste mais générale : la méthode exige de nommer les catégories (khilâf sâ'igh vs khilâf madhmûm).",
           "feedbackAr": "صحيح في المجمل، لكن التحقيق يقتضي توصيف أنواع الخلاف (خلاف سائغ معتبر مقابل خلاف مذموم أو شاذ)."
+        },
+        {
+          "textFr": "Toute divergence entre musulmans est nécessairement interdite et coupable.",
+          "textAr": "كل خلاف يقع بين المسلمين فهو حرام قطعي وإثم يستحق العقوبة.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Radicalisme réducteur : l'exercice de l'ijtihad dans les questions ouvertes est légitime et rétribué même en cas d'erreur.",
+          "feedbackAr": "تزمت باطل: فالاجتهاد في محله مشروع ومأجور بنص الحديث الصحيح، ولا تأثيم في مسائل الاجتهاد السائغ."
         },
         {
           "textFr": "Puisque plusieurs écoles existent, toutes les opinions formulées par un savant sont également vraies.",
@@ -349,12 +357,12 @@
           "feedbackAr": "نسبية معرفية باطلة: فالعلماء متفقون على أن الحق عند الله واحد في مسائل الفروع التي فيها نص، والمخطئ مأجور لا مصيب."
         },
         {
-          "textFr": "Toute divergence entre musulmans est nécessairement interdite et coupable.",
-          "textAr": "كل خلاف يقع بين المسلمين فهو حرام قطعي وإثم يستحق العقوبة.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Radicalisme réducteur : l'exercice de l'ijtihad dans les questions ouvertes est légitime et rétribué même en cas d'erreur.",
-          "feedbackAr": "تزمت باطل: فالاجتهاد في محله مشروع ومأجور بنص الحديث الصحيح، ولا تأثيم في مسائل الاجتهاد السائغ."
+          "textFr": "Non. Il faut distinguer notamment divergence d’ijtihâd dans des questions susceptibles d’interprétation, divergence condamnable, contradiction avec une preuve claire et simple pluralité de pratiques permises. Une formule générale ne peut pas effacer ces distinctions.",
+          "textAr": "لا؛ بل يجب التفريق بين خلاف الاجتهاد في المسائل الظنية، وبين الخلاف المذموم، ومخالفة النص الصريح، وتنوع المباحات. فالإطلاق المجمل لا يلغي هذه الفروق الأصولية الدقيقة.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Précision doctrinale indispensable ! Les juristes et traditionnistes (comme Ibn Hazm ou Ibn Taymiyya) ont fermement rejeté l'idée que le désaccord en soi soit toujours un bien.",
+          "feedbackAr": "تحرير أصولي بالغ الأهمية! فالمحققون (كابن حزم وابن تيمية) قرروا أن التفرق والاختلاف ليس محموداً بذاته، وإنما الرحمة في السعة الناتجة عن تيسير الفهم في الفروع."
         }
       ],
       "revealedEvidenceIds": [],
@@ -367,6 +375,14 @@
       "instructionFr": "Au terme de cette enquête, quelle formulation finale exprime le plus fidèlement l'état des preuves ?",
       "instructionAr": "في ختام هذا التحقيق، ما هي الصياغة النهائية الأكثر وفاءً لمعطيات الأدلة والوثائق؟",
       "options": [
+        {
+          "textFr": "« Toute divergence est une miséricorde puisque les juristes ont divergé. »",
+          "textAr": "«كل خلاف رحمة طالما أن الفقهاء اختلفوا في المسائل.»",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Régression totale : répétition du sophisme de départ que l'enquête a minutieusement déconstruit.",
+          "feedbackAr": "انتكاس إلى النقطة الأولى: ترداد للمغالطة التي أثبت التحقيق بطلان تعميمها وعدم ثبوت أصلها."
+        },
         {
           "textFr": "« La formule “La divergence de ma communauté est une miséricorde” est très célèbre, mais nous ne disposons pas d’un isnâd établi permettant de la présenter comme un hadith prophétique authentique. As-Subkî dit n’en connaître aucun isnâd, et al-Albânî la classe parmi les paroles sans origine hadithique établie. Des récits voisins existent mais leurs chaînes sont faibles. Par ailleurs, certaines paroles anciennes reconnaissent une latitude liée à certaines divergences juridiques ; cette question est distincte de l’authenticité de la formule attribuée au Prophète ﷺ. »",
           "textAr": "«عبارة 'اختلاف أمتي رحمة' مشهورة جداً، لكن لا يتوفر لها إسناد معتمد يصح به نسبتها إلى النبي ﷺ؛ فقد صرح السبكي بعدم وقوفه على إسناد لها، وحكم الألباني بأنها لا أصل لها. وهناك روايات مقاربة بأسانيد ضعيفة، وآثار عن التابعين تفيد سعة بعض الخلاف الفقهي، وهو بحث مستقل عن ثبوت اللفظ المرفوع.»",
@@ -390,14 +406,6 @@
           "methodologicalScore": 1,
           "feedbackFr": "Agnosticisme excessif : l'absence d'isnâd est elle-même un résultat critique formel qui permet de statuer sur la non-attribution.",
           "feedbackAr": "تشكك في غير محله: فعدم العثور على الإسناد هو بذاته نتيجة علمية توجب الامتناع عن الجزم بالنسب."
-        },
-        {
-          "textFr": "« Toute divergence est une miséricorde puisque les juristes ont divergé. »",
-          "textAr": "«كل خلاف رحمة طالما أن الفقهاء اختلفوا في المسائل.»",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Régression totale : répétition du sophisme de départ que l'enquête a minutieusement déconstruit.",
-          "feedbackAr": "انتكاس إلى النقطة الأولى: ترداد للمغالطة التي أثبت التحقيق بطلان تعميمها وعدم ثبوت أصلها."
         }
       ],
       "revealedEvidenceIds": [],
@@ -411,12 +419,12 @@
       "instructionAr": "ما هو الأصل المنهجي الكلي المستفاد من هذا التحقيق لتطبيقه في سائر المسائل؟",
       "options": [
         {
-          "textFr": "Une formule peut être célèbre, reprise par des juristes et même exprimer partiellement une idée défendable sans devenir pour autant un hadith prophétique. Il faut toujours distinguer : attribution textuelle, qualité de transmission, récits voisins et vérité éventuelle du sens indépendamment de l’attribution.",
-          "textAr": "قد تشتهر العبارة، ويتناقلها الفقهاء، وتعبر جزئياً عن معنى معتبر، دون أن تكون حديثاً نبوياً؛ فالواجب دائماً التمييز بين: صحة النسبة، ووجود الإسناد، والروايات القريبة، وصحة المعنى في ذاته مستقلاً عن النسبة.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Leçon capitale de TABAYYUN : dissocier scrupuleusement la légitimité d'un sens, la notoriété d'un usage et l'authenticité d'une transmission.",
-          "feedbackAr": "جوهر منهج التثبت: الفصل الصارم بين نبالة المعنى، وشهرة الاستعمال الفقهي، وبين شروط ثبوت النسبة إلى صاحب الرسالة ﷺ."
+          "textFr": "Dès qu’un hadith n’a pas de chaîne connue, son sens doit également être rejeté.",
+          "textAr": "كل حديث لا إسناد له يجب بالضرورة إبطال معناه ومحاربته.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Excès de zèle : un propos sans isnâd peut correspondre à une maxime sage ou un constat réel, sans avoir de statut scripturaire.",
+          "feedbackAr": "إفراط غير علمي: فعدم ثبوت الحديث لا يعني فساد المعنى المستفاد من أدلة أخرى أو اعتبارات واقعية صحيحة."
         },
         {
           "textFr": "Il faut vérifier la source des citations religieuses avant de les partager.",
@@ -427,12 +435,12 @@
           "feedbackAr": "أدب عملي حسن، لكن الثمرة العلمية الكبرى هي التمييز المنهجي بين مستويات التحقيق."
         },
         {
-          "textFr": "Dès qu’un hadith n’a pas de chaîne connue, son sens doit également être rejeté.",
-          "textAr": "كل حديث لا إسناد له يجب بالضرورة إبطال معناه ومحاربته.",
-          "quality": "PREMATURE",
-          "methodologicalScore": 1,
-          "feedbackFr": "Excès de zèle : un propos sans isnâd peut correspondre à une maxime sage ou un constat réel, sans avoir de statut scripturaire.",
-          "feedbackAr": "إفراط غير علمي: فعدم ثبوت الحديث لا يعني فساد المعنى المستفاد من أدلة أخرى أو اعتبارات واقعية صحيحة."
+          "textFr": "Une formule peut être célèbre, reprise par des juristes et même exprimer partiellement une idée défendable sans devenir pour autant un hadith prophétique. Il faut toujours distinguer : attribution textuelle, qualité de transmission, récits voisins et vérité éventuelle du sens indépendamment de l’attribution.",
+          "textAr": "قد تشتهر العبارة، ويتناقلها الفقهاء، وتعبر جزئياً عن معنى معتبر، دون أن تكون حديثاً نبوياً؛ فالواجب دائماً التمييز بين: صحة النسبة، ووجود الإسناد، والروايات القريبة، وصحة المعنى في ذاته مستقلاً عن النسبة.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Leçon capitale de TABAYYUN : dissocier scrupuleusement la légitimité d'un sens, la notoriété d'un usage et l'authenticité d'une transmission.",
+          "feedbackAr": "جوهر منهج التثبت: الفصل الصارم بين نبالة المعنى، وشهرة الاستعمال الفقهي، وبين شروط ثبوت النسبة إلى صاحب الرسالة ﷺ."
         },
         {
           "textFr": "Si plusieurs savants ont utilisé une phrase, elle devient automatiquement prophétique.",
@@ -569,17 +577,26 @@
     "established": {
       "fr": "La formule « اختلاف أمتي رحمة » est très répandue dans les écrits tardifs et les débats d'idées, mais l’enquête documentaire ne met en évidence aucun isnâd prophétique établi permettant de la présenter comme un hadith authentique.",
       "ar": "عبارة «اختلاف أمتي رحمة» مشهورة جداً في المصنفات المتأخرة، لكن البحث لا يثبت لها إسناداً نبوياً معتمداً يصح به نسبتها إلى النبي ﷺ.",
-      "evidenceIds": ["ev-subki-ikhtilaf-umma", "ev-albani-ikhtilaf-umma"]
+      "evidenceIds": [
+        "ev-subki-ikhtilaf-umma",
+        "ev-albani-ikhtilaf-umma"
+      ]
     },
     "discussed": {
       "fr": "La terminologie utilisée par les spécialistes pour qualifier cette formule varie : « لا أصل له » (al-Albânî), ou « non reconnu chez les traditionnistes » (as-Subkî). Cette variation d’expression ne transforme cependant pas la formule en hadith authentique.",
       "ar": "تنوعت عبارات العلماء في توصيف العبارة، بين «لا أصل له» (الألباني) ونفي معرفتها عند المحدثين (السبكي)؛ وهذا التباين الاصطلاحي لا يجعلها حديثاً صحيحاً بوجه.",
-      "evidenceIds": ["ev-subki-ikhtilaf-umma", "ev-albani-ikhtilaf-umma"]
+      "evidenceIds": [
+        "ev-subki-ikhtilaf-umma",
+        "ev-albani-ikhtilaf-umma"
+      ]
     },
     "notEstablished": {
       "fr": "L'attribution prophétique de la formule « La divergence de ma communauté est une miséricorde » et l'affirmation selon laquelle toute divergence serait en elle-même une miséricorde ou un argument juridique suffisant.",
       "ar": "نسبة عبارة «اختلاف أمتي رحمة» إلى النبي ﷺ، ودعوى أن كل خلاف فهو رحمة في ذاته أو حجة شرعية معتبرة.",
-      "evidenceIds": ["ev-subki-ikhtilaf-umma", "ev-bayhaqi-ikhtilaf-ashab"]
+      "evidenceIds": [
+        "ev-subki-ikhtilaf-umma",
+        "ev-bayhaqi-ikhtilaf-ashab"
+      ]
     },
     "primaryEvidences": [
       "Fayḍ al-Qadîr d'al-Munâwî (1/210, notice n°288 rapportant as-Subkî)",
@@ -590,12 +607,18 @@
     "salafUnderstanding": {
       "fr": "Il est rapporté de ʿUmar ibn ʿAbd al-ʿAzîz qu’il voyait dans la divergence des Compagnons une latitude pratique, ce qui montre qu’une appréciation positive de certaines divergences existait indépendamment de la formule prophétique non établie.",
       "ar": "رُوي عن عمر بن عبد العزيز أنه رأى في اختلاف الصحابة سعةً ورخصة، وهذا يثبت وجود هذا المعنى عند بعض السلف دون أن يثبت به الحديث المرفوع.",
-      "evidenceIds": ["ev-umar-abdaziz-rukhsa"]
+      "evidenceIds": [
+        "ev-umar-abdaziz-rukhsa"
+      ]
     },
     "scholarlyPositions": {
       "fr": "Position 1 (Critiques du hadith : as-Subkî, al-Albânî) : La formule n'a pas d'isnâd prophétique établi et ne peut être attribuée au Prophète ﷺ. Position 2 (Juristes classiques) : Certaines divergences de furûʿ issues d'un ijtihâd légitime créent une facilitation pour les fidèles (comme exprimé dans l'athar de ʿUmar ibn ʿAbd al-ʿAzîz), tandis que les divergences fondées sur des textes rejetés restent sans valeur.",
       "ar": "الموقف الأول (نقاد الحديث: السبكي، الألباني): العبارة لا أصل لها مسنداً ولا تصح نسبتها إلى النبي ﷺ. الموقف الثاني (أهل الفقه والأصول): بعض خلاف الفروع المبني على اجتهاد سائغ يفيد سعة وتيسيراً (كما في أثر عمر بن عبد العزيز)، بخلاف التفرق المذموم أو الخلاف الشاذ المصادم للنصوص.",
-      "evidenceIds": ["ev-subki-ikhtilaf-umma", "ev-albani-ikhtilaf-umma", "ev-umar-abdaziz-rukhsa"]
+      "evidenceIds": [
+        "ev-subki-ikhtilaf-umma",
+        "ev-albani-ikhtilaf-umma",
+        "ev-umar-abdaziz-rukhsa"
+      ]
     },
     "methodologicalPitfall": {
       "fr": "Confondre quatre niveaux d'analyse distincts : la citation célèbre, l'authenticité de l'isnad, la recevabilité d'un sens et la règle générale applicable à toute divergence.",

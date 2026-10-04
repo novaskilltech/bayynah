@@ -1,50 +1,75 @@
 ---
-id: "hadith-03"
-slug: "hadith-03-degres"
-school: "HADITH"
+id: hadith-03
+slug: hadith-03-degres
+school: HADITH
 level: 2
 order: 3
-editorialStatus: "PUBLISHED"
-titleFr: "Ṣaḥîḥ, ḥasan, ḍaʿîf, mawḍûʿ : comprendre les degrés"
-titleAr: "الصحيح والحسن والضعيف والموضوع: فهم مراتب الحديث"
-summaryFr: "Comprendre ce que signifient les principales qualifications d'un hadith et éviter de transformer des catégories techniques en simples étiquettes."
-summaryAr: "فهم معاني أهم أحكام المحدثين على الروايات وتجنب التعامل معها كملصقات مبسطة."
-methodologyPrincipleFr: "Le jugement porté sur un hadith résulte de critères techniques ; ce n'est pas une appréciation de la beauté de son sens."
-methodologyPrincipleAr: "الحكم على الحديث مبني على قواعد نقدية، لا على استحسان معناه."
+editorialStatus: PUBLISHED
+titleFr: 'Ṣaḥîḥ, ḥasan, ḍaʿîf, mawḍûʿ : comprendre les degrés'
+titleAr: 'الصحيح والحسن والضعيف والموضوع: فهم مراتب الحديث'
+summaryFr: >-
+  Comprendre ce que signifient les principales qualifications d'un hadith et
+  éviter de transformer des catégories techniques en simples étiquettes.
+summaryAr: فهم معاني أهم أحكام المحدثين على الروايات وتجنب التعامل معها كملصقات مبسطة.
+methodologyPrincipleFr: >-
+  Le jugement porté sur un hadith résulte de critères techniques ; ce n'est pas
+  une appréciation de la beauté de son sens.
+methodologyPrincipleAr: الحكم على الحديث مبني على قواعد نقدية، لا على استحسان معناه.
 historicReference:
-  author: "Ibn aṣ-Ṣalâḥ"
-  work: "Maʿrifat Anwâʿ ʿUlûm al-Ḥadîth (Muqaddimat Ibn aṣ-Ṣalâḥ)"
-  editionVolumePage: "Type 1 (Maʿrifat aṣ-Ṣaḥîḥ), Éd. Dâr al-Fikr al-Muʿâṣir / Taḥqîq Nûr ad-Dîn ʿItr, p. 11-12"
-  quoteArOriginal: "أما الحديث الصحيح فهو الحديث المسند الذي يتصل إسناده بنقل العدل الضابط عن العدل الضابط إلى منتهاه، ولا يكون شاذاً ولا معللاً"
-  translationFr: "Le hadith ṣaḥîḥ est le hadith doté d'un isnâd continu, transmis par des narrateurs justes et précis jusqu'à son terme, sans être irrégulier ni affecté d'une déficience."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Ibn aṣ-Ṣalâḥ
+  work: Maʿrifat Anwâʿ ʿUlûm al-Ḥadîth (Muqaddimat Ibn aṣ-Ṣalâḥ)
+  editionVolumePage: >-
+    Type 1 (Maʿrifat aṣ-Ṣaḥîḥ), Éd. Dâr al-Fikr al-Muʿâṣir / Taḥqîq Nûr ad-Dîn
+    ʿItr, p. 11-12
+  quoteArOriginal: >-
+    أما الحديث الصحيح فهو الحديث المسند الذي يتصل إسناده بنقل العدل الضابط عن
+    العدل الضابط إلى منتهاه، ولا يكون شاذاً ولا معللاً
+  translationFr: >-
+    Le hadith ṣaḥîḥ est le hadith doté d'un isnâd continu, transmis par des
+    narrateurs justes et précis jusqu'à son terme, sans être irrégulier ni
+    affecté d'une déficience.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-h03-1"
-    questionFr: "Un hadith possède une chaîne continue et tous ses narrateurs semblent fiables. Peut-on immédiatement conclure qu'il est ṣaḥîḥ ?"
-    questionAr: "حديث متصل السند ورجاله ثقات في الظاهر، هل يكفي ذلك للحكم عليه بالصحة مباشرة؟"
+  - id: quiz-h03-1
+    questionFr: >-
+      Un hadith possède une chaîne continue et tous ses narrateurs semblent
+      fiables. Peut-on immédiatement conclure qu'il est ṣaḥîḥ ?
+    questionAr: >-
+      حديث متصل السند ورجاله ثقات في الظاهر، هل يكفي ذلك للحكم عليه بالصحة
+      مباشرة؟
     order: 1
     options:
-      - textFr: "Oui, car seules la continuité et la fiabilité des narrateurs comptent."
-        textAr: "نعم، لأن اتصال السند وثقة الرواة هما الشرطان الوحيدان."
+      - textFr: 'Oui, car seules la continuité et la fiabilité des narrateurs comptent.'
+        textAr: نعم، لأن اتصال السند وثقة الرواة هما الشرطان الوحيدان.
         isCorrect: false
-        feedbackFr: "Il faut encore notamment examiner l'absence de shudhûdh et de ʿilla."
-        feedbackAr: "لا بد أيضاً من السلامة من الشذوذ والعلة."
-      - textFr: "Non. D'autres conditions doivent encore être examinées, notamment l'absence de contradiction irrégulière et de défaut caché."
-        textAr: "لا. ما زال يجب النظر في السلامة من الشذوذ والعلة وغير ذلك من شروط القبول."
+        feedbackFr: Il faut encore notamment examiner l'absence de shudhûdh et de ʿilla.
+        feedbackAr: لا بد أيضاً من السلامة من الشذوذ والعلة.
+      - textFr: >-
+          Non. D'autres conditions doivent encore être examinées, notamment
+          l'absence de contradiction irrégulière et de défaut caché.
+        textAr: >-
+          لا. ما زال يجب النظر في السلامة من الشذوذ والعلة وغير ذلك من شروط
+          القبول.
         isCorrect: true
-        feedbackFr: "Exact. Le jugement de ṣihha repose sur un ensemble de conditions, pas sur un seul critère."
-        feedbackAr: "صحيح. الحكم بالصحة مبني على اجتماع شروط متعددة."
-      - textFr: "Non, car aucun hadith ne peut être considéré comme authentique avec certitude."
-        textAr: "لا، لأنه لا يمكن الحكم بصحة أي حديث أصلاً."
+        feedbackFr: >-
+          Exact. Le jugement de ṣihha repose sur un ensemble de conditions, pas
+          sur un seul critère.
+        feedbackAr: صحيح. الحكم بالصحة مبني على اجتماع شروط متعددة.
+      - textFr: >-
+          Non, car aucun hadith ne peut être considéré comme authentique avec
+          certitude.
+        textAr: لا، لأنه لا يمكن الحكم بصحة أي حديث أصلاً.
         isCorrect: false
-        feedbackFr: "Les spécialistes du hadith ont précisément développé des méthodes pour distinguer différents degrés de transmission."
-        feedbackAr: "بل وضع المحدثون قواعد دقيقة لمعرفة درجات الروايات."
+        feedbackFr: >-
+          Les spécialistes du hadith ont précisément développé des méthodes pour
+          distinguer différents degrés de transmission.
+        feedbackAr: بل وضع المحدثون قواعد دقيقة لمعرفة درجات الروايات.
 ---
 
 # 1. Les étiquettes cachent une méthode

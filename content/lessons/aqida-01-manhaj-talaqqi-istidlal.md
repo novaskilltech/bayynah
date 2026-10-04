@@ -1,50 +1,65 @@
 ---
-id: "aqida-01"
-slug: "aqida-01-manhaj-talaqqi-istidlal"
-school: "AQIDA"
+id: aqida-01
+slug: aqida-01-manhaj-talaqqi-istidlal
+school: AQIDA
 level: 2
 order: 1
-editorialStatus: "PUBLISHED"
-titleFr: "La méthode d’Ahl as-Sunnah dans la réception et l’argumentation"
-titleAr: "منهج أهل السنة في التلقي والاستدلال"
-summaryFr: "Comprendre d’où sont reçues les questions de croyance, comment distinguer source, compréhension et argumentation, et pourquoi une citation savante ne remplace pas la preuve."
-summaryAr: "فهم مصادر مسائل الاعتقاد، والتمييز بين النص وفهمه والاستدلال به، ومعرفة أن قول العالم لا يحل محل الدليل."
-methodologyPrincipleFr: "En matière de croyance, il faut distinguer ce qui est révélé, la manière dont il a été compris et le raisonnement construit à partir de ces textes."
-methodologyPrincipleAr: "في مسائل الاعتقاد يجب التفريق بين النص المنزل وفهمه وطريقة الاستدلال به."
+editorialStatus: PUBLISHED
+titleFr: La méthode d’Ahl as-Sunnah dans la réception et l’argumentation
+titleAr: منهج أهل السنة في التلقي والاستدلال
+summaryFr: >-
+  Comprendre d’où sont reçues les questions de croyance, comment distinguer
+  source, compréhension et argumentation, et pourquoi une citation savante ne
+  remplace pas la preuve.
+summaryAr: >-
+  فهم مصادر مسائل الاعتقاد، والتمييز بين النص وفهمه والاستدلال به، ومعرفة أن قول
+  العالم لا يحل محل الدليل.
+methodologyPrincipleFr: >-
+  En matière de croyance, il faut distinguer ce qui est révélé, la manière dont
+  il a été compris et le raisonnement construit à partir de ces textes.
+methodologyPrincipleAr: في مسائل الاعتقاد يجب التفريق بين النص المنزل وفهمه وطريقة الاستدلال به.
 historicReference:
-  author: "Abû al-Qâsim al-Lâlakâʾî"
-  work: "Sharḥ Uṣûl Iʿtiqâd Ahl as-Sunnah wa-l-Jamâʿa"
-  editionVolumePage: "Tome 1, p. 28 (Taḥqîq Aḥmad Saʿd Ḥamdân al-Ghâmidî, Éd. Dâr Ṭayba)"
-  quoteArOriginal: "جمع اعتقاد أهل الحديث على سنن كتاب الله ورسوله وآثار صحابته"
-  translationFr: "Rassembler la croyance des gens du hadith selon le Livre d’Allah, la Sunnah de Son Messager et les traditions de ses Compagnons."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Abû al-Qâsim al-Lâlakâʾî
+  work: Sharḥ Uṣûl Iʿtiqâd Ahl as-Sunnah wa-l-Jamâʿa
+  editionVolumePage: 'Tome 1, p. 28 (Taḥqîq Aḥmad Saʿd Ḥamdân al-Ghâmidî, Éd. Dâr Ṭayba)'
+  quoteArOriginal: جمع اعتقاد أهل الحديث على سنن كتاب الله ورسوله وآثار صحابته
+  translationFr: >-
+    Rassembler la croyance des gens du hadith selon le Livre d’Allah, la Sunnah
+    de Son Messager et les traditions de ses Compagnons.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-a01-1"
-    questionFr: "Un prédicateur affirme : « C’est la croyance des salaf », mais ne fournit aucun verset, hadith ni athar. Quel est le bon réflexe ?"
-    questionAr: "قال متحدث: «هذه عقيدة السلف» دون أن يذكر آية أو حديثاً أو أثراً، فما الموقف المنهجي الصحيح؟"
+  - id: quiz-a01-1
+    questionFr: >-
+      Un prédicateur affirme : « C’est la croyance des salaf », mais ne fournit
+      aucun verset, hadith ni athar. Quel est le bon réflexe ?
+    questionAr: >-
+      قال متحدث: «هذه عقيدة السلف» دون أن يذكر آية أو حديثاً أو أثراً، فما
+      الموقف المنهجي الصحيح؟
     order: 1
     options:
-      - textFr: "Accepter automatiquement parce qu’il emploie le mot « salaf »."
-        textAr: "قبول قوله مباشرة لأنه استعمل كلمة «السلف»."
-        isCorrect: false
-        feedbackFr: "Une étiquette méthodologique ne remplace pas la démonstration."
-        feedbackAr: "الانتساب إلى منهج لا يغني عن إقامة الدليل."
-      - textFr: "Demander quels textes et quels athâr établissent réellement cette affirmation."
-        textAr: "طلب النصوص والآثار التي تثبت هذه الدعوى فعلاً."
+      - textFr: >-
+          Demander quels textes et quels athâr établissent réellement cette
+          affirmation.
+        textAr: طلب النصوص والآثار التي تثبت هذه الدعوى فعلاً.
         isCorrect: true
-        feedbackFr: "Exact. TABAYYUN vérifie les sources avant les slogans."
-        feedbackAr: "صحيح. منهج تبيّن يتحقق من المصادر قبل الشعارات."
-      - textFr: "Rejeter l’affirmation simplement parce qu’elle concerne la ʿaqîda."
-        textAr: "رد الدعوى لمجرد أنها تتعلق بالعقيدة."
+        feedbackFr: Exact. TABAYYUN vérifie les sources avant les slogans.
+        feedbackAr: صحيح. منهج تبيّن يتحقق من المصادر قبل الشعارات.
+      - textFr: Rejeter l’affirmation simplement parce qu’elle concerne la ʿaqîda.
+        textAr: رد الدعوى لمجرد أنها تتعلق بالعقيدة.
         isCorrect: false
-        feedbackFr: "La rigueur exige une enquête, pas un rejet automatique."
-        feedbackAr: "التحقيق يقتضي البحث لا الرد التلقائي."
+        feedbackFr: 'La rigueur exige une enquête, pas un rejet automatique.'
+        feedbackAr: التحقيق يقتضي البحث لا الرد التلقائي.
+      - textFr: Accepter automatiquement parce qu’il emploie le mot « salaf ».
+        textAr: قبول قوله مباشرة لأنه استعمل كلمة «السلف».
+        isCorrect: false
+        feedbackFr: Une étiquette méthodologique ne remplace pas la démonstration.
+        feedbackAr: الانتساب إلى منهج لا يغني عن إقامة الدليل.
 ---
 
 # 1. Une croyance n’est pas établie par une étiquette

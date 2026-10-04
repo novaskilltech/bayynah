@@ -1,52 +1,85 @@
 ---
-id: "critique-04"
-slug: "critique-04-biais-sophismes"
-school: "CRITIQUE"
+id: critique-04
+slug: critique-04-biais-sophismes
+school: CRITIQUE
 level: 2
 order: 4
-editorialStatus: "PUBLISHED"
-titleFr: "Biais et sophismes religieux"
-titleAr: "المغالطات والتحيزات في الخطاب الديني"
-summaryFr: "Détecter les sophismes fréquents : argument d'autorité abusive, appel à la popularité, citation tronquée et faux dilemme."
-summaryAr: "كشف المغالطات الشائعة: الاحتجاج بالسلطة، مغالطة الكثرة، الاجتزاء المخل، والتعميم المتسرع."
-methodologyPrincipleFr: "La vérité ne se reconnaît pas au nombre de ses partisans, mais à la conformité de la preuve."
-methodologyPrincipleAr: "الحق لا يُعرف بالرجال، اعرف الحق تعرف أهله."
+editorialStatus: PUBLISHED
+titleFr: Biais et sophismes religieux
+titleAr: المغالطات والتحيزات في الخطاب الديني
+summaryFr: >-
+  Détecter les sophismes fréquents : argument d'autorité abusive, appel à la
+  popularité, citation tronquée et faux dilemme.
+summaryAr: >-
+  كشف المغالطات الشائعة: الاحتجاج بالسلطة، مغالطة الكثرة، الاجتزاء المخل،
+  والتعميم المتسرع.
+methodologyPrincipleFr: >-
+  La vérité ne se reconnaît pas au nombre de ses partisans, mais à la conformité
+  de la preuve.
+methodologyPrincipleAr: الحق لا يُعرف بالرجال، اعرف الحق تعرف أهله.
 historicReference:
-  author: "Abû Isḥâq ash-Shâṭibî"
-  work: "Al-Iʿtiṣâm"
-  editionVolumePage: "Tome 2, p. 865 (Éd. Dâr Ibn ʿAffân)"
-  quoteArOriginal: "إن الحق لا يعرف بالرجال، وإنما يعرف الرجال بالحق، فاعرف الحق تعرف أهله"
-  quoteArVocalized: "إِنَّ الْحَقَّ لَا يُعْرَفُ بِالرِّجَالِ، وَإِنَّمَا يُعْرَفُ الرِّجَالُ بِالْحَقِّ، فَاعْرِفِ الْحَقَّ تَعْرِفْ أَهْلَهُ"
-  quoteArNormalized: "ان الحق لا يعرف بالرجال وانما يعرف الرجال بالحق فاعرف الحق تعرف اهله"
-  translationFr: "La vérité ne se reconnaît pas aux hommes ; ce sont plutôt les hommes que l'on reconnaît à la lumière de la vérité. Connais donc la vérité, et tu connaîtras ses partisans."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Abû Isḥâq ash-Shâṭibî
+  work: Al-Iʿtiṣâm
+  editionVolumePage: 'Tome 2, p. 865 (Éd. Dâr Ibn ʿAffân)'
+  quoteArOriginal: إن الحق لا يعرف بالرجال، وإنما يعرف الرجال بالحق، فاعرف الحق تعرف أهله
+  quoteArVocalized: >-
+    إِنَّ الْحَقَّ لَا يُعْرَفُ بِالرِّجَالِ، وَإِنَّمَا يُعْرَفُ الرِّجَالُ
+    بِالْحَقِّ، فَاعْرِفِ الْحَقَّ تَعْرِفْ أَهْلَهُ
+  quoteArNormalized: ان الحق لا يعرف بالرجال وانما يعرف الرجال بالحق فاعرف الحق تعرف اهله
+  translationFr: >-
+    La vérité ne se reconnaît pas aux hommes ; ce sont plutôt les hommes que
+    l'on reconnaît à la lumière de la vérité. Connais donc la vérité, et tu
+    connaîtras ses partisans.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-c04-1"
-    questionFr: "Un interlocuteur affirme : 'Tous les gens autour de nous font comme cela depuis des décennies, il est impossible que des millions de musulmans soient dans l'erreur !' De quel sophisme s'agit-il ?"
-    questionAr: "قال أحدهم: 'كل الناس من حولنا يفعلون هذا منذ عقود، فهل يُعقل أن يكون الملايين على ضلال؟!' ما هي المغالطة المنطقية هنا؟"
+  - id: quiz-c04-1
+    questionFr: >-
+      Un interlocuteur affirme : 'Tous les gens autour de nous font comme cela
+      depuis des décennies, il est impossible que des millions de musulmans
+      soient dans l'erreur !' De quel sophisme s'agit-il ?
+    questionAr: >-
+      قال أحدهم: 'كل الناس من حولنا يفعلون هذا منذ عقود، فهل يُعقل أن يكون
+      الملايين على ضلال؟!' ما هي المغالطة المنطقية هنا؟
     order: 1
     options:
-      - textFr: "C'est un argument irréfutable car la masse a toujours raison en matière religieuse."
-        textAr: "حجة صحيحة لأن الكثرة معصومة دائماً في المسائل الدينية."
-        isCorrect: false
-        feedbackFr: "Faux. Le Coran rappelle à de multiples reprises que la majorité numérique n'est pas un critère de vérité (Sourate Al-An'âm, v.116)."
-        feedbackAr: "خطأ. القرآن الكريم نص في مواضع كثيرة على أن الكثرة العددية ليست معياراً للحق ﴿وإن تطع أكثر من في الأرض يضلوك عن سبيل الله﴾."
-      - textFr: "L'appel à la popularité / à la masse (argumentum ad populum), qui confond la prévalence sociologique d'une coutume avec sa légitimité scripturaire."
-        textAr: "مغالطة الكثرة والشيوع (Ad Populum)، التي تخلط بين انتشار العادة وبين مشروعيتها الشرعية."
+      - textFr: >-
+          L'appel à la popularité / à la masse (argumentum ad populum), qui
+          confond la prévalence sociologique d'une coutume avec sa légitimité
+          scripturaire.
+        textAr: >-
+          مغالطة الكثرة والشيوع (Ad Populum)، التي تخلط بين انتشار العادة وبين
+          مشروعيتها الشرعية.
         isCorrect: true
-        feedbackFr: "Exact ! Une coutume répandue ne vaut pas preuve légale. La vérité se mesure à sa preuve et non au nombre de ses adeptes."
-        feedbackAr: "أحسنت! العادة الشائعة لا تنهض دليلاً، والحق يُعرف بالدليل لا بكثرة الفاعلين له."
-      - textFr: "Une attaque ad hominem visant les savants du passé."
-        textAr: "مغالطة القدح في الأشخاص (Ad Hominem)."
+        feedbackFr: >-
+          Exact ! Une coutume répandue ne vaut pas preuve légale. La vérité se
+          mesure à sa preuve et non au nombre de ses adeptes.
+        feedbackAr: >-
+          أحسنت! العادة الشائعة لا تنهض دليلاً، والحق يُعرف بالدليل لا بكثرة
+          الفاعلين له.
+      - textFr: Une attaque ad hominem visant les savants du passé.
+        textAr: مغالطة القدح في الأشخاص (Ad Hominem).
         isCorrect: false
-        feedbackFr: "Il ne s'agit pas ici d'une attaque personnelle contre un individu, mais d'une tentative de validation par le nombre."
-        feedbackAr: "المثال لا يتضمن طعناً في شخص، بل استدلالاً باطلاً بالكثرة."
+        feedbackFr: >-
+          Il ne s'agit pas ici d'une attaque personnelle contre un individu,
+          mais d'une tentative de validation par le nombre.
+        feedbackAr: المثال لا يتضمن طعناً في شخص، بل استدلالاً باطلاً بالكثرة.
+      - textFr: >-
+          C'est un argument irréfutable car la masse a toujours raison en
+          matière religieuse.
+        textAr: حجة صحيحة لأن الكثرة معصومة دائماً في المسائل الدينية.
+        isCorrect: false
+        feedbackFr: >-
+          Faux. Le Coran rappelle à de multiples reprises que la majorité
+          numérique n'est pas un critère de vérité (Sourate Al-An'âm, v.116).
+        feedbackAr: >-
+          خطأ. القرآن الكريم نص في مواضع كثيرة على أن الكثرة العددية ليست
+          معياراً للحق ﴿وإن تطع أكثر من في الأرض يضلوك عن سبيل الله﴾.
 ---
 
 # 1. Mise en situation (Problématique)

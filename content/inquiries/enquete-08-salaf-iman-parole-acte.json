@@ -24,20 +24,20 @@
       "instructionAr": "أمام دعوى: «السلف كلهم قالوا إن الإيمان قول وعمل يزيد وينقص، وهذا مشهور لا يحتاج إلى توثيق»، ما هو التفكيك المنهجي الأسلم؟",
       "options": [
         {
-          "textFr": "Il faut identifier : qui est inclus sous le mot « Salaf », quelle proposition précise leur est attribuée, si l’on affirme une simple diffusion large ou une véritable unanimité, et quelles sources documentent cette attribution.",
-          "textAr": "يجب تحديد: من يدخل في مسمى «السلف» هنا، وما هي القضية الدقيقة المنسوبة إليهم، وهل الدعوى مجرد انتشار واسع أم إجماع استغراقي، وما هي المصادر المسندة المثبتة لتلك النسبة.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Excellente analyse : transformer un slogan d'autorité en enquête historique vérifiable (définition, proposition, degré d'accord, sources).",
-          "feedbackAr": "تفكيك منهجي سديد ينقل الدعوى من خانة الشعار والتهيب إلى فضاء البحث التوثيقي المنضبط."
-        },
-        {
           "textFr": "Il faut trouver au moins un savant ancien ayant prononcé cette phrase.",
           "textAr": "ينبغي البحث عن عالم متقدم واحد على الأقل نطق بهذه العبارة.",
           "quality": "ACCEPTABLE",
           "methodologicalScore": 2,
           "feedbackFr": "Point de départ utile, mais insuffisant pour auditer une attribution 'collective'.",
           "feedbackAr": "خطوة توثيقية فردية أولى، لكنها لا تنهض بمفردها لإثبات نسبة جماعية عامة."
+        },
+        {
+          "textFr": "Il faut identifier : qui est inclus sous le mot « Salaf », quelle proposition précise leur est attribuée, si l’on affirme une simple diffusion large ou une véritable unanimité, et quelles sources documentent cette attribution.",
+          "textAr": "يجب تحديد: من يدخل في مسمى «السلف» هنا، وما هي القضية الدقيقة المنسوبة إليهم، وهل الدعوى مجرد انتشار واسع أم إجماع استغراقي، وما هي المصادر المسندة المثبتة لتلك النسبة.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Excellente analyse : transformer un slogan d'autorité en enquête historique vérifiable (définition, proposition, degré d'accord, sources).",
+          "feedbackAr": "تفكيك منهجي سديد ينقل الدعوى من خانة الشعار والتهيب إلى فضاء البحث التوثيقي المنضبط."
         },
         {
           "textFr": "Si un auteur tardif écrit « les Salaf ont dit », cela suffit généralement.",
@@ -67,22 +67,6 @@
       "instructionAr": "هل يثبت قوله تعالى: ﴿لِيَزْدَادُوا إِيمَانًا مَعَ إِيمَانِهِمْ﴾ بمفرده أن «كل السلف كانوا يستعملون عبارة: قول وعمل يزيد وينقص»؟",
       "options": [
         {
-          "textFr": "Non. Il établit directement que le Coran parle d’augmentation de l’īmān. L’attribution historique aux Salaf exige ensuite des données documentaires distinctes.",
-          "textAr": "لا؛ فالآية تثبت مباشرة أصل زيادة الإيمان في القرآن الكريم، أما دعوى النسبة التاريخية لألفاظ السلف فمسألة توثيقية تحتاج إلى أدلة مستقلة.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Distinction capitale de méthode : une preuve textuelle du Coran prouve la notion théologique, mais ne prouve pas l'histoire de sa formulation par un groupe.",
-          "feedbackAr": "فصل منهجي دقيق بين ثبوت أصل الحكم في الوحي، وبين إثبات الوقائع التاريخية ومقولات الرجال."
-        },
-        {
-          "textFr": "Le verset confirme au moins une partie de la doctrine.",
-          "textAr": "الآية تؤكد على الأقل جانباً من مضمون هذه العقيدة.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Constat juste sur le fond théologique, mais incomplet sur la dissociation méthodologique.",
-          "feedbackAr": "ملاحظة صحيحة في المعنى، والخيار الأول يميز بين الاستدلال الشرعي والإثبات التاريخي."
-        },
-        {
           "textFr": "Puisque le verset parle d’augmentation, cela prouve automatiquement que chaque Salaf a utilisé la même formulation technique.",
           "textAr": "بما أن الآية ذكرت الزيادة، فذلك يثبت تلقائياً أن كل فرد من السلف استعمل نفس المصطلح.",
           "quality": "PREMATURE",
@@ -97,6 +81,22 @@
           "methodologicalScore": 0,
           "feedbackFr": "Absurdité totale : le Coran est la source première et la matrice de toute la pensée doctrinale musulmane.",
           "feedbackAr": "مصادمة للأصول: فالقرآن هو أصل الدين وينبوع العقائد ومصدر الاحتجاج الأول."
+        },
+        {
+          "textFr": "Non. Il établit directement que le Coran parle d’augmentation de l’īmān. L’attribution historique aux Salaf exige ensuite des données documentaires distinctes.",
+          "textAr": "لا؛ فالآية تثبت مباشرة أصل زيادة الإيمان في القرآن الكريم، أما دعوى النسبة التاريخية لألفاظ السلف فمسألة توثيقية تحتاج إلى أدلة مستقلة.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Distinction capitale de méthode : une preuve textuelle du Coran prouve la notion théologique, mais ne prouve pas l'histoire de sa formulation par un groupe.",
+          "feedbackAr": "فصل منهجي دقيق بين ثبوت أصل الحكم في الوحي، وبين إثبات الوقائع التاريخية ومقولات الرجال."
+        },
+        {
+          "textFr": "Le verset confirme au moins une partie de la doctrine.",
+          "textAr": "الآية تؤكد على الأقل جانباً من مضمون هذه العقيدة.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat juste sur le fond théologique, mais incomplet sur la dissociation méthodologique.",
+          "feedbackAr": "ملاحظة صحيحة في المعنى، والخيار الأول يميز بين الاستدلال الشرعي والإثبات التاريخي."
         }
       ],
       "revealedEvidenceIds": [
@@ -120,20 +120,20 @@
           "feedbackAr": "قاعدة نقدية أساسية: قول الفرد -ولو كان إماماً مجتهداً كالشافعي- لا ينهض بمفرده دليلاً على إجماع أمة أو جيل."
         },
         {
-          "textFr": "C’est une première pièce importante du dossier collectif.",
-          "textAr": "هذه لبنة أولى مهمة في بناء الملف التوثيقي الجماعي.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Juste, mais l'option BEST précise la portée juridique exacte de cette pièce individuelle.",
-          "feedbackAr": "توصيف صحيح، والخيار الأول يحدد بدقة ما يثبته هذا النثر وما يقصر عنه."
-        },
-        {
           "textFr": "Ash-Shāfiʿī est un grand imam, donc sa parole équivaut automatiquement à « tous les Salaf ».",
           "textAr": "الشافعي إمام كبير، ولذلك فقوله يمثل تلقائياً كل السلف.",
           "quality": "PREMATURE",
           "methodologicalScore": 1,
           "feedbackFr": "Généralisation hâtive : la grandeur d'un savant ne lui confère pas la représentativité exclusive de tous ses contemporains.",
           "feedbackAr": "تعميم متسرع يخلط بين منزلة الإمام الرفيعة وبين الواقع التاريخي لتعدد الآراء."
+        },
+        {
+          "textFr": "C’est une première pièce importante du dossier collectif.",
+          "textAr": "هذه لبنة أولى مهمة في بناء الملف التوثيقي الجماعي.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Juste, mais l'option BEST précise la portée juridique exacte de cette pièce individuelle.",
+          "feedbackAr": "توصيف صحيح، والخيار الأول يحدد بدقة ما يثبته هذا النثر وما يقصر عنه."
         },
         {
           "textFr": "Une parole individuelle ancienne n’a aucune valeur historique.",
@@ -157,12 +157,12 @@
       "instructionAr": "في النص المنقول عند اللالكائي (رقم 321)، يذكر أبو زرعة وأبو حاتم علماء الحجاز والعراق والشام واليمن؛ فما الذي يضيفه هذا الدليل؟",
       "options": [
         {
-          "textFr": "Cette transmission est beaucoup plus forte pour une attribution collective : elle ne décrit pas simplement l’avis d’un imam, mais une observation transrégionale effectuée par deux grands transmetteurs.",
-          "textAr": "هذه الرواية أقوى بكثير في إثبات النسبة الجماعية؛ لأنها لا تقتصر على رأي فردي، بل تقدم شهادة استقرائية عابرة للأمصار من إمامين ناقدين.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Changement d'échelle critique : le témoignage transrégional de deux grands jahābidha donne corps à l'attribution collective.",
-          "feedbackAr": "ارتقاء منهجي كبير: فالشهادة العابرة للأقطار من أئمة النقد تمنح النسبة الجماعية وزناً علمياً معتبراً."
+          "textFr": "Une observation couvrant plusieurs régions n’apporte rien de plus qu’une citation individuelle.",
+          "textAr": "المعاينة الشاملة لعدة أقاليم لا تزيد شيئاً عن الرواية عن شخص واحد.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Cécité méthodologique : la diversité géographique des sources est le critère cardinal d'extrapolation en histoire.",
+          "feedbackAr": "جهل بمناهج التحقيق: فالاتساع الجغرافي هو المعيار الأكبر لتمييز المذاهب العامة عن الآراء الخاصة."
         },
         {
           "textFr": "Elle montre que la position était largement répandue.",
@@ -181,12 +181,12 @@
           "feedbackAr": "غلو في الاستنتاج: فالاستقراء البشري للأمصار حجة معتبرة على الغلبة والشهرة، لا على إحصاء الأفراد."
         },
         {
-          "textFr": "Une observation couvrant plusieurs régions n’apporte rien de plus qu’une citation individuelle.",
-          "textAr": "المعاينة الشاملة لعدة أقاليم لا تزيد شيئاً عن الرواية عن شخص واحد.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Cécité méthodologique : la diversité géographique des sources est le critère cardinal d'extrapolation en histoire.",
-          "feedbackAr": "جهل بمناهج التحقيق: فالاتساع الجغرافي هو المعيار الأكبر لتمييز المذاهب العامة عن الآراء الخاصة."
+          "textFr": "Cette transmission est beaucoup plus forte pour une attribution collective : elle ne décrit pas simplement l’avis d’un imam, mais une observation transrégionale effectuée par deux grands transmetteurs.",
+          "textAr": "هذه الرواية أقوى بكثير في إثبات النسبة الجماعية؛ لأنها لا تقتصر على رأي فردي، بل تقدم شهادة استقرائية عابرة للأمصار من إمامين ناقدين.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Changement d'échelle critique : le témoignage transrégional de deux grands jahābidha donne corps à l'attribution collective.",
+          "feedbackAr": "ارتقاء منهجي كبير: فالشهادة العابرة للأقطار من أئمة النقد تمنح النسبة الجماعية وزناً علمياً معتبراً."
         }
       ],
       "revealedEvidenceIds": [
@@ -202,22 +202,6 @@
       "instructionAr": "عندما يقول أبو زرعة وأبو حاتم: «أدركنا العلماء في جميع الأمصار...»، هل يلزم من ذلك أن لدينا نصوصاً فردية لكل عالم من هؤلاء؟",
       "options": [
         {
-          "textFr": "Non. Nous possédons un témoignage global transmis par deux imams sur ce qu’ils ont observé. Il s’agit d’une donnée historique forte, mais différente d’un catalogue individuel de chaque savant et de chaque isnād.",
-          "textAr": "لا؛ بل نحن أمام شهادة إجمالية من إمامين على ما عايناه واستقرآه. وهي حجة تاريخية معتبرة، لكنها تختلف عن توثيق كل فرد بإسناده المستقل.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Rigueur épistémique : distinguer un témoignage historique global (riwāyah mujmalah) d'un recensement individuel exhaustif.",
-          "feedbackAr": "ضبط معرفي بالغ الدقة: التمييز بين الشهادة التاريخية الكلية الموثوقة وبين التوثيق الإفرادي المستقل."
-        },
-        {
-          "textFr": "C’est un rapport collectif, pas une liste exhaustive.",
-          "textAr": "هذا نقل جماعي عام وليس قائمة إحصائية شاملة.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Constat juste qui cerne la nature du document.",
-          "feedbackAr": "تقرير صحيح وموجز، والخيار الأول يوضح طبيعته الإبستيمولوجية."
-        },
-        {
           "textFr": "Puisqu’ils disent « toutes les régions », aucun contrôle supplémentaire n’est jamais utile.",
           "textAr": "ما داما قالا «جميع الأمصار»، فلا حاجة لأي تدقيق أو فحص إضافي بعدهما.",
           "quality": "PREMATURE",
@@ -226,12 +210,28 @@
           "feedbackAr": "جمود منهجي: فالباحث المتثبت يقرأ الشهادات الكلية بوعي لشروط رواتها وسياقها."
         },
         {
+          "textFr": "Non. Nous possédons un témoignage global transmis par deux imams sur ce qu’ils ont observé. Il s’agit d’une donnée historique forte, mais différente d’un catalogue individuel de chaque savant et de chaque isnād.",
+          "textAr": "لا؛ بل نحن أمام شهادة إجمالية من إمامين على ما عايناه واستقرآه. وهي حجة تاريخية معتبرة، لكنها تختلف عن توثيق كل فرد بإسناده المستقل.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Rigueur épistémique : distinguer un témoignage historique global (riwāyah mujmalah) d'un recensement individuel exhaustif.",
+          "feedbackAr": "ضبط معرفي بالغ الدقة: التمييز بين الشهادة التاريخية الكلية الموثوقة وبين التوثيق الإفرادي المستقل."
+        },
+        {
           "textFr": "Un rapport global n’a aucune valeur parce qu’il ne donne pas mille chaînes séparées.",
           "textAr": "النقل الإجمالي لا قيمة له البتة لأنه لم يسرد ألف إسناد منفصل.",
           "quality": "INCORRECT",
           "methodologicalScore": 0,
           "feedbackFr": "Hypercriticisme stérile : rejeter les synthèses des spécialistes contemporains des faits détruirait toute la science historique.",
           "feedbackAr": "تشكيك فوضوي ينسف منهج التوثيق التاريخي برد شهادات الأئمة الأثبات الثقات."
+        },
+        {
+          "textFr": "C’est un rapport collectif, pas une liste exhaustive.",
+          "textAr": "هذا نقل جماعي عام وليس قائمة إحصائية شاملة.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat juste qui cerne la nature du document.",
+          "feedbackAr": "تقرير صحيح وموجز، والخيار الأول يوضح طبيعته الإبستيمولوجية."
         }
       ],
       "revealedEvidenceIds": [],
@@ -244,14 +244,6 @@
       "instructionFr": "Al-Bukhārī est rapporté dans deux sources majeures : chez al-Lālakāʾī (n°320), il affirme avoir rencontré plus de mille hommes de science sans divergence sur le fait que la religion est parole et acte ; et chez adh-Dhahabī (Siyar 12/395, via son copiste al-Warrāq), il rapporte avoir écrit d'après 1080 gens du hadith disant que l'īmān est parole et acte, augmente et diminue. Quelle est la portée critique de ces témoignages complémentaires ?",
       "instructionAr": "نُقل عن البخاري في أصلين معتبرين: عند اللالكائي (رقم 320) أنه لقي أكثر من ألف رجل من أهل العلم فما رأى أحداً يختلف في أن الدين قول وعمل؛ وعند الذهبي في السير (12/395 عن وراقه) أنه كتب عن ألف وثمانين رجلاً كلهم أصحاب حديث يقولون: الإيمان قول وعمل يزيد وينقص. فما هي القيمة النقدية لهاتين الروايتين المتكاملتين؟",
       "options": [
-        {
-          "textFr": "Ce témoignage renforce considérablement l’idée d’une doctrine extrêmement répandue parmi les savants qu’al-Bukhārī a rencontrés. Mais méthodologiquement, nous devons toujours distinguer le témoignage global d’al-Bukhārī d’une vérification indépendante des mille individus.",
-          "textAr": "تعزز هذه الشهادة بقوة ثبوت شيوع هذا الأصل في الطبقات التي لقيها البخاري؛ لكن من الناحية المنهجية، يجب التمييز بين شهادته الكلية وبين التحقق المستقل من كل فرد من الألف.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Pesée critique idéale : reconnaître la puissance écrasante du témoignage d'al-Bukhārī sans céder au sophisme de l'exhaustivité individuelle.",
-          "feedbackAr": "وزن نقدي محكم: يقدر القيمة الهائلة لشهادة أمير المؤمنين في الحديث دون خلطها بالإحصاء الفردي التام."
-        },
         {
           "textFr": "Il s’agit d’un indice historique très fort de diffusion.",
           "textAr": "هذه قرينة تاريخية شديدة القوة على الاستفاضة والانتشار.",
@@ -267,6 +259,14 @@
           "methodologicalScore": 1,
           "feedbackFr": "Extrapolation abusive : l'accord porte sur la formule générale (قول وعمل يزيد وينقص), pas sur les discussions théologiques détaillées ultérieures.",
           "feedbackAr": "إلزام بما لا يلزم: فالشهادة وردت في أصل كلي مجمل، فلا يجوز تحميلها فروعاً لم ينص عليها."
+        },
+        {
+          "textFr": "Ce témoignage renforce considérablement l’idée d’une doctrine extrêmement répandue parmi les savants qu’al-Bukhārī a rencontrés. Mais méthodologiquement, nous devons toujours distinguer le témoignage global d’al-Bukhārī d’une vérification indépendante des mille individus.",
+          "textAr": "تعزز هذه الشهادة بقوة ثبوت شيوع هذا الأصل في الطبقات التي لقيها البخاري؛ لكن من الناحية المنهجية، يجب التمييز بين شهادته الكلية وبين التحقق المستقل من كل فرد من الألف.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Pesée critique idéale : reconnaître la puissance écrasante du témoignage d'al-Bukhārī sans céder au sophisme de l'exhaustivité individuelle.",
+          "feedbackAr": "وزن نقدي محكم: يقدر القيمة الهائلة لشهادة أمير المؤمنين في الحديث دون خلطها بالإحصاء الفردي التام."
         },
         {
           "textFr": "Puisqu’il ne fournit pas ici leurs mille noms, le témoignage est automatiquement nul.",
@@ -299,6 +299,14 @@
           "feedbackAr": "تحقيق أصولي رصين: العبرة في العقائد باتفاق المعاني وحقائقها، لا بالجمود على قالب لفظي واحد."
         },
         {
+          "textFr": "Les mots n’ont aucune importance ; on peut attribuer n’importe quel sens à toutes les formulations.",
+          "textAr": "الألفاظ لا قيمة لها مطلقاً، ويمكن تأويل أي عبارة إلى أي معنى نريده.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Relativisme linguistique destructeur : les termes ont une charge sémantique précise qui délimite le champ de l'interprétation.",
+          "feedbackAr": "فوضى دلالية باطلة: فلألفاظ الأئمة دلالات لغوية وشرعية محددة تمنع التحريف والتأويل الفاسد."
+        },
+        {
           "textFr": "Plusieurs expressions peuvent décrire une conception proche.",
           "textAr": "تعدد العبارات قد يعبر عن تصور واحد أو متقارب.",
           "quality": "ACCEPTABLE",
@@ -313,14 +321,6 @@
           "methodologicalScore": 1,
           "feedbackFr": "Littéralisme naïf : confondre la variation stylistique avec la divergence théologique réelle.",
           "feedbackAr": "جمود حرفي يولد خلافات وهمية ناشئة عن مجرد تنوع العبارات في التعبير عن المعنى الواحد."
-        },
-        {
-          "textFr": "Les mots n’ont aucune importance ; on peut attribuer n’importe quel sens à toutes les formulations.",
-          "textAr": "الألفاظ لا قيمة لها مطلقاً، ويمكن تأويل أي عبارة إلى أي معنى نريده.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Relativisme linguistique destructeur : les termes ont une charge sémantique précise qui délimite le champ de l'interprétation.",
-          "feedbackAr": "فوضى دلالية باطلة: فلألفاظ الأئمة دلالات لغوية وشرعية محددة تمنع التحريف والتأويل الفاسد."
         }
       ],
       "revealedEvidenceIds": [],
@@ -334,20 +334,20 @@
       "instructionAr": "مع توفر الأدلة القرآنية، والنقول الفردية، والشهادات العابرة للأمصار، ما هو التوصيف العلمي الأكثر انضباطاً؟",
       "options": [
         {
-          "textFr": "Nous pouvons dire que cette conception est très largement et fortement documentée parmi les premiers imams sunnites et que plusieurs autorités anciennes la présentent comme la doctrine rencontrée dans les différentes régions. Employer le terme technique « ijmāʿ de tous les Salaf » exige cependant de préciser le périmètre et la nature exacte de l’accord revendiqué.",
-          "textAr": "يسوغ القول بأن هذا المعنى موثق توثيقاً واسعاً وراسخاً عن أئمة السلف، وأن كبار النقاد نقلوه كمذهب عام لأهل الأمصار؛ غير أن استعمال مصطلح «إجماع السلف قاطبة» يتطلب ضبطاً دقيقاً لمحل الاتفاق ودائرة المحتج بهم.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Précision magistrale : valider la force colossale du dossier historique sans transformer une extrapolation globale en dogme d'unanimité absolue non prouvée.",
-          "feedbackAr": "قمة الإنصاف والتحرير: تثبيت الحقيقة التاريخية المستفيضة مع الاحتراز من المجازفة في إطلاق الإجماعات الاستغراقية."
-        },
-        {
           "textFr": "Il existe une documentation très forte en faveur de cette attribution collective.",
           "textAr": "ثمة توثيق قوي جداً لصالح هذه النسبة الجماعية.",
           "quality": "ACCEPTABLE",
           "methodologicalScore": 2,
           "feedbackFr": "Constat exact qui valide la légitimité de l'attribution.",
           "feedbackAr": "إقرار سليم بقوة التوثيق، والخيار الأول يقدم الصياغة الأصولية المحررة للنتيجة."
+        },
+        {
+          "textFr": "Une attribution collective est impossible par principe.",
+          "textAr": "النسبة الجماعية إلى جيل كامل ممتنعة ومستحيلة عقلاً وواقعاً.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Scepticisme excessif : les courants de pensée et doctrines collectives peuvent être documentés avec une immense certitude historique.",
+          "feedbackAr": "تشكيك غير معقول: فالتيارات الفكرية والمذاهب العقدية الكبرى قابلة للإثبات التاريخي الراسخ."
         },
         {
           "textFr": "Dès qu’un auteur rapporte mille personnes, toute nuance méthodologique devient inutile.",
@@ -358,12 +358,12 @@
           "feedbackAr": "تسرع في إسقاط الضوابط: فالأعداد الكبيرة تدل على الشهرة، ولا تلغي تدقيق مسائل النزاع."
         },
         {
-          "textFr": "Une attribution collective est impossible par principe.",
-          "textAr": "النسبة الجماعية إلى جيل كامل ممتنعة ومستحيلة عقلاً وواقعاً.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Scepticisme excessif : les courants de pensée et doctrines collectives peuvent être documentés avec une immense certitude historique.",
-          "feedbackAr": "تشكيك غير معقول: فالتيارات الفكرية والمذاهب العقدية الكبرى قابلة للإثبات التاريخي الراسخ."
+          "textFr": "Nous pouvons dire que cette conception est très largement et fortement documentée parmi les premiers imams sunnites et que plusieurs autorités anciennes la présentent comme la doctrine rencontrée dans les différentes régions. Employer le terme technique « ijmāʿ de tous les Salaf » exige cependant de préciser le périmètre et la nature exacte de l’accord revendiqué.",
+          "textAr": "يسوغ القول بأن هذا المعنى موثق توثيقاً واسعاً وراسخاً عن أئمة السلف، وأن كبار النقاد نقلوه كمذهب عام لأهل الأمصار؛ غير أن استعمال مصطلح «إجماع السلف قاطبة» يتطلب ضبطاً دقيقاً لمحل الاتفاق ودائرة المحتج بهم.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Précision magistrale : valider la force colossale du dossier historique sans transformer une extrapolation globale en dogme d'unanimité absolue non prouvée.",
+          "feedbackAr": "قمة الإنصاف والتحرير: تثبيت الحقيقة التاريخية المستفيضة مع الاحتراز من المجازفة في إطلاق الإجماعات الاستغراقية."
         }
       ],
       "revealedEvidenceIds": [],
@@ -376,6 +376,14 @@
       "instructionFr": "Quelle formulation exprime avec le plus de rigueur scientifique le résultat de cette enquête documentaire ?",
       "instructionAr": "أي صياغة جامعة تعبر بأعلى درجات الدقة عن النتيجة العلمية المحررة في هذه القضية؟",
       "options": [
+        {
+          "textFr": "« Puisque nous ne possédons pas une citation individuelle de chaque Salaf, aucune attribution collective n’est possible. »",
+          "textAr": "«بما أننا لا نملك نقلاً فردياً عن كل شخص، فيمتنع علمياً أي حكم كلي على السلف.»",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Impossibilité méthodologique absurde : exiger un recensement absolu reviendrait à nier toute notion d'histoire des idées.",
+          "feedbackAr": "عجز منهجي باطل: فطلب الإحصاء التام المستحيل يؤدي إلى إهدار الاستقراءات المتواترة المستفيضة."
+        },
         {
           "textFr": "« La formule selon laquelle l’īmān est parole et acte et qu’il augmente et diminue est très largement attestée dans les sources anciennes. Ash-Shāfiʿī est explicitement rapporté avec cette formulation ; Abū Zurʿa et Abū Ḥātim la décrivent comme la doctrine des savants qu’ils ont rencontrés au Ḥijāz, en Irak, au Shām et au Yémen ; et al-Bukhārī est rapporté comme n’ayant observé aucune divergence à ce sujet parmi plus de mille savants rencontrés. Ces données autorisent une attribution collective forte, tout en distinguant cette conclusion d’une vérification individuelle de chaque personne désignée par le terme “Salaf”. »",
           "textAr": "«إن تقرير كون الإيمان قولاً وعملاً وأنه يزيد وينقص مستفيض باستفاضة بالغة في المصادر الأصيلة: فقد ثبتت العبارة عن الشافعي، وشهد أبو زرعة وأبو حاتم بأنها مذهب علماء الحجاز والعراق والشام واليمن، ونُقل عن البخاري نفي الخلاف فيها بين أكثر من ألف عالم عاصرهم. وهذه المعطيات تسوغ نسبة جماعية قوية، مع التمييز المنهجي بين هذه الحصيلة وبين دعوى الإحصاء الفردي لكل من يندرج تحت مسمى السلف.»",
@@ -399,14 +407,6 @@
           "methodologicalScore": 1,
           "feedbackFr": "Affirmation téméraire et non démontrée : la rigueur documentaire interdit de prétendre au mot-à-mot universel sans inventaire intégral.",
           "feedbackAr": "دعوى عريضة غير مبرهن عليها: فالأمانة العلمية تمنع الجزم بالتطابق اللفظي التام لكافة الأفراد."
-        },
-        {
-          "textFr": "« Puisque nous ne possédons pas une citation individuelle de chaque Salaf, aucune attribution collective n’est possible. »",
-          "textAr": "«بما أننا لا نملك نقلاً فردياً عن كل شخص، فيمتنع علمياً أي حكم كلي على السلف.»",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Impossibilité méthodologique absurde : exiger un recensement absolu reviendrait à nier toute notion d'histoire des idées.",
-          "feedbackAr": "عجز منهجي باطل: فطلب الإحصاء التام المستحيل يؤدي إلى إهدار الاستقراءات المتواترة المستفيضة."
         }
       ],
       "revealedEvidenceIds": [],
@@ -420,12 +420,12 @@
       "instructionAr": "ما هي القاعدة المنهجية الكلية التي ترسخها هذه الدراسة للتعامل مع كل دعوى تبدأ بـ«قال السلف»؟",
       "options": [
         {
-          "textFr": "Lorsqu’on entend « les Salaf ont dit X », il faut convertir immédiatement cette phrase en questions vérifiables : quels Salaf ? quelles générations ? quelles régions ? quelles sources ? citations individuelles ou rapports collectifs ? accord sur le sens ou sur une formule exacte ? Le niveau de généralisation final doit rester proportionné au dossier réellement réuni.",
-          "textAr": "عند سماع عبارة «قال السلف كذا»، يجب تحويلها فوراً إلى أسئلة قابلة للفحص: من هم هؤلاء السلف؟ في أي طبقة؟ وفي أي مصر؟ وما هي مصادر النقل؟ وهل الدليل نقل فردي أم شهادة استقرائية؟ وهل الاتفاق على المعنى أم على اللفظ؟ بحيث يبقى التعميم بقدر ما اجتمع من وثائق وبينات.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Règle d'or de TABAYYUN : substituer aux slogans nébuleux une démarche documentaire rigoureuse et proportionnée.",
-          "feedbackAr": "القاعدة الذهبية في تَبَيُّن: تفكيك الشعارات التجريدية واستبدالها بمسار تحقيقي واضح المعالم ومحسوب النتائج."
+          "textFr": "Il faut bannir totalement l’expression « les Salaf ».",
+          "textAr": "يجب إلغاء مصطلح «السلف» بالكلية ومنع استعماله.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Rejet nominaliste excessif : le terme est légitime et opératoire s'il est fondé sur une méthode rigoureuse.",
+          "feedbackAr": "إلغاء متعسف: فالمصطلح شرعي وتاريخي صحيح متى استند إلى بينات وشروط علمية منضبطة."
         },
         {
           "textFr": "Il faut demander les sources lorsqu’une opinion est attribuée aux Salaf.",
@@ -436,12 +436,12 @@
           "feedbackAr": "مطلب منهجي ضروري، والخيار الأول يبلوره في صورة شبكة فحص نقدية متكاملة."
         },
         {
-          "textFr": "Il faut bannir totalement l’expression « les Salaf ».",
-          "textAr": "يجب إلغاء مصطلح «السلف» بالكلية ومنع استعماله.",
-          "quality": "PREMATURE",
-          "methodologicalScore": 1,
-          "feedbackFr": "Rejet nominaliste excessif : le terme est légitime et opératoire s'il est fondé sur une méthode rigoureuse.",
-          "feedbackAr": "إلغاء متعسف: فالمصطلح شرعي وتاريخي صحيح متى استند إلى بينات وشروط علمية منضبطة."
+          "textFr": "Lorsqu’on entend « les Salaf ont dit X », il faut convertir immédiatement cette phrase en questions vérifiables : quels Salaf ? quelles générations ? quelles régions ? quelles sources ? citations individuelles ou rapports collectifs ? accord sur le sens ou sur une formule exacte ? Le niveau de généralisation final doit rester proportionné au dossier réellement réuni.",
+          "textAr": "عند سماع عبارة «قال السلف كذا»، يجب تحويلها فوراً إلى أسئلة قابلة للفحص: من هم هؤلاء السلف؟ في أي طبقة؟ وفي أي مصر؟ وما هي مصادر النقل؟ وهل الدليل نقل فردي أم شهادة استقرائية؟ وهل الاتفاق على المعنى أم على اللفظ؟ بحيث يبقى التعميم بقدر ما اجتمع من وثائق وبينات.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Règle d'or de TABAYYUN : substituer aux slogans nébuleux une démarche documentaire rigoureuse et proportionnée.",
+          "feedbackAr": "القاعدة الذهبية في تَبَيُّن: تفكيك الشعارات التجريدية واستبدالها بمسار تحقيقي واضح المعالم ومحسوب النتائج."
         },
         {
           "textFr": "Si l’auteur qui emploie l’expression est réputé, aucune référence n’est nécessaire.",

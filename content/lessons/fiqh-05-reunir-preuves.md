@@ -1,50 +1,69 @@
 ---
-id: "fiqh-05"
-slug: "fiqh-05-reunir-preuves"
-school: "FIQH"
+id: fiqh-05
+slug: fiqh-05-reunir-preuves
+school: FIQH
 level: 4
 order: 5
-editorialStatus: "PUBLISHED"
-titleFr: "Réunir les preuves avant de trancher"
-titleAr: "الجمع بين الأدلة قبل الترجيح والنسخ"
-summaryFr: "Apprendre l'ordre méthodologique face à des textes apparemment contradictoires : conciliation, spécification, restriction, tarjîḥ puis naskh lorsque celui-ci est réellement établi."
-summaryAr: "تعلم منهج التعامل مع النصوص التي يظهر بينها التعارض: الجمع والتخصيص والتقييد والترجيح ثم النسخ إذا ثبت."
-methodologyPrincipleFr: "Tant que deux preuves authentiques peuvent raisonnablement être appliquées ensemble, il ne faut pas neutraliser l'une d'elles."
-methodologyPrincipleAr: "إذا أمكن العمل بالدليلين معاً فلا يُعطل أحدهما بلا حجة."
+editorialStatus: PUBLISHED
+titleFr: Réunir les preuves avant de trancher
+titleAr: الجمع بين الأدلة قبل الترجيح والنسخ
+summaryFr: >-
+  Apprendre l'ordre méthodologique face à des textes apparemment contradictoires
+  : conciliation, spécification, restriction, tarjîḥ puis naskh lorsque celui-ci
+  est réellement établi.
+summaryAr: >-
+  تعلم منهج التعامل مع النصوص التي يظهر بينها التعارض: الجمع والتخصيص والتقييد
+  والترجيح ثم النسخ إذا ثبت.
+methodologyPrincipleFr: >-
+  Tant que deux preuves authentiques peuvent raisonnablement être appliquées
+  ensemble, il ne faut pas neutraliser l'une d'elles.
+methodologyPrincipleAr: إذا أمكن العمل بالدليلين معاً فلا يُعطل أحدهما بلا حجة.
 historicReference:
-  author: "Muḥammad ibn Idrîs ash-Shâfiʿî"
-  work: "Ikhtilâf al-Ḥadîth"
-  editionVolumePage: "Éd. Dâr al-Kutub al-ʿIlmiyya / Taḥqîq ʿÂmir Aḥmad Ḥaydar, p. 487"
-  quoteArOriginal: "وكلما احتمل حديثان أن يستعملا معاً استعملا معاً، ولم يعطل واحد منهما الآخر"
-  translationFr: "Chaque fois que deux hadiths peuvent être appliqués ensemble, ils doivent l'être ensemble, sans que l'un des deux soit neutralisé par l'autre."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Muḥammad ibn Idrîs ash-Shâfiʿî
+  work: Ikhtilâf al-Ḥadîth
+  editionVolumePage: 'Éd. Dâr al-Kutub al-ʿIlmiyya / Taḥqîq ʿÂmir Aḥmad Ḥaydar, p. 487'
+  quoteArOriginal: وكلما احتمل حديثان أن يستعملا معاً استعملا معاً، ولم يعطل واحد منهما الآخر
+  translationFr: >-
+    Chaque fois que deux hadiths peuvent être appliqués ensemble, ils doivent
+    l'être ensemble, sans que l'un des deux soit neutralisé par l'autre.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-f05-1"
-    questionFr: "Deux hadiths authentiques semblent se contredire, mais une lecture cohérente permet d'appliquer les deux. Que faut-il privilégier ?"
-    questionAr: "حديثان صحيحان يظهر بينهما التعارض، ويمكن الجمع بينهما بوجه صحيح، فما المقدم؟"
+  - id: quiz-f05-1
+    questionFr: >-
+      Deux hadiths authentiques semblent se contredire, mais une lecture
+      cohérente permet d'appliquer les deux. Que faut-il privilégier ?
+    questionAr: >-
+      حديثان صحيحان يظهر بينهما التعارض، ويمكن الجمع بينهما بوجه صحيح، فما
+      المقدم؟
     order: 1
     options:
-      - textFr: "Déclarer immédiatement que le plus ancien est abrogé."
-        textAr: "الحكم مباشرة بأن المتقدم منسوخ."
+      - textFr: Déclarer immédiatement que le plus ancien est abrogé.
+        textAr: الحكم مباشرة بأن المتقدم منسوخ.
         isCorrect: false
-        feedbackFr: "Le naskh nécessite une preuve et ne doit pas être invoqué quand une conciliation valable demeure possible."
-        feedbackAr: "النسخ يحتاج إلى دليل ولا يُصار إليه مع إمكان الجمع الصحيح."
-      - textFr: "Appliquer les deux textes selon la conciliation possible."
-        textAr: "العمل بالنصين وفق وجه الجمع الصحيح."
+        feedbackFr: >-
+          Le naskh nécessite une preuve et ne doit pas être invoqué quand une
+          conciliation valable demeure possible.
+        feedbackAr: النسخ يحتاج إلى دليل ولا يُصار إليه مع إمكان الجمع الصحيح.
+      - textFr: Choisir celui qui correspond à son avis préalable.
+        textAr: اختيار النص الموافق للرأي السابق.
+        isCorrect: false
+        feedbackFr: >-
+          C'est précisément le biais de confirmation que TABAYYUN cherche à
+          combattre.
+        feedbackAr: هذا من التحيز التأكيدي الذي يسعى تبيّن إلى محاربته.
+      - textFr: Appliquer les deux textes selon la conciliation possible.
+        textAr: العمل بالنصين وفق وجه الجمع الصحيح.
         isCorrect: true
-        feedbackFr: "Exact. Faire agir les deux preuves est préférable à neutraliser arbitrairement l'une d'elles."
-        feedbackAr: "صحيح. إعمال الدليلين أولى من إهمال أحدهما بلا موجب."
-      - textFr: "Choisir celui qui correspond à son avis préalable."
-        textAr: "اختيار النص الموافق للرأي السابق."
-        isCorrect: false
-        feedbackFr: "C'est précisément le biais de confirmation que TABAYYUN cherche à combattre."
-        feedbackAr: "هذا من التحيز التأكيدي الذي يسعى تبيّن إلى محاربته."
+        feedbackFr: >-
+          Exact. Faire agir les deux preuves est préférable à neutraliser
+          arbitrairement l'une d'elles.
+        feedbackAr: صحيح. إعمال الدليلين أولى من إهمال أحدهما بلا موجب.
 ---
 
 # 1. Le faux réflexe de la contradiction

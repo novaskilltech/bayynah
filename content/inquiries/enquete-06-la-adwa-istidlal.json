@@ -24,20 +24,20 @@
       "instructionAr": "أمام دعوى: «ثبت في الحديث الصحيح قول النبي ﷺ: لا عدوى، إذن فالإسلام ينفي انتقال المرض مطلقاً، والاحتراز من المريض ينافي التوكل»، ما هو التحليل المنهجي الأسلم؟",
       "options": [
         {
-          "textFr": "Il faut distinguer au moins quatre propositions : le hadith « لا عدوى » est-il authentique ? Que signifie exactement « لا عدوى » ? Nie-t-il toute relation causale habituelle entre maladie et transmission ? Implique-t-il que toute précaution contredit le tawakkul ?",
-          "textAr": "يجب فصل أربع مسائل: صحة حديث «لا عدوى»، ومعنى العبارة، وهل تنفي كل سبب عادي لانتقال المرض، وهل يلزم منها أن الاحتراز ينافي التوكل.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Excellent. Un texte authentique et l’interprétation qu’on lui donne sont deux niveaux différents.",
-          "feedbackAr": "تحليل منهجي سديد: فثبوت النص شيء، وتفسيره واستخراج الحكم الشرعي منه شيء آخر."
-        },
-        {
           "textFr": "Vérifier simplement si « لا عدوى » est bien dans al-Bukhārī.",
           "textAr": "التحقق فقط من ورود عبارة «لا عدوى» في صحيح البخاري.",
           "quality": "ACCEPTABLE",
           "methodologicalScore": 2,
           "feedbackFr": "Vérification textuelle indispensable, mais insuffisante sans décomposition des implications de la prétention.",
           "feedbackAr": "خطوة توثيقية أولية، لكنها لا تكفي لتفكيك الاستدلال المنسوب إلى الحديث."
+        },
+        {
+          "textFr": "Il faut distinguer au moins quatre propositions : le hadith « لا عدوى » est-il authentique ? Que signifie exactement « لا عدوى » ? Nie-t-il toute relation causale habituelle entre maladie et transmission ? Implique-t-il que toute précaution contredit le tawakkul ?",
+          "textAr": "يجب فصل أربع مسائل: صحة حديث «لا عدوى»، ومعنى العبارة، وهل تنفي كل سبب عادي لانتقال المرض، وهل يلزم منها أن الاحتراز ينافي التوكل.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Excellent. Un texte authentique et l’interprétation qu’on lui donne sont deux niveaux différents.",
+          "feedbackAr": "تحليل منهجي سديد: فثبوت النص شيء، وتفسيره واستخراج الحكم الشرعي منه شيء آخر."
         },
         {
           "textFr": "Puisque le hadith est authentique, son sens ne peut avoir qu’une seule interprétation possible.",
@@ -67,22 +67,6 @@
       "instructionAr": "لاختبار هذه الدعوى علمياً، ما هي المحاور المنهجية الواجب جمعها وفحصها؟",
       "options": [
         {
-          "textFr": "Rechercher : le texte exact du hadith ; son contexte d'énonciation ; les autres hadiths authentiques du même chapitre ; la manière dont les commentateurs ont concilié ces textes ; la différence entre nier une causalité indépendante et reconnaître des causes habituelles créées par Allah.",
-          "textAr": "البحث في: النص الدقيق للحديث؛ وسياق وروده؛ والأحاديث الصحيحة الأخرى في الباب؛ ومسالك الشراح في الجمع بينها؛ والفرق بين نفي التأثير الذاتي المستقل وإثبات الأسباب العادية المقدرة.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Plan d'audit exemplaire intégrant texte, contexte, corpus complet, uṣûl et théologie (ʿaqîda).",
-          "feedbackAr": "خطة تحقيق مثالية تجمع بين فقه المتن، والجمع بين النصوص، وتحرير مسألة السببية عند أهل السنة."
-        },
-        {
-          "textFr": "Chercher uniquement la traduction française de « لا عدوى ».",
-          "textAr": "الاقتصار على البحث عن الترجمة الفرنسية لعبارة «لا عدوى».",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Une traduction ne donne qu'un aperçu lexical partiel et ne résout pas la conciliation du corpus.",
-          "feedbackAr": "الترجمة تعطي فهماً تقريبياً مجرداً، ولا تغني عن فحص مجموع نصوص الباب في لسانها الأصلي."
-        },
-        {
           "textFr": "Commencer par décider si les maladies se transmettent, puis interpréter le hadith en conséquence.",
           "textAr": "تقرير الموقف المسبق حول انتقال الأمراض أولاً، ثم تأويل الحديث وفقاً لذلك.",
           "quality": "PREMATURE",
@@ -97,6 +81,22 @@
           "methodologicalScore": 0,
           "feedbackFr": "Fragmentation fautive : isoler une phrase de son contexte textuel conduit inévitablement à un faux sens.",
           "feedbackAr": "بتر للنصوص: فاقتطاع الجملة من سياقها النبوي سبب رئيسي للزلل في الفهم والاستدلال."
+        },
+        {
+          "textFr": "Rechercher : le texte exact du hadith ; son contexte d'énonciation ; les autres hadiths authentiques du même chapitre ; la manière dont les commentateurs ont concilié ces textes ; la différence entre nier une causalité indépendante et reconnaître des causes habituelles créées par Allah.",
+          "textAr": "البحث في: النص الدقيق للحديث؛ وسياق وروده؛ والأحاديث الصحيحة الأخرى في الباب؛ ومسالك الشراح في الجمع بينها؛ والفرق بين نفي التأثير الذاتي المستقل وإثبات الأسباب العادية المقدرة.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Plan d'audit exemplaire intégrant texte, contexte, corpus complet, uṣûl et théologie (ʿaqîda).",
+          "feedbackAr": "خطة تحقيق مثالية تجمع بين فقه المتن، والجمع بين النصوص، وتحرير مسألة السببية عند أهل السنة."
+        },
+        {
+          "textFr": "Chercher uniquement la traduction française de « لا عدوى ».",
+          "textAr": "الاقتصار على البحث عن الترجمة الفرنسية لعبارة «لا عدوى».",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Une traduction ne donne qu'un aperçu lexical partiel et ne résout pas la conciliation du corpus.",
+          "feedbackAr": "الترجمة تعطي فهماً تقريبياً مجرداً، ولا تغني عن فحص مجموع نصوص الباب في لسانها الأصلي."
         }
       ],
       "revealedEvidenceIds": [],
@@ -118,20 +118,20 @@
           "feedbackAr": "تمييز منهجي صحيح: فثبوت الحديث قطعي، ويبقى تحرير معناه وتوجيهه في سياقه الشرعي."
         },
         {
-          "textFr": "Le texte est authentique.",
-          "textAr": "النص صحيح الإسناد.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Constat exact, mais incomplet sans la précision sur la distinction entre ثبوت et دلالة.",
-          "feedbackAr": "إقرار صحيح بالثبوت، لكنه يغفل التنبيه على أن الدلالة تحتاج إلى استكمال النظر."
-        },
-        {
           "textFr": "Puisque le texte est authentique, il prouve déjà qu’aucune maladie ne peut jamais passer d’un malade à un autre.",
           "textAr": "بما أن النص صحيح، فهو يثبت قطعاً استحالة انتقال أي مرض بين مخلوق وآخر.",
           "quality": "PREMATURE",
           "methodologicalScore": 1,
           "feedbackFr": "Déduction précipitée qui ignore la portée sémantique de la négation et les autres données du dossier.",
           "feedbackAr": "استنتاج متعجل يقفز من صحة الرواية إلى تعميم الحكم دون فحص باقي أدلة الباب."
+        },
+        {
+          "textFr": "Le texte est authentique.",
+          "textAr": "النص صحيح الإسناد.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat exact, mais incomplet sans la précision sur la distinction entre ثبوت et دلالة.",
+          "feedbackAr": "إقرار صحيح بالثبوت، لكنه يغفل التنبيه على أن الدلالة تحتاج إلى استكمال النظر."
         },
         {
           "textFr": "Le hadith doit être faible parce qu’il semble difficile à concilier avec d’autres données.",
@@ -155,12 +155,12 @@
       "instructionAr": "في نفس الحديث، يسأل الأعرابي عن الإبل الصحيحة يصيبها الجرب بعد مخالطة بعير أجرب، فيجيب النبي ﷺ: «فمن أعدى الأول؟». ما هو الموقف المنهجي الصحيح؟",
       "options": [
         {
-          "textFr": "La réponse oblige à examiner la croyance causale visée par le hadith. Le texte ne doit pas être réduit à une formule isolée sans son contexte.",
-          "textAr": "جواب النبي ﷺ يوجب فحص تصور السببية الذي كان سائداً وتصحيحه؛ فلا يجوز اختزال النص في عبارة مجتزأة عن سياقها التوجيهي.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Lecture contextuelle indispensable : la question « Qui a contaminé le premier ? » renvoie à la Cause première divine et non à la négation du contact.",
-          "feedbackAr": "نظرة سياقية محكمة: فالاستفهام ينبه إلى الفاعل الحقيقي وهو الله تعالى، ويبطل اعتقاد الجاهلية في تأثير العدوى بذاتها."
+          "textFr": "Le contexte n’a aucun rôle puisque seules les deux premières paroles du hadith comptent.",
+          "textAr": "لا عبرة بالسياق لأن العبرة بأول كلمتين من الحديث فقط.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Méconnaissance totale des règles d'interprétation : le sabab al-wurūd éclaire le sens et prévient les contresens.",
+          "feedbackAr": "جهل بأصول الفهم: فسياق الكلام وسباقُه ولحاقُه من أعظم القرائن المعينة على تحديد مراد المتكلم."
         },
         {
           "textFr": "Le contexte montre que le Prophète ﷺ discute aussi de la cause première de la maladie.",
@@ -179,12 +179,12 @@
           "feedbackAr": "تعميم متسرع: فالحديث يلفت إلى مبدأ السلسلة السببية لرد الأمر إلى قدر الله لا لنفي الأسباب العادية."
         },
         {
-          "textFr": "Le contexte n’a aucun rôle puisque seules les deux premières paroles du hadith comptent.",
-          "textAr": "لا عبرة بالسياق لأن العبرة بأول كلمتين من الحديث فقط.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Méconnaissance totale des règles d'interprétation : le sabab al-wurūd éclaire le sens et prévient les contresens.",
-          "feedbackAr": "جهل بأصول الفهم: فسياق الكلام وسباقُه ولحاقُه من أعظم القرائن المعينة على تحديد مراد المتكلم."
+          "textFr": "La réponse oblige à examiner la croyance causale visée par le hadith. Le texte ne doit pas être réduit à une formule isolée sans son contexte.",
+          "textAr": "جواب النبي ﷺ يوجب فحص تصور السببية الذي كان سائداً وتصحيحه؛ فلا يجوز اختزال النص في عبارة مجتزأة عن سياقها التوجيهي.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Lecture contextuelle indispensable : la question « Qui a contaminé le premier ? » renvoie à la Cause première divine et non à la négation du contact.",
+          "feedbackAr": "نظرة سياقية محكمة: فالاستفهام ينبه إلى الفاعل الحقيقي وهو الله تعالى، ويبطل اعتقاد الجاهلية في تأثير العدوى بذاتها."
         }
       ],
       "revealedEvidenceIds": [],
@@ -198,22 +198,6 @@
       "instructionAr": "أمام النص الصحيح الثاني: «لا يورد ممرض على مصح» (البخاري ومسلم)، ما المسلك المنهجي الواجب اتباعه؟",
       "options": [
         {
-          "textFr": "Les deux textes sont authentiques. Il faut donc rechercher une compréhension permettant de rendre compte des deux avant de déclarer qu’un texte annule ou contredit l’autre.",
-          "textAr": "كلا النصين صحيح الإسناد، فيتعين البحث عن فهم جامع يوفق بينهما قبل ادعاء التعارض أو إسقاط أحدهما بالآخر.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Règle d'or du muhaddith et de l'usûlî : le jamʿ (conciliation) prévaut sur le tarjîh (élimination) tant qu'il est possible.",
-          "feedbackAr": "قاعدة أصولية كبرى: إعمال الكلامين أولى من إهمال أحدهما، والجمع مقدم على الترجيح والإسقاط."
-        },
-        {
-          "textFr": "Le second hadith montre au minimum que l’évitement d’une situation de dommage peut être légitime.",
-          "textAr": "الحديث الثاني يثبت على الأقل مشروعية اجتناب مواطن الضرر.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Constat factuel correct, qui amorce la réfutation de l'interdiction absolue des précautions.",
-          "feedbackAr": "استنتاج صحيح يكسر دعوى تحريم الاحتراز، لكنه يحتاج إلى تأصيل منهجي للجمع بين النصين."
-        },
-        {
           "textFr": "Les deux hadiths se contredisent ; il faut immédiatement choisir lequel rejeter.",
           "textAr": "الحديثان متعارضان تماماً، ولابد من إسقاط أحدهما فوراً.",
           "quality": "PREMATURE",
@@ -222,12 +206,28 @@
           "feedbackAr": "تسرع مفسد: فدعوى التعارض المستحكم بين نصين صحيحين دون محاولة الجمع عجز منهجي."
         },
         {
+          "textFr": "Les deux textes sont authentiques. Il faut donc rechercher une compréhension permettant de rendre compte des deux avant de déclarer qu’un texte annule ou contredit l’autre.",
+          "textAr": "كلا النصين صحيح الإسناد، فيتعين البحث عن فهم جامع يوفق بينهما قبل ادعاء التعارض أو إسقاط أحدهما بالآخر.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Règle d'or du muhaddith et de l'usûlî : le jamʿ (conciliation) prévaut sur le tarjîh (élimination) tant qu'il est possible.",
+          "feedbackAr": "قاعدة أصولية كبرى: إعمال الكلامين أولى من إهمال أحدهما، والجمع مقدم على الترجيح والإسقاط."
+        },
+        {
           "textFr": "Comme « لا عدوى » apparaît en premier dans ma recherche, l’autre hadith doit être ignoré.",
           "textAr": "بما أن حديث «لا عدوى» ظهر أولاً في بحثي، فيجب إهمال الحديث الآخر.",
           "quality": "INCORRECT",
           "methodologicalScore": 0,
           "feedbackFr": "Absurdité totale : l'ordre de découverte documentaire ne dicte pas la validité des textes sacrés.",
           "feedbackAr": "تحكم باطل: فترتيب ورود النصوص في ذهن الباحث أو بحثه لا عبرة به في ميزان الشريعة."
+        },
+        {
+          "textFr": "Le second hadith montre au minimum que l’évitement d’une situation de dommage peut être légitime.",
+          "textAr": "الحديث الثاني يثبت على الأقل مشروعية اجتناب مواطن الضرر.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat factuel correct, qui amorce la réfutation de l'interdiction absolue des précautions.",
+          "feedbackAr": "استنتاج صحيح يكسر دعوى تحريم الاحتراز، لكنه يحتاج إلى تأصيل منهجي للجمع بين النصين."
         }
       ],
       "revealedEvidenceIds": [
@@ -243,14 +243,6 @@
       "instructionAr": "عند النظر في الحديث الصحيح: «وفر من المجذوم كما تفر من الأسد»، أي نتيجة تصبح ممتنعة علمياً؟",
       "options": [
         {
-          "textFr": "Il devient difficile de soutenir que « لا عدوى » signifie : « aucune précaution face à un malade n’a de légitimité », puisque d’autres textes authentiques prescrivent précisément l’éloignement dans certaines situations.",
-          "textAr": "يمتنع القول بأن «لا عدوى» تعني تحريم كل احتراز أو نفي كل سبب؛ لأن نصوصاً صحيحة أخرى تأمر صراحة بالتباعد والفرار في حالات معينة.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Démonstration imparable : l'ordre explicite d'éloignement prouve que la précaution relève des prescriptions prophétiques.",
-          "feedbackAr": "برهان قاطع: فالأمر النبوي الصريح بالفرار ينسف دعوى أن الاحتراز ينافي الشريعة أو التوكل."
-        },
-        {
           "textFr": "Il existe manifestement des textes authentiques concernant l’évitement du dommage.",
           "textAr": "وجود نصوص صحيحة واضحة تأمر بتجنب أسباب الضرر.",
           "quality": "ACCEPTABLE",
@@ -265,6 +257,14 @@
           "methodologicalScore": 1,
           "feedbackFr": "Erreur méthodologique : un hadith authentique ne 'réfute' pas un autre hadith authentique du même Prophète ﷺ ; ils s'éclairent mutuellement.",
           "feedbackAr": "مسلك خاطئ: فالنصوص النبوية الصحيحة يصدق بعضها بعضاً ولا يتناقض كلام الصادق المصدوق ﷺ."
+        },
+        {
+          "textFr": "Il devient difficile de soutenir que « لا عدوى » signifie : « aucune précaution face à un malade n’a de légitimité », puisque d’autres textes authentiques prescrivent précisément l’éloignement dans certaines situations.",
+          "textAr": "يمتنع القول بأن «لا عدوى» تعني تحريم كل احتراز أو نفي كل سبب؛ لأن نصوصاً صحيحة أخرى تأمر صراحة بالتباعد والفرار في حالات معينة.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Démonstration imparable : l'ordre explicite d'éloignement prouve que la précaution relève des prescriptions prophétiques.",
+          "feedbackAr": "برهان قاطع: فالأمر النبوي الصريح بالفرار ينسف دعوى أن الاحتراز ينافي الشريعة أو التوكل."
         },
         {
           "textFr": "Les précautions ne peuvent jamais relever de la Sunnah.",
@@ -296,6 +296,14 @@
           "feedbackAr": "تحرير أصولي وعقدي بالغ الدقة: يجمع بين تحقيق التوحيد في نفي التأثير الاستقلالي لغير الله، وإثبات حكمة الأسباب العادية المقدرة."
         },
         {
+          "textFr": "Prendre une précaution signifie attribuer aux causes une puissance indépendante d’Allah.",
+          "textAr": "مباشرة الأسباب والاحتراز منها يعني الشرك ونسبة التأثير المستقل لغير الله.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Hérésie doctrinale : le Prophète ﷺ lui-même a ordonné la précaution ; l'action sur les causes est partie intégrante du tawakkul authentique.",
+          "feedbackAr": "غلو وبدعة فاسدة: فالنبي ﷺ هو الآمر بالفرار من المجذوم، ومراعاة الأسباب من كمال الإيمان والتوكل."
+        },
+        {
           "textFr": "Les précautions sont compatibles avec le fait de croire qu’Allah reste le Créateur des causes et de leurs effets.",
           "textAr": "الاحتراز لا يتعارض مع الإيمان بأن الله هو خالق الأسباب والمسببات.",
           "quality": "ACCEPTABLE",
@@ -310,14 +318,6 @@
           "methodologicalScore": 1,
           "feedbackFr": "Contresens sur an-Nawawî : il explique explicitement que le contact est une cause habituelle (sabab ʿâdî) sous la volonté divine.",
           "feedbackAr": "تقويل للنووي ما لم يقله: فهو يقرر صراحة أن المخالطة سبب عادي جعله الله محلاً لوقوع الضرر بمشيئته."
-        },
-        {
-          "textFr": "Prendre une précaution signifie attribuer aux causes une puissance indépendante d’Allah.",
-          "textAr": "مباشرة الأسباب والاحتراز منها يعني الشرك ونسبة التأثير المستقل لغير الله.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Hérésie doctrinale : le Prophète ﷺ lui-même a ordonné la précaution ; l'action sur les causes est partie intégrante du tawakkul authentique.",
-          "feedbackAr": "غلو وبدعة فاسدة: فالنبي ﷺ هو الآمر بالفرار من المجذوم، ومراعاة الأسباب من كمال الإيمان والتوكل."
         }
       ],
       "revealedEvidenceIds": [
@@ -333,20 +333,20 @@
       "instructionAr": "أمام هذه الأحاديث، ادعى بعضهم النسخ؛ فلماذا رد الإمام النووي والمحققون هذا المسلك؟",
       "options": [
         {
-          "textFr": "Lorsque deux textes authentiques peuvent être conciliés de manière cohérente, le naskh ne doit pas être affirmé sans preuve chronologique établissant réellement l’abrogation.",
-          "textAr": "لأنه متى أمكن الجمع بين النصين الصحيحين بوجه منضبط، امتنع المصير إلى النسخ، فضلاً عن انعدام الدليل التاريخي الدال على تقدم أحدهما وتأخر الآخر.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Règle capitale d'uṣūl : le naskh implique l'annulation d'un texte légal ; on ne l'invoque qu'en cas d'impossibilité absolue de conciliation et avec date prouvée.",
-          "feedbackAr": "قاعدة أصولية جليلة: الجمع مقدم على النسخ، والنسخ يتضمن تعطيل أحد النصين، فلا يُصار إليه بالظن وبلا تاريخ ثابت."
-        },
-        {
           "textFr": "La conciliation est ici préférable à l’annulation d’un texte.",
           "textAr": "الجمع بين الحديثين أولى من إلغاء أحدهما بدعوى النسخ.",
           "quality": "ACCEPTABLE",
           "methodologicalScore": 2,
           "feedbackFr": "Principe exact, qui énonce la hiérarchie des modes de traitement des preuves.",
           "feedbackAr": "تطبيق صحيح لقواعد الأصول في تقديم الجمع على دعاوى النسخ غير المحققة."
+        },
+        {
+          "textFr": "Il est impossible que deux textes authentiques s’expliquent mutuellement.",
+          "textAr": "من المستحيل أن يفسر حديثان صحيحان بعضهما بعضاً.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Négation du principe même du tafsîr et du fiqh al-hadîth : la Sunna forme un tout cohérent où les textes s'interprètent mutuellement.",
+          "feedbackAr": "هدم لأصول الفقه: فالأحاديث النبوية يفسر بعضها بعضاً ويقيد مطلقها ويخصص عامها."
         },
         {
           "textFr": "Dès que deux hadiths semblent différents, le plus ancien est automatiquement abrogé.",
@@ -357,12 +357,12 @@
           "feedbackAr": "قاعدة غير محررة: فالنسخ لا يثبت إلا عند تعذر الجمع بالكلية ومعرفة المتأخر الصريح النافخ للمتقدم."
         },
         {
-          "textFr": "Il est impossible que deux textes authentiques s’expliquent mutuellement.",
-          "textAr": "من المستحيل أن يفسر حديثان صحيحان بعضهما بعضاً.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Négation du principe même du tafsîr et du fiqh al-hadîth : la Sunna forme un tout cohérent où les textes s'interprètent mutuellement.",
-          "feedbackAr": "هدم لأصول الفقه: فالأحاديث النبوية يفسر بعضها بعضاً ويقيد مطلقها ويخصص عامها."
+          "textFr": "Lorsque deux textes authentiques peuvent être conciliés de manière cohérente, le naskh ne doit pas être affirmé sans preuve chronologique établissant réellement l’abrogation.",
+          "textAr": "لأنه متى أمكن الجمع بين النصين الصحيحين بوجه منضبط، امتنع المصير إلى النسخ، فضلاً عن انعدام الدليل التاريخي الدال على تقدم أحدهما وتأخر الآخر.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Règle capitale d'uṣūl : le naskh implique l'annulation d'un texte légal ; on ne l'invoque qu'en cas d'impossibilité absolue de conciliation et avec date prouvée.",
+          "feedbackAr": "قاعدة أصولية جليلة: الجمع مقدم على النسخ، والنسخ يتضمن تعطيل أحد النصين، فلا يُصار إليه بالظن وبلا تاريخ ثابت."
         }
       ],
       "revealedEvidenceIds": [],
@@ -375,6 +375,14 @@
       "instructionFr": "Quelle conclusion synthétique exprime avec le plus de rigueur le statut méthodologique du dossier ?",
       "instructionAr": "أي خلاصة جامعة تعبر بأعلى درجات الدقة عن الموقف المنهجي المحرر في القضية؟",
       "options": [
+        {
+          "textFr": "« Puisque « لا عدوى » est ṣaḥīḥ, toutes les précautions sont contraires au tawakkul. »",
+          "textAr": "«بما أن حديث «لا عدوى» صحيح، فكل احتراز طبي منافٍ للتوكل ومحرم شرعاً.»",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Erreur doctrinale absolue : le Prophète ﷺ a prescrit lui-même les mesures préventives (mêler les bêtes, fuir la lèpre).",
+          "feedbackAr": "جهل مركب ومصادمة لأوامر النبي ﷺ الصريحة بالأخذ بأسباب السلامة."
+        },
         {
           "textFr": "« Le hadith « لا عدوى » est authentique, mais il ne doit pas être isolé des autres textes authentiques du même chapitre. Le Prophète ﷺ a également interdit de mêler les animaux malades aux sains et a ordonné de fuir le lépreux. Les commentateurs classiques, notamment an-Nawawî, ont concilié ces textes en comprenant « لا عدوى » comme la négation d’une causalité autonome et indépendante d’Allah, et non comme l’interdiction de reconnaître ou d’éviter les causes habituelles de dommage. »",
           "textAr": "«حديث «لا عدوى» صحيح الإسناد، لكن لا يجوز عزله عن بقية النصوص الصحيحة في الباب؛ فقد نهى النبي ﷺ عن إيراد الممرض على المصح وأمر بالفرار من المجذوم. وقد جمع الشراح المحققون -كالنووي- بينها بأن المنفي هو اعتقاد التأثير الذاتي المستقل عن مشيئة الله، وليس إنكار الأسباب العادية ولا تحريم التحرز والوقاية.»",
@@ -398,14 +406,6 @@
           "methodologicalScore": 1,
           "feedbackFr": "Scepticisme paresseux : les ouvrages de sharh ont résolu cette question avec clarté depuis des siècles.",
           "feedbackAr": "عجز غير مبرر: فشراح الحديث قد حرروا الجمع في هذه المسألة بأوضح بيان وأرسخ برهان."
-        },
-        {
-          "textFr": "« Puisque « لا عدوى » est ṣaḥīḥ, toutes les précautions sont contraires au tawakkul. »",
-          "textAr": "«بما أن حديث «لا عدوى» صحيح، فكل احتراز طبي منافٍ للتوكل ومحرم شرعاً.»",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Erreur doctrinale absolue : le Prophète ﷺ a prescrit lui-même les mesures préventives (mêler les bêtes, fuir la lèpre).",
-          "feedbackAr": "جهل مركب ومصادمة لأوامر النبي ﷺ الصريحة بالأخذ بأسباب السلامة."
         }
       ],
       "revealedEvidenceIds": [],
@@ -419,12 +419,12 @@
       "instructionAr": "ما هي القاعدة المنهجية الكلية التي ترسخها هذه الدراسة لدى طالب العلم والباحث؟",
       "options": [
         {
-          "textFr": "L’authenticité d’un hadith répond à la question « est-il transmis ? ». Elle ne garantit pas que la première interprétation qu’on en tire soit correcte. Il faut examiner le contexte, réunir les textes du même chapitre, distinguer les niveaux de causalité et contrôler l’istidlāl.",
-          "textAr": "صحة الحديث تجيب عن سؤال: «هل ثبتت الرواية؟»، لكنها لا تضمن صحة أول فهم يتبادر إلى الذهن. فلابد من فحص السياق، وجمع نصوص الباب، والتمييز بين مراتب السببية، وتحرير مناط الاستدلال.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Règle d'or de TABAYYUN : la compétence critique exige de séparer rigoureusement la critique textuelle (thubût) de la critique interprétative (dalâla & istidlâl).",
-          "feedbackAr": "القاعدة الذهبية لمنهج تَبَيُّن: الفصل المنهجي بين نقد الثبوت ونقد الاستدلال، وأن النص الصحيح لا يُحتج به إلا على وجهه الصحيح."
+          "textFr": "Un hadith authentique peut finalement vouloir dire n’importe quoi.",
+          "textAr": "الحديث الصحيح يمكن في النهاية أن يحتمل أي معنى كان بلا ضابط.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Dérive relativiste : la langue arabe et les règles d'uṣûl délimitent précisément le champ des interprétations recevables.",
+          "feedbackAr": "نسبية فوضوية: فلغة العرب وأصول الاستنباط تضبط المعاني المعتبرة وتميزها عن التأويلات الفاسدة."
         },
         {
           "textFr": "Il faut réunir les hadiths avant de conclure.",
@@ -435,12 +435,12 @@
           "feedbackAr": "مطلب سليم وضروري، والخيار الأول يصوغه في قالب قاعدة منهجية شاملة."
         },
         {
-          "textFr": "Un hadith authentique peut finalement vouloir dire n’importe quoi.",
-          "textAr": "الحديث الصحيح يمكن في النهاية أن يحتمل أي معنى كان بلا ضابط.",
-          "quality": "PREMATURE",
-          "methodologicalScore": 1,
-          "feedbackFr": "Dérive relativiste : la langue arabe et les règles d'uṣûl délimitent précisément le champ des interprétations recevables.",
-          "feedbackAr": "نسبية فوضوية: فلغة العرب وأصول الاستنباط تضبط المعاني المعتبرة وتميزها عن التأويلات الفاسدة."
+          "textFr": "L’authenticité d’un hadith répond à la question « est-il transmis ? ». Elle ne garantit pas que la première interprétation qu’on en tire soit correcte. Il faut examiner le contexte, réunir les textes du même chapitre, distinguer les niveaux de causalité et contrôler l’istidlāl.",
+          "textAr": "صحة الحديث تجيب عن سؤال: «هل ثبتت الرواية؟»، لكنها لا تضمن صحة أول فهم يتبادر إلى الذهن. فلابد من فحص السياق، وجمع نصوص الباب، والتمييز بين مراتب السببية، وتحرير مناط الاستدلال.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Règle d'or de TABAYYUN : la compétence critique exige de séparer rigoureusement la critique textuelle (thubût) de la critique interprétative (dalâla & istidlâl).",
+          "feedbackAr": "القاعدة الذهبية لمنهج تَبَيُّن: الفصل المنهجي بين نقد الثبوت ونقد الاستدلال، وأن النص الصحيح لا يُحتج به إلا على وجهه الصحيح."
         },
         {
           "textFr": "Lorsqu’un hadith est ṣaḥīḥ, l’étude du contexte et des autres preuves devient inutile.",

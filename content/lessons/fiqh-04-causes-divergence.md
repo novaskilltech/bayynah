@@ -1,50 +1,73 @@
 ---
-id: "fiqh-04"
-slug: "fiqh-04-causes-divergence"
-school: "FIQH"
+id: fiqh-04
+slug: fiqh-04-causes-divergence
+school: FIQH
 level: 3
 order: 4
-editorialStatus: "PUBLISHED"
-titleFr: "Pourquoi les fuqahâ divergent-ils ?"
-titleAr: "أسباب اختلاف الفقهاء"
-summaryFr: "Comprendre les causes objectives pouvant conduire deux juristes compétents à des conclusions différentes."
-summaryAr: "فهم الأسباب العلمية التي قد تؤدي بالمجتهدين إلى أحكام مختلفة."
-methodologyPrincipleFr: "Une divergence avec un hadith que nous connaissons ne prouve pas qu'un imam a volontairement préféré son opinion à la Sunnah."
-methodologyPrincipleAr: "مخالفة قول إمام لحديث نعرفه لا تعني أنه تعمد تقديم رأيه على السنة."
+editorialStatus: PUBLISHED
+titleFr: Pourquoi les fuqahâ divergent-ils ?
+titleAr: أسباب اختلاف الفقهاء
+summaryFr: >-
+  Comprendre les causes objectives pouvant conduire deux juristes compétents à
+  des conclusions différentes.
+summaryAr: فهم الأسباب العلمية التي قد تؤدي بالمجتهدين إلى أحكام مختلفة.
+methodologyPrincipleFr: >-
+  Une divergence avec un hadith que nous connaissons ne prouve pas qu'un imam a
+  volontairement préféré son opinion à la Sunnah.
+methodologyPrincipleAr: مخالفة قول إمام لحديث نعرفه لا تعني أنه تعمد تقديم رأيه على السنة.
 historicReference:
-  author: "Aḥmad Ibn Taymiyya"
-  work: "Rafʿ al-Malâm ʿan al-Aʾimmat al-Aʿlâm"
-  editionVolumePage: "Éd. al-Maktab al-Islâmî, p. 13-14 (voir aussi Majmûʿ al-Fatâwâ, t. 20, p. 233)"
-  quoteArOriginal: "الأعذار ثلاثة أصناف: أحدها عدم اعتقاده أن النبي صلى الله عليه وسلم قاله، والثاني عدم اعتقاده إرادة تلك المسألة بذلك القول، والثالث اعتقاده أن ذلك الحكم منسوخ"
-  translationFr: "Les excuses se ramènent à trois catégories : ne pas tenir pour établi que le Prophète ﷺ a prononcé le texte ; ne pas considérer que ce texte vise la question concernée ; ou considérer que le jugement a été abrogé."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Aḥmad Ibn Taymiyya
+  work: Rafʿ al-Malâm ʿan al-Aʾimmat al-Aʿlâm
+  editionVolumePage: >-
+    Éd. al-Maktab al-Islâmî, p. 13-14 (voir aussi Majmûʿ al-Fatâwâ, t. 20, p.
+    233)
+  quoteArOriginal: >-
+    الأعذار ثلاثة أصناف: أحدها عدم اعتقاده أن النبي صلى الله عليه وسلم قاله،
+    والثاني عدم اعتقاده إرادة تلك المسألة بذلك القول، والثالث اعتقاده أن ذلك
+    الحكم منسوخ
+  translationFr: >-
+    Les excuses se ramènent à trois catégories : ne pas tenir pour établi que le
+    Prophète ﷺ a prononcé le texte ; ne pas considérer que ce texte vise la
+    question concernée ; ou considérer que le jugement a été abrogé.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-f04-1"
-    questionFr: "Un imam ancien adopte une position apparemment contraire à un hadith authentique que vous venez de découvrir. Quel est le premier réflexe méthodologique ?"
-    questionAr: "وجدت قولاً لإمام متقدم يخالف في الظاهر حديثاً صحيحاً وقفت عليه، فما أول موقف منهجي؟"
+  - id: quiz-f04-1
+    questionFr: >-
+      Un imam ancien adopte une position apparemment contraire à un hadith
+      authentique que vous venez de découvrir. Quel est le premier réflexe
+      méthodologique ?
+    questionAr: >-
+      وجدت قولاً لإمام متقدم يخالف في الظاهر حديثاً صحيحاً وقفت عليه، فما أول
+      موقف منهجي؟
     order: 1
     options:
-      - textFr: "Conclure qu'il rejetait la Sunnah."
-        textAr: "الحكم بأنه كان يرد السنة."
+      - textFr: Conclure qu'il rejetait la Sunnah.
+        textAr: الحكم بأنه كان يرد السنة.
         isCorrect: false
-        feedbackFr: "Tu ignores encore s'il connaissait ce hadith, s'il le jugeait authentique et comment il en comprenait la portée."
-        feedbackAr: "لم تبحث بعد هل بلغه الحديث وهل صح عنده وكيف فهم دلالته."
-      - textFr: "Rechercher pourquoi il n'a pas appliqué ce texte de la manière que vous supposez."
-        textAr: "البحث عن سبب عدم أخذه بالحديث على الوجه الذي فهمته أنت."
+        feedbackFr: >-
+          Tu ignores encore s'il connaissait ce hadith, s'il le jugeait
+          authentique et comment il en comprenait la portée.
+        feedbackAr: لم تبحث بعد هل بلغه الحديث وهل صح عنده وكيف فهم دلالته.
+      - textFr: >-
+          Rechercher pourquoi il n'a pas appliqué ce texte de la manière que
+          vous supposez.
+        textAr: البحث عن سبب عدم أخذه بالحديث على الوجه الذي فهمته أنت.
         isCorrect: true
-        feedbackFr: "Exact. Rafʿ al-Malâm apprend précisément à enquêter avant d'accuser."
-        feedbackAr: "صحيح. منهج رفع الملام يعلّم البحث قبل الاتهام."
-      - textFr: "Supposer automatiquement que son avis est correct parce qu'il est ancien."
-        textAr: "افتراض أن قوله صحيح بالضرورة لأنه إمام متقدم."
+        feedbackFr: Exact. Rafʿ al-Malâm apprend précisément à enquêter avant d'accuser.
+        feedbackAr: صحيح. منهج رفع الملام يعلّم البحث قبل الاتهام.
+      - textFr: >-
+          Supposer automatiquement que son avis est correct parce qu'il est
+          ancien.
+        textAr: افتراض أن قوله صحيح بالضرورة لأنه إمام متقدم.
         isCorrect: false
-        feedbackFr: "Respecter un imam ne signifie pas lui attribuer l'infaillibilité."
-        feedbackAr: "احترام الإمام لا يعني اعتقاد عصمته."
+        feedbackFr: Respecter un imam ne signifie pas lui attribuer l'infaillibilité.
+        feedbackAr: احترام الإمام لا يعني اعتقاد عصمته.
 ---
 
 # 1. Le faux conflit : « Sunnah contre madhhab »

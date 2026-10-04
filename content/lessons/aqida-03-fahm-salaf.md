@@ -1,50 +1,72 @@
 ---
-id: "aqida-03"
-slug: "aqida-03-fahm-salaf"
-school: "AQIDA"
+id: aqida-03
+slug: aqida-03-fahm-salaf
+school: AQIDA
 level: 3
 order: 3
-editorialStatus: "PUBLISHED"
-titleFr: "La compréhension des Salaf : vérifier au lieu d’invoquer"
-titleAr: "فهم السلف الصالح: التوثيق بدل الاكتفاء بالشعار"
-summaryFr: "Comprendre ce que signifie réellement revenir à la compréhension des premières générations et apprendre à documenter cette compréhension par des sources."
-summaryAr: "فهم معنى الرجوع إلى فهم السلف عملياً، وتوثيق أقوالهم وآثارهم بدلاً من الاكتفاء بالنسبة إليهم."
-methodologyPrincipleFr: "Attribuer une compréhension aux Salaf exige de retrouver ce qu’ils ont réellement dit, transmis ou pratiqué."
-methodologyPrincipleAr: "نسبة فهم إلى السلف تقتضي إثبات ما قالوه أو نقلوه أو عملوا به فعلاً."
+editorialStatus: PUBLISHED
+titleFr: 'La compréhension des Salaf : vérifier au lieu d’invoquer'
+titleAr: 'فهم السلف الصالح: التوثيق بدل الاكتفاء بالشعار'
+summaryFr: >-
+  Comprendre ce que signifie réellement revenir à la compréhension des premières
+  générations et apprendre à documenter cette compréhension par des sources.
+summaryAr: >-
+  فهم معنى الرجوع إلى فهم السلف عملياً، وتوثيق أقوالهم وآثارهم بدلاً من الاكتفاء
+  بالنسبة إليهم.
+methodologyPrincipleFr: >-
+  Attribuer une compréhension aux Salaf exige de retrouver ce qu’ils ont
+  réellement dit, transmis ou pratiqué.
+methodologyPrincipleAr: نسبة فهم إلى السلف تقتضي إثبات ما قالوه أو نقلوه أو عملوا به فعلاً.
 historicReference:
-  author: "Aḥmad Ibn Taymiyya"
-  work: "Muqaddima fî Uṣûl at-Tafsîr"
-  editionVolumePage: "Éd. Maktabat al-Ḥayâh, Beyrouth, 1980, p. 35 (ou p. 9 selon d'autres éditions)"
-  quoteArOriginal: "النبي صلى الله عليه وسلم بين لأصحابه معاني القرآن كما بين لهم ألفاظه"
-  translationFr: "Le Prophète ﷺ a expliqué à ses Compagnons les significations du Coran comme il leur en a transmis les formulations."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Aḥmad Ibn Taymiyya
+  work: Muqaddima fî Uṣûl at-Tafsîr
+  editionVolumePage: >-
+    Éd. Maktabat al-Ḥayâh, Beyrouth, 1980, p. 35 (ou p. 9 selon d'autres
+    éditions)
+  quoteArOriginal: النبي صلى الله عليه وسلم بين لأصحابه معاني القرآن كما بين لهم ألفاظه
+  translationFr: >-
+    Le Prophète ﷺ a expliqué à ses Compagnons les significations du Coran comme
+    il leur en a transmis les formulations.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-a03-1"
-    questionFr: "Un auteur écrit : « Les Salaf interprétaient ce verset ainsi », sans citer aucun d’entre eux. Quelle est l’étape suivante ?"
-    questionAr: "كتب مؤلف: «كان السلف يفهمون هذه الآية هكذا» دون أن ينقل عن أحد منهم، فما الخطوة التالية؟"
+  - id: quiz-a03-1
+    questionFr: >-
+      Un auteur écrit : « Les Salaf interprétaient ce verset ainsi », sans citer
+      aucun d’entre eux. Quelle est l’étape suivante ?
+    questionAr: >-
+      كتب مؤلف: «كان السلف يفهمون هذه الآية هكذا» دون أن ينقل عن أحد منهم، فما
+      الخطوة التالية؟
     order: 1
     options:
-      - textFr: "Considérer l’attribution comme établie parce que l’auteur est connu."
-        textAr: "اعتبار النسبة ثابتة لمجرد شهرة المؤلف."
+      - textFr: Conclure qu’aucun Salaf n’a jamais parlé de cette question.
+        textAr: الجزم بأن السلف لم يتكلموا في المسألة.
         isCorrect: false
-        feedbackFr: "La réputation d’un auteur n’empêche pas de vérifier une attribution historique."
-        feedbackAr: "شهرة المؤلف لا تمنع من التحقق من النسبة التاريخية."
-      - textFr: "Rechercher les tafsîrs, athâr et transmissions anciennes qui documentent cette compréhension."
-        textAr: "البحث في التفاسير والآثار والنقول القديمة التي توثق هذا الفهم."
+        feedbackFr: >-
+          Ne pas avoir trouvé une source n’est pas la même chose qu’avoir
+          démontré son inexistence.
+        feedbackAr: عدم العثور على المصدر لا يساوي إثبات عدم وجوده.
+      - textFr: Considérer l’attribution comme établie parce que l’auteur est connu.
+        textAr: اعتبار النسبة ثابتة لمجرد شهرة المؤلف.
+        isCorrect: false
+        feedbackFr: >-
+          La réputation d’un auteur n’empêche pas de vérifier une attribution
+          historique.
+        feedbackAr: شهرة المؤلف لا تمنع من التحقق من النسبة التاريخية.
+      - textFr: >-
+          Rechercher les tafsîrs, athâr et transmissions anciennes qui
+          documentent cette compréhension.
+        textAr: البحث في التفاسير والآثار والنقول القديمة التي توثق هذا الفهم.
         isCorrect: true
-        feedbackFr: "Exact. « Fahm as-Salaf » doit devenir une donnée vérifiable, pas une formule rhétorique."
-        feedbackAr: "صحيح. فهم السلف يجب أن يكون معطى موثقاً لا مجرد شعار."
-      - textFr: "Conclure qu’aucun Salaf n’a jamais parlé de cette question."
-        textAr: "الجزم بأن السلف لم يتكلموا في المسألة."
-        isCorrect: false
-        feedbackFr: "Ne pas avoir trouvé une source n’est pas la même chose qu’avoir démontré son inexistence."
-        feedbackAr: "عدم العثور على المصدر لا يساوي إثبات عدم وجوده."
+        feedbackFr: >-
+          Exact. « Fahm as-Salaf » doit devenir une donnée vérifiable, pas une
+          formule rhétorique.
+        feedbackAr: صحيح. فهم السلف يجب أن يكون معطى موثقاً لا مجرد شعار.
 ---
 
 # 1. Un slogan ne suffit pas

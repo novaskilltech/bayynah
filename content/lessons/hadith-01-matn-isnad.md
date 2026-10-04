@@ -1,50 +1,64 @@
 ---
-id: "hadith-01"
-slug: "hadith-01-matn-isnad"
-school: "HADITH"
+id: hadith-01
+slug: hadith-01-matn-isnad
+school: HADITH
 level: 1
 order: 1
-editorialStatus: "PUBLISHED"
-titleFr: "Matn et isnâd : comprendre l'architecture d'un hadith"
-titleAr: "المتن والإسناد: فهم بنية الحديث"
-summaryFr: "Apprendre à distinguer le texte transmis, appelé matn, de la chaîne des transmetteurs qui permet d'en contrôler l'attribution."
-summaryAr: "التفريق بين متن الحديث وبين سلسلة الرواة التي نُقل الخبر من خلالها."
-methodologyPrincipleFr: "Avant d'étudier ce que dit un récit, il faut savoir par quelle voie il nous est parvenu."
-methodologyPrincipleAr: "قبل النظر في معنى الخبر ينبغي معرفة الطريق الذي وصل به إلينا."
+editorialStatus: PUBLISHED
+titleFr: 'Matn et isnâd : comprendre l''architecture d''un hadith'
+titleAr: 'المتن والإسناد: فهم بنية الحديث'
+summaryFr: >-
+  Apprendre à distinguer le texte transmis, appelé matn, de la chaîne des
+  transmetteurs qui permet d'en contrôler l'attribution.
+summaryAr: التفريق بين متن الحديث وبين سلسلة الرواة التي نُقل الخبر من خلالها.
+methodologyPrincipleFr: >-
+  Avant d'étudier ce que dit un récit, il faut savoir par quelle voie il nous
+  est parvenu.
+methodologyPrincipleAr: قبل النظر في معنى الخبر ينبغي معرفة الطريق الذي وصل به إلينا.
 historicReference:
-  author: "Ibn Ḥajar al-ʿAsqalânî"
-  work: "Nuzhat an-Naẓar fî Tawḍîḥ Nukhbat al-Fikar"
-  editionVolumePage: "Éd. Nûr ad-Dîn ʿItr, p. 43"
-  quoteArOriginal: "والإسناد حكاية عن طريق المتن، والمتن هو غاية ما ينتهي إليه الإسناد من الكلام"
-  translationFr: "L'isnâd est le récit de la voie menant au matn, et le matn est la parole à laquelle aboutit finalement l'isnâd."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Ibn Ḥajar al-ʿAsqalânî
+  work: Nuzhat an-Naẓar fî Tawḍîḥ Nukhbat al-Fikar
+  editionVolumePage: 'Éd. Nûr ad-Dîn ʿItr, p. 43'
+  quoteArOriginal: والإسناد حكاية عن طريق المتن، والمتن هو غاية ما ينتهي إليه الإسناد من الكلام
+  translationFr: >-
+    L'isnâd est le récit de la voie menant au matn, et le matn est la parole à
+    laquelle aboutit finalement l'isnâd.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-h01-1"
-    questionFr: "Dans la formule : « Mâlik rapporte de Nâfiʿ, qui rapporte d'Ibn ʿUmar : le Messager d'Allah ﷺ a dit... », quelle partie constitue l'isnâd ?"
-    questionAr: "في قولنا: «روى مالك عن نافع عن ابن عمر أن رسول الله ﷺ قال...» أي جزء يمثل الإسناد؟"
+  - id: quiz-h01-1
+    questionFr: >-
+      Dans la formule : « Mâlik rapporte de Nâfiʿ, qui rapporte d'Ibn ʿUmar : le
+      Messager d'Allah ﷺ a dit... », quelle partie constitue l'isnâd ?
+    questionAr: >-
+      في قولنا: «روى مالك عن نافع عن ابن عمر أن رسول الله ﷺ قال...» أي جزء يمثل
+      الإسناد؟
     order: 1
     options:
-      - textFr: "Uniquement les paroles attribuées au Prophète ﷺ."
-        textAr: "الكلام المنسوب إلى النبي ﷺ فقط."
+      - textFr: Le titre du chapitre dans lequel le hadith apparaît.
+        textAr: عنوان الباب الذي ورد فيه الحديث.
         isCorrect: false
-        feedbackFr: "Cette partie constitue le matn, c'est-à-dire le contenu transmis."
-        feedbackAr: "هذا هو المتن، أي الكلام المنقول."
-      - textFr: "La succession Mâlik → Nâfiʿ → Ibn ʿUmar."
-        textAr: "سلسلة مالك ← نافع ← ابن عمر."
+        feedbackFr: >-
+          Le titre du chapitre appartient à l'organisation de l'ouvrage, pas à
+          l'isnâd du hadith.
+        feedbackAr: عنوان الباب من ترتيب المصنف وليس من إسناد الحديث.
+      - textFr: Uniquement les paroles attribuées au Prophète ﷺ.
+        textAr: الكلام المنسوب إلى النبي ﷺ فقط.
+        isCorrect: false
+        feedbackFr: 'Cette partie constitue le matn, c''est-à-dire le contenu transmis.'
+        feedbackAr: هذا هو المتن، أي الكلام المنقول.
+      - textFr: La succession Mâlik → Nâfiʿ → Ibn ʿUmar.
+        textAr: سلسلة مالك ← نافع ← ابن عمر.
         isCorrect: true
-        feedbackFr: "Exact. Cette succession de transmetteurs constitue la voie par laquelle le texte nous est parvenu."
-        feedbackAr: "صحيح. هذه سلسلة الرواة التي وصل الخبر من خلالها."
-      - textFr: "Le titre du chapitre dans lequel le hadith apparaît."
-        textAr: "عنوان الباب الذي ورد فيه الحديث."
-        isCorrect: false
-        feedbackFr: "Le titre du chapitre appartient à l'organisation de l'ouvrage, pas à l'isnâd du hadith."
-        feedbackAr: "عنوان الباب من ترتيب المصنف وليس من إسناد الحديث."
+        feedbackFr: >-
+          Exact. Cette succession de transmetteurs constitue la voie par
+          laquelle le texte nous est parvenu.
+        feedbackAr: صحيح. هذه سلسلة الرواة التي وصل الخبر من خلالها.
 ---
 
 # 1. Pourquoi un hadith possède-t-il deux dimensions ?

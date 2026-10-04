@@ -1,50 +1,74 @@
 ---
-id: "fiqh-02"
-slug: "fiqh-02-dalalat-alfaz"
-school: "FIQH"
+id: fiqh-02
+slug: fiqh-02-dalalat-alfaz
+school: FIQH
 level: 2
 order: 2
-editorialStatus: "PUBLISHED"
-titleFr: "Comment les textes indiquent un jugement"
-titleAr: "دلالات الألفاظ: كيف يدل النص على الحكم؟"
-summaryFr: "Introduction pratique à l'ordre, l'interdiction, le général, le particulier, l'absolu et le restreint."
-summaryAr: "مدخل عملي إلى الأمر والنهي والعام والخاص والمطلق والمقيد."
-methodologyPrincipleFr: "Comprendre un texte exige d'étudier non seulement ses mots, mais aussi la portée que la langue et les autres preuves donnent à ces mots."
-methodologyPrincipleAr: "فهم النص لا يقتصر على ألفاظه، بل يشمل دلالاتها وما يبين مداها من السياق وسائر الأدلة."
+editorialStatus: PUBLISHED
+titleFr: Comment les textes indiquent un jugement
+titleAr: 'دلالات الألفاظ: كيف يدل النص على الحكم؟'
+summaryFr: >-
+  Introduction pratique à l'ordre, l'interdiction, le général, le particulier,
+  l'absolu et le restreint.
+summaryAr: مدخل عملي إلى الأمر والنهي والعام والخاص والمطلق والمقيد.
+methodologyPrincipleFr: >-
+  Comprendre un texte exige d'étudier non seulement ses mots, mais aussi la
+  portée que la langue et les autres preuves donnent à ces mots.
+methodologyPrincipleAr: >-
+  فهم النص لا يقتصر على ألفاظه، بل يشمل دلالاتها وما يبين مداها من السياق وسائر
+  الأدلة.
 historicReference:
-  author: "Muḥammad ibn Idrîs ash-Shâfiʿî"
-  work: "Ar-Risâla"
-  editionVolumePage: "Éd. Aḥmad Shâkir, p. 51-52"
-  quoteArOriginal: "فإنما خاطب الله بكتابه العرب بلسانها، على ما تعرف من معانيها، وكان مما تعرف من معانيها اتساع لسانها"
-  translationFr: "Allah s'est adressé aux Arabes dans Son Livre selon leur langue et les significations qu'ils en connaissent ; et parmi les caractéristiques de leur langue se trouve l'étendue de ses usages."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Muḥammad ibn Idrîs ash-Shâfiʿî
+  work: Ar-Risâla
+  editionVolumePage: 'Éd. Aḥmad Shâkir, p. 51-52'
+  quoteArOriginal: >-
+    فإنما خاطب الله بكتابه العرب بلسانها، على ما تعرف من معانيها، وكان مما تعرف
+    من معانيها اتساع لسانها
+  translationFr: >-
+    Allah s'est adressé aux Arabes dans Son Livre selon leur langue et les
+    significations qu'ils en connaissent ; et parmi les caractéristiques de leur
+    langue se trouve l'étendue de ses usages.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-f02-1"
-    questionFr: "Un texte général affirme : « toute personne faisant X... ». Un second texte authentique exclut explicitement une catégorie précise. Quelle attitude est correcte ?"
-    questionAr: "ورد نص عام يشمل كل من فعل شيئاً، ثم جاء نص صحيح يستثني طائفة معينة، فما المنهج الصحيح؟"
+  - id: quiz-f02-1
+    questionFr: >-
+      Un texte général affirme : « toute personne faisant X... ». Un second
+      texte authentique exclut explicitement une catégorie précise. Quelle
+      attitude est correcte ?
+    questionAr: >-
+      ورد نص عام يشمل كل من فعل شيئاً، ثم جاء نص صحيح يستثني طائفة معينة، فما
+      المنهج الصحيح؟
     order: 1
     options:
-      - textFr: "Ignorer le second texte car le premier est général."
-        textAr: "إهمال النص الثاني لأن الأول عام."
+      - textFr: Déclarer immédiatement que l'un des deux est abrogé.
+        textAr: الحكم مباشرة بأن أحد النصين منسوخ.
         isCorrect: false
-        feedbackFr: "Le particulier peut préciser le champ d'application d'un texte général."
-        feedbackAr: "الخاص قد يبين المراد من العام ويخصصه."
-      - textFr: "Lire les deux ensemble : le second peut constituer une spécification du premier."
-        textAr: "الجمع بين النصين، فقد يكون الثاني مخصصاً للأول."
+        feedbackFr: >-
+          Le naskh ne doit pas être invoqué tant qu'une lecture conciliant les
+          textes reste possible.
+        feedbackAr: لا يُصار إلى النسخ مع إمكان الجمع بين النصوص.
+      - textFr: Ignorer le second texte car le premier est général.
+        textAr: إهمال النص الثاني لأن الأول عام.
+        isCorrect: false
+        feedbackFr: >-
+          Le particulier peut préciser le champ d'application d'un texte
+          général.
+        feedbackAr: الخاص قد يبين المراد من العام ويخصصه.
+      - textFr: >-
+          Lire les deux ensemble : le second peut constituer une spécification
+          du premier.
+        textAr: الجمع بين النصين، فقد يكون الثاني مخصصاً للأول.
         isCorrect: true
-        feedbackFr: "Exact. Ce qui semblait contradictoire peut simplement relever du rapport général/particulier."
-        feedbackAr: "صحيح. قد يكون ما ظُن تعارضاً من باب العام والخاص."
-      - textFr: "Déclarer immédiatement que l'un des deux est abrogé."
-        textAr: "الحكم مباشرة بأن أحد النصين منسوخ."
-        isCorrect: false
-        feedbackFr: "Le naskh ne doit pas être invoqué tant qu'une lecture conciliant les textes reste possible."
-        feedbackAr: "لا يُصار إلى النسخ مع إمكان الجمع بين النصوص."
+        feedbackFr: >-
+          Exact. Ce qui semblait contradictoire peut simplement relever du
+          rapport général/particulier.
+        feedbackAr: صحيح. قد يكون ما ظُن تعارضاً من باب العام والخاص.
 ---
 
 # 1. Pourquoi deux personnes lisent-elles le même texte différemment ?

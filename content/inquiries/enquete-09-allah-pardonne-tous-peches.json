@@ -24,20 +24,20 @@
       "instructionAr": "أمام دعوى: «قال الله: إن الله يغفر الذنوب جميعاً، إذن حتى من مات على الشرك سيُغفر له حتماً سواء تاب أم لم يتب، والآية صريحة»، ما هو التفكيك المنهجي الأسلم؟",
       "options": [
         {
-          "textFr": "Il faut distinguer ce que dit réellement 39:53, examiner si la promesse est inconditionnelle ou liée à une condition, vérifier ce que les autres versets disent du shirk, et distinguer la situation de celui qui se repent avant de mourir de celle de celui qui meurt sans repentance.",
-          "textAr": "يجب تفكيك المسألة: ما الذي يثبته نص 39:53 بدقة، وهل الوعد مطلق أم مقيد، وما الذي تقرره الآيات الأخرى في الشرك، والتفريق بين حال التائب وحال من مات مصراً بلا توبة.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Excellente analyse : transformer un syllogisme simpliste en examen méthodique complet (texte, conditions, corpus et états de l'agent).",
-          "feedbackAr": "تفكيك نقدي محكم ينقل المسألة من التسرع الحرفي إلى فحص الأبعاد الأصولية والعقدية للموضوع."
-        },
-        {
           "textFr": "Il faut regarder d’autres versets parlant du pardon et du shirk.",
           "textAr": "ينبغي مراجعة نصوص أخرى في القرآن تتناول المغفرة والشرك.",
           "quality": "ACCEPTABLE",
           "methodologicalScore": 2,
           "feedbackFr": "Réflexe méthodologique juste mais encore sommaire face à la structure complexe de la prétention.",
           "feedbackAr": "خطوة أولى صحيحة، والخيار الأول يحدد محاور الفحص الأربعة بدقة."
+        },
+        {
+          "textFr": "Il faut distinguer ce que dit réellement 39:53, examiner si la promesse est inconditionnelle ou liée à une condition, vérifier ce que les autres versets disent du shirk, et distinguer la situation de celui qui se repent avant de mourir de celle de celui qui meurt sans repentance.",
+          "textAr": "يجب تفكيك المسألة: ما الذي يثبته نص 39:53 بدقة، وهل الوعد مطلق أم مقيد، وما الذي تقرره الآيات الأخرى في الشرك، والتفريق بين حال التائب وحال من مات مصراً بلا توبة.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Excellente analyse : transformer un syllogisme simpliste en examen méthodique complet (texte, conditions, corpus et états de l'agent).",
+          "feedbackAr": "تفكيك نقدي محكم ينقل المسألة من التسرع الحرفي إلى فحص الأبعاد الأصولية والعقدية للموضوع."
         },
         {
           "textFr": "Le mot « جميعاً » (tous) signifie une universalité absolue, donc aucune autre recherche n’est nécessaire.",
@@ -67,22 +67,6 @@
       "instructionAr": "بالنظر في نص سورة الزمر 39:53: ﴿إِنَّ اللَّهَ يَغْفِرُ الذُّنُوبَ جَمِيعًا﴾، ما الذي يجب الإقرار به أولاً؟",
       "options": [
         {
-          "textFr": "Le verset contient réellement une promesse extrêmement générale : Allah dit qu’Il pardonne tous les péchés. Il serait incorrect d’effacer ou de minimiser cette généralité avant même d’étudier son contexte et ses relations avec les autres textes.",
-          "textAr": "تتضمن الآية الكريمة وعداً عاماً بالغ السعة: فقد أخبر سبحانه أنه يغفر الذنوب جميعاً؛ ومن الخطأ مصادرة هذا العموم أو تأويله تعسفاً قبل فحص سياقه ومقاصده.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Intégrité textuelle parfaite : reconnaître le plein sens littéral de l'énoncé avant de chercher ses règles de conciliation.",
-          "feedbackAr": "أمانة علمية رصينة: إثبات دلالة النص وظاهره الواسع دون استباق بالتحريف أو الإلغاء."
-        },
-        {
-          "textFr": "Le verset affirme l’immensité du pardon et de la miséricorde d’Allah.",
-          "textAr": "تثبت الآية سعة مغفرة الله تعالى وعظيم رحمته بعباده.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Constat juste sur la portée spirituelle, que l'option BEST articule rigoureusement sur le plan de la méthode textuelle.",
-          "feedbackAr": "معنى صحيح وموجز، والخيار الأول يصوغه بدقة أصولية تحترم ظاهر اللفظ."
-        },
-        {
           "textFr": "Puisque le mot « جميعاً » est présent, toute condition ou précision devient linguistiquement impossible dans le Coran.",
           "textAr": "بما أن كلمة «جميعاً» مذكورة، فإن أي شرط أو تقييد يصبح مستحيلاً لغوياً وشرعياً.",
           "quality": "PREMATURE",
@@ -97,6 +81,22 @@
           "methodologicalScore": 0,
           "feedbackFr": "Déni du texte arabe : le vocable « الذنوب جميعاً » est explicitement universel en arabe.",
           "feedbackAr": "إنكار لصريح القرآن: فلفظ ﴿الذُّنُوبَ جَمِيعًا﴾ جمع محلى بأل مؤكد بجميعاً وهو صريح في العموم."
+        },
+        {
+          "textFr": "Le verset contient réellement une promesse extrêmement générale : Allah dit qu’Il pardonne tous les péchés. Il serait incorrect d’effacer ou de minimiser cette généralité avant même d’étudier son contexte et ses relations avec les autres textes.",
+          "textAr": "تتضمن الآية الكريمة وعداً عاماً بالغ السعة: فقد أخبر سبحانه أنه يغفر الذنوب جميعاً؛ ومن الخطأ مصادرة هذا العموم أو تأويله تعسفاً قبل فحص سياقه ومقاصده.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Intégrité textuelle parfaite : reconnaître le plein sens littéral de l'énoncé avant de chercher ses règles de conciliation.",
+          "feedbackAr": "أمانة علمية رصينة: إثبات دلالة النص وظاهره الواسع دون استباق بالتحريف أو الإلغاء."
+        },
+        {
+          "textFr": "Le verset affirme l’immensité du pardon et de la miséricorde d’Allah.",
+          "textAr": "تثبت الآية سعة مغفرة الله تعالى وعظيم رحمته بعباده.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat juste sur la portée spirituelle, que l'option BEST articule rigoureusement sur le plan de la méthode textuelle.",
+          "feedbackAr": "معنى صحيح وموجز، والخيار الأول يصوغه بدقة أصولية تحترم ظاهر اللفظ."
         }
       ],
       "revealedEvidenceIds": [
@@ -120,20 +120,20 @@
           "feedbackAr": "إعمال محكم لقرينة السياق: فالإنابة المأمور بها في الآية التالية قرينة كاشفة عن مناط المغفرة الموعودة."
         },
         {
-          "textFr": "La repentance et le retour vers Allah font clairement partie du contexte direct du verset.",
-          "textAr": "التوبة والرجوع إلى الله جزء بين من سياق الآية المباشر.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Remarque exacte, dont l'option BEST tire les conséquences herméneutiques complètes.",
-          "feedbackAr": "استنتاج سليم، والخيار الأول يربطه بأصل التفسير السياقي للنصوص."
-        },
-        {
           "textFr": "Le verset 54 annule complètement la promesse de pardon énoncée au verset 53.",
           "textAr": "الآية 54 نسخت وألغت تماماً وعد المغفرة الوارد في الآية 53.",
           "quality": "PREMATURE",
           "methodologicalScore": 1,
           "feedbackFr": "Confusion entre conditionnement/spécification et abrogation (naskh) : le verset 54 qualifie la promesse, il ne la supprime pas.",
           "feedbackAr": "خلط فاحش بين النسخ والتقييد: فالآية اللاحقة بيان لسبيل النجاة وليست إبطالاً للرحمة."
+        },
+        {
+          "textFr": "La repentance et le retour vers Allah font clairement partie du contexte direct du verset.",
+          "textAr": "التوبة والرجوع إلى الله جزء بين من سياق الآية المباشر.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Remarque exacte, dont l'option BEST tire les conséquences herméneutiques complètes.",
+          "feedbackAr": "استنتاج سليم، والخيار الأول يربطه بأصل التفسير السياقي للنصوص."
         },
         {
           "textFr": "Deux versets consécutifs n’ont pas besoin d’être lus ensemble s’ils ont des numéros différents.",
@@ -157,12 +157,12 @@
       "instructionAr": "أمامنا نصان: ﴿إِنَّ اللَّهَ يَغْفِرُ الذُّنُوبَ جَمِيعًا﴾ و﴿إِنَّ اللَّهَ لَا يَغْفِرُ أَنْ يُشْرَكَ بِهِ﴾؛ فما هو الموقف المنهجي الواجب؟",
       "options": [
         {
-          "textFr": "Les deux textes sont révélés par Allah et sont véridiques. Il faut rechercher comment ils s’articulent harmonieusement (al-jamʿ) avant d’accuser le Coran de contradiction ou de neutraliser arbitrairement l’un des deux versets.",
-          "textAr": "كلا النصين حق منزل من عند الله؛ والواجب هو البحث في أوجه الجمع والائتلاف بينهما قبل توهم التعارض أو تعطيل أحد النصين بهوى أو تسرع.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Règle d'or de l'uṣūl : la conciliation (al-iʿmāl awlā min al-ihmāl) prime absolument sur le rejet ou l'accusation de contradiction.",
-          "feedbackAr": "قاعدة أصولية ذهبية: إعمال النصين أولى من إهمال أحدهما أو ادعاء التناقض في كتاب الله."
+          "textFr": "Le verset que j’ai découvert en premier dans ma lecture doit avoir priorité absolue sur le second.",
+          "textAr": "الآية التي قرأتها أولاً هي التي يجب تقديمها وإلغاء ما سواها.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Subjectivisme absurde : l'ordre de lecture du lecteur ne constitue pas une hiérarchie de validité des textes sacrés.",
+          "feedbackAr": "تحكم باطل: فترتيب قراءة الناظر لا يقدم نصاً ولا يؤخر دليلاً شرعياً."
         },
         {
           "textFr": "Il faut distinguer les situations et les cas visés par chacun des deux versets.",
@@ -181,12 +181,12 @@
           "feedbackAr": "ادعاء متعجل للنسخ: فالنسخ لا يصار إليه في الأخبار ولا مع إمكانية الجمع والتوفيق."
         },
         {
-          "textFr": "Le verset que j’ai découvert en premier dans ma lecture doit avoir priorité absolue sur le second.",
-          "textAr": "الآية التي قرأتها أولاً هي التي يجب تقديمها وإلغاء ما سواها.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Subjectivisme absurde : l'ordre de lecture du lecteur ne constitue pas une hiérarchie de validité des textes sacrés.",
-          "feedbackAr": "تحكم باطل: فترتيب قراءة الناظر لا يقدم نصاً ولا يؤخر دليلاً شرعياً."
+          "textFr": "Les deux textes sont révélés par Allah et sont véridiques. Il faut rechercher comment ils s’articulent harmonieusement (al-jamʿ) avant d’accuser le Coran de contradiction ou de neutraliser arbitrairement l’un des deux versets.",
+          "textAr": "كلا النصين حق منزل من عند الله؛ والواجب هو البحث في أوجه الجمع والائتلاف بينهما قبل توهم التعارض أو تعطيل أحد النصين بهوى أو تسرع.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Règle d'or de l'uṣūl : la conciliation (al-iʿmāl awlā min al-ihmāl) prime absolument sur le rejet ou l'accusation de contradiction.",
+          "feedbackAr": "قاعدة أصولية ذهبية: إعمال النصين أولى من إهمال أحدهما أو ادعاء التناقض في كتاب الله."
         }
       ],
       "revealedEvidenceIds": [
@@ -202,22 +202,6 @@
       "instructionAr": "ما هو التفريق الدقيق الذي اعتمده أهل العلم للجمع بين الآيتين دون أدنى تعارض؟",
       "options": [
         {
-          "textFr": "Celui qui se repent sincèrement avant sa mort peut être pardonné de tous ses péchés, y compris du shirk (champ de 39:53). En revanche, celui qui meurt sur le shirk sans repentance n’entre pas dans cette promesse de pardon (champ de 4:48).",
-          "textAr": "من تاب توبة نصوحاً قبل موته غفر الله له جميع ذنوبه حتى الشرك (محل آية الزمر)؛ أما من مات مصراً على الشرك بلا توبة فلا تناله المغفرة حتماً (محل آية النساء).",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Clé de voûte de la conciliation doctrinale : la repentance (at-tawba) conditionne l'universalité de 39:53, tandis que 4:48 régit le sort de celui qui meurt sans s'être repenti.",
-          "feedbackAr": "تحرير دقيق لمحل النزاع: التوبة مناط غفران كل ذنب، والموت على الشرك قاطع لحبل المغفرة."
-        },
-        {
-          "textFr": "La présence ou l’absence de repentance avant la mort change complètement le statut du pécheur.",
-          "textAr": "وجود التوبة قبل الموت من عدمها يغير حكم المسألة تماماً.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Principe exact, dont l'option BEST explicite l'articulation verset par verset.",
-          "feedbackAr": "ضابط صحيح وموجز، والخيار الأول يفصل توزيع الآيتين على الحالتين."
-        },
-        {
           "textFr": "Le verset 39:53 ne concerne en réalité que les petits péchés, les grands péchés en étant exclus.",
           "textAr": "آية الزمر خاصة بصغائر الذنوب فقط دون كبائرها.",
           "quality": "PREMATURE",
@@ -226,12 +210,28 @@
           "feedbackAr": "تخصيص تحكمي بلا دليل: فالآية صريحة في إسراف العباد على أنفسهم والكبائر تدخل في التوبة إجماعاً."
         },
         {
+          "textFr": "Celui qui se repent sincèrement avant sa mort peut être pardonné de tous ses péchés, y compris du shirk (champ de 39:53). En revanche, celui qui meurt sur le shirk sans repentance n’entre pas dans cette promesse de pardon (champ de 4:48).",
+          "textAr": "من تاب توبة نصوحاً قبل موته غفر الله له جميع ذنوبه حتى الشرك (محل آية الزمر)؛ أما من مات مصراً على الشرك بلا توبة فلا تناله المغفرة حتماً (محل آية النساء).",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Clé de voûte de la conciliation doctrinale : la repentance (at-tawba) conditionne l'universalité de 39:53, tandis que 4:48 régit le sort de celui qui meurt sans s'être repenti.",
+          "feedbackAr": "تحرير دقيق لمحل النزاع: التوبة مناط غفران كل ذنب، والموت على الشرك قاطع لحبل المغفرة."
+        },
+        {
           "textFr": "Le shirk ne peut jamais être pardonné, même si la personne se repent sincèrement et devient croyante avant sa mort.",
           "textAr": "الشرك لا يغفر أبداً حتى لو تاب صاحبه توبة نصوحاً وأسلم قبل موته.",
           "quality": "INCORRECT",
           "methodologicalScore": 0,
           "feedbackFr": "Hérésie doctrinale et négation de la conversion : l'Islam efface ce qui le précède et les Compagnons étaient polythéistes avant d'embrasser l'Islam.",
           "feedbackAr": "مصادمة لقطعي الدين: فالإسلام يجبّ ما قبله والصحابة الكرام دخلوا في الإسلام بعد الشرك."
+        },
+        {
+          "textFr": "La présence ou l’absence de repentance avant la mort change complètement le statut du pécheur.",
+          "textAr": "وجود التوبة قبل الموت من عدمها يغير حكم المسألة تماماً.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Principe exact, dont l'option BEST explicite l'articulation verset par verset.",
+          "feedbackAr": "ضابط صحيح وموجز، والخيار الأول يفصل توزيع الآيتين على الحالتين."
         }
       ],
       "revealedEvidenceIds": [],
@@ -244,14 +244,6 @@
       "instructionFr": "Dans la sourate Al-Furqān (25:68-70), après avoir mentionné l'invocation d'une autre divinité (le shirk), le Coran déclare : « إِلَّا مَنْ تَابَ وَآمَنَ وَعَمِلَ عَمَلًا صَالِحًا ». Que confirme cette preuve ?",
       "instructionAr": "في سورة الفرقان (25:68-70)، بعد ذكر الإشراك بالله، يقول تعالى: ﴿إِلَّا مَنْ تَابَ وَآمَنَ وَعَمِلَ عَمَلًا صَالِحًا﴾؛ فما الذي يثبته هذا النص الثالث؟",
       "options": [
-        {
-          "textFr": "Ce passage confirme directement que le shirk lui-même n’est pas exclu de la repentance : celui qui se repent, croit et réforme ses œuvres bénéficie du pardon d’Allah. Cela valide parfaitement la distinction entre le repentant et l'obstiné.",
-          "textAr": "يؤكد هذا النص صراحة أن الشرك نفسه يغفره الله بالتوبة الصادقة والعمل الصالح؛ مما يبرهن على صحة الجمع والتفريق بين حال التائب وحال المصر.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Preuve textuelle éclatante : la sourate Al-Furqān formule expressément l'exception de la repentance immédiatement après la mention du polythéisme.",
-          "feedbackAr": "استدلال قرآني قاطع: استثناء التوبة جاء بعد ذكر الشرك وقتل النفس والزنا بنص محكم."
-        },
         {
           "textFr": "La repentance et les bonnes œuvres peuvent effacer même de très grands péchés comme le shirk.",
           "textAr": "التوبة والعمل الصالح يكفران حتى أعظم الذنوب كالشرك.",
@@ -267,6 +259,14 @@
           "methodologicalScore": 1,
           "feedbackFr": "Mécompréhension de l'économie textuelle : 4:48 demeure indispensable pour fixer le sort de celui qui meurt sans s'être repenti.",
           "feedbackAr": "قصور في الفهم: فآية النساء باقية في تقرير حكم من مات مصراً ولم يتب."
+        },
+        {
+          "textFr": "Ce passage confirme directement que le shirk lui-même n’est pas exclu de la repentance : celui qui se repent, croit et réforme ses œuvres bénéficie du pardon d’Allah. Cela valide parfaitement la distinction entre le repentant et l'obstiné.",
+          "textAr": "يؤكد هذا النص صراحة أن الشرك نفسه يغفره الله بالتوبة الصادقة والعمل الصالح؛ مما يبرهن على صحة الجمع والتفريق بين حال التائب وحال المصر.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Preuve textuelle éclatante : la sourate Al-Furqān formule expressément l'exception de la repentance immédiatement après la mention du polythéisme.",
+          "feedbackAr": "استدلال قرآني قاطع: استثناء التوبة جاء بعد ذكر الشرك وقتل النفس والزنا بنص محكم."
         },
         {
           "textFr": "Le passage d’Al-Furqān exclut expressément le shirk de toute possibilité de pardon.",
@@ -298,6 +298,14 @@
           "feedbackAr": "تحقيق تفسيري بديع: يبين كيف تجتمع النصوص بانسجام عقدي وأصولي تام."
         },
         {
+          "textFr": "Ibn Kathīr affirme dans ce passage que certains péchés demeurent impardonnables même si le serviteur s'en repent sincèrement.",
+          "textAr": "ابن كثير يقرر أن بعض الذنوب لا تقبل التوبة منها أصلاً حتى لو تاب العبد.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Déformation complète du propos d'Ibn Kathīr, qui affirme au contraire la portée universelle du pardon pour le repentant.",
+          "feedbackAr": "افتراء على الحافظ ابن كثير: فهو يقرر قبول توبة التائب من كل ذنب بلا استثناء."
+        },
+        {
           "textFr": "Ibn Kathīr concilie les deux versets en posant la condition de repentance pour la promesse générale.",
           "textAr": "ابن كثير يجمع بين الآيتين باعتبار التوبة شرطاً لشمول المغفرة.",
           "quality": "ACCEPTABLE",
@@ -312,14 +320,6 @@
           "methodologicalScore": 1,
           "feedbackFr": "Accusation injustifiée : la condition d'ināba découle directement du verset 54 consécutif et d'Al-Furqān 25:70.",
           "feedbackAr": "تهمة باطلة: فالشرط مأخوذ من الآية 54 المقترنة بها ومن نصوص القرآن الصريحة في الفرقان."
-        },
-        {
-          "textFr": "Ibn Kathīr affirme dans ce passage que certains péchés demeurent impardonnables même si le serviteur s'en repent sincèrement.",
-          "textAr": "ابن كثير يقرر أن بعض الذنوب لا تقبل التوبة منها أصلاً حتى لو تاب العبد.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Déformation complète du propos d'Ibn Kathīr, qui affirme au contraire la portée universelle du pardon pour le repentant.",
-          "feedbackAr": "افتراء على الحافظ ابن كثير: فهو يقرر قبول توبة التائب من كل ذنب بلا استثناء."
         }
       ],
       "revealedEvidenceIds": [
@@ -330,18 +330,10 @@
     {
       "stepNumber": 8,
       "titleFr": "Pourquoi le texte isolé produisait-il une erreur ?",
-      "titleAr": "أين وقع الخطأ المنهجي؟" ,
+      "titleAr": "أين وقع الخطأ المنهجي؟",
       "instructionFr": "Où se situait précisément la faille méthodologique dans l'affirmation initiale (« 39:53 dit qu'Allah pardonne tout, donc même le shirk sans repentir sera pardonné ») ?",
       "instructionAr": "أين يكمن المأزق المنهجي تحديداً في الدعوى الأولى: «آية الزمر تفيد المغفرة للجميع إذن حتى المشرك بلا توبة سيغفر له»؟",
       "options": [
-        {
-          "textFr": "L’erreur ne venait pas du verset 39:53 lui-même mais du procédé d’argumentation : transformer un énoncé général en conclusion doctrinale absolue, en l’isolant de son contexte immédiat (v. 54) et des autres textes régissant le même sujet (4:48 et 25:70).",
-          "textAr": "الخطأ لم يكن في الآية الكريمة، بل في المسلك الاستدلالي: تحويل نص عام إلى عقيدة قطعية مطلقة مع عزله عن سياقه المقترن (الآية 54) وسائر نصوص الباب (4:48 و25:70).",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Diagnostic épistémologique exact : l'isolationnisme textuel (al-istidlāl bi-naṣṣ munfarid) est le berceau de la déviation doctrinale.",
-          "feedbackAr": "تشخيص دقيق لعلة الانحراف: البتر السياقي وعزل النصوص هو المدخل الأكبر لفساد الاستدلال."
-        },
         {
           "textFr": "Il manquait la prise en compte du contexte et des autres versets sur le même sujet.",
           "textAr": "كان الخلل في إغفال السياق وبقية الآيات الواردة في المسألة نفسها.",
@@ -349,6 +341,14 @@
           "methodologicalScore": 2,
           "feedbackFr": "Constat juste, formulé avec toute sa portée méthodologique dans l'option BEST.",
           "feedbackAr": "ملاحظة صحيحة، والخيار الأول يقدم التوصيف الأصولي الكامل للخلل."
+        },
+        {
+          "textFr": "Pour éviter toute erreur, il ne faut jamais tirer de doctrine à partir du Coran.",
+          "textAr": "لتجنب الخطأ، يحسن عدم استنباط أي عقيدة من القرآن الكريم مطلقاً.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Absurdité totale : le Coran est la source originelle et fondamentale de toute la croyance musulmane.",
+          "feedbackAr": "تعطيل للشريعة: فالقرآن هو أصل العقائد ومنبع الهداية والبيان."
         },
         {
           "textFr": "Les versets généraux sont peu fiables en ʿaqīda et devraient être évités.",
@@ -359,12 +359,12 @@
           "feedbackAr": "إلغاء جائر للأدلة: فالعمومات القرآنية حجة معتبرة متى قُرئت وفق قواعد الاستدلال."
         },
         {
-          "textFr": "Pour éviter toute erreur, il ne faut jamais tirer de doctrine à partir du Coran.",
-          "textAr": "لتجنب الخطأ، يحسن عدم استنباط أي عقيدة من القرآن الكريم مطلقاً.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Absurdité totale : le Coran est la source originelle et fondamentale de toute la croyance musulmane.",
-          "feedbackAr": "تعطيل للشريعة: فالقرآن هو أصل العقائد ومنبع الهداية والبيان."
+          "textFr": "L’erreur ne venait pas du verset 39:53 lui-même mais du procédé d’argumentation : transformer un énoncé général en conclusion doctrinale absolue, en l’isolant de son contexte immédiat (v. 54) et des autres textes régissant le même sujet (4:48 et 25:70).",
+          "textAr": "الخطأ لم يكن في الآية الكريمة، بل في المسلك الاستدلالي: تحويل نص عام إلى عقيدة قطعية مطلقة مع عزله عن سياقه المقترن (الآية 54) وسائر نصوص الباب (4:48 و25:70).",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Diagnostic épistémologique exact : l'isolationnisme textuel (al-istidlāl bi-naṣṣ munfarid) est le berceau de la déviation doctrinale.",
+          "feedbackAr": "تشخيص دقيق لعلة الانحراف: البتر السياقي وعزل النصوص هو المدخل الأكبر لفساد الاستدلال."
         }
       ],
       "revealedEvidenceIds": [],
@@ -375,8 +375,16 @@
       "titleFr": "Formuler une conclusion proportionnée",
       "titleAr": "صياغة النتيجة بقدر الدليل",
       "instructionFr": "Quelle formulation exprime avec le plus de rigueur scientifique et théologique le résultat de cette enquête ?",
-      "instructionAr": "أي صياغة تعبر بأعلى درجات الدقة والإنصاف عن الحصيلة العقدية المحررة في هذه المسألة؟" ,
+      "instructionAr": "أي صياغة تعبر بأعلى درجات الدقة والإنصاف عن الحصيلة العقدية المحررة في هذه المسألة؟",
       "options": [
+        {
+          "textFr": "« 39:53 suffit à prouver que toute personne sera automatiquement pardonnée quelles que soient sa foi et sa situation à la mort. »",
+          "textAr": "«آية الزمر تكفي وحدها لإثبات مغفرة الله لجميع الخلق مهما كانت عقيدتهم وحالهم عند الموت.»",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Affirmation téméraire ignorant le reste du Coran et les avertissements divins explicites.",
+          "feedbackAr": "جرأة باطلة تهدر صريح آيات القرآن وتحكم على الله بما لم يقض به."
+        },
         {
           "textFr": "« Az-Zumar 39:53 ouvre la porte du pardon à tous les péchés pour celui qui revient vers Allah. Le contexte immédiat appelle à l’ināba, tandis qu’An-Nisāʾ 4:48 précise qu’Allah ne pardonne pas le shirk à celui qui demeure dessus. Al-Furqān 25:68–70 confirme que même le shirk entre dans le pardon lorsqu’il est suivi de repentance, de foi et de bonnes œuvres. Il est donc incorrect d’utiliser 39:53 isolément pour affirmer qu’une personne mourant sur le shirk sans repentance sera nécessairement pardonnée. »",
           "textAr": "«تفتح آية الزمر (39:53) باب المغفرة لجميع الذنوب لمن رجع إلى الله؛ وسياقها المباشر يأمر بالإنابة، في حين تقرر آية النساء (4:48) أن الله لا يغفر الشرك لمن مات مصراً عليه؛ وتؤكد آية الفرقان (25:68-70) شمول المغفرة للشرك نفسه إذا اقترن بالتوبة والإيمان والعمل الصالح. وعليه، فمن الخطأ عزل آية الزمر للزعم بأن من مات على الشرك بلا توبة سيناله العفو حتماً.»",
@@ -400,14 +408,6 @@
           "methodologicalScore": 1,
           "feedbackFr": "Renoncement défaitiste : la conciliation est parfaitement claire et établie chez les exégètes.",
           "feedbackAr": "توقف في غير محله: فالجمع بين الآيات ظاهر ومستقر عند جماهير المفسرين."
-        },
-        {
-          "textFr": "« 39:53 suffit à prouver que toute personne sera automatiquement pardonnée quelles que soient sa foi et sa situation à la mort. »",
-          "textAr": "«آية الزمر تكفي وحدها لإثبات مغفرة الله لجميع الخلق مهما كانت عقيدتهم وحالهم عند الموت.»",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Affirmation téméraire ignorant le reste du Coran et les avertissements divins explicites.",
-          "feedbackAr": "جرأة باطلة تهدر صريح آيات القرآن وتحكم على الله بما لم يقض به."
         }
       ],
       "revealedEvidenceIds": [],
@@ -421,12 +421,12 @@
       "instructionAr": "ما هي القاعدة المنهجية الكلية التي تخرج بها هذه الدراسة لبناء الأحكام العقدية؟",
       "options": [
         {
-          "textFr": "En ʿaqīda, une doctrine ne doit jamais être construite à partir d’un texte isolé lorsqu’il existe d’autres textes sur le même sujet. La méthode (jamʿ nuṣūṣ al-bāb) consiste à réunir les versets et hadiths pertinents, étudier leurs contextes immédiats, articuler général (ʿāmm) et particulier (khāṣṣ) ainsi que les différentes situations, puis formuler une conclusion compatible avec l’ensemble du corpus.",
-          "textAr": "في قضايا الاعتقاد، لا يجوز بناء الحكم من نص منفرد مع وجود نصوص أخرى في الباب؛ والمنهج السديد (جمع نصوص الباب) يقتضي حصر الآيات والأحاديث الواردة، ومراعاة سياقاتها، والجمع بين العام والخاص وتوزيع الأحوال، ثم صياغة حكم متزن يتسع له سائر الوحي.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Règle méthodologique cardinale de TABAYYUN : substituer à l'isolationnisme la rigueur systématique du rassemblement des textes du sujet.",
-          "feedbackAr": "القاعدة الكبرى في تَبَيُّن: الانتقال من الاستدلال المجتزأ إلى منهجية «جمع نصوص الباب» الرصينة."
+          "textFr": "Dès que deux textes semblent diverger, seuls les spécialistes du passé avaient le droit d'y réfléchir.",
+          "textAr": "كلما بدا تعارض بين نصين، وجب غلق باب التفكير والاكتفاء بالتقليد المحض.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Attitude passive : la méthodologie s'apprend et s'exerce par des critères rationnels et transparents.",
+          "feedbackAr": "عجز منهجي: فالغاية من تدريس المنهج تمكين الباحث من إدراك مسالك الاستدلال وموازين الجمع."
         },
         {
           "textFr": "Il faut obligatoirement réunir tous les textes d’un même chapitre avant d’établir une règle doctrinale.",
@@ -437,12 +437,12 @@
           "feedbackAr": "مبدأ سليم وضروري، والخيار الأول يفصل خطوات التطبيق التحليلي."
         },
         {
-          "textFr": "Dès que deux textes semblent diverger, seuls les spécialistes du passé avaient le droit d'y réfléchir.",
-          "textAr": "كلما بدا تعارض بين نصين، وجب غلق باب التفكير والاكتفاء بالتقليد المحض.",
-          "quality": "PREMATURE",
-          "methodologicalScore": 1,
-          "feedbackFr": "Attitude passive : la méthodologie s'apprend et s'exerce par des critères rationnels et transparents.",
-          "feedbackAr": "عجز منهجي: فالغاية من تدريس المنهج تمكين الباحث من إدراك مسالك الاستدلال وموازين الجمع."
+          "textFr": "En ʿaqīda, une doctrine ne doit jamais être construite à partir d’un texte isolé lorsqu’il existe d’autres textes sur le même sujet. La méthode (jamʿ nuṣūṣ al-bāb) consiste à réunir les versets et hadiths pertinents, étudier leurs contextes immédiats, articuler général (ʿāmm) et particulier (khāṣṣ) ainsi que les différentes situations, puis formuler une conclusion compatible avec l’ensemble du corpus.",
+          "textAr": "في قضايا الاعتقاد، لا يجوز بناء الحكم من نص منفرد مع وجود نصوص أخرى في الباب؛ والمنهج السديد (جمع نصوص الباب) يقتضي حصر الآيات والأحاديث الواردة، ومراعاة سياقاتها، والجمع بين العام والخاص وتوزيع الأحوال، ثم صياغة حكم متزن يتسع له سائر الوحي.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Règle méthodologique cardinale de TABAYYUN : substituer à l'isolationnisme la rigueur systématique du rassemblement des textes du sujet.",
+          "feedbackAr": "القاعدة الكبرى في تَبَيُّن: الانتقال من الاستدلال المجتزأ إلى منهجية «جمع نصوص الباب» الرصينة."
         },
         {
           "textFr": "Un seul verset authentique suffit toujours pour établir définitivement toute une doctrine sans consulter les autres.",

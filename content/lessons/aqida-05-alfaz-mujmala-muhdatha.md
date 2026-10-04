@@ -1,50 +1,68 @@
 ---
-id: "aqida-05"
-slug: "aqida-05-alfaz-mujmala-muhdatha"
-school: "AQIDA"
+id: aqida-05
+slug: aqida-05-alfaz-mujmala-muhdatha
+school: AQIDA
 level: 4
 order: 5
-editorialStatus: "PUBLISHED"
-titleFr: "Les termes ambigus et introduits : demander le sens avant de juger"
-titleAr: "الألفاظ المجملة والمحدثة: الاستفصال عن المعنى قبل الحكم"
-summaryFr: "Apprendre à traiter les termes théologiques postérieurs ou ambigus sans les accepter ni les rejeter automatiquement : définir d’abord le sens réellement voulu."
-summaryAr: "تعلم التعامل مع الألفاظ المحدثة أو المجملة دون قبولها أو ردها بإطلاق، بل بالاستفصال عن المعنى المقصود."
-methodologyPrincipleFr: "Un terme ambigu ne doit pas être jugé avant que son sens précis dans la discussion soit clarifié."
-methodologyPrincipleAr: "اللفظ المجمل لا يُحكم عليه إثباتاً أو نفياً حتى يُعرف المعنى المراد به."
+editorialStatus: PUBLISHED
+titleFr: 'Les termes ambigus et introduits : demander le sens avant de juger'
+titleAr: 'الألفاظ المجملة والمحدثة: الاستفصال عن المعنى قبل الحكم'
+summaryFr: >-
+  Apprendre à traiter les termes théologiques postérieurs ou ambigus sans les
+  accepter ni les rejeter automatiquement : définir d’abord le sens réellement
+  voulu.
+summaryAr: >-
+  تعلم التعامل مع الألفاظ المحدثة أو المجملة دون قبولها أو ردها بإطلاق، بل
+  بالاستفصال عن المعنى المقصود.
+methodologyPrincipleFr: >-
+  Un terme ambigu ne doit pas être jugé avant que son sens précis dans la
+  discussion soit clarifié.
+methodologyPrincipleAr: اللفظ المجمل لا يُحكم عليه إثباتاً أو نفياً حتى يُعرف المعنى المراد به.
 historicReference:
-  author: "Aḥmad Ibn Taymiyya"
-  work: "Majmûʿ al-Fatâwâ"
-  editionVolumePage: "Tome 12, p. 113-114 (Éd. Majmaʿ al-Malik Fahd)"
-  quoteArOriginal: "فليس على أحد أن يوافق من نفاها أو أثبتها حتى يستفسر عن مراده"
-  translationFr: "On ne doit approuver ni celui qui nie ni celui qui affirme ces termes avant d’avoir demandé ce qu’il entend réellement par eux."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Aḥmad Ibn Taymiyya
+  work: Majmûʿ al-Fatâwâ
+  editionVolumePage: 'Tome 12, p. 113-114 (Éd. Majmaʿ al-Malik Fahd)'
+  quoteArOriginal: فليس على أحد أن يوافق من نفاها أو أثبتها حتى يستفسر عن مراده
+  translationFr: >-
+    On ne doit approuver ni celui qui nie ni celui qui affirme ces termes avant
+    d’avoir demandé ce qu’il entend réellement par eux.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-a05-1"
-    questionFr: "Deux personnes se disputent : l’une affirme un terme théologique récent, l’autre le nie. Aucune n’a défini ce qu’elle entend par ce mot. Quelle est la priorité ?"
-    questionAr: "اختلف شخصان في لفظ عقدي محدث؛ أحدهما يثبته والآخر ينفيه دون أن يحددا معناه، فما الخطوة الأولى؟"
+  - id: quiz-a05-1
+    questionFr: >-
+      Deux personnes se disputent : l’une affirme un terme théologique récent,
+      l’autre le nie. Aucune n’a défini ce qu’elle entend par ce mot. Quelle est
+      la priorité ?
+    questionAr: >-
+      اختلف شخصان في لفظ عقدي محدث؛ أحدهما يثبته والآخر ينفيه دون أن يحددا
+      معناه، فما الخطوة الأولى؟
     order: 1
     options:
-      - textFr: "Choisir immédiatement celui qui nie le terme."
-        textAr: "اختيار قول النافي مباشرة."
+      - textFr: Choisir immédiatement celui qui nie le terme.
+        textAr: اختيار قول النافي مباشرة.
         isCorrect: false
-        feedbackFr: "La négation d’un mot ambigu peut elle-même nier un sens vrai."
-        feedbackAr: "قد يتضمن نفي اللفظ المجمل نفي معنى صحيح."
-      - textFr: "Demander ce que chacun entend précisément par ce terme."
-        textAr: "الاستفصال من كل واحد عن المعنى الذي يقصده باللفظ."
+        feedbackFr: La négation d’un mot ambigu peut elle-même nier un sens vrai.
+        feedbackAr: قد يتضمن نفي اللفظ المجمل نفي معنى صحيح.
+      - textFr: Demander ce que chacun entend précisément par ce terme.
+        textAr: الاستفصال من كل واحد عن المعنى الذي يقصده باللفظ.
         isCorrect: true
-        feedbackFr: "Exact. On juge ensuite les significations, pas seulement les étiquettes."
-        feedbackAr: "صحيح. الحكم يكون على المعاني بعد بيانها لا على مجرد الألفاظ."
-      - textFr: "Choisir automatiquement celui qui emploie le vocabulaire le plus philosophique."
-        textAr: "اختيار صاحب المصطلح الأكثر فلسفية."
+        feedbackFr: >-
+          Exact. On juge ensuite les significations, pas seulement les
+          étiquettes.
+        feedbackAr: صحيح. الحكم يكون على المعاني بعد بيانها لا على مجرد الألفاظ.
+      - textFr: >-
+          Choisir automatiquement celui qui emploie le vocabulaire le plus
+          philosophique.
+        textAr: اختيار صاحب المصطلح الأكثر فلسفية.
         isCorrect: false
-        feedbackFr: "La sophistication du vocabulaire ne constitue pas une preuve."
-        feedbackAr: "تعقيد المصطلح ليس دليلاً على صحته."
+        feedbackFr: La sophistication du vocabulaire ne constitue pas une preuve.
+        feedbackAr: تعقيد المصطلح ليس دليلاً على صحته.
 ---
 
 # 1. Un mot peut cacher plusieurs idées

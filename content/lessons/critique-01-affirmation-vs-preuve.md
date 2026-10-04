@@ -1,52 +1,79 @@
 ---
-id: "critique-01"
-slug: "critique-01-affirmation-vs-preuve"
-school: "CRITIQUE"
+id: critique-01
+slug: critique-01-affirmation-vs-preuve
+school: CRITIQUE
 level: 1
 order: 1
-editorialStatus: "PUBLISHED"
-titleFr: "Une affirmation n'est pas une preuve"
-titleAr: "الدعوى ليست دليلاً"
-summaryFr: "Apprendre à distinguer rigoureusement entre une affirmation, un argument et une preuve probante."
-summaryAr: "التفريق الدقيق بين مجرد الدعوى، والاحتجاج، والدليل القاطع المعتبر."
-methodologyPrincipleFr: "Toute prétention dépourvue de preuve recevable est nulle et sans effet."
-methodologyPrincipleAr: "الدعاوى إذا لم تقم عليها بينات، فأصحابها أدعياء."
+editorialStatus: PUBLISHED
+titleFr: Une affirmation n'est pas une preuve
+titleAr: الدعوى ليست دليلاً
+summaryFr: >-
+  Apprendre à distinguer rigoureusement entre une affirmation, un argument et
+  une preuve probante.
+summaryAr: التفريق الدقيق بين مجرد الدعوى، والاحتجاج، والدليل القاطع المعتبر.
+methodologyPrincipleFr: Toute prétention dépourvue de preuve recevable est nulle et sans effet.
+methodologyPrincipleAr: الدعاوى إذا لم تقم عليها بينات، فأصحابها أدعياء.
 historicReference:
-  author: "Ibn Qayyim al-Jawziyya"
-  work: "Iʿlâm al-Muwaqqiʿîn ʿan Rabb al-ʿÂlamîn"
-  editionVolumePage: "Tome 1, p. 75 (Éd. Dâr Ibn al-Jawzî)"
-  quoteArOriginal: "والدعوى المجردة عن البرهان لا تفيد شيئا، ولو قبلت الدعاوى بلا برهان لادعى كل أحد ما يشتهيه"
-  quoteArVocalized: "وَالدَّعْوَى الْمُجَرَّدَةُ عَنِ الْبُرْهَانِ لَا تُفِيدُ شَيْئًا، وَلَوْ قُبِلَتِ الدَّعَاوَى بِلَا بُرْهَانٍ لَادَّعَى كُلُّ أَحَدٍ مَا يَشْتَهِيهِ"
-  quoteArNormalized: "والدعوى المجردة عن البرهان لا تفيد شيئا ولو قبلت الدعاوى بلا برهان لادعى كل احد ما يشتهيه"
-  translationFr: "L'affirmation dénuée de preuve probante ne sert à rien. Si les affirmations étaient acceptées sans preuve, chacun revendiquerait tout ce qu'il désire."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Ibn Qayyim al-Jawziyya
+  work: Iʿlâm al-Muwaqqiʿîn ʿan Rabb al-ʿÂlamîn
+  editionVolumePage: 'Tome 1, p. 75 (Éd. Dâr Ibn al-Jawzî)'
+  quoteArOriginal: >-
+    والدعوى المجردة عن البرهان لا تفيد شيئا، ولو قبلت الدعاوى بلا برهان لادعى كل
+    أحد ما يشتهيه
+  quoteArVocalized: >-
+    وَالدَّعْوَى الْمُجَرَّدَةُ عَنِ الْبُرْهَانِ لَا تُفِيدُ شَيْئًا، وَلَوْ
+    قُبِلَتِ الدَّعَاوَى بِلَا بُرْهَانٍ لَادَّعَى كُلُّ أَحَدٍ مَا يَشْتَهِيهِ
+  quoteArNormalized: >-
+    والدعوى المجردة عن البرهان لا تفيد شيئا ولو قبلت الدعاوى بلا برهان لادعى كل
+    احد ما يشتهيه
+  translationFr: >-
+    L'affirmation dénuée de preuve probante ne sert à rien. Si les affirmations
+    étaient acceptées sans preuve, chacun revendiquerait tout ce qu'il désire.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-c01-1"
-    questionFr: "Un orateur s'exclame avec ferveur : 'Cette pratique est formellement interdite par l'ensemble des savants !' Que représente méthodologiquement cette phrase ?"
-    questionAr: "قال خطيب بحماس: 'هذا الفعل محرم بإجماع العلماء!' ماذا يمثل هذا الإطلاق منهجياً؟"
+  - id: quiz-c01-1
+    questionFr: >-
+      Un orateur s'exclame avec ferveur : 'Cette pratique est formellement
+      interdite par l'ensemble des savants !' Que représente méthodologiquement
+      cette phrase ?
+    questionAr: >-
+      قال خطيب بحماس: 'هذا الفعل محرم بإجماع العلماء!' ماذا يمثل هذا الإطلاق
+      منهجياً؟
     order: 1
     options:
-      - textFr: "Une preuve péremptoire car l'orateur est éloquent et convaincu."
-        textAr: "دليل قاطع لأن الخطيب بليغ ومتأكد."
-        isCorrect: false
-        feedbackFr: "L'éloquence ou la certitude psychologique de l'orateur ne transforment jamais une parole en preuve."
-        feedbackAr: "الفصاحة واليقين النفسي للمتكلم لا يجعلان كلامه دليلاً شرعياً بحال."
-      - textFr: "Une simple affirmation (daʿwâ) qui exige elle-même d'être prouvée par des sources documentées."
-        textAr: "مجرد دعوى تحتاج في نفسها إلى إثبات ونقل موثق."
+      - textFr: >-
+          Une simple affirmation (daʿwâ) qui exige elle-même d'être prouvée par
+          des sources documentées.
+        textAr: مجرد دعوى تحتاج في نفسها إلى إثبات ونقل موثق.
         isCorrect: true
-        feedbackFr: "Exact ! Une allégation d'interdiction ou de consensus reste une simple prétention tant que les sources textuelles ne sont pas exhibées."
-        feedbackAr: "أحسنت! ادعاء التحريم أو الإجماع مجرد دعوى تفتقر إلى البينة ونقل المصادر."
-      - textFr: "Un argument suffisant car personne dans l'assemblée n'a osé le contredire."
-        textAr: "حجة كافية لعدم معارضة أحد من الحاضرين له."
+        feedbackFr: >-
+          Exact ! Une allégation d'interdiction ou de consensus reste une simple
+          prétention tant que les sources textuelles ne sont pas exhibées.
+        feedbackAr: >-
+          أحسنت! ادعاء التحريم أو الإجماع مجرد دعوى تفتقر إلى البينة ونقل
+          المصادر.
+      - textFr: Une preuve péremptoire car l'orateur est éloquent et convaincu.
+        textAr: دليل قاطع لأن الخطيب بليغ ومتأكد.
         isCorrect: false
-        feedbackFr: "Le silence ou l'absence d'opposition immédiate d'un public n'a aucune valeur d'authentification scientifique."
-        feedbackAr: "سكوت الجمهور أو عدم اعتراضهم لا ينهض دليلاً على صحة الدعوى."
+        feedbackFr: >-
+          L'éloquence ou la certitude psychologique de l'orateur ne transforment
+          jamais une parole en preuve.
+        feedbackAr: الفصاحة واليقين النفسي للمتكلم لا يجعلان كلامه دليلاً شرعياً بحال.
+      - textFr: >-
+          Un argument suffisant car personne dans l'assemblée n'a osé le
+          contredire.
+        textAr: حجة كافية لعدم معارضة أحد من الحاضرين له.
+        isCorrect: false
+        feedbackFr: >-
+          Le silence ou l'absence d'opposition immédiate d'un public n'a aucune
+          valeur d'authentification scientifique.
+        feedbackAr: سكوت الجمهور أو عدم اعتراضهم لا ينهض دليلاً على صحة الدعوى.
 ---
 
 # 1. Mise en situation (Problématique)

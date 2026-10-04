@@ -23,20 +23,20 @@
       "instructionAr": "أمام دعوى: «قال النبي ﷺ: كل بدعة ضلالة، إذن فكل عمل ديني لم يوجد بصورته نفسها في زمنه فهو محرم تلقائياً، ولا حاجة إلى مزيد من البحث»، ما هو التفكيك المنهجي الأسلم؟",
       "options": [
         {
-          "textFr": "Il faut distinguer au moins quatre questions : le hadith « كل بدعة ضلالة » est-il authentique ? que désigne exactement le mot « bidʿa » dans la langue de la révélation ? toute pratique absente matériellement de l’époque prophétique entre-t-elle nécessairement dans cette catégorie religieuse ? et quels critères objectifs permettent de qualifier concrètement un acte ?",
-          "textAr": "يجب تفكيك المسألة إلى أربعة أسئلة: هل حديث «كل بدعة ضلالة» صحيح؟ وماذا يراد بالبدعة في لسان الشرع؟ وهل كل ما لم يوجد بصورته المادية في العصر النبوي يدخل حتماً في هذا المسمى الديني؟ وما هي المعايير الدقيقة لتكييف الأعمال؟",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Excellente analyse : transformer une injonction péremptoire en enquête critique structurée (authenticité, sémantique, champ d'application et critères de qualification).",
-          "feedbackAr": "تفكيك منهجي سديد ينقل المسألة من التسرع الحرفي إلى التحقيق الأصولي المنضبط."
-        },
-        {
           "textFr": "Il faut vérifier si le hadith est authentique et chercher comment les savants l'ont compris.",
           "textAr": "ينبغي التثبت من صحة الحديث والبحث في كيفية فهم العلماء له.",
           "quality": "ACCEPTABLE",
           "methodologicalScore": 2,
           "feedbackFr": "Démarche saine, dont l'option BEST déploie les quatre axes fondamentaux d'audit.",
           "feedbackAr": "خطوة أولى صحيحة، والخيار الأول يقدم شبكة الأسئلة التفكيكية الأربعة الكاملة."
+        },
+        {
+          "textFr": "Il faut distinguer au moins quatre questions : le hadith « كل بدعة ضلالة » est-il authentique ? que désigne exactement le mot « bidʿa » dans la langue de la révélation ? toute pratique absente matériellement de l’époque prophétique entre-t-elle nécessairement dans cette catégorie religieuse ? et quels critères objectifs permettent de qualifier concrètement un acte ?",
+          "textAr": "يجب تفكيك المسألة إلى أربعة أسئلة: هل حديث «كل بدعة ضلالة» صحيح؟ وماذا يراد بالبدعة في لسان الشرع؟ وهل كل ما لم يوجد بصورته المادية في العصر النبوي يدخل حتماً في هذا المسمى الديني؟ وما هي المعايير الدقيقة لتكييف الأعمال؟",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Excellente analyse : transformer une injonction péremptoire en enquête critique structurée (authenticité, sémantique, champ d'application et critères de qualification).",
+          "feedbackAr": "تفكيك منهجي سديد ينقل المسألة من التسرع الحرفي إلى التحقيق الأصولي المنضبط."
         },
         {
           "textFr": "Le mot « كل » (toute) signifie une universalité absolue, donc aucune analyse terminologique n’est possible.",
@@ -66,22 +66,6 @@
       "instructionAr": "بالنظر في حديث صحيح مسلم رقم 867: «وَشَرُّ الْأُمُورِ مُحْدَثَاتُهَا، وَكُلُّ بِدْعَةٍ ضَلَالَةٌ»، ما الذي نثبته بيقين أولاً؟",
       "options": [
         {
-          "textFr": "Le Prophète ﷺ a authentiquement mis en garde contre les muḥdathāt et affirmé que toute bidʿa est égarement. Ce texte fondamental doit être pris au sérieux. Mais son authenticité ne répond pas encore à la question de savoir quelles réalités entrent techniquement sous le terme « bidʿa ».",
-          "textAr": "ثبت يقيناً أن النبي ﷺ حذر من محدثات الأمور وقرر أن كل بدعة ضلالة؛ فالنص أصل عظيم واجب التعظيم؛ غير أن ثبوته لا يحدد بمجرده أي الوقائع تدخل اصطلاحاً تحت مسمى «البدعة».",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Rigueur idéale : consacrer l'autorité et l'authenticité absolue du texte sans confondre la lettre de l'interdiction avec la qualification de chaque fait.",
-          "feedbackAr": "إثبات رصين يجمع بين تعظيم النص وصحته وبين إدراك الحاجة إلى تحقيق مناطه في الأعيان."
-        },
-        {
-          "textFr": "Le hadith est authentique et constitue une mise en garde majeure contre les innovations blâmables.",
-          "textAr": "الحديث صحيح الإسناد ويشكل أصلاً عظيماً في التحذير من الابتداع في الدين.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Constat juste sur l'authenticité et le statut du hadith.",
-          "feedbackAr": "تقرير صحيح، والخيار الأول يميز بدقة بين ثبوت الحديث وتحقيق مناط لفظ البدعة."
-        },
-        {
           "textFr": "Son authenticité suffit pour qualifier immédiatement n'importe quelle pratique nouvelle de péché et d'égarement.",
           "textAr": "صحة الحديث تكفي بمفردها لوصف أي ممارسة جديدة بالضلالة والمروق فوراً.",
           "quality": "PREMATURE",
@@ -96,6 +80,22 @@
           "methodologicalScore": 0,
           "feedbackFr": "Négligence coupable : le texte de la Sunnah est le fondement premier de l'arbitrage.",
           "feedbackAr": "إهدار لنصوص الوحي: فكلام رسول الله ﷺ هو الأصل الحاكم والمنطلق الواجب اعتماده."
+        },
+        {
+          "textFr": "Le Prophète ﷺ a authentiquement mis en garde contre les muḥdathāt et affirmé que toute bidʿa est égarement. Ce texte fondamental doit être pris au sérieux. Mais son authenticité ne répond pas encore à la question de savoir quelles réalités entrent techniquement sous le terme « bidʿa ».",
+          "textAr": "ثبت يقيناً أن النبي ﷺ حذر من محدثات الأمور وقرر أن كل بدعة ضلالة؛ فالنص أصل عظيم واجب التعظيم؛ غير أن ثبوته لا يحدد بمجرده أي الوقائع تدخل اصطلاحاً تحت مسمى «البدعة».",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Rigueur idéale : consacrer l'autorité et l'authenticité absolue du texte sans confondre la lettre de l'interdiction avec la qualification de chaque fait.",
+          "feedbackAr": "إثبات رصين يجمع بين تعظيم النص وصحته وبين إدراك الحاجة إلى تحقيق مناطه في الأعيان."
+        },
+        {
+          "textFr": "Le hadith est authentique et constitue une mise en garde majeure contre les innovations blâmables.",
+          "textAr": "الحديث صحيح الإسناد ويشكل أصلاً عظيماً في التحذير من الابتداع في الدين.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat juste sur l'authenticité et le statut du hadith.",
+          "feedbackAr": "تقرير صحيح، والخيار الأول يميز بدقة بين ثبوت الحديث وتحقيق مناط لفظ البدعة."
         }
       ],
       "revealedEvidenceIds": [
@@ -119,20 +119,20 @@
           "feedbackAr": "مسلك نقدي محكم: إعمال آثار الصحابة لاختبار المفاهيم وضبط الفارق بين الاصطلاح والاستعمال اللغوي."
         },
         {
-          "textFr": "ʿUmar emploie clairement le terme de façon positive et élogieuse dans ce contexte précis.",
-          "textAr": "عمر استعمل الكلمة في سياق المدح والاستحسان بصورة جلية.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Constat textuel exact sur la locution niʿma.",
-          "feedbackAr": "ملاحظة صحيحة لظاهر الأثر، والخيار الأول يربطه بأصل فحص المفاهيم والجمع بين الأدلة."
-        },
-        {
           "textFr": "La parole de ʿUmar prouve que certaines innovations religieuses condamnées par le Prophète ﷺ deviennent finalement recommandées.",
           "textAr": "أثر عمر يثبت أن بعض البدع الدينية التي حرمها النبي ﷺ تصبح حسنة ومندوبة.",
           "quality": "PREMATURE",
           "methodologicalScore": 1,
           "feedbackFr": "Contresens théologique : prêter à un calife bien guidé l'intention d'annuler ou contredire sciemment l'interdit prophétique.",
           "feedbackAr": "إلزام باطل: ينسب للخليفة الراشد إجازة ما حكم عليه رسول الله ﷺ بأنه ضلالة."
+        },
+        {
+          "textFr": "ʿUmar emploie clairement le terme de façon positive et élogieuse dans ce contexte précis.",
+          "textAr": "عمر استعمل الكلمة في سياق المدح والاستحسان بصورة جلية.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Constat textuel exact sur la locution niʿma.",
+          "feedbackAr": "ملاحظة صحيحة لظاهر الأثر، والخيار الأول يربطه بأصل فحص المفاهيم والجمع بين الأدلة."
         },
         {
           "textFr": "Puisque le Prophète ﷺ a dit « toute bidʿa est égarement », la parole authentique de ʿUmar doit être censurée ou déclarée déviante.",
@@ -156,12 +156,12 @@
       "instructionAr": "هل كان جمع الناس في قيام رمضان خلف قارئ واحد في عهد عمر عبادة مبتدعة لا أصل لها البتة؟",
       "options": [
         {
-          "textFr": "Non. La prière nocturne de Ramaḍān en congrégation avait un précédent prophétique direct : le Prophète ﷺ avait lui-même prié plusieurs nuits avec ses Compagnons, avant de s'abstenir en déclarant expressément : « Mais j’ai craint que cela ne vous soit rendu obligatoire » (Bukhārī 1129). La nouveauté sous ʿUmar résidait donc dans l’organisation unifiée et pérenne des fidèles, cette cause d'interruption ayant définitivement disparu avec la clôture de la révélation.",
-          "textAr": "لا؛ فأصل قيام رمضان في المسجد جماعة مشروع بفعل النبي ﷺ لأيام، ثم بين علة توقفه صراحة بقوله: «ولكني خشيت أن تفرض عليكم فتعجزوا عنها» (البخاري 1129). فكان صنيع عمر تنظيماً وتثبيتاً لما ثبت أصله النبوي، بعد زوال علة الامتناع بانقطاع الوحي.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Explication historique et juridique fondamentale : distinguer une nouveauté d'organisation appuyée sur un principe prophétique antérieur direct (Bukhārī 1129) de l'invention pure d'un culte sans source.",
-          "feedbackAr": "تحقيق بارع يفرق بين إنشاء عبادة بلا مستند، وبين تنظيم ممارسة ثبت أصلها النبوي المباشر (البخاري 1129) وزالت علة الامتناع عنها."
+          "textFr": "Les califes bien guidés ont le pouvoir de légiférer de nouvelles adorations en dehors de toute référence au Prophète ﷺ.",
+          "textAr": "الخلفاء الراشدون يملكون حق ابتداع عبادات مستقلة من غير أي استناد إلى الشارع.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Erreur dogmatique majeure : le droit exclusif de légiférer appartient à Allah et à Son Messager ; les Compagnons sont des transmetteurs et des applicateurs.",
+          "feedbackAr": "غلو باطل: فالشارع هو الله ورسوله، والخلفاء تبع للنبوة وليسوا منشئين لشرائع مبتدأة."
         },
         {
           "textFr": "La pratique possédait un fondement indéniable dans la Sunnah prophétique.",
@@ -180,12 +180,12 @@
           "feedbackAr": "جهل بالوقائع التاريخية: فالنبي ﷺ صلاها جماعة في المسجد ليالي مشهورة في الصحاح."
         },
         {
-          "textFr": "Les califes bien guidés ont le pouvoir de légiférer de nouvelles adorations en dehors de toute référence au Prophète ﷺ.",
-          "textAr": "الخلفاء الراشدون يملكون حق ابتداع عبادات مستقلة من غير أي استناد إلى الشارع.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Erreur dogmatique majeure : le droit exclusif de légiférer appartient à Allah et à Son Messager ; les Compagnons sont des transmetteurs et des applicateurs.",
-          "feedbackAr": "غلو باطل: فالشارع هو الله ورسوله، والخلفاء تبع للنبوة وليسوا منشئين لشرائع مبتدأة."
+          "textFr": "Non. La prière nocturne de Ramaḍān en congrégation avait un précédent prophétique direct : le Prophète ﷺ avait lui-même prié plusieurs nuits avec ses Compagnons, avant de s'abstenir en déclarant expressément : « Mais j’ai craint que cela ne vous soit rendu obligatoire » (Bukhārī 1129). La nouveauté sous ʿUmar résidait donc dans l’organisation unifiée et pérenne des fidèles, cette cause d'interruption ayant définitivement disparu avec la clôture de la révélation.",
+          "textAr": "لا؛ فأصل قيام رمضان في المسجد جماعة مشروع بفعل النبي ﷺ لأيام، ثم بين علة توقفه صراحة بقوله: «ولكني خشيت أن تفرض عليكم فتعجزوا عنها» (البخاري 1129). فكان صنيع عمر تنظيماً وتثبيتاً لما ثبت أصله النبوي، بعد زوال علة الامتناع بانقطاع الوحي.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Explication historique et juridique fondamentale : distinguer une nouveauté d'organisation appuyée sur un principe prophétique antérieur direct (Bukhārī 1129) de l'invention pure d'un culte sans source.",
+          "feedbackAr": "تحقيق بارع يفرق بين إنشاء عبادة بلا مستند، وبين تنظيم ممارسة ثبت أصلها النبوي المباشر (البخاري 1129) وزالت علة الامتناع عنها."
         }
       ],
       "revealedEvidenceIds": [
@@ -201,22 +201,6 @@
       "instructionAr": "في صحيح مسلم (رقم 1017)، يقول ﷺ: «مَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً حَسَنَةً...»؛ فما الذي يكشفه سبب ورود الحديث وسياقه؟",
       "options": [
         {
-          "textFr": "Le contexte interdit de transformer cette phrase en blanc-seing autorisant l’invention de cultes nouveaux : le Prophète ﷺ a tenu ce propos quand un homme a pris l'initiative d'apporter une lourde bourse d'aumône pour des nécessiteux, entraînant les autres à imiter ce geste de bienfaisance déjà pleinement légiféré par l'Islam.",
-          "textAr": "يمنع سياق الحديث تحويله إلى إذن مفتوح لابتداع عبادات جديدة: فالنبي ﷺ قاله حين بادر رجل بصرة صدقة لقوم محتاجين فاقتدى به الناس؛ فهو إحياء لصدقة مشروعة أصلاً وفتح لباب الاقتداء في الخير.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Maîtrise magistrale du sabab al-wurūd : empêcher l'instrumentalisation d'un hadith tronqué en réinstallant son cadre concret.",
-          "feedbackAr": "إعمال عبقري لسبب الورود يمنع توظيف الحديث في غير محله ويضبط مناط السنّ في الخير."
-        },
-        {
-          "textFr": "Le hadith récompense celui qui montre l'exemple et entraîne les gens vers un bien déjà institué.",
-          "textAr": "الحديث يرغب في المبادرة إلى فعل الخير وفتح أبواب الاقتداء في الطاعات المشروعة.",
-          "quality": "ACCEPTABLE",
-          "methodologicalScore": 2,
-          "feedbackFr": "Synthèse juste de la portée morale du hadith.",
-          "feedbackAr": "معنى صحيح، والخيار الأول يربطه بضابط عدم اختراع عبادات جديدة."
-        },
-        {
           "textFr": "« Sunnah ḥasana » signifie expressément qu'on a le droit de concevoir de nouvelles pratiques rituelles.",
           "textAr": "«سنة حسنة» تعني صراحة حق أي شخص في اختراع شعائر وعبادات جديدة.",
           "quality": "PREMATURE",
@@ -225,12 +209,28 @@
           "feedbackAr": "تحميل للنص ما لا يحتمل ومصادمة لحديث «من أحدث في أمرنا هذا ما ليس منه فهو رد»."
         },
         {
+          "textFr": "Le contexte interdit de transformer cette phrase en blanc-seing autorisant l’invention de cultes nouveaux : le Prophète ﷺ a tenu ce propos quand un homme a pris l'initiative d'apporter une lourde bourse d'aumône pour des nécessiteux, entraînant les autres à imiter ce geste de bienfaisance déjà pleinement légiféré par l'Islam.",
+          "textAr": "يمنع سياق الحديث تحويله إلى إذن مفتوح لابتداع عبادات جديدة: فالنبي ﷺ قاله حين بادر رجل بصرة صدقة لقوم محتاجين فاقتدى به الناس؛ فهو إحياء لصدقة مشروعة أصلاً وفتح لباب الاقتداء في الخير.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Maîtrise magistrale du sabab al-wurūd : empêcher l'instrumentalisation d'un hadith tronqué en réinstallant son cadre concret.",
+          "feedbackAr": "إعمال عبقري لسبب الورود يمنع توظيف الحديث في غير محله ويضبط مناط السنّ في الخير."
+        },
+        {
           "textFr": "Le contexte d’énonciation d’un hadith n’a aucun intérêt méthodologique pour comprendre sa portée.",
           "textAr": "أسباب ورود الأحاديث وسياقاتها لا قيمة لها في فهم دلالة النصوص.",
           "quality": "INCORRECT",
           "methodologicalScore": 0,
           "feedbackFr": "Cécité herméneutique totale : ignorer le sabab al-wurūd produit les pires contresens du droit musulman.",
           "feedbackAr": "إهدار لأداة أصولية جوهرية: فمعرفة سبب الورود من أعظم مفاتيح إدراك مراد الشارع."
+        },
+        {
+          "textFr": "Le hadith récompense celui qui montre l'exemple et entraîne les gens vers un bien déjà institué.",
+          "textAr": "الحديث يرغب في المبادرة إلى فعل الخير وفتح أبواب الاقتداء في الطاعات المشروعة.",
+          "quality": "ACCEPTABLE",
+          "methodologicalScore": 2,
+          "feedbackFr": "Synthèse juste de la portée morale du hadith.",
+          "feedbackAr": "معنى صحيح، والخيار الأول يربطه بضابط عدم اختراع عبادات جديدة."
         }
       ],
       "revealedEvidenceIds": [
@@ -246,14 +246,6 @@
       "instructionAr": "في المدخل إلى السنن الكبرى للبيهقي (رقم 253)، يقسم الإمام الشافعي المحدثات إلى ضربين؛ فما هو معياره الحاكم؟",
       "options": [
         {
-          "textFr": "Le critère d'ash-Shāfiʿī n'est pas la simple nouveauté chronologique, mais la contradiction : ce qui contredit le Coran, la Sunnah, un athar ou un consensus est la bidʿa d'égarement ; tandis qu'une chose nouvelle bénéfique qui ne s'oppose à aucune de ces sources n'est pas blâmable.",
-          "textAr": "معيار الشافعي ليس مجرد الحدوث الزمني، بل هو المخالفة: فما خالف كتاباً أو سنة أو أثراً أو إجماعاً فهو البدعة الضلالة؛ وما أُحدث من الخير بلا مخالفة لشيء من ذلك فهو محدثة غير مذمومة.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Distinction fondatrice d'ash-Shāfiʿī : la frontière de l'interdit réside dans la contradiction normative (mukhālafat al-uṣūl) et non dans la date d'apparition.",
-          "feedbackAr": "تحرير أصيل للإمام الشافعي يجعل مناط التحريم هو مخالفة الأصول الشرعية لا مجرد الحدوث."
-        },
-        {
           "textFr": "Ash-Shāfiʿī montre que toutes les nouveautés ne reçoivent pas le même jugement juridique selon leur conformité aux sources.",
           "textAr": "الشافعي يبين أن المحدثات تختلف في حكمها بحسب موافقتها أو مخالفتها للأصول الشرعية.",
           "quality": "ACCEPTABLE",
@@ -268,6 +260,14 @@
           "methodologicalScore": 1,
           "feedbackFr": "Déformation grossière : ash-Shāfiʿī a écrit tout un traité contre l'istiḥsān arbitraire (Ibtāl al-Istiḥsān).",
           "feedbackAr": "افتراء على الإمام الذي صنف «إبطال الاستحسان» وشدد في لزوم الاتباع."
+        },
+        {
+          "textFr": "Le critère d'ash-Shāfiʿī n'est pas la simple nouveauté chronologique, mais la contradiction : ce qui contredit le Coran, la Sunnah, un athar ou un consensus est la bidʿa d'égarement ; tandis qu'une chose nouvelle bénéfique qui ne s'oppose à aucune de ces sources n'est pas blâmable.",
+          "textAr": "معيار الشافعي ليس مجرد الحدوث الزمني، بل هو المخالفة: فما خالف كتاباً أو سنة أو أثراً أو إجماعاً فهو البدعة الضلالة؛ وما أُحدث من الخير بلا مخالفة لشيء من ذلك فهو محدثة غير مذمومة.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Distinction fondatrice d'ash-Shāfiʿī : la frontière de l'interdit réside dans la contradiction normative (mukhālafat al-uṣūl) et non dans la date d'apparition.",
+          "feedbackAr": "تحرير أصيل للإمام الشافعي يجعل مناط التحريم هو مخالفة الأصول الشرعية لا مجرد الحدوث."
         },
         {
           "textFr": "Ash-Shāfiʿī rejette purement et simplement le hadith « toute bidʿa est égarement ».",
@@ -299,6 +299,14 @@
           "feedbackAr": "تحرير منهجي رفيع يجمع بين إدراك التوافق الموضوعي في رد المحدثات الباطلة، وصيانة الفروق الاصطلاحية الدقيقة بين الأئمة."
         },
         {
+          "textFr": "Les définitions sont sans importance : dès qu'un mot apparaît dans un hadith, son sens est transparent et universel.",
+          "textAr": "التعاريف لا قيمة لها؛ فدلالة الكلمات في الأحاديث بديهية لا تحتاج إلى بيان أهل العلم.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Naïveté anti-intellectuelle : la science islamique repose sur la précision des définitions des concepts légaux.",
+          "feedbackAr": "جهل بأبجديات العلم: فالأحكام الشرعية فرع عن التصور الدقيق لمعاني الألفاظ."
+        },
+        {
           "textFr": "Les savants emploient parfois le même mot avec des périmètres techniques différents mais une finalité proche.",
           "textAr": "العلماء قد يستعملون المصطلح الواحد بحدود اصطلاحية مختلفة مع تقارب مقصدهم.",
           "quality": "ACCEPTABLE",
@@ -313,14 +321,6 @@
           "methodologicalScore": 1,
           "feedbackFr": "Condamnation sectaire superficielle : ignorer la pluralité légitime des conventions de langage en uṣūl.",
           "feedbackAr": "تسرع مضلل يجهل مسالك أهل العلم ويحول تنوع الاصطلاح إلى تكفير وتبديع."
-        },
-        {
-          "textFr": "Les définitions sont sans importance : dès qu'un mot apparaît dans un hadith, son sens est transparent et universel.",
-          "textAr": "التعاريف لا قيمة لها؛ فدلالة الكلمات في الأحاديث بديهية لا تحتاج إلى بيان أهل العلم.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Naïveté anti-intellectuelle : la science islamique repose sur la précision des définitions des concepts légaux.",
-          "feedbackAr": "جهل بأبجديات العلم: فالأحكام الشرعية فرع عن التصور الدقيق لمعاني الألفاظ."
         }
       ],
       "revealedEvidenceIds": [
@@ -337,20 +337,20 @@
       "instructionAr": "هل مجرد عدم نقل الفعل بهذه الصورة يكفي للحكم بالبدعة؟ لا بد من النظر في أصل العمل، ووجود مقتضيه زمن النبي ﷺ، ووجود المانع أو عدمه، وهل التغيير راجع إلى نفس العبادة أو إلى تنظيمها ووسيلتها.",
       "options": [
         {
-          "textFr": "Non, ce constat isolé ne suffit pas. L'argument du délaissement (at-tark) est nuancé : il faut distinguer la nature de l'acte (adoration instituée vs moyen ou organisation), examiner s'il possède un fondement religieux, si le motif d'agir existait déjà à l'époque prophétique sans empêchement, ou si au contraire un obstacle (comme la crainte de prescription ou des contingences historiques) expliquait l'absence du geste sous cette forme.",
-          "textAr": "لا يكفي هذا الإطلاق بمفرده؛ بل يستلزم فقه «الترك» تفصيلاً محكماً: التمييز بين حقيقة العبادة ووسائل تنظيمها، والبحث عن أصلها الشرعي، وهل قام المقتضي للفعل في العصر النبوي مع انتفاء المانع، أم كان هناك مانع شرعي أو واقعي حال دون فعله بتلك الكيفية.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Précision d'uṣūl de très haut niveau : intégrer la pluralité des situations du tark prophétique et l'analyse croisée du motif (muqtaḍī), de l'empêchement (māniʿ) et de l'objet (moyen vs fin).",
-          "feedbackAr": "تحقيق أصولي رفيع لمسألة «الترك»: التمييز بين الترك المجرد والترك مع قيام المقتضي وانتفاء المانع، والتفريق بين المقاصد والوسائل."
-        },
-        {
           "textFr": "L'absence d'un acte chez le Prophète ﷺ est un indice sérieux, mais sa qualification juridique dépend d'autres facteurs d'uṣūl.",
           "textAr": "عدم الفعل قرينة مهمة، غير أن الحكم الشرعي يحتاج إلى دراسة سائر قرائن الباب.",
           "quality": "ACCEPTABLE",
           "methodologicalScore": 2,
           "feedbackFr": "Position équilibrée, approfondie techniquement dans l'option BEST.",
           "feedbackAr": "موقف متزن، والخيار الأول يفصل ضوابط المقتضي والمانع."
+        },
+        {
+          "textFr": "Le fait que le Prophète ﷺ n’ait pas accompli un acte n’a absolument aucune valeur ni influence en droit musulman.",
+          "textAr": "ترك النبي ﷺ للفعل لا قيمة له مطلقاً ولا أثر له في الأحكام الشرعية.",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Négation de la Sunnah de délaissement (as-sunnah at-tarkiyyah) reconnue par les juristes.",
+          "feedbackAr": "إلغاء لـ«السنة التركية» التي اعتبرها جماهير الأصوليين والفقهاء دليلاً في بابه."
         },
         {
           "textFr": "Tout ce que le Prophète ﷺ n’a pas fait matériellement est rigoureusement haram et nul.",
@@ -361,12 +361,12 @@
           "feedbackAr": "خلط بين الترك التشريعي وبين ما لم تدع الحاجة إليه أو وُجد مانع منه."
         },
         {
-          "textFr": "Le fait que le Prophète ﷺ n’ait pas accompli un acte n’a absolument aucune valeur ni influence en droit musulman.",
-          "textAr": "ترك النبي ﷺ للفعل لا قيمة له مطلقاً ولا أثر له في الأحكام الشرعية.",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Négation de la Sunnah de délaissement (as-sunnah at-tarkiyyah) reconnue par les juristes.",
-          "feedbackAr": "إلغاء لـ«السنة التركية» التي اعتبرها جماهير الأصوليين والفقهاء دليلاً في بابه."
+          "textFr": "Non, ce constat isolé ne suffit pas. L'argument du délaissement (at-tark) est nuancé : il faut distinguer la nature de l'acte (adoration instituée vs moyen ou organisation), examiner s'il possède un fondement religieux, si le motif d'agir existait déjà à l'époque prophétique sans empêchement, ou si au contraire un obstacle (comme la crainte de prescription ou des contingences historiques) expliquait l'absence du geste sous cette forme.",
+          "textAr": "لا يكفي هذا الإطلاق بمفرده؛ بل يستلزم فقه «الترك» تفصيلاً محكماً: التمييز بين حقيقة العبادة ووسائل تنظيمها، والبحث عن أصلها الشرعي، وهل قام المقتضي للفعل في العصر النبوي مع انتفاء المانع، أم كان هناك مانع شرعي أو واقعي حال دون فعله بتلك الكيفية.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Précision d'uṣūl de très haut niveau : intégrer la pluralité des situations du tark prophétique et l'analyse croisée du motif (muqtaḍī), de l'empêchement (māniʿ) et de l'objet (moyen vs fin).",
+          "feedbackAr": "تحقيق أصولي رفيع لمسألة «الترك»: التمييز بين الترك المجرد والترك مع قيام المقتضي وانتفاء المانع، والتفريق بين المقاصد والوسائل."
         }
       ],
       "revealedEvidenceIds": [],
@@ -379,6 +379,14 @@
       "instructionFr": "Quelle formulation synthétise avec la plus grande justesse le statut du hadith « كل بدعة ضلالة » et ses conditions opératoires d'application ?",
       "instructionAr": "أي صياغة تعبر بأعلى درجات العدل والإنصاف عن منزلة الحديث وضوابط إعماله وتطبيقه؟",
       "options": [
+        {
+          "textFr": "« Le hadith “toute bidʿa est égarement” n’a finalement aucune portée normative pratique. »",
+          "textAr": "«حديث كل بدعة ضلالة لا حكم له ولا قيمة عملية في الفقه المعاصر.»",
+          "quality": "INCORRECT",
+          "methodologicalScore": 0,
+          "feedbackFr": "Négation inacceptable d'une parole prophétique majeure et constante.",
+          "feedbackAr": "تعطيل صريح لكلام المعصوم ﷺ ومصادمة لإجماع الأمة على اعتباره."
+        },
         {
           "textFr": "« Le hadith “Toute bidʿa est égarement” est authentique et pose un principe capital de protection contre l’introduction de rituels dénués de fondement légitime. Cependant, appliquer ce hadith à une pratique concrète exige de vérifier si l’acte entre réellement dans cette catégorie. La parole de ʿUmar (“Quelle excellente bidʿa”), la distinction d’ash-Shāfiʿī et les analyses d’Ibn Rajab et d’an-Nawawī démontrent que les savants ont distingué la nouveauté organisationnelle ou linguistique de l’innovation religieuse blâmable. Il est donc méthodologiquement erroné de décréter l'interdiction sur le seul motif qu'une forme exacte n'existait pas à l'époque prophétique. »",
           "textAr": "«حديث “كل بدعة ضلالة” صحيح ويقرر أصلاً كلياً في حماية الدين من المحدثات التي لا أصل لها. غير أن تطبيقه على ممارسة معينة يتطلب التحقق من انطباق مناط البدعة عليها. وقد أثبت أثر عمر في التراويح، وتفريق الشافعي، وبحوث ابن رجب والنووي أن أهل العلم ميزوا المحدثات التنظيمية واللغوية عن البدعة المذمومة. فمن الخطأ المنهجي الجزم بالتحريم لمجرد عدم وجود الصورة بعينها في العهد النبوي.»",
@@ -402,14 +410,6 @@
           "methodologicalScore": 1,
           "feedbackFr": "Laxisme destructeur : vider la mise en garde prophétique de sa force contraignante.",
           "feedbackAr": "تفريط فوضوي يهدم أصل الاتباع ويبطل وصايا النبي ﷺ في حفظ الدين."
-        },
-        {
-          "textFr": "« Le hadith “toute bidʿa est égarement” n’a finalement aucune portée normative pratique. »",
-          "textAr": "«حديث كل بدعة ضلالة لا حكم له ولا قيمة عملية في الفقه المعاصر.»",
-          "quality": "INCORRECT",
-          "methodologicalScore": 0,
-          "feedbackFr": "Négation inacceptable d'une parole prophétique majeure et constante.",
-          "feedbackAr": "تعطيل صريح لكلام المعصوم ﷺ ومصادمة لإجماع الأمة على اعتباره."
         }
       ],
       "revealedEvidenceIds": [],
@@ -423,12 +423,12 @@
       "instructionAr": "لفحص أي دعوى دينية جازمة (مثل «هذا بدعة» أو «هذا يثبته هذا الحديث»)، ما هي السلسلة المنهجية الشاملة التي رسخها مختبر تَبَيُّن؟",
       "options": [
         {
-          "textFr": "Avant de conclure, je dois parcourir rigoureusement les 10 maillons : 1. Définir l'affirmation précise → 2. Vérifier la source primaire → 3. Établir l'authenticité (thubūt) → 4. Analyser le contexte proche et le sabab → 5. Réunir tous les textes du sujet (jamʿ nuṣūṣ al-bāb) → 6. Auditer la sémantique et la portée (dalālah : ʿāmm/khāṣṣ, muṭlaq/muqayyad) → 7. Examiner les usages et attestations des Salaf → 8. Vérifier la nature réelle du khilāf (fond ou terminologie) → 9. Fixer le degré de certitude permis → 10. Formuler un jugement strictement proportionné aux preuves.",
-          "textAr": "قبل أي حكم جازم، يجب المرور بسلسلة الضوابط العشرة: 1. تحرير محل النزاع بدقة ← 2. الرجوع للمصدر الأصيل ← 3. نقد الثبوت وصحة السند ← 4. فحص السياق وسبب الورود ← 5. جمع نصوص الباب ← 6. تدقيق الدلالة ومسالك الأصول ← 7. استقراء آثار السلف وعملهم ← 8. فحص طبيعة الخلاف (أهو جوهري أم اصطلاحي) ← 9. تعيين درجة اليقين المتاحة ← 10. صياغة حكم متزن بقدر ما نهض به الدليل.",
-          "quality": "BEST",
-          "methodologicalScore": 3,
-          "feedbackFr": "Le couronnement du Laboratoire TABAYYUN : la maîtrise d'une grille intellectuelle complète, rationnelle, traçable et immunisée contre le fanatisme et la précipitation.",
-          "feedbackAr": "تاج مختبر تَبَيُّن: امتلاك المنظومة النقدية المتكاملة التي تعصم العقل من الجهل والتعصب والتسرع في دين الله."
+          "textFr": "Il suffit de trouver un livre contemporain qui cite un hadith pour clore toute discussion.",
+          "textAr": "يكفي العثور على كتاب معاصر يورد حديثاً لإغلاق باب البحث تماماً.",
+          "quality": "PREMATURE",
+          "methodologicalScore": 1,
+          "feedbackFr": "Taqlīd naïf et dépendance aveugle : l'esprit critique exige de remonter aux sources primaires.",
+          "feedbackAr": "تقليد أعمى واستسلام للشعارات دون تمحيص الأصول ومسالك الدلالة."
         },
         {
           "textFr": "Il faut vérifier la chaîne, le texte, le contexte et les avis savants avant de trancher.",
@@ -439,12 +439,12 @@
           "feedbackAr": "خلاصة حسنة، والخيار الأول يقدم شبكة المعايير التفصيلية العشرة لمختبر تَبَيُّن."
         },
         {
-          "textFr": "Il suffit de trouver un livre contemporain qui cite un hadith pour clore toute discussion.",
-          "textAr": "يكفي العثور على كتاب معاصر يورد حديثاً لإغلاق باب البحث تماماً.",
-          "quality": "PREMATURE",
-          "methodologicalScore": 1,
-          "feedbackFr": "Taqlīd naïf et dépendance aveugle : l'esprit critique exige de remonter aux sources primaires.",
-          "feedbackAr": "تقليد أعمى واستسلام للشعارات دون تمحيص الأصول ومسالك الدلالة."
+          "textFr": "Avant de conclure, je dois parcourir rigoureusement les 10 maillons : 1. Définir l'affirmation précise → 2. Vérifier la source primaire → 3. Établir l'authenticité (thubūt) → 4. Analyser le contexte proche et le sabab → 5. Réunir tous les textes du sujet (jamʿ nuṣūṣ al-bāb) → 6. Auditer la sémantique et la portée (dalālah : ʿāmm/khāṣṣ, muṭlaq/muqayyad) → 7. Examiner les usages et attestations des Salaf → 8. Vérifier la nature réelle du khilāf (fond ou terminologie) → 9. Fixer le degré de certitude permis → 10. Formuler un jugement strictement proportionné aux preuves.",
+          "textAr": "قبل أي حكم جازم، يجب المرور بسلسلة الضوابط العشرة: 1. تحرير محل النزاع بدقة ← 2. الرجوع للمصدر الأصيل ← 3. نقد الثبوت وصحة السند ← 4. فحص السياق وسبب الورود ← 5. جمع نصوص الباب ← 6. تدقيق الدلالة ومسالك الأصول ← 7. استقراء آثار السلف وعملهم ← 8. فحص طبيعة الخلاف (أهو جوهري أم اصطلاحي) ← 9. تعيين درجة اليقين المتاحة ← 10. صياغة حكم متزن بقدر ما نهض به الدليل.",
+          "quality": "BEST",
+          "methodologicalScore": 3,
+          "feedbackFr": "Le couronnement du Laboratoire TABAYYUN : la maîtrise d'une grille intellectuelle complète, rationnelle, traçable et immunisée contre le fanatisme et la précipitation.",
+          "feedbackAr": "تاج مختبر تَبَيُّن: امتلاك المنظومة النقدية المتكاملة التي تعصم العقل من الجهل والتعصب والتسرع في دين الله."
         },
         {
           "textFr": "Une fois qu'un hadith est authentifié, toutes les étapes de contexte, d'uṣūl et de confrontation des textes sont une perte de temps.",

@@ -1,52 +1,75 @@
 ---
-id: "critique-03"
-slug: "critique-03-verifier-avant-transmettre"
-school: "CRITIQUE"
+id: critique-03
+slug: critique-03-verifier-avant-transmettre
+school: CRITIQUE
 level: 1
 order: 3
-editorialStatus: "PUBLISHED"
-titleFr: "Vérifier avant de transmettre"
-titleAr: "التثبت قبل النقل"
-summaryFr: "Comprendre l'impératif éthique et scientifique de remonter à la source originale avant de relayer une information religieuse."
-summaryAr: "ضرورة التثبت المنهجي والرجوع إلى المصدر الأصلي قبل نشر أي معلومة دينية."
-methodologyPrincipleFr: "Transmettre sans vérifier suffit à faire d'un individu un menteur ou un vecteur de fausseté."
-methodologyPrincipleAr: "كفى بالمرء كذباً أن يحدّث بكل ما سمع."
+editorialStatus: PUBLISHED
+titleFr: Vérifier avant de transmettre
+titleAr: التثبت قبل النقل
+summaryFr: >-
+  Comprendre l'impératif éthique et scientifique de remonter à la source
+  originale avant de relayer une information religieuse.
+summaryAr: ضرورة التثبت المنهجي والرجوع إلى المصدر الأصلي قبل نشر أي معلومة دينية.
+methodologyPrincipleFr: >-
+  Transmettre sans vérifier suffit à faire d'un individu un menteur ou un
+  vecteur de fausseté.
+methodologyPrincipleAr: كفى بالمرء كذباً أن يحدّث بكل ما سمع.
 historicReference:
-  author: "Muslim ibn al-Ḥajjâj"
-  work: "Muqaddimat Ṣaḥîḥ Muslim"
-  editionVolumePage: "Bāb an-nahy ʿan al-ḥadīth bi-kulli mā samiʿa, T.1, p.10 (Éd. Dârussalâm)"
-  quoteArOriginal: "كفى بالمرء كذبا أن يحدث بكل ما سمع"
-  quoteArVocalized: "كَفَى بِالْمَرْءِ كَذِبًا أَنْ يُحَدِّثَ بِكُلِّ مَا سَمِعَ"
-  quoteArNormalized: "كفى بالمرء كذبا ان يحدث بكل ما سمع"
-  translationFr: "Il suffit comme mensonge à l'homme de rapporter tout ce qu'il entend."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Muslim ibn al-Ḥajjâj
+  work: Muqaddimat Ṣaḥîḥ Muslim
+  editionVolumePage: 'Bāb an-nahy ʿan al-ḥadīth bi-kulli mā samiʿa, T.1, p.10 (Éd. Dârussalâm)'
+  quoteArOriginal: كفى بالمرء كذبا أن يحدث بكل ما سمع
+  quoteArVocalized: كَفَى بِالْمَرْءِ كَذِبًا أَنْ يُحَدِّثَ بِكُلِّ مَا سَمِعَ
+  quoteArNormalized: كفى بالمرء كذبا ان يحدث بكل ما سمع
+  translationFr: Il suffit comme mensonge à l'homme de rapporter tout ce qu'il entend.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-c03-1"
-    questionFr: "Vous recevez un message transféré sur WhatsApp contenant une invocation présentée comme 'le secret pour résoudre tous vos soucis en 24h, à partager d'urgence'. Quelle est la bonne conduite méthodologique ?"
-    questionAr: "وصلتك رسالة محولة عبر تطبيق واتساب تتضمن دعاء وُصف بأنه 'سر تفريج الكروب في 24 ساعة، انشره تؤجر'. ما هو الموقف المنهجي الصحيح؟"
+  - id: quiz-c03-1
+    questionFr: >-
+      Vous recevez un message transféré sur WhatsApp contenant une invocation
+      présentée comme 'le secret pour résoudre tous vos soucis en 24h, à
+      partager d'urgence'. Quelle est la bonne conduite méthodologique ?
+    questionAr: >-
+      وصلتك رسالة محولة عبر تطبيق واتساب تتضمن دعاء وُصف بأنه 'سر تفريج الكروب
+      في 24 ساعة، انشره تؤجر'. ما هو الموقف المنهجي الصحيح؟
     order: 1
     options:
-      - textFr: "Le transférer immédiatement à tous ses contacts pour ne pas perdre la récompense promise."
-        textAr: "إعادة توجيهها فوراً لجميع جهات الاتصال تحصيلاً للأجر الموعود."
+      - textFr: >-
+          Le transférer immédiatement à tous ses contacts pour ne pas perdre la
+          récompense promise.
+        textAr: إعادة توجيهها فوراً لجميع جهات الاتصال تحصيلاً للأجر الموعود.
         isCorrect: false
-        feedbackFr: "Relayer sans vérifier engage votre responsabilité morale et scientifique dans la diffusion d'allégations infondées."
-        feedbackAr: "نشر الكلام دون تثبت يجعلك شريكاً في ترويج الأكاذيب والأحاديث التي لا أصل لها."
-      - textFr: "Bloquer la transmission et exiger le texte original dans un recueil reconnu avec son degré d'authenticité."
-        textAr: "كف اليد عن النشر فوراً، والمطالبة بإبراز المصدر من كتب السنة مع بيان رتبة صحته."
+        feedbackFr: >-
+          Relayer sans vérifier engage votre responsabilité morale et
+          scientifique dans la diffusion d'allégations infondées.
+        feedbackAr: >-
+          نشر الكلام دون تثبت يجعلك شريكاً في ترويج الأكاذيب والأحاديث التي لا
+          أصل لها.
+      - textFr: Corriger les fautes d'orthographe puis la publier sur son statut.
+        textAr: تصحيح الأخطاء الإملائية ثم نشرها في الحالة الشخصية.
+        isCorrect: false
+        feedbackFr: L'esthétique de la forme ne compense jamais la nullité du fond.
+        feedbackAr: تحسين الصياغة الظاهرة لا يصحح بطلان النسبة وضعف الأصل.
+      - textFr: >-
+          Bloquer la transmission et exiger le texte original dans un recueil
+          reconnu avec son degré d'authenticité.
+        textAr: >-
+          كف اليد عن النشر فوراً، والمطالبة بإبراز المصدر من كتب السنة مع بيان
+          رتبة صحته.
         isCorrect: true
-        feedbackFr: "Parfait ! Le musulman vérificateur (mutathabbit) ne relaie rien dont il n'a pas lui-même vérifié la source et la validité."
-        feedbackAr: "أحسنت! المسلم المتثبت يحبس الرسالة حتى يتأكد بنفسه من ثبوتها وصحة نسبتها."
-      - textFr: "Corriger les fautes d'orthographe puis la publier sur son statut."
-        textAr: "تصحيح الأخطاء الإملائية ثم نشرها في الحالة الشخصية."
-        isCorrect: false
-        feedbackFr: "L'esthétique de la forme ne compense jamais la nullité du fond."
-        feedbackAr: "تحسين الصياغة الظاهرة لا يصحح بطلان النسبة وضعف الأصل."
+        feedbackFr: >-
+          Parfait ! Le musulman vérificateur (mutathabbit) ne relaie rien dont
+          il n'a pas lui-même vérifié la source et la validité.
+        feedbackAr: >-
+          أحسنت! المسلم المتثبت يحبس الرسالة حتى يتأكد بنفسه من ثبوتها وصحة
+          نسبتها.
 ---
 
 # 1. Mise en situation (Problématique)

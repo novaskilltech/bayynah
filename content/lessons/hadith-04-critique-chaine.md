@@ -1,50 +1,68 @@
 ---
-id: "hadith-04"
-slug: "hadith-04-critique-chaine"
-school: "HADITH"
+id: hadith-04
+slug: hadith-04-critique-chaine
+school: HADITH
 level: 3
 order: 4
-editorialStatus: "PUBLISHED"
-titleFr: "Pourquoi une chaîne peut-elle être critiquée ?"
-titleAr: "لماذا يُنتقد الإسناد؟ الجرح والتعديل وعلل الحديث"
-summaryFr: "Découvrir les principaux axes de la critique des chaînes : rencontre des transmetteurs, fiabilité, précision, contradictions et défauts cachés."
-summaryAr: "التعرف على أهم محاور نقد الأسانيد: الاتصال، أحوال الرواة، الضبط، المخالفة والعلل الخفية."
-methodologyPrincipleFr: "Une chaîne apparemment propre peut cacher un défaut que seule la comparaison détaillée des transmissions permet de révéler."
-methodologyPrincipleAr: "قد يبدو الإسناد سليماً في الظاهر وتظهر علته بعد جمع الطرق والمقارنة بينها."
+editorialStatus: PUBLISHED
+titleFr: Pourquoi une chaîne peut-elle être critiquée ?
+titleAr: لماذا يُنتقد الإسناد؟ الجرح والتعديل وعلل الحديث
+summaryFr: >-
+  Découvrir les principaux axes de la critique des chaînes : rencontre des
+  transmetteurs, fiabilité, précision, contradictions et défauts cachés.
+summaryAr: >-
+  التعرف على أهم محاور نقد الأسانيد: الاتصال، أحوال الرواة، الضبط، المخالفة
+  والعلل الخفية.
+methodologyPrincipleFr: >-
+  Une chaîne apparemment propre peut cacher un défaut que seule la comparaison
+  détaillée des transmissions permet de révéler.
+methodologyPrincipleAr: قد يبدو الإسناد سليماً في الظاهر وتظهر علته بعد جمع الطرق والمقارنة بينها.
 historicReference:
-  author: "Ibn aṣ-Ṣalâḥ"
-  work: "Maʿrifat Anwâʿ ʿUlûm al-Ḥadîth (Muqaddimat Ibn aṣ-Ṣalâḥ)"
-  editionVolumePage: "Type 18 (Maʿrifat al-Ḥadîth al-Muʿallal), Éd. Dâr al-Fikr al-Muʿâṣir / Taḥqîq Nûr ad-Dîn ʿItr, p. 90"
-  quoteArOriginal: "اعلم أن معرفة علل الحديث من أجل علوم الحديث وأدقها وأشرفها"
-  translationFr: "Sache que la connaissance des défauts subtils du hadith compte parmi les sciences du hadith les plus importantes, les plus fines et les plus nobles."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Ibn aṣ-Ṣalâḥ
+  work: Maʿrifat Anwâʿ ʿUlûm al-Ḥadîth (Muqaddimat Ibn aṣ-Ṣalâḥ)
+  editionVolumePage: >-
+    Type 18 (Maʿrifat al-Ḥadîth al-Muʿallal), Éd. Dâr al-Fikr al-Muʿâṣir /
+    Taḥqîq Nûr ad-Dîn ʿItr, p. 90
+  quoteArOriginal: اعلم أن معرفة علل الحديث من أجل علوم الحديث وأدقها وأشرفها
+  translationFr: >-
+    Sache que la connaissance des défauts subtils du hadith compte parmi les
+    sciences du hadith les plus importantes, les plus fines et les plus nobles.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-h04-1"
-    questionFr: "Tous les transmetteurs d'une chaîne sont réputés fiables. Quelle attitude est méthodologiquement correcte ?"
-    questionAr: "جميع رواة سند ما موصوفون بالثقة، فما الموقف المنهجي الصحيح؟"
+  - id: quiz-h04-1
+    questionFr: >-
+      Tous les transmetteurs d'une chaîne sont réputés fiables. Quelle attitude
+      est méthodologiquement correcte ?
+    questionAr: جميع رواة سند ما موصوفون بالثقة، فما الموقف المنهجي الصحيح؟
     order: 1
     options:
-      - textFr: "Déclarer automatiquement le hadith ṣaḥîḥ."
-        textAr: "الحكم بصحة الحديث مباشرة."
+      - textFr: Déclarer automatiquement le hadith ṣaḥîḥ.
+        textAr: الحكم بصحة الحديث مباشرة.
         isCorrect: false
-        feedbackFr: "La fiabilité individuelle des narrateurs ne suffit pas à elle seule : continuité, contradictions et défauts subtils restent à examiner."
-        feedbackAr: "ثقة الرواة وحدها لا تكفي، بل ينظر أيضاً في الاتصال والشذوذ والعلل."
-      - textFr: "Poursuivre l'enquête : rencontre possible, variantes, autres chaînes, shudhûdh et ʿilal."
-        textAr: "استكمال البحث في الاتصال والطرق والمخالفات والشذوذ والعلل."
+        feedbackFr: >-
+          La fiabilité individuelle des narrateurs ne suffit pas à elle seule :
+          continuité, contradictions et défauts subtils restent à examiner.
+        feedbackAr: ثقة الرواة وحدها لا تكفي، بل ينظر أيضاً في الاتصال والشذوذ والعلل.
+      - textFr: 'Rejeter le hadith, car toute chaîne contient forcément une erreur.'
+        textAr: رد الحديث لأن كل إسناد لا بد أن يكون فيه خطأ.
+        isCorrect: false
+        feedbackFr: Ce scepticisme absolu n'est pas davantage scientifique.
+        feedbackAr: هذا الشك المطلق ليس منهجاً علمياً.
+      - textFr: >-
+          Poursuivre l'enquête : rencontre possible, variantes, autres chaînes,
+          shudhûdh et ʿilal.
+        textAr: استكمال البحث في الاتصال والطرق والمخالفات والشذوذ والعلل.
         isCorrect: true
-        feedbackFr: "Exact. L'analyse du hadith ne consiste pas simplement à additionner des fiches de narrateurs."
-        feedbackAr: "صحيح. نقد الحديث لا يقتصر على جمع أحكام الثقة على الرواة."
-      - textFr: "Rejeter le hadith, car toute chaîne contient forcément une erreur."
-        textAr: "رد الحديث لأن كل إسناد لا بد أن يكون فيه خطأ."
-        isCorrect: false
-        feedbackFr: "Ce scepticisme absolu n'est pas davantage scientifique."
-        feedbackAr: "هذا الشك المطلق ليس منهجاً علمياً."
+        feedbackFr: >-
+          Exact. L'analyse du hadith ne consiste pas simplement à additionner
+          des fiches de narrateurs.
+        feedbackAr: صحيح. نقد الحديث لا يقتصر على جمع أحكام الثقة على الرواة.
 ---
 
 # 1. Première erreur : imaginer la critique du hadith comme un tableau Excel

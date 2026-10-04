@@ -1,50 +1,62 @@
 ---
-id: "fiqh-03"
-slug: "fiqh-03-ijma-jumhur-khilaf"
-school: "FIQH"
+id: fiqh-03
+slug: fiqh-03-ijma-jumhur-khilaf
+school: FIQH
 level: 2
 order: 3
-editorialStatus: "PUBLISHED"
-titleFr: "Ijmâʿ, jumhûr et khilâf : ne plus confondre les niveaux d'accord"
-titleAr: "الإجماع والجمهور والخلاف: التفريق بين مراتب الاتفاق"
-summaryFr: "Apprendre à distinguer consensus établi, opinion majoritaire, absence d'opposant connu et divergence reconnue."
-summaryAr: "التفريق بين الإجماع الثابت وقول الجمهور وعدم العلم بالمخالف والخلاف المعتبر."
-methodologyPrincipleFr: "Dire « je ne connais aucun opposant » n'est pas équivalent à affirmer « tous les savants sont unanimes »."
-methodologyPrincipleAr: "قولنا «لا نعلم مخالفاً» ليس مساوياً لقولنا «أجمع العلماء»."
+editorialStatus: PUBLISHED
+titleFr: 'Ijmâʿ, jumhûr et khilâf : ne plus confondre les niveaux d''accord'
+titleAr: 'الإجماع والجمهور والخلاف: التفريق بين مراتب الاتفاق'
+summaryFr: >-
+  Apprendre à distinguer consensus établi, opinion majoritaire, absence
+  d'opposant connu et divergence reconnue.
+summaryAr: التفريق بين الإجماع الثابت وقول الجمهور وعدم العلم بالمخالف والخلاف المعتبر.
+methodologyPrincipleFr: >-
+  Dire « je ne connais aucun opposant » n'est pas équivalent à affirmer « tous
+  les savants sont unanimes ».
+methodologyPrincipleAr: قولنا «لا نعلم مخالفاً» ليس مساوياً لقولنا «أجمع العلماء».
 historicReference:
-  author: "Aḥmad ibn Ḥanbal"
-  work: "Masâʾil ʿAbd Allâh ibn Aḥmad"
-  editionVolumePage: "Masʾala n°1587 (3/1314, Éd. al-Maktab al-Islâmî)"
-  quoteArOriginal: "من ادعى الإجماع فهو كذب، لعل الناس قد اختلفوا"
-  translationFr: "Prétendre ainsi au consensus relève du mensonge : peut-être que les gens ont divergé."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Aḥmad ibn Ḥanbal
+  work: Masâʾil ʿAbd Allâh ibn Aḥmad
+  editionVolumePage: 'Masʾala n°1587 (3/1314, Éd. al-Maktab al-Islâmî)'
+  quoteArOriginal: من ادعى الإجماع فهو كذب، لعل الناس قد اختلفوا
+  translationFr: >-
+    Prétendre ainsi au consensus relève du mensonge : peut-être que les gens ont
+    divergé.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-f03-1"
-    questionFr: "Après une recherche limitée, vous ne trouvez aucun savant ancien ayant exprimé un avis contraire. Quelle formulation est la plus rigoureuse ?"
-    questionAr: "بعد بحث محدود لم تجد قولاً مخالفاً للعلماء المتقدمين، فما العبارة الأدق؟"
+  - id: quiz-f03-1
+    questionFr: >-
+      Après une recherche limitée, vous ne trouvez aucun savant ancien ayant
+      exprimé un avis contraire. Quelle formulation est la plus rigoureuse ?
+    questionAr: بعد بحث محدود لم تجد قولاً مخالفاً للعلماء المتقدمين، فما العبارة الأدق؟
     order: 1
     options:
-      - textFr: "Il existe un ijmâʿ définitif."
-        textAr: "ثبت الإجماع قطعاً."
-        isCorrect: false
-        feedbackFr: "Ton absence de connaissance d'un opposant ne prouve pas encore son inexistence."
-        feedbackAr: "عدم علمك بالمخالف لا يثبت عدم وجوده."
-      - textFr: "Je n'ai pas trouvé d'avis contraire dans les sources consultées."
-        textAr: "لم أقف على قول مخالف في المصادر التي راجعتها."
+      - textFr: Je n'ai pas trouvé d'avis contraire dans les sources consultées.
+        textAr: لم أقف على قول مخالف في المصادر التي راجعتها.
         isCorrect: true
-        feedbackFr: "Exact. Cette formulation décrit exactement le niveau réel de ta recherche."
-        feedbackAr: "صحيح. هذه العبارة توافق مقدار ما توصل إليه البحث."
-      - textFr: "La majorité est forcément unanime."
-        textAr: "قول الجمهور هو نفسه الإجماع."
+        feedbackFr: >-
+          Exact. Cette formulation décrit exactement le niveau réel de ta
+          recherche.
+        feedbackAr: صحيح. هذه العبارة توافق مقدار ما توصل إليه البحث.
+      - textFr: Il existe un ijmâʿ définitif.
+        textAr: ثبت الإجماع قطعاً.
         isCorrect: false
-        feedbackFr: "Une majorité implique précisément que d'autres avis peuvent exister."
-        feedbackAr: "الجمهور لا يعني الإجماع، فقد يوجد مخالف."
+        feedbackFr: >-
+          Ton absence de connaissance d'un opposant ne prouve pas encore son
+          inexistence.
+        feedbackAr: عدم علمك بالمخالف لا يثبت عدم وجوده.
+      - textFr: La majorité est forcément unanime.
+        textAr: قول الجمهور هو نفسه الإجماع.
+        isCorrect: false
+        feedbackFr: Une majorité implique précisément que d'autres avis peuvent exister.
+        feedbackAr: الجمهور لا يعني الإجماع، فقد يوجد مخالف.
 ---
 
 # 1. Quatre affirmations très différentes

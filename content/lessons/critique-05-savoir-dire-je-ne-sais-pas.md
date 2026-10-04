@@ -1,52 +1,82 @@
 ---
-id: "critique-05"
-slug: "critique-05-savoir-dire-je-ne-sais-pas"
-school: "CRITIQUE"
+id: critique-05
+slug: critique-05-savoir-dire-je-ne-sais-pas
+school: CRITIQUE
 level: 4
 order: 5
-editorialStatus: "PUBLISHED"
-titleFr: "Savoir dire : je ne sais pas"
-titleAr: "شجاعة قول: لا أدري"
-summaryFr: "Comprendre que 'je ne sais pas' est le sommet de la rigueur scientifique et intégrer le principe : l'absence de connaissance n'est pas la connaissance de l'absence."
-summaryAr: "إدراك أن 'لا أدري' رأس الورع والعلم، وترسيخ قاعدة: عدم العلم ليس علماً بالعدم."
-methodologyPrincipleFr: "Ne pas connaître l'existence d'une preuve ne prouve pas son inexistence."
-methodologyPrincipleAr: "عدم العلم ليس علماً بالعدم."
+editorialStatus: PUBLISHED
+titleFr: 'Savoir dire : je ne sais pas'
+titleAr: 'شجاعة قول: لا أدري'
+summaryFr: >-
+  Comprendre que 'je ne sais pas' est le sommet de la rigueur scientifique et
+  intégrer le principe : l'absence de connaissance n'est pas la connaissance de
+  l'absence.
+summaryAr: 'إدراك أن ''لا أدري'' رأس الورع والعلم، وترسيخ قاعدة: عدم العلم ليس علماً بالعدم.'
+methodologyPrincipleFr: Ne pas connaître l'existence d'une preuve ne prouve pas son inexistence.
+methodologyPrincipleAr: عدم العلم ليس علماً بالعدم.
 historicReference:
-  author: "Ibn ʿAbd al-Barr"
-  work: "Jâmiʿ Bayân al-ʿIlm wa Faḍlih"
-  editionVolumePage: "Tome 2, p. 848 (Éd. Dâr Ibn al-Jawzî)"
-  quoteArOriginal: "جنة العالم لا أدري، فإذا أغفلها أصيبت مقاتله"
-  quoteArVocalized: "جُنَّةُ الْعَالِمِ: لَا أَدْرِي، فَإِذَا أَغْفَلَهَا أُصِيبَتْ مَقَاتِلُهُ"
-  quoteArNormalized: "جنة العالم لا ادري فاذا اغفلها اصيبت مقاتله"
-  translationFr: "Le bouclier protecteur du savant est 'je ne sais pas' ; s'il le néglige, il s'expose aux coups mortels."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Ibn ʿAbd al-Barr
+  work: Jâmiʿ Bayân al-ʿIlm wa Faḍlih
+  editionVolumePage: 'Tome 2, p. 848 (Éd. Dâr Ibn al-Jawzî)'
+  quoteArOriginal: جنة العالم لا أدري، فإذا أغفلها أصيبت مقاتله
+  quoteArVocalized: 'جُنَّةُ الْعَالِمِ: لَا أَدْرِي، فَإِذَا أَغْفَلَهَا أُصِيبَتْ مَقَاتِلُهُ'
+  quoteArNormalized: جنة العالم لا ادري فاذا اغفلها اصيبت مقاتله
+  translationFr: >-
+    Le bouclier protecteur du savant est 'je ne sais pas' ; s'il le néglige, il
+    s'expose aux coups mortels.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-c05-1"
-    questionFr: "Un étudiant affirme avec aplomb : 'Ce hadith n'existe nulle part dans les livres de l'Islam, car je ne l'ai jamais croisé au cours de mes trois années d'études !' Quelle erreur épistémologique majeure commet-il ?"
-    questionAr: "قال طالب علم مبتدئ: 'هذا الحديث لا أصل له في كتب الإسلام إطلاقاً، لأني لم أره طيلة دراستي لثلاث سنوات!' ما هو الخطأ الإبستمولوجي الفادح الذي وقع فيه؟"
+  - id: quiz-c05-1
+    questionFr: >-
+      Un étudiant affirme avec aplomb : 'Ce hadith n'existe nulle part dans les
+      livres de l'Islam, car je ne l'ai jamais croisé au cours de mes trois
+      années d'études !' Quelle erreur épistémologique majeure commet-il ?
+    questionAr: >-
+      قال طالب علم مبتدئ: 'هذا الحديث لا أصل له في كتب الإسلام إطلاقاً، لأني لم
+      أره طيلة دراستي لثلاث سنوات!' ما هو الخطأ الإبستمولوجي الفادح الذي وقع
+      فيه؟
     order: 1
     options:
-      - textFr: "Aucune erreur : trois ans d'études suffisent pour cerner l'intégralité des textes de la tradition musulmane."
-        textAr: "لا خطأ في قوله، فثلاث سنوات كافية للإحاطة بجميع مرويات السنة النبوية."
+      - textFr: >-
+          Il aurait dû prétendre qu'il connaissait le hadith pour préserver sa
+          réputation.
+        textAr: كان الواجب عليه أن يدعي معرفته بالحديث حفظاً لهيبته بين أقرانه.
         isCorrect: false
-        feedbackFr: "Prétendre embrasser l'ensemble des recueils de hadiths et des manuscrits en trois ans relève de l'illusion totale."
-        feedbackAr: "ادعاء الإحاطة بجميع نصوص السنة ودواوينها في سنوات معدودة وهم باطل يجانب الواقع."
-      - textFr: "La confusion entre 'ne pas savoir' et 'savoir que cela n'existe pas' (عدم العلم ليس علماً بالعدم). Son ignorance personnelle n'est pas une preuve d'inexistence."
-        textAr: "الخلط بين 'عدم العلم' وبين 'العلم بالعدم'، فجهله بوجود الحديث ليس دليلاً على عدم وروده في كتب السنة."
+        feedbackFr: Le mensonge ou la dissimulation est une trahison scientifique absolue.
+        feedbackAr: ادعاء العلم بما لا يعلم خيانة علمية وكذب صريح.
+      - textFr: >-
+          La confusion entre 'ne pas savoir' et 'savoir que cela n'existe pas'
+          (عدم العلم ليس علماً بالعدم). Son ignorance personnelle n'est pas une
+          preuve d'inexistence.
+        textAr: >-
+          الخلط بين 'عدم العلم' وبين 'العلم بالعدم'، فجهله بوجود الحديث ليس
+          دليلاً على عدم وروده في كتب السنة.
         isCorrect: true
-        feedbackFr: "Exact ! La règle cardinale énonce : 'ʿAdam al-ʿilm laysa ʿilman bi-l-ʿadam' (ne pas savoir n'est pas la preuve de l'inexistence). Seul un expert ayant recensé les recueils peut formuler un jugement d'inexistence."
-        feedbackAr: "أحسنت! القاعدة الكبرى تقرر: 'عدم العلم ليس علماً بالعدم'. عدم اطلاعك على النص لا ينفي وجوده في بطون الكتب."
-      - textFr: "Il aurait dû prétendre qu'il connaissait le hadith pour préserver sa réputation."
-        textAr: "كان الواجب عليه أن يدعي معرفته بالحديث حفظاً لهيبته بين أقرانه."
+        feedbackFr: >-
+          Exact ! La règle cardinale énonce : 'ʿAdam al-ʿilm laysa ʿilman
+          bi-l-ʿadam' (ne pas savoir n'est pas la preuve de l'inexistence). Seul
+          un expert ayant recensé les recueils peut formuler un jugement
+          d'inexistence.
+        feedbackAr: >-
+          أحسنت! القاعدة الكبرى تقرر: 'عدم العلم ليس علماً بالعدم'. عدم اطلاعك
+          على النص لا ينفي وجوده في بطون الكتب.
+      - textFr: >-
+          Aucune erreur : trois ans d'études suffisent pour cerner l'intégralité
+          des textes de la tradition musulmane.
+        textAr: لا خطأ في قوله، فثلاث سنوات كافية للإحاطة بجميع مرويات السنة النبوية.
         isCorrect: false
-        feedbackFr: "Le mensonge ou la dissimulation est une trahison scientifique absolue."
-        feedbackAr: "ادعاء العلم بما لا يعلم خيانة علمية وكذب صريح."
+        feedbackFr: >-
+          Prétendre embrasser l'ensemble des recueils de hadiths et des
+          manuscrits en trois ans relève de l'illusion totale.
+        feedbackAr: >-
+          ادعاء الإحاطة بجميع نصوص السنة ودواوينها في سنوات معدودة وهم باطل
+          يجانب الواقع.
 ---
 
 # 1. Mise en situation (Problématique)

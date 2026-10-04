@@ -1,50 +1,74 @@
 ---
-id: "aqida-04"
-slug: "aqida-04-jam-nusus-bab"
-school: "AQIDA"
+id: aqida-04
+slug: aqida-04-jam-nusus-bab
+school: AQIDA
 level: 4
 order: 4
-editorialStatus: "PUBLISHED"
-titleFr: "Réunir les textes d’un même chapitre doctrinal"
-titleAr: "جمع نصوص الباب الواحد في العقيدة"
-summaryFr: "Apprendre à ne jamais construire une affirmation doctrinale complexe sur un texte isolé lorsqu’il existe d’autres textes authentiques portant sur le même sujet."
-summaryAr: "تعلم جمع النصوص الصحيحة المتعلقة بالمسألة العقدية وعدم بناء التصور الكامل على دليل معزول."
-methodologyPrincipleFr: "Une doctrine doit être étudiée à la lumière de l’ensemble des textes authentiques pertinents, et non d’un extrait sélectionné."
-methodologyPrincipleAr: "تُفهم المسألة العقدية بجمع نصوصها الصحيحة، لا بالاقتصار على نص منفرد."
+editorialStatus: PUBLISHED
+titleFr: Réunir les textes d’un même chapitre doctrinal
+titleAr: جمع نصوص الباب الواحد في العقيدة
+summaryFr: >-
+  Apprendre à ne jamais construire une affirmation doctrinale complexe sur un
+  texte isolé lorsqu’il existe d’autres textes authentiques portant sur le même
+  sujet.
+summaryAr: >-
+  تعلم جمع النصوص الصحيحة المتعلقة بالمسألة العقدية وعدم بناء التصور الكامل على
+  دليل معزول.
+methodologyPrincipleFr: >-
+  Une doctrine doit être étudiée à la lumière de l’ensemble des textes
+  authentiques pertinents, et non d’un extrait sélectionné.
+methodologyPrincipleAr: تُفهم المسألة العقدية بجمع نصوصها الصحيحة، لا بالاقتصار على نص منفرد.
 historicReference:
-  author: "Aḥmad Ibn Taymiyya"
-  work: "Jâmiʿ al-Masâʾil"
-  editionVolumePage: "Al-Majmûʿa ath-Thâniya, p. 272 (Taḥqîq Muḥammad ʿUzayr Shams, Éd. Dâr ʿÂlam al-Fawâʾid, 1422 H)"
-  quoteArOriginal: "فأما الصحيح الذي كله حق فلا يتناقض، بل يصدق بعضه بعضا"
-  translationFr: "Ce qui est authentique et entièrement vrai ne se contredit pas ; ses différentes parties se confirment mutuellement."
-  citationStatus: "VERIFIED_VERBATIM"
-  verifiedAt: "2026-09-21"
-  verifiedBy: "reviewer-01"
-authorId: "author-01"
-reviewerId: "reviewer-01"
-reviewedAt: "2026-09-21"
-lastVerifiedAt: "2026-09-21"
+  author: Aḥmad Ibn Taymiyya
+  work: Jâmiʿ al-Masâʾil
+  editionVolumePage: >-
+    Al-Majmûʿa ath-Thâniya, p. 272 (Taḥqîq Muḥammad ʿUzayr Shams, Éd. Dâr ʿÂlam
+    al-Fawâʾid, 1422 H)
+  quoteArOriginal: فأما الصحيح الذي كله حق فلا يتناقض، بل يصدق بعضه بعضا
+  translationFr: >-
+    Ce qui est authentique et entièrement vrai ne se contredit pas ; ses
+    différentes parties se confirment mutuellement.
+  citationStatus: VERIFIED_VERBATIM
+  verifiedAt: '2026-09-21'
+  verifiedBy: reviewer-01
+authorId: author-01
+reviewerId: reviewer-01
+reviewedAt: '2026-09-21'
+lastVerifiedAt: '2026-09-21'
 quizzes:
-  - id: "quiz-a04-1"
-    questionFr: "Une personne bâtit toute une doctrine sur un seul verset alors que plusieurs hadiths authentiques traitent également du sujet. Quel est le problème ?"
-    questionAr: "بنى شخص تصوراً عقدياً كاملاً على آية واحدة مع وجود أحاديث صحيحة أخرى في الباب، فما الخلل؟"
+  - id: quiz-a04-1
+    questionFr: >-
+      Une personne bâtit toute une doctrine sur un seul verset alors que
+      plusieurs hadiths authentiques traitent également du sujet. Quel est le
+      problème ?
+    questionAr: >-
+      بنى شخص تصوراً عقدياً كاملاً على آية واحدة مع وجود أحاديث صحيحة أخرى في
+      الباب، فما الخلل؟
     order: 1
     options:
-      - textFr: "Aucun : un seul texte authentique suffit toujours à définir seul toute la question."
-        textAr: "لا خلل، فالنص الصحيح الواحد يكفي دائماً لتقرير كل تفاصيل المسألة."
-        isCorrect: false
-        feedbackFr: "Un texte peut être authentique tout en ne représentant qu’une partie des données du chapitre."
-        feedbackAr: "قد يكون النص صحيحاً لكنه يمثل جزءاً فقط من نصوص الباب."
-      - textFr: "Il faut réunir les textes pertinents et les faire dialoguer avant de formuler la conclusion."
-        textAr: "يجب جمع نصوص الباب والنظر فيها مجتمعة قبل تقرير النتيجة."
+      - textFr: >-
+          Il faut réunir les textes pertinents et les faire dialoguer avant de
+          formuler la conclusion.
+        textAr: يجب جمع نصوص الباب والنظر فيها مجتمعة قبل تقرير النتيجة.
         isCorrect: true
-        feedbackFr: "Exact. C’est le cœur méthodologique de cette leçon."
-        feedbackAr: "صحيح. هذه هي القاعدة المركزية في الدرس."
-      - textFr: "Il faut supprimer les textes qui semblent compliquer le premier."
-        textAr: "يجب ترك النصوص التي تبدو معقدة حتى يبقى النص الأول واضحاً."
+        feedbackFr: Exact. C’est le cœur méthodologique de cette leçon.
+        feedbackAr: صحيح. هذه هي القاعدة المركزية في الدرس.
+      - textFr: >-
+          Aucun : un seul texte authentique suffit toujours à définir seul toute
+          la question.
+        textAr: لا خلل، فالنص الصحيح الواحد يكفي دائماً لتقرير كل تفاصيل المسألة.
         isCorrect: false
-        feedbackFr: "Sélectionner uniquement les textes qui confirment une conclusion préalable est un biais de confirmation."
-        feedbackAr: "اختيار النصوص الموافقة للنتيجة المسبقة من التحيز التأكيدي."
+        feedbackFr: >-
+          Un texte peut être authentique tout en ne représentant qu’une partie
+          des données du chapitre.
+        feedbackAr: قد يكون النص صحيحاً لكنه يمثل جزءاً فقط من نصوص الباب.
+      - textFr: Il faut supprimer les textes qui semblent compliquer le premier.
+        textAr: يجب ترك النصوص التي تبدو معقدة حتى يبقى النص الأول واضحاً.
+        isCorrect: false
+        feedbackFr: >-
+          Sélectionner uniquement les textes qui confirment une conclusion
+          préalable est un biais de confirmation.
+        feedbackAr: اختيار النصوص الموافقة للنتيجة المسبقة من التحيز التأكيدي.
 ---
 
 # 1. Le danger du texte isolé
