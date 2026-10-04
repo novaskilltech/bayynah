@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "../globals.css";
 import { getDictionary } from "@/lib/dictionary";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -84,12 +85,22 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
         <header className="border-b border-sable-200 bg-white/80 backdrop-blur sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <a href={`/${locale}`} className="text-2xl font-bold font-arabic text-vertProfond-700">
-                {dict.common.siteName}
+              <a href={`/${locale}`} className="flex items-center gap-2.5 group">
+                <Image
+                  src="/brand/tabayyun-logo-v1.png"
+                  alt="TABAYYUN Logo"
+                  width={36}
+                  height={36}
+                  className="w-9 h-9 object-contain rounded-md transition-transform group-hover:scale-105"
+                  priority
+                />
+                <span className="text-2xl font-bold font-arabic text-vertProfond-700">
+                  {dict.common.siteName}
+                </span>
+                <span className="text-xs uppercase tracking-widest text-sable-500 font-sans hidden sm:inline">
+                  Tabayyun
+                </span>
               </a>
-              <span className="text-xs uppercase tracking-widest text-sable-500 font-sans hidden sm:inline">
-                Tabayyun
-              </span>
             </div>
 
             <nav className="flex items-center gap-5 text-sm font-medium">

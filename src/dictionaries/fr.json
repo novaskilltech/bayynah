@@ -24,10 +24,69 @@
   "home": {
     "title": "Ce qu'on t'a dit est-il réellement établi ?",
     "subtitle": "Apprends à vérifier une affirmation religieuse avant de l'accepter, la transmettre ou la réfuter.",
+    "badge": "Sciences islamiques & Rigueur méthodologique",
+    "fundamentalChainTitle": "La Chaîne Critique Fondamentale (5 étapes)",
     "fundamentalChain": "La preuve → l'authenticité de la transmission → la compréhension correcte → la validité du raisonnement → la conclusion.",
     "ctaMethod": "Apprendre la méthode",
     "ctaLab": "Enquêter sur une affirmation",
-    "ctaTest": "Tester mon esprit critique"
+    "ctaTest": "Tester mon esprit critique",
+    "steps": [
+      {
+        "step": "01",
+        "title": "ad-Dalīl (الدليل)",
+        "desc": "Identifier la preuve brute et isoler l'énoncé textuel sans altération ni extrapolation."
+      },
+      {
+        "step": "02",
+        "title": "Ṣiḥḥat an-Naql (صحة النقل)",
+        "desc": "Éprouver l'authenticité de la source, la continuité de l'isnād et la fiabilité des transmetteurs."
+      },
+      {
+        "step": "03",
+        "title": "Ṣiḥḥat al-Fahm (صحة الفهم)",
+        "desc": "Contextualiser le sens linguistique, le sabab an-nuzūl/wurūd et la compréhension des premières générations."
+      },
+      {
+        "step": "04",
+        "title": "Ṣiḥḥat al-Istidlāl (صحة الاستدلال)",
+        "desc": "Contrôler la pertinence du raisonnement, le degré de certitude (qatʿī vs zannī) et l'absence de contre-preuve."
+      },
+      {
+        "step": "05",
+        "title": "al-Ḥukm (الحكم)",
+        "desc": "Poser un statut légitime et mesuré : établi, probable, incertain (tawaqquf) ou infondé."
+      }
+    ],
+    "pillarsTitle": "Trois piliers pour forger un esprit critique rigoureux",
+    "pillarsSubtitle": "Une pédagogie active qui réconcilie l'exigence des sciences du Hadith et du Fiqh avec la lucidité cognitive moderne.",
+    "pillars": [
+      {
+        "title": "Pédagogie Progressive & Cas d'École",
+        "desc": "20 leçons structurées pour déconstruire les sophismes, comprendre les degrés de validité et distinguer l'essentiel de l'accessoire.",
+        "linkText": "Explorer les leçons",
+        "href": "/parcours"
+      },
+      {
+        "title": "Laboratoire d'Enquêtes Interactives",
+        "desc": "Mettez-vous dans la peau d'un chercheur (muḥaqqiq) : analysez des chaînes de rapporteurs, repérez les extrapolations et rendez un avis étayé.",
+        "linkText": "Entrer dans le laboratoire",
+        "href": "/laboratoire"
+      },
+      {
+        "title": "Audit des Biais & Attestation Finale",
+        "desc": "Évaluez votre discernement avec une grille objective sur 100 points, identifiez vos angles morts et obtenez votre bilan d'aptitude méthodologique.",
+        "linkText": "Passer le diagnostic",
+        "href": "/diagnostic"
+      }
+    ],
+    "methodologyQuote": {
+      "quote": "إِن كُنتَ نَاقِلاً فَالصِّحَّةُ، أَوْ مُدَّعِياً فَالْدَّلِيلُ",
+      "translation": "« Si tu transmets, prouve l'authenticité ; si tu prétends, apporte la preuve. »",
+      "author": "Règle fondamentale des savants de la méthodologie (Uṣūliyyūn)"
+    },
+    "bannerTitle": "Prêt à éprouver votre discernement ?",
+    "bannerDesc": "Rejoignez le programme d'entraînement et apprenez à dépasser les raccourcis d'opinion pour embrasser la méthode de vérification.",
+    "bannerCta": "Démarrer le positionnement initial"
   },
   "method": {
     "title": "La Méthode — Les 10 questions avant de croire une affirmation",
